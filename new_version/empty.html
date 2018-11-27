@@ -4,54 +4,54 @@
 	<title>Somov Studio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="SHORTCUT ICON" href="./img/favicon.ico" type="image/x-icon">
+	<link rel="SHORTCUT ICON" href="./img/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="./css/default.css" />
 </head>
 <body>
 	
-	<!-- MENU -->
-	<nav>
-		
-		<div class="menu-wrapper">
-			<label class="menu-button" for="menuCheck"><img src="./img/menu.png" atl="Menu"></label>
-			<input type="checkbox" name="menu-check" id="menuCheck">
-			<ul class="menu">
-				<li><a href="index.html">О компании</a></li>
-				<li><a href="portfolio.html">Услуги</a></li>
-				<li><a href="qa.html">Технологии</a></li>
-				<li><a href="auto.html">Портфолио</a></li>
-				<li><a href="lib.html">Разное</a></li>
-				<li><a href="contact.html">Контакты</a></li>
-			</ul>
-			<div class="menu-logo">
-				<img src="./img/menu_logo.png">
-				<div class="menu-logo-title">Somov Studio</div>
-			</div>
-		</div>
-	</nav>
-	
 	<!-- HEADER -->
 	<header>
-		<div class="header-background-vector"></div>
+		<!-- MENU -->
+		<nav>
+			<div class="menu-wrapper">
+				<label class="menu-button" for="menuCheck"><img src="./img/menu.png" atl="Menu"></label>
+				<input type="checkbox" name="menu-check" id="menuCheck">
+				<ul class="menu">
+					<li><a href="index.html">О компании</a></li>
+					<li><a href="portfolio.html">Услуги</a></li>
+					<li><a href="qa.html">Технологии</a></li>
+					<li><a href="auto.html">Портфолио</a></li>
+					<li><a href="lib.html">Разное</a></li>
+					<li><a href="contact.html">Контакты</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- LOGO -->
+		<div id="headerTitleAndLogo">
+			<div id="title">Somov Studio</div>
+			<div id="logo"><img src="./img/logo.png" alt="logo" class="Rotate"></div>
+			<div id="info">
+			Ваши данные нуждаются в постоянной обработке и хранении.<br>
+			Предлагаем программные средства для работы с данными.
+			</div>
+		</div>
 	</header>
 	
 
 	<!-- CONTENT -->
-	<section class="section-grey-up">
-		<div class="section-content-1-left">Описание</div>
-		<div class="section-content-1-right">Объект</div>
+	<section>
+		<div class="section-content-left">Описание</div>
+		<div class="section-content-right">Объект</div>
 	</section>
 
-	<section class="section-grey-down">
-		<div class="section-content-2-left">Описание</div>
-		<div class="section-content-2-right">Объект</div>
-	</section>
-
-	<section class="section-grey-up">
-		<div class="section-content-3-left">Описание</div>
-		<div class="section-content-3-right">Объект</div>
+	<section>
+		<div class="section-content-left">Описание</div>
+		<div class="section-content-right">Объект</div>
 	</section>
 
 
+	<!-- Scripts -->
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/main.js"></script>
 </body>
 </html>

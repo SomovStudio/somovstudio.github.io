@@ -12,14 +12,18 @@ body {
     font-size: 12pt;
     line-height: 1.65;
     background-color: #FFFFFF;
+    background: url('../img/background1.jpg') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /** -- MENU -- **/
 .menu{
     overflow: hidden;
-    position:fixed;
-    background-color: #FFFFFF;
-    border-bottom: 1px solid #CCCBCB;
+    position:relative;
+    border-bottom: 1px solid #999999;
     padding: 5px 5px 5px 5px;
     width: 100%;
     height: 60px;
@@ -39,14 +43,12 @@ body {
 {
     text-decoration: none;
     padding: 2em 1em;
-    color: #495861;
-    background-color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .menu li a:hover
 {
-    color: #FFFFFF;
-    background-color: #B200FF;
+    color: #D3B0FC;
 }
 
 .menu-button {
@@ -60,25 +62,6 @@ body {
 .menu-button img {
     width: 45px;
     height: 45px;
-}
-
-.menu-logo {
-	position:fixed;
-	width: 225px;
-	left: 5%;
-	z-index: 20000;
-}
-
-.menu-logo img {
-	padding-top: 10px;
-	padding-left: 10px;
-}
-
-.menu-logo-title {
-	float: right;
-	padding-top: 15px;
-	font-weight: bold;
-    font-size: 20px;
 }
 
 #menuCheck{
@@ -139,83 +122,80 @@ body {
 
 /** -- HEADER -- **/
 header{
-    height: 550px;
-    background-image: url("../img/gray.jpg");
-    background-position: bottom;
-    background-repeat:repeat-x;
+    height: calc(100vh - 80px);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
+    background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
+    opacity: 0.7;
     overflow: hidden;
 }
 
-.header-background-vector {
-	display: block;
-	height: 525px;
-	background-image: url("../img/background_vector.png");
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
+#headerTitleAndLogo {
+	text-align: center;
+	color: #FFF;
+	display: inline-block;
+	height: 60px;
+	width: 400px;
+	position: relative;
+	top: calc(40vh - 25px);
+	left: 50%;
+	margin-left: -200px;
+	margin-top: -30px;
 }
+
+#title {
+	opacity: 0;
+	font-weight: bold;
+	font-family: "Arial", sens-serif;
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+#logo {
+	opacity: 0;
+	text-transform: uppercase;
+	text-align: center;
+	display: inline-block;
+	height: 86px;
+	width: 86px;
+	position: absolute;
+	top: -70px;
+	left: 50%;
+	margin-left: -43px;
+	margin-top: -43px;
+}
+
+#info {
+	opacity: 0;
+	text-align: center;
+	color: #FFF;
+	display: inline-block;
+	height: 150px;
+	width: 500px;
+	position: absolute;
+	top: 200%;
+	left: 0%;
+	margin-left: -43px;
+	margin-top: -43px;
+}
+
 /** -- HEADER -- **/
 
 /** -- SECTION -- **/
 section {
 	display: block;
-	height: 400px;
+	min-height: 400px;
+	background-color: #FFFFFF;
 }
 
-.section-grey-up{
-	background-image: url("../img/gray.jpg");
-    background-position: top;
-    background-repeat:repeat-x;
-}
-
-.section-grey-down{
-	background-image: url("../img/gray.jpg");
-    background-position: bottom;
-    background-repeat:repeat-x;
-}
-
-.content{
-    padding: 25px;
-}
-
-.content ul {
-    margin-left: 5%;
-}
-
-.section-content-1-left{
-    float: left;
+.section-content-left{
+	float: left;
     width: 40%;
-    height: 400px;
-    background-image: url("../img/panel_content_1.png");
-    background-position: left;
-    background-repeat:repeat-x;
+    min-height: 100%;
 }
 
-.section-content-1-right {
+.section-content-right {
 	float: right;
 	width: 60%;
-	height: 400px;
-	background-image: url("../img/panel_end_1.png");
-    background-position: left;
-    background-repeat:no-repeat;
+	min-height: 100%;
 }
-
-.section-content-2-left{
-    float: left;
-    width: 60%;
-    height: 400px;
-    background-image: url("../img/panel_end_2.png");
-    background-position: right;
-    background-repeat:no-repeat;
-}
-
-.section-content-2-right {
-	float: right;
-	width: 40%;
-	height: 400px;
-	background-image: url("../img/panel_content_2.png");
-    background-position: right;
-    background-repeat:repeat-x;
-}
-
 /** -- SECTION -- **/
