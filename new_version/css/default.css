@@ -182,7 +182,15 @@ header{
 /** -- SECTION -- **/
 section {
 	display: block;
-	min-height: 400px;
+	min-height: 500px;
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section-clear {
+	clear: both;
 }
 
 .section-white {
@@ -226,4 +234,37 @@ footer {
 	font-size: 0.8em;
 	text-align: center;
 	color: #999999;
+}
+/** -- FOOTER -- **/
+
+/** -- CONTENT -- **/
+#about {
+	margin: 2em;
+	padding: 1em;
+}
+
+.line:after {
+	display: block;
+	content: '';
+	width: 3.25em;
+	height: 2px;
+	margin: 0.7em 0 1em 0;
+	border-radius: 2px;
+	background-color: #dddddd;
+	background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+	background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+	background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+	background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+}
+
+.about-image {
+	/*
+	margin: 1em;
+	padding: 1em;
+	*/
+}
+
+.about-image img {
+	width: 80%;
+	height: 80%;
 }

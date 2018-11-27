@@ -25,8 +25,6 @@ $(document).ready(function(){
 				"background-image" : "url('./img/background2.jpg')"
 			});
 		}
-
-		//console.log("HEADER: " + $("header").height() + " SCROLL: " + $(this).scrollTop());
 	});
 
 
