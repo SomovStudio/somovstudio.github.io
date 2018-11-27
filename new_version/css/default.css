@@ -299,12 +299,12 @@ footer {
 	background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 }
 
-.about-image {
+.contact-image {
 	margin: 1em;
 	padding: 1em;
 }
 
-.about-image img {
+.contact-image img {
 	width: 80%;
 	height: 80%;
 }
