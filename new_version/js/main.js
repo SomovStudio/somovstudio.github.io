@@ -14,5 +14,20 @@ $(document).ready(function(){
 		$("#contacts img").css({
 			"transform" : "translate(0%, -" + scrolled / 10.5 + "%)"
 		});
+
+		if($(this).scrollTop() <= $("header").height()){
+			$("body").css({
+				"background-image" : "url('./img/background1.jpg')"
+			});
+		}
+		if($(this).scrollTop() > $("header").height()){
+			$("body").css({
+				"background-image" : "url('./img/background2.jpg')"
+			});
+		}
+
+		//console.log("HEADER: " + $("header").height() + " SCROLL: " + $(this).scrollTop());
 	});
+
+
 });

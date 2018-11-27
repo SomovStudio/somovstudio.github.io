@@ -78,11 +78,10 @@ body {
         position: absolute;
         background: #FFFFFF;
         color: #FFFFFF;
-        box-shadow: 0 0 0 rgba(0,0,0,0);
         text-align: left;
-        z-index: 10000;
         min-height: 6%;
         width: 50%;
+        z-index: 10000;
     }
 
     .menu li{
@@ -184,18 +183,47 @@ header{
 section {
 	display: block;
 	min-height: 400px;
+}
+
+.section-white {
 	background-color: #FFFFFF;
+}
+
+.section-transparent {
+	min-height: 400px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
+    background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
+    opacity: 0.7;
+    overflow: hidden;
 }
 
 .section-content-left{
 	float: left;
-    width: 40%;
+    width: 50%;
     min-height: 100%;
 }
 
 .section-content-right {
 	float: right;
-	width: 60%;
+	width: 50%;
 	min-height: 100%;
 }
 /** -- SECTION -- **/
+
+/** -- FOOTER -- **/
+footer {
+	height: 50vh;
+	background-color: #FFFFFF;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.footer-copyright {
+	padding-top: 100px;
+	width: 100%;
+	margin: 2.5em 0 2em 0;
+	font-size: 0.8em;
+	text-align: center;
+	color: #999999;
+}
