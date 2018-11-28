@@ -341,7 +341,9 @@ footer {
 
 .footer-menu li a:hover
 {
-    color: #D3B0FC;
+    /*color: #D3B0FC;*/
+    color: #798696;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 800px){
