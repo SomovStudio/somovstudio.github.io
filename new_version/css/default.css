@@ -106,9 +106,9 @@ a:hover {
         display: none;
         position: absolute;
         background: #FFFFFF;
-        color: #FFFFFF;
+        color: #000000;
         text-align: left;
-        min-height: 6%;
+        min-height: 100%;
         width: 50%;
         z-index: 10000;
     }
@@ -123,12 +123,13 @@ a:hover {
         padding: 0;
         text-decoration: none;
         border-bottom: none; 
+        color: #000000;
     }
 
     #selectPage
     {
         color: #FFFFFF;
-        background-color: #222222;
+        background-color: #111111;
         border-left: 0px solid #B8B8B8;
     }
 
@@ -246,6 +247,20 @@ section {
 	width: 50%;
 	min-height: 100%;
 }
+
+@media screen and (max-width: 800px){
+    .section-content-left{
+		float: left;
+	    width: 100%;
+	    min-height: 5%;
+	}
+
+	.section-content-right {
+		float: right;
+		width: 100%;
+		min-height: 5%;
+	}
+}
 /** -- SECTION -- **/
 
 /** -- FOOTER -- **/
@@ -295,6 +310,7 @@ footer {
     text-align: left;
 }
 
+/*
 .footer-menu:after {
 	display: block;
 	content: '';
@@ -308,6 +324,7 @@ footer {
 	background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 	background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 }
+*/
 
 .footer-menu li {
     display: inline-block;
@@ -325,6 +342,12 @@ footer {
 .footer-menu li a:hover
 {
     color: #D3B0FC;
+}
+
+@media screen and (max-width: 800px){
+    .footer-menu {
+		display: none;
+	}
 }
 
 /** -- FOOTER -- **/
@@ -361,6 +384,16 @@ footer {
 	width: 50%;
 }
 
+.content-image {
+	margin: 1em;
+	padding: 1em;
+}
+
+.content-image img {
+	width: 80%;
+	height: 80%;
+}
+
 .line:after {
 	display: block;
 	content: '';
@@ -375,12 +408,33 @@ footer {
 	background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 }
 
-.contact-image {
-	margin: 1em;
-	padding: 1em;
-}
+@media screen and (max-width: 800px){
+	#contacts {
+		display: block;
+		position: relative;
+		left: 0px;
+		margin: 1em;
+		padding: 1em;
+		background-color: rgba(10, 10, 10, 0.5);
+		color: #FFFFFF;
+		border: 0;
+	    border-radius: 8px;
+	    min-height: 255px;
+	    width: 90%;
+	    z-index: 2000;
+	}
 
-.contact-image img {
-	width: 80%;
-	height: 80%;
+	.contacts-left {
+		float: left;
+		width: 45%;
+	}
+
+	.contacts-right {
+		float: right;
+		width: 45%;
+	}
+
+    .content-image img {
+		display: none;
+	}
 }
