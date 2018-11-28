@@ -12,11 +12,13 @@ body {
     font-size: 12pt;
     line-height: 1.65;
     background-color: #FFFFFF;
+    /*
     background: url('../img/background1.jpg') no-repeat center center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    */
 }
 
 a {
@@ -33,6 +35,18 @@ a:hover {
 	border-bottom-color: transparent;
 }
 
+#background {
+	position: fixed;
+	display: block;
+	width: 100%;
+	min-height: 100%;
+	background: url('../img/background1.jpg') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1000;
+}
 
 /** -- MENU -- **/
 .menu{
@@ -251,10 +265,72 @@ footer {
 	text-align: center;
 	color: #999999;
 }
+
+.footer-social {
+	text-align: right;
+}
+
+.footer-social li {
+    display: inline-block;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.footer-social li a
+{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.footer-menu {
+	overflow: hidden;
+    position:relative;
+    padding: 5px 5px 5px 25px;
+    width: 95%;
+    height: 60px;
+    top: -1%;
+    z-index: 10000;
+    list-style-type: none;
+    text-align: left;
+}
+
+.footer-menu:after {
+	display: block;
+	content: '';
+	width: 100%;
+	height: 1px;
+	margin: 0.7em 0 1em 0;
+	border-radius: 2px;
+	background-color: #dddddd;
+	background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+	background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+	background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+	background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+}
+
+.footer-menu li {
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.footer-menu li a
+{
+    text-decoration: none;
+    padding: 2em 1em;
+    color: #798696;
+}
+
+.footer-menu li a:hover
+{
+    color: #D3B0FC;
+}
+
 /** -- FOOTER -- **/
 
 /** -- CONTENT -- **/
-#about, #technologies, #services, #soft {
+#about, #services, #technology, #portfolio, #developments {
 	margin: 2em;
 	padding: 1em;
 }
@@ -264,8 +340,6 @@ footer {
 	position: relative;
 	top: 15px;
 	left: 25%;
-	z-index: 2000;
-
 	margin: 2em;
 	padding: 1em;
 	background-color: rgba(10, 10, 10, 0.5);
@@ -273,6 +347,8 @@ footer {
 	border: 0;
     border-radius: 8px;
     min-height: 225px;
+    width: 50%;
+    z-index: 2000;
 }
 
 .contacts-left {

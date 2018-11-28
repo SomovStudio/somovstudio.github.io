@@ -16,12 +16,12 @@ $(document).ready(function(){
 		});
 
 		if($(this).scrollTop() <= $("header").height()){
-			$("body").css({
+			$("#background").css({
 				"background-image" : "url('./img/background1.jpg')"
 			});
 		}
 		if($(this).scrollTop() > $("header").height()){
-			$("body").css({
+			$("#background").css({
 				"background-image" : "url('./img/background2.jpg')"
 			});
 		}
