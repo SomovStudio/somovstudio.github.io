@@ -1,139 +1,242 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-	<head>
-		<title>Somov Studio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="SHORTCUT ICON" href="./img/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="./css/main.css" />
-	</head>
-	<body>
+<head>
+	<title>Somov Studio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="SHORTCUT ICON" href="./img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="./css/default.css" />
+</head>
+<body>
+	<div id="background"></div>
 
-		<header>
-			<nav>
-				<ul>
-					<li><a href="#about">О компании</a></li>
-					<li><a href="#technologies">Технологии</a></li>
-					<li><a href="#services">Услуги</a></li>
-					<li><a href="soft.html">Бесплатные программы</a></li>
-					<li><a href="#contacts">Контакты</a></li>
+	<!-- HEADER -->
+	<header>
+		<!-- MENU -->
+		<nav>
+			<div class="menu-wrapper">
+				<label class="menu-button" for="menuCheck"><img src="./img/menu.png" atl="Menu"></label>
+				<input type="checkbox" name="menu-check" id="menuCheck">
+				<ul class="menu">
+					<li><a href="index.html#about">О компании</a></li>
+					<li><a href="index.html#services">Услуги</a></li>
+					<li><a href="index.html#technology">Технологии</a></li>
+					<li><a href="index.html#portfolio">Портфолио</a></li>
+					<li><a href="index.html#developments">Разработки</a></li>
+					<li><a href="index.html#contacts">Контакты</a></li>
 				</ul>
-			</nav>
-		</header>
+			</div>
+		</nav>
+		<!-- LOGO -->
+		<div id="headerTitleAndLogo">
+			<div id="title">Somov Studio</div>
+			<div id="logo"><img src="./img/logo.png" alt="logo" class="logo-rotate"></div>
+			<div id="info">
+			Ваши данные нуждаются в постоянной обработке и хранении.<br>
+			Предлагаем программные средства для работы с данными.
+			</div>
+		</div>
+	</header>
+	
 
-		<section id="header">
-			<div id="grid"></div>
-			<div id="headerTitleAndLogo">
-				<div id="title">Somov Studio</div>
-				<div id="logo"><img src="./img/logo.png" alt="logo" class="Rotate"></div>
-				<div id="info">
-				Ваши данные нуждаются в постоянной обработке и хранении.<br>
-				Предлагаем программные средства для работы с данными.
+	<!-- CONTENT -->
+	<section class="section-white">
+		<div class="section-content-left">
+			<div id="about">
+				<h2 class="line">О компании</h2>
+				<p>
+					В современном мире огромное количество информации нуждается в постоянной обработке и хранении. Справится с этой задачей помогают специальные программные средства.
+					Наша компания занимается разработкой клиент-серверных приложений направленных на удовлетворение потребностей обработки и хранения данных. Мы предлагаем свои услуги в разработке под заказ программных средств любой сложности. В работе мы используем самые передовые .Net технологии разработанные корпорацией Microsoft.
+				</p>
+				<div class="button-more-right">
+					<a href="about.html">ПОДРОБНЕЕ >></a>
 				</div>
 			</div>
-		</section>
-
-		<section id="content">
-			<table>
-				<tr>
-					<td>
-						<div id="about">
-							<h2 class="Line">О компании</h2>
-							<p>
-							В нашем мире огромное количество информации, которую необходимо хранить и обрабатывать. 
-							<br>Наша компания занимается разработкой: 
-							Web-приложений, клиент-серверных приложений, проектированием баз данных.
-							</p>
-						</div>
-						<div id="technologies">
-							<h2 class="Line">Технологии</h2>
-							<p>
-							В работе мы используем самые передовые и популярные технологии.
-							</p>
-							<ul>
-								<li><img src="./img/netframework.png"></li>
-								<li><img src="./img/yiiframework.png"></li>
-								<li><img src="./img/bitrixframework.png"></li>
-								<li><img src="./img/jquery.png"></li>
-								<li><img src="./img/nodejs.png"></li>
-								<li><img src="./img/apache.png"></li>
-								<li><img src="./img/mysql.png"></li>
-							</ul>
-						</div>
-					</td>
-					<td>
-						<div id="services">
-							<h2 class="Line">Услуги</h2>
-							<b>Услуги в области разработки программных средств:</b>
-							<ul>
-								<li>Web-приложения на основе Yii2, Bitrix.</li>
-								<li>Клиент-серверные приложения под Windows</li>
-								<li>Проектирование баз данных MySQL и Microsoft SQL Server</li>
-							</ul>
-							<b>Внедрение и сопровождение:</b>
-							<ul>
-								<li>Развертывание Web-приложений на платных хостингах с последующим сопровождением и продвижением в поисковых системах.</li>
-								<li>Полная поддержка разработанных Клиент-серверных приложений.</li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-			</table>
-			<div id="soft">
-				<h2 class="Line">Бесплатное программное обеспечение</h2>
-				В данном разделе вы можете скачать программное обеспечение бесплатно. Раздел содержит программы и утилиты которые помогут вам в работе.
-				<form action="soft.html">
-					<input type="submit" value="Узнать больше" class="Button">
-				</form>
+		</div>
+		<div class="section-content-right">
+			<div class="content-image">
+				<img src="./img/about.png">
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<section id="contacts">
-			<img src="./img/img2.jpg">
-			<div id="contactsInfo">
-				<h2 class="Line">Контакты</h2>
-				<table>
-					<tr>
-						<td>
-							<b>Компания:</b> Somov Studio
-							<br><b>email:</b> <a href="mailto:somov.studio@gmail.com">somov.studio@gmail.com</a>
-						</td>
-						<td>
-							<b>Руководитель:</b> Сомов Павел Витальевич
-							<br><b>email:</b> <a href="mailto:pavel_somov@mail.ru">pavel_somov@mail.ru</a>
-							<br><b>phone:</b> +380504766370
-						</td>
-					</tr>
-				</table>
+	<div class="section-clear"></div>
+
+	<section class="section-white">
+		<div class="section-content-left">
+			<div class="content-image">
+				<img src="./img/services.png">
 			</div>
-		</section>
-
-		<section id="information">
-			<div id="information_footer">
-				<h2>Деятельность</h2>
-				<p>Наша компания занимается проектированием баз данных и разработкой программных средств ориентированных на упрощенную работу с данными.</p>
+		</div>
+		<div class="section-content-right">
+			<div id="services">
+				<h2 class="line">Услуги</h2>
+				<p>Разработка программного обеспечения под заказ:</p>
+				<ul class="services-list">
+					<li>Клиент-серверные приложения под Windows</li>
+					<li>Клиент-серверные кроссплатформенные приложения</li>
+					<li>Web-приложения на основе ASP.Net.</li>
+					<li>Проектирование баз данных Microsoft SQL Server и MySQL</li>
+				</ul>
+				<p>Внедрение и сопровождение:</p>
+				<ul class="services-list">
+					<li>Установка и настройка разработанного приложения</li>
+					<li>Развертывение разработанного Web приложения
+					<li>Регулярная или частичная поддержка разработанного программного обеспечения</li>
+				</ul>
+				<br>
+				<p style="font-size: small;">* Более подробную информация о расценках и сроках разработки смотрите в разделе "подробнее"</p>
+				<div class="button-more-right">
+					<a href="services.html">ПОДРОБНЕЕ >></a>
+				</div>
 			</div>
-			<div id="contacts_footer">
-				<h2>Контакты</h2>
-				<dl class="alt">
-					<dt><b>Руководитель</b></dt>
-					<dd>Сомов Павел Витальевич</dd>
-					<dt><b>Телефон</b></dt>
-					<dd>+380504766370</dd>
-					<dt><b>Email</b></dt>
-					<dd><a href="mailto:pavel_somov@mail.ru">pavel_somov@mail.ru</a></dd>
-					<dt><b>Адрес</b></dt>
-					<dd>г. Луганск</dd>
-				</dl>
+		</div>
+	</section>
+
+	<div class="section-clear"></div>
+
+	<section class="section-white">
+		<div class="section-content-left">
+			<div id="technology">
+				<h2 class="line">Технологии</h2>
+				<p>
+				В разработке программного обеспечения мы используем .NET Framework одну из самых передовых технологии от корпорации Microsoft.
+				<br>
+				.NET Framework — программная платформа, выпущенная компанией Microsoft в 2002 году.
+				В настоящее время .NET Framework получает развитие в виде .NET Core, изначально предполагающей кроссплатформенную разработку и эксплуатацию.
+				<br>
+				ASP.NET — платформа разработки веб-приложений от корпорации Microsoft. ASP.NET входит в состав платформы .NET Framework.
+				<br>
+				Microsoft SQL Server — система управления реляционными базами данных, разработанная корпорацией Microsoft.
+				</p>
+				<div class="button-more-right">
+					<a href="technology.html">ПОДРОБНЕЕ >></a>
+				</div>
 			</div>
-		</section>
+		</div>
+		<div class="section-content-right">
+			<div class="content-image">
+				<img src="./img/technology.png">
+			</div>
+		</div>
+	</section>
 
-		<footer>
-			<p class="Copyright">Copyright &copy; 2017 - Somov Studio</p>
-		</footer>
+	<div class="section-clear"></div>
 
-		<!-- Scripts -->
-		<script src="./js/jquery-3.2.1.min.js"></script>
-		<script src="./js/main.js"></script>
-	</body>
+	<section class="section-white">
+		<div class="section-content-left">
+			<div class="content-image">
+				<img src="./img/portfolio.png">
+			</div>
+		</div>
+		<div class="section-content-right">
+			<div id="portfolio">
+				<h2 class="line">Портфолио</h2>
+				<p>
+				В рамках сотрудничества с компаниями разработчиков 3D приложения в области QA автоматиации в среде Unity были разработаны следующие приложения:
+				</p>
+				<ul class="services-list">
+					<li>Admin Database Framework - фреймворк (платформа) позволяет создать администратор баз данных для Веб-приложения на основе Apache, MySQL</li>
+					<li>FastADB - программа позволяет работать с Android Debug Bridge более удобно и быстрее (необходимый инструмент при тестировании android приложений)</li>
+				</ul>
+				<br>
+				<p style="font-size: small;">* Данные программные средства находятся в открытом доступе по лицензии GNU и вы можеле с ними ознакомиться пройдя в раздел "подробнее"</p>
+				<div class="button-more-right">
+					<a href="portfolio.html">ПОДРОБНЕЕ >></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="section-clear"></div>
+
+	<section class="section-white">
+		<div class="section-content-left">
+			<div id="developments">
+				<h2 class="line">Разработки</h2>
+				<p>
+				Чтобы лучше понять род нашей деятельности, мы предлагаем вам несколько наших бесплатных разработок. Программные средства находятся в открытом доступе и распространяются по лицензии GNU что позволяет вам не только ознакомиться но и полноценно использовать их в своей работе.
+				</p>
+				<br>
+				<p style="font-size: small;">* Перейдите в раздел "поробнее" чтобы скачать данные программные средста, а так же документацию и видеоуроки по их применению.</p>
+				<div class="button-more-right">
+					<a href="developments.html">ПОДРОБНЕЕ >></a>
+				</div>
+			</div>
+		</div>
+		<div class="section-content-right">
+			<div class="content-image">
+				<img src="./img/developments.png">
+			</div>
+		</div>
+	</section>
+
+	<div class="section-clear"></div>
+
+	<section class="section-transparent">
+		<div id="contacts">
+			<h2 class="line">Контакты</h2>
+			<div class="contacts-left">
+				<b>Компания:</b> Somov Studio
+				<br><b>email:</b> <a href="mailto:somov.studio@gmail.com">somov.studio@gmail.com</a>
+			</div>
+			<div class="contacts-right">
+				<b>Руководитель:</b>
+				<br>Сомов Павел Витальевич
+				<br><b>email:</b> <a href="mailto:pavel_somov@mail.ru">pavel_somov@mail.ru</a>
+				<br><b>phone:</b> +380504766370
+			</div>
+		</div>
+	</section>
+
+	<div class="section-clear"></div>
+
+	<!-- FOOTER -->
+	<footer>
+		<nav>
+			<div>
+				<ul class="footer-menu">
+					<li><a href="index.html#about">О компании</a></li>
+					<li><a href="index.html#services">Услуги</a></li>
+					<li><a href="index.html#technology">Технологии</a></li>
+					<li><a href="index.html#portfolio">Портфолио</a></li>
+					<li><a href="index.html#developments">Разработки</a></li>
+					<li><a href="index.html#contacts">Контакты</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="footer-social">
+			<ul>
+				<li>
+					<a href="https://github.com/SomovStudio" target="_blank">
+						<img src="./img/github.png" alt="GitHub" width="36" height="36">
+					</a>
+				</li>
+				<li>
+					<a href="https://vk.com/somov.studio" target="_blank">
+						<img src="./img/vk.png" alt="VK" width="36" height="36">
+					</a>
+				</li>
+				<li>
+					<a href="mailto:somov.studio@gmail.com" target="_blank">
+						<img src="./img/google.png" alt="Google" width="36" height="36">
+					</a>
+				</li>
+				<li>
+					<a href="https://www.youtube.com/channel/UCqLSl-QwQTuRAbdb8sPaRcQ" target="_blank">
+						<img src="./img/youtube.png" alt="YouTube" width="36" height="36">
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<p class="footer-copyright">
+			Copyright &copy; 2019 Somov Studio. All Rights Reserved.
+		</p>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
 </html>
