@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$('#title').animate({opacity:1}, 2000);
 	$('#logo').animate({opacity:1}, 2000);
 	$('#info').animate({opacity:1}, 2000);
-	$('.Rotate').toggleClass('RotateBack');
+	$('.logo-rotate').toggleClass('logo-rotate-back');
 
 	$(window).scroll(function(){
 		var scrolled = $(this).scrollTop();

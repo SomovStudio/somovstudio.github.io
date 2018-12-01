@@ -97,6 +97,16 @@ a:hover {
     display: none;
 }
 
+.logo-rotate {
+	transform: rotate(-90deg);
+    transition: .1s;
+}
+
+.logo-rotate-back {
+	transform: rotate(0deg);
+    transition: .5s;
+}
+
 @media screen and (max-width: 850px){
     .menu-wrapper{
         background: #FFFFFF;
@@ -108,7 +118,7 @@ a:hover {
         background: #FFFFFF;
         color: #000000;
         text-align: left;
-        min-height: 100%;
+        height: 100%;
         width: 50%;
         z-index: 10000;
     }
@@ -265,7 +275,7 @@ section {
 
 /** -- FOOTER -- **/
 footer {
-	height: 50vh;
+	min-height: 50vh;
 	background-color: #FFFFFF;
 	position: relative;
 	overflow: hidden;
@@ -273,6 +283,7 @@ footer {
 
 
 .footer-copyright {
+	position: relative;
 	padding-top: 100px;
 	width: 100%;
 	margin: 2.5em 0 2em 0;
@@ -357,7 +368,7 @@ footer {
 
 /** -- CONTENT -- **/
 #about, #services, #technology, #portfolio, #developments {
-	margin: 2em;
+	/*margin: 2em;*/
 	padding: 1em;
 }
 
@@ -480,115 +491,3 @@ footer {
 }
 /** -- CONTENT -- **/
 
-/** -- PAGE -- **/
-#backgroundPage {
-	position: fixed;
-	display: block;
-	width: 100%;
-	min-height: 100%;
-	background: url('../img/background2.jpg') no-repeat center center fixed;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    z-index: -1000;
-}
-
-.page-header{
-    height: calc(60vh - 80px);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
-    background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
-    opacity: 0.7;
-    overflow: hidden;
-}
-
-.page-menu{
-    overflow: hidden;
-    position:relative;
-    padding: 5px 5px 5px 5px;
-    height: 60px;
-    top: -1%;
-    z-index: 10000;
-    list-style-type: none;
-    text-align: right;
-    background-color: #FFFFFF;
-}
-
-.page-menu li {
-    display: inline-block;
-    padding-top: 17px;
-    padding-bottom: 5px;
-}
-
-.page-menu li a
-{
-    text-decoration: none;
-    padding: 2em 1em;
-    color: #798696;
-}
-
-.page-menu li a:hover
-{
-    color: #D3B0FC;
-}
-
-.page-menu-button {
-    position: relative;
-    top: 5px;
-    left: 10px;
-    display: none;
-    cursor: pointer;
-}
-
-.page-menu-button img {
-    width: 45px;
-    height: 45px;
-}
-
-#menuCheck{
-    display: none;
-}
-
-@media screen and (max-width: 850px){
-    .page-menu-wrapper{
-        background: #FFFFFF;
-    }
-
-    .page-menu{
-        display: none;
-        position: absolute;
-        background: #FFFFFF;
-        color: #000000;
-        text-align: left;
-        min-height: 100%;
-        width: 50%;
-        z-index: 10000;
-    }
-
-    .page-menu li{
-        display: block;
-        padding-left: 20px;
-    }
-
-    .page-menu li a{
-        display: block;
-        padding: 0;
-        text-decoration: none;
-        border-bottom: none; 
-        color: #000000;
-    }
-
-    .page-menu-button{
-        display: inline-block;
-    }
-
-    #menuCheck:checked + .menu{
-        display: block;
-        width: 100%;
-        top: 52px;
-    }
-
-    .page-menu-logo {
-		visibility: hidden;
-	}
-}
