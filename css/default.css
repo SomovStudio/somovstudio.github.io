@@ -222,7 +222,7 @@ header{
 /** -- SECTION -- **/
 section {
 	display: block;
-	min-height: 400px;
+	min-height: 200px;
 	padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -416,6 +416,16 @@ footer {
 }
 
 .content-image img {
+	width: 100%;
+	height: 100%;
+}
+
+.content-image-soft {
+	margin: 1em;
+	padding: 1em;
+}
+
+.content-image-soft img {
 	width: 100%;
 	height: 100%;
 }

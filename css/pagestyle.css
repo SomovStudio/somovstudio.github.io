@@ -238,3 +238,16 @@ dl dt {
     background-color: #DEDEDE;
     color: #1A58DB;
 }
+
+#backgroundPageAggregator {
+    position: fixed;
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    background: url('../img/aggregator.png') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1000;
+}
