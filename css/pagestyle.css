@@ -207,3 +207,34 @@ dl dt {
         z-index: 10000;
     }
 }
+
+/** -- SOFT -- **/
+.description-td{
+    width: 40%;
+    padding: 1em;
+}
+
+.action-td{
+    width: 40%;
+    padding: 1em;
+}
+
+.button {
+    width: 125px;
+    height: 33px;
+    cursor:pointer;
+    border: 0;
+    border-radius: 8px;
+    color: #D3D3D3;
+    background-color: rgb(50, 50, 50);
+}
+
+.button:hover {
+    width: 125px;
+    height: 33px;
+    cursor:pointer;
+    border: 0;
+    border-radius: 8px;
+    background-color: #DEDEDE;
+    color: #1A58DB;
+}
