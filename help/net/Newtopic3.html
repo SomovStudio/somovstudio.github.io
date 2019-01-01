@@ -1,0 +1,158 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Строки</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic3");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Строки</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="C.html">C#</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="C.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="IFSWITCH.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic6.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Строки</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Построение строк</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts23">string</span><span class="rvts14"> str = </span><span class="rvts15">"Строки в C# весьма эффективны"</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Строку можно создавать из массива символов char</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">char</span><span class="rvts14">[] chArray = { </span><span class="rvts22">'t'</span><span class="rvts14">,</span><span class="rvts22">'e'</span><span class="rvts14">,</span><span class="rvts22">'s'</span><span class="rvts14">,</span><span class="rvts22">'t'</span><span class="rvts14"> };</span><br/><span class="rvts23">string</span><span class="rvts14"> strTest = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts23">string</span><span class="rvts14">(chArray);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Обращение со строками</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts13">Compare</span><span class="rvts8"> - сравнение строк. Если строка strA меньше строки strB; положительное значение, если строка strA больше строки strВ; и нуль, если сравниваемые строки равны.)</span></p>
+<p class="rvps5"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">int</span><span class="rvts14"> resultCompare = </span><span class="rvts23">string</span><span class="rvts14">.</span><span class="rvts16">Compare</span><span class="rvts14">(strA, strB);</span></p>
+<p class="rvps5"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts13">Equals</span><span class="rvts8"> - сравнение строк. Возвращает логическое значение true, если вызывающая строка имеет такое же значение, как и у аргумента value. </span></p>
+<p class="rvps5"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">bool</span><span class="rvts14"> resultEquals = </span><span class="rvts23">string</span><span class="rvts14">.</span><span class="rvts16">Equals</span><span class="rvts14">(strA, strB);</span></p>
+<p class="rvps5"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts13">IndexOf</span><span class="rvts8"> - Осуществляет поиск в вызывающей строке первого вхождения символа, определяемого аргументом value. </span></p>
+<p class="rvps5"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">int</span><span class="rvts14"> resultIndex = strA.</span><span class="rvts16">IndexOf</span><span class="rvts14">(</span><span class="rvts22">'a'</span><span class="rvts14">);</span><br/><span class="rvts14">resultIndex = strB.</span><span class="rvts16">IndexOf</span><span class="rvts14">(</span><span class="rvts15">"b"</span><span class="rvts14">, </span><span class="rvts19">StringComparison</span><span class="rvts14">.</span><span class="rvts28">CurrentCulture</span><span class="rvts14">);</span></p>
+<p class="rvps5"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts13">LastIndexOf</span><span class="rvts8"> - Осуществляет поиск в вызывающей строке последнего вхождения символа, определяемого аргументом value. </span></p>
+<p class="rvps5"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">int</span><span class="rvts14"> resultLastIndex = strA.</span><span class="rvts16">LastIndexOf</span><span class="rvts14">(</span><span class="rvts22">'a'</span><span class="rvts14">);</span></p>
+<p class="rvps5"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts13">ToLower</span><span class="rvts8"> - Возвращает вариант вызывающей строки в нижнем регистре. </span></p>
+<p class="rvps5"><span class="rvts13">ToUpper</span><span class="rvts8"> - Возвращает вариант вызывающей строки в верхнем регистре. </span></p>
+<p class="rvps5"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts23">string</span><span class="rvts14"> resultString = strA.</span><span class="rvts16">ToLower</span><span class="rvts14">();</span><br/><span class="rvts14">resultString = strB.</span><span class="rvts16">ToUpper</span><span class="rvts14">();</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Массивы строк</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts23">string</span><span class="rvts14">[] strArray = { </span><span class="rvts15">"Hello"</span><span class="rvts14">, </span><span class="rvts15">" "</span><span class="rvts14">, </span><span class="rvts15">"World"</span><span class="rvts14">, </span><span class="rvts15">" "</span><span class="rvts14">, </span><span class="rvts15">"!!!"</span><span class="rvts14"> };</span><br/><span class="rvts25">foreach</span><span class="rvts14">(</span><span class="rvts23">string</span><span class="rvts14"> value </span><span class="rvts25">in</span><span class="rvts14"> strArray)</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">Write</span><span class="rvts14">(value);</span><br/><span class="rvts14">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Подстроки Substring</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts23">string</span><span class="rvts14"> orgstr = </span><span class="rvts15">"В C# упрощается обращение со строками."</span><span class="rvts14">;</span><br/><span class="rvts23">string</span><span class="rvts14"> substr = orgstr.</span><span class="rvts16">Substring</span><span class="rvts14">(</span><span class="rvts18">5</span><span class="rvts14">, </span><span class="rvts18">20</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Применение строк в операторах switch</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts23">string</span><span class="rvts14">[] strs = { </span><span class="rvts15">"один"</span><span class="rvts14">, </span><span class="rvts15">"два"</span><span class="rvts14">, </span><span class="rvts15">"три"</span><span class="rvts14"> };</span><br/><span class="rvts25">foreach</span><span class="rvts14">(</span><span class="rvts23">string</span><span class="rvts14"> value </span><span class="rvts25">in</span><span class="rvts14"> strs)</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">switch</span><span class="rvts14">(value) {</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">case</span><span class="rvts14"> </span><span class="rvts15">"один"</span><span class="rvts14">:</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"один"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts29">break</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">case</span><span class="rvts14"> </span><span class="rvts15">"два"</span><span class="rvts14">:</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"два"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts29">break</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">case</span><span class="rvts14"> </span><span class="rvts15">"три"</span><span class="rvts14">:</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"три"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts29">break</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create cross-platform Qt Help files</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

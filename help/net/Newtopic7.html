@@ -1,0 +1,143 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Перегрузка методов</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic7");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Перегрузка методов</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="C.html">C#</a> &rsaquo;&rsaquo; <a href="Newtopic5.html">Классы</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic5.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="PARAMS-.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic9.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Перегрузка методов</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Для перегрузки метода достаточно объявить разные его варианты</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">Overload</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">OvlDemo</span><span class="rvts14">()</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Без параметров"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">OvlDemo</span><span class="rvts14">(</span><span class="rvts21">int</span><span class="rvts14"> i)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Один параметр (int): "</span><span class="rvts14">+i);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">OvlDemo</span><span class="rvts14">(</span><span class="rvts21">int</span><span class="rvts14"> a, </span><span class="rvts21">int</span><span class="rvts14"> b)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Два параметра (int): "</span><span class="rvts14">+a+</span><span class="rvts15">" | "</span><span class="rvts14">+b);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">OvlDemo</span><span class="rvts14">(</span><span class="rvts21">double</span><span class="rvts14"> a, </span><span class="rvts21">double</span><span class="rvts14"> b)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Два параметра (double): "</span><span class="rvts14">+a+</span><span class="rvts15">" | "</span><span class="rvts14">+b);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts17">Overload</span><span class="rvts14"> ovl = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts17">Overload</span><span class="rvts14">();</span><br/><span class="rvts14">ovl.</span><span class="rvts16">OvlDemo</span><span class="rvts14">();</span><br/><span class="rvts14">ovl.</span><span class="rvts16">OvlDemo</span><span class="rvts14">(</span><span class="rvts18">10</span><span class="rvts14">);</span><br/><span class="rvts14">ovl.</span><span class="rvts16">OvlDemo</span><span class="rvts14">(</span><span class="rvts18">25</span><span class="rvts14">, </span><span class="rvts18">50</span><span class="rvts14">);</span><br/><span class="rvts14">ovl.</span><span class="rvts16">OvlDemo</span><span class="rvts14">(</span><span class="rvts18">13.4</span><span class="rvts14">, </span><span class="rvts18">87.05</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">В результате:</span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem83.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Перегрузка конструкторов</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">Overload</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts17">Overload</span><span class="rvts14">()</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Конструктор без параметров"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts17">Overload</span><span class="rvts14">(</span><span class="rvts21">int</span><span class="rvts14"> i)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Конструктор с одиним параметром (int): "</span><span class="rvts14">+i);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts17">Overload</span><span class="rvts14">(</span><span class="rvts21">int</span><span class="rvts14"> a, </span><span class="rvts21">int</span><span class="rvts14"> b)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Конструктор с двумя параметрами (int): "</span><span class="rvts14">+a+</span><span class="rvts15">" | "</span><span class="rvts14">+b);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts17">Overload</span><span class="rvts14">(</span><span class="rvts21">double</span><span class="rvts14"> a, </span><span class="rvts21">double</span><span class="rvts14"> b)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Конструктор с двумя параметрами (double): "</span><span class="rvts14">+a+</span><span class="rvts15">" | "</span><span class="rvts14">+b);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts17">Overload</span><span class="rvts14"> ovl1 = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts17">Overload</span><span class="rvts14">();</span><br/><span class="rvts17">Overload</span><span class="rvts14"> ovl2 = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts17">Overload</span><span class="rvts14">(</span><span class="rvts18">55</span><span class="rvts14">);</span><br/><span class="rvts17">Overload</span><span class="rvts14"> ovl3 = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts17">Overload</span><span class="rvts14">(</span><span class="rvts18">100</span><span class="rvts14">, </span><span class="rvts18">200</span><span class="rvts14">);</span><br/><span class="rvts17">Overload</span><span class="rvts14"> ovl4 = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts17">Overload</span><span class="rvts14">(</span><span class="rvts18">10.5</span><span class="rvts14">, </span><span class="rvts18">23.75</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">В результате:</span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem84.png"></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts27">Вызов перегружаемого конструктора с помощью ключевого слова </span><span class="rvts39">this</span></p>
+<p class="rvps3"><span class="rvts27"><br/></span></p>
+<p class="rvps5"><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">XYCoord</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts21">int</span><span class="rvts14"> </span><span class="rvts28">x</span><span class="rvts14">, </span><span class="rvts28">y</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts17">XYCoord</span><span class="rvts14">():</span><span class="rvts36">this</span><span class="rvts14">(</span><span class="rvts18">0</span><span class="rvts14">, </span><span class="rvts18">0</span><span class="rvts14">)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"В конструкторе XYCoord()"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts17">XYCoord</span><span class="rvts14">(</span><span class="rvts17">XYCoord</span><span class="rvts14"> obj):</span><span class="rvts36">this</span><span class="rvts14">(obj.</span><span class="rvts28">x</span><span class="rvts14">, obj.</span><span class="rvts28">y</span><span class="rvts14">)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"В конструкторе XYCoord(obj)"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts17">XYCoord</span><span class="rvts14">(</span><span class="rvts21">int</span><span class="rvts14"> i, </span><span class="rvts21">int</span><span class="rvts14"> j)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts28">x</span><span class="rvts14"> = i;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts28">y</span><span class="rvts14"> = j;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"В конструкторе XYCoord(int, int) "</span><span class="rvts14">+</span><span class="rvts28">x</span><span class="rvts14">+</span><span class="rvts15">" "</span><span class="rvts14">+</span><span class="rvts28">y</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts17">XYCoord</span><span class="rvts14"> t1 = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts17">XYCoord</span><span class="rvts14">();</span><br/><span class="rvts17">XYCoord</span><span class="rvts14"> t2 = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts17">XYCoord</span><span class="rvts14">(</span><span class="rvts18">8</span><span class="rvts14">, </span><span class="rvts18">9</span><span class="rvts14">);</span><br/><span class="rvts17">XYCoord</span><span class="rvts14"> t3 = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts17">XYCoord</span><span class="rvts14">(t2);</span></p>
+<p class="rvps3"><span class="rvts27"><br/></span></p>
+<p class="rvps3"><span class="rvts8">В результате:</span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem85.png"></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create cross-platform Qt Help files</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

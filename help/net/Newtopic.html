@@ -1,0 +1,173 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Типы данных, литералы и переменные</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Типы данных, литералы и переменные</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="C.html">C#</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="C.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="C.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Типы данных</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">bool </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Логический, предоставляет два значения: “истина” или “ложь”</span></p>
+<p class="rvps3"><span class="rvts8">byte </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">8-разрядный целочисленный без знака</span></p>
+<p class="rvps3"><span class="rvts8">char </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Символьный</span></p>
+<p class="rvps3"><span class="rvts8">decimal Десятичный (для финансовых расчетов)</span></p>
+<p class="rvps3"><span class="rvts8">double </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">С плавающей точкой двойной точности</span></p>
+<p class="rvps3"><span class="rvts8">float </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">С плавающей точкой одинарной точности</span></p>
+<p class="rvps3"><span class="rvts8">int </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Целочисленный</span></p>
+<p class="rvps3"><span class="rvts8">long </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Длинный целочисленный</span></p>
+<p class="rvps3"><span class="rvts8">sbyte </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">8-разрядный целочисленный со знаком</span></p>
+<p class="rvps3"><span class="rvts8">short </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Короткий целочисленный</span></p>
+<p class="rvps3"><span class="rvts8">uint </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Целочисленный без знака</span></p>
+<p class="rvps3"><span class="rvts8">ulong </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Длинный целочисленный без знака</span></p>
+<p class="rvps3"><span class="rvts8">ushort </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Короткий целочисленный без знака</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">DataTypes</span><span class="rvts14">()</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">bool</span><span class="rvts14"> b = </span><span class="rvts20">false</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">byte</span><span class="rvts14"> x = </span><span class="rvts18">1</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">char</span><span class="rvts14"> c = </span><span class="rvts22">'X'</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">decimal</span><span class="rvts14"> dl = </span><span class="rvts18">19.95</span><span class="rvts14">m;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">double</span><span class="rvts14"> d = </span><span class="rvts18">10.5</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">float</span><span class="rvts14"> f = </span><span class="rvts18">15.5</span><span class="rvts14">f;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">int</span><span class="rvts14"> i = </span><span class="rvts18">100</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">long</span><span class="rvts14"> l = </span><span class="rvts18">10000000000000</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">sbyte</span><span class="rvts14"> sb = </span><span class="rvts18">1</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">short</span><span class="rvts14"> sh = </span><span class="rvts18">0</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">uint</span><span class="rvts14"> ui = </span><span class="rvts18">100</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">ulong</span><span class="rvts14"> ul = </span><span class="rvts18">10000000000000</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">ushort</span><span class="rvts14"> sdh = </span><span class="rvts18">0</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts19">Boolean</span><span class="rvts14"> bl = </span><span class="rvts20">true</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">String</span><span class="rvts14"> str = </span><span class="rvts15">"text message"</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts19">Double</span><span class="rvts14"> dbl = </span><span class="rvts18">3.14159</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts19">Decimal</span><span class="rvts14"> dcml = </span><span class="rvts18">19.95</span><span class="rvts14">m;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts19">Byte</span><span class="rvts14"> bt = </span><span class="rvts18">1</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"bool b = "</span><span class="rvts14"> + b);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"byte x = "</span><span class="rvts14"> + x);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"char c = "</span><span class="rvts14"> + c);</span><br/><span class="rvts14">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">Литералы</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">В C# литералами называются постоянные значения, представленные в удобной для восприятия форме. </span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Шестнадцатеричные литералы</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts21">int</span><span class="rvts14"> count = </span><span class="rvts18">0xFF</span><span class="rvts14">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts26">// 255 в десятичной системе</span><br/><span class="rvts21">int</span><span class="rvts14"> incr = </span><span class="rvts18">0x1A</span><span class="rvts14">;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts26">// 26 в десятичной системе</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Управляющие последовательности символов</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">\a </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Звуковой сигнал (звонок)</span></p>
+<p class="rvps3"><span class="rvts8">\b </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Возврат на одну позицию</span></p>
+<p class="rvps3"><span class="rvts8">\f </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Перевод страницы (переход на новую страницу)</span></p>
+<p class="rvps3"><span class="rvts8">\n </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Новая строка (перевод строки)</span></p>
+<p class="rvps3"><span class="rvts8">\r </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Возврат каретки</span></p>
+<p class="rvps3"><span class="rvts8">\t </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Горизонтальная табуляция</span></p>
+<p class="rvps3"><span class="rvts8">\v </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Вертикальная табуляция</span></p>
+<p class="rvps3"><span class="rvts8">\0 </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Пустой символ</span></p>
+<p class="rvps3"><span class="rvts8">\' </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Одинарная кавычка</span></p>
+<p class="rvps3"><span class="rvts8">\" </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Двойная кавычка</span></p>
+<p class="rvps3"><span class="rvts8">\\ </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Обратная косая черта</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">@ - полволяет выводить страку в таком виде в каком она описана</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">@"А это вывод с табуляцией:</span><br/><span class="rvts15">&nbsp;&nbsp;&nbsp;&nbsp;1 2 3 4</span><br/><span class="rvts15">&nbsp;&nbsp;&nbsp;&nbsp;5 6 7 8</span><br/><span class="rvts15">"</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">Переменные</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Инициализация</span></p>
+<p class="rvps3"><span class="rvts21"><br/></span></p>
+<p class="rvps3"><span class="rvts21">int</span><span class="rvts14"> а, b =</span><span class="rvts18">8</span><span class="rvts14">, с = </span><span class="rvts18">19</span><span class="rvts14">, d;</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Неявно типизированные переменные</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14">var е = </span><span class="rvts18">2.7183</span><span class="rvts14">F;</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Приведение типов</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts21">float</span><span class="rvts14"> f = </span><span class="rvts18">10.5</span><span class="rvts14">f;</span><br/><span class="rvts21">int</span><span class="rvts14"> i = (</span><span class="rvts21">int</span><span class="rvts14">)f;</span><br/><span class="rvts14"></span><br/><span class="rvts23">string</span><span class="rvts14"> str = </span><span class="rvts15">"25"</span><span class="rvts14">;</span><br/><span class="rvts21">int</span><span class="rvts14"> sum = </span><span class="rvts17">Convert</span><span class="rvts14">.</span><span class="rvts16">ToInt32</span><span class="rvts14">(str);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Free help authoring tool</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

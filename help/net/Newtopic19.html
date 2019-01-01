@@ -1,0 +1,165 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Установка и авторизация</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic19");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Установка и авторизация</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="SQLServer.html">SQL Server</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="SQLServer.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="SQLServer.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Установка</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Установите SQL Server 2017 Express</span></p>
+<p class="rvps3"><span class="rvts8">Ссылка на официальный сайт: </span><a class="rvts74" href="https://www.microsoft.com/ru-ru/sql-server/sql-server-downloads" target="_blank">https://www.microsoft.com/ru-ru/sql-server/sql-server-downloads</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Установите SQL Server Management Studio (SSMS)</span></p>
+<p class="rvps3"><span class="rvts8">Ссылка на официальный сайт: </span><a class="rvts74" href="https://docs.microsoft.com/ru-ru/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017" target="_blank">https://docs.microsoft.com/ru-ru/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Прямая ссулка на скачиваение: &nbsp;</span><a class="rvts74" href="https://go.microsoft.com/fwlink/?linkid=2014306" target="_blank">SQL Server Management Studio 17.9</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts13">Авторизация</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">После установки запустите SQL Server Management Studio (SSMS)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Выберите сервер в поле "Имя сервера", для этого в списке выберите &lt;Продолжить обзор&gt;</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem253.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Первый вход выполняется под учетной записью пользователя Windows</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem254.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">В папке "Безопасность" раздел "Имена для входа" необходимо включить имя </span><span class="rvts13">sa</span></p>
+<p class="rvps3"><span class="rvts8">Дважды нажмите на </span><span class="rvts13">sa</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem255.png"></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Укажите пароль</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem256.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Включите флаг</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem257.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Перейдите в состояние и включите данную учетную запись</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem258.png"><img alt="" style="padding : 1px;" src="lib/NewItem259.png"></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Нажмите ОК</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Откройте Свойства сервера </span><img alt="" style="padding : 1px;" src="lib/NewItem260.png"><span class="rvts8"> через контекстное меню</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Перейдите в раздел безопасность и выберите проверка подлинности SQL Server и Windows</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem261.png"><img alt="" style="padding : 1px;" src="lib/NewItem262.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Перезапустите сервер (откройте контекстное меню на сервере </span><img alt="" style="padding : 1px;" src="lib/NewItem260.png"><span class="rvts8"> и выберите "перезапустить")</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">При следующем входе в SQL Server Management Studio (SSMS) выберите проверку подленности SQL Server введите имя </span><span class="rvts13">sa</span><span class="rvts8"> и пароль</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem263.png"></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create PDF Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

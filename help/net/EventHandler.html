@@ -1,0 +1,131 @@
+﻿
+
+<html>
+	
+<head>
+	<title>События EventHandler</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("EventHandler");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">События EventHandler</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="C.html">C#</a> &rsaquo;&rsaquo; <a href="Newtopic30.html">События</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic30.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="EventArgs.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic21.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">События EventHandler</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Применение делегатов EventHandler&lt;TEventArgs&gt; и EventHandler</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">MyEvent</span><span class="rvts14">&nbsp;</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">event</span><span class="rvts14"> </span><span class="rvts31">EventHandler</span><span class="rvts14"> SomeEvent; </span><span class="rvts26">// делегат EventHandler</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">OnSomeEvent</span><span class="rvts14">()</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">if</span><span class="rvts14">(SomeEvent != </span><span class="rvts36">null</span><span class="rvts14">) SomeEvent(</span><span class="rvts44">this</span><span class="rvts31">, </span><span class="rvts35">EventArgs</span><span class="rvts31">.</span><span class="rvts46">Empty</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span><br/><span class="rvts14"></span><br/><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">EventDemo</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">Handler</span><span class="rvts14">(</span><span class="rvts51">object</span><span class="rvts31"> source, </span><span class="rvts35">EventArgs</span><span class="rvts31"> arg</span><span class="rvts14">)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Произошло событие. Источник = "</span><span class="rvts14"> + source + </span><span class="rvts15">" | Аргумент = "</span><span class="rvts14"> + arg);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">test</span><span class="rvts14">()</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">MyEvent</span><span class="rvts14"> evt = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts17">MyEvent</span><span class="rvts14">();</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;evt.SomeEvent += </span><span class="rvts16">Handler</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;evt.</span><span class="rvts16">OnSomeEvent</span><span class="rvts14">();</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">В результате: </span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem273.png"></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts13">Практический пример обработки событий</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">KeyEventArgs</span><span class="rvts14">: </span><span class="rvts17">EventArgs</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts21">char</span><span class="rvts14"> </span><span class="rvts28">ch</span><span class="rvts14">;</span><br/><span class="rvts14">}</span><br/><span class="rvts14"></span><br/><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">KeyEvent</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">event</span><span class="rvts14"> EventHandler&lt;</span><span class="rvts17">KeyEventArgs</span><span class="rvts14">&gt; KeyPress;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">OnKeyPress</span><span class="rvts14">(</span><span class="rvts21">char</span><span class="rvts14"> key)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">KeyEventArgs</span><span class="rvts14"> k = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts17">KeyEventArgs</span><span class="rvts14">();</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">if</span><span class="rvts14">(KeyPress != </span><span class="rvts36">null</span><span class="rvts14">)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k.</span><span class="rvts28">ch</span><span class="rvts14"> = key;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyPress(</span><span class="rvts36">this</span><span class="rvts14">, k);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span><br/><span class="rvts14"></span><br/><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">KeyEventDemo</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">Test</span><span class="rvts14">()</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">KeyEvent</span><span class="rvts14"> kevt = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts17">KeyEvent</span><span class="rvts14">();</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts19">ConsoleKeyInfo</span><span class="rvts14"> key;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">int</span><span class="rvts14"> count = </span><span class="rvts18">0</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kevt.KeyPress += (sender, e) =&gt; </span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Событие: Нажата кнопка "</span><span class="rvts14"> + e.</span><span class="rvts28">ch</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kevt.KeyPress += (sender, e) =&gt; count++;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Введите несколько символов. В конце поставьте точку."</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">do</span><span class="rvts14"> {</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key = </span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">ReadKey</span><span class="rvts14">();</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kevt.</span><span class="rvts16">OnKeyPress</span><span class="rvts14">(key.KeyChar);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} </span><span class="rvts25">while</span><span class="rvts14">(key.KeyChar != </span><span class="rvts22">'.'</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Было нажато "</span><span class="rvts14"> + count + </span><span class="rvts15">" клавиш."</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">В результате: </span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem274.png"></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Easy EBook and documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
