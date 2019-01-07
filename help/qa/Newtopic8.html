@@ -1,0 +1,129 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Последовательное выполнение нажатий с задержками и снятие скриншота</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic8");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Последовательное выполнение нажатий с задержками и снятие скриншота</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="ADBandroidSDK.html">ADB (android SDK)</a> &rsaquo;&rsaquo; <a href="Newtopic5.html">Скрипты (примеры)</a> &rsaquo;&rsaquo; <a href="MonkeyRunner1.html">Тестирование (MonkeyRunner)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="MonkeyRunner1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic7.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Testtutorial.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts75">Скрипт: Последовательное выполнение нажатий с задержками и снятие скриншота</span></p>
+<p class="rvps3"><span class="rvts75">-----------------------------------------------------------------------------------------------</span></p>
+<p class="rvps3"><span class="rvts132">from </span><span class="rvts129">com.android.monkeyrunner </span><span class="rvts132">import </span><span class="rvts133">MonkeyRunner</span><span class="rvts129">, </span><span class="rvts133">MonkeyDevice</span></p>
+<p class="rvps3"><span class="rvts129">device = </span><span class="rvts133">MonkeyRunner</span><span class="rvts129">.waitForConnection()</span></p>
+<p class="rvps3"><span class="rvts130"># Нажимает кнопку (Nexus7 1280х800)</span></p>
+<p class="rvps3"><span class="rvts129">device.touch(640, 650, </span><span class="rvts134">'DOWN_AND_UP'</span><span class="rvts129">)</span></p>
+<p class="rvps3"><span class="rvts132">print</span><span class="rvts129">(</span><span class="rvts134">"CLICK - 1"</span><span class="rvts129">);</span></p>
+<p class="rvps3"><span class="rvts129">MonkeyRunner.sleep(15.0)</span><span class="rvts129"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts129"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts129"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts130"># задержка</span></p>
+<p class="rvps3"><span class="rvts129">device.touch(640, 650, </span><span class="rvts134">'DOWN_AND_UP'</span><span class="rvts129">)</span></p>
+<p class="rvps3"><span class="rvts132">print</span><span class="rvts129">(</span><span class="rvts134">"CLICK - 2"</span><span class="rvts129">);</span></p>
+<p class="rvps3"><span class="rvts129">MonkeyRunner.sleep(5.0)</span><span class="rvts129"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts129"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts129"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts130"># задержка</span></p>
+<p class="rvps3"><span class="rvts129">device.touch(640, 650, </span><span class="rvts134">'DOWN_AND_UP'</span><span class="rvts129">)</span></p>
+<p class="rvps3"><span class="rvts132">print</span><span class="rvts129">(</span><span class="rvts134">"CLICK - 3"</span><span class="rvts129">);</span></p>
+<p class="rvps3"><span class="rvts129">result = device.takeSnapshot()</span></p>
+<p class="rvps3"><span class="rvts129">result.writeToFile(</span><span class="rvts134">'C:/logs/builds/shot.png'</span><span class="rvts129">,</span><span class="rvts134">'png'</span><span class="rvts129">)</span></p>
+<p class="rvps3"><span class="rvts132">print</span><span class="rvts129">(</span><span class="rvts134">"SCREENSHOT - SAVE"</span><span class="rvts129">);</span></p>
+<p class="rvps3"><span class="rvts75">--------------------------------------------------------------------------------------------------</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EBook editor</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

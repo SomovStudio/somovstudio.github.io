@@ -1,0 +1,160 @@
+﻿
+
+<html>
+	
+<head>
+	<title>NUnit (SharpDevelop)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("NUnitSharpDevelop");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">NUnit (SharpDevelop)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Unittesting.html">Unit testing (модульное тестирование)</a> &rsaquo;&rsaquo; <a href="CNUnit.html">C# (NUnit)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="CNUnit.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="CNUnit.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="CxUnit.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">NUnit (SharpDevelop</span><span class="rvts8">)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">1. Создайте новое Windows-приложение</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">2. Добавьте к проекту Модульный тест. Для этого откройте контекстное меню -&gt; Добавить -&gt; Новое...</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem50.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Выделите папку C# и выберите Модульный тест.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem49.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">3. Создайте пустой класс и опишите в нем простую проверку email адреса</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps9"><span class="rvts45">using</span><span class="rvts32"> System;</span><br/><span class="rvts32"></span><br/><span class="rvts45">namespace</span><span class="rvts32"> TestNUtin</span><br/><span class="rvts32">{</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts43">///</span><span class="rvts39"> </span><span class="rvts43">&lt;</span><span class="rvts44">summary</span><span class="rvts43">&gt;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts43">///</span><span class="rvts39"> Description of EmailAddress.</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts43">///</span><span class="rvts39"> </span><span class="rvts43">&lt;</span><span class="rvts44">/summary</span><span class="rvts43">&gt;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts41">public</span><span class="rvts32"> </span><span class="rvts36">class</span><span class="rvts32"> </span><span class="rvts35">EmailAddress</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts35">String</span><span class="rvts32"> </span><span class="rvts34">emailAddress</span><span class="rvts32">;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts41">public</span><span class="rvts32"> </span><span class="rvts35">EmailAddress</span><span class="rvts32">(</span><span class="rvts35">String</span><span class="rvts32"> email)</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts34">emailAddress</span><span class="rvts32"> = email;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts41">public</span><span class="rvts32"> </span><span class="rvts40">bool</span><span class="rvts32"> </span><span class="rvts33">IsValid</span><span class="rvts32">()</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts41">if</span><span class="rvts32"> (</span><span class="rvts34">emailAddress</span><span class="rvts32">.</span><span class="rvts33">Contains</span><span class="rvts32">(</span><span class="rvts37">"@"</span><span class="rvts32">)){</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts50">return</span><span class="rvts32"> </span><span class="rvts38">true</span><span class="rvts32">;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts50">return</span><span class="rvts32"> </span><span class="rvts38">false</span><span class="rvts32">;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts32">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">4. Откройте ранее созданный Модульный тест и опишите короткую проверку</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps9"><span class="rvts45">using</span><span class="rvts32"> System;</span><br/><span class="rvts45">using</span><span class="rvts32"> NUnit.Framework;</span><br/><span class="rvts32"></span><br/><span class="rvts45">namespace</span><span class="rvts32"> TestNUtin</span><br/><span class="rvts32">{</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;[</span><span class="rvts35">TestFixture</span><span class="rvts32">]</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts41">public</span><span class="rvts32"> </span><span class="rvts36">class</span><span class="rvts32"> </span><span class="rvts35">Test1</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[</span><span class="rvts35">Test</span><span class="rvts32">]</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts41">public</span><span class="rvts32"> </span><span class="rvts36">void</span><span class="rvts32"> </span><span class="rvts33">TestMethod</span><span class="rvts32">()</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts35">EmailAddress</span><span class="rvts32"> email = </span><span class="rvts38">new</span><span class="rvts32"> </span><span class="rvts35">EmailAddress</span><span class="rvts32">(</span><span class="rvts37">"test@example.com"</span><span class="rvts32">);</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts40">bool</span><span class="rvts32"> isValid = email.</span><span class="rvts33">IsValid</span><span class="rvts32">();</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts35">Assert</span><span class="rvts32">.</span><span class="rvts33">IsTrue</span><span class="rvts32">(isValid);</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts32">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">5. Откройте окно инструментов для тестирования. Для этого откройте меню Вид -&gt; Инструменты -&gt; Тесты</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem48.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">6. Запустите тестирование нажатием на кнопку Запустить тест</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem47.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">В результате проверки вы получите сообщение. В окне Тесты отмечаются все успешные шаги зелёным цветом.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem46.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Если тест не проходит это отображается в окне Тесты красным цветом</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem45.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">И выводится сообщение об ошибке тестирования</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem44.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Generate EPub eBooks with ease</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

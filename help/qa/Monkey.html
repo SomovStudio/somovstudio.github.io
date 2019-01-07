@@ -1,0 +1,286 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Тестирование с помощью Monkey</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Monkey");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Тестирование с помощью Monkey</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="ADBandroidSDK.html">ADB (android SDK)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="ADBandroidSDK.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="ADB.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="MonkeyRunner.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps13"><span class="rvts80">Утилита monkey входит в состав Android SDK. Утилита отправляет на устройство поток псевдослучайных действий пользователя. Параметры командной строки задают количество действий пользователя, соотношение их типов и имя тестируемого пакета</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Параметры и примеры на сайте: </span><a class="rvts92" href="http://developer.android.com/tools/help/monkey.html">http://developer.android.com/tools/help/monkey.html</a></p>
+<p class="rvps13"><span class="rvts80">Просмотр справочной информации Monkey</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts82">adb shell monkey --help</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Синтаксис команды:</span></p>
+<p class="rvps18"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts93">adb shell monkey</span><span class="rvts94"> </span><span class="rvts95">[</span><span class="rvts96">options</span><span class="rvts95">]</span><span class="rvts94"> </span><span class="rvts95">&lt;</span><span class="rvts97">event</span><span class="rvts98">-</span><span class="rvts96">count</span><span class="rvts95">&gt;</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Запуск пакета и отправка 500 псевдослучайных событий</span></p>
+<p class="rvps18"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts82">adb shell monkey -p </span><span class="rvts81">your.package.name</span><span class="rvts82"> -v 500</span></p>
+<p class="rvps18"><span class="rvts80"><br/></span></p>
+<p class="rvps18"><span class="rvts80">Имя пакета можно узнать зайдя в папку </span><span class="rvts99">../Android/data</span></p>
+<p class="rvps18"><img width="597" height="160" alt="" style="padding : 1px;" src="lib/NewItem74.png"></p>
+<p class="rvps18"><span class="rvts80"><br/></span></p>
+<p class="rvps18"><span class="rvts80">Результат проверки</span></p>
+<p class="rvps18"><img width="601" height="303" alt="" style="padding : 1px;" src="lib/NewItem73.png"></p>
+<p class="rvps19"><span class="rvts84">Таблица </span><span class="rvts100">Command Options Reference</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<div class="rvps22"><table border="1" cellpadding="4" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td width="127" valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 0px 7px; background-color: #999999;"><p class="rvps20"><span class="rvts101">Category (Категория)</span></p>
+</td>
+<td width="210" valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 0px 7px; background-color: #999999;"><p class="rvps20"><span class="rvts101">Option (Опции)</span></p>
+</td>
+<td width="300" valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 0px 7px; background-color: #999999;"><p class="rvps20"><span class="rvts101">Description </span><br/><span class="rvts101">(Описание)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td rowspan="2" width="127" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">General</span><br/><span class="rvts80">(Общее)</span></p>
+</td>
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--help</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">справочная информация</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">-v</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts103">в командной строке будет увеличивать уровень детализации.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td rowspan="10" width="127" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Events</span><br/><span class="rvts80">(События)</span></p>
+</td>
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">-s &lt;seed&gt;</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Начальное значение для генератора псевдослучайных чисел. Если вы повторно выполните Monkey с тем же начальным значением, то он будет генерировать ту же самую последовательность событий</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--throttle &lt;milliseconds&gt;</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Вставляет фиксированной задержки между событиями. Вы можете использовать эту опцию, чтобы замедлить Monkey. Если не указан, нет никакой задержки и события генерируются как можно быстрее.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--pct-touch &lt;percent&gt;</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts103">Регулировать процент сенсорных событий. (События прикосновения вниз-вверх действие в одном месте на экране.)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--pct-motion &lt;percent&gt;</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts103">Регулировать процент движения событий. (События движения состоят из вниз действий где-нибудь на экране, ряд псевдослучайных движений, и до события вверх.)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--pct-trackball &lt;percent&gt;</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Регулировать процент трекбол событий. (Трекбол события состоять из одного или более произвольным движениям, иногда сопровождаемым щелчком.)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--pct-nav &lt;percent&gt;</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Регулировать процент "базовых" событий навигации. (События состоят из навигации вверх/вниз/влево/вправо, как от направленного ввода устройство ввода.)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--pct-majornav &lt;percent&gt;</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts103">Регулировать процент "серьезных" событий навигации. (Это навигация событий, которую обычно вызывают действия в пользовательском интерфейсе, такие как: центральная кнопка, 5-позиционная панель, клавишу "назад" или клавишу меню.)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--pct-syskeys &lt;percent&gt;</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Регулировать процент "системных" ключевых событий. (Это ключи, которые, как правило, зарезервированы для использования системой, такие как домой, назад, начало вызова, окончание вызова, или регуляторы громкости.)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--pct-appswitch &lt;percent&gt;</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Регулировать процент активности запуска. Через случайные промежутки времени, Monkey выдаст startActivity() вызов, как способ максимизации охвата всех направлений деятельности в рамках вашего пакета.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--pct-anyevent &lt;percent&gt;</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Регулировать процент других типов событий. Это универсальный lля всех остальных типов событий, таких как нажатие клавиш, другие менее используемые кнопки на устройстве, и так далее.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td rowspan="2" width="127" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Constraints</span><br/><span class="rvts80">(Ограничения)</span></p>
+</td>
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">-p &lt;allowed-package-name&gt;</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Если вы укажите один или несколько пакетов таким образом, Monkey, позволит только системные действия в рамках этих пакетов. Если вашему приложению требуется доступ к действиям в других пакетах (например, чтобы выбрать контакт) Вам необходимо указать эти пакеты. Если Вы не укажете какие-то пакеты, Monkey, позволит системе начать действия во всех пакетах. Чтобы указать несколько пакетов, используйте опцию </span><span class="rvts84">-p</span><span class="rvts80"> несколько раз — одного параметра </span><span class="rvts84">-p</span><span class="rvts80"> пакета.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">-c &lt;main-category&gt;</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Если вы укажите одну или несколько категорий таким образом, Monkey, позволит только системный действия, перечисленные в одной из указанных категорий. Если Вы не укажете любой категории, Monkey выберет виды деятельности, перечисленные в категории Intent.CATEGORY_LAUNCHER или Intent.CATEGORY_MONKEY. Чтобы указать несколько категорий, используйте опцию </span><span class="rvts84">-с</span><span class="rvts80"> несколько раз — одна </span><span class="rvts84">-с</span><span class="rvts80"> опция в каждой категории.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td rowspan="8" width="127" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Debugging</span></p>
+<p class="rvps21"><span class="rvts80">(Отладка)</span></p>
+</td>
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--dbg-no-events</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Monkey будет выполнить первоначальный запуск в тестовом режиме, но не будет генерировать никаких событий. Для лучших результатов, комбинируйте с опцией </span><span class="rvts84">-v</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--hprof</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">При включении этой опции будет генерировать отчеты профилирования непосредственно перед и после Monkey последовательности событий. Это создаст большие (~5Мб) файлы данных / смешанная, так что используйте с осторожностью.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--ignore-crashes</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Обычно, Monkey останавливается, когда приложение аварийно завершает работу или происходит необработанное исключение. Если Вы укажете эту опцию, то Monkey будет продолжать отправлять события в систему, до тех пор, пока не завершит свою работу.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--ignore-timeouts</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Обычно, Monkey остановится, когда произойдёт ошибка времени ожидания, такая как "приложение не отвечает" диалог. Если Вы укажете эту опцию, то Monkey будет продолжать отправлять события в систему, до тех пор, пока не завершит свою работу.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--ignore-security-exceptions</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Обычно, Monkey остановится, когда произойдёт ошибка, например при попытке запустить активность, которая требует определенных разрешений. Если Вы укажете эту опцию, то Monkey будет продолжать отправлять события в систему, до тех пор, пока не завершит свою работу.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--kill-process-after-error</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Обычно, когда Monkey останавливается из-за ошибки приложения, приложение не отвечает. Когда эта опция установлена, она будет сигнализировать системе, чтобы остановить процесс, в котором произошла ошибка.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--monitor-native-crashes</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Часы для докладов и сбои, происходящие в системе Android машинный код. Если-убить-процесс-после-ошибка, то система остановитс.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="210" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts102">--wait-dbg</span></p>
+</td>
+<td width="300" height="28" valign="top" style="border-width : 1px; border-color: #000001; border-style: solid; padding: 0px 7px;"><p class="rvps21"><span class="rvts80">Останавливает Monkey выполнять до тех пор, пока отладчик присоединен к нему.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts104">Пример (test.bat) &nbsp;</span><span class="rvts105">adb shell monkey -p com.vkontakte.android -v 500 -s 1000 --pct-touch 20 --pct-motion 20 --pct-nav 40 --pct-majornav 60 --pct-syskeys 20 --pct-appswitch 50 --ignore-security-exceptions</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Free HTML Help documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

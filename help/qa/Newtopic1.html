@@ -1,0 +1,123 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Подключение устройств к ПК</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic1");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Подключение устройств к ПК</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="ADBandroidSDK.html">ADB (android SDK)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="ADBandroidSDK.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="AndroidSDK1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="ADB.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps13"><span class="rvts80">Подключите устройство к компьютеру через USB порт (на устройстве должна быть включена опция USB Debugging)</span></p>
+<p class="rvps13"><span class="rvts80">В диспетчере устройств появится подключенный девайс</span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem72.png"></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Если устройство не найдено или не корректно работает значит драйвера устройства не были найдены. Для этого нам нужно установить на это устройство драйвера из Google USB Driver</span></p>
+<p class="rvps13"><span class="rvts80">Для этого мы выделяем устройство и выбираем “Обновить драйвера” тип поиска “Выполнить поиск драйвера на этом компьютере”.</span></p>
+<p class="rvps13"><span class="rvts80">В окне обновления драйвера указываем путь к папке Android SDK</span></p>
+<p class="rvps13"><img width="601" height="441" alt="" style="padding : 1px;" src="lib/NewItem71.png"></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">По завершению установки драйвере перезагрузите ПК и снова подключите устройство</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Free EBook and documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

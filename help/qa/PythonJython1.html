@@ -1,0 +1,365 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Основы языка Python / Jython</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("PythonJython1");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Основы языка Python / Jython</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="ADBandroidSDK.html">ADB (android SDK)</a> &rsaquo;&rsaquo; <a href="MonkeyRunner.html">Тестирование с помощью MonkeyRunner</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="MonkeyRunner.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="PythonJythonIDLE.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="geteventsendevent.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps23"><span class="rvts108">Основы языка Python / Jython</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Создание скрипта и его запуск.</span></p>
+<p class="rvps13"><span class="rvts80">создайте файл helloworld.py со следующим скриптом</span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/NewItem85.png"></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Чтобы выполнить скрипн нужно ввести команду в консоли или просто дважды щёлкнуть на файле скрипта.</span></p>
+<p class="rvps13"><img width="600" height="119" alt="" style="padding : 1px;" src="lib/NewItem84.png"></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts117">Переменные</span></p>
+<p class="rvps14"><span class="rvts81">stroka = </span><span class="rvts109">"Hello world!"</span><span class="rvts109"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># переменная текст</span></p>
+<p class="rvps14"><span class="rvts81">year = 2015</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># переменная целое число</span></p>
+<p class="rvps14"><span class="rvts81">money = 100.05</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># переменная дробное число</span></p>
+<p class="rvps14"><span class="rvts80"><br/></span></p>
+<p class="rvps14"><span class="rvts111">print</span><span class="rvts81">(stroka, year, money)</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># отобразить на экране</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts117">Арифметические выражения</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">num1 = 25.05; num2 = 3; num3 = 0.5;</span></p>
+<p class="rvps14"><span class="rvts81">result = num1 * num3 / num2;</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps14"><span class="rvts111">print</span><span class="rvts81">(result);</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># результат 4.175</span></p>
+<p class="rvps14"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts117">Строки</span></p>
+<p class="rvps13"><span class="rvts80">объявление переменных содержащих строку текста</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">a = </span><span class="rvts109">"Привет Мир!"</span><span class="rvts81">;</span></p>
+<p class="rvps14"><span class="rvts81">b = </span><span class="rvts109">'Программирую на Python'</span><span class="rvts81">;</span></p>
+<p class="rvps14"><span class="rvts81">c = </span><span class="rvts109">"""Компьютер говорит 'нет'"""</span><span class="rvts81">;</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">получить символ в строке</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">a = </span><span class="rvts109">"Привет Мир!"</span><span class="rvts81">;</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">b = a[4];</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># результат буква “e”</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">чтобы извлечь подстроку к строке обращаются используя оператор сечения</span><span class="rvts81"> [i:j]</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">a = </span><span class="rvts109">"Привет Мир!"</span><span class="rvts81">;</span></p>
+<p class="rvps14"><span class="rvts81">b = a[0:6];</span></p>
+<p class="rvps14"><span class="rvts81">print(b);</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># результат “Привет”</span></p>
+<p class="rvps14"><span class="rvts81">c = a[7:];</span></p>
+<p class="rvps14"><span class="rvts81">print(c);</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># результат “Мир!”</span></p>
+<p class="rvps14"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts117">Преобразование значений</span></p>
+<p class="rvps13"><span class="rvts80">преобразовать строку в число с помощью функций </span><span class="rvts82">int</span><span class="rvts81">() </span><span class="rvts80">или </span><span class="rvts82">float</span><span class="rvts81">()</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">a = </span><span class="rvts109">"37"</span><span class="rvts81">;</span></p>
+<p class="rvps14"><span class="rvts81">b = </span><span class="rvts109">"25.5"</span><span class="rvts81">;</span></p>
+<p class="rvps14"><span class="rvts81">c = </span><span class="rvts111">int</span><span class="rvts81">(a) + </span><span class="rvts82">float</span><span class="rvts81">(b);</span></p>
+<p class="rvps14"><span class="rvts82">print</span><span class="rvts81">(c);</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># результат 62.5</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">преобразовать число в строку с помощью </span><span class="rvts82">str</span><span class="rvts81">(), </span><span class="rvts82">repr</span><span class="rvts81">()</span><span class="rvts80"> или </span><span class="rvts82">format</span><span class="rvts81">()</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">num = 37.3;</span></p>
+<p class="rvps14"><span class="rvts81">stroka = </span><span class="rvts109">"Значение: "</span><span class="rvts81"> + </span><span class="rvts82">str</span><span class="rvts81">(num);</span></p>
+<p class="rvps14"><span class="rvts82">print</span><span class="rvts81">(stroka);</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># результат 37.3</span></p>
+<p class="rvps14"><span class="rvts81">stroka = </span><span class="rvts109">"Значение: "</span><span class="rvts81"> + </span><span class="rvts82">repr</span><span class="rvts81">(num);</span></p>
+<p class="rvps14"><span class="rvts82">print</span><span class="rvts81">(stroka);</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># результат 37.3</span></p>
+<p class="rvps14"><span class="rvts81">stroka = </span><span class="rvts109">"Значение: "</span><span class="rvts81"> + </span><span class="rvts82">format</span><span class="rvts81">(num, </span><span class="rvts109">"4f"</span><span class="rvts81">);</span></p>
+<p class="rvps14"><span class="rvts82">print</span><span class="rvts81">(stroka);</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># результат 37.300000</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts117">Списки</span></p>
+<p class="rvps13"><span class="rvts80">Списки - это последовательности произвольных объектов.</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">пустой список</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts80">names = [];</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts80">name = </span><span class="rvts119">list</span><span class="rvts80">();</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">получить данные списка</span></p>
+<p class="rvps14"><span class="rvts81">names = [</span><span class="rvts109">"Dave"</span><span class="rvts81">, </span><span class="rvts109">"Mark"</span><span class="rvts81">, </span><span class="rvts109">"Ann"</span><span class="rvts81">, </span><span class="rvts109">"Phil"</span><span class="rvts81">];</span></p>
+<p class="rvps14"><span class="rvts81">a = names[2];</span></p>
+<p class="rvps14"><span class="rvts111">print</span><span class="rvts81">(a);</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># результат Ann</span></p>
+<p class="rvps13"><span class="rvts81">изменить данные списка</span></p>
+<p class="rvps14"><span class="rvts81">names[0] = </span><span class="rvts109">"Jeff"</span><span class="rvts81">;</span></p>
+<p class="rvps14"><span class="rvts81">b = names[0];</span></p>
+<p class="rvps14"><span class="rvts111">print</span><span class="rvts81">(b);</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># результат Jeff</span></p>
+<p class="rvps13"><span class="rvts80">добавление нового элемента в конец списка</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">names.append(</span><span class="rvts109">"John"</span><span class="rvts81">);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">вставить элемент в середину списка</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">names.insert(2, </span><span class="rvts109">"Thomas"</span><span class="rvts81">);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">извлечение и изменение целого фрагмента</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">b = names[0:2];</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">c = names[2:];</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">names[1] = </span><span class="rvts109">‘Jeff’</span><span class="rvts81">;</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">names[0:2] = [</span><span class="rvts109">‘Dave’</span><span class="rvts81">, </span><span class="rvts109">’Mark’</span><span class="rvts81">, </span><span class="rvts109">’Jeff’</span><span class="rvts81">];</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">конкатенация списков</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">a = [1,2,3]+[4,5];</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">вложенные списки</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">a = [1, </span><span class="rvts109">“Dave”</span><span class="rvts81">, 3.14, [</span><span class="rvts109">“Mark”</span><span class="rvts81">, 7, 9, [100, 101]], 10];</span></p>
+<p class="rvps14"><span class="rvts81">a[1];</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># результат Dave</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">a[3][2];</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># результат 9</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">a[3][3][1];</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts118"># результат 101</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts117">Кортежи</span><span class="rvts80"> - Предназначен для создания простейших структур данных.</span></p>
+<p class="rvps13"><span class="rvts80">объявление </span></p>
+<p class="rvps14"><span class="rvts81">address = (</span><span class="rvts109">‘www.python.org’</span><span class="rvts81">, 80);</span></p>
+<p class="rvps14"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">получение данных из структуры в переменные</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">host, port = address;</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts117">Множества</span><span class="rvts80"> - используются для хранения неупорядоченных коллекций объектов</span></p>
+<p class="rvps13"><span class="rvts80">создание</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">s = set([3, 5, 9, 10]);</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">t = set(</span><span class="rvts109">“Hello”</span><span class="rvts81">);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">добавление элементов</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">t.add(</span><span class="rvts109">‘x’</span><span class="rvts81">);</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">s.update([10, 37, 42]);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">удаление элементов</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">r.remove(</span><span class="rvts109">‘H’</span><span class="rvts81">);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts117">Словари</span><span class="rvts80"> - это ассоциативные массив</span></p>
+<p class="rvps13"><span class="rvts80">создание</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">stock = {};</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">stock = dict();</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">stock = {</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts109">“name”</span><span class="rvts81"> : </span><span class="rvts109">“CAR”</span><span class="rvts81">,</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts109">“shares”</span><span class="rvts81"> : 100,</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts109">“price”</span><span class="rvts81"> : 4900.10</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">}</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">доступ к элементам</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">name = stock[</span><span class="rvts109">“name”</span><span class="rvts81">];</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">value = stock[</span><span class="rvts109">“shares”</span><span class="rvts81">] * stock[</span><span class="rvts109">“price”</span><span class="rvts81">];</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">добавление и изменение</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">stock[</span><span class="rvts109">“date”</span><span class="rvts81">] = </span><span class="rvts109">“June 7, 2007”</span><span class="rvts81">;</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">stock[</span><span class="rvts109">“shares”</span><span class="rvts81">] = 75;</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">получить список ключей словаря</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">syms = </span><span class="rvts111">list</span><span class="rvts81">(stock);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">удаление элементов словаря</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts111">del </span><span class="rvts81">stock[</span><span class="rvts109">“shares”</span><span class="rvts81">];</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts117">Итерации и циклы</span></p>
+<p class="rvps13"><span class="rvts80">пример итерации</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts111">for </span><span class="rvts81">n </span><span class="rvts111">in </span><span class="rvts81">[1,2,3,4,5,6,7,8,9]:</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">print</span><span class="rvts81">(n);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">сокращённая форма записи</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts111">for </span><span class="rvts81">n </span><span class="rvts111">in range</span><span class="rvts81">(1, 10):</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">print</span><span class="rvts81">(n);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">вывести отдельные символы в строке</span></p>
+<p class="rvps14"><span class="rvts81">a = </span><span class="rvts109">"Hello!"</span><span class="rvts81">;</span></p>
+<p class="rvps14"><span class="rvts111">for </span><span class="rvts81">c </span><span class="rvts111">in </span><span class="rvts81">a:</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">print</span><span class="rvts81">(c);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">вывести элементы списка</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">b = [</span><span class="rvts109">"Dave"</span><span class="rvts81">, </span><span class="rvts109">"Mark"</span><span class="rvts81">, </span><span class="rvts109">"Ann"</span><span class="rvts81">, </span><span class="rvts109">"Phil"</span><span class="rvts81">];</span></p>
+<p class="rvps14"><span class="rvts111">for </span><span class="rvts81">name </span><span class="rvts111">in </span><span class="rvts81">b:</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">print</span><span class="rvts81">(name);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">вывести элементы словаря</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">c = {</span><span class="rvts109">'GOOG'</span><span class="rvts81"> : 49.10, </span><span class="rvts109">'IBM'</span><span class="rvts81"> : 91.50};</span></p>
+<p class="rvps14"><span class="rvts111">for </span><span class="rvts81">key </span><span class="rvts111">in </span><span class="rvts81">c:</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">print</span><span class="rvts81">(key, c[key]);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">вывести все строки из файла</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">f = </span><span class="rvts111">open</span><span class="rvts81">(</span><span class="rvts109">"script.py"</span><span class="rvts81">);</span></p>
+<p class="rvps14"><span class="rvts111">for </span><span class="rvts81">line </span><span class="rvts111">in </span><span class="rvts81">f:</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">print</span><span class="rvts81">(line);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts117">Функции</span></p>
+<p class="rvps13"><span class="rvts80">возврат одного значения</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts82">def </span><span class="rvts81">remainder(a, b):</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;r = a * b;</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts82">return </span><span class="rvts81">r;</span></p>
+<p class="rvps14"><span class="rvts82">print</span><span class="rvts81">(remainder(5, 5));</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">возврат нескольких значений с помощью кортеж</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts82">def </span><span class="rvts81">remainder(a, b):</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;r1 = a * b;</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;r2 = b / a;</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts82">return </span><span class="rvts81">(r1, r2);</span></p>
+<p class="rvps14"><span class="rvts81">R1, R2 = remainder(7, 6)</span></p>
+<p class="rvps14"><span class="rvts82">print</span><span class="rvts81">(R1, </span><span class="rvts109">" : "</span><span class="rvts81">, R2);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">переменная со значением по умолчанию</span></p>
+<p class="rvps14"><span class="rvts82">def </span><span class="rvts81">remainder(hostname, port=8888):</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts82">print</span><span class="rvts81">(</span><span class="rvts109">"HOST: "</span><span class="rvts81">, hostname, </span><span class="rvts109">" PORT: "</span><span class="rvts81">, port);</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts82">return </span><span class="rvts81">(</span><span class="rvts109">"OK"</span><span class="rvts81">);</span></p>
+<p class="rvps14"><span class="rvts82">print</span><span class="rvts81">(remainder(</span><span class="rvts109">"http://"</span><span class="rvts81">));</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">процедура изменяющая глобальную переменную</span></p>
+<p class="rvps13"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">count = 0;</span></p>
+<p class="rvps14"><span class="rvts82">def </span><span class="rvts81">foo():</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts82">global </span><span class="rvts81">count;</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;count += 1;</span></p>
+<p class="rvps14"><span class="rvts81">foo();</span></p>
+<p class="rvps14"><span class="rvts82">print</span><span class="rvts81">(count);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts117">Условные операторы</span></p>
+<p class="rvps13"><span class="rvts80">Для простых проверок можно использовать инструкцию </span><span class="rvts119">if </span><span class="rvts80">и </span><span class="rvts119">else</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">a = 10; b = 5;</span></p>
+<p class="rvps14"><span class="rvts111">if </span><span class="rvts81">(a &lt; b):</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">print</span><span class="rvts81">(</span><span class="rvts109">"А меньше Б"</span><span class="rvts81">);</span></p>
+<p class="rvps14"><span class="rvts111">else</span><span class="rvts81">:</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">print</span><span class="rvts81">(</span><span class="rvts109">"А больше Б"</span><span class="rvts81">);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">для сравнения используются следующие символы:</span></p>
+<p class="rvps14"><span class="rvts80">&lt;</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts80">меньше</span></p>
+<p class="rvps14"><span class="rvts80">&lt;=</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts80">меньше или равно</span></p>
+<p class="rvps14"><span class="rvts80">&gt;</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts80">больше</span></p>
+<p class="rvps14"><span class="rvts80">&gt;=</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts80">больше или равно</span></p>
+<p class="rvps14"><span class="rvts80">==</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts80">равно</span></p>
+<p class="rvps14"><span class="rvts80">!=</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts80">не равно</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">чтобы создать пустое тело, не выполняющее никаких действий можно использовать инструкцию </span><span class="rvts119">pass</span></p>
+<p class="rvps14"><span class="rvts111">if </span><span class="rvts81">(a &lt; b):</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">pass</span><span class="rvts81"> </span><span class="rvts118"># не выполнять никаких действий</span></p>
+<p class="rvps14"><span class="rvts111">else</span><span class="rvts81">:</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">print</span><span class="rvts81">("А больше Б");</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Условия с использованием булевых выражений or, and и not</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts80">product = </span><span class="rvts110">"game"</span><span class="rvts80">;</span></p>
+<p class="rvps14"><span class="rvts80">target = </span><span class="rvts110">"mob"</span><span class="rvts80">;</span></p>
+<p class="rvps14"><span class="rvts80">year = 2015;</span></p>
+<p class="rvps14"><span class="rvts119">if </span><span class="rvts80">(product == </span><span class="rvts110">"game"</span><span class="rvts80">) </span><span class="rvts119">and </span><span class="rvts80">(target == </span><span class="rvts110">"mob"</span><span class="rvts80">) </span><span class="rvts119">and not</span><span class="rvts80"> (year &lt; 2014 </span><span class="rvts119">or year</span><span class="rvts80"> &gt; 2015):</span></p>
+<p class="rvps14"><span class="rvts80"> &nbsp; &nbsp;</span><span class="rvts119">print</span><span class="rvts80">(</span><span class="rvts110">"Это наша игра"</span><span class="rvts80">);</span></p>
+<p class="rvps14"><span class="rvts80">else:</span></p>
+<p class="rvps14"><span class="rvts80"> &nbsp; &nbsp;</span><span class="rvts119">print</span><span class="rvts80">(</span><span class="rvts110">"Это не наша игра"</span><span class="rvts80">);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Сложные условия. В Pyhton отсутствуют инструкции switch или case, и чтобы выполнить проверку на соответствие нескольких значений используется </span><span class="rvts119">elif</span></p>
+<p class="rvps14"><span class="rvts81">fileType = </span><span class="rvts109">".jpg"</span><span class="rvts81">;</span></p>
+<p class="rvps14"><span class="rvts111">if</span><span class="rvts81">(fileType == </span><span class="rvts109">".bmp"</span><span class="rvts81">):</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">print</span><span class="rvts81">(</span><span class="rvts109">"Файл bmp"</span><span class="rvts81">);</span></p>
+<p class="rvps14"><span class="rvts111">elif</span><span class="rvts81">(fileType == </span><span class="rvts109">".jpg"</span><span class="rvts81">):</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">print</span><span class="rvts81">(</span><span class="rvts109">"Файл jpg"</span><span class="rvts81">);</span></p>
+<p class="rvps14"><span class="rvts111">elif</span><span class="rvts81">(fileType == </span><span class="rvts109">".png"</span><span class="rvts81">):</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">print</span><span class="rvts81">(</span><span class="rvts109">"Файл png"</span><span class="rvts81">);</span></p>
+<p class="rvps14"><span class="rvts111">else</span><span class="rvts81">:</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;</span><span class="rvts111">raise RuntimeError</span><span class="rvts81">("Файл неизвестного типа");</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Для определения истинности используется значение True и False типа Boolean</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">s = </span><span class="rvts109">'spam'</span><span class="rvts81">;</span></p>
+<p class="rvps14"><span class="rvts111">if </span><span class="rvts81">(</span><span class="rvts109">'spam'</span><span class="rvts81"> </span><span class="rvts111">in </span><span class="rvts81">s):</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;has_span = </span><span class="rvts111">True</span><span class="rvts81">;</span></p>
+<p class="rvps14"><span class="rvts111">else</span><span class="rvts81">:</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp; &nbsp;has_span = </span><span class="rvts111">False</span><span class="rvts81">;</span></p>
+<p class="rvps14"><span class="rvts111">print</span><span class="rvts81">(has_span);</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts117">Генераторы</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create Web Help sites</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

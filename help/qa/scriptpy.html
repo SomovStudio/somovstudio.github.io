@@ -1,0 +1,121 @@
+﻿
+
+<html>
+	
+<head>
+	<title>script.py</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("scriptpy");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">script.py</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="ADBandroidSDK.html">ADB (android SDK)</a> &rsaquo;&rsaquo; <a href="Newtopic5.html">Скрипты (примеры)</a> &rsaquo;&rsaquo; <a href="screenshotsMonkeyRunner.html">Снять screenshots (MonkeyRunner)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="screenshotsMonkeyRunner.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="scriptbat.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Monkey1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts123"># Nexus7 1280х800</span></p>
+<p class="rvps3"><span class="rvts37">from</span><span class="rvts120"> com.android.monkeyrunner </span><span class="rvts37">import</span><span class="rvts120"> MonkeyRunner, MonkeyDevice</span></p>
+<p class="rvps3"><span class="rvts120">device = MonkeyRunner.waitForConnection();</span></p>
+<p class="rvps3"><span class="rvts120"><br/></span></p>
+<p class="rvps3"><span class="rvts123"># SAVE - SCREENSHOT</span></p>
+<p class="rvps3"><span class="rvts120">result = device.takeSnapshot();</span></p>
+<p class="rvps3"><span class="rvts120">result.writeToFile(</span><span class="rvts124">'C:/Users/Catfish/Desktop/SB/Testing/screenshots/image.png'</span><span class="rvts120">,</span><span class="rvts124">'png'</span><span class="rvts120">)</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts120">(</span><span class="rvts124">"SAVE - SCREENSHOT!"</span><span class="rvts120">);</span></p>
+<p class="rvps3"><span class="rvts120">MonkeyRunner.sleep(5.0);</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Full-featured Kindle eBooks generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -1,0 +1,153 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Установка Android Studio (SDK)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("AndroidStudioSDK");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Установка Android Studio (SDK)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Automationtesting.html">Automation testing (автоматизированное тестирование)</a> &rsaquo;&rsaquo; <a href="AppiumUIAutomator.html">Appium (UI Automator)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="AppiumUIAutomator.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="AppiumUIAutomator.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="AndroidEmulator.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Установка Android Studio (SDK)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Android SDK входит в состав Android Studio которое можно скачать по адресу: </span><a class="rvts14" href="https://developer.android.com/studio/index.html" target="_blank">https://developer.android.com/studio/index.html</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">1. Скачайте и установите Android Studio по адресу: C:\Program Files\Android\Android Studio</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">2. Установите необходимые пакеты через SDK Manager</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Чтобы открыть окно SDK Manager необходимо в начальном окне открыть меню Configure -&gt; SDK Manager</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img width="509" height="320" alt="" style="padding : 1px;" src="lib/NewItem8.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Далее необходимо установить следующие пакеты:</span></p>
+<p class="rvps9"><span class="rvts8">Android SDK Build-Tools</span></p>
+<p class="rvps9"><span class="rvts8">Android Emulator</span></p>
+<p class="rvps9"><span class="rvts8">Android SDK Planform-Tools</span></p>
+<p class="rvps9"><span class="rvts8">Android SDK Tools</span></p>
+<p class="rvps9"><span class="rvts8">Google USB Driver</span></p>
+<p class="rvps9"><span class="rvts8">Google Web Driver</span></p>
+<p class="rvps9"><span class="rvts8">и т.д. (смотрите картинку ниже)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img width="734" height="495" alt="" style="padding : 1px;" src="lib/NewItem7.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Данные пакеты устанавливаются по адресу: C:\Users\###\AppData\Local\Android</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">3. После завершения установки пакетов необходимо прописать адреса в системной переменной Path</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Откройте свойство системы -&gt; Дополнительные параметры -&gt; Параметры среды</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem6.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Найдите переменную Path в окне "Системные параменные"</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem5.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Пропишите в этой переменной следующие адреса:</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">C:\Users\###\AppData\Local\Android\sdk;</span></p>
+<p class="rvps3"><span class="rvts8">C:\Users\###\AppData\Local\Android\sdk\build-tools\25.0.3;</span></p>
+<p class="rvps3"><span class="rvts8">C:\Users\###\AppData\Local\Android\sdk\platform-tools;</span></p>
+<p class="rvps3"><span class="rvts8">C:\Users\###\AppData\Local\Android\sdk\tools;</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Generate Kindle eBooks with ease</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -1,0 +1,345 @@
+﻿
+
+<html>
+	
+<head>
+	<title>script.py</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("scriptpy1");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">script.py</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="ADBandroidSDK.html">ADB (android SDK)</a> &rsaquo;&rsaquo; <a href="Newtopic5.html">Скрипты (примеры)</a> &rsaquo;&rsaquo; <a href="MonkeyRunner1.html">Тестирование (MonkeyRunner)</a> &rsaquo;&rsaquo; <a href="Testtutorial.html">Test tutorial</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Testtutorial.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="scriptbat1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="DDMS.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts123"># Tutorial: Starbattle (Nexus7 1280х800)</span></p>
+<p class="rvps3"><span class="rvts37">from</span><span class="rvts125"> com.android.monkeyrunner </span><span class="rvts37">import</span><span class="rvts125"> MonkeyRunner, MonkeyDevice</span></p>
+<p class="rvps3"><span class="rvts125">device = MonkeyRunner.waitForConnection();</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts123"># START TEST TUTORIAL...</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("START TEST TUTORIAL...");</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 650, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Button Dialog - 'We`ve detected...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(15.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 650, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Button Dialog - 'Victory!...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 650, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Button Dialog - 'We`ve lost all...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 650, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Button Dialog - 'Our intelligence...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(50, 700, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Button - 'Store'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 100, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Button - 'Buy MG Turret'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(700, 300, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Apply - 'MG Turret'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(635, 660, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Dialog - 'Spice can speed up the construction.'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(650, 250, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Dialog - 'Who do you think you`re...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(690, 665, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Button - 'Deploy'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(75, 660, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Select shocker - 'This is defense mode...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(765, 305, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Put Shocker - 1 in defense - 'This is defense mode...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(1.0);</span></p>
+<p class="rvps3"><span class="rvts125">device.touch(820, 385, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Put Shocker - 2 in defense - 'This is defense mode...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(1205, 615, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Button - 'save and exit'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(20.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(1200, 660, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Button Attak - 'Checkmate, aliens!...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(270, 535, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Begining Select - 'This is the planet map...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(650, 700, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Begining Attack - 'This is the planet map...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(75, 660, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Begining Select Damastors - 'Let`s crush...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(480, 435, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Begining Put Damastors - 1 - 'Let`s crush...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(1.0);</span></p>
+<p class="rvps3"><span class="rvts125">device.touch(480, 525, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Begining Put Damastors - 1 - 'Let`s crush...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(1.0);</span></p>
+<p class="rvps3"><span class="rvts125">device.touch(600, 500, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Begining Put Damastors - 1 - 'Let`s crush...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(20.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(650, 590, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Begining - Window Victory");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 660, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Dialog - 'Jim, we`ve detected...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(50, 700, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Button - 'Store'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(285, 205, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Vault - 'Buy'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(700, 285, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Vault - 'Build'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 665, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Vault - 'Speed up'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 660, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Dialog - 'Good. The Essence...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 250, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Extractor - 'Click the Essence Extractor...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 660, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Dialog - 'We`re going to need more...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(508, 47, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Working (Plus) Dialog - 'if we hire this guy here,..'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(580, 370, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Working - 100 Spice");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(220, 350, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Working - Select");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(725, 450, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Working - Buy");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(50, 700, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Button - 'Store'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(290, 200, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Barracks - Buy");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(700, 315, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Barracks - Build");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 670, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Barracks - Speed up");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(645, 390, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Barracks - 'Our troops...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(690, 670, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Barracks Per - 'Let`s try them in action...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts37">for</span><span class="rvts125"> n </span><span class="rvts37">in</span><span class="rvts125"> range(0, 20):</span></p>
+<p class="rvps3"><span class="rvts125"> &nbsp; &nbsp;device.touch(250, 375, 'DOWN_AND_UP'); MonkeyRunner.sleep(1.0); </span><span class="rvts37">print</span><span class="rvts125">("CLICK: Shocker");</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(1025, 245, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Shocker - 'Speed up'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 660, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Dialog - 'We`re found another Gallarian base...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(1200, 660, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Button Attak - 'Wasn`t it you that hired...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(444, 577, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Vengeance Select - 'Commander, select the second...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(650, 700, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Vengeance Attack - 'Commander, select the second...'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(75, 660, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Vengeance Select Shocker");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts37">for</span><span class="rvts125"> m </span><span class="rvts37">in</span><span class="rvts125"> range(0, 10):</span></p>
+<p class="rvps3"><span class="rvts125"></span><span class="rvts125"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts125">device.touch(505, 470, 'DOWN_AND_UP'); MonkeyRunner.sleep(0.1); </span><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Vengeance Put Shocker");</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(205, 660, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Vengeance Select Relic");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(510, 470, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Vengeance Apply Relic");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(30.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(650, 590, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Mission Vengeance - Window Victory");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(55, 560, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Button Achievements - 'Jackpot, Commander!..'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(900, 120, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Achievements Claim - 'Jackpot, Commander!..'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 660, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Dialog - '...enter your codemane.'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts125">device.touch(640, 445, 'DOWN_AND_UP');</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("CLICK: Save - '...enter your codemane.'");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("TEST - COMPLETE!");</span></p>
+<p class="rvps3"><span class="rvts125"><br/></span></p>
+<p class="rvps3"><span class="rvts123"># SAVE - SCREENSHOT</span></p>
+<p class="rvps3"><span class="rvts125">result = device.takeSnapshot();</span></p>
+<p class="rvps3"><span class="rvts125">result.writeToFile('C:/Users/Catfish/Desktop/SB/Testing/tutorial/screenshots/image.png','png')</span></p>
+<p class="rvps3"><span class="rvts37">print</span><span class="rvts125">("SAVE - SCREENSHOT!");</span></p>
+<p class="rvps3"><span class="rvts125">MonkeyRunner.sleep(5.0);</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Full-featured Documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

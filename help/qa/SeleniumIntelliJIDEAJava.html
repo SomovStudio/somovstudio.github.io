@@ -1,0 +1,129 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Selenium в среде IntelliJ IDEA (Java)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("SeleniumIntelliJIDEAJava");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Selenium в среде IntelliJ IDEA (Java)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Automationtesting.html">Automation testing (автоматизированное тестирование)</a> &rsaquo;&rsaquo; <a href="SeleniumWebDriver.html">Selenium (Web Driver)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="SeleniumWebDriver.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="SeleniumWebDriver.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="SeleniumSharpDevelopC.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Selenium в среде IntelliJ IDEA (Java)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Репозиторий Maven Selenium Java на странице: </span><a class="rvts30" href="http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java" target="_blank">http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Репозиторий Maven JUnit 4 на странице: </span><a class="rvts30" href="http://mvnrepository.com/artifact/junit/junit/4.12" target="_blank">http://mvnrepository.com/artifact/junit/junit/4.12</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Открытие браузера Chrome, и поиск в поисковике Google</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps8"><span class="rvts20">package </span><span class="rvts21">ru.org.autotest</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20">import </span><span class="rvts21">org.junit.</span><span class="rvts22">AfterClass</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">org.junit.</span><span class="rvts22">BeforeClass</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">org.junit.</span><span class="rvts22">Test</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">org.openqa.selenium.By</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">org.openqa.selenium.Keys</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">org.openqa.selenium.WebDriver</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">org.openqa.selenium.WebElement</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">org.openqa.selenium.chrome.ChromeDriver</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20">public class </span><span class="rvts21">FirstTest {</span><br/><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts20">private static </span><span class="rvts21">WebDriver </span><span class="rvts23">driver</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts22">@BeforeClass</span><br/><span class="rvts22"> &nbsp; &nbsp;</span><span class="rvts20">public static void </span><span class="rvts24">setup</span><span class="rvts21">() {</span><br/><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;System.</span><span class="rvts25">setProperty</span><span class="rvts21">(</span><span class="rvts26">"webdriver.chrome.driver"</span><span class="rvts20">, </span><span class="rvts26">"C:</span><span class="rvts20">\\</span><span class="rvts26">WebDrivers</span><span class="rvts20">\\</span><span class="rvts26">chromedriver.exe"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">driver </span><span class="rvts21">= </span><span class="rvts20">new </span><span class="rvts21">ChromeDriver()</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">driver</span><span class="rvts21">.manage().window().maximize()</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">driver</span><span class="rvts21">.get(</span><span class="rvts26">"https://www.google.com.ua/"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts21">}</span><br/><span class="rvts21"></span><br/><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts22">@Test</span><br/><span class="rvts22"> &nbsp; &nbsp;</span><span class="rvts20">public void </span><span class="rvts24">search</span><span class="rvts21">() {</span><br/><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;WebElement search = </span><span class="rvts23">driver</span><span class="rvts21">.findElement(By.</span><span class="rvts25">id</span><span class="rvts21">(</span><span class="rvts26">"lst-ib"</span><span class="rvts21">))</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">search.sendKeys(</span><span class="rvts26">"GeForce 1050"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">search.sendKeys(Keys.</span><span class="rvts23">ENTER</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts21">}</span><br/><span class="rvts21"></span><br/><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts22">@AfterClass</span><br/><span class="rvts22"> &nbsp; &nbsp;</span><span class="rvts20">public static void </span><span class="rvts24">tearDown</span><span class="rvts21">() {</span><br/><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">driver</span><span class="rvts21">.quit()</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts21">}</span><br/><span class="rvts21">}</span><br/><span class="rvts21"><br/></span></p>
+<p class="rvps8"><span class="rvts21"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Подключенные модули</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps8"><span class="rvts27">&lt;?</span><span class="rvts28">xml version=</span><span class="rvts26">"1.0" </span><span class="rvts28">encoding=</span><span class="rvts26">"UTF-8"</span><span class="rvts27">?&gt;</span><br/><span class="rvts27">&lt;project </span><span class="rvts28">xmlns=</span><span class="rvts26">"http://maven.apache.org/POM/4.0.0"</span><br/><span class="rvts26"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts28">xmlns:</span><span class="rvts29">xsi</span><span class="rvts28">=</span><span class="rvts26">"http://www.w3.org/2001/XMLSchema-instance"</span><br/><span class="rvts26"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts29">xsi</span><span class="rvts28">:schemaLocation=</span><span class="rvts26">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span><span class="rvts27">&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;modelVersion&gt;</span><span class="rvts21">4.0.0</span><span class="rvts27">&lt;/modelVersion&gt;</span><br/><span class="rvts27"></span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;groupId&gt;</span><span class="rvts21">ru.org.autotest</span><span class="rvts27">&lt;/groupId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;artifactId&gt;</span><span class="rvts21">my-test</span><span class="rvts27">&lt;/artifactId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;version&gt;</span><span class="rvts21">1.0-SNAPSHOT</span><span class="rvts27">&lt;/version&gt;</span><br/><span class="rvts27"></span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;dependencies&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;dependency&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;groupId&gt;</span><span class="rvts21">org.seleniumhq.selenium</span><span class="rvts27">&lt;/groupId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;artifactId&gt;</span><span class="rvts21">selenium-java</span><span class="rvts27">&lt;/artifactId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;version&gt;</span><span class="rvts21">3.8.1</span><span class="rvts27">&lt;/version&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/dependency&gt;</span><br/><span class="rvts27"></span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;dependency&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;groupId&gt;</span><span class="rvts21">junit</span><span class="rvts27">&lt;/groupId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;artifactId&gt;</span><span class="rvts21">junit</span><span class="rvts27">&lt;/artifactId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;version&gt;</span><span class="rvts21">4.12</span><span class="rvts27">&lt;/version&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;scope&gt;</span><span class="rvts21">test</span><span class="rvts27">&lt;/scope&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/dependency&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;/dependencies&gt;</span><br/><span class="rvts27">&lt;/project&gt;</span></p>
+<p class="rvps8"><span class="rvts27"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Free EBook and documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

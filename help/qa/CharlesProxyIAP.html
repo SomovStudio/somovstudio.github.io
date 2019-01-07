@@ -1,0 +1,196 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Charles Proxy хак IAP</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("CharlesProxyIAP");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Charles Proxy хак IAP</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic.html">Разное</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Wireshark-.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="CharlesUI.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><a class="rvts146" href="https://wiki.in.ilogos.biz/pages/viewpage.action?pageId=15666105&src=contextnavpagetreemode">Charles Proxy хак IAP</a></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts148"><br/></span></p>
+<h2 class="rvps26"><span class="rvts0"><span class="rvts143">Коротко о постановке задачи:</span></span></h2>
+<p class="rvps7"><span class="rvts143">У нас есть игра, в которой мы хотим совершить покупку. Сам процесс покупки простым языком можно описать так: мы открываем магазин в нашей игре и выбираем определенный пак, который хотим купить. На сервер уходит информация о желаемой покупке. Сервер эту информацию обрабатывает. Сервер отправляет обартно ответ, в котром содержаться данные о нашей покупке(можно сказать, что сервер отсылает нам нашу покупку). На этом этапе мы перехватываем при помощи&nbsp;Charles данные, которые отправили нам сервер, и подменяем на нужные нам. Если на сервере неправильно настроена валидация данных, то таким образом мы можем заказать, к примеру, 10 монеток, а подменив покупку, получить 9999999 монеток. Именно правильную настройку валидвации на сервере мы и хотим научиться проверять в этой статье.</span></p>
+<h2 class="rvps27"><span class="rvts0"><span class="rvts143">Установка и настройка программ:</span></span></h2>
+<p class="rvps7"><span class="rvts143">Собственно Charles&nbsp;</span><a class="rvts144" href="https://www.charlesproxy.com/">https://www.charlesproxy.com/</a></p>
+<p class="rvps7"><span class="rvts143">Charles&nbsp;работает на платформе JAVA, так что возможно вам придется так-же установить(или обновить текущую) версия JVM у себя на компьютере&nbsp;</span><a class="rvts144" href="https://www.java.com/ru/download">https://www.java.com/ru/download</a><span class="rvts143">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts143">Коротко о Charles:&nbsp;</span></p>
+<div class="rvps6"><table border="1" cellpadding="8" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts142">Charles Web Debugging Proxy</span><span class="rvts15">&nbsp;- это HTTP proxy/ монитор/ Reverse Proxy позволяющий пользователю наблюдать за всем HTTP траффиком между его компьютером и сетью Интернет. Это включает в себя запросы (requests), ответы (responses) и HTTP заголовки (содержащие cookies и кэш информацию). Charles отображает весь трафик в виде папок с названием серверов. Внутри каждой папки содержатся запросы, которые отображают происходящие события, связанные с данным сервером.&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps7"><span class="rvts143">Натсройка&nbsp;Charles:&nbsp;</span></p>
+<p class="rvps7"><span class="rvts143">Установите программу следуя инструкциям. Charles - софт платный, временно можно использовать 30-ти дневную пробную версию с определенными ограничениями (уменьшает удобство использования, но не функционал - каждые пол часа программа автоматически выключается.) Легальный способ обойти 30-ти дневное ограничение - использование&nbsp;Charles на виртуальной машине с откатом времени на 30-ть дней назад. Нелегальный способ - скачать пиратскую ломанную версию, чего делать нельзя.&nbsp;</span><br/><span class="rvts143"></span><br/><span class="rvts143">В ходе установки программа предложит поставить плагин для Firefox, в этой статье он нам не понадобиться, но на будущее можно поставить. После установки:&nbsp;</span><br/><span class="rvts143"></span><br/><span class="rvts143">Откройте Charles&nbsp;→ Help&nbsp;→ Local IP Address...</span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem110.png"></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem109.png"></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem108.png"></p>
+<p class="rvps7"><span class="rvts143"><br/></span></p>
+<p class="rvps7"><span class="rvts143">Запомните IP, в моем случае это 192.168.10.201</span></p>
+<p class="rvps7"><span class="rvts143">Далее нужно настроить прокси на девайсе, на котором находится игра. Чтобы все правильно работало, компьютер с которого работает&nbsp;Charles и девайс, на котором вы будете тестировать должны быть в одной локальной сети(не обязательно иметь выход Wi-Fi на компьютере, главное чтобы сеть была та же. Если компьютер и тестовый девайс в одном офисе, то скорее всего сеть у них общая).</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 40px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps28"><span class="rvts143">Зайдите в настройки Wi-Fi на своем девайсе:</span></li>
+</ul>
+<p class="rvps28"><img alt="" style="padding : 1px;" src="lib/NewItem107.png"></p>
+<p class="rvps28"><span class="rvts143"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 40px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps28"><span class="rvts143">Выберите настройки сети (помним, что девайс и компьютер должны быть в одной локальной сети) :</span></li>
+</ul>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem106.png"></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 40px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps28"><span class="rvts143">Выберите ручные настройки прокси-сервера:</span></li>
+</ul>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem105.png"></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 40px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps28"><span class="rvts143">Введите настройки прокси-сервера&nbsp;(здесь нужно вписать ранее запомненный нами IP, в моем случае это "192.168.10.201"&nbsp;):</span></li>
+</ul>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem104.png"></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 40px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps28"><span class="rvts143">Сюда нужно вписать адрес порта. По умолчанию это "8888" (если вы ничего не меняли в Charles, то у вас тоже должно быть четыре восьмерки):</span></li>
+</ul>
+<p class="rvps7"><span class="rvts143">&nbsp;</span><img alt="" style="padding : 1px;" src="lib/NewItem103.png"></p>
+<p class="rvps7"><span class="rvts143">Все, мы настроили наш девайс. Теперь зайдите в тестируемую игру (естественно, Charles при этом должен быть включен). Сейчас наш девайс включен через прокси Charles. Как только какое-то приложение начнет слать данные по сети (скорее всего это будет запущенная вами игра, но может быть и другое приложение на девайсе, которое использует интернет) - в Charles появится запрос на коннект девайса:</span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem102.png"></p>
+<p class="rvps7"><span class="rvts143">Нажимаем кнопку Allow. С этого момента весь HTTP трафик идет через Charles.&nbsp;</span></p>
+<p class="rvps28"><span class="rvts143"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<h2 class="rvps27"><span class="rvts0"><span class="rvts143">Перехват данных:</span></span></h2>
+<p class="rvps7"><span class="rvts143">Наше приложение теперь отображается в колонке Structure. В моем случае оно называется "</span><a class="rvts147" href="http://vm3srv-stage.ilogos-ua.com/">http://vm3srv-stage.ilogos-ua.com</a><span class="rvts143">" :</span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem101.png"></p>
+<p class="rvps7"><span class="rvts143">Для того, чтобы данные могли быть перехвачены, нужно активировать возможность Breakpoints для нашего приложения. Для этого нужно нажать правой кнопкой мыши по приложению (</span><a class="rvts147" href="http://vm3srv-stage.ilogos-ua.com/">http://vm3srv-stage.ilogos-ua.com</a><span class="rvts143">) и выбрать опцию Breakpoints:</span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem100.png"></p>
+<p class="rvps7"><span class="rvts143">После этого нужно дать понять чарльзу, что мы собираемся перехватывать трафик от приложений, для которых мы активировали эту опцию(на данный момент это только одно приложение, наша игра), по этому нажимаем кнопку Enable Breakpoints:</span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem99.png"></p>
+<p class="rvps7"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><span class="rvts137">Все, теперь можем делать нашу покупку. Сейчас у меня в игре 0 монет. Я буду покупать пак на 10 монет. На сервер в этот момент отправляются разные запросы (в том числе авторизация пользователя, события DeltaDNA, наш запрос на покупку монет и т.д.). Чарльз перехватывает эти запросы и не пускает их на сервер. Наша задача - разрешить отправку всех запросов на сервер(в том порядке, в котором они отправляются, иначе возникнут конфликты).&nbsp;</span></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem98.png"></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem97.png"></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem96.png"></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><span class="rvts137">Чтобы выполнить запрос, нужно нажать Execute. Так же можно нажать Abort чтобы не пропустить отправку запроса, но тогда мы ничего не купим (помним, все запросы выполняем сверху по очереди):</span></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem95.png"></p>
+<p class="rvps7"><span class="rvts143">Сервер обработал информацию и отправил нам несколько ответов. Здесь нужно быть аккуратным. Выполняем те ответы, которые не несут в себе информации о нашей покупке.&nbsp;</span></p>
+<p class="rvps7"><span class="rvts143">Когда находим данные о нашей покупке, нужно их подменить:</span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem94.png"></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><span class="rvts137">Меняем значение и выполняем запрос:</span></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem93.png"></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><span class="rvts137">Теперь смотрим на нашу игру. У меня она выглядит так:</span></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem92.png"></p>
+<h2 class="rvps27"><span class="rvts0"><span class="rvts143">Завершаем тестирование:</span></span></h2>
+<p class="rvps7"><span class="rvts143">Теперь дело остается за малым - на сервере либо есть валидация, либо ее нет или она неправильно работает. Чтобы это проверить, отключите Charles, или просто выключите кнопку Enable Breakpoints, и перезагрузите игру - если у вас остались ваши хакнутые монеты - валидации нет, если у вас 10 монет(помним, изначально запрос был на 10 монет) - тогда все хорошо, сервер работает правильно. Хотя, монеток конечно жаль.&nbsp;</span><br/><span class="rvts143">Кстати, не забудьте перенастроить прокси на девайсе, а иначе не сможете заходить в интернет без Чарльза.&nbsp;</span></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create Web Help sites</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

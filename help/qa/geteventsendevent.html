@@ -1,0 +1,158 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Тестирование с помощью getevent/sendevent</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("geteventsendevent");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Тестирование с помощью getevent/sendevent</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="ADBandroidSDK.html">ADB (android SDK)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="ADBandroidSDK.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="PythonJython1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic5.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps13"><span class="rvts80">Чтобы записать события, генерируемые пользователем, надо выполнить следующую команду:</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts82">adb shell getevent -t &gt; C:/TESTING/events/getevent.txt</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">в результате будет получена следующая информация</span></p>
+<p class="rvps14"><span class="rvts81">add device 1: /dev/input/event1</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp;name: &nbsp; &nbsp; "lid_input"</span></p>
+<p class="rvps14"><span class="rvts81">add device 2: /dev/input/event0</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp;name: &nbsp; &nbsp; "elan-touchscreen"</span></p>
+<p class="rvps14"><span class="rvts81">add device 3: /dev/input/event2</span></p>
+<p class="rvps14"><span class="rvts81"> &nbsp;name: &nbsp; &nbsp; "gpio-keys"</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15763.053883] /dev/input/event0: 0003 0039 00000127</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15763.053895] /dev/input/event0: 0003 003a 00000015</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15763.053896] /dev/input/event0: 0003 0035 000000e0</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15763.053897] /dev/input/event0: 0003 0036 00000091</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15763.053898] /dev/input/event0: 0000 0000 00000000</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15763.133032] /dev/input/event0: 0003 0039 ffffffff</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15763.133036] /dev/input/event0: 0000 0000 00000000</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15764.676195] /dev/input/event0: 0003 0039 00000128</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15764.676200] /dev/input/event0: 0003 0030 00000007</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15764.676201] /dev/input/event0: 0003 0035 000004aa</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15764.676201] /dev/input/event0: 0003 0036 000007f4</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15764.676202] /dev/input/event0: 0000 0000 00000000</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15764.755114] /dev/input/event0: 0003 0039 ffffffff</span></p>
+<p class="rvps14"><span class="rvts81">[ &nbsp; 15764.755121] /dev/input/event0: 0000 0000 00000000</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts81">/dev/input/event0</span><span class="rvts80"> - это тип устройства которое генерирует событие</span></p>
+<p class="rvps13"><span class="rvts81">0003 0039 00000127</span><span class="rvts80"> - это параметры событий в 16-ти ричном виде. Для повтора этих параметров 16-ти ричное значение нужно конвертировать в десятичную систему счисления.</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Конвертор: </span><a class="rvts92" href="http://www.translatorscafe.com/cafe/RU/units-converter/numbers/4-3/">http://www.translatorscafe.com/cafe/RU/units-converter/numbers/4-3/</a></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">После конвертации можно повторить команды таким образом:</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 3 57 295</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 3 58 21</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 3 53 224</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 3 54 145</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 0 0 0</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 3 57 4294967295</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 0 0 0</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 3 57 296</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 3 48 7</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 3 53 1194</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 3 54 2036</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 0 0 0</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 3 57 4294967295</span></p>
+<p class="rvps13"><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">adb shell sendevent /dev/input/event0 0 0 0</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Free HTML Help documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

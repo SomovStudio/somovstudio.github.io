@@ -1,0 +1,280 @@
+﻿
+
+<html>
+	
+<head>
+	<title>PHPUnit (Быстрый старт)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("PHPUnit");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">PHPUnit (Быстрый старт)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Unittesting.html">Unit testing (модульное тестирование)</a> &rsaquo;&rsaquo; <a href="PHPPHPUnit.html">PHP (PHPUnit)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="PHPPHPUnit.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="PHPPHPUnit.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="PHPUnitNetBeans.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">PHPUnit (Быстрый старт)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">1. Скачайте и установите Composer </span><a class="rvts67" href="https://getcomposer.org/download/" target="_blank">https://getcomposer.org/download/</a><br/><span class="rvts8"></span><br/><span class="rvts8">2. Официальный сайт PHPUnit по ссылке </span><a class="rvts67" href="https://phpunit.de/" target="_blank">https://phpunit.de/</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">3. Перейдите в раздел Getting Started </span><a class="rvts67" href="https://phpunit.de/getting-started/phpunit-7.html" target="_blank">https://phpunit.de/getting-started/phpunit-7.html</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">4. Выберите PHP 5.6 в разделе </span><a class="rvts67" href="https://phpunit.de/getting-started/phpunit-5.html" target="_blank">https://phpunit.de/getting-started/phpunit-5.html</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">5. Установите сервер WAMP (или другой) </span><a class="rvts67" href="http://www.wampserver.com/ru/" target="_blank">http://www.wampserver.com/ru/</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">6. Создайте на сервере папку </span><span class="rvts68">C:\wamp64\www\test-phpunit</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">7. Откройте окно консоли и введите команду установки PHPUnit</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps11"><span class="rvts52">composer require --dev phpunit/phpunit ^5</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">8. После того как установка будет завершена перейдите в папку C:\wamp64\www\test-phpunit\vendor\bin &nbsp;и введите команду</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps11"><span class="rvts52">phpunit --version</span></p>
+<p class="rvps3"><span class="rvts8">Если установка прошла корректно вы увидите информацию о версии PHPUnit</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">9. Создайте в папке C:\wamp64\www\test-phpunit\vendor\bin два скрипта:</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">файл:</span><span class="rvts13"> Calculator.php</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps9"><span class="rvts53">&lt;?php</span></p>
+<p class="rvps9"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts55">class </span><span class="rvts56">Calculator</span></p>
+<p class="rvps9"><span class="rvts57">{</span></p>
+<p class="rvps9"><span class="rvts57"> </span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts58">public </span><span class="rvts55">function</span><span class="rvts57"> add($a, $b)</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts55">return </span><span class="rvts57">$a + $b;</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts57"> </span></p>
+<p class="rvps9"><span class="rvts57">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">файл: </span><span class="rvts13">CalculatorTest.php</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps9"><span class="rvts53">&lt;?php</span></p>
+<p class="rvps9"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts55">require </span><span class="rvts59">'Calculator.php'</span><span class="rvts57">;</span></p>
+<p class="rvps9"><span class="rvts57"> </span></p>
+<p class="rvps9"><span class="rvts55">class </span><span class="rvts56">CalculatorTests</span><span class="rvts57"> </span><span class="rvts55">extends </span><span class="rvts56">PHPUnit_Framework_TestCase</span></p>
+<p class="rvps9"><span class="rvts57">{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts60">private </span><span class="rvts59">$calculator</span><span class="rvts57">;</span></p>
+<p class="rvps9"><span class="rvts57"> </span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts61">protected </span><span class="rvts55">function</span><span class="rvts57"> setUp()</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;</span><span class="rvts59">calculator</span><span class="rvts57"> = </span><span class="rvts55">new </span><span class="rvts56">Calculator</span><span class="rvts57">();</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts57"> </span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts61">protected </span><span class="rvts55">function</span><span class="rvts57"> tearDown()</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;</span><span class="rvts59">calculator</span><span class="rvts57"> = </span><span class="rvts55">NULL</span><span class="rvts57">;</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts57"> </span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts58">public </span><span class="rvts55">function</span><span class="rvts57"> testAdd()</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;$result = $this-&gt;</span><span class="rvts59">calculator</span><span class="rvts57">-&gt;add(1, 2);</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;assertEquals(3, $result);</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts57"> </span></p>
+<p class="rvps9"><span class="rvts57">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">10. Запуск теста. Для этого перейдите в папку &nbsp;C:\wamp64\www\test-phpunit\vendor\bin и введите команду</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps11"><span class="rvts52">phpunit CalculatorTest.php</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Официальный пример с сайта разработчика. </span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">1. Отредактируйте файл Composer.json</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts62">{ </span><span class="rvts63">"autoload"</span><span class="rvts62">: { </span><span class="rvts63">"classmap"</span><span class="rvts62">: [ </span><span class="rvts64">"src/"</span><span class="rvts62"> ] }, </span><span class="rvts63">"require-dev"</span><span class="rvts62">: { </span><span class="rvts63">"phpunit/phpunit"</span><span class="rvts62">: </span><span class="rvts64">"^5"</span><span class="rvts62"> } }</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">2. Создайте папку &nbsp;C:\wamp64\www\test-phpunit\</span><span class="rvts13">src</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">файл: </span><span class="rvts13">Email.php</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps9"><span class="rvts53">&lt;?php</span></p>
+<p class="rvps9"><span class="rvts55">final class </span><span class="rvts56">Email</span></p>
+<p class="rvps9"><span class="rvts57">{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts60">private </span><span class="rvts59">$email</span><span class="rvts57">;</span></p>
+<p class="rvps9"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts60">private </span><span class="rvts55">function</span><span class="rvts57"> __construct($email)</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;ensureIsValidEmail($email);</span></p>
+<p class="rvps9"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;</span><span class="rvts59">email</span><span class="rvts57"> = $email;</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts58">public </span><span class="rvts55">static function</span><span class="rvts57"> </span><span class="rvts65">fromString</span><span class="rvts57">($email)</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts55">return new self</span><span class="rvts57">($email);</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts58">public </span><span class="rvts55">function</span><span class="rvts57"> __toString()</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts55">return </span><span class="rvts57">$this-&gt;</span><span class="rvts59">email</span><span class="rvts57">;</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts60">private </span><span class="rvts55">function</span><span class="rvts57"> ensureIsValidEmail($email)</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts55">if </span><span class="rvts57">(!</span><span class="rvts65">filter_var</span><span class="rvts57">($email, </span><span class="rvts66">FILTER_VALIDATE_EMAIL</span><span class="rvts57">)) {</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts55">throw new </span><span class="rvts56">InvalidArgumentException</span><span class="rvts57">(</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">sprintf</span><span class="rvts57">(</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts59">'"%s" is not a valid email address'</span><span class="rvts57">,</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$email</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;);</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts57">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">2. Создайте папку &nbsp;C:\wamp64\www\test-phpunit\</span><span class="rvts13">tests</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">файл: </span><span class="rvts13">EmailTest.php</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps9"><span class="rvts53">&lt;?php</span></p>
+<p class="rvps9"><span class="rvts55">use </span><span class="rvts57">PHPUnit\Framework\TestCase;</span></p>
+<p class="rvps9"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts55">final class </span><span class="rvts56">EmailTest</span><span class="rvts57"> </span><span class="rvts55">extends </span><span class="rvts56">TestCase</span></p>
+<p class="rvps9"><span class="rvts57">{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts58">public </span><span class="rvts55">function</span><span class="rvts57"> testCanBeCreatedFromValidEmailAddress()</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;assertInstanceOf(</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Email::</span><span class="rvts55">class</span><span class="rvts57">,</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Email::</span><span class="rvts65">fromString</span><span class="rvts57">(</span><span class="rvts59">'user@example.com'</span><span class="rvts57">)</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;);</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts58">public </span><span class="rvts55">function</span><span class="rvts57"> testCannotBeCreatedFromInvalidEmailAddress()</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;expectException(InvalidArgumentException::</span><span class="rvts55">class</span><span class="rvts57">);</span></p>
+<p class="rvps9"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;Email::</span><span class="rvts65">fromString</span><span class="rvts57">(</span><span class="rvts59">'invalid'</span><span class="rvts57">);</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts58">public </span><span class="rvts55">function</span><span class="rvts57"> testCanBeUsedAsString()</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;{</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;assertEquals(</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts59">'user@example.com'</span><span class="rvts57">,</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Email::</span><span class="rvts65">fromString</span><span class="rvts57">(</span><span class="rvts59">'user@example.com'</span><span class="rvts57">)</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;);</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts57">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">3. Запустите тест. Для этого перейдите в папку &nbsp;C:\wamp64\www\test-phpunit\vendor\bin и введите команду</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps11"><span class="rvts52">phpunit --bootstrap C:\wamp64\www\test-phpunit\vendor\autoload.php C:\wamp64\www\test-phpunit\tests\EmailTest</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Free EPub producer</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -1,0 +1,131 @@
+﻿
+
+<html>
+	
+<head>
+	<title>DDMS</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("DDMS");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">DDMS</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="ADBandroidSDK.html">ADB (android SDK)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="ADBandroidSDK.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="scriptpy1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><a class="rvts14" href="http://habrahabr.ru/post/222199/" target="_blank">http://habrahabr.ru/post/222199/</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">DDMS содержит инструмент, который позволяет нам анализировать информацию по каждому процессу и его потокам. Достаточно выделить необходимый процесс нашего приложения и нажать «update threads». </span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Запуск через командную строку</span></p>
+<p class="rvps3"><span class="rvts37">adb</span><span class="rvts120"> devices</span></p>
+<p class="rvps3"><span class="rvts37">ddms</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem89.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Справа вы можете увидеть вкладку «Threads» и работающие потоки выбранного процесса. По каждому потоку доступна следующая информация:</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;Id – уникальный идентификатор потока, назначенный виртуальной машиной. Если рядом символ звездочки, то это демон-поток;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;Tid – id потока в Linux. Главный поток процесса будет содержать id процесса;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;Status – статус потока на данный момент;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;Utime – общее время, которое поток потратил на выполнение пользовательского кода. Единицы измерения jiffies, длительность которой определяется системой и обычно составляет 10ms;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;Stime – время, потраченное на выполнение системного кода. Единицы измерения также jiffies;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;Name – имя потока. Не забывайте давать осмысленные имена при создании потока.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Full-featured multi-format Help generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

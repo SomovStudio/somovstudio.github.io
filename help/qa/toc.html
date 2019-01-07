@@ -1,0 +1,824 @@
+﻿
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<title>QA- Table of Contents</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/silver-theme/jquery-ui-1.8.12.custom.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/dynatree/chm/ui.dynatree.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/toc.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#tabs .ui-widget-header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.dynatree.min.js"></script>
+	<script type="text/javascript" src="js/hndjsse.js"></script>
+	<script type="text/javascript">
+	
+		window.bSearchDataLoaded = false;
+		var sHelpIdToActivate = '';
+	
+		$(document).ready(function()
+		{
+			var sAnchorName = '';
+			try { sAnchorName = top.location.href.substring(top.location.href.lastIndexOf("#") + 1, top.location.href.length); }
+			catch(err) { sAnchorName = ''; }
+			var nSelectedTab = 0;
+			if (sAnchorName == '_index') nSelectedTab = 1
+			else if (sAnchorName == '_search') nSelectedTab = 2;			
+			$("#tabs").tabs({
+				selected: nSelectedTab,
+				select: function(event, ui) { HideKwPopup(); }
+			});
+			
+			// Toc
+			if ($("#tab-toc").length) {
+				$("#tab-toc").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#tab-keywords").length && $("#tab-keywords").dynatree && $("#tab-keywords").dynatree("getTree") && $("#tab-keywords").dynatree("getTree").activateKey)
+							$("#tab-keywords").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+				// Expand all nodes if required
+				
+					$("#tab-toc").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				
+				// Select the active help id
+				if (sHelpIdToActivate != '') $("#tab-toc").dynatree("getTree").activateKey(sHelpIdToActivate);
+			}
+			
+			// Keywords
+			
+			if ($("#tab-keywords").length) {
+				$("#tab-keywords").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onClick: function(node, event){
+						HideKwPopup();
+						if (node.data && node.data.click)
+						{
+							var aRefList = null;
+							eval('aRefList=' + node.data.click);
+							if (ShowKwPopup(node.li, aRefList))
+							{
+								if ($("#tab-toc") && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").activateKey)
+									$("#tab-toc").dynatree("getTree").activateKey(null);
+								if(node.data.href && node.data.href != '#'){
+									window.open(node.data.href, node.data.target);
+								}
+							}
+						}
+					}
+				});
+				// Expand all nodes if required
+				
+					$("#tab-keywords").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				
+			}
+			
+			// Load search data
+			(function() {
+				var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+				se.src = 'js/hndsd.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+			})();
+		});
+		
+		$('body').click(function() {
+			HideKwPopup();
+		});
+		
+		function SelectTocItem(sHelpId)
+		{
+			if ($("#tab-toc").length && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").getNodeByKey) {
+				var aNode = $("#tab-toc").dynatree("getTree").getNodeByKey(sHelpId);
+				if (aNode) {
+					aNode.activateSilently();  
+				}
+			}
+			else {
+				sHelpIdToActivate = sHelpId;
+			}
+		}
+		
+		function HideKwPopup()
+		{
+			if($("#popupMenu")) $("#popupMenu").remove();
+		}
+		
+		function ShowKwPopup(oSender, aLinks)
+		{
+			HideKwPopup();
+			if (!aLinks || !aLinks.length || aLinks.length == 0) return false
+			else if (aLinks.length == 1) return true
+			else
+			{
+				var oParentDiv = document.createElement("DIV");
+				oParentDiv.id = "popupMenu";
+				var oLink = null;
+				// Close button
+				oLink = document.createElement("SPAN");
+				oLink.className = "close-button";
+				oLink.innerHTML = "X";
+				oLink.href = "#";
+				oLink.onclick = HideKwPopup;
+				oParentDiv.appendChild(oLink);
+				// Items
+				for (var nCnt=0; nCnt<aLinks.length; nCnt++)
+				{
+					oLink = document.createElement("A");
+					oLink.innerHTML = aLinks[nCnt][0];
+					oLink.href = aLinks[nCnt][1];
+					oLink.target = "FrameMain";
+					oLink.onclick = HideKwPopup;
+					oParentDiv.appendChild(oLink);
+				}
+				document.body.appendChild(oParentDiv);
+				var pos = $(oSender).offset(); 
+				var height = $(oSender).height();
+				$(oParentDiv).css({
+					"left": (pos.left+20) + "px",
+					"top": (pos.top + height + 5) + "px"
+				});
+				$(oParentDiv).show();
+				return false;
+			}
+		}
+		
+		function PerformSearch()
+		{
+			if (!window.bSearchDataLoaded) {
+				$("#search_results").html("Search engine data hasn't been fully loaded yet or an error occurred while loading it. This usually happens when documentation is browsed locally.");
+				return;
+			}
+			sValue = $("#search_value").val();
+			$("#search_results").html('Searching...');
+			var oSearchEngine = new HndJsSe;
+			oSearchEngine.ParseInput(sValue);			
+			oSearchEngine.PerformSearch();
+			if (!oSearchEngine.aResults || !oSearchEngine.aResults.length)
+			{
+				$("#search_results").html('No results found.');
+			}
+			else
+			{
+				$("#search_results").html('<div id="search_results_content"></div>');
+				var oUl = $("#search_results_content").append("<ul id='lr'></ul>").find("ul");
+				for (var nCnt = 0; nCnt < oSearchEngine.aResults.length; nCnt++)
+				{
+					if (oSearchEngine.aResults[nCnt][0] < aTl.length)
+					{
+						oUl.append("<li><a href='" + aTl[oSearchEngine.aResults[nCnt][0]][0] + "?search=" + escape(sValue) + "' target='FrameMain'>" + unescape(aTl[oSearchEngine.aResults[nCnt][0]][1]) + "</a></li>");
+					}
+				}
+				// Tree
+				$("#search_results_content").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#search_results_content") && $("#search_results_content").dynatree && $("#search_results_content").dynatree("getTree") && $("#search_results_content").dynatree("getTree").activateKey)
+							$("#search_results_content").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="tabs">
+		<ul>
+			
+				<li><a href="#tab-toc">Contents</a></li>
+			
+				<li><a href="#tab-keywords">Index</a></li>
+			
+				<li><a href="#tab-search">Search</a></li>
+			
+		</ul>
+		
+		<div id="tab-toc">
+			<ul id="toc" class="">
+
+				
+
+						<li class="folder" id="Automationtesting" data="">
+							<a
+							href="Automationtesting.html"
+							target="FrameMain">
+								Automation testing (автоматизированное тестирование)
+							</a>
+
+				<ul>
+
+						<li class="" id="Unity3DTestRunner" data="">
+							<a
+							href="Unity3DTestRunner.html"
+							target="FrameMain">
+								Unity3D (Test Runner)
+							</a>
+
+				</li>
+
+						<li class="folder" id="SeleniumWebDriver" data="">
+							<a
+							href="SeleniumWebDriver.html"
+							target="FrameMain">
+								Selenium (Web Driver)
+							</a>
+
+				<ul>
+
+						<li class="" id="SeleniumIntelliJIDEAJava" data="icon: '8.png'">
+							<a
+							href="SeleniumIntelliJIDEAJava.html"
+							target="FrameMain">
+								Selenium в среде IntelliJ IDEA (Java)
+							</a>
+
+				</li>
+
+						<li class="" id="SeleniumSharpDevelopC" data="icon: '8.png'">
+							<a
+							href="SeleniumSharpDevelopC.html"
+							target="FrameMain">
+								Selenium в среде SharpDevelop (C#)
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="AppiumUIAutomator" data="">
+							<a
+							href="AppiumUIAutomator.html"
+							target="FrameMain">
+								Appium (UI Automator)
+							</a>
+
+				<ul>
+
+						<li class="" id="AndroidStudioSDK" data="icon: '8.png'">
+							<a
+							href="AndroidStudioSDK.html"
+							target="FrameMain">
+								Установка Android Studio (SDK)
+							</a>
+
+				</li>
+
+						<li class="" id="AndroidEmulator" data="icon: '8.png'">
+							<a
+							href="AndroidEmulator.html"
+							target="FrameMain">
+								Настройка Android Emulator
+							</a>
+
+				</li>
+
+						<li class="" id="AndroidEmulator1" data="icon: '8.png'">
+							<a
+							href="AndroidEmulator1.html"
+							target="FrameMain">
+								Запуск Android Emulator
+							</a>
+
+				</li>
+
+						<li class="" id="Appium1" data="icon: '8.png'">
+							<a
+							href="Appium1.html"
+							target="FrameMain">
+								Установка Appium
+							</a>
+
+				</li>
+
+						<li class="" id="IntelliJIDEA" data="icon: '8.png'">
+							<a
+							href="IntelliJIDEA.html"
+							target="FrameMain">
+								Выполнение теста в IntelliJ IDEA
+							</a>
+
+				</li>
+
+						<li class="" id="UiAutomator2" data="icon: '8.png'">
+							<a
+							href="UiAutomator2.html"
+							target="FrameMain">
+								UiAutomator 2
+							</a>
+
+				</li></ul></li></ul></li>
+
+						<li class="folder" id="Unittesting" data="">
+							<a
+							href="Unittesting.html"
+							target="FrameMain">
+								Unit testing (модульное тестирование)
+							</a>
+
+				<ul>
+
+						<li class="folder" id="CNUnit" data="">
+							<a
+							href="CNUnit.html"
+							target="FrameMain">
+								C# (NUnit)
+							</a>
+
+				<ul>
+
+						<li class="" id="NUnitSharpDevelop" data="icon: '8.png'">
+							<a
+							href="NUnitSharpDevelop.html"
+							target="FrameMain">
+								NUnit (SharpDevelop)
+							</a>
+
+				</li></ul></li>
+
+						<li class="" id="CxUnit" data="">
+							<a
+							href="CxUnit.html"
+							target="FrameMain">
+								C# (xUnit)
+							</a>
+
+				</li>
+
+						<li class="folder" id="JavaJUnit" data="">
+							<a
+							href="JavaJUnit.html"
+							target="FrameMain">
+								Java (JUnit)
+							</a>
+
+				<ul>
+
+						<li class="" id="JUnitIntelliJIDEA" data="icon: '8.png'">
+							<a
+							href="JUnitIntelliJIDEA.html"
+							target="FrameMain">
+								JUnit (IntelliJ IDEA)
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="PHPPHPUnit" data="">
+							<a
+							href="PHPPHPUnit.html"
+							target="FrameMain">
+								PHP (PHPUnit)
+							</a>
+
+				<ul>
+
+						<li class="" id="PHPUnit" data="icon: '8.png'">
+							<a
+							href="PHPUnit.html"
+							target="FrameMain">
+								PHPUnit (Быстрый старт)
+							</a>
+
+				</li>
+
+						<li class="" id="PHPUnitNetBeans" data="icon: '8.png'">
+							<a
+							href="PHPUnitNetBeans.html"
+							target="FrameMain">
+								PHPUnit (NetBeans)
+							</a>
+
+				</li></ul></li>
+
+						<li class="" id="TestNG" data="">
+							<a
+							href="TestNG.html"
+							target="FrameMain">
+								TestNG
+							</a>
+
+				</li></ul></li>
+
+						<li class="" id="Stresstesting" data="">
+							<a
+							href="Stresstesting.html"
+							target="FrameMain">
+								Stress testing (стресс тестирование)
+							</a>
+
+				</li>
+
+						<li class="folder" id="ADBandroidSDK" data="">
+							<a
+							href="ADBandroidSDK.html"
+							target="FrameMain">
+								ADB (android SDK)
+							</a>
+
+				<ul>
+
+						<li class="" id="AndroidSDK1" data="icon: '16.png'">
+							<a
+							href="AndroidSDK1.html"
+							target="FrameMain">
+								Установка и настройка Android SDK
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic1" data="icon: '16.png'">
+							<a
+							href="Newtopic1.html"
+							target="FrameMain">
+								Подключение устройств к ПК
+							</a>
+
+				</li>
+
+						<li class="" id="ADB" data="icon: '16.png'">
+							<a
+							href="ADB.html"
+							target="FrameMain">
+								Команды ADB
+							</a>
+
+				</li>
+
+						<li class="" id="Monkey" data="icon: '16.png'">
+							<a
+							href="Monkey.html"
+							target="FrameMain">
+								Тестирование с помощью Monkey
+							</a>
+
+				</li>
+
+						<li class="folder" id="MonkeyRunner" data="">
+							<a
+							href="MonkeyRunner.html"
+							target="FrameMain">
+								Тестирование с помощью MonkeyRunner
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic2" data="icon: '16.png'">
+							<a
+							href="Newtopic2.html"
+							target="FrameMain">
+								Рекордер
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic3" data="icon: '16.png'">
+							<a
+							href="Newtopic3.html"
+							target="FrameMain">
+								Эмулятор
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic4" data="icon: '16.png'">
+							<a
+							href="Newtopic4.html"
+							target="FrameMain">
+								Скрипт
+							</a>
+
+				</li>
+
+						<li class="" id="PythonJythonIDLE" data="icon: '16.png'">
+							<a
+							href="PythonJythonIDLE.html"
+							target="FrameMain">
+								Python / Jython IDLE
+							</a>
+
+				</li>
+
+						<li class="" id="PythonJython1" data="icon: '16.png'">
+							<a
+							href="PythonJython1.html"
+							target="FrameMain">
+								Основы языка Python / Jython
+							</a>
+
+				</li></ul></li>
+
+						<li class="" id="geteventsendevent" data="icon: '16.png'">
+							<a
+							href="geteventsendevent.html"
+							target="FrameMain">
+								Тестирование с помощью getevent/sendevent
+							</a>
+
+				</li>
+
+						<li class="folder" id="Newtopic5" data="">
+							<a
+							href="Newtopic5.html"
+							target="FrameMain">
+								Скрипты (примеры)
+							</a>
+
+				<ul>
+
+						<li class="folder" id="ADB1" data="">
+							<a
+							href="ADB1.html"
+							target="FrameMain">
+								Логи (ADB)
+							</a>
+
+				<ul>
+
+						<li class="" id="log_systembat" data="icon: '10.png'">
+							<a
+							href="log_systembat.html"
+							target="FrameMain">
+								Системный лог ( log_system.bat )
+							</a>
+
+				</li>
+
+						<li class="" id="log_gamebat" data="icon: '10.png'">
+							<a
+							href="log_gamebat.html"
+							target="FrameMain">
+								Лог приложения ( log_game.bat )
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="screenshotsMonkeyRunner" data="">
+							<a
+							href="screenshotsMonkeyRunner.html"
+							target="FrameMain">
+								Снять screenshots (MonkeyRunner)
+							</a>
+
+				<ul>
+
+						<li class="" id="scriptbat" data="icon: '10.png'">
+							<a
+							href="scriptbat.html"
+							target="FrameMain">
+								script.bat
+							</a>
+
+				</li>
+
+						<li class="" id="scriptpy" data="icon: '10.png'">
+							<a
+							href="scriptpy.html"
+							target="FrameMain">
+								script.py
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Monkey1" data="">
+							<a
+							href="Monkey1.html"
+							target="FrameMain">
+								Стресс-тестирование (Monkey)
+							</a>
+
+				<ul>
+
+						<li class="" id="adb_shell_monkey_1bat" data="icon: '10.png'">
+							<a
+							href="adb_shell_monkey_1bat.html"
+							target="FrameMain">
+								adb_shell_monkey_1.bat
+							</a>
+
+				</li>
+
+						<li class="" id="adb_shell_monkey_2bat" data="icon: '10.png'">
+							<a
+							href="adb_shell_monkey_2bat.html"
+							target="FrameMain">
+								adb_shell_monkey_2.bat
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="DDMS1" data="">
+							<a
+							href="DDMS1.html"
+							target="FrameMain">
+								Запуск DDMS
+							</a>
+
+				<ul>
+
+						<li class="" id="ddms_runbat" data="icon: '10.png'">
+							<a
+							href="ddms_runbat.html"
+							target="FrameMain">
+								ddms_run.bat
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="MonkeyRunner1" data="">
+							<a
+							href="MonkeyRunner1.html"
+							target="FrameMain">
+								Тестирование (MonkeyRunner)
+							</a>
+
+				<ul>
+
+						<li class="" id="AndroidAAPTDUMP" data="icon: '10.png'">
+							<a
+							href="AndroidAAPTDUMP.html"
+							target="FrameMain">
+								Пример от Android (AAPT DUMP)
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic6" data="icon: '10.png'">
+							<a
+							href="Newtopic6.html"
+							target="FrameMain">
+								Установка игры и снятия скриншота
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic7" data="icon: '10.png'">
+							<a
+							href="Newtopic7.html"
+							target="FrameMain">
+								Запуск приложение и нажатие кнопки
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic8" data="icon: '10.png'">
+							<a
+							href="Newtopic8.html"
+							target="FrameMain">
+								Последовательное выполнение нажатий с задержками и снятие скриншота
+							</a>
+
+				</li>
+
+						<li class="folder" id="Testtutorial" data="">
+							<a
+							href="Testtutorial.html"
+							target="FrameMain">
+								Test tutorial
+							</a>
+
+				<ul>
+
+						<li class="" id="scriptbat1" data="icon: '10.png'">
+							<a
+							href="scriptbat1.html"
+							target="FrameMain">
+								script.bat
+							</a>
+
+				</li>
+
+						<li class="" id="scriptpy1" data="icon: '10.png'">
+							<a
+							href="scriptpy1.html"
+							target="FrameMain">
+								script.py
+							</a>
+
+				</li></ul></li></ul></li></ul></li>
+
+						<li class="" id="DDMS" data="icon: '16.png'">
+							<a
+							href="DDMS.html"
+							target="FrameMain">
+								DDMS
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic" data="">
+							<a
+							href="Newtopic.html"
+							target="FrameMain">
+								Разное
+							</a>
+
+				<ul>
+
+						<li class="" id="UnityRemote" data="">
+							<a
+							href="UnityRemote.html"
+							target="FrameMain">
+								Unity Remote
+							</a>
+
+				</li>
+
+						<li class="" id="RemoteDebuggingonAndroidwithChro" data="icon: '8.png'">
+							<a
+							href="RemoteDebuggingonAndroidwithChro.html"
+							target="FrameMain">
+								Remote Debugging on Android with Chrome
+							</a>
+
+				</li>
+
+						<li class="" id="Wireshark-" data="icon: '8.png'">
+							<a
+							href="Wireshark-.html"
+							target="FrameMain">
+								Wireshark - анализатор трафика
+							</a>
+
+				</li>
+
+						<li class="" id="CharlesProxyIAP" data="icon: '8.png'">
+							<a
+							href="CharlesProxyIAP.html"
+							target="FrameMain">
+								Charles Proxy хак IAP
+							</a>
+
+				</li>
+
+						<li class="" id="CharlesUI" data="icon: '8.png'">
+							<a
+							href="CharlesUI.html"
+							target="FrameMain">
+								Charles как проверить быстро UI
+							</a>
+
+				</li></ul></li>
+				
+				</ul>
+		</div>
+		
+		
+		
+		<div id="tab-keywords">
+			<ul id="keywords">
+
+				
+				
+			</ul>
+		</div>
+		
+		
+		
+		<div id="tab-search">
+			<form onsubmit="PerformSearch(); return false;">
+				<label for="search_value">Search:</label>
+				<input id="search_value" name="search_value"></input>
+				<input type="submit" value="Search"/>
+			</form>
+			<div id="search_results"></div>
+		</div>
+		
+		
+		
+	</div>
+    
+</body>
+
+</html>
+

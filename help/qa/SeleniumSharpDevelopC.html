@@ -1,0 +1,120 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Selenium в среде SharpDevelop (C#)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("SeleniumSharpDevelopC");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Selenium в среде SharpDevelop (C#)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Automationtesting.html">Automation testing (автоматизированное тестирование)</a> &rsaquo;&rsaquo; <a href="SeleniumWebDriver.html">Selenium (Web Driver)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="SeleniumWebDriver.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="SeleniumIntelliJIDEAJava.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="AppiumUIAutomator.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Selenium в среде SharpDevelop (C#)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Скачать Selenium и WebDriver на странице: </span><a class="rvts31" href="http://www.seleniumhq.org/download/" target="_blank">http://www.seleniumhq.org/download/</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Открытие браузера Chrome, и поиск в поисковике Google</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts39">/*</span><br/><span class="rvts39">&nbsp;* Создано в SharpDevelop.</span><br/><span class="rvts39">&nbsp;* Пользователь: Cartish</span><br/><span class="rvts39">&nbsp;* Дата: 20.01.2018</span><br/><span class="rvts39">&nbsp;* Время: 11:47</span><br/><span class="rvts39">&nbsp;*</span><span class="rvts32">&nbsp;</span><br/><span class="rvts39">&nbsp;* Для изменения этого шаблона используйте меню "Инструменты | Параметры | Кодирование | Стандартные заголовки".</span><br/><span class="rvts39">&nbsp;*/</span><br/><span class="rvts45">using</span><span class="rvts32"> System;</span><br/><span class="rvts45">using</span><span class="rvts32"> System.Collections.Generic;</span><br/><span class="rvts45">using</span><span class="rvts32"> System.Drawing;</span><br/><span class="rvts45">using</span><span class="rvts32"> System.Windows.Forms;</span><br/><span class="rvts45">using</span><span class="rvts32"> OpenQA.Selenium;</span><br/><span class="rvts45">using</span><span class="rvts32"> OpenQA.Selenium.Chrome;</span><br/><span class="rvts32"></span><br/><span class="rvts45">namespace</span><span class="rvts32"> AutocompleteTasks</span><br/><span class="rvts32">{</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts43">///</span><span class="rvts39"> </span><span class="rvts43">&lt;</span><span class="rvts44">summary</span><span class="rvts43">&gt;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts43">///</span><span class="rvts39"> Description of MainForm.</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts43">///</span><span class="rvts39"> </span><span class="rvts43">&lt;</span><span class="rvts44">/summary</span><span class="rvts43">&gt;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts41">public</span><span class="rvts32"> </span><span class="rvts42">partial</span><span class="rvts32"> </span><span class="rvts36">class</span><span class="rvts32"> </span><span class="rvts35">MainForm</span><span class="rvts32"> : </span><span class="rvts35">Form</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts41">public</span><span class="rvts32"> </span><span class="rvts35">MainForm</span><span class="rvts32">()</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts39">//</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts39">// The InitializeComponent() call is required for Windows Forms designer support.</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts39">//</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts33">InitializeComponent</span><span class="rvts32">();</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts39">//</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts39">// </span><span class="rvts40">TODO</span><span class="rvts39">: Add constructor code after the InitializeComponent() call.</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts39">//</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts35">IWebDriver</span><span class="rvts32"> </span><span class="rvts34">driver</span><span class="rvts32">;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts36">void</span><span class="rvts32"> </span><span class="rvts33">Button1Click</span><span class="rvts32">(</span><span class="rvts36">object</span><span class="rvts32"> sender, </span><span class="rvts35">EventArgs</span><span class="rvts32"> e)</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts34">driver</span><span class="rvts32"> = </span><span class="rvts38">new</span><span class="rvts32"> </span><span class="rvts35">ChromeDriver</span><span class="rvts32">();</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts34">driver</span><span class="rvts32">.</span><span class="rvts33">Manage</span><span class="rvts32">().Window.</span><span class="rvts33">Maximize</span><span class="rvts32">();</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts34">driver</span><span class="rvts32">.</span><span class="rvts33">Navigate</span><span class="rvts32">().</span><span class="rvts33">GoToUrl</span><span class="rvts32">(</span><span class="rvts37">"https://www.google.com.ua/"</span><span class="rvts32">);</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts35">IWebElement</span><span class="rvts32"> searchInput = </span><span class="rvts34">driver</span><span class="rvts32">.</span><span class="rvts33">FindElement</span><span class="rvts32">(</span><span class="rvts35">By</span><span class="rvts32">.</span><span class="rvts33">Id</span><span class="rvts32">(</span><span class="rvts37">"lst-ib"</span><span class="rvts32">));</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;searchInput.</span><span class="rvts33">SendKeys</span><span class="rvts32">(</span><span class="rvts37">"Geforce 1050 ti"</span><span class="rvts32">);</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;searchInput.</span><span class="rvts33">SendKeys</span><span class="rvts32">(OpenQA.Selenium.</span><span class="rvts35">Keys</span><span class="rvts32">.</span><span class="rvts34">Enter</span><span class="rvts32">);</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts36">void</span><span class="rvts32"> </span><span class="rvts33">Button2Click</span><span class="rvts32">(</span><span class="rvts36">object</span><span class="rvts32"> sender, </span><span class="rvts35">EventArgs</span><span class="rvts32"> e)</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts34">driver</span><span class="rvts32">.</span><span class="rvts33">Quit</span><span class="rvts32">();</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts32">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts32">}</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

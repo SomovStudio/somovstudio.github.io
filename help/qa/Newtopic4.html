@@ -1,0 +1,190 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Скрипт</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic4");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Скрипт</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="ADBandroidSDK.html">ADB (android SDK)</a> &rsaquo;&rsaquo; <a href="MonkeyRunner.html">Тестирование с помощью MonkeyRunner</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="MonkeyRunner.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic3.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="PythonJythonIDLE.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps23"><span class="rvts108">Скрипт</span></p>
+<p class="rvps13"><span class="rvts81">__________________________________________________________________</span></p>
+<p class="rvps13"><span class="rvts109"># </span><span class="rvts110">Импорт модулей monkeyrunner для этой программы</span></p>
+<p class="rvps13"><span class="rvts82">from </span><span class="rvts81">com.android.monkeyrunner </span><span class="rvts82">import </span><span class="rvts111">MonkeyRunner</span><span class="rvts81">, </span><span class="rvts111">MonkeyDevice</span></p>
+<p class="rvps13"><span class="rvts109"># </span><span class="rvts110">Для подключения к текущему устройству, возвращает объект MonkeyDevice</span></p>
+<p class="rvps13"><span class="rvts81">device = </span><span class="rvts111">MonkeyRunner</span><span class="rvts81">.waitForConnection()</span></p>
+<p class="rvps13"><span class="rvts109"># </span><span class="rvts110">Устанавливает пакет Android. Обратите внимание, что этот метод возвращает </span></p>
+<p class="rvps13"><span class="rvts109"># </span><span class="rvts110">логическое значение, так что вы можете проверить результат установки</span></p>
+<p class="rvps13"><span class="rvts81">device.installPackage(</span><span class="rvts112">'c:/myproject/bin/MyApplication.apk'</span><span class="rvts81">)</span></p>
+<p class="rvps13"><span class="rvts109"># </span><span class="rvts110">Записываем в переменную внутреннее имя пакета</span></p>
+<p class="rvps13"><span class="rvts81">package = </span><span class="rvts112">'com.example.android.myapplication'</span></p>
+<p class="rvps13"><span class="rvts109"># </span><span class="rvts110">Записываем в переменную имя одного из видов деятельности в пакете</span></p>
+<p class="rvps13"><span class="rvts81">activity = </span><span class="rvts112">'com.example.android.myapplication.MainActivity'</span></p>
+<p class="rvps13"><span class="rvts109"># </span><span class="rvts110">Задает имя компонента, чтобы начать с ним работать</span></p>
+<p class="rvps13"><span class="rvts81">runComponent = package + </span><span class="rvts112">'/'</span><span class="rvts81"> + activity</span></p>
+<p class="rvps13"><span class="rvts109"># </span><span class="rvts110">Запускает компонент</span></p>
+<p class="rvps13"><span class="rvts81">device.startActivity(component=runComponent)</span></p>
+<p class="rvps13"><span class="rvts109"># </span><span class="rvts110">Нажимает кнопку Menu</span></p>
+<p class="rvps13"><span class="rvts81">device.press(</span><span class="rvts112">'KEYCODE_MENU'</span><span class="rvts81">, </span><span class="rvts111">MonkeyDevice</span><span class="rvts81">.DOWN_AND_UP)</span></p>
+<p class="rvps13"><span class="rvts109"># </span><span class="rvts110">Снимает скриншот</span></p>
+<p class="rvps13"><span class="rvts81">result = device.takeSnapshot()</span></p>
+<p class="rvps13"><span class="rvts109"># </span><span class="rvts110">Записывает скриншот в файл</span></p>
+<p class="rvps13"><span class="rvts81">result.writeToFile(</span><span class="rvts112">'c:/myproject/shot1.png'</span><span class="rvts81">,</span><span class="rvts112">'png'</span><span class="rvts81">)</span></p>
+<p class="rvps13"><span class="rvts81">__________________________________________________________________</span></p>
+<p class="rvps13"><span class="rvts84">ПРИМИЧАНИЕ!</span><span class="rvts80"> Файл скрипта должен быть записан в кодировке UTF-8 в противном случае скрипт не будет выполнен.</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Чтобы узнать </span><span class="rvts81">package </span><span class="rvts80">и </span><span class="rvts81">activity </span><span class="rvts80">нужно воспользоваться утилитой </span><span class="rvts84">aapt</span></p>
+<p class="rvps24"><span class="rvts93">aapt dump badging c:\builds\project.apk</span></p>
+<p class="rvps13"><img width="602" height="89" alt="" style="padding : 1px;" src="lib/NewItem81.png"></p>
+<p class="rvps13"><img width="600" height="90" alt="" style="padding : 1px;" src="lib/NewItem80.png"></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Запуск скрипта: &nbsp; &nbsp;</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts113">monkeyrunner с:\scripts\script.py</span></p>
+<p class="rvps13"><img width="601" height="101" alt="" style="padding : 1px;" src="lib/NewItem79.png"></p>
+<p class="rvps13"><span class="rvts80">Скрипт: Установка игры и снятия скриншота</span></p>
+<p class="rvps13"><span class="rvts80">-----------------------------------------------------------------------------------------------</span></p>
+<p class="rvps13"><span class="rvts82">from </span><span class="rvts81">com.android.monkeyrunner </span><span class="rvts82">import </span><span class="rvts111">MonkeyRunner</span><span class="rvts81">, </span><span class="rvts111">MonkeyDevice</span></p>
+<p class="rvps13"><span class="rvts81">device = </span><span class="rvts111">MonkeyRunner</span><span class="rvts81">.waitForConnection()</span></p>
+<p class="rvps13"><span class="rvts81">device.installPackage(</span><span class="rvts112">'C:/logs/builds/Starbattle.apk'</span><span class="rvts81">)</span></p>
+<p class="rvps13"><span class="rvts81">package = </span><span class="rvts112">'com.ilogos.starbattle'</span></p>
+<p class="rvps13"><span class="rvts81">activity = </span><span class="rvts112">'com.onevcat.uniwebview.AndroidPlugin'</span></p>
+<p class="rvps13"><span class="rvts81">runComponent = package + </span><span class="rvts112">'/'</span><span class="rvts81"> + activity</span></p>
+<p class="rvps13"><span class="rvts81">device.startActivity(component=runComponent)</span></p>
+<p class="rvps13"><span class="rvts81">device.press(</span><span class="rvts112">'KEYCODE_MENU'</span><span class="rvts81">, MonkeyDevice.DOWN_AND_UP)</span></p>
+<p class="rvps13"><span class="rvts81">result = device.takeSnapshot()</span></p>
+<p class="rvps13"><span class="rvts81">result.writeToFile(</span><span class="rvts112">'C:/logs/builds/shot1.png'</span><span class="rvts81">,</span><span class="rvts112">'png'</span><span class="rvts81">)</span></p>
+<p class="rvps13"><span class="rvts80">-----------------------------------------------------------------------------------------------</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Скрипт: Запуск приложение и нажатие кнопки</span></p>
+<p class="rvps13"><span class="rvts80">-----------------------------------------------------------------------------------------------</span></p>
+<p class="rvps13"><span class="rvts82">from </span><span class="rvts81">com.android.monkeyrunner </span><span class="rvts82">import </span><span class="rvts111">MonkeyRunner</span><span class="rvts81">, </span><span class="rvts111">MonkeyDevice</span></p>
+<p class="rvps13"><span class="rvts81">device = </span><span class="rvts111">MonkeyRunner</span><span class="rvts81">.waitForConnection()</span></p>
+<p class="rvps13"><span class="rvts81">package = </span><span class="rvts112">'com.ilogos.starbattle'</span></p>
+<p class="rvps13"><span class="rvts81">activity = </span><span class="rvts112">'com.onevcat.uniwebview.AndroidPlugin'</span></p>
+<p class="rvps13"><span class="rvts81">runComponent = package + </span><span class="rvts112">'/'</span><span class="rvts81"> + activity</span></p>
+<p class="rvps13"><span class="rvts81">device.startActivity(component=runComponent)</span></p>
+<p class="rvps13"><span class="rvts81"># </span><span class="rvts110">Нажимает кнопку (Nexus7 1280х800)</span></p>
+<p class="rvps13"><span class="rvts81">device.touch(640, 650, </span><span class="rvts112">'DOWN_AND_UP'</span><span class="rvts81">)</span></p>
+<p class="rvps13"><span class="rvts80">-----------------------------------------------------------------------------------------------</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80">Скрипт: Последовательное выполнение нажатий с задержками и снятие скриншота</span></p>
+<p class="rvps13"><span class="rvts80">-----------------------------------------------------------------------------------------------</span></p>
+<p class="rvps13"><span class="rvts82">from </span><span class="rvts81">com.android.monkeyrunner </span><span class="rvts82">import </span><span class="rvts111">MonkeyRunner</span><span class="rvts81">, </span><span class="rvts111">MonkeyDevice</span></p>
+<p class="rvps13"><span class="rvts81">device = </span><span class="rvts111">MonkeyRunner</span><span class="rvts81">.waitForConnection()</span></p>
+<p class="rvps13"><span class="rvts109"># Нажимает кнопку (Nexus7 1280х800)</span></p>
+<p class="rvps13"><span class="rvts81">device.touch(640, 650, </span><span class="rvts112">'DOWN_AND_UP'</span><span class="rvts81">)</span></p>
+<p class="rvps13"><span class="rvts82">print</span><span class="rvts81">(</span><span class="rvts112">"CLICK - 1"</span><span class="rvts81">);</span></p>
+<p class="rvps13"><span class="rvts81">MonkeyRunner.sleep(15.0)</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts109"># задержка</span></p>
+<p class="rvps13"><span class="rvts81">device.touch(640, 650, </span><span class="rvts112">'DOWN_AND_UP'</span><span class="rvts81">)</span></p>
+<p class="rvps13"><span class="rvts82">print</span><span class="rvts81">(</span><span class="rvts112">"CLICK - 2"</span><span class="rvts81">);</span></p>
+<p class="rvps13"><span class="rvts81">MonkeyRunner.sleep(5.0)</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts109"># задержка</span></p>
+<p class="rvps13"><span class="rvts81">device.touch(640, 650, </span><span class="rvts112">'DOWN_AND_UP'</span><span class="rvts81">)</span></p>
+<p class="rvps13"><span class="rvts82">print</span><span class="rvts81">(</span><span class="rvts112">"CLICK - 3"</span><span class="rvts81">);</span></p>
+<p class="rvps13"><span class="rvts81">result = device.takeSnapshot()</span></p>
+<p class="rvps13"><span class="rvts81">result.writeToFile(</span><span class="rvts112">'C:/logs/builds/shot.png'</span><span class="rvts81">,</span><span class="rvts112">'png'</span><span class="rvts81">)</span></p>
+<p class="rvps13"><span class="rvts82">print</span><span class="rvts81">(</span><span class="rvts112">"SCREENSHOT - SAVE"</span><span class="rvts81">);</span></p>
+<p class="rvps13"><span class="rvts80">--------------------------------------------------------------------------------------------------</span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p class="rvps13"><span class="rvts80"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Easy to use tool to create HTML Help files and Help web sites</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

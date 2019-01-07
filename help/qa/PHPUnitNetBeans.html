@@ -1,0 +1,224 @@
+﻿
+
+<html>
+	
+<head>
+	<title>PHPUnit (NetBeans)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("PHPUnitNetBeans");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">PHPUnit (NetBeans)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Unittesting.html">Unit testing (модульное тестирование)</a> &rsaquo;&rsaquo; <a href="PHPPHPUnit.html">PHP (PHPUnit)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="PHPPHPUnit.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="PHPUnit.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="TestNG.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">PHPUnit (NetBeans)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">1. Скачайте и установите Composer </span><a class="rvts67" href="https://getcomposer.org/download/" target="_blank">https://getcomposer.org/download/</a></p>
+<p class="rvps3"><span class="rvts8">2. Установите сервер WAMP (или другой) </span><a class="rvts67" href="http://www.wampserver.com/ru/" target="_blank">http://www.wampserver.com/ru/</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">3. Создайте новый проект TestPHPUnit в среде разработки NetBeans.</span></p>
+<p class="rvps3"><span class="rvts8">Проект разместитена сервере по адресу: </span><span class="rvts68">C:\wamp64\www\TestPHPUnit</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem62.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">4. Откройте окно консоли, перейдите в папку прокета TestPHPUnit &nbsp;и введите команду установки PHPUnit</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps11"><span class="rvts52">composer require --dev phpunit/phpunit ^5</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">5. Необходимо установить PHPUnit Skeleton Generator </span><a class="rvts31" href="https://github.com/sebastianbergmann/phpunit-skeleton-generator" target="_blank">https://github.com/sebastianbergmann/phpunit-skeleton-generator</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Для этого откройте файл Composer.json который находится в корне проекта TestPHPUnit</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">И отредактируйте следующим образом</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps9"><span class="rvts8">{</span></p>
+<p class="rvps9"><span class="rvts8"> &nbsp; &nbsp;"require-dev": {</span></p>
+<p class="rvps9"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;"phpunit/phpunit": "5",</span></p>
+<p class="rvps9"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;"phpunit/phpunit-skeleton-generator": "*"</span></p>
+<p class="rvps9"><span class="rvts8"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts8">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Откройте консоль и введите команду</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps11"><span class="rvts52">composer update</span></p>
+<p class="rvps3"><span class="rvts8">После завершения устаровки в папке C:\wamp64\www\TestPHPUnit\vendor\bin </span></p>
+<p class="rvps3"><span class="rvts8">будут находиться исполняющие файлы: </span><span class="rvts13">phpunit.bat</span><span class="rvts8"> и </span><span class="rvts13">phpunit-skelgen.bat</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">6. Настройки параметров редактора NetBeans. Сервис -&gt; Параметры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Переходим в раздел PHP -&gt; вкладка "Платформы и иснтрументы" -&gt; раздел PHPUnit</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img width="774" height="536" alt="" style="padding : 1px;" src="lib/NewItem61.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Прописываем адреса к файлам </span><span class="rvts13">phpunit.bat</span><span class="rvts8"> и </span><span class="rvts13">phpunit-skelgen.bat</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">7. Открываем свойства проекта</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem60.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Переходим в раздел "Тестирвоание". Включаем флаг PHPUnit и добавляем адрес к папке с нашими тестами C:\wamp64\www\TestPHPUnit\Tests</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem59.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">8. Создаем файл </span><span class="rvts13">Calculator.php</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem58.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">9. Создаем тестовый скрипт. Для этого выделите файл Calculator.php откройте контекстное меню -&gt; Средства -&gt; Создать/Обновить тест</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem57.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Выберите местоположение и платформу PhpUnit. Нажмите ОК.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem56.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">В результате автоматически будет создан скрипт тестирования.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">10. Отредактируйте тестовый скрипт следующим образом</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps9"><span class="rvts53">&lt;?php</span></p>
+<p class="rvps9"><span class="rvts69">/**</span></p>
+<p class="rvps9"><span class="rvts69"> * Generated by PHPUnit_SkeletonGenerator on 2018-02-09 at 09:38:06.</span></p>
+<p class="rvps9"><span class="rvts69"> */</span></p>
+<p class="rvps9"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts71">require_once </span><span class="rvts73">'..\Calculator.php'</span><span class="rvts72">;</span></p>
+<p class="rvps9"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts55">class </span><span class="rvts56">CalculatorTest</span><span class="rvts57"> </span><span class="rvts55">extends </span><span class="rvts56">PHPUnit_Framework_TestCase</span><span class="rvts57"> {</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts69">/**</span></p>
+<p class="rvps9"><span class="rvts69"> &nbsp; &nbsp; * @var Calculator</span></p>
+<p class="rvps9"><span class="rvts69"> &nbsp; &nbsp; */</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts61">protected </span><span class="rvts59">$object</span><span class="rvts57">;</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts69">/**</span></p>
+<p class="rvps9"><span class="rvts69"> &nbsp; &nbsp; * Sets up the fixture, for example, opens a network connection.</span></p>
+<p class="rvps9"><span class="rvts69"> &nbsp; &nbsp; * This method is called before a test is executed.</span></p>
+<p class="rvps9"><span class="rvts69"> &nbsp; &nbsp; */</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts61">protected </span><span class="rvts55">function</span><span class="rvts57"> setUp() {</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts72">$this-&gt;</span><span class="rvts73">object</span><span class="rvts72"> = </span><span class="rvts71">new </span><span class="rvts74">Calculator</span><span class="rvts72">();</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts69">/**</span></p>
+<p class="rvps9"><span class="rvts69"> &nbsp; &nbsp; * Tears down the fixture, for example, closes a network connection.</span></p>
+<p class="rvps9"><span class="rvts69"> &nbsp; &nbsp; * This method is called after a test is executed.</span></p>
+<p class="rvps9"><span class="rvts69"> &nbsp; &nbsp; */</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts61">protected </span><span class="rvts55">function</span><span class="rvts57"> tearDown() {</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts69">/**</span></p>
+<p class="rvps9"><span class="rvts69"> &nbsp; &nbsp; * @covers Calculator::add</span></p>
+<p class="rvps9"><span class="rvts69"> &nbsp; &nbsp; * </span><span class="rvts70">@todo</span><span class="rvts69"> &nbsp; Implement testAdd().</span></p>
+<p class="rvps9"><span class="rvts69"> &nbsp; &nbsp; */</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;</span><span class="rvts58">public </span><span class="rvts55">function</span><span class="rvts57"> testAdd() {</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts72">$actual = $this-&gt;</span><span class="rvts73">object</span><span class="rvts72">-&gt;add(2, 2);</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts72">$result = 4;</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts72">$this-&gt;assertEquals($result, $actual);</span></p>
+<p class="rvps9"><span class="rvts57"> &nbsp; &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts57">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">11. Запустите тест нажатием Shift+F6 или через контекстное меню</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem55.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Тест пройден успешно</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem54.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">iPhone web sites made easy</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

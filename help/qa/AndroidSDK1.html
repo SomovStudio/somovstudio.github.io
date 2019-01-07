@@ -1,0 +1,148 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Установка и настройка Android SDK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("AndroidSDK1");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Установка и настройка Android SDK</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="ADBandroidSDK.html">ADB (android SDK)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="ADBandroidSDK.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="ADBandroidSDK.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts75">Нужно установить среду разработки Android Studio со встроенным SDK. </span></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps3"><a class="rvts78" href="https://developer.android.com/studio/" target="_blank">https://developer.android.com/studio/</a></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps3"><span class="rvts75">Для работы Android SDK понадобится Java SE Development Kit (JDK) версией 1.8</span></p>
+<p class="rvps3"><a class="rvts76" href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p>
+<p class="rvps3"><img width="536" height="264" alt="" style="padding : 1px;" src="lib/NewItem68.png"></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps3"><img width="512" height="393" alt="" style="padding : 1px;" src="lib/NewItem67.png"></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps3"><span class="rvts75">После того как SDK будет установлено нужно запустить Android SDK Manager по адресу: </span><span class="rvts79">C:\Program Files (x86)\Android\android-sdk</span></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps3"><span class="rvts75">Далее необходимо установить Android SDK Tools, Android SDK Platform-tools и Android SDK Build-tools и установить Android Support Library и </span><br/><span class="rvts75">Google USB Driver (пакет драйверов устройств)</span></p>
+<p class="rvps3"><span class="rvts75"></span><br/><img width="600" height="324" alt="" style="padding : 1px;" src="lib/NewItem66.png"></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps3"><img width="600" height="401" alt="" style="padding : 1px;" src="lib/NewItem65.png"></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps3"><span class="rvts75">Чтобы использование ADB было комфортным необходимо прописать адреса в системной переменной Path.</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside;">
+<li style="margin-left: 0px" class="rvps12"><span class="rvts75">открываем “свойства” компьютера</span></li>
+<li style="margin-left: 0px" class="rvps12"><span class="rvts75">переходим “Дополнительные параметры системы”</span></li>
+<li style="margin-left: 0px" class="rvps12"><span class="rvts75">в окне “Свойства системы” переходим в “Переменные среды...”</span></li>
+<li style="margin-left: 0px" class="rvps12"><span class="rvts75">в окне “Переменные среды” в разделе “Системные переменные” находим переменную Path. Нажимаем “Изменить” и в поле “Значение переменной” прописываем следующий путь: </span><br/><span class="rvts77">;C:\Program Files (x86)\Android\android-sdk\tools;C:\Program Files (x86)\Android\android-sdk\platform-tools;</span></li>
+<li style="margin-left: 0px" class="rvps12"><span class="rvts75">сохраняете изменения.</span></li>
+</ul>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem64.png"></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps3"><span class="rvts75">Теперь ADB доступно в командной строке без указания к нему пути.</span></p>
+<p class="rvps3"><img width="600" height="103" alt="" style="padding : 1px;" src="lib/NewItem63.png"></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -1,0 +1,148 @@
+﻿
+
+<html>
+	
+<head>
+	<title>JUnit (IntelliJ IDEA)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("JUnitIntelliJIDEA");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">JUnit (IntelliJ IDEA)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Unittesting.html">Unit testing (модульное тестирование)</a> &rsaquo;&rsaquo; <a href="JavaJUnit.html">Java (JUnit)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="JavaJUnit.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="JavaJUnit.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="PHPPHPUnit.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">JUnit (IntelliJ IDEA)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">1. Создайте новый проект Maven</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">2. Подключите в </span><span class="rvts51">pom.xml</span><span class="rvts8"> библиотеку JUnit</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps8"><span class="rvts27">&lt;dependencies&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;dependency&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;groupId&gt;</span><span class="rvts21">junit</span><span class="rvts27">&lt;/groupId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;artifactId&gt;</span><span class="rvts21">junit</span><span class="rvts27">&lt;/artifactId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;version&gt;</span><span class="rvts21">4.12</span><span class="rvts27">&lt;/version&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;scope&gt;</span><span class="rvts21">test</span><span class="rvts27">&lt;/scope&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;/dependency&gt;</span><br/><span class="rvts27">&lt;/dependencies&gt;</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">3. В папке </span><span class="rvts51">src\main\Java\ </span><span class="rvts8">создайте класс </span><span class="rvts51">SquareNumber.java</span><span class="rvts8"> и опишите простой класс</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps8"><span class="rvts20">public class </span><span class="rvts21">SquareNumber {</span><br/><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts20">public int </span><span class="rvts24">squareSum</span><span class="rvts21">(</span><span class="rvts20">int </span><span class="rvts21">n){</span><br/><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">return </span><span class="rvts21">n * n</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts21">}</span><br/><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">4. В папке </span><span class="rvts51">src\main\Java\</span><span class="rvts8"> создайте класс </span><span class="rvts51">Programm.java</span><span class="rvts8"> и опишите вызов класса </span><span class="rvts51">SquareNumber</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps8"><span class="rvts20">public class </span><span class="rvts21">Program {</span><br/><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts20">public static void </span><span class="rvts24">main</span><span class="rvts21">(String[] args){</span><br/><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;SquareNumber s = </span><span class="rvts20">new </span><span class="rvts21">SquareNumber()</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;int </span><span class="rvts21">result = s.squareSum(</span><span class="rvts49">25</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">System.</span><span class="rvts23">out</span><span class="rvts21">.println(result)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts21">}</span><br/><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Собирите билд через меню Build -&gt; Build project</span></p>
+<p class="rvps3"><span class="rvts8">Запустите проект через меню Run -&gt; Run</span></p>
+<p class="rvps3"><span class="rvts8">В консоли будет показан результат 625</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem53.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">5. В папке </span><span class="rvts51">src\test\Java\</span><span class="rvts8"> создайте класс</span><span class="rvts51"> Test.java</span><span class="rvts8"> в котором опишите тест класса </span><span class="rvts51">SquareNumber</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps8"><span class="rvts20">import static </span><span class="rvts21">org.junit.Assert.*</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20">public class </span><span class="rvts21">Test {</span><br/><span class="rvts21"></span><br/><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts22">@org.junit.Test</span><br/><span class="rvts22"> &nbsp; &nbsp;</span><span class="rvts20">public void </span><span class="rvts24">testSquare</span><span class="rvts21">(){</span><br/><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;SquareNumber s = </span><span class="rvts20">new </span><span class="rvts21">SquareNumber()</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;int </span><span class="rvts21">actual = s.squareSum(</span><span class="rvts49">25</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;int </span><span class="rvts21">expected = </span><span class="rvts49">625</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">assertEquals</span><span class="rvts21">(expected</span><span class="rvts20">, </span><span class="rvts21">actual)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts21">}</span><br/><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Выделите этот файл и откройте контекстное меню, далее нажмите пункт Run 'Test'</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Если всё будет корректно вы получите результат </span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem52.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Для проверки изменим ожидаемый результат, и в ходе проверки получим сообщение об ошибке</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem51.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Free help authoring environment</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

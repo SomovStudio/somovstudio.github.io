@@ -1,0 +1,182 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Выполнение теста в IntelliJ IDEA</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("IntelliJIDEA");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Выполнение теста в IntelliJ IDEA</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Automationtesting.html">Automation testing (автоматизированное тестирование)</a> &rsaquo;&rsaquo; <a href="AppiumUIAutomator.html">Appium (UI Automator)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="AppiumUIAutomator.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Appium1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="UiAutomator2.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Выполнение теста в IntelliJ IDEA</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Для выполения тестов используем Java и среду разработки IntelliJ IDEA</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Скачайте и установите IntelliJ IDEA который находится по адресу: </span><a class="rvts14" href="https://www.jetbrains.com/idea/" target="_blank">https://www.jetbrains.com/idea/</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">1. Создайте проект</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Нажмите на кнопку Create New Project</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem30.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Выберите Maven и укажите путь к JDK в поле Project SDK. Нажмите Next.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem29.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Укажите имя группы и артифакт, а так же версию. Нажмите Next.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem28.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Укажите имя проекта и путь где проект будет располагаться. Нажмите Finish.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem27.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Включите функцию Enable Auto-Import для автоматической подгрузки библиотек</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem26.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">2. Подключите библиотеки</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem25.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Описание файла pom.xml</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Информацию о Java Client можно получить по адресу: </span><a class="rvts14" href="http://mvnrepository.com/artifact/io.appium/java-client" target="_blank">http://mvnrepository.com/artifact/io.appium/java-client</a></p>
+<p class="rvps3"><span class="rvts8">Информацию о JUnit можно получить по адресу: </span><a class="rvts14" href="http://mvnrepository.com/artifact/junit/junit" target="_blank">http://mvnrepository.com/artifact/junit/junit</a></p>
+<p class="rvps3"><span class="rvts8">Информацию о Selenium Java можно получить по адресу: </span><a class="rvts14" href="http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java" target="_blank">http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps8"><span class="rvts27">&lt;?</span><span class="rvts28">xml version=</span><span class="rvts26">"1.0" </span><span class="rvts28">encoding=</span><span class="rvts26">"UTF-8"</span><span class="rvts27">?&gt;</span><br/><span class="rvts27">&lt;project </span><span class="rvts28">xmlns=</span><span class="rvts26">"http://maven.apache.org/POM/4.0.0"</span><br/><span class="rvts26"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts28">xmlns:</span><span class="rvts29">xsi</span><span class="rvts28">=</span><span class="rvts26">"http://www.w3.org/2001/XMLSchema-instance"</span><br/><span class="rvts26"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts29">xsi</span><span class="rvts28">:schemaLocation=</span><span class="rvts26">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span><span class="rvts27">&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;modelVersion&gt;</span><span class="rvts21">4.0.0</span><span class="rvts27">&lt;/modelVersion&gt;</span><br/><span class="rvts27"></span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;groupId&gt;</span><span class="rvts21">com.somov</span><span class="rvts27">&lt;/groupId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;artifactId&gt;</span><span class="rvts21">test-appium</span><span class="rvts27">&lt;/artifactId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;version&gt;</span><span class="rvts21">1.0-SNAPSHOT</span><span class="rvts27">&lt;/version&gt;</span><br/><span class="rvts27"></span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;build&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;pluginManagement&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;plugins&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;plugin&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;groupId&gt;</span><span class="rvts21">org.apache.maven.plugins</span><span class="rvts27">&lt;/groupId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;artifactId&gt;</span><span class="rvts21">maven-compiler-plugin</span><span class="rvts27">&lt;/artifactId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;configuration&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;source&gt;</span><span class="rvts21">1.8</span><span class="rvts27">&lt;/source&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;target&gt;</span><span class="rvts21">1.8</span><span class="rvts27">&lt;/target&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/configuration&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/plugin&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/plugins&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/pluginManagement&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;/build&gt;</span><br/><span class="rvts27"></span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;dependencies&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;dependency&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;groupId&gt;</span><span class="rvts21">junit</span><span class="rvts27">&lt;/groupId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;artifactId&gt;</span><span class="rvts21">junit</span><span class="rvts27">&lt;/artifactId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;version&gt;</span><span class="rvts21">4.12</span><span class="rvts27">&lt;/version&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/dependency&gt;</span><br/><span class="rvts27"></span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;dependency&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;groupId&gt;</span><span class="rvts21">org.seleniumhq.selenium</span><span class="rvts27">&lt;/groupId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;artifactId&gt;</span><span class="rvts21">selenium-java</span><span class="rvts27">&lt;/artifactId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;version&gt;</span><span class="rvts21">3.9.1</span><span class="rvts27">&lt;/version&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/dependency&gt;</span><br/><span class="rvts27"></span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;dependency&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;groupId&gt;</span><span class="rvts21">io.appium</span><span class="rvts27">&lt;/groupId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;artifactId&gt;</span><span class="rvts21">java-client</span><span class="rvts27">&lt;/artifactId&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;version&gt;</span><span class="rvts21">5.0.4</span><span class="rvts27">&lt;/version&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/dependency&gt;</span><br/><span class="rvts27"> &nbsp; &nbsp;&lt;/dependencies&gt;</span><br/><span class="rvts27"></span><br/><span class="rvts27">&lt;/project&gt;</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">3. Создайте скрипт выполняющий тестирование</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem24.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Описание файла MobileWebTest</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps8"><span class="rvts20">import </span><span class="rvts21">io.appium.java_client.AppiumDriver</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">io.appium.java_client.android.AndroidDriver</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">io.appium.java_client.remote.MobileCapabilityType</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">org.junit.Assert</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">org.junit.</span><span class="rvts22">Test</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">org.openqa.selenium.By</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">org.openqa.selenium.WebDriver</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">org.openqa.selenium.remote.DesiredCapabilities</span><span class="rvts20">;</span><br/><span class="rvts20">import </span><span class="rvts21">org.openqa.selenium.support.ui.WebDriverWait</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20">import </span><span class="rvts21">java.net.URL</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20">public class </span><span class="rvts21">MobileWebTest {</span><br/><span class="rvts21"></span><br/><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts22">@Test</span><br/><span class="rvts22"> &nbsp; &nbsp;</span><span class="rvts20">public void </span><span class="rvts24">testIncorrectFBLogin</span><span class="rvts21">() </span><span class="rvts20">throws </span><span class="rvts21">Exception{</span><br/><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;URL serverURL = </span><span class="rvts20">new </span><span class="rvts21">URL(</span><span class="rvts26">"http://127.0.0.1:4723/wd/hub"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">DesiredCapabilities capabilities = </span><span class="rvts20">new </span><span class="rvts21">DesiredCapabilities()</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">capabilities.setCapability(MobileCapabilityType.</span><span class="rvts23">PLATFORM_NAME</span><span class="rvts20">, </span><span class="rvts26">"Android"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">capabilities.setCapability(MobileCapabilityType.</span><span class="rvts23">PLATFORM_VERSION</span><span class="rvts20">, </span><span class="rvts26">"5"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">capabilities.setCapability(MobileCapabilityType.</span><span class="rvts23">DEVICE_NAME</span><span class="rvts20">, </span><span class="rvts26">"Nexus_7_2012_Android_5"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">capabilities.setCapability(MobileCapabilityType.</span><span class="rvts23">BROWSER_NAME</span><span class="rvts20">, </span><span class="rvts26">"Browser"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20"></span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">System.</span><span class="rvts23">out</span><span class="rvts21">.println(</span><span class="rvts26">"Step 1. Create new driver"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">AppiumDriver driver = </span><span class="rvts20">new </span><span class="rvts21">AndroidDriver(serverURL</span><span class="rvts20">, </span><span class="rvts21">capabilities)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">WebDriverWait wait = </span><span class="rvts20">new </span><span class="rvts21">WebDriverWait(driver</span><span class="rvts20">, </span><span class="rvts49">30</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">System.</span><span class="rvts23">out</span><span class="rvts21">.println(</span><span class="rvts26">"Step 2. Open website"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">driver.get(</span><span class="rvts26">"http://ek.ua/"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">System.</span><span class="rvts23">out</span><span class="rvts21">.println(</span><span class="rvts26">"Step 3. Enter search value"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">driver.findElement(By.</span><span class="rvts25">name</span><span class="rvts21">(</span><span class="rvts26">"search_"</span><span class="rvts21">)).sendKeys(</span><span class="rvts26">"GeForce"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">System.</span><span class="rvts23">out</span><span class="rvts21">.println(</span><span class="rvts26">"Step 4. Click Search button"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">driver.findElement(By.</span><span class="rvts25">name</span><span class="rvts21">(</span><span class="rvts26">"search_but_"</span><span class="rvts21">)).click()</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">Thread.</span><span class="rvts25">sleep</span><span class="rvts21">(</span><span class="rvts49">5000</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">System.</span><span class="rvts23">out</span><span class="rvts21">.println(</span><span class="rvts26">"Step 5. Check result"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">String expectedResult = </span><span class="rvts26">"Видеокарты NVIDIA (все модели) "</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">String actualResult = driver.findElement(By.</span><span class="rvts25">className</span><span class="rvts21">(</span><span class="rvts26">"t2"</span><span class="rvts21">)).getText()</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">Boolean resultCheck = driver.findElement(By.</span><span class="rvts25">className</span><span class="rvts21">(</span><span class="rvts26">"t2"</span><span class="rvts21">)).getText().contains(expectedResult)</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">System.</span><span class="rvts23">out</span><span class="rvts21">.println(</span><span class="rvts26">"Expected result: " </span><span class="rvts21">+ expectedResult)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">System.</span><span class="rvts23">out</span><span class="rvts21">.println(</span><span class="rvts26">"Actual result: " </span><span class="rvts21">+ actualResult)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">System.</span><span class="rvts23">out</span><span class="rvts21">.println(</span><span class="rvts26">"Check result: " </span><span class="rvts21">+ resultCheck)</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">Assert.</span><span class="rvts25">assertTrue</span><span class="rvts21">(driver.findElement(By.</span><span class="rvts25">className</span><span class="rvts21">(</span><span class="rvts26">"t2"</span><span class="rvts21">)).getText().contains(expectedResult))</span><span class="rvts20">;</span><br/><span class="rvts20"></span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">System.</span><span class="rvts23">out</span><span class="rvts21">.println(</span><span class="rvts26">"Step 6. Close driver"</span><span class="rvts21">)</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">driver.quit()</span><span class="rvts20">;</span><br/><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts21">}</span><br/><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">4. Запустите эмулятор</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Откройте консоль и перейдите в папку C:\Users\Cartish\AppData\Local\Android\tools\</span></p>
+<p class="rvps3"><span class="rvts8">Чтобы запустить нужное устройство введите команду: </span><span class="rvts13">emulator -avd Nexus_7_2012_Android_5</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem23.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">5. Запустите сервер Appium</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem22.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">6. Запустите тест</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem21.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Результат тестирования</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem20.png"></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2019 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
