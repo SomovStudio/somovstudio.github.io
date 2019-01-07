@@ -78,7 +78,7 @@
 				
 				
 				
-				<a href="FCLFrameworkClassLibrary.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="LINQ.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,26 +90,26 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts13">Обобщения</span></p>
+<p class="rvps2"><span class="rvts26">Обобщения</span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts8">обобщение - по существу, означает параметризированный тип</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Простой пример обобщения</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">Gen</span><span class="rvts14">&lt;</span><span class="rvts17">T</span><span class="rvts14">&gt;</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">T</span><span class="rvts14"> </span><span class="rvts28">_obj</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts17">Gen</span><span class="rvts14">(</span><span class="rvts17">T</span><span class="rvts14"> obj)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts28">_obj</span><span class="rvts14"> = obj;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts17">T</span><span class="rvts14"> </span><span class="rvts16">GetObj</span><span class="rvts14">()</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts29">return</span><span class="rvts14"> </span><span class="rvts28">_obj</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">ShowType</span><span class="rvts14">()</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"К типу Т относится "</span><span class="rvts14"> + </span><span class="rvts20">typeof</span><span class="rvts14">(</span><span class="rvts17">T</span><span class="rvts14">));</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
-<p class="rvps3"><span class="rvts41"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Пример использования</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts17">Gen</span><span class="rvts14">&lt;</span><span class="rvts21">int</span><span class="rvts14">&gt; iObj = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts17">Gen</span><span class="rvts14">&lt;</span><span class="rvts21">int</span><span class="rvts14">&gt;(</span><span class="rvts18">102</span><span class="rvts14">);</span><br/><span class="rvts14">iObj.</span><span class="rvts16">ShowType</span><span class="rvts14">();</span><br/><span class="rvts21">int</span><span class="rvts14"> i = iObj.</span><span class="rvts16">GetObj</span><span class="rvts14">();</span><br/><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Значение: "</span><span class="rvts14"> + i);</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">В результате:</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem281.png"></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps2"><span class="rvts6">обобщение - по существу, означает параметризированный тип</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Простой пример обобщения</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts36">class</span><span class="rvts27"> </span><span class="rvts30">Gen</span><span class="rvts27">&lt;</span><span class="rvts30">T</span><span class="rvts27">&gt;</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">T</span><span class="rvts27"> </span><span class="rvts41">_obj</span><span class="rvts27">;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts30">Gen</span><span class="rvts27">(</span><span class="rvts30">T</span><span class="rvts27"> obj)</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts41">_obj</span><span class="rvts27"> = obj;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts30">T</span><span class="rvts27"> </span><span class="rvts29">GetObj</span><span class="rvts27">()</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts42">return</span><span class="rvts27"> </span><span class="rvts41">_obj</span><span class="rvts27">;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts36">void</span><span class="rvts27"> </span><span class="rvts29">ShowType</span><span class="rvts27">()</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"К типу Т относится "</span><span class="rvts27"> + </span><span class="rvts33">typeof</span><span class="rvts27">(</span><span class="rvts30">T</span><span class="rvts27">));</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts54"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Пример использования</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts30">Gen</span><span class="rvts27">&lt;</span><span class="rvts34">int</span><span class="rvts27">&gt; iObj = </span><span class="rvts33">new</span><span class="rvts27"> </span><span class="rvts30">Gen</span><span class="rvts27">&lt;</span><span class="rvts34">int</span><span class="rvts27">&gt;(</span><span class="rvts31">102</span><span class="rvts27">);</span><br/><span class="rvts27">iObj.</span><span class="rvts29">ShowType</span><span class="rvts27">();</span><br/><span class="rvts34">int</span><span class="rvts27"> i = iObj.</span><span class="rvts29">GetObj</span><span class="rvts27">();</span><br/><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"Значение: "</span><span class="rvts27"> + i);</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">В результате:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem281.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
 <p></p>
-<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create PDF Help documents</a></p>
+<p class="rvps4" style="clear: both;"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="https://www.helpndoc.com/feature-tour">Easily create PDF Help documents</a></p>
 
 	</div>
 	

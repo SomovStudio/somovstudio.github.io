@@ -90,109 +90,109 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts13">Обработка исключений</span></p>
+<p class="rvps2"><span class="rvts26">Обработка исключений</span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">ExcDemo</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">indexOutOfRange</span><span class="rvts14">()</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">int</span><span class="rvts14">[] nums = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts21">int</span><span class="rvts14">[</span><span class="rvts18">2</span><span class="rvts14">];</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts54">try</span><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">for</span><span class="rvts14">(</span><span class="rvts21">int</span><span class="rvts14"> i = </span><span class="rvts18">0</span><span class="rvts14">; i &lt; </span><span class="rvts18">4</span><span class="rvts14">; i++)&nbsp;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nums[i] = i;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="rvts54">catch</span><span class="rvts14">(</span><span class="rvts17">IndexOutOfRangeException</span><span class="rvts14">) {</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Индекс вышел за границы массива!"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
-<p class="rvps3"><span class="rvts41"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Пример использования</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts17">ExcDemo</span><span class="rvts14">.</span><span class="rvts16">indexOutOfRange</span><span class="rvts14">();</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">В результате:</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem187.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts37">static</span><span class="rvts27"> </span><span class="rvts36">class</span><span class="rvts27"> </span><span class="rvts30">ExcDemo</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts37">static</span><span class="rvts27"> </span><span class="rvts36">void</span><span class="rvts27"> </span><span class="rvts29">indexOutOfRange</span><span class="rvts27">()</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts34">int</span><span class="rvts27">[] nums = </span><span class="rvts33">new</span><span class="rvts27"> </span><span class="rvts34">int</span><span class="rvts27">[</span><span class="rvts31">2</span><span class="rvts27">];</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts67">try</span><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">for</span><span class="rvts27">(</span><span class="rvts34">int</span><span class="rvts27"> i = </span><span class="rvts31">0</span><span class="rvts27">; i &lt; </span><span class="rvts31">4</span><span class="rvts27">; i++)&nbsp;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nums[i] = i;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="rvts67">catch</span><span class="rvts27">(</span><span class="rvts30">IndexOutOfRangeException</span><span class="rvts27">) {</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"Индекс вышел за границы массива!"</span><span class="rvts27">);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts54"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Пример использования</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts30">ExcDemo</span><span class="rvts27">.</span><span class="rvts29">indexOutOfRange</span><span class="rvts27">();</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">В результате:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem187.png"></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts56">Деление на ноль</span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
-<p class="rvps5"><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">ExcDemo</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">divideByZero</span><span class="rvts14">()</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">int</span><span class="rvts14"> zero = </span><span class="rvts18">0</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">int</span><span class="rvts14"> value = </span><span class="rvts18">0</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts54">try</span><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value = </span><span class="rvts18">15</span><span class="rvts14"> / zero;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="rvts54">catch</span><span class="rvts14">(</span><span class="rvts17">DivideByZeroException</span><span class="rvts14">) {</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Делить на нуль нельзя!"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Пример использования</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts17">ExcDemo</span><span class="rvts14">.</span><span class="rvts16">divideByZero</span><span class="rvts14">();</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">В результате:</span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
-<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem188.png"></p>
+<p class="rvps2"><span class="rvts69">Деление на ноль</span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
+<p class="rvps7"><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts37">static</span><span class="rvts27"> </span><span class="rvts36">class</span><span class="rvts27"> </span><span class="rvts30">ExcDemo</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts37">static</span><span class="rvts27"> </span><span class="rvts36">void</span><span class="rvts27"> </span><span class="rvts29">divideByZero</span><span class="rvts27">()</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts34">int</span><span class="rvts27"> zero = </span><span class="rvts31">0</span><span class="rvts27">;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts34">int</span><span class="rvts27"> value = </span><span class="rvts31">0</span><span class="rvts27">;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts67">try</span><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value = </span><span class="rvts31">15</span><span class="rvts27"> / zero;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="rvts67">catch</span><span class="rvts27">(</span><span class="rvts30">DivideByZeroException</span><span class="rvts27">) {</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"Делить на нуль нельзя!"</span><span class="rvts27">);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Пример использования</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts30">ExcDemo</span><span class="rvts27">.</span><span class="rvts29">divideByZero</span><span class="rvts27">();</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">В результате:</span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem188.png"></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts56">Перехват любых ошибок</span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
-<p class="rvps5"><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">ExcDemo</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">testExc</span><span class="rvts14">()</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">int</span><span class="rvts14"> zero = </span><span class="rvts18">0</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts21">int</span><span class="rvts14"> value = </span><span class="rvts18">0</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts57">try</span><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value = </span><span class="rvts18">15</span><span class="rvts14"> / zero;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="rvts57">catch</span><span class="rvts14">(</span><span class="rvts35">Exception</span><span class="rvts31"> ex</span><span class="rvts14">) {</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(ex);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Пример использования</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts17">ExcDemo</span><span class="rvts14">.</span><span class="rvts16">testExc</span><span class="rvts14">();</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">В результате:</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem189.png"></p>
+<p class="rvps2"><span class="rvts69">Перехват любых ошибок</span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
+<p class="rvps7"><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts37">static</span><span class="rvts27"> </span><span class="rvts36">class</span><span class="rvts27"> </span><span class="rvts30">ExcDemo</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts37">static</span><span class="rvts27"> </span><span class="rvts36">void</span><span class="rvts27"> </span><span class="rvts29">testExc</span><span class="rvts27">()</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts34">int</span><span class="rvts27"> zero = </span><span class="rvts31">0</span><span class="rvts27">;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts34">int</span><span class="rvts27"> value = </span><span class="rvts31">0</span><span class="rvts27">;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts70">try</span><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value = </span><span class="rvts31">15</span><span class="rvts27"> / zero;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="rvts70">catch</span><span class="rvts27">(</span><span class="rvts48">Exception</span><span class="rvts44"> ex</span><span class="rvts27">) {</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(ex);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Пример использования</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts30">ExcDemo</span><span class="rvts27">.</span><span class="rvts29">testExc</span><span class="rvts27">();</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">В результате:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem189.png"></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts56">Генерирование исключений в ручную</span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
-<p class="rvps5"><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">ExcDemo</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">divideByZero</span><span class="rvts14">()</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts57">try</span><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts54">throw</span><span class="rvts31"> </span><span class="rvts48">new</span><span class="rvts31"> </span><span class="rvts35">DivideByZeroException</span><span class="rvts31">();</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="rvts57">catch</span><span class="rvts14">(</span><span class="rvts17">DivideByZeroException</span><span class="rvts14">) {</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Делить на нуль нельзя!"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
-<p class="rvps3"><span class="rvts41"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Пример использования</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts17">ExcDemo</span><span class="rvts14">.</span><span class="rvts16">divideByZero</span><span class="rvts14">();</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">В результате:</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem190.png"></p>
+<p class="rvps2"><span class="rvts69">Генерирование исключений в ручную</span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
+<p class="rvps7"><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts37">static</span><span class="rvts27"> </span><span class="rvts36">class</span><span class="rvts27"> </span><span class="rvts30">ExcDemo</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts37">static</span><span class="rvts27"> </span><span class="rvts36">void</span><span class="rvts27"> </span><span class="rvts29">divideByZero</span><span class="rvts27">()</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts70">try</span><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts67">throw</span><span class="rvts44"> </span><span class="rvts61">new</span><span class="rvts44"> </span><span class="rvts48">DivideByZeroException</span><span class="rvts44">();</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="rvts70">catch</span><span class="rvts27">(</span><span class="rvts30">DivideByZeroException</span><span class="rvts27">) {</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"Делить на нуль нельзя!"</span><span class="rvts27">);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts54"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Пример использования</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts30">ExcDemo</span><span class="rvts27">.</span><span class="rvts29">divideByZero</span><span class="rvts27">();</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">В результате:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem190.png"></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts13">Финализация после исключения</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">ExcDemo</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts24">static</span><span class="rvts14"> </span><span class="rvts23">void</span><span class="rvts14"> </span><span class="rvts16">divideByZero</span><span class="rvts14">()</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts57">try</span><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts57">throw</span><span class="rvts14"> </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts17">DivideByZeroException</span><span class="rvts14">();</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="rvts57">catch</span><span class="rvts14">(</span><span class="rvts17">DivideByZeroException</span><span class="rvts14">) {</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Делить на нуль нельзя!"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="rvts54">finally</span><span class="rvts14"> {</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Финализация"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Пример использования</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts17">ExcDemo</span><span class="rvts14">.</span><span class="rvts16">divideByZero</span><span class="rvts14">();</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">В результате:</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem191.png"></p>
+<p class="rvps2"><span class="rvts26">Финализация после исключения</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts37">static</span><span class="rvts27"> </span><span class="rvts36">class</span><span class="rvts27"> </span><span class="rvts30">ExcDemo</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts37">static</span><span class="rvts27"> </span><span class="rvts36">void</span><span class="rvts27"> </span><span class="rvts29">divideByZero</span><span class="rvts27">()</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts70">try</span><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts70">throw</span><span class="rvts27"> </span><span class="rvts33">new</span><span class="rvts27"> </span><span class="rvts30">DivideByZeroException</span><span class="rvts27">();</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="rvts70">catch</span><span class="rvts27">(</span><span class="rvts30">DivideByZeroException</span><span class="rvts27">) {</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"Делить на нуль нельзя!"</span><span class="rvts27">);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="rvts67">finally</span><span class="rvts27"> {</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"Финализация"</span><span class="rvts27">);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Пример использования</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts30">ExcDemo</span><span class="rvts27">.</span><span class="rvts29">divideByZero</span><span class="rvts27">();</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">В результате:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem191.png"></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts13">Наиболее часто используемые исключения</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts34">ArrayTypeMismatchException</span><span class="rvts8"> - &nbsp;Тип сохраняемого значения несовместим с типом массива</span></p>
-<p class="rvps3"><span class="rvts34"><br/></span></p>
-<p class="rvps3"><span class="rvts34">DivideByZeroException</span><span class="rvts8"> - &nbsp;Попытка деления на нуль</span></p>
-<p class="rvps3"><span class="rvts34"><br/></span></p>
-<p class="rvps3"><span class="rvts34">IndexOutOfRangeException</span><span class="rvts8"> - Индекс оказался за границами массива</span></p>
-<p class="rvps3"><span class="rvts34"><br/></span></p>
-<p class="rvps3"><span class="rvts34">InvalidCastException</span><span class="rvts8"> - Неверно выполнено динамическое приведение типов</span></p>
-<p class="rvps3"><span class="rvts34"><br/></span></p>
-<p class="rvps3"><span class="rvts34">OutOfMemoryException</span><span class="rvts8"> - Недостаточно свободной памяти для дальнейшего выполнения программы. Это исключение может быть, например, сгенерировано, если для создания объекта с помощью оператора new не хватает памяти</span></p>
-<p class="rvps3"><span class="rvts34"><br/></span></p>
-<p class="rvps3"><span class="rvts34">OverflowException</span><span class="rvts8"> - Произошло арифметическое переполнение</span></p>
-<p class="rvps3"><span class="rvts34"><br/></span></p>
-<p class="rvps3"><span class="rvts34">NullReferenceException</span><span class="rvts8"> - Попытка использовать пустую ссылку, т.е. ссылку, которая не указывает ни на один из объектов</span></p>
+<p class="rvps2"><span class="rvts26">Наиболее часто используемые исключения</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts47">ArrayTypeMismatchException</span><span class="rvts6"> - &nbsp;Тип сохраняемого значения несовместим с типом массива</span></p>
+<p class="rvps2"><span class="rvts47"><br/></span></p>
+<p class="rvps2"><span class="rvts47">DivideByZeroException</span><span class="rvts6"> - &nbsp;Попытка деления на нуль</span></p>
+<p class="rvps2"><span class="rvts47"><br/></span></p>
+<p class="rvps2"><span class="rvts47">IndexOutOfRangeException</span><span class="rvts6"> - Индекс оказался за границами массива</span></p>
+<p class="rvps2"><span class="rvts47"><br/></span></p>
+<p class="rvps2"><span class="rvts47">InvalidCastException</span><span class="rvts6"> - Неверно выполнено динамическое приведение типов</span></p>
+<p class="rvps2"><span class="rvts47"><br/></span></p>
+<p class="rvps2"><span class="rvts47">OutOfMemoryException</span><span class="rvts6"> - Недостаточно свободной памяти для дальнейшего выполнения программы. Это исключение может быть, например, сгенерировано, если для создания объекта с помощью оператора new не хватает памяти</span></p>
+<p class="rvps2"><span class="rvts47"><br/></span></p>
+<p class="rvps2"><span class="rvts47">OverflowException</span><span class="rvts6"> - Произошло арифметическое переполнение</span></p>
+<p class="rvps2"><span class="rvts47"><br/></span></p>
+<p class="rvps2"><span class="rvts47">NullReferenceException</span><span class="rvts6"> - Попытка использовать пустую ссылку, т.е. ссылку, которая не указывает ни на один из объектов</span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts13">Проверка переполнения в арифметических вычислениях</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">checked - проверять</span></p>
-<p class="rvps3"><span class="rvts8">unchecked - не проверять</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts21">byte</span><span class="rvts14"> a, b;</span><br/><span class="rvts21">byte</span><span class="rvts14"> result;</span><br/><span class="rvts14">a = </span><span class="rvts18">127</span><span class="rvts14">;</span><br/><span class="rvts14">b = </span><span class="rvts18">127</span><span class="rvts14">;</span><br/><span class="rvts57">try</span><span class="rvts14"> {</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;result = </span><span class="rvts58">unchecked</span><span class="rvts14">((</span><span class="rvts21">byte</span><span class="rvts14">)(a * b));</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Непроверенный на переполнение результат: "</span><span class="rvts14"> +&nbsp;&nbsp;&nbsp;&nbsp;result);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;result = </span><span class="rvts58">checked</span><span class="rvts14">((</span><span class="rvts21">byte</span><span class="rvts14">)(a * b)); </span><span class="rvts26">// эта операция приводит к</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts26">// исключительной ситуации</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"Проверенный на переполнение результат: "</span><span class="rvts14"> + result); </span><span class="rvts26">//не подлежит выполнению</span><br/><span class="rvts14">}</span><br/><span class="rvts57">catch</span><span class="rvts14"> (</span><span class="rvts17">OverflowException</span><span class="rvts14"> exc)&nbsp;</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(exc);</span><br/><span class="rvts14">}</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">В результате:</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem192.png"></p>
-<p class="rvps3"><span class="rvts13"><br/></span></p>
-<p class="rvps3"><span class="rvts13"><br/></span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
-<p class="rvps3"><span class="rvts55"><br/></span></p>
+<p class="rvps2"><span class="rvts26">Проверка переполнения в арифметических вычислениях</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">checked - проверять</span></p>
+<p class="rvps2"><span class="rvts6">unchecked - не проверять</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts34">byte</span><span class="rvts27"> a, b;</span><br/><span class="rvts34">byte</span><span class="rvts27"> result;</span><br/><span class="rvts27">a = </span><span class="rvts31">127</span><span class="rvts27">;</span><br/><span class="rvts27">b = </span><span class="rvts31">127</span><span class="rvts27">;</span><br/><span class="rvts70">try</span><span class="rvts27"> {</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;result = </span><span class="rvts71">unchecked</span><span class="rvts27">((</span><span class="rvts34">byte</span><span class="rvts27">)(a * b));</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"Непроверенный на переполнение результат: "</span><span class="rvts27"> +&nbsp;&nbsp;&nbsp;&nbsp;result);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;result = </span><span class="rvts71">checked</span><span class="rvts27">((</span><span class="rvts34">byte</span><span class="rvts27">)(a * b)); </span><span class="rvts39">// эта операция приводит к</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts39">// исключительной ситуации</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"Проверенный на переполнение результат: "</span><span class="rvts27"> + result); </span><span class="rvts39">//не подлежит выполнению</span><br/><span class="rvts27">}</span><br/><span class="rvts70">catch</span><span class="rvts27"> (</span><span class="rvts30">OverflowException</span><span class="rvts27"> exc)&nbsp;</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(exc);</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">В результате:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem192.png"></p>
+<p class="rvps2"><span class="rvts26"><br/></span></p>
+<p class="rvps2"><span class="rvts26"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
+<p class="rvps2"><span class="rvts68"><br/></span></p>
 <p></p>
-<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Free EPub producer</a></p>
+<p class="rvps4" style="clear: both;"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="https://www.helpndoc.com/create-epub-ebooks">Free EPub producer</a></p>
 
 	</div>
 	

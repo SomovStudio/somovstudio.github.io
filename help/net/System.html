@@ -1,0 +1,168 @@
+﻿
+
+<html>
+	
+<head>
+	<title>System</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("System");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">System</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="FCLFrameworkClassLibrary.html">FCL (Framework Class Library)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="FCLFrameworkClassLibrary.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="FCLFrameworkClassLibrary.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="C.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts15">Base Class Library,</span><span class="rvts16">&nbsp;или так называемая .NET&nbsp;FCL&nbsp;(англ.&nbsp;</span><span class="rvts18">Framework Class Library</span><span class="rvts16">), сокращённо&nbsp;</span><span class="rvts18">BCL</span><span class="rvts16">&nbsp;— стандартная библиотека классов платформы «</span><a class="rvts17" href="https://ru.wikipedia.org/wiki/.NET_Framework">.NET Framework</a><span class="rvts16">». Программы, написанные на любом из языков, поддерживающих платформу .NET, могут пользоваться классами и методами BCL&nbsp;— создавать объекты классов, вызывать их методы, наследовать необходимые классы BCL и&nbsp;т.&nbsp;д.</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts19">System&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Наиболее важное&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/Namespace">пространство имён</a><span class="rvts11">. Включает в себя все примитивные типы языка&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/CSharp">C#</a><span class="rvts11">: «пустой» тип Void, знаковые и беззнаковые целочисленные типы (например, Int32), типы чисел с плавающей запятой одинарной и двойной точности (Single, Double), «финансовый» тип Decimal, логический тип&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%9B%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D0%B8%D0%BF">Boolean</a><span class="rvts11">, символьный и строковый типы Char и&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%80%D0%BE%D0%BA%D0%BE%D0%B2%D1%8B%D0%B9_%D1%82%D0%B8%D0%BF">String</a><span class="rvts11">, а также, например, тип DateTime и другие. Обеспечивает также необходимым набором инструментов для работы с консолью, математическими функциями, и базовыми классами для атрибутов,&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0_%D0%B8%D1%81%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B9">исключений</a><span class="rvts11">&nbsp;и&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%81%D1%81%D0%B8%D0%B2_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)">массивов</a><span class="rvts11">.</span></p>
+<p class="rvps5"><span class="rvts19">System.CodeDom&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Обеспечивает возможность создавать код и запускать его.</span><a class="rvts20" href="https://ru.wikipedia.org/wiki/Base_Class_Library#cite_note-1">[1]</a></p>
+<p class="rvps5"><span class="rvts19">System.Collections&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Определяет множество общих&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)">контейнеров</a><span class="rvts11">&nbsp;или&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)">коллекций</a><span class="rvts11">, используемых в программировании&nbsp;— такие как&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_(%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0)">список</a><span class="rvts11">,&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)">очередь</a><span class="rvts11">,&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B5%D0%BA">стек</a><span class="rvts11">,&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%A5%D0%B5%D1%88-%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0">хеш-таблица</a><span class="rvts11">&nbsp;и некоторые другие. Также включена поддержка&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D0%BE%D0%B1%D1%89%D1%91%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">обобщений</a><span class="rvts11">&nbsp;(Generics).</span></p>
+<p class="rvps5"><span class="rvts19">System.ComponentModel&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Обеспечивает возможность реализовывать поведение компонентов в режимах run-time и design-time. Содержит инфраструктуру «для реализации атрибутов и преобразования типов, связывания с источниками данных и лицензированными компонентами».</span><a class="rvts20" href="https://ru.wikipedia.org/wiki/Base_Class_Library#cite_note-2">[2]</a></p>
+<p class="rvps5"><span class="rvts19">System.Configuration&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Содержит компоненты для управления конфигурационными данными.</span></p>
+<p class="rvps5"><span class="rvts19">System.Data&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Это&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/Namespace">пространство имён</a><span class="rvts11">&nbsp;представляет архитектуру&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/ADO.NET">ADO.NET</a><span class="rvts11">, являющуюся набором программных компонентов, которые могут быть использованы для доступа к данным и для обслуживания данных.</span></p>
+<p class="rvps5"><span class="rvts19">System.Deployment&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Позволяет настроить способ обновления приложения с использованием технологии&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/ClickOnce">ClickOnce</a><span class="rvts11">.</span></p>
+<p class="rvps5"><span class="rvts19">System.Diagnostics&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Предоставляет возможность диагностировать разрабатываемое приложение. Включает журнал событий, счётчики производительности, трассировку и взаимодействие с системными процессами.</span></p>
+<p class="rvps5"><span class="rvts19">System.DirectoryServices&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Обеспечивает лёгкий доступ к&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/Active_Directory">Active Directory</a><span class="rvts11">&nbsp;из&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D0%B5%D0%BC%D1%8B%D0%B9_%D0%BA%D0%BE%D0%B4">управляемого кода</a><span class="rvts11">.</span></p>
+<p class="rvps5"><span class="rvts19">System.Drawing&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Предоставляет доступ к&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/GDI">GDI+</a><span class="rvts11">, включая поддержку для 2D растровой и векторной графики, изображений, печати и работы с текстом.</span></p>
+<p class="rvps5"><span class="rvts19">System.Globalization&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Предоставляет помощь для написания интернационализированных приложений. Может быть определена информация, связанная с культурой, включая язык, страну/регион, календарь, шаблоны формата даты, валюты и цифр.</span><a class="rvts20" href="https://ru.wikipedia.org/wiki/Base_Class_Library#cite_note-3">[3]</a></p>
+<p class="rvps5"><span class="rvts19">System.IO&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Позволяет осуществлять считывание и запись в различные&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%82%D0%BE%D0%BA_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85">потоки</a><span class="rvts11">, такие как файлы и другие потоки данных. Также обеспечивает взаимодействие с&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0">файловой системой</a><span class="rvts11">.</span></p>
+<p class="rvps5"><span class="rvts19">System.Management&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Предоставляет средства для запроса информации, такой как количество свободного места на диске, информация о&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/CPU">процессоре</a><span class="rvts11">, к какой&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%B7%D0%B0_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85">базе данных</a><span class="rvts11">&nbsp;подключено определённое приложение, и многое другое.</span><a class="rvts20" href="https://ru.wikipedia.org/wiki/Base_Class_Library#cite_note-4">[4]</a></p>
+<p class="rvps5"><span class="rvts19">System.Media&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Позволяет проигрывать системные звуки и файлы в формате .wav.</span></p>
+<p class="rvps5"><span class="rvts19">System.Messaging&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Позволяет отображать и управлять очередью сообщений в сети, а также отсылать, принимать и просматривать сообщения.</span><a class="rvts20" href="https://ru.wikipedia.org/wiki/Base_Class_Library#cite_note-5">[5]</a><span class="rvts11">&nbsp;Другое имя для некоторых предоставленных функциональностей&nbsp;—&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/.Net_Remoting">.Net Remoting</a><span class="rvts11">. Это пространство имён заменено&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/Windows_Communication_Foundation">Windows Communication Foundation</a><span class="rvts11">.</span></p>
+<p class="rvps5"><span class="rvts19">System.Net&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Предоставляет интерфейс для многих протоколов, используемых в сетях в настоящее время,</span><a class="rvts20" href="https://ru.wikipedia.org/wiki/Base_Class_Library#cite_note-6">[6]</a><span class="rvts11">&nbsp;таких как&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/HTTP">HTTP</a><span class="rvts11">,&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/FTP">FTP</a><span class="rvts11">, и&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/SMTP">SMTP</a><span class="rvts11">. Безопасность общения поддерживается протоколами наподобие&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/Secure_Sockets_Layer">SSL</a><span class="rvts11">.</span></p>
+<p class="rvps5"><span class="rvts19">System.</span><a class="rvts24" href="https://ru.wikipedia.org/wiki/Language_Integrated_Query">Linq</a></p>
+<p class="rvps6"><span class="rvts11">Определяет интерфейс&nbsp;</span><span class="rvts23">IQueryable&lt;T&gt;</span><span class="rvts11">&nbsp;и связанные с ним методы, которые позволяют подключать провайдеры&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/Language_Integrated_Query">LINQ</a><span class="rvts11">.</span></p>
+<p class="rvps5"><span class="rvts19">System.Linq.Expressions</span></p>
+<p class="rvps6"><span class="rvts11">Позволяет&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%BB%D0%B5%D0%B3%D0%B0%D1%82_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)">делегатам</a><span class="rvts11">&nbsp;и&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%9B%D1%8F%D0%BC%D0%B1%D0%B4%D0%B0-%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F">лямбда-выражениям</a><span class="rvts11">&nbsp;быть представленными как&nbsp;</span><a class="rvts21" href="https://ru.wikipedia.org/w/index.php?title=%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D1%8F_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9&action=edit&redlink=1">деревья выражений</a><span class="rvts11">, так, что высокоуровневый код может быть просмотрен и обработан во время его выполнения.</span></p>
+<p class="rvps5"><span class="rvts19">System.Reflection&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Обеспечивает объектное представление типов, методов и свойств(полей). Предоставляет возможность динамически создавать и вызывать типы.</span><a class="rvts20" href="https://ru.wikipedia.org/wiki/Base_Class_Library#cite_note-7">[7]</a><span class="rvts11">&nbsp;Открывает&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/API">API</a><span class="rvts11">&nbsp;для доступа к возможностям&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%9E%D1%82%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)">рефлексивного программирования</a><span class="rvts11">&nbsp;в&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/CLR">CLR</a><span class="rvts11">.</span></p>
+<p class="rvps5"><span class="rvts19">System.Resources&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Позволяет управлять различными ресурсами в приложении, используемых, в частности, для интернационализации приложения на разных языках.</span></p>
+<p class="rvps5"><span class="rvts19">System.Runtime&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Позволяет управлять поведением приложения или&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/Common_Language_Runtime">CLR</a><span class="rvts11">&nbsp;в режиме&nbsp;</span><a class="rvts21" href="https://ru.wikipedia.org/w/index.php?title=Run-time&action=edit&redlink=1">Run-time</a><span class="rvts11">. Некоторые из включённых возможностей взаимодействуют с&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/Component_Object_Model">COM</a><span class="rvts11">,&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F">сериализированными</a><span class="rvts11">&nbsp;объектами внутри&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D1%8B%D0%B9_%D1%84%D0%B0%D0%B9%D0%BB">двоичного файла</a><span class="rvts11">&nbsp;или&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/SOAP">SOAP</a><span class="rvts11">.</span></p>
+<p class="rvps5"><span class="rvts19">System.Security&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Предоставляет функциональности внутренней системы безопасности&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/CLR">CLR</a><span class="rvts11">.</span><a class="rvts20" href="https://ru.wikipedia.org/wiki/Base_Class_Library#cite_note-8">[8]</a><span class="rvts11">&nbsp;Это пространство имён позволяет разрабатывать модули безопасности для приложений, базирующиеся на политиках и разрешениях. Обеспечивает доступ к средствам&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F">криптографии</a><span class="rvts11">.</span></p>
+<p class="rvps5"><span class="rvts19">System.ServiceProcess&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Позволяет создавать приложения, запускаемые как&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/Windows_Service">сервисы</a><span class="rvts11">&nbsp;в системе&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/Windows">Windows</a><span class="rvts11">.</span></p>
+<p class="rvps5"><span class="rvts19">System.Text&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Поддерживает различные кодировки,&nbsp;</span><a class="rvts22" href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F">регулярные выражения</a><span class="rvts11">, и другие полезные механизмы для работы со строками(класс&nbsp;</span><a class="rvts21" href="https://ru.wikipedia.org/w/index.php?title=StringBuilder&action=edit&redlink=1">StringBuilder</a><span class="rvts11">).</span></p>
+<p class="rvps5"><span class="rvts19">System.Threading&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Облегчает мультипотоковое программирование.</span><a class="rvts20" href="https://ru.wikipedia.org/wiki/Base_Class_Library#cite_note-9">[9]</a></p>
+<p class="rvps5"><span class="rvts19">System.Timers&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Позволяет вызвать событие через определённый интервал времени.</span><a class="rvts20" href="https://ru.wikipedia.org/wiki/Base_Class_Library#cite_note-10">[10]</a></p>
+<p class="rvps5"><span class="rvts19">System.Transactions&nbsp;</span></p>
+<p class="rvps6"><span class="rvts11">Обеспечивает поддержку локальных и распределённых транзакций.</span></p>
+<p></p>
+<p class="rvps4" style="clear: both;"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="https://www.helpndoc.com">Free PDF documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

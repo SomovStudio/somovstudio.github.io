@@ -1,0 +1,134 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Делегаты Func</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Func");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Делегаты Func</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="LINQ.html">LINQ</a> &rsaquo;&rsaquo; <a href="LINQtoObjects.html">LINQ to Objects</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="LINQtoObjects.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="IEnumerable.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic14.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts26">Делегаты Func</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts6">Синтаксис: </span></p>
+<p class="rvps7"><span class="rvts6">public delegate TR </span><span class="rvts26">Func</span><span class="rvts6">&lt;TR&gt;();</span></p>
+<p class="rvps7"><span class="rvts6">public delegate TR </span><span class="rvts26">Func</span><span class="rvts6">&lt;T0, TR&gt;(T0 a0);</span></p>
+<p class="rvps7"><span class="rvts6">public delegate TR </span><span class="rvts26">Func</span><span class="rvts6">&lt;T0, T1, TR&gt;(T0 a0, T1 a1);</span></p>
+<p class="rvps7"><span class="rvts6">public delegate TR </span><span class="rvts26">Func</span><span class="rvts6">&lt;T0, T1, T2, TR&gt;(T0 a0, T1 a1, T2 a2);</span></p>
+<p class="rvps7"><span class="rvts6">public delegate TR </span><span class="rvts26">Func</span><span class="rvts6">&lt;T0, T1, T2, T3, TR&gt;(T0 a0, T1 a1, T2 a2, T3 a3);</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Пример (используется лямбда-выражение):</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts34">int</span><span class="rvts27">[] numbers = {</span><span class="rvts31">1</span><span class="rvts27">,</span><span class="rvts31">5</span><span class="rvts27">,</span><span class="rvts31">10</span><span class="rvts27">,</span><span class="rvts31">15</span><span class="rvts27">,</span><span class="rvts31">20</span><span class="rvts27">,</span><span class="rvts31">25</span><span class="rvts27">};</span><br/><span class="rvts44">Func</span><span class="rvts27">&lt;</span><span class="rvts34">int</span><span class="rvts27">, </span><span class="rvts34">bool</span><span class="rvts27">&gt; MoreTen = n =&gt; n &gt; </span><span class="rvts31">10</span><span class="rvts27">;</span><br/><span class="rvts30">IEnumerable</span><span class="rvts27">&lt;</span><span class="rvts34">int</span><span class="rvts27">&gt; values = numbers.</span><span class="rvts29">Where</span><span class="rvts27">(MoreTen);</span><br/><span class="rvts38">foreach</span><span class="rvts27">(</span><span class="rvts34">int</span><span class="rvts27"> value </span><span class="rvts38">in</span><span class="rvts27"> values)</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"Func: "</span><span class="rvts27"> + value);</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Пример (используется делегат):</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts34">int</span><span class="rvts27">[] numbers = {</span><span class="rvts31">1</span><span class="rvts27">,</span><span class="rvts31">5</span><span class="rvts27">,</span><span class="rvts31">10</span><span class="rvts27">,</span><span class="rvts31">15</span><span class="rvts27">,</span><span class="rvts31">20</span><span class="rvts27">,</span><span class="rvts31">25</span><span class="rvts27">};</span><br/><span class="rvts44">Func</span><span class="rvts27">&lt;</span><span class="rvts34">int</span><span class="rvts27">, </span><span class="rvts34">bool</span><span class="rvts27">&gt; MoreTen = </span><span class="rvts36">delegate</span><span class="rvts27">(</span><span class="rvts34">int</span><span class="rvts27"> n) {&nbsp;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts42">return</span><span class="rvts27"> n &gt; </span><span class="rvts31">10</span><span class="rvts27">;&nbsp;</span><br/><span class="rvts27">};</span><br/><span class="rvts30">IEnumerable</span><span class="rvts27">&lt;</span><span class="rvts34">int</span><span class="rvts27">&gt; values = numbers.</span><span class="rvts29">Where</span><span class="rvts27">(MoreTen);</span><br/><span class="rvts38">foreach</span><span class="rvts27">(</span><span class="rvts34">int</span><span class="rvts27"> value </span><span class="rvts38">in</span><span class="rvts27"> values)</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"Func: "</span><span class="rvts27"> + value);</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">В результате:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem289.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps4" style="clear: both;"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Create iPhone web-based documentation</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

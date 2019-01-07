@@ -1,0 +1,152 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Список используемых методов расширения LINQ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("LINQ1");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Список используемых методов расширения LINQ</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="LINQ.html">LINQ</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="LINQ.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="LINQ.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic2.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps8"><span class="rvts0"><span class="rvts75">Список используемых методов расширения LINQ</span></span></h3>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 40px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps9"><span class="rvts76">Select</span><span class="rvts77">: определяет проекцию выбранных значений</span></li>
+<li class="rvps9"><span class="rvts76">Where</span><span class="rvts77">: определяет фильтр выборки</span></li>
+<li class="rvps9"><span class="rvts76">OrderBy</span><span class="rvts77">: упорядочивает элементы по возрастанию</span></li>
+<li class="rvps9"><span class="rvts76">OrderByDescending</span><span class="rvts77">: упорядочивает элементы по убыванию</span></li>
+<li class="rvps9"><span class="rvts76">ThenBy</span><span class="rvts77">: задает дополнительные критерии для упорядочивания элементов возрастанию</span></li>
+<li class="rvps9"><span class="rvts76">ThenByDescending</span><span class="rvts77">: задает дополнительные критерии для упорядочивания элементов по убыванию</span></li>
+<li class="rvps9"><span class="rvts76">Join</span><span class="rvts77">: соединяет две коллекции по определенному признаку</span></li>
+<li class="rvps9"><span class="rvts76">GroupBy</span><span class="rvts77">: группирует элементы по ключу</span></li>
+<li class="rvps9"><span class="rvts76">ToLookup</span><span class="rvts77">: группирует элементы по ключу, при этом все элементы добавляются в словарь</span></li>
+<li class="rvps9"><span class="rvts76">GroupJoin</span><span class="rvts77">: выполняет одновременно соединение коллекций и группировку элементов по ключу</span></li>
+<li class="rvps9"><span class="rvts76">Reverse</span><span class="rvts77">: располагает элементы в обратном порядке</span></li>
+<li class="rvps9"><span class="rvts76">All</span><span class="rvts77">: определяет, все ли элементы коллекции удовлятворяют определенному условию</span></li>
+<li class="rvps9"><span class="rvts76">Any</span><span class="rvts77">: определяет, удовлетворяет хотя бы один элемент коллекции определенному условию</span></li>
+<li class="rvps9"><span class="rvts76">Contains</span><span class="rvts77">: определяет, содержит ли коллекция определенный элемент</span></li>
+<li class="rvps9"><span class="rvts76">Distinct</span><span class="rvts77">: удаляет дублирующиеся элементы из коллекции</span></li>
+<li class="rvps9"><span class="rvts76">Except</span><span class="rvts77">: возвращает разность двух коллекцию, то есть те элементы, которые содератся только в одной коллекции</span></li>
+<li class="rvps9"><span class="rvts76">Union</span><span class="rvts77">: объединяет две однородные коллекции</span></li>
+<li class="rvps9"><span class="rvts76">Intersect</span><span class="rvts77">: возвращает пересечение двух коллекций, то есть те элементы, которые встречаются в обоих коллекциях</span></li>
+<li class="rvps9"><span class="rvts76">Count</span><span class="rvts77">: подсчитывает количество элементов коллекции, которые удовлетворяют определенному условию</span></li>
+<li class="rvps9"><span class="rvts76">Sum</span><span class="rvts77">: подсчитывает сумму числовых значений в коллекции</span></li>
+<li class="rvps9"><span class="rvts76">Average</span><span class="rvts77">: подсчитывает cреднее значение числовых значений в коллекции</span></li>
+<li class="rvps9"><span class="rvts76">Min</span><span class="rvts77">: находит минимальное значение</span></li>
+<li class="rvps9"><span class="rvts76">Max</span><span class="rvts77">: находит максимальное значение</span></li>
+<li class="rvps9"><span class="rvts76">Take</span><span class="rvts77">: выбирает определенное количество элементов</span></li>
+<li class="rvps9"><span class="rvts76">Skip</span><span class="rvts77">: пропускает определенное количество элементов</span></li>
+<li class="rvps9"><span class="rvts76">TakeWhile</span><span class="rvts77">: возвращает цепочку элементов последовательности, до тех пор, пока условие истинно</span></li>
+<li class="rvps9"><span class="rvts76">SkipWhile</span><span class="rvts77">: пропускает элементы в последовательности, пока они удовлетворяют заданному условию, и затем возвращает оставшиеся элементы</span></li>
+<li class="rvps9"><span class="rvts76">Concat</span><span class="rvts77">: объединяет две коллекции</span></li>
+<li class="rvps9"><span class="rvts76">Zip</span><span class="rvts77">: объединяет две коллекции в соответствии с определенным условием</span></li>
+<li class="rvps9"><span class="rvts76">First</span><span class="rvts77">: выбирает первый элемент коллекции</span></li>
+<li class="rvps9"><span class="rvts76">FirstOrDefault</span><span class="rvts77">: выбирает первый элемент коллекции или возвращает значение по умолчанию</span></li>
+<li class="rvps9"><span class="rvts76">Single</span><span class="rvts77">: выбирает единственный элемент коллекции, если коллекция содердит больше или меньше одного элемента, то генерируется исключение</span></li>
+<li class="rvps9"><span class="rvts76">SingleOrDefault</span><span class="rvts77">: выбирает первый элемент коллекции или возвращает значение по умолчанию</span></li>
+<li class="rvps9"><span class="rvts76">ElementAt</span><span class="rvts77">: выбирает элемент последовательности по определенному индексу</span></li>
+<li class="rvps9"><span class="rvts76">ElementAtOrDefault</span><span class="rvts77">: выбирает элемент коллекции по определенному индексу или возвращает значение по умолчанию, если индекс вне допустимого диапазона</span></li>
+<li class="rvps9"><span class="rvts76">Last</span><span class="rvts77">: выбирает последний элемент коллекции</span></li>
+<li class="rvps9"><span class="rvts76">LastOrDefault</span><span class="rvts77">: выбирает последний элемент коллекции или возвращает значение по умолчанию</span></li>
+</ul>
+<p></p>
+<p class="rvps4" style="clear: both;"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -90,54 +90,54 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts13">Строки</span></p>
+<p class="rvps2"><span class="rvts26">Строки</span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts8">Построение строк</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts23">string</span><span class="rvts14"> str = </span><span class="rvts15">"Строки в C# весьма эффективны"</span><span class="rvts14">;</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Строку можно создавать из массива символов char</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts21">char</span><span class="rvts14">[] chArray = { </span><span class="rvts22">'t'</span><span class="rvts14">,</span><span class="rvts22">'e'</span><span class="rvts14">,</span><span class="rvts22">'s'</span><span class="rvts14">,</span><span class="rvts22">'t'</span><span class="rvts14"> };</span><br/><span class="rvts23">string</span><span class="rvts14"> strTest = </span><span class="rvts20">new</span><span class="rvts14"> </span><span class="rvts23">string</span><span class="rvts14">(chArray);</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Обращение со строками</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts13">Compare</span><span class="rvts8"> - сравнение строк. Если строка strA меньше строки strB; положительное значение, если строка strA больше строки strВ; и нуль, если сравниваемые строки равны.)</span></p>
-<p class="rvps5"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts21">int</span><span class="rvts14"> resultCompare = </span><span class="rvts23">string</span><span class="rvts14">.</span><span class="rvts16">Compare</span><span class="rvts14">(strA, strB);</span></p>
-<p class="rvps5"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts13">Equals</span><span class="rvts8"> - сравнение строк. Возвращает логическое значение true, если вызывающая строка имеет такое же значение, как и у аргумента value. </span></p>
-<p class="rvps5"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts21">bool</span><span class="rvts14"> resultEquals = </span><span class="rvts23">string</span><span class="rvts14">.</span><span class="rvts16">Equals</span><span class="rvts14">(strA, strB);</span></p>
-<p class="rvps5"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts13">IndexOf</span><span class="rvts8"> - Осуществляет поиск в вызывающей строке первого вхождения символа, определяемого аргументом value. </span></p>
-<p class="rvps5"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts21">int</span><span class="rvts14"> resultIndex = strA.</span><span class="rvts16">IndexOf</span><span class="rvts14">(</span><span class="rvts22">'a'</span><span class="rvts14">);</span><br/><span class="rvts14">resultIndex = strB.</span><span class="rvts16">IndexOf</span><span class="rvts14">(</span><span class="rvts15">"b"</span><span class="rvts14">, </span><span class="rvts19">StringComparison</span><span class="rvts14">.</span><span class="rvts28">CurrentCulture</span><span class="rvts14">);</span></p>
-<p class="rvps5"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts13">LastIndexOf</span><span class="rvts8"> - Осуществляет поиск в вызывающей строке последнего вхождения символа, определяемого аргументом value. </span></p>
-<p class="rvps5"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts21">int</span><span class="rvts14"> resultLastIndex = strA.</span><span class="rvts16">LastIndexOf</span><span class="rvts14">(</span><span class="rvts22">'a'</span><span class="rvts14">);</span></p>
-<p class="rvps5"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts13">ToLower</span><span class="rvts8"> - Возвращает вариант вызывающей строки в нижнем регистре. </span></p>
-<p class="rvps5"><span class="rvts13">ToUpper</span><span class="rvts8"> - Возвращает вариант вызывающей строки в верхнем регистре. </span></p>
-<p class="rvps5"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts23">string</span><span class="rvts14"> resultString = strA.</span><span class="rvts16">ToLower</span><span class="rvts14">();</span><br/><span class="rvts14">resultString = strB.</span><span class="rvts16">ToUpper</span><span class="rvts14">();</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Массивы строк</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts23">string</span><span class="rvts14">[] strArray = { </span><span class="rvts15">"Hello"</span><span class="rvts14">, </span><span class="rvts15">" "</span><span class="rvts14">, </span><span class="rvts15">"World"</span><span class="rvts14">, </span><span class="rvts15">" "</span><span class="rvts14">, </span><span class="rvts15">"!!!"</span><span class="rvts14"> };</span><br/><span class="rvts25">foreach</span><span class="rvts14">(</span><span class="rvts23">string</span><span class="rvts14"> value </span><span class="rvts25">in</span><span class="rvts14"> strArray)</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">Write</span><span class="rvts14">(value);</span><br/><span class="rvts14">}</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Подстроки Substring</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts23">string</span><span class="rvts14"> orgstr = </span><span class="rvts15">"В C# упрощается обращение со строками."</span><span class="rvts14">;</span><br/><span class="rvts23">string</span><span class="rvts14"> substr = orgstr.</span><span class="rvts16">Substring</span><span class="rvts14">(</span><span class="rvts18">5</span><span class="rvts14">, </span><span class="rvts18">20</span><span class="rvts14">);</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Применение строк в операторах switch</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts23">string</span><span class="rvts14">[] strs = { </span><span class="rvts15">"один"</span><span class="rvts14">, </span><span class="rvts15">"два"</span><span class="rvts14">, </span><span class="rvts15">"три"</span><span class="rvts14"> };</span><br/><span class="rvts25">foreach</span><span class="rvts14">(</span><span class="rvts23">string</span><span class="rvts14"> value </span><span class="rvts25">in</span><span class="rvts14"> strs)</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">switch</span><span class="rvts14">(value) {</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">case</span><span class="rvts14"> </span><span class="rvts15">"один"</span><span class="rvts14">:</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"один"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts29">break</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">case</span><span class="rvts14"> </span><span class="rvts15">"два"</span><span class="rvts14">:</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"два"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts29">break</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">case</span><span class="rvts14"> </span><span class="rvts15">"три"</span><span class="rvts14">:</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(</span><span class="rvts15">"три"</span><span class="rvts14">);</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts29">break</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Построение строк</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts36">string</span><span class="rvts27"> str = </span><span class="rvts28">"Строки в C# весьма эффективны"</span><span class="rvts27">;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Строку можно создавать из массива символов char</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts34">char</span><span class="rvts27">[] chArray = { </span><span class="rvts35">'t'</span><span class="rvts27">,</span><span class="rvts35">'e'</span><span class="rvts27">,</span><span class="rvts35">'s'</span><span class="rvts27">,</span><span class="rvts35">'t'</span><span class="rvts27"> };</span><br/><span class="rvts36">string</span><span class="rvts27"> strTest = </span><span class="rvts33">new</span><span class="rvts27"> </span><span class="rvts36">string</span><span class="rvts27">(chArray);</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Обращение со строками</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts26">Compare</span><span class="rvts6"> - сравнение строк. Если строка strA меньше строки strB; положительное значение, если строка strA больше строки strВ; и нуль, если сравниваемые строки равны.)</span></p>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts34">int</span><span class="rvts27"> resultCompare = </span><span class="rvts36">string</span><span class="rvts27">.</span><span class="rvts29">Compare</span><span class="rvts27">(strA, strB);</span></p>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts26">Equals</span><span class="rvts6"> - сравнение строк. Возвращает логическое значение true, если вызывающая строка имеет такое же значение, как и у аргумента value. </span></p>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts34">bool</span><span class="rvts27"> resultEquals = </span><span class="rvts36">string</span><span class="rvts27">.</span><span class="rvts29">Equals</span><span class="rvts27">(strA, strB);</span></p>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts26">IndexOf</span><span class="rvts6"> - Осуществляет поиск в вызывающей строке первого вхождения символа, определяемого аргументом value. </span></p>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts34">int</span><span class="rvts27"> resultIndex = strA.</span><span class="rvts29">IndexOf</span><span class="rvts27">(</span><span class="rvts35">'a'</span><span class="rvts27">);</span><br/><span class="rvts27">resultIndex = strB.</span><span class="rvts29">IndexOf</span><span class="rvts27">(</span><span class="rvts28">"b"</span><span class="rvts27">, </span><span class="rvts32">StringComparison</span><span class="rvts27">.</span><span class="rvts41">CurrentCulture</span><span class="rvts27">);</span></p>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts26">LastIndexOf</span><span class="rvts6"> - Осуществляет поиск в вызывающей строке последнего вхождения символа, определяемого аргументом value. </span></p>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts34">int</span><span class="rvts27"> resultLastIndex = strA.</span><span class="rvts29">LastIndexOf</span><span class="rvts27">(</span><span class="rvts35">'a'</span><span class="rvts27">);</span></p>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts26">ToLower</span><span class="rvts6"> - Возвращает вариант вызывающей строки в нижнем регистре. </span></p>
+<p class="rvps7"><span class="rvts26">ToUpper</span><span class="rvts6"> - Возвращает вариант вызывающей строки в верхнем регистре. </span></p>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts36">string</span><span class="rvts27"> resultString = strA.</span><span class="rvts29">ToLower</span><span class="rvts27">();</span><br/><span class="rvts27">resultString = strB.</span><span class="rvts29">ToUpper</span><span class="rvts27">();</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Массивы строк</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts36">string</span><span class="rvts27">[] strArray = { </span><span class="rvts28">"Hello"</span><span class="rvts27">, </span><span class="rvts28">" "</span><span class="rvts27">, </span><span class="rvts28">"World"</span><span class="rvts27">, </span><span class="rvts28">" "</span><span class="rvts27">, </span><span class="rvts28">"!!!"</span><span class="rvts27"> };</span><br/><span class="rvts38">foreach</span><span class="rvts27">(</span><span class="rvts36">string</span><span class="rvts27"> value </span><span class="rvts38">in</span><span class="rvts27"> strArray)</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">Write</span><span class="rvts27">(value);</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Подстроки Substring</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts36">string</span><span class="rvts27"> orgstr = </span><span class="rvts28">"В C# упрощается обращение со строками."</span><span class="rvts27">;</span><br/><span class="rvts36">string</span><span class="rvts27"> substr = orgstr.</span><span class="rvts29">Substring</span><span class="rvts27">(</span><span class="rvts31">5</span><span class="rvts27">, </span><span class="rvts31">20</span><span class="rvts27">);</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Применение строк в операторах switch</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts36">string</span><span class="rvts27">[] strs = { </span><span class="rvts28">"один"</span><span class="rvts27">, </span><span class="rvts28">"два"</span><span class="rvts27">, </span><span class="rvts28">"три"</span><span class="rvts27"> };</span><br/><span class="rvts38">foreach</span><span class="rvts27">(</span><span class="rvts36">string</span><span class="rvts27"> value </span><span class="rvts38">in</span><span class="rvts27"> strs)</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">switch</span><span class="rvts27">(value) {</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">case</span><span class="rvts27"> </span><span class="rvts28">"один"</span><span class="rvts27">:</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"один"</span><span class="rvts27">);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts42">break</span><span class="rvts27">;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">case</span><span class="rvts27"> </span><span class="rvts28">"два"</span><span class="rvts27">:</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"два"</span><span class="rvts27">);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts42">break</span><span class="rvts27">;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">case</span><span class="rvts27"> </span><span class="rvts28">"три"</span><span class="rvts27">:</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(</span><span class="rvts28">"три"</span><span class="rvts27">);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts42">break</span><span class="rvts27">;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
 <p></p>
-<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create cross-platform Qt Help files</a></p>
+<p class="rvps4" style="clear: both;"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create cross-platform Qt Help files</a></p>
 
 	</div>
 	

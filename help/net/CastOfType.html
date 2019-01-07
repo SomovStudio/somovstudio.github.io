@@ -1,0 +1,124 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Операторы Cast и OfType для унаследования</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("CastOfType");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Операторы Cast и OfType для унаследования</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="LINQ.html">LINQ</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="LINQ.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic2.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="LINQtoObjects.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts26">Операторы Cast и OfType для унаследования</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts26">Cast</span><span class="rvts6"> - пытается привести все элементы в коллекции к указанному типу.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts26">OfType</span><span class="rvts6"> - в выходную последовательность будут помещены только те элементы, которые могут &nbsp;быть приведены к указанному типу.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts37">static</span><span class="rvts27"> </span><span class="rvts36">void</span><span class="rvts27"> </span><span class="rvts29">CastAndOfType</span><span class="rvts27">()</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">ArrayList</span><span class="rvts27"> arrayList = </span><span class="rvts33">new</span><span class="rvts27"> </span><span class="rvts30">ArrayList</span><span class="rvts27">();</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;arrayList.</span><span class="rvts29">Add</span><span class="rvts27">(</span><span class="rvts28">"Adams"</span><span class="rvts27">);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;arrayList.</span><span class="rvts29">Add</span><span class="rvts27">(</span><span class="rvts28">"Arthur"</span><span class="rvts27">);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;arrayList.</span><span class="rvts29">Add</span><span class="rvts27">(</span><span class="rvts28">"Buchanan"</span><span class="rvts27">);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">IEnumerable</span><span class="rvts27">&lt;</span><span class="rvts36">string</span><span class="rvts27">&gt; names1 = arrayList.</span><span class="rvts65">Cast</span><span class="rvts27">&lt;</span><span class="rvts36">string</span><span class="rvts27">&gt;().</span><span class="rvts29">Where</span><span class="rvts27">(n =&gt; n.Length &lt; </span><span class="rvts31">7</span><span class="rvts27">);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">foreach</span><span class="rvts27">(</span><span class="rvts36">string</span><span class="rvts27"> name </span><span class="rvts38">in</span><span class="rvts27"> names1)</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(name);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">IEnumerable</span><span class="rvts27">&lt;</span><span class="rvts36">string</span><span class="rvts27">&gt; names2 = arrayList.</span><span class="rvts65">OfType</span><span class="rvts27">&lt;</span><span class="rvts36">string</span><span class="rvts27">&gt;().</span><span class="rvts29">Where</span><span class="rvts27">(n =&gt; n.Length &lt; </span><span class="rvts31">7</span><span class="rvts27">);</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">foreach</span><span class="rvts27">(</span><span class="rvts36">string</span><span class="rvts27"> name </span><span class="rvts38">in</span><span class="rvts27"> names2)</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(name);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">В результате:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem287.png"></p>
+<p></p>
+<p class="rvps4" style="clear: both;"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="https://www.helpauthoringsoftware.com">Benefits of a Help Authoring Tool</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

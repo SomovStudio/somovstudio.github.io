@@ -90,31 +90,31 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts13">Атрибуты</span></p>
+<p class="rvps2"><span class="rvts26">Атрибуты</span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts8">В C# разрешается вводить в программу информацию декларативного характера в форме атрибута</span></p>
-<p class="rvps3"><span class="rvts8">Атрибут поддерживается классом, наследующим от класса System.Attribute.</span></p>
-<p class="rvps3"><span class="rvts8">Поэтому классы атрибутов должны быть подклассами класса Attribute. </span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Создание атрибута</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts14">[</span><span class="rvts35">AttributeUsage</span><span class="rvts14">(</span><span class="rvts19">AttributeTargets</span><span class="rvts14">.</span><span class="rvts28">All</span><span class="rvts14">)]</span><br/><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">TestAttribute</span><span class="rvts14">: </span><span class="rvts35">Attribute</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts23">string</span><span class="rvts14"> </span><span class="rvts28">_remark</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts17">TestAttribute</span><span class="rvts14">(</span><span class="rvts23">string</span><span class="rvts14"> comment)</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts28">_remark</span><span class="rvts14"> = comment;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts25">public</span><span class="rvts14"> </span><span class="rvts23">string</span><span class="rvts14"> Remark</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts43">get</span><span class="rvts14"> {</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts29">return</span><span class="rvts14"> </span><span class="rvts28">_remark</span><span class="rvts14">;</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts14">}</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Присоединение атрибута</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts31">[</span><span class="rvts35">TestAttribute</span><span class="rvts31">(</span><span class="rvts61">"В этом классе используется атрибут."</span><span class="rvts31">)]</span><br/><span class="rvts23">class</span><span class="rvts14"> </span><span class="rvts17">UseAttribute</span><br/><span class="rvts14">{</span><br/><span class="rvts14">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts14">}</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Получение атрибутов объекта GetCustomAttributes() и GetCustomAttribute()</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps5"><span class="rvts17">Type</span><span class="rvts14"> t = </span><span class="rvts20">typeof</span><span class="rvts14">(</span><span class="rvts17">UseAttribute</span><span class="rvts14">);</span><br/><span class="rvts17">Type</span><span class="rvts14"> tAttr = </span><span class="rvts20">typeof</span><span class="rvts14">(</span><span class="rvts17">TestAttribute</span><span class="rvts14">);</span><br/><span class="rvts17">TestAttribute</span><span class="rvts14"> testAttr = (</span><span class="rvts17">TestAttribute</span><span class="rvts14">) </span><span class="rvts17">Attribute</span><span class="rvts14">.</span><span class="rvts52">GetCustomAttribute</span><span class="rvts14">(t, tAttr);</span><br/><span class="rvts14"></span><br/><span class="rvts17">Console</span><span class="rvts14">.</span><span class="rvts16">WriteLine</span><span class="rvts14">(testAttr.Remark);</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">В результате:</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem280.png"></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps2"><span class="rvts6">В C# разрешается вводить в программу информацию декларативного характера в форме атрибута</span></p>
+<p class="rvps2"><span class="rvts6">Атрибут поддерживается классом, наследующим от класса System.Attribute.</span></p>
+<p class="rvps2"><span class="rvts6">Поэтому классы атрибутов должны быть подклассами класса Attribute. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Создание атрибута</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts27">[</span><span class="rvts48">AttributeUsage</span><span class="rvts27">(</span><span class="rvts32">AttributeTargets</span><span class="rvts27">.</span><span class="rvts41">All</span><span class="rvts27">)]</span><br/><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts36">class</span><span class="rvts27"> </span><span class="rvts30">TestAttribute</span><span class="rvts27">: </span><span class="rvts48">Attribute</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts36">string</span><span class="rvts27"> </span><span class="rvts41">_remark</span><span class="rvts27">;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts30">TestAttribute</span><span class="rvts27">(</span><span class="rvts36">string</span><span class="rvts27"> comment)</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts41">_remark</span><span class="rvts27"> = comment;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts38">public</span><span class="rvts27"> </span><span class="rvts36">string</span><span class="rvts27"> Remark</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts56">get</span><span class="rvts27"> {</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts42">return</span><span class="rvts27"> </span><span class="rvts41">_remark</span><span class="rvts27">;</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Присоединение атрибута</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts44">[</span><span class="rvts48">TestAttribute</span><span class="rvts44">(</span><span class="rvts74">"В этом классе используется атрибут."</span><span class="rvts44">)]</span><br/><span class="rvts36">class</span><span class="rvts27"> </span><span class="rvts30">UseAttribute</span><br/><span class="rvts27">{</span><br/><span class="rvts27">&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts27">}</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Получение атрибутов объекта GetCustomAttributes() и GetCustomAttribute()</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts30">Type</span><span class="rvts27"> t = </span><span class="rvts33">typeof</span><span class="rvts27">(</span><span class="rvts30">UseAttribute</span><span class="rvts27">);</span><br/><span class="rvts30">Type</span><span class="rvts27"> tAttr = </span><span class="rvts33">typeof</span><span class="rvts27">(</span><span class="rvts30">TestAttribute</span><span class="rvts27">);</span><br/><span class="rvts30">TestAttribute</span><span class="rvts27"> testAttr = (</span><span class="rvts30">TestAttribute</span><span class="rvts27">) </span><span class="rvts30">Attribute</span><span class="rvts27">.</span><span class="rvts65">GetCustomAttribute</span><span class="rvts27">(t, tAttr);</span><br/><span class="rvts27"></span><br/><span class="rvts30">Console</span><span class="rvts27">.</span><span class="rvts29">WriteLine</span><span class="rvts27">(testAttr.Remark);</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">В результате:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem280.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
 <p></p>
-<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Write eBooks for the Kindle</a></p>
+<p class="rvps4" style="clear: both;"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Write eBooks for the Kindle</a></p>
 
 	</div>
 	
