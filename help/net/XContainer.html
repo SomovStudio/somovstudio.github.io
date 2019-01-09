@@ -3,7 +3,7 @@
 <html>
 	
 <head>
-	<title>LINQ to XML</title>
+	<title>XContainer</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
 	<meta name="keywords" content="">
@@ -39,7 +39,7 @@
 				{
 					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
 					{
-						top.FrameTOC.SelectTocItem("LINQtoXML");
+						top.FrameTOC.SelectTocItem("XContainer");
 						bTocSelected = true;
 					}
 					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
@@ -58,11 +58,11 @@
 	
 		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">LINQ to XML</h1>
+				<h1 id="topic_header_text">XContainer</h1>
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="LINQ.html">LINQ</a> &rsaquo;&rsaquo; 
+					<a href="LINQ.html">LINQ</a> &rsaquo;&rsaquo; <a href="LINQtoXML.html">LINQ to XML</a> &rsaquo;&rsaquo; <a href="XML1.html">Создание XML</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -70,15 +70,15 @@
 			<div id="topic_header_nav">
 				
 				
-				<a href="LINQ.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				<a href="XML1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
 				
 				
-				<a href="Aggregate.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="XComment.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
-				<a href="XML.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="XDeclaration.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,8 +90,15 @@
 	<div id="topic_content">
 		
 <p></p>
+<p class="rvps2"><span class="rvts26">Создание контейнеров с помощью XContainer</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts6">Поскольку XContainer — абстрактный класс, создавать его экземпляры нельзя.</span></p>
+<p class="rvps2"><span class="rvts6">Вместо этого понадобится создавать экземпляр одного из его подклассов — XDocument</span></p>
+<p class="rvps2"><span class="rvts6">или XElement. Концептуально XContainer — это класс, унаследованный от XNode, который</span></p>
+<p class="rvps2"><span class="rvts6">может содержать другие классы-наследники XNode.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
 <p></p>
-<p class="rvps4" style="clear: both;"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="https://www.helpndoc.com/feature-tour">Easily create EPub books</a></p>
+<p class="rvps4" style="clear: both;"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Easily create iPhone documentation</a></p>
 
 	</div>
 	
