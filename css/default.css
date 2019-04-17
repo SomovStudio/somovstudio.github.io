@@ -12,13 +12,6 @@ body {
     font-size: 12pt;
     line-height: 1.65;
     background-color: #FFFFFF;
-    /*
-    background: url('../img/background1.jpg') no-repeat center center fixed;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    */
 }
 
 a {
@@ -379,8 +372,7 @@ footer {
 /** -- FOOTER -- **/
 
 /** -- CONTENT -- **/
-#about, #services, #technology, #portfolio, #developments {
-	/*margin: 2em;*/
+#about, #services, #technology, #portfolio, #developments #download {
 	padding: 1em;
 }
 
