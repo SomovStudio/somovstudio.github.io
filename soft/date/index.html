@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<title>Somov Studio: Date</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="./css/default.css" />
+	<script type="text/javascript" src="./lib/moment.js"></script>
+</head>
+<body>
+	<h2>Введите основной период рассчета</h2>
+	<p>
+		От <input id="startDate" type="text" size="40" value="2019-01-01"> 
+		до <input id="endDate" type="text" size="40" value="2019-02-01">
+		<button id="buttonCalculate">Рассчитать</button>
+	</p>
+	<p>
+		Список исключающих периодов:<br>
+		<input type="text" size="40" value="2019-01-15">-<input type="text" size="40" value="2019-01-20">
+	</p>
+	<br>
+	<div id="result">
+		
+	</div>
+
+	<script type="text/javascript" src="./src/script.js"></script>
+</body>
+</html>
