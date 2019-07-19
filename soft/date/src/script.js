@@ -1,22 +1,47 @@
 (function(){
 
-	var button = document.getElementById('buttonCalculate');
+	var excludeList = []; // массив периодов дат которые служать исключениями
+
+	var buttonCalculate = document.getElementById('buttonCalculate');
+	var buttonAdd = document.getElementById('buttonAdd');
+	var buttonClear = document.getElementById('buttonClear');
 
 	/* событие нажатия на кнопку "Рассчитать" */
-	button.addEventListener('click', function(){
+	buttonCalculate.addEventListener('click', function(){
+		var result = document.getElementById('result');
+		result.innerHTML = "";
+
 		var startData = document.getElementById('startDate');
 		var endData = document.getElementById('endDate');
 		var datesArray = getDates(startDate.value, endDate.value);
-		
-		//console.log(dates);
 
-		datesArray = excludeDates(datesArray, '2019-01-15', '2019-01-20')
+		excludeList.forEach(function(element) {
+  			datesArray = excludeDates(datesArray, element[0], element[1])	
+		});
 
-		var result = document.getElementById('result');
 		datesArray.forEach(function(element) {
   			result.innerHTML = result.innerHTML + element+"<br>";
 		});
-		
+	});
+
+	/* событие нажатия на кнопку "Добавить" */
+	buttonAdd.addEventListener('click', function(){
+		var startData = document.getElementById('addStartDate');
+		var endData = document.getElementById('addEndDate');
+		excludeList.push([startData.value, endData.value]);
+
+		var list = document.getElementById('excludeList');
+		list.innerHTML = "";
+		excludeList.forEach(function(element) {
+  			list.innerHTML = list.innerHTML + "<br>Исключить период от " + element[0] + " до " + element[1];
+		});
+	});
+
+	/* событие нажатия на кнопку "Очистить" */
+	buttonClear.addEventListener('click', function(){
+		excludeList = [];
+		var list = document.getElementById('excludeList');
+		list.innerHTML = "";
 	});
 
 	/* получить массив дат заданного периода*/
