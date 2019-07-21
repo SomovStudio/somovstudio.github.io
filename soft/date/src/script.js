@@ -54,9 +54,6 @@ $(function() {
 
 	/* очистить результат прворки */
 	buttonCalculateClear.addEventListener('click', function(){
-		excludeList = [];
-		var list = document.getElementById('excludeList');
-		list.innerHTML = "";
 		var result = document.getElementById('result');
 		result.innerHTML = "";
 	});
