@@ -1,3 +1,7 @@
+$(function() {
+    $(".input-date").datepicker();
+});
+
 (function(){
 
 	var excludeList = []; // массив периодов дат которые служать исключениями
@@ -5,6 +9,7 @@
 	var buttonCalculate = document.getElementById('buttonCalculate');
 	var buttonAdd = document.getElementById('buttonAdd');
 	var buttonClear = document.getElementById('buttonClear');
+	var format = document.getElementById('format');
 
 	/* событие нажатия на кнопку "Рассчитать" */
 	buttonCalculate.addEventListener('click', function(){
@@ -20,7 +25,9 @@
 		});
 
 		datesArray.forEach(function(element) {
-  			result.innerHTML = result.innerHTML + element+"<br>";
+  			//result.innerHTML = result.innerHTML + element+"<br>";
+  			//result.innerHTML = result.innerHTML + moment(element).format('DD.MM.YYYY')+"<br>";
+  			result.innerHTML = result.innerHTML + moment(element).format(format.value)+"<br>";
 		});
 	});
 
