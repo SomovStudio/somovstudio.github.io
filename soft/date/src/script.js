@@ -9,6 +9,7 @@ $(function() {
 	var buttonCalculate = document.getElementById('buttonCalculate');
 	var buttonAdd = document.getElementById('buttonAdd');
 	var buttonClear = document.getElementById('buttonClear');
+	var buttonCalculateClear = document.getElementById('buttonCalculateClear');
 	var format = document.getElementById('format');
 
 	/* событие нажатия на кнопку "Рассчитать" */
@@ -24,11 +25,11 @@ $(function() {
   			datesArray = excludeDates(datesArray, element[0], element[1])	
 		});
 
+		var resultHTML = "";
 		datesArray.forEach(function(element) {
-  			//result.innerHTML = result.innerHTML + element+"<br>";
-  			//result.innerHTML = result.innerHTML + moment(element).format('DD.MM.YYYY')+"<br>";
-  			result.innerHTML = result.innerHTML + moment(element).format(format.value)+"<br>";
+			resultHTML = resultHTML + moment(element).format(format.value)+"<br>";
 		});
+		result.innerHTML = resultHTML;
 	});
 
 	/* событие нажатия на кнопку "Добавить" */
@@ -49,6 +50,15 @@ $(function() {
 		excludeList = [];
 		var list = document.getElementById('excludeList');
 		list.innerHTML = "";
+	});
+
+	/* очистить результат прворки */
+	buttonCalculateClear.addEventListener('click', function(){
+		excludeList = [];
+		var list = document.getElementById('excludeList');
+		list.innerHTML = "";
+		var result = document.getElementById('result');
+		result.innerHTML = "";
 	});
 
 	/* получить массив дат заданного периода*/
