@@ -1,2 +1,0 @@
-# somovstudio.github.io
-SomovStudio
