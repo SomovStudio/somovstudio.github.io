@@ -48,3 +48,12 @@ button{
     border: 1px solid #e4e4e4;
     word-wrap: break-word;
 }
+
+#download{
+	position: inherit;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+#result{
+	border: 1px solid #e4e4e4;
+}
