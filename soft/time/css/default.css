@@ -1,0 +1,29 @@
+.content-left{
+    float: left;
+    width: 49%;
+    overflow: hidden;
+
+    padding: 6px;
+    margin-bottom: 10px;
+    background-color: #f6f6f6;
+    color: #505050;
+    line-height: 1.5em;
+    border: 1px solid #e4e4e4;
+    word-wrap: break-word;
+}
+
+.content-right{
+    float: right;
+    width: 49%;
+    overflow: hidden;
+}
+
+input{
+    width: 50px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+button{
+    height: 29px;
+}
