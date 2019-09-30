@@ -57,3 +57,17 @@ button{
 #result{
 	border: 1px solid #e4e4e4;
 }
+
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+
+#tableEphemerides{
+    height: 10em;
+    overflow-y: scroll;
+}
