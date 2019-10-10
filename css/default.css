@@ -488,22 +488,9 @@ footer {
 	display: inline;
 	width: 64px;
     height: 64px;
-    padding: 1.5em;
-    margin-top: 25px;
+    padding: 1.8em;
+    /*margin-top: 25px;*/
 }
-
-/*
-.icons {
-    width: 64px;
-    height: 64px;
-    padding: 1em;
-    display: inline;
-    margin-right: 10px;
-    margin-left: 1em;
-    margin-bottom: 10px;
-    margin-top: 25px;
-}
-*/
 
 @media screen and (max-width: 800px){
 	#contacts {
