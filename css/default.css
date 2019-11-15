@@ -387,7 +387,7 @@ footer {
 	color: #FFFFFF;
 	border: 0;
     border-radius: 8px;
-    min-height: 225px;
+    min-height: 255px;
     width: 50%;
     z-index: 2000;
 }
