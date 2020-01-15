@@ -5,6 +5,7 @@ $(document).ready(function(){
 	$('#info').animate({opacity:1}, 2000);
 	$('.logo-rotate').toggleClass('logo-rotate-back');
 
+
 	$(window).scroll(function(){
 		var scrolled = $(this).scrollTop();
 		$("#headerTitleAndLogo").css({
@@ -25,6 +26,30 @@ $(document).ready(function(){
 				"background-image" : "url('./img/background2.jpg')"
 			});
 		}
+
+		var headerHeight = $("header").height() / 4;
+		var aboutHeight = $("#about").height();
+		var servicesHeight = $("#services").height();
+		var technologyHeight = $("#technology").height();
+		var iconsHeight = $(".section-white-icons").height() * 4;
+
+		if($(this).scrollTop() > headerHeight){
+			$("#about").animate({left:0}, 500);
+			$("#about-image").animate({left:0}, 500);
+		}
+		if($(this).scrollTop() > (headerHeight + aboutHeight)){
+			$("#services").animate({left:0}, 500);
+			$("#services-image").animate({left:0}, 500);
+		}
+		if($(this).scrollTop() > (headerHeight + aboutHeight + servicesHeight)){
+			$("#technology").animate({left:0}, 500);
+			$("#technology-image").animate({left:0}, 500);
+		}
+		if($(this).scrollTop() > (headerHeight + aboutHeight + servicesHeight + iconsHeight)){
+			$("#download").animate({left:0}, 500);
+			$("#download-image").animate({left:0}, 500);
+		}
+
 	});
 
 
