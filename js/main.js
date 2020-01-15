@@ -28,28 +28,25 @@ $(document).ready(function(){
 		}
 
 		var headerHeight = $("header").height() / 4;
-		var aboutHeight = $("#about").height();
-		var servicesHeight = $("#services").height();
-		var technologyHeight = $("#technology").height();
-		var iconsHeight = $(".section-white-icons").height() * 4;
+		var iconsHeight = $(".section-white-icons").height();
+		var sectionWhite = $(".section-white").height();
 
 		if($(this).scrollTop() > headerHeight){
 			$("#about").animate({left:0}, 500);
 			$("#about-image").animate({left:0}, 500);
 		}
-		if($(this).scrollTop() > (headerHeight + aboutHeight)){
+		if($(this).scrollTop() > (headerHeight + sectionWhite)){
 			$("#services").animate({left:0}, 500);
 			$("#services-image").animate({left:0}, 500);
 		}
-		if($(this).scrollTop() > (headerHeight + aboutHeight + servicesHeight)){
+		if($(this).scrollTop() > (headerHeight + sectionWhite * 2)){
 			$("#technology").animate({left:0}, 500);
 			$("#technology-image").animate({left:0}, 500);
 		}
-		if($(this).scrollTop() > (headerHeight + aboutHeight + servicesHeight + iconsHeight)){
+		if($(this).scrollTop() > (headerHeight + iconsHeight + sectionWhite * 3)){
 			$("#download").animate({left:0}, 500);
 			$("#download-image").animate({left:0}, 500);
 		}
-
 	});
 
 
