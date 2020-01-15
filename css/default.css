@@ -372,8 +372,25 @@ footer {
 /** -- FOOTER -- **/
 
 /** -- CONTENT -- **/
-#about, #services, #technology, #portfolio, #developments #download {
+#about, #about-image, #services, #services-image, #technology, #technology-image, #download, #download-image {
+	position: relative;
 	padding: 1em;
+}
+
+#about, #technology{
+	left: -100%;
+}
+
+#about-image, #technology-image{
+	left: 200%;
+}
+
+#services, #download{
+	left: 200%;
+}
+
+#services-image, #download-image{
+	left: -100%;
 }
 
 #contacts {
