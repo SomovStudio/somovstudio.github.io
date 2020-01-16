@@ -17,11 +17,13 @@ $(document).ready(function(){
 		});
 
 		if($(this).scrollTop() <= $("header").height()){
+			$(".fullscreen-bg").show();
 			$("#background").css({
 				"background-image" : "url('./img/background1.jpg')"
 			});
 		}
 		if($(this).scrollTop() > $("header").height()){
+			$(".fullscreen-bg").hide();
 			$("#background").css({
 				"background-image" : "url('./img/background2.jpg')"
 			});
