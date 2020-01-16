@@ -32,7 +32,34 @@
 
 @media (max-width: 767px) {
     .fullscreen-bg {
-        background: url('../images/background1.jpg') center center / cover no-repeat;
+        background: url('../img/background1.jpg') center center / cover no-repeat;
+    }
+    .fullscreen-bg__video {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .fullscreen-bg {
+        background: url('../img/background1.jpg') center center / cover no-repeat;
+    }
+    .fullscreen-bg__video {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .fullscreen-bg {
+        background: url('../img/background1.jpg') center center / cover no-repeat;
+    }
+    .fullscreen-bg__video {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .fullscreen-bg {
+        background: url('../img/background1.jpg') center center / cover no-repeat;
     }
     .fullscreen-bg__video {
         display: none;
