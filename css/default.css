@@ -159,8 +159,8 @@ header{
     background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
     background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
     */
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#1E458C), to(#798696));
-    background-image: linear-gradient(to bottom, #1E458C 50%, #798696 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1E458C), to(#FFFFFF));
+    background-image: linear-gradient(to bottom, #1E458C 80%, #FFFFFF 100%);
     opacity: 0.6;
     overflow: hidden;
 }
