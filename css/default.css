@@ -159,7 +159,8 @@ a:hover {
 
 /** -- HEADER -- **/
 header{
-    height: calc(100vh - 80px);
+	height: 100vh;
+    /* height: calc(100vh - 80px); */
     /*
     background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
     background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
