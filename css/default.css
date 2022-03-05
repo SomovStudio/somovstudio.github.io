@@ -559,13 +559,14 @@ footer {
 }
 
 .news-list-item {
-	min-height: 140px;
+	min-height: 160px;
 	display: block;
 	border-bottom: 1px solid #E0E6EB;
 }
 
 .news-list-item-image {
 	position: relative;
+	padding: 10px;
 	width: 246px;
 	height: 138px;
 	float: left;
