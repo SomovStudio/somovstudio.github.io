@@ -525,7 +525,7 @@ footer {
 
 .news{
 	width: 90%;
-	min-height: 350px;
+	min-height: 400px;
 	border: 1px solid #E0E6EB;
 }
 
@@ -554,8 +554,9 @@ footer {
 .news-list {
 	width: 100%;
 	min-height: 300px;
-	max-height: 300px;
+	max-height: 350px;
 	overflow-y: scroll;
+	font-size: small;
 }
 
 .news-list-item {
@@ -573,7 +574,7 @@ footer {
 }
 
 .news-list-item-text {
-	
+	margin-left: 5px;
 }
 
 @media screen and (max-width: 800px){
