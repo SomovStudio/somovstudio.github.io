@@ -260,8 +260,9 @@ section {
 }
 
 .section-content-right {
+	padding: 10px;
 	float: right;
-	width: 50%;
+	width: 45%;
 	min-height: 100%;
 }
 
@@ -444,8 +445,8 @@ footer {
 }
 
 .content-image-soft {
-	margin: 1em;
-	padding: 1em;
+	/*margin: 1em;
+	padding: 1em;*/
 }
 
 .content-image-soft img {
