@@ -69,6 +69,7 @@ a:hover {
 nav {
 	z-index: 10000;
 }
+
 /*
 .menu{
     overflow: hidden;
@@ -83,6 +84,7 @@ nav {
     text-align: right;
 }
 */
+
 .menu{
     overflow: hidden;
     position:fixed;
@@ -93,7 +95,8 @@ nav {
     top: -1%;
     list-style-type: none;
     text-align: center;
-    background-color: #1E458C;
+    /*background-color: #1E458C;*/
+    background-color: rgba(30, 69, 140, 0);
 }
 
 .menu li {
@@ -263,7 +266,7 @@ section {
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
-    z-index: -10;
+    z-index: 0;
 }
 
 .section-clear {
