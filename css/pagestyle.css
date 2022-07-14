@@ -127,6 +127,8 @@
         display: block;
         width: 100%;
         top: 52px;
+        margin: 0;
+        padding: 0;
     }
 
     .page-menu-logo {
