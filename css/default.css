@@ -271,7 +271,7 @@ header{
 	height: 60px;
 	width: 400px;
 	position: relative;
-	top: calc(40vh - 25px);
+	top: calc(35vh - 25px);
 	left: 50%;
 	margin-left: -200px;
 	margin-top: -30px;
@@ -711,17 +711,42 @@ footer {
 /** ------------- **/
 
 /** -- BUNNER -- **/
-/*
-#bunner{
+#bunner {
 	max-width: 450px;
-	min-height: 100px;
-    border: 2px solid #FFFFFF;
-	border-radius: 5px;
-	position: relative;
-    top: calc(55vh - 25px);
-	left: 50%;
+	min-height: 200px;
+	color: #FFFFFF;
+    position: fixed;
+    top: calc(50vh - 25px);
+	left: 52%;
 	margin-left: -225px;
-	box-shadow: 10px 5px 5px #FFFFFF;
+	opacity: 0;
 }
-*/
+
+#bunner h2{
+	color: #96B8EA;
+}
+
+.banner-description {
+	margin-bottom: 25px;
+	color: #EEEEEE;
+}
+
+.banner-link {
+	padding-right: 25px;
+	color: #EEEEEE;
+}
+
+@media (max-width: 500px) {
+    #bunner {
+    	max-width: 250px;
+		min-height: 200px;
+		margin-left: -100px;
+		top: calc(65vh - 25px);
+		left: 50%;
+    }
+
+    .banner-link{
+    	display: block;
+    }
+}
 /** ------------- **/
