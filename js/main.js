@@ -5,6 +5,11 @@ $(document).ready(function(){
 	$('#info').animate({opacity:1}, 2000);
 	$('.logo-rotate').toggleClass('logo-rotate-back');
 
+	$( window ).resize(function() {
+  		$("#video").css({
+			"height" : $(window).height() + $('.menu').height() + 50
+		});
+	});
 
 	$(window).scroll(function(){
 		var scrolled = $(this).scrollTop();
