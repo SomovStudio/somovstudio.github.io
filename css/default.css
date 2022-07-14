@@ -30,6 +30,10 @@ body {
     background-color: #FFFFFF;
 }
 
+p {
+	padding: 5px;
+}
+
 a {
 	-moz-transition: color 0.2s ease, border-bottom 0.2s ease;
 	-webkit-transition: color 0.2s ease, border-bottom 0.2s ease;
