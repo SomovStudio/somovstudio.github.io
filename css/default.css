@@ -105,7 +105,42 @@ nav {
     color: #D3B0FC;
 }
 
-.menu-button {
+.mobile-menu{
+	display: none;
+}
+
+.mobile-menu-list{
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #999999;
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+    height: 60px;
+    top: -1%;
+    z-index: 10000;
+    list-style-type: none;
+    text-align: right;
+}
+
+.mobile-menu-list li {
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.mobile-menu-list li a
+{
+    text-decoration: none;
+    padding: 2em 1em;
+    color: #FFFFFF;
+}
+
+.mobile-menu-list li a:hover
+{
+    color: #D3B0FC;
+}
+
+.mobile-menu-button {
     position: relative;
     top: 5px;
     left: 10px;
@@ -113,12 +148,12 @@ nav {
     cursor: pointer;
 }
 
-.menu-button img {
+.mobile-menu-button img {
     width: 45px;
     height: 45px;
 }
 
-#menuCheck{
+#mobile-menu-check{
     display: none;
 }
 
@@ -168,19 +203,54 @@ nav {
         border-left: 0px solid #B8B8B8;
     }
 
-    .menu-button{
-        display: inline-block;
-    }
-
-    #menuCheck:checked + .menu{
-        display: block;
-        width: 100%;
-        top: 52px;
-    }
-
     .menu-logo {
 		visibility: hidden;
 	}
+
+	.mobile-menu{
+		display: block;
+        background: #FFFFFF;
+    }
+
+    .mobile-menu-list{
+        display: none;
+        position: absolute;
+        background: #FFFFFF;
+        color: #000000;
+        text-align: left;
+        height: 100%;
+        width: 50%;
+        z-index: 10000;
+    }
+
+    .mobile-menu-list li{
+        display: block;
+        padding-left: 20px;
+    }
+
+    .mobile-menu-list li a{
+        display: block;
+        padding: 0;
+        text-decoration: none;
+        border-bottom: none; 
+        color: #000000;
+    }
+
+	.mobile-menu{
+        background: #FFFFFF;
+    }
+
+    .mobile-menu-button{
+        display: inline-block;
+    }
+
+	#mobile-menu-check:checked + .mobile-menu-list{
+        display: block;
+        width: 100%;
+        top: 52px;
+        margin: 0;
+    	padding: 0;
+    }
 }
 /** ------------- **/
 
