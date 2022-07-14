@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+	$('#bunner').animate({opacity:1}, 2000);
 	$('#title').animate({opacity:1}, 2000);
 	$('#logo').animate({opacity:1}, 2000);
 	$('#info').animate({opacity:1}, 2000);
