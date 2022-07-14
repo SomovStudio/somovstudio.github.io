@@ -5,6 +5,9 @@ $(document).ready(function(){
 	$('#info').animate({opacity:1}, 2000);
 	$('.logo-rotate').toggleClass('logo-rotate-back');
 
+	$("#video").css({
+		"height" : $(window).height() + $('.menu').height() + 50
+	});
 	$( window ).resize(function() {
   		$("#video").css({
 			"height" : $(window).height() + $('.menu').height() + 50
