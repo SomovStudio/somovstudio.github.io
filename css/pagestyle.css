@@ -127,6 +127,8 @@
         display: block;
         width: 100%;
         top: 52px;
+        margin: 0;
+        padding: 0;
     }
 
     .page-menu-logo {
@@ -136,6 +138,15 @@
 
 /** -- FOOTER -- **/
 #information {
+    position: relative;
+    display: block;
+    min-height: 200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+
     padding-top: 10px;
 }
 

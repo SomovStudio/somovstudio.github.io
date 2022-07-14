@@ -1,7 +1,24 @@
+/* 1. -- NULLIFYING --
+ * 2. -- COMMON --
+ * 3. -- MENU --
+ * 4. -- HEADER --
+ * 5. -- SECTION --
+ * 6. -- FOOTER --
+ * 7. -- CONTENT --
+ * 8. -- BUNNER --
+ */
+
+/** -- NULLIFYING -- **/
 *{
-    margin: 0;
-    padding: 0;
-    border: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+/** ------------- **/
+
+/** -- COMMON -- **/
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,6 +29,10 @@ body {
     font-size: 12pt;
     line-height: 1.65;
     background-color: #FFFFFF;
+}
+
+p {
+	padding: 5px;
 }
 
 a {
@@ -38,6 +59,8 @@ a:hover {
 	display: block;
 	width: 100%;
 	min-height: 100%;
+	max-height: 100%;
+	height: 100%;
 	background: url('../img/background1.jpg') no-repeat center center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
@@ -45,19 +68,24 @@ a:hover {
     background-size: cover;
     z-index: -1000;
 }
+/** ------------- **/
 
 /** -- MENU -- **/
+nav {
+	z-index: 10000;
+}
+
 .menu{
     overflow: hidden;
-    position:relative;
-    border-bottom: 1px solid #999999;
+    position:fixed;
+    border-bottom: 1px solid #7585A5;
     padding: 5px 5px 5px 5px;
     width: 100%;
     height: 60px;
     top: -1%;
-    z-index: 10000;
     list-style-type: none;
-    text-align: right;
+    text-align: center;
+    background-color: rgba(30, 69, 140, 0);
 }
 
 .menu li {
@@ -78,7 +106,42 @@ a:hover {
     color: #D3B0FC;
 }
 
-.menu-button {
+.mobile-menu{
+	display: none;
+}
+
+.mobile-menu-list{
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #999999;
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+    height: 60px;
+    top: -1%;
+    z-index: 10000;
+    list-style-type: none;
+    text-align: right;
+}
+
+.mobile-menu-list li {
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.mobile-menu-list li a
+{
+    text-decoration: none;
+    padding: 2em 1em;
+    color: #FFFFFF;
+}
+
+.mobile-menu-list li a:hover
+{
+    color: #D3B0FC;
+}
+
+.mobile-menu-button {
     position: relative;
     top: 5px;
     left: 10px;
@@ -86,12 +149,12 @@ a:hover {
     cursor: pointer;
 }
 
-.menu-button img {
+.mobile-menu-button img {
     width: 45px;
     height: 45px;
 }
 
-#menuCheck{
+#mobile-menu-check{
     display: none;
 }
 
@@ -141,37 +204,67 @@ a:hover {
         border-left: 0px solid #B8B8B8;
     }
 
-    .menu-button{
-        display: inline-block;
-    }
-
-    #menuCheck:checked + .menu{
-        display: block;
-        width: 100%;
-        top: 52px;
-    }
-
     .menu-logo {
 		visibility: hidden;
 	}
+
+	.mobile-menu{
+		display: block;
+        background: #FFFFFF;
+    }
+
+    .mobile-menu-list{
+        display: none;
+        position: absolute;
+        background: #FFFFFF;
+        color: #000000;
+        text-align: left;
+        height: 100%;
+        width: 50%;
+        z-index: 10000;
+    }
+
+    .mobile-menu-list li{
+        display: block;
+        padding-left: 20px;
+    }
+
+    .mobile-menu-list li a{
+        display: block;
+        padding: 0;
+        text-decoration: none;
+        border-bottom: none; 
+        color: #000000;
+    }
+
+	.mobile-menu{
+        background: #FFFFFF;
+    }
+
+    .mobile-menu-button{
+        display: inline-block;
+    }
+
+	#mobile-menu-check:checked + .mobile-menu-list{
+        display: block;
+        width: 100%;
+        top: 52px;
+        margin: 0;
+    	padding: 0;
+    }
 }
-/** -- MENU -- **/
+/** ------------- **/
 
 /** -- HEADER -- **/
 header{
 	height: 100vh;
-    /* height: calc(100vh - 80px); */
-    /*
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
-    background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
-    */
     background-image: -webkit-gradient(linear, left top, left bottom, from(#1E458C), to(#FFFFFF));
     background-image: linear-gradient(to bottom, #1E458C 80%, #FFFFFF 100%);
     opacity: 0.6;
     overflow: hidden;
 }
 
-#headerTitleAndLogo {
+#header-title-logo {
 	text-align: center;
 	color: #FFF;
 	display: inline-block;
@@ -182,6 +275,7 @@ header{
 	left: 50%;
 	margin-left: -200px;
 	margin-top: -30px;
+	z-index: -10;
 }
 
 #title {
@@ -212,7 +306,8 @@ header{
 	color: #FFF;
 	display: inline-block;
 	height: 150px;
-	width: 500px;
+	min-width: 500px;
+	max-width: 500px;
 	position: absolute;
 	top: 200%;
 	left: 0%;
@@ -220,10 +315,19 @@ header{
 	margin-top: -43px;
 }
 
-/** -- HEADER -- **/
+@media (max-width: 500px) {
+    #info {
+    	min-width: 280px;
+		max-width: 280px;
+		left: 100px;
+    }
+}
+
+/** ------------- **/
 
 /** -- SECTION -- **/
 section {
+	position: relative;
 	display: block;
 	min-height: 200px;
 	padding-right: 15px;
@@ -231,6 +335,7 @@ section {
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
+    z-index: 0;
 }
 
 .section-clear {
@@ -247,6 +352,12 @@ section {
     background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
     opacity: 0.7;
     overflow: hidden;
+}
+
+.section-content {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-content-left{
@@ -278,6 +389,7 @@ section {
 	min-height: 100%;
 }
 
+
 @media screen and (max-width: 800px){
     .section-content-left{
 		float: left;
@@ -291,11 +403,11 @@ section {
 		min-height: 5%;
 	}
 }
-/** -- SECTION -- **/
+/** ------------- **/
 
 /** -- FOOTER -- **/
 footer {
-	min-height: 50vh;
+	/*min-height: 50vh;*/
 	background-color: #FFFFFF;
 	position: relative;
 	overflow: hidden;
@@ -303,10 +415,8 @@ footer {
 
 
 .footer-copyright {
-	position: relative;
-	padding-top: 100px;
-	width: 100%;
-	margin: 2.5em 0 2em 0;
+	padding-top: 50px;
+	padding-bottom: 25px;
 	font-size: 0.8em;
 	text-align: center;
 	color: #999999;
@@ -342,22 +452,6 @@ footer {
     text-align: left;
 }
 
-/*
-.footer-menu:after {
-	display: block;
-	content: '';
-	width: 100%;
-	height: 1px;
-	margin: 0.7em 0 1em 0;
-	border-radius: 2px;
-	background-color: #dddddd;
-	background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-	background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-	background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-	background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-}
-*/
-
 .footer-menu li {
     display: inline-block;
     padding-top: 20px;
@@ -384,10 +478,10 @@ footer {
 	}
 }
 
-/** -- FOOTER -- **/
+/** ------------- **/
 
 /** -- CONTENT -- **/
-#about, #about-image, #services, #services-image, #technology, #technology-image, #download, #download-image {
+#about, #about-image, #developments, #developments-image, #technology, #technology-image, #video-review, #video-review-image {
 	position: relative;
 	padding: 1em;
 }
@@ -400,11 +494,11 @@ footer {
 	left: 200%;
 }
 
-#services, #download{
+#developments, #video-review{
 	left: 200%;
 }
 
-#services-image, #download-image{
+#developments-image, #video-review-image{
 	left: -100%;
 }
 
@@ -614,4 +708,20 @@ footer {
 		border: 1px solid #E0E6EB;
 	}
 }
-/** -- CONTENT -- **/
+/** ------------- **/
+
+/** -- BUNNER -- **/
+/*
+#bunner{
+	max-width: 450px;
+	min-height: 100px;
+    border: 2px solid #FFFFFF;
+	border-radius: 5px;
+	position: relative;
+    top: calc(55vh - 25px);
+	left: 50%;
+	margin-left: -225px;
+	box-shadow: 10px 5px 5px #FFFFFF;
+}
+*/
+/** ------------- **/

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>Somov Studio - О компании</title>
+	<title>Somov Studio - О проекте</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="SHORTCUT ICON" href="./img/favicon.ico" type="image/x-icon" />
@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="./css/pagestyle.css" />
 </head>
 <body>
-	<div id="backgroundPage"></div>
+	<div id="backgroundPageHat"></div>
 
 	<!-- MENU -->
 	<nav>
@@ -19,9 +19,10 @@
 			<ul class="page-menu">
 				<li><a href="index.html">Главная</a></li>
 				<li><a href="index.html#about">О проекте</a></li>
-				<li><a href="index.html#services">Программное обеспечение</a></li>
+				<li><a href="hat.html">Браузер Hat</a></li>
+				<li><a href="index.html#developments">Разработки</a></li>
 				<li><a href="index.html#technology">Технологии</a></li>
-				<li><a href="index.html#download">Информация</a></li>
+				<li><a href="index.html#video-review">Видео</a></li>
 				<li><a href="index.html#contacts">Контакты</a></li>
 			</ul>
 		</div>
@@ -30,7 +31,7 @@
 	<!-- HEADER -->
 	<header class="page-header">
 		<!-- LOGO -->
-		<div id="headerTitleAndLogo">
+		<div id="header-title-logo">
 			<div id="title">Somov Studio</div>
 			<div id="logo"><img src="./img/logo.png" alt="logo" class="Rotate"></div>
 			<div id="info"></div>
@@ -42,33 +43,37 @@
 	<section class="section-white">
 		<div id="description">
 			<h2 class="line">О проекте</h2>
-			<p>
-				Проект Somov Studio основан независимым разработчиком программного обеспечения с открытым исходным кодом. Автор проекта <a href="https://somov-qa.github.io/" target="_blank">Сомов Евгений Павлович</a> является специалистом в области автоматизированного тестирования и занимается оказанием услуг в облати тестирования программного обеспечения любой сложности.
-				<br><br>
-				Автоматизация процессов тестирования неотъемлемая часть разработки любого программного обеспечения, она позволяет сократить время и вероятность пропущенных ошибок во время выполнения регресс-тестировании, а так же упрощает выполение сложных тестов.
-				<br><br>
-				Разработка специализированного программного обеспечения предназначенного для упрощения выполнения задачь в области тестирования. На данном ресурсе вы найдете утилиты помогающие в тестировании. Все предлагаемые программы с открытым исходным кодом были разработаны автором проекта и распространяются абсолютно бесплатно.
-				<br><br>
-				Основные подходы к автоматизации тестирования:
-                <br>Тестирование на уровне кода (модульное тестирование) и тестирование пользовательского интерфейса (в частности, GUI-тестирование).
-                <br>Имитация действий пользователя - функциональное тестирование (с помощью специальных тестовых фреймворков).
-			</p>
 		</div>
 	</section>
 
 	<div class="section-clear"></div>
 
 	<section class="section-white">
-		<div class="section-content-left">
-			<p></p>
-		</div>
-		<div class="section-content-right">
-			<p></p>
+		<div class="page-content">
+			<div class="section-content-left">
+				<p>
+					Проект Somov Studio основан независимым разработчиком программного обеспечения с открытым исходным кодом. Автор проекта <a href="https://somov-qa.github.io/" target="_blank">Сомов Евгений Павлович</a> является специалистом в области автоматизированного тестирования и занимается оказанием услуг в облати тестирования программного обеспечения любой сложности.
+				</p>
+				<p>
+					Автоматизация процессов тестирования неотъемлемая часть разработки любого программного обеспечения, она позволяет сократить время и вероятность пропущенных ошибок во время выполнения регресс-тестировании, а так же упрощает выполение сложных тестов.
+				</p>
+			</div>
+			<div class="section-content-right">
+				<p>
+					Разработка специализированного программного обеспечения предназначенного для упрощения выполнения задачь в области тестирования. На данном ресурсе вы найдете утилиты помогающие в тестировании. Все предлагаемые программы с открытым исходным кодом были разработаны автором проекта и распространяются абсолютно бесплатно.
+				</p>
+				<p>
+					Основные подходы к автоматизации тестирования:
+	                <br>Тестирование на уровне кода (модульное тестирование) и тестирование пользовательского интерфейса (в частности, GUI-тестирование).
+	                <br>Имитация действий пользователя - функциональное тестирование (с помощью специальных тестовых фреймворков).
+				</p>
+			</div>
 		</div>
 	</section>
 
 	<div class="section-clear"></div>
 
+	
 	<!-- FOOTER -->
 	<footer>
 		<div class="footer-social">
@@ -96,7 +101,7 @@
 			</ul>
 		</div>
 
-		<section id="information">
+		<div id="information">
 			<div id="information_footer">
 				<h2>Деятельность</h2>
 				<p>Разработка автоматизированного тестирования программного обеспечения любой сложности.</p>
@@ -112,15 +117,14 @@
 					<dd>г. Луганск</dd>
 				</dl>
 			</div>
-		</section>
-
+		</div>
 		<p class="page-footer-copyright">
 			Copyright &copy; 2022 Somov Studio. All Rights Reserved.
 		</p>
 	</footer>
 
-	<!-- Scripts -->
-	<script src="./js/jquery-3.3.1.min.js"></script>
+	<!-- SCRIPTS -->
+	<script src="./js/jquery-3.6.0.min.js"></script>
 	<script src="./js/main.js"></script>
 </body>
 </html>
