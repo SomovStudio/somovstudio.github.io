@@ -34,6 +34,7 @@ $(document).ready(function(){
 			$(".menu").css({
 				"background-color" : "rgba(30, 69, 140, 0)"
 			});
+			$('#bunner').show();
 		}
 		if(scrolled > $("header").height()){
 			$(".background__fullscreen").hide();
@@ -43,6 +44,7 @@ $(document).ready(function(){
 			$(".menu").css({
 				"background-color" : "rgba(30, 69, 140, 0.6)"
 			});
+			$('#bunner').hide();
 		}
 
 		// SECTION
