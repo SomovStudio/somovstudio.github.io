@@ -262,6 +262,12 @@ section {
     overflow: hidden;
 }
 
+.section-content {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .section-content-left{
 	float: left;
     width: 50%;
@@ -290,6 +296,7 @@ section {
 	width: 70%;
 	min-height: 100%;
 }
+
 
 @media screen and (max-width: 800px){
     .section-content-left{

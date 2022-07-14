@@ -25,13 +25,13 @@ $(document).ready(function(){
 		});
 
 		if($(this).scrollTop() <= $("header").height()){
-			$(".fullscreen-bg").show();
+			$(".background__fullscreen").show();
 			$("#background").css({
 				"background-image" : "url('./img/background1.jpg')"
 			});
 		}
 		if($(this).scrollTop() > $("header").height()){
-			$(".fullscreen-bg").hide();
+			$(".background__fullscreen").hide();
 			$("#background").css({
 				"background-image" : "url('./img/background2.jpg')"
 			});
