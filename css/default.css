@@ -391,7 +391,7 @@ footer {
 /** ------------- **/
 
 /** -- CONTENT -- **/
-#about, #about-image, #services, #services-image, #technology, #technology-image, #download, #download-image {
+#about, #about-image, #developments, #developments-image, #technology, #technology-image, #video-review, #video-review-image {
 	position: relative;
 	padding: 1em;
 }
@@ -404,11 +404,11 @@ footer {
 	left: 200%;
 }
 
-#services, #download{
+#developments, #video-review{
 	left: 200%;
 }
 
-#services-image, #download-image{
+#developments-image, #video-review-image{
 	left: -100%;
 }
 

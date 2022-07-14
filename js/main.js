@@ -46,16 +46,16 @@ $(document).ready(function(){
 			$("#about-image").animate({left:0}, 500);
 		}
 		if($(this).scrollTop() > (headerHeight + sectionWhite)){
-			$("#services").animate({left:0}, 500);
-			$("#services-image").animate({left:0}, 500);
+			$("#developments").animate({left:0}, 500);
+			$("#developments-image").animate({left:0}, 500);
 		}
 		if($(this).scrollTop() > (headerHeight + sectionWhite * 2)){
 			$("#technology").animate({left:0}, 500);
 			$("#technology-image").animate({left:0}, 500);
 		}
 		if($(this).scrollTop() > (headerHeight + iconsHeight + sectionWhite * 3)){
-			$("#download").animate({left:0}, 500);
-			$("#download-image").animate({left:0}, 500);
+			$("#video-review").animate({left:0}, 500);
+			$("#video-review-image").animate({left:0}, 500);
 		}
 	});
 
