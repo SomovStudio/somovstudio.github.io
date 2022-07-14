@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 	$(window).scroll(function(){
 		var scrolled = $(this).scrollTop();
-		$("#headerTitleAndLogo").css({
+		$("#header-title-logo").css({
 			"transform" : "translate(0%, " + scrolled + "%)"
 		});
 		

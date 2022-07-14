@@ -1,14 +1,23 @@
-/** -- NULLIFYING ----------------------------------------------------- **/
+/* 1. -- NULLIFYING --
+ * 2. -- COMMON --
+ * 3. -- MENU --
+ * 4. -- HEADER --
+ * 5. -- SECTION --
+ * 6. -- FOOTER --
+ * 7. -- CONTENT --
+ */
+
+/** -- NULLIFYING -- **/
 *{
 	padding: 0;
 	margin: 0;
 	border: 0;
 }
-/** ----------------------------------------------------- **/
+/** ------------- **/
 
 /** -- COMMON -- **/
 html {
-  scroll-behavior: smooth; // плавная прокрутка
+  scroll-behavior: smooth;
 }
 
 body {
@@ -54,6 +63,7 @@ a:hover {
     background-size: cover;
     z-index: -1000;
 }
+/** ------------- **/
 
 /** -- MENU -- **/
 .menu{
@@ -164,23 +174,18 @@ a:hover {
 		visibility: hidden;
 	}
 }
-/** -- MENU -- **/
+/** ------------- **/
 
 /** -- HEADER -- **/
 header{
 	height: 100vh;
-    /* height: calc(100vh - 80px); */
-    /*
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
-    background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
-    */
     background-image: -webkit-gradient(linear, left top, left bottom, from(#1E458C), to(#FFFFFF));
     background-image: linear-gradient(to bottom, #1E458C 80%, #FFFFFF 100%);
     opacity: 0.6;
     overflow: hidden;
 }
 
-#headerTitleAndLogo {
+#header-title-logo {
 	text-align: center;
 	color: #FFF;
 	display: inline-block;
@@ -228,8 +233,7 @@ header{
 	margin-left: -43px;
 	margin-top: -43px;
 }
-
-/** -- HEADER -- **/
+/** ------------- **/
 
 /** -- SECTION -- **/
 section {
@@ -300,7 +304,7 @@ section {
 		min-height: 5%;
 	}
 }
-/** -- SECTION -- **/
+/** ------------- **/
 
 /** -- FOOTER -- **/
 footer {
@@ -351,22 +355,6 @@ footer {
     text-align: left;
 }
 
-/*
-.footer-menu:after {
-	display: block;
-	content: '';
-	width: 100%;
-	height: 1px;
-	margin: 0.7em 0 1em 0;
-	border-radius: 2px;
-	background-color: #dddddd;
-	background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-	background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-	background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-	background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-}
-*/
-
 .footer-menu li {
     display: inline-block;
     padding-top: 20px;
@@ -393,7 +381,7 @@ footer {
 	}
 }
 
-/** -- FOOTER -- **/
+/** ------------- **/
 
 /** -- CONTENT -- **/
 #about, #about-image, #services, #services-image, #technology, #technology-image, #download, #download-image {
@@ -623,4 +611,4 @@ footer {
 		border: 1px solid #E0E6EB;
 	}
 }
-/** -- CONTENT -- **/
+/** ------------- **/
