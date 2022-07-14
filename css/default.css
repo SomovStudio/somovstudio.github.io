@@ -335,7 +335,7 @@ section {
 
 /** -- FOOTER -- **/
 footer {
-	min-height: 50vh;
+	/*min-height: 50vh;*/
 	background-color: #FFFFFF;
 	position: relative;
 	overflow: hidden;
@@ -343,6 +343,12 @@ footer {
 
 
 .footer-copyright {
+	padding-top: 50px;
+	padding-bottom: 25px;
+	font-size: 0.8em;
+	text-align: center;
+	color: #999999;
+	/*
 	position: relative;
 	padding-top: 100px;
 	width: 100%;
@@ -350,6 +356,7 @@ footer {
 	font-size: 0.8em;
 	text-align: center;
 	color: #999999;
+	*/
 }
 
 .footer-social {
