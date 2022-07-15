@@ -712,13 +712,16 @@ footer {
 
 /** -- BUNNER -- **/
 #bunner {
-	max-width: 450px;
-	min-height: 200px;
+	border: 1px solid #A1BDE3;
+	border-radius: 5px;
+	padding: 10px;
+	max-width: 400px;
+	min-height: 150px;
 	color: #FFFFFF;
     position: fixed;
-    top: calc(50vh - 25px);
+    top: calc(50vh - 30px);
 	left: 52%;
-	margin-left: -225px;
+	margin-left: -250px;
 	opacity: 0;
 }
 
@@ -740,8 +743,8 @@ footer {
     #bunner {
     	max-width: 250px;
 		min-height: 200px;
-		margin-left: -100px;
-		top: calc(65vh - 25px);
+		margin-left: -130px;
+		top: calc(65vh - 15px);
 		left: 50%;
     }
 
