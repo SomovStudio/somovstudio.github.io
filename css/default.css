@@ -712,7 +712,7 @@ footer {
 
 /** -- BUNNER -- **/
 #bunner {
-	border: 1px solid #A1BDE3;
+	border: 2px solid rgba(161, 189, 227, 0.5);
 	border-radius: 5px;
 	padding: 10px;
 	max-width: 400px;

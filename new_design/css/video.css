@@ -1,0 +1,16 @@
+.desktop__video-fullscreen {
+    overflow: hidden;
+    z-index: -100;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding-top:45%;
+}
+ 
+.desktop__video {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    opacity: 0.7;
+}
