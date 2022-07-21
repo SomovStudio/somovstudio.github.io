@@ -164,6 +164,13 @@
     display: block;
 }
 
+.footer-page-backround {
+    background-image: url('../img/background_footer2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 .page-footer-copyright {
     position: relative;
     padding-top: 0px;
