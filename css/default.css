@@ -6,7 +6,7 @@
  * 6. -- FOOTER --
  * 7. -- CONTENT --
  * 8. -- BUNNER --
- * 9. -- SOFT --
+ * 9. -- TILES --
  */
 
 /** -- NULLIFYING -- **/
@@ -783,7 +783,7 @@ footer {
 }
 /** ------------- **/
 
-/** -- SOFT -- **/
+/** -- TILES -- **/
 .tiles {
 	display: flex;
 	flex-wrap: nowrap;
@@ -836,6 +836,7 @@ footer {
 	display: block;
 	font-weight: bold;
 	font-size: medium;
+	text-align: center;
 	color: #5C6882;
 }
 
