@@ -414,6 +414,13 @@ footer {
 	overflow: hidden;
 }
 
+.footer-backround {
+	background-image: url('../img/background_footer.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
 .footer-center{
 	max-width: 1440px;
 	margin-left: auto;
@@ -425,7 +432,7 @@ footer {
 	padding-bottom: 25px;
 	font-size: 0.8em;
 	text-align: center;
-	color: #999999;
+	color: #7585A5;
 }
 
 .footer-social {
@@ -444,6 +451,7 @@ footer {
 {
     text-decoration: none;
     color: #FFFFFF;
+    color: transparent;
 }
 
 .footer-menu {
