@@ -6,6 +6,7 @@
  * 6. -- FOOTER --
  * 7. -- CONTENT --
  * 8. -- BUNNER --
+ * 9. -- SOFT --
  */
 
 /** -- NULLIFYING -- **/
@@ -497,6 +498,10 @@ footer {
 	padding: 1em;
 }
 
+#technology-soft {
+	opacity: 0;
+}
+
 #about, #technology{
 	left: -100%;
 }
@@ -511,6 +516,11 @@ footer {
 
 #developments-image, #video-review-image{
 	left: -100%;
+}
+
+.developments-link{
+	padding-right: 25px;
+	color: #57698D;
 }
 
 #contacts {
@@ -763,4 +773,104 @@ footer {
     	display: block;
     }
 }
+/** ------------- **/
+
+/** -- SOFT -- **/
+.tiles {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	overflow: auto;
+    -webkit-overflow-scrolling: touch;
+	width: 100%;
+	padding-top: 1.5em;
+	padding-bottom: 2.5em;
+	opacity: 0;
+}
+
+.tile{
+	display: inline-block;
+	-webkit-box-shadow: 0 10px 34px rgb(175 196 208 / 47%);
+    box-shadow: 0 10px 34px rgb(175 196 208 / 47%);
+    border-radius: 10px;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    padding: 1em;
+    min-width: 155px;
+    max-width: 150px;
+    min-height: 300px;
+    max-height: 300px;
+}
+
+.tile:hover{
+	-webkit-box-shadow: 0 10px 34px rgb(175 196 208 / 20%);
+    box-shadow: 0 10px 34px rgb(175 196 208 / 20%);
+}
+
+.tile__image {
+	display: block;
+	text-align: center;
+	margin: auto;
+	min-height: 85px;
+	max-height: 85px;
+}
+
+.tile__description {
+	display: block;
+	font-size: small;
+	text-align: left;
+	min-height: 125px;
+	max-height: 125px;
+	overflow: hidden;
+}
+
+.tile__description span{
+	display: block;
+	font-weight: bold;
+	font-size: medium;
+	color: #5C6882;
+}
+
+.tile__detail {
+	font-size: small;
+	text-align: right;
+    text-decoration: none;
+    border-bottom: dotted 0px;
+    color: #67717E;
+	
+}
+
+.tile__download {
+	text-align: center;
+	margin-top: 1em;
+}
+
+.tile__button {
+    width: 125px;
+    height: 33px;
+    cursor:pointer;
+    border: 0;
+    border-radius: 8px;
+    color: #EEEEEE;
+    background-color: #57698D;
+}
+
+.tile__button:hover {
+    width: 125px;
+    height: 33px;
+    cursor:pointer;
+    border: 0;
+    border-radius: 8px;
+    background-color: #3D4A63;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1440px){
+    .tiles {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: normal;
+	}
+}
+
 /** ------------- **/
