@@ -498,6 +498,10 @@ footer {
 	padding: 1em;
 }
 
+#technology-soft {
+	opacity: 0;
+}
+
 #about, #technology{
 	left: -100%;
 }
@@ -781,6 +785,7 @@ footer {
 	width: 100%;
 	padding-top: 1.5em;
 	padding-bottom: 2.5em;
+	opacity: 0;
 }
 
 .tile{
@@ -788,7 +793,8 @@ footer {
 	-webkit-box-shadow: 0 10px 34px rgb(175 196 208 / 47%);
     box-shadow: 0 10px 34px rgb(175 196 208 / 47%);
     border-radius: 10px;
-    margin-right: 1em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
     padding: 1em;
     min-width: 155px;
     max-width: 150px;
@@ -859,5 +865,12 @@ footer {
     color: #FFFFFF;
 }
 
+@media screen and (max-width: 1440px){
+    .tiles {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: normal;
+	}
+}
 
 /** ------------- **/

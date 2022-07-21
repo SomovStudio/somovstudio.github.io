@@ -58,10 +58,12 @@ $(document).ready(function(){
 		if(scrolled > (headerHeight + sectionWhite)){
 			$("#developments").animate({left:0}, 500);
 			$("#developments-image").animate({left:0}, 500);
+			$("#developments-tiles").animate({opacity:1}, 1000);
 		}
 		if(scrolled > (headerHeight + sectionWhite * 2)){
 			$("#technology").animate({left:0}, 500);
 			$("#technology-image").animate({left:0}, 500);
+			$("#technology-soft").animate({opacity:1}, 1000);
 		}
 		if(scrolled > (headerHeight + iconsHeight + sectionWhite * 3)){
 			$("#video-review").animate({left:0}, 500);
