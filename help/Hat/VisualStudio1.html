@@ -1,0 +1,161 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Использование Visual Studio для редактирования кода</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 7.7.0.519">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("VisualStudio1");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Использование Visual Studio для редактирования кода</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic27.html">Текстовый редактор кода</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic27.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="C.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic28.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps2"><span class="rvts16">Использование Visual Studio для редактирования кода</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Для того чтобы использовать в качестве редактора Visual Studio проект автотестов должен быть создан следующим образом:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">1. В окне "Проект" на вкладке "Проводник" или в основном меню "Создать проект" нажмите кнопку "</span><span class="rvts17">Создать проект совместимый с Visual Studio</span><span class="rvts6">"</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem89.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem87.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">2. Откроектся поп-ап для ввода имени проекта.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts6">Обязательное условие имя проекта должно быть латинскими буквами и без пробелов.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem102.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">3. Создайте папку в которой будет содержаться проект с любым именем и в любом месте на диске.</span></p>
+<p class="rvps2"><span class="rvts6">В данном случае создана папка Project по адресу C:\Hat-1.0.0\</span></p>
+<p class="rvps2"><span class="rvts6">Выделите папку проекта и нажмите OK</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem17.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">4. В окне "Проект" на вкладке "Проводник" отобразится содержимое проекта.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem18.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">5. Данный проект поддерживает работы в Visual Studio (предполагается что Visual Studio у вас уже установлен)</span></p>
+<p class="rvps2"><span class="rvts6">Чтобы открыть проект в Visual Studio нажмите в окне "Проект" на кнопку &nbsp;"Проводник"</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem105.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Затем дважды нажмите на файл с расширением *.sln (в данном случае MyTests.sln)</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem104.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Когда загрузится Visual Studio сразу будет открыт наш проект и доступен к работе в окне "Обозреватель решений"</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem106.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Нажмите дважды на файле ExampleTest1.cs чтобы открыть его в редакторе кода.</span></p>
+<p class="rvps2"><span class="rvts6">В 59 строке закоментирована строка с вызовом метода BrowserCloseAsync() который закрывает браузер.</span></p>
+<p class="rvps2"><span class="rvts6">Это нужно для того чтобы браузер автоматически не закрылся по завершению работы автотеста.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem107.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Использовать Visual Studio очень удобно тем что редактор при вводе показывает выпадающий список со всеми доступными методами, а так же показывает синтаксис выбранного метода и требуемые ему переменные.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem108.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Проект успешно создан и готов к работе с помощью Visual Studio.</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com">Free EPub and documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2022 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
