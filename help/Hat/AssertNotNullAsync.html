@@ -3,7 +3,7 @@
 <html>
 	
 <head>
-	<title>AssertFalseAsync</title>
+	<title>AssertNotNullAsync</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="generator" content="HelpNDoc Personal Edition 7.7.0.519">
 	<meta name="description" content="" /> 
@@ -40,7 +40,7 @@
 				{
 					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
 					{
-						top.FrameTOC.SelectTocItem("AssertFalseAsync");
+						top.FrameTOC.SelectTocItem("AssertNotNullAsync");
 						bTocSelected = true;
 					}
 					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
@@ -59,7 +59,7 @@
 	
 		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">AssertFalseAsync</h1>
+				<h1 id="topic_header_text">AssertNotNullAsync</h1>
 				
 				
 				<div id="topic_breadcrumb">
@@ -75,11 +75,11 @@
 				
 				
 				
-				<a href="AssertTrueAsync.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="AssertFalseAsync.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
-				<a href="AssertNotNullAsync.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="AssertNullAsync.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,14 +90,15 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps9"><span class="rvts29">AssertFalseAsync</span></p>
-<p class="rvps9"><span class="rvts31">Описание</span><span class="rvts6">: метод выполняет проверку значения true или false, и в случае если значение равно true проверка будет считаться провальной</span></p>
-<p class="rvps9"><span class="rvts31">Синтаксис</span><span class="rvts6">: AssertFalseAsync(bool condition)</span></p>
+<p class="rvps9"><span class="rvts29">AssertNotNullAsync</span></p>
+<p class="rvps9"><span class="rvts31">Описание</span><span class="rvts6">: метод выполняет проверку значения которое не должно быть null, и в случае если значение null проверка будет считаться провальной</span></p>
+<p class="rvps9"><span class="rvts31">Синтаксис</span><span class="rvts6">: AssertNotNullAsync(object obj)</span></p>
 <p class="rvps9"><span class="rvts30"><br/></span></p>
 <p class="rvps9"><span class="rvts31">Пример</span><span class="rvts30">:</span></p>
-<p class="rvps9"><span class="rvts6">bool flag = false;</span></p>
-<p class="rvps9"><span class="rvts6">bool result = await tester.AssertFalseAsync(flag);</span><span class="rvts6"></span></p>
-<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com">Easy EPub and documentation editor</a></p>
+<p class="rvps9"><span class="rvts6">string text = "текст";</span></p>
+<p class="rvps9"><span class="rvts6">await tester.AssertNotNullAsync(text);</span></p>
+<p class="rvps9"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
 
 	</div>
 	

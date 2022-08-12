@@ -3,7 +3,7 @@
 <html>
 	
 <head>
-	<title>TestStopAsync</title>
+	<title>SendMsgToMailAsync</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="generator" content="HelpNDoc Personal Edition 7.7.0.519">
 	<meta name="description" content="" /> 
@@ -40,7 +40,7 @@
 				{
 					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
 					{
-						top.FrameTOC.SelectTocItem("TestStopAsync");
+						top.FrameTOC.SelectTocItem("SendMsgToMailAsync");
 						bTocSelected = true;
 					}
 					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
@@ -59,11 +59,11 @@
 	
 		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">TestStopAsync</h1>
+				<h1 id="topic_header_text">SendMsgToMailAsync</h1>
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="Tester.html">Класс: Tester</a> &rsaquo;&rsaquo; <a href="Newtopic9.html">Методы для подготовки и завершения тестирования</a> &rsaquo;&rsaquo; 
+					<a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="Tester.html">Класс: Tester</a> &rsaquo;&rsaquo; <a href="emailmessage.html">Методы для отправки email и message</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -71,15 +71,15 @@
 			<div id="topic_header_nav">
 				
 				
-				<a href="Newtopic9.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				<a href="emailmessage.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
 				
 				
-				<a href="TestEndAsync.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="emailmessage.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
-				<a href="GetTestResult.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="SendMsgToTelegramAsync.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,14 +90,21 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps9"><span class="rvts29">TestStopAsync</span></p>
-<p class="rvps9"><span class="rvts31">Описание</span><span class="rvts6">: метод принудительно останавливает процесс тестирования</span></p>
-<p class="rvps9"><span class="rvts31">Синтаксис</span><span class="rvts6">: TestStopAsync()</span></p>
+<p class="rvps9"><span class="rvts29">SendMsgToMailAsync</span></p>
+<p class="rvps9"><span class="rvts31">Описание</span><span class="rvts6">: метод отправляет письмо на почту</span></p>
+<p class="rvps9"><span class="rvts31">Синтаксис</span><span class="rvts6">: SendMsgToMailAsync(string subject, string body)</span></p>
 <p class="rvps9"><span class="rvts30"><br/></span></p>
 <p class="rvps9"><span class="rvts31">Пример</span><span class="rvts30">:</span></p>
-<p class="rvps9"><span class="rvts6">await tester.TestStopAsync();</span></p>
+<p class="rvps9"><span class="rvts6">Tester tester = new Tester(browserForm);</span></p>
+<p class="rvps9"><span class="rvts6">await tester.TestBeginAsync();</span></p>
+<p class="rvps9"><span class="rvts6">...</span></p>
+<p class="rvps9"><span class="rvts6">await tester.TestEndAsync();</span></p>
+<p class="rvps9"><span class="rvts6">if(tester.GetTestResult() == Tester.PASSED)&nbsp;</span></p>
+<p class="rvps9"><span class="rvts6">{&nbsp;</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">await tester.SendMsgToMailAsync("Тестовое сообщение", "Тест завершился успешно");</span></p>
+<p class="rvps9"><span class="rvts6">}</span></p>
 <p class="rvps9"><span class="rvts6"></span><span class="rvts6"></span></p>
-<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour">Easily create Qt Help files</a></p>
+<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com">Free EPub and documentation generator</a></p>
 
 	</div>
 	
