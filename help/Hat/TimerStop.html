@@ -3,7 +3,7 @@
 <html>
 	
 <head>
-	<title>BrowserEnableSendMailAsync</title>
+	<title>TimerStop</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="generator" content="HelpNDoc Personal Edition 7.7.0.519">
 	<meta name="description" content="" /> 
@@ -40,7 +40,7 @@
 				{
 					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
 					{
-						top.FrameTOC.SelectTocItem("BrowserEnableSendMailAsync");
+						top.FrameTOC.SelectTocItem("TimerStop");
 						bTocSelected = true;
 					}
 					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
@@ -59,11 +59,11 @@
 	
 		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">BrowserEnableSendMailAsync</h1>
+				<h1 id="topic_header_text">TimerStop</h1>
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="Tester.html">Класс: Tester</a> &rsaquo;&rsaquo; <a href="Newtopic7.html">Методы для работы с браузером</a> &rsaquo;&rsaquo; 
+					<a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="Tester.html">Класс: Tester</a> &rsaquo;&rsaquo; <a href="Newtopic28.html">Методы для замера затраченного времени</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -71,15 +71,15 @@
 			<div id="topic_header_nav">
 				
 				
-				<a href="Newtopic7.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				<a href="Newtopic28.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
 				
 				
-				<a href="BrowserCloseAsync.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="TimerStart.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
-				<a href="BrowserFullScreenAsync.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="emailmessage.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,19 +90,19 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps9"><span class="rvts29">BrowserEnableSendMailAsync</span></p>
-<p class="rvps9"><span class="rvts31">Описание</span><span class="rvts6">: метод включает опцию отправки отчета на почту в случае провала в работе автотеста</span></p>
-<p class="rvps9"><span class="rvts31">Синтаксис</span><span class="rvts6">: BrowserEnableSendMailAsync(bool byFailure = true, bool bySuccess = true)</span></p>
+<p class="rvps9"><span class="rvts29">TimerStop</span></p>
+<p class="rvps9"><span class="rvts31">Описание</span><span class="rvts6">: метод завершает отсчет времени и возвращает значение TimeSpan с результатом (например 7,132157 что значит 7 секунд и 132157 миллисекунд)</span></p>
+<p class="rvps9"><span class="rvts31">Синтаксис</span><span class="rvts6">: TimerStop(DateTime start)</span></p>
 <p class="rvps9"><span class="rvts30"><br/></span></p>
 <p class="rvps9"><span class="rvts31">Пример</span><span class="rvts30">:</span></p>
 <p class="rvps9"><span class="rvts6">Tester tester = new Tester(browserForm);</span></p>
-<p class="rvps9"><span class="rvts6">await tester.BrowserEnableSendMailAsync(true, false); // только в случае провала</span></p>
-<p class="rvps9"><span class="rvts6">await tester.BrowserEnableSendMailAsync(false, true); // только в случае успеха</span></p>
-<p class="rvps9"><span class="rvts6">await tester.BrowserEnableSendMailAsync(); // в обоих случаях</span></p>
+<p class="rvps9"><span class="rvts6">DateTime start = await tester.TimerStart();</span></p>
 <p class="rvps9"><span class="rvts6">await tester.TestBeginAsync();</span></p>
 <p class="rvps9"><span class="rvts6">...</span></p>
-<p class="rvps9"><span class="rvts6">await tester.TestEndAsync();</span><span class="rvts6"></span></p>
-<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpauthoringsoftware.com">What is a Help Authoring tool?</a></p>
+<p class="rvps9"><span class="rvts6">await tester.TestEndAsync();</span></p>
+<p class="rvps9"><span class="rvts6">TimeSpan result = await tester.TimerStop(start);</span></p>
+<p class="rvps9"><span class="rvts6">tester.ConsoleMsg("Time " + result.TotalSeconds);</span><span class="rvts6"></span></p>
+<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/help-authoring-tool">Create HTML Help, DOC, PDF and print manuals from 1 single source</a></p>
 
 	</div>
 	
