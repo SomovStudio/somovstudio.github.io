@@ -3,7 +3,7 @@
 <html>
 	
 <head>
-	<title>WaitNotVisibleElementAsync</title>
+	<title>WaitElementInDomAsync</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="generator" content="HelpNDoc Personal Edition 7.7.0.519">
 	<meta name="description" content="" /> 
@@ -40,7 +40,7 @@
 				{
 					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
 					{
-						top.FrameTOC.SelectTocItem("WaitNotVisibleElementAsync");
+						top.FrameTOC.SelectTocItem("WaitElementInDomAsync");
 						bTocSelected = true;
 					}
 					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
@@ -59,7 +59,7 @@
 	
 		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">WaitNotVisibleElementAsync</h1>
+				<h1 id="topic_header_text">WaitElementInDomAsync</h1>
 				
 				
 				<div id="topic_breadcrumb">
@@ -75,11 +75,11 @@
 				
 				
 				
-				<a href="WaitElementNotDomAsync.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="WaitAsync.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
-				<a href="WaitNotVisibleElementByClassAsyn.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="WaitElementNotDomAsync.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,17 +90,15 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps9"><span class="rvts29">WaitNotVisibleElementAsync</span></p>
-<p class="rvps9"><span class="rvts31">Описание</span><span class="rvts6">: метод выполняет временную остановку выполнения теста на указанное количество секунд и ждет когда &nbsp;запрашиваемый элемент перестанет отображаеться&nbsp;</span></p>
-<p class="rvps9"><span class="rvts31">Синтаксис</span><span class="rvts6">: WaitNotVisibleElementAsync(string by, string locator, int sec)</span></p>
+<p class="rvps9"><span class="rvts29">WaitElementInDomAsync</span></p>
+<p class="rvps9"><span class="rvts31">Описание</span><span class="rvts6">: метод выполняет временную остановку выполнения теста на указанное количество секунд и ждет когда запрашиваемый элемент появится в DOM</span></p>
+<p class="rvps9"><span class="rvts31">Синтаксис</span><span class="rvts6">: WaitElementInDomAsync(string by, string locator, int sec)</span></p>
 <p class="rvps9"><span class="rvts30"><br/></span></p>
 <p class="rvps9"><span class="rvts31">Пример</span><span class="rvts30">:</span></p>
-<p class="rvps9"><span class="rvts6">await tester.WaitNotVisibleElementAsync(Tester.BY_CSS, "div[id='result']", 2);</span></p>
-<p class="rvps9"><span class="rvts6"><br/></span></p>
-<p class="rvps9"><span class="rvts6">await tester.WaitNotVisibleElementAsync(Tester.BY_XPATH, "//div[@id='result']", 2);</span></p>
-<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">await tester.WaitElementInDomAsync(Tester.BY_XPATH, "//div[@id='result']", 5);</span></p>
+<p class="rvps9"><span class="rvts6">await tester.WaitElementInDomAsync(Tester.BY_CSS, "#result", 5);</span></p>
 <p class="rvps9"><span class="rvts6"></span><span class="rvts6"></span></p>
-<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com">Free HTML Help documentation generator</a></p>
+<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpauthoringsoftware.com">What is a Help Authoring tool?</a></p>
 
 	</div>
 	
