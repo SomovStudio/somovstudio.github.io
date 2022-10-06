@@ -75,7 +75,11 @@
 				
 				
 				
-				<a href="JavaScript1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="Newtopic34.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="JavaScript1.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -86,18 +90,18 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps2"><span class="rvts16">Группа автотестов</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Вы можете организовать группу автотестов и запустить их одним автотестом.</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Для этого нужно создать папку в которой будут храниться автотесты (например папка group1)</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts17">Группа автотестов</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Вы можете организовать группу автотестов и запустить их одним автотестом.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Для этого нужно создать папку в которой будут храниться автотесты (например папка group1)</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem72.png"></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Далее необходимо описать несколько тестов и поместить их в папку group1.</span></p>
-<p class="rvps2"><span class="rvts16">Обратите внимание:</span><span class="rvts6"> у тестов функция Main должна быть объявлена как Task</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">первый файл ExampleTest3.cs</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Далее необходимо описать несколько тестов и поместить их в папку group1.</span></p>
+<p class="rvps2"><span class="rvts17">Обратите внимание:</span><span class="rvts12"> у тестов функция Main должна быть объявлена как Task</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">первый файл ExampleTest3.cs</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <div class="rvps2">
 <table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
@@ -108,75 +112,75 @@
  </tr>
  <tr valign="top">
   <td style="border-color: #000000; border-style: solid; padding: 1px;">
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Collections</span><span class="rvts21">.</span><span class="rvts19">Generic</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">ComponentModel</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Windows</span><span class="rvts21">.</span><span class="rvts19">Forms</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Threading</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Threading</span><span class="rvts21">.</span><span class="rvts19">Tasks</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">IO</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Data</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Drawing</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Linq</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Text</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Text</span><span class="rvts21">.</span><span class="rvts19">RegularExpressions</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Net</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Net</span><span class="rvts21">.</span><span class="rvts19">Http</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Net</span><span class="rvts21">.</span><span class="rvts19">Http</span><span class="rvts21">.</span><span class="rvts19">Headers</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Reflection</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">Newtonsoft</span><span class="rvts21">.</span><span class="rvts19">Json</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">HatFramework</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts22">namespace </span><span class="rvts19">Hat</span></p>
-   <p class="rvps2"><span class="rvts21">{</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts23">class </span><span class="rvts19">TestJson</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts37">int </span><span class="rvts19">userId </span><span class="rvts21">{ </span><span class="rvts38">get</span><span class="rvts21">; </span><span class="rvts38">set</span><span class="rvts21">; }</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts37">int </span><span class="rvts19">id </span><span class="rvts21">{ </span><span class="rvts38">get</span><span class="rvts21">; </span><span class="rvts38">set</span><span class="rvts21">; }</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts23">string </span><span class="rvts19">title </span><span class="rvts21">{ </span><span class="rvts38">get</span><span class="rvts21">; </span><span class="rvts38">set</span><span class="rvts21">; }</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts23">string </span><span class="rvts19">body </span><span class="rvts21">{ </span><span class="rvts38">get</span><span class="rvts21">; </span><span class="rvts38">set</span><span class="rvts21">; }</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp;&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts23">class </span><span class="rvts19">ExampleTest3</span></p>
-   <p class="rvps2"><span class="rvts19">&nbsp; &nbsp; </span><span class="rvts21">{</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">Tester tester</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async </span><span class="rvts41">Task</span><span class="rvts19"> </span><span class="rvts20">Main</span><span class="rvts21">(</span><span class="rvts19">Form browserWindow</span><span class="rvts21">)</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">tester </span><span class="rvts21">= </span><span class="rvts24">new </span><span class="rvts20">Tester</span><span class="rvts21">(</span><span class="rvts19">browserWindow</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await </span><span class="rvts20">setUp</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await </span><span class="rvts20">test</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await </span><span class="rvts20">tearDown</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async Task </span><span class="rvts20">setUp</span><span class="rvts21">()</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">BrowserFullScreenAsync</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async Task </span><span class="rvts20">test</span><span class="rvts21">()</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">TestBeginAsync</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">GoToUrlAsync</span><span class="rvts21">(</span><span class="rvts25">"https://jsonplaceholder.typicode.com"</span><span class="rvts21">, </span><span class="rvts26">5</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts23">string </span><span class="rvts19">result </span><span class="rvts21">= </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">RestGetAsync</span><span class="rvts21">(</span><span class="rvts25">@"https://jsonplaceholder.typicode.com/posts/1/"</span><span class="rvts21">, </span><span class="rvts25">"UTF-8"</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">TestJson dataJson </span><span class="rvts21">= </span><span class="rvts19">JsonConvert</span><span class="rvts21">.</span><span class="rvts19">DeserializeObject</span><span class="rvts21">&lt;</span><span class="rvts19">TestJson</span><span class="rvts21">&gt;(</span><span class="rvts19">result</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">tester</span><span class="rvts21">.</span><span class="rvts20">AssertEqualsAsync</span><span class="rvts21">(</span><span class="rvts25">"1"</span><span class="rvts21">, </span><span class="rvts19">dataJson</span><span class="rvts21">.</span><span class="rvts19">userId</span><span class="rvts21">.</span><span class="rvts20">ToString</span><span class="rvts21">());</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">TestEndAsync</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async Task </span><span class="rvts20">tearDown</span><span class="rvts21">()</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">// await tester.BrowserCloseAsync();</span></p>
-   <p class="rvps2"><span class="rvts40">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts21">}</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21">}</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Collections</span><span class="rvts22">.</span><span class="rvts20">Generic</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">ComponentModel</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Windows</span><span class="rvts22">.</span><span class="rvts20">Forms</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">.</span><span class="rvts20">Tasks</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">IO</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Data</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Drawing</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Linq</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">.</span><span class="rvts20">RegularExpressions</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">.</span><span class="rvts20">Headers</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Reflection</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">Newtonsoft</span><span class="rvts22">.</span><span class="rvts20">Json</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">HatFramework</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts26">namespace </span><span class="rvts20">Hat</span></p>
+   <p class="rvps2"><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">class </span><span class="rvts20">TestJson</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts39">int </span><span class="rvts20">userId </span><span class="rvts22">{ </span><span class="rvts40">get</span><span class="rvts22">; </span><span class="rvts40">set</span><span class="rvts22">; }</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts39">int </span><span class="rvts20">id </span><span class="rvts22">{ </span><span class="rvts40">get</span><span class="rvts22">; </span><span class="rvts40">set</span><span class="rvts22">; }</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">string </span><span class="rvts20">title </span><span class="rvts22">{ </span><span class="rvts40">get</span><span class="rvts22">; </span><span class="rvts40">set</span><span class="rvts22">; }</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">string </span><span class="rvts20">body </span><span class="rvts22">{ </span><span class="rvts40">get</span><span class="rvts22">; </span><span class="rvts40">set</span><span class="rvts22">; }</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">class </span><span class="rvts20">ExampleTest3</span></p>
+   <p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">Tester tester</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async </span><span class="rvts41">Task</span><span class="rvts20"> </span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester </span><span class="rvts22">= </span><span class="rvts28">new </span><span class="rvts21">Tester</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">setUp</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">test</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">tearDown</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">setUp</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserFullScreenAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestBeginAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">GoToUrlAsync</span><span class="rvts22">(</span><span class="rvts29">"https://jsonplaceholder.typicode.com"</span><span class="rvts22">, </span><span class="rvts30">5</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts27">string </span><span class="rvts20">result </span><span class="rvts22">= </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">RestGetAsync</span><span class="rvts22">(</span><span class="rvts29">@"https://jsonplaceholder.typicode.com/posts/1/"</span><span class="rvts22">, </span><span class="rvts29">"UTF-8"</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">TestJson dataJson </span><span class="rvts22">= </span><span class="rvts20">JsonConvert</span><span class="rvts22">.</span><span class="rvts20">DeserializeObject</span><span class="rvts22">&lt;</span><span class="rvts20">TestJson</span><span class="rvts22">&gt;(</span><span class="rvts20">result</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester</span><span class="rvts22">.</span><span class="rvts21">AssertEqualsAsync</span><span class="rvts22">(</span><span class="rvts29">"1"</span><span class="rvts22">, </span><span class="rvts20">dataJson</span><span class="rvts22">.</span><span class="rvts20">userId</span><span class="rvts22">.</span><span class="rvts21">ToString</span><span class="rvts22">());</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestEndAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">tearDown</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts38">// await tester.BrowserCloseAsync();</span></p>
+   <p class="rvps2"><span class="rvts38">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts22">}</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22">}</span></p>
   </td>
  </tr>
 </table>
 </div>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">и второй файл ExampleTest4.cs</span></p>
+<p class="rvps2"><span class="rvts12">и второй файл ExampleTest4.cs</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <div class="rvps2">
 <table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
@@ -187,68 +191,68 @@
  </tr>
  <tr valign="top">
   <td style="border-color: #000000; border-style: solid; padding: 1px;">
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Collections</span><span class="rvts21">.</span><span class="rvts19">Generic</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">ComponentModel</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Windows</span><span class="rvts21">.</span><span class="rvts19">Forms</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Threading</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Threading</span><span class="rvts21">.</span><span class="rvts19">Tasks</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">IO</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Data</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Drawing</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Linq</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Text</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Text</span><span class="rvts21">.</span><span class="rvts19">RegularExpressions</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Net</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Net</span><span class="rvts21">.</span><span class="rvts19">Http</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Net</span><span class="rvts21">.</span><span class="rvts19">Http</span><span class="rvts21">.</span><span class="rvts19">Headers</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Reflection</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">Newtonsoft</span><span class="rvts21">.</span><span class="rvts19">Json</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">HatFramework</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts22">namespace </span><span class="rvts19">Hat</span></p>
-   <p class="rvps2"><span class="rvts21">{</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts23">class </span><span class="rvts19">ExampleTest4</span></p>
-   <p class="rvps2"><span class="rvts19">&nbsp; &nbsp; </span><span class="rvts21">{</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">Tester tester</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async </span><span class="rvts41">Task</span><span class="rvts19"> </span><span class="rvts20">Main</span><span class="rvts21">(</span><span class="rvts19">Form browserWindow</span><span class="rvts21">)</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">tester </span><span class="rvts21">= </span><span class="rvts24">new </span><span class="rvts20">Tester</span><span class="rvts21">(</span><span class="rvts19">browserWindow</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await </span><span class="rvts20">setUp</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await </span><span class="rvts20">test</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await </span><span class="rvts20">tearDown</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async Task </span><span class="rvts20">setUp</span><span class="rvts21">()</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">BrowserFullScreenAsync</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async Task </span><span class="rvts20">test</span><span class="rvts21">()</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">TestBeginAsync</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">GoToUrlAsync</span><span class="rvts21">(</span><span class="rvts25">"https://somovstudio.github.io/test.html"</span><span class="rvts21">, </span><span class="rvts26">5</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts23">string </span><span class="rvts19">script </span><span class="rvts21">= </span><span class="rvts25">@"(function(){ var element = document.getElementsByTagName('h2')[0]; return element.outerText; }());"</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts23">string </span><span class="rvts19">actual </span><span class="rvts21">= </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">ExecuteJavaScriptAsync</span><span class="rvts21">(</span><span class="rvts19">script</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts23">string </span><span class="rvts19">expected </span><span class="rvts21">= </span><span class="rvts25">"\"Авторизация\""</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">AssertEqualsAsync</span><span class="rvts21">(</span><span class="rvts19">expected</span><span class="rvts21">, </span><span class="rvts19">actual</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">TestEndAsync</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async Task </span><span class="rvts20">tearDown</span><span class="rvts21">()</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts40">// await tester.BrowserCloseAsync();</span></p>
-   <p class="rvps2"><span class="rvts40">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts21">}</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21">}</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Collections</span><span class="rvts22">.</span><span class="rvts20">Generic</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">ComponentModel</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Windows</span><span class="rvts22">.</span><span class="rvts20">Forms</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">.</span><span class="rvts20">Tasks</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">IO</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Data</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Drawing</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Linq</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">.</span><span class="rvts20">RegularExpressions</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">.</span><span class="rvts20">Headers</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Reflection</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">Newtonsoft</span><span class="rvts22">.</span><span class="rvts20">Json</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">HatFramework</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts26">namespace </span><span class="rvts20">Hat</span></p>
+   <p class="rvps2"><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">class </span><span class="rvts20">ExampleTest4</span></p>
+   <p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">Tester tester</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async </span><span class="rvts41">Task</span><span class="rvts20"> </span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester </span><span class="rvts22">= </span><span class="rvts28">new </span><span class="rvts21">Tester</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">setUp</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">test</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">tearDown</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">setUp</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserFullScreenAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestBeginAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">GoToUrlAsync</span><span class="rvts22">(</span><span class="rvts29">"https://somovstudio.github.io/test.html"</span><span class="rvts22">, </span><span class="rvts30">5</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts27">string </span><span class="rvts20">script </span><span class="rvts22">= </span><span class="rvts29">@"(function(){ var element = document.getElementsByTagName('h2')[0]; return element.outerText; }());"</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts27">string </span><span class="rvts20">actual </span><span class="rvts22">= </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">ExecuteJavaScriptAsync</span><span class="rvts22">(</span><span class="rvts20">script</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts27">string </span><span class="rvts20">expected </span><span class="rvts22">= </span><span class="rvts29">"Авторизация"</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">AssertEqualsAsync</span><span class="rvts22">(</span><span class="rvts20">expected</span><span class="rvts22">, </span><span class="rvts20">actual</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestEndAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">tearDown</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts38">// await tester.BrowserCloseAsync();</span></p>
+   <p class="rvps2"><span class="rvts38">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts22">}</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22">}</span></p>
   </td>
  </tr>
 </table>
 </div>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Теперь нужно создать объединяющий автотест GroupTests1.cs который будет вызывает другие автотесты.</span></p>
+<p class="rvps2"><span class="rvts12">Теперь нужно создать объединяющий автотест GroupTests1.cs который будет вызывает другие автотесты.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <div class="rvps2">
 <table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
@@ -259,96 +263,96 @@
  </tr>
  <tr valign="top">
   <td style="border-color: #000000; border-style: solid; padding: 1px;">
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Collections</span><span class="rvts21">.</span><span class="rvts19">Generic</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">ComponentModel</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Windows</span><span class="rvts21">.</span><span class="rvts19">Forms</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Threading</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Threading</span><span class="rvts21">.</span><span class="rvts19">Tasks</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">IO</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Data</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Drawing</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Linq</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Text</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Text</span><span class="rvts21">.</span><span class="rvts19">RegularExpressions</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Net</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Net</span><span class="rvts21">.</span><span class="rvts19">Http</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Net</span><span class="rvts21">.</span><span class="rvts19">Http</span><span class="rvts21">.</span><span class="rvts19">Headers</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Reflection</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">Newtonsoft</span><span class="rvts21">.</span><span class="rvts19">Json</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">HatFramework</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts22">namespace </span><span class="rvts19">Hat</span></p>
-   <p class="rvps2"><span class="rvts21">{</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts23">class </span><span class="rvts19">GroupTests1</span></p>
-   <p class="rvps2"><span class="rvts19">&nbsp; &nbsp; </span><span class="rvts21">{</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">Tester tester</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async </span><span class="rvts23">void </span><span class="rvts20">Main</span><span class="rvts21">(</span><span class="rvts19">Form browserWindow</span><span class="rvts21">)</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">tester </span><span class="rvts21">= </span><span class="rvts24">new </span><span class="rvts20">Tester</span><span class="rvts21">(</span><span class="rvts19">browserWindow</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await </span><span class="rvts20">setUp</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await </span><span class="rvts20">test1</span><span class="rvts21">(</span><span class="rvts19">browserWindow</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await </span><span class="rvts20">test2</span><span class="rvts21">(</span><span class="rvts19">browserWindow</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await </span><span class="rvts20">tearDown</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async Task </span><span class="rvts20">setUp</span><span class="rvts21">()</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">BrowserFullScreenAsync</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async Task </span><span class="rvts20">test1</span><span class="rvts21">(</span><span class="rvts19">Form browserWindow</span><span class="rvts21">)</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">tester</span><span class="rvts21">.</span><span class="rvts20">SendMessage</span><span class="rvts21">(</span><span class="rvts25">"Автотест ExampleTest3"</span><span class="rvts21">, </span><span class="rvts25">""</span><span class="rvts21">, </span><span class="rvts25">"Файл: ExampleTest3.cs"</span><span class="rvts21">, </span><span class="rvts19">Tester</span><span class="rvts21">.</span><span class="rvts19">IMAGE_STATUS_MESSAGE</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">ExampleTest3 exampleTest3 </span><span class="rvts21">= </span><span class="rvts24">new </span><span class="rvts20">ExampleTest3</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await exampleTest3</span><span class="rvts21">.</span><span class="rvts20">Main</span><span class="rvts21">(</span><span class="rvts19">browserWindow</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async Task </span><span class="rvts20">test2</span><span class="rvts21">(</span><span class="rvts19">Form browserWindow</span><span class="rvts21">)</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">tester</span><span class="rvts21">.</span><span class="rvts20">SendMessage</span><span class="rvts21">(</span><span class="rvts25">"Автотест ExampleTest4"</span><span class="rvts21">, </span><span class="rvts25">""</span><span class="rvts21">, </span><span class="rvts25">"Файл: ExampleTest4.cs"</span><span class="rvts21">, </span><span class="rvts19">Tester</span><span class="rvts21">.</span><span class="rvts19">IMAGE_STATUS_MESSAGE</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">ExampleTest4 exampleTest4 </span><span class="rvts21">= </span><span class="rvts24">new </span><span class="rvts20">ExampleTest4</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await exampleTest4</span><span class="rvts21">.</span><span class="rvts20">Main</span><span class="rvts21">(</span><span class="rvts19">browserWindow</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async Task </span><span class="rvts20">tearDown</span><span class="rvts21">()</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">BrowserCloseAsync</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21">}</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Collections</span><span class="rvts22">.</span><span class="rvts20">Generic</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">ComponentModel</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Windows</span><span class="rvts22">.</span><span class="rvts20">Forms</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">.</span><span class="rvts20">Tasks</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">IO</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Data</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Drawing</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Linq</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">.</span><span class="rvts20">RegularExpressions</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">.</span><span class="rvts20">Headers</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Reflection</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">Newtonsoft</span><span class="rvts22">.</span><span class="rvts20">Json</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">HatFramework</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts26">namespace </span><span class="rvts20">Hat</span></p>
+   <p class="rvps2"><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">class </span><span class="rvts20">GroupTests1</span></p>
+   <p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">Tester tester</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async </span><span class="rvts27">void </span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester </span><span class="rvts22">= </span><span class="rvts28">new </span><span class="rvts21">Tester</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">setUp</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">test1</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">test2</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">tearDown</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">setUp</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserFullScreenAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test1</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester</span><span class="rvts22">.</span><span class="rvts21">SendMessage</span><span class="rvts22">(</span><span class="rvts29">"Автотест ExampleTest3"</span><span class="rvts22">, </span><span class="rvts29">""</span><span class="rvts22">, </span><span class="rvts29">"Файл: ExampleTest3.cs"</span><span class="rvts22">, </span><span class="rvts20">Tester</span><span class="rvts22">.</span><span class="rvts20">IMAGE_STATUS_MESSAGE</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">ExampleTest3 exampleTest3 </span><span class="rvts22">= </span><span class="rvts28">new </span><span class="rvts21">ExampleTest3</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await exampleTest3</span><span class="rvts22">.</span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test2</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester</span><span class="rvts22">.</span><span class="rvts21">SendMessage</span><span class="rvts22">(</span><span class="rvts29">"Автотест ExampleTest4"</span><span class="rvts22">, </span><span class="rvts29">""</span><span class="rvts22">, </span><span class="rvts29">"Файл: ExampleTest4.cs"</span><span class="rvts22">, </span><span class="rvts20">Tester</span><span class="rvts22">.</span><span class="rvts20">IMAGE_STATUS_MESSAGE</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">ExampleTest4 exampleTest4 </span><span class="rvts22">= </span><span class="rvts28">new </span><span class="rvts21">ExampleTest4</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await exampleTest4</span><span class="rvts22">.</span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">tearDown</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserCloseAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22">}</span></p>
   </td>
  </tr>
 </table>
 </div>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Как вы видите автотесты ExampleTest3.cs и ExampleTest4.cs будут последовательно вызываться в методах test1 и test2.</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Запустите автотест GroupTests1.cs</span></p>
+<p class="rvps2"><span class="rvts12">Как вы видите автотесты ExampleTest3.cs и ExampleTest4.cs будут последовательно вызываться в методах test1 и test2.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Запустите автотест GroupTests1.cs</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem73.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">В результат на вкладке "Тест" будет отражен весь ход последовательного выполнения всех автотестов шаг за шагом.</span></p>
+<p class="rvps2"><span class="rvts12">В результат на вкладке "Тест" будет отражен весь ход последовательного выполнения всех автотестов шаг за шагом.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem74.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">В случае если какой-то из автотестов будет выполнен неудачно, проверка всё равно продолжится пока не будут пройдены все автотесты</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts12">В случае если какой-то из автотестов будет выполнен неудачно, проверка всё равно продолжится пока не будут пройдены все автотесты</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem75.png"></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">при этом общий результат работы группового автотеста GroupTests1.cs будет считаться провальным.</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">при этом общий результат работы группового автотеста GroupTests1.cs будет считаться провальным.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem76.png"></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">так же будет создан отчет о полном прохождении всех тестов</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">так же будет создан отчет о полном прохождении всех тестов</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem77.png"></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem78.png"></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
-<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour">Easily create PDF Help documents</a></p>
+<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/feature-tour">Easily create PDF Help documents</a></p>
 
 	</div>
 	

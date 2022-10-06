@@ -75,11 +75,11 @@
 				
 				
 				
-				<a href="Newtopic34.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="JavaScript1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
-				<a href="JavaScript1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="alertpromptconfirm.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,37 +90,37 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps2"><span class="rvts16">Обработка Json данных с помощью Newtonsoft</span></p>
+<p class="rvps2"><span class="rvts17">Обработка Json данных с помощью Newtonsoft</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Для работы с Json данными была добавлена библиотека Newtonsoft.Json</span></p>
+<p class="rvps2"><span class="rvts12">Официальная страница: </span><a class="rvts13" href="https://www.newtonsoft.com/json" target="_blank">https://www.newtonsoft.com/json</a></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">В качестве примера воспользоваемся Rest запросом к адресу </span><a class="rvts13" href="https://jsonplaceholder.typicode.com/posts/1/" target="_blank">https://jsonplaceholder.typicode.com/posts/1/</a></p>
+<p class="rvps2"><span class="rvts12">чтобы получить тестовые данные в Json формате:</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Для работы с Json данными была добавлена библиотека Newtonsoft.Json</span></p>
-<p class="rvps2"><span class="rvts6">Официальная страница: </span><a class="rvts13" href="https://www.newtonsoft.com/json" target="_blank">https://www.newtonsoft.com/json</a></p>
+<p class="rvps2"><span class="rvts42">{ "userId": 1, "id": 1, "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit", "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto" }</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">В качестве примера воспользоваемся Rest запросом к адресу </span><a class="rvts13" href="https://jsonplaceholder.typicode.com/posts/1/" target="_blank">https://jsonplaceholder.typicode.com/posts/1/</a></p>
-<p class="rvps2"><span class="rvts6">чтобы получить тестовые данные в Json формате:</span></p>
+<p class="rvps2"><span class="rvts12">Далее с помощью Newtonsoft.Json выполним обработку полученного результата.</span></p>
+<p class="rvps2"><span class="rvts12">Сначала нужно описать отдельный класс в котором перечислены поля которые присутствуют в Json-е</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts39">{ "userId": 1, "id": 1, "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit", "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto" }</span></p>
+<p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">class </span><span class="rvts20">TestJson</span></p>
+<p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">{</span></p>
+<p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts39">int </span><span class="rvts20">userId </span><span class="rvts22">{ </span><span class="rvts40">get</span><span class="rvts22">; </span><span class="rvts40">set</span><span class="rvts22">; }</span></p>
+<p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts39">int </span><span class="rvts20">id </span><span class="rvts22">{ </span><span class="rvts40">get</span><span class="rvts22">; </span><span class="rvts40">set</span><span class="rvts22">; }</span></p>
+<p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">string </span><span class="rvts20">title </span><span class="rvts22">{ </span><span class="rvts40">get</span><span class="rvts22">; </span><span class="rvts40">set</span><span class="rvts22">; }</span></p>
+<p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">string </span><span class="rvts20">body </span><span class="rvts22">{ </span><span class="rvts40">get</span><span class="rvts22">; </span><span class="rvts40">set</span><span class="rvts22">; }</span></p>
+<p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">}</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Далее с помощью Newtonsoft.Json выполним обработку полученного результата.</span></p>
-<p class="rvps2"><span class="rvts6">Сначала нужно описать отдельный класс в котором перечислены поля которые присутствуют в Json-е</span></p>
+<p class="rvps2"><span class="rvts12">Выполняем Rest запрос и получаем Json данные</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts19">&nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts23">class </span><span class="rvts19">TestJson</span></p>
-<p class="rvps2"><span class="rvts19">&nbsp; &nbsp; </span><span class="rvts21">{</span></p>
-<p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts37">int </span><span class="rvts19">userId </span><span class="rvts21">{ </span><span class="rvts38">get</span><span class="rvts21">; </span><span class="rvts38">set</span><span class="rvts21">; }</span></p>
-<p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts37">int </span><span class="rvts19">id </span><span class="rvts21">{ </span><span class="rvts38">get</span><span class="rvts21">; </span><span class="rvts38">set</span><span class="rvts21">; }</span></p>
-<p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts23">string </span><span class="rvts19">title </span><span class="rvts21">{ </span><span class="rvts38">get</span><span class="rvts21">; </span><span class="rvts38">set</span><span class="rvts21">; }</span></p>
-<p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts23">string </span><span class="rvts19">body </span><span class="rvts21">{ </span><span class="rvts38">get</span><span class="rvts21">; </span><span class="rvts38">set</span><span class="rvts21">; }</span></p>
-<p class="rvps2"><span class="rvts19">&nbsp; &nbsp; </span><span class="rvts21">}</span></p>
+<p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts27">string </span><span class="rvts20">result </span><span class="rvts22">= </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">RestGetAsync</span><span class="rvts22">(</span><span class="rvts29">@"https://jsonplaceholder.typicode.com/posts/1/"</span><span class="rvts22">, </span><span class="rvts29">"UTF-8"</span><span class="rvts22">);</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Выполняем Rest запрос и получаем Json данные</span></p>
+<p class="rvps2"><span class="rvts12">Обрабатываем полученные данные и выводим их</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts19">&nbsp; &nbsp; </span><span class="rvts23">string </span><span class="rvts19">result </span><span class="rvts21">= </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">RestGetAsync</span><span class="rvts21">(</span><span class="rvts25">@"https://jsonplaceholder.typicode.com/posts/1/"</span><span class="rvts21">, </span><span class="rvts25">"UTF-8"</span><span class="rvts21">);</span></p>
+<p class="rvps2"><span class="rvts20">&nbsp; &nbsp; TestJson dataJson </span><span class="rvts22">= </span><span class="rvts20">JsonConvert</span><span class="rvts22">.</span><span class="rvts20">DeserializeObject</span><span class="rvts22">&lt;</span><span class="rvts20">TestJson</span><span class="rvts22">&gt;(</span><span class="rvts20">result</span><span class="rvts22">);</span></p>
+<p class="rvps2"><span class="rvts20">&nbsp; &nbsp; tester</span><span class="rvts22">.</span><span class="rvts21">ConsoleMsg</span><span class="rvts22">(</span><span class="rvts29">"UserID: " </span><span class="rvts22">+ </span><span class="rvts20">dataJson</span><span class="rvts22">.</span><span class="rvts20">userId</span><span class="rvts22">.</span><span class="rvts21">ToString</span><span class="rvts22">());</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Обрабатываем полученные данные и выводим их</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts19">&nbsp; &nbsp; TestJson dataJson </span><span class="rvts21">= </span><span class="rvts19">JsonConvert</span><span class="rvts21">.</span><span class="rvts19">DeserializeObject</span><span class="rvts21">&lt;</span><span class="rvts19">TestJson</span><span class="rvts21">&gt;(</span><span class="rvts19">result</span><span class="rvts21">);</span></p>
-<p class="rvps2"><span class="rvts19">&nbsp; &nbsp; tester</span><span class="rvts21">.</span><span class="rvts20">ConsoleMsg</span><span class="rvts21">(</span><span class="rvts25">"UserID: " </span><span class="rvts21">+ </span><span class="rvts19">dataJson</span><span class="rvts21">.</span><span class="rvts19">userId</span><span class="rvts21">.</span><span class="rvts20">ToString</span><span class="rvts21">());</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6">Полный пример описан в скрипте ниже:</span></p>
+<p class="rvps2"><span class="rvts12">Полный пример описан в скрипте ниже:</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <div class="rvps2">
 <table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
@@ -131,85 +131,83 @@
  </tr>
  <tr valign="top">
   <td style="border-color: #000000; border-style: solid; padding: 1px;">
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Collections</span><span class="rvts21">.</span><span class="rvts19">Generic</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">ComponentModel</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Windows</span><span class="rvts21">.</span><span class="rvts19">Forms</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Threading</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Threading</span><span class="rvts21">.</span><span class="rvts19">Tasks</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">IO</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Data</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Drawing</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Linq</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Text</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Text</span><span class="rvts21">.</span><span class="rvts19">RegularExpressions</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Net</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Net</span><span class="rvts21">.</span><span class="rvts19">Http</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Net</span><span class="rvts21">.</span><span class="rvts19">Http</span><span class="rvts21">.</span><span class="rvts19">Headers</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">System</span><span class="rvts21">.</span><span class="rvts19">Reflection</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">Newtonsoft</span><span class="rvts21">.</span><span class="rvts19">Json</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts22">using </span><span class="rvts19">HatFramework</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts22">namespace </span><span class="rvts19">Hat</span></p>
-   <p class="rvps2"><span class="rvts21">{</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts23">class </span><span class="rvts19">TestJson</span></p>
-   <p class="rvps2"><span class="rvts19">&nbsp; &nbsp; </span><span class="rvts21">{</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts37">int </span><span class="rvts19">userId </span><span class="rvts21">{ </span><span class="rvts38">get</span><span class="rvts21">; </span><span class="rvts38">set</span><span class="rvts21">; }</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts37">int </span><span class="rvts19">id </span><span class="rvts21">{ </span><span class="rvts38">get</span><span class="rvts21">; </span><span class="rvts38">set</span><span class="rvts21">; }</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts23">string </span><span class="rvts19">title </span><span class="rvts21">{ </span><span class="rvts38">get</span><span class="rvts21">; </span><span class="rvts38">set</span><span class="rvts21">; }</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts23">string </span><span class="rvts19">body </span><span class="rvts21">{ </span><span class="rvts38">get</span><span class="rvts21">; </span><span class="rvts38">set</span><span class="rvts21">; }</span></p>
-   <p class="rvps2"><span class="rvts19">&nbsp; &nbsp; </span><span class="rvts21">}</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp;&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts23">class </span><span class="rvts19">ExampleTest3</span></p>
-   <p class="rvps2"><span class="rvts19">&nbsp; &nbsp; </span><span class="rvts21">{</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">Tester tester</span><span class="rvts21">;</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async </span><span class="rvts23">void </span><span class="rvts20">Main</span><span class="rvts21">(</span><span class="rvts19">Form browserWindow</span><span class="rvts21">)</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">tester </span><span class="rvts21">= </span><span class="rvts24">new </span><span class="rvts20">Tester</span><span class="rvts21">(</span><span class="rvts19">browserWindow</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await </span><span class="rvts20">setUp</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await </span><span class="rvts20">test</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await </span><span class="rvts20">tearDown</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async Task </span><span class="rvts20">setUp</span><span class="rvts21">()</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">BrowserFullScreenAsync</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async Task </span><span class="rvts20">test</span><span class="rvts21">()</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">TestBeginAsync</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">GoToUrlAsync</span><span class="rvts21">(</span><span class="rvts25">"https://jsonplaceholder.typicode.com"</span><span class="rvts21">, </span><span class="rvts26">5</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts23">string </span><span class="rvts19">result </span><span class="rvts21">= </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">RestGetAsync</span><span class="rvts21">(</span><span class="rvts25">@"https://jsonplaceholder.typicode.com/posts/1/"</span><span class="rvts21">, </span><span class="rvts25">"UTF-8"</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">tester</span><span class="rvts21">.</span><span class="rvts20">ConsoleMsg</span><span class="rvts21">(</span><span class="rvts19">result</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">TestJson dataJson </span><span class="rvts21">= </span><span class="rvts19">JsonConvert</span><span class="rvts21">.</span><span class="rvts19">DeserializeObject</span><span class="rvts21">&lt;</span><span class="rvts19">TestJson</span><span class="rvts21">&gt;(</span><span class="rvts19">result</span><span class="rvts21">);</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">tester</span><span class="rvts21">.</span><span class="rvts20">ConsoleMsg</span><span class="rvts21">(</span><span class="rvts25">"UserID: " </span><span class="rvts21">+ </span><span class="rvts19">dataJson</span><span class="rvts21">.</span><span class="rvts19">userId</span><span class="rvts21">.</span><span class="rvts20">ToString</span><span class="rvts21">());</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">tester</span><span class="rvts21">.</span><span class="rvts20">ConsoleMsg</span><span class="rvts21">(</span><span class="rvts25">"ID: " </span><span class="rvts21">+ </span><span class="rvts19">dataJson</span><span class="rvts21">.</span><span class="rvts19">id</span><span class="rvts21">.</span><span class="rvts20">ToString</span><span class="rvts21">());</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">tester</span><span class="rvts21">.</span><span class="rvts20">ConsoleMsg</span><span class="rvts21">(</span><span class="rvts25">"Title: " </span><span class="rvts21">+ </span><span class="rvts19">dataJson</span><span class="rvts21">.</span><span class="rvts19">title</span><span class="rvts21">.</span><span class="rvts20">ToString</span><span class="rvts21">());</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">tester</span><span class="rvts21">.</span><span class="rvts20">ConsoleMsg</span><span class="rvts21">(</span><span class="rvts25">"Body: " </span><span class="rvts21">+ </span><span class="rvts19">dataJson</span><span class="rvts21">.</span><span class="rvts19">body</span><span class="rvts21">.</span><span class="rvts20">ToString</span><span class="rvts21">());</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">TestEndAsync</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts18">public </span><span class="rvts19">async Task </span><span class="rvts20">tearDown</span><span class="rvts21">()</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">await tester</span><span class="rvts21">.</span><span class="rvts20">BrowserCloseAsync</span><span class="rvts21">();</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21">&nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts21">}</span></p>
-   <p class="rvps2"><span class="rvts21"><br/></span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Collections</span><span class="rvts22">.</span><span class="rvts20">Generic</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">ComponentModel</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Windows</span><span class="rvts22">.</span><span class="rvts20">Forms</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">.</span><span class="rvts20">Tasks</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">IO</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Data</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Drawing</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Linq</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">.</span><span class="rvts20">RegularExpressions</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">.</span><span class="rvts20">Headers</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Reflection</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">Newtonsoft</span><span class="rvts22">.</span><span class="rvts20">Json</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">HatFramework</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts26">namespace </span><span class="rvts20">Hat</span></p>
+   <p class="rvps2"><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">class </span><span class="rvts20">TestJson</span></p>
+   <p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts39">int </span><span class="rvts20">userId </span><span class="rvts22">{ </span><span class="rvts40">get</span><span class="rvts22">; </span><span class="rvts40">set</span><span class="rvts22">; }</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts39">int </span><span class="rvts20">id </span><span class="rvts22">{ </span><span class="rvts40">get</span><span class="rvts22">; </span><span class="rvts40">set</span><span class="rvts22">; }</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">string </span><span class="rvts20">title </span><span class="rvts22">{ </span><span class="rvts40">get</span><span class="rvts22">; </span><span class="rvts40">set</span><span class="rvts22">; }</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">string </span><span class="rvts20">body </span><span class="rvts22">{ </span><span class="rvts40">get</span><span class="rvts22">; </span><span class="rvts40">set</span><span class="rvts22">; }</span></p>
+   <p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">}</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">class </span><span class="rvts20">ExampleTest3</span></p>
+   <p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">Tester tester</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async </span><span class="rvts27">void </span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester </span><span class="rvts22">= </span><span class="rvts28">new </span><span class="rvts21">Tester</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">setUp</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">test</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">tearDown</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">setUp</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserFullScreenAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestBeginAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">GoToUrlAsync</span><span class="rvts22">(</span><span class="rvts29">"https://jsonplaceholder.typicode.com"</span><span class="rvts22">, </span><span class="rvts30">5</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts27">string </span><span class="rvts20">result </span><span class="rvts22">= </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">RestGetAsync</span><span class="rvts22">(</span><span class="rvts29">@"https://jsonplaceholder.typicode.com/posts/1/"</span><span class="rvts22">, </span><span class="rvts29">"UTF-8"</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester</span><span class="rvts22">.</span><span class="rvts21">ConsoleMsg</span><span class="rvts22">(</span><span class="rvts20">result</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">TestJson dataJson </span><span class="rvts22">= </span><span class="rvts20">JsonConvert</span><span class="rvts22">.</span><span class="rvts20">DeserializeObject</span><span class="rvts22">&lt;</span><span class="rvts20">TestJson</span><span class="rvts22">&gt;(</span><span class="rvts20">result</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester</span><span class="rvts22">.</span><span class="rvts21">ConsoleMsg</span><span class="rvts22">(</span><span class="rvts29">"UserID: " </span><span class="rvts22">+ </span><span class="rvts20">dataJson</span><span class="rvts22">.</span><span class="rvts20">userId</span><span class="rvts22">.</span><span class="rvts21">ToString</span><span class="rvts22">());</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester</span><span class="rvts22">.</span><span class="rvts21">ConsoleMsg</span><span class="rvts22">(</span><span class="rvts29">"ID: " </span><span class="rvts22">+ </span><span class="rvts20">dataJson</span><span class="rvts22">.</span><span class="rvts20">id</span><span class="rvts22">.</span><span class="rvts21">ToString</span><span class="rvts22">());</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester</span><span class="rvts22">.</span><span class="rvts21">ConsoleMsg</span><span class="rvts22">(</span><span class="rvts29">"Title: " </span><span class="rvts22">+ </span><span class="rvts20">dataJson</span><span class="rvts22">.</span><span class="rvts20">title</span><span class="rvts22">.</span><span class="rvts21">ToString</span><span class="rvts22">());</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester</span><span class="rvts22">.</span><span class="rvts21">ConsoleMsg</span><span class="rvts22">(</span><span class="rvts29">"Body: " </span><span class="rvts22">+ </span><span class="rvts20">dataJson</span><span class="rvts22">.</span><span class="rvts20">body</span><span class="rvts22">.</span><span class="rvts21">ToString</span><span class="rvts22">());</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestEndAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">tearDown</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserCloseAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22">}</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
   </td>
  </tr>
 </table>
 </div>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
-<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create help files for the Qt Help Framework</a></p>
+<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create help files for the Qt Help Framework</a></p>
 
 	</div>
 	

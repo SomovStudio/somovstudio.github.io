@@ -90,30 +90,30 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps9"><span class="rvts29">BrowserGoForwardAsync</span></p>
-<p class="rvps9"><span class="rvts31">Описание</span><span class="rvts6">: метод навигации браузера выполняет действие вперед с указанным ожиданием в секундах</span></p>
-<p class="rvps9"><span class="rvts31">Синтаксис</span><span class="rvts6">: BrowserGoForwardAsync(int sec)</span></p>
-<p class="rvps9"><span class="rvts30"><br/></span></p>
-<p class="rvps9"><span class="rvts31">Пример</span><span class="rvts30">:</span></p>
-<p class="rvps9"><span class="rvts6">Tester tester = new Tester(browserForm);</span></p>
-<p class="rvps9"><span class="rvts6">await tester.TestBeginAsync();</span></p>
-<p class="rvps9"><span class="rvts6">await tester.GoToUrlAsync("https://www.yahoo.com/", 5);</span></p>
-<p class="rvps9"><span class="rvts6">string currentUrl = await tester.GetUrlAsync();</span></p>
-<p class="rvps9"><span class="rvts6">await tester.AssertEqualsAsync("https://www.yahoo.com/", currentUrl);</span></p>
-<p class="rvps9"><span class="rvts6"><br/></span></p>
-<p class="rvps9"><span class="rvts6">await tester.GoToUrlAsync("https://yandex.ru/", 5);</span></p>
-<p class="rvps9"><span class="rvts6">currentUrl = await tester.GetUrlAsync();</span></p>
-<p class="rvps9"><span class="rvts6">await tester.AssertEqualsAsync("https://yandex.ru/", currentUrl);</span></p>
-<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps9"><span class="rvts6">await tester.BrowserGoBackAsync(10);</span></p>
-<p class="rvps9"><span class="rvts6">currentUrl = await tester.GetUrlAsync();</span></p>
-<p class="rvps9"><span class="rvts6">await tester.AssertEqualsAsync("https://www.yahoo.com/", currentUrl);</span></p>
-<p class="rvps9"><span class="rvts6"><br/></span></p>
-<p class="rvps9"><span class="rvts6">await tester.BrowserGoForwardAsync(10);</span></p>
-<p class="rvps9"><span class="rvts6">currentUrl = await tester.GetUrlAsync();</span></p>
-<p class="rvps9"><span class="rvts6">await tester.AssertEqualsAsync("https://yandex.ru/", currentUrl);</span></p>
-<p class="rvps9"><span class="rvts6">await tester.TestEndAsync();</span><span class="rvts6"></span></p>
-<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+<p class="rvps9"><span class="rvts35">BrowserGoForwardAsync</span></p>
+<p class="rvps9"><span class="rvts34">Описание</span><span class="rvts12">: метод навигации браузера выполняет действие вперед с указанным ожиданием в секундах</span></p>
+<p class="rvps9"><span class="rvts34">Синтаксис</span><span class="rvts12">: BrowserGoForwardAsync(int sec)</span></p>
+<p class="rvps9"><span class="rvts33"><br/></span></p>
+<p class="rvps9"><span class="rvts34">Пример</span><span class="rvts33">:</span></p>
+<p class="rvps9"><span class="rvts12">Tester tester = new Tester(browserForm);</span></p>
+<p class="rvps9"><span class="rvts12">await tester.TestBeginAsync();</span></p>
+<p class="rvps9"><span class="rvts12">await tester.GoToUrlAsync("https://www.yahoo.com/", 5);</span></p>
+<p class="rvps9"><span class="rvts12">string currentUrl = await tester.GetUrlAsync();</span></p>
+<p class="rvps9"><span class="rvts12">await tester.AssertEqualsAsync("https://www.yahoo.com/", currentUrl);</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">await tester.GoToUrlAsync("https://yandex.ru/", 5);</span></p>
+<p class="rvps9"><span class="rvts12">currentUrl = await tester.GetUrlAsync();</span></p>
+<p class="rvps9"><span class="rvts12">await tester.AssertEqualsAsync("https://yandex.ru/", currentUrl);</span></p>
+<p class="rvps9"><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps9"><span class="rvts12">await tester.BrowserGoBackAsync(10);</span></p>
+<p class="rvps9"><span class="rvts12">currentUrl = await tester.GetUrlAsync();</span></p>
+<p class="rvps9"><span class="rvts12">await tester.AssertEqualsAsync("https://www.yahoo.com/", currentUrl);</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">await tester.BrowserGoForwardAsync(10);</span></p>
+<p class="rvps9"><span class="rvts12">currentUrl = await tester.GetUrlAsync();</span></p>
+<p class="rvps9"><span class="rvts12">await tester.AssertEqualsAsync("https://yandex.ru/", currentUrl);</span></p>
+<p class="rvps9"><span class="rvts12">await tester.TestEndAsync();</span><span class="rvts6"></span></p>
+<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
 
 	</div>
 	

@@ -90,34 +90,34 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps9"><span class="rvts29">RestGetAsync</span></p>
-<p class="rvps9"><span class="rvts31">Описание</span><span class="rvts6">: метод выполняет Get Rest запрос и получает результат в формате json</span></p>
-<p class="rvps9"><span class="rvts31">Синтаксис</span><span class="rvts6">: RestGetAsync(string url, string charset = "UTF-8")</span></p>
-<p class="rvps9"><span class="rvts30"><br/></span></p>
-<p class="rvps9"><span class="rvts31">Пример</span><span class="rvts30">:</span></p>
-<p class="rvps9"><span class="rvts6">string result = await tester.RestGetAsync("</span><a class="rvts33" href="https://jsonplaceholder.typicode.com/posts/1/">https://jsonplaceholder.typicode.com/posts/1/</a><span class="rvts6">");</span></p>
-<p class="rvps9"><span class="rvts6">tester.ConsoleMsg(result);</span></p>
-<p class="rvps9"><span class="rvts6"><br/></span></p>
-<p class="rvps9"><span class="rvts31">Данный метод использует стандартный подход</span><span class="rvts30">:</span></p>
-<p class="rvps9"><span class="rvts6">using System.Net;</span></p>
-<p class="rvps9"><span class="rvts6">using System.Net.Http;</span></p>
-<p class="rvps9"><span class="rvts6">using System.Net.Http.Headers;</span></p>
-<p class="rvps9"><span class="rvts6"><br/></span></p>
-<p class="rvps9"><span class="rvts6">Uri uri = new Uri(url);</span></p>
-<p class="rvps9"><span class="rvts6">HttpClient client = new HttpClient();</span></p>
-<p class="rvps9"><span class="rvts6">client.BaseAddress = uri;</span></p>
-<p class="rvps9"><span class="rvts6">client.DefaultRequestHeaders.Clear();</span></p>
-<p class="rvps9"><span class="rvts6">client.DefaultRequestHeaders.Accept.Clear();</span></p>
-<p class="rvps9"><span class="rvts6">client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));</span></p>
-<p class="rvps9"><span class="rvts6">client.DefaultRequestHeaders.Add("charset", "UTF-8");</span></p>
-<p class="rvps9"><span class="rvts6">client.DefaultRequestHeaders.Add("User-Agent", userAgent);</span></p>
-<p class="rvps9"><span class="rvts6">HttpResponseMessage response = await client.GetAsync(url);</span></p>
-<p class="rvps9"><span class="rvts6">if (response.IsSuccessStatusCode)</span></p>
-<p class="rvps9"><span class="rvts6">{</span></p>
-<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">return await response.Content.ReadAsStringAsync();</span></p>
-<p class="rvps9"><span class="rvts6">}</span></p>
-<p class="rvps9"><span class="rvts6"></span><span class="rvts6"></span></p>
-<p class="rvps6" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create cross-platform Qt Help files</a></p>
+<p class="rvps9"><span class="rvts35">RestGetAsync</span></p>
+<p class="rvps9"><span class="rvts34">Описание</span><span class="rvts12">: метод выполняет Get Rest запрос и получает результат в формате json</span></p>
+<p class="rvps9"><span class="rvts34">Синтаксис</span><span class="rvts12">: RestGetAsync(string url, string charset = "UTF-8")</span></p>
+<p class="rvps9"><span class="rvts33"><br/></span></p>
+<p class="rvps9"><span class="rvts34">Пример</span><span class="rvts33">:</span></p>
+<p class="rvps9"><span class="rvts12">string result = await tester.RestGetAsync("</span><a class="rvts36" href="https://jsonplaceholder.typicode.com/posts/1/">https://jsonplaceholder.typicode.com/posts/1/</a><span class="rvts12">");</span></p>
+<p class="rvps9"><span class="rvts12">tester.ConsoleMsg(result);</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts34">Данный метод использует стандартный подход</span><span class="rvts33">:</span></p>
+<p class="rvps9"><span class="rvts12">using System.Net;</span></p>
+<p class="rvps9"><span class="rvts12">using System.Net.Http;</span></p>
+<p class="rvps9"><span class="rvts12">using System.Net.Http.Headers;</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">Uri uri = new Uri(url);</span></p>
+<p class="rvps9"><span class="rvts12">HttpClient client = new HttpClient();</span></p>
+<p class="rvps9"><span class="rvts12">client.BaseAddress = uri;</span></p>
+<p class="rvps9"><span class="rvts12">client.DefaultRequestHeaders.Clear();</span></p>
+<p class="rvps9"><span class="rvts12">client.DefaultRequestHeaders.Accept.Clear();</span></p>
+<p class="rvps9"><span class="rvts12">client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));</span></p>
+<p class="rvps9"><span class="rvts12">client.DefaultRequestHeaders.Add("charset", "UTF-8");</span></p>
+<p class="rvps9"><span class="rvts12">client.DefaultRequestHeaders.Add("User-Agent", userAgent);</span></p>
+<p class="rvps9"><span class="rvts12">HttpResponseMessage response = await client.GetAsync(url);</span></p>
+<p class="rvps9"><span class="rvts12">if (response.IsSuccessStatusCode)</span></p>
+<p class="rvps9"><span class="rvts12">{</span></p>
+<p class="rvps9"><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">return await response.Content.ReadAsStringAsync();</span></p>
+<p class="rvps9"><span class="rvts12">}</span></p>
+<p class="rvps9"><span class="rvts12"></span><span class="rvts6"></span></p>
+<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create cross-platform Qt Help files</a></p>
 
 	</div>
 	
