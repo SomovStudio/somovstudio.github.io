@@ -1,0 +1,119 @@
+﻿
+
+<html>
+	
+<head>
+	<title>GetUrlResponseAsync</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 7.7.0.519">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("GetUrlResponseAsync");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">GetUrlResponseAsync</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="Tester.html">Класс: Tester</a> &rsaquo;&rsaquo; <a href="Newtopic10.html">Методы для выполнения действий</a> &rsaquo;&rsaquo; <a href="Newtopic18.html">Страница</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic18.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="GetUrlAsync.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="GoToUrlAsync.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps9"><span class="rvts40">GetUrlResponseAsync</span></p>
+<p class="rvps9"><span class="rvts43">Описание</span><span class="rvts44">: метод возвращает</span><span class="rvts41"> </span><span class="rvts44">HTTP ответ указанного URL</span></p>
+<p class="rvps9"><span class="rvts43">Синтаксис</span><span class="rvts44">: </span><span class="rvts41">GetUrlResponseAsync(string url)</span></p>
+<p class="rvps9"><span class="rvts42"><br/></span></p>
+<p class="rvps9"><span class="rvts43">Пример</span><span class="rvts42">:</span></p>
+<p class="rvps9"><span class="rvts41">int response = await tester.GetUrlResponseAsync("https://somovstudio.github.io/test.html");</span></p>
+<p class="rvps9"><span class="rvts41">await tester.AssertEqualsAsync(200, response);</span></p>
+<p class="rvps9"><span class="rvts41"></span><span class="rvts6"></span></p>
+<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Qt Help documentation made easy</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2022 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
