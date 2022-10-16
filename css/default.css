@@ -809,13 +809,8 @@ footer {
 	border: 2px solid rgba(161, 189, 227, 0.5);
 	border-radius: 5px;
 	padding: 10px;
-	max-width: 400px;
 	min-height: 150px;
 	color: #FFFFFF;
-    position: fixed;
-    top: calc(50vh - 30px);
-	left: 52%;
-	margin-left: -250px;
 	opacity: 0;
 }
 
@@ -829,21 +824,55 @@ footer {
 }
 
 .banner-link {
-	padding-right: 25px;
+	padding-right: 15px;
 	color: #EEEEEE;
 }
 
 @media (max-width: 500px) {
+	#title {
+		font-size: medium;
+	}
+
+	#header-title-logo{
+		max-height: 35px;
+	}
+
     #bunner {
-    	max-width: 250px;
-		min-height: 200px;
-		margin-left: -130px;
-		top: calc(65vh - 15px);
-		left: 50%;
+    	font-size: small;
     }
 
     .banner-link{
     	display: block;
+    }
+
+    .banner-description {
+    	margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 320px) {
+	#title {
+		font-size: xx-small;
+	}
+
+	#info {
+		font-size: xx-small;
+	}
+
+	#header-title-logo{
+		max-height: 35px;
+	}
+
+    #bunner {
+    	font-size: xx-small;
+    }
+
+    .banner-link{
+    	display: block;
+    }
+
+    .banner-description {
+    	margin-bottom: 5px;
     }
 }
 /** ------------- **/
