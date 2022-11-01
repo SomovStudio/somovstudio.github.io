@@ -146,7 +146,7 @@
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">setUp</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserFullScreenAsync</span><span class="rvts22">();</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserBasicAuthenticationAsync</span><span class="rvts22">(</span><span class="rvts29">"login"</span><span class="rvts20">, </span><span class="rvts29">"pass"</span><span class="rvts22">); </span><span class="rvts45">// базовая авторизация</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserBasicAuthenticationAsync</span><span class="rvts22">(</span><span class="rvts29">"login"</span><span class="rvts20">, </span><span class="rvts29">"pass"</span><span class="rvts22">); </span><span class="rvts35">// базовая авторизация</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test</span><span class="rvts22">()</span></p>
@@ -158,7 +158,7 @@
    <p class="rvps2"><span class="rvts22"><br/></span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">tearDown</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">// await tester.BrowserCloseAsync();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">// await tester.BrowserCloseAsync();</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22">}</span></p>
@@ -220,13 +220,13 @@
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestBeginAsync</span><span class="rvts22">();</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester.</span><span class="rvts21">GoToUrlBaseAuthAsync</span><span class="rvts20">(</span><span class="rvts29">"https://test.site.com"</span><span class="rvts20">, </span><span class="rvts29">"login"</span><span class="rvts20">, </span><span class="rvts29">"pass"</span><span class="rvts20">, 5); </span><span class="rvts45">// базовая авторизация</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester.</span><span class="rvts21">GoToUrlBaseAuthAsync</span><span class="rvts20">(</span><span class="rvts29">"https://test.site.com"</span><span class="rvts20">, </span><span class="rvts29">"login"</span><span class="rvts20">, </span><span class="rvts29">"pass"</span><span class="rvts20">, 5); </span><span class="rvts35">// базовая авторизация</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestEndAsync</span><span class="rvts22">();</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">tearDown</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">// await tester.BrowserCloseAsync();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">// await tester.BrowserCloseAsync();</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22">}</span></p>

@@ -181,66 +181,65 @@ span.rvts32
 }
 span.rvts33
 {
- font-size: 12pt;
- font-family: 'Calibri';
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #ff0000;
 }
 span.rvts34
 {
- font-size: 12pt;
- font-family: 'Calibri';
- color: #000000;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000080;
 }
 span.rvts35
 {
- font-size: 12pt;
- font-family: 'Calibri';
- color: #9b00d3;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #008000;
 }
 span.rvts36
 {
  font-size: 12pt;
  font-family: 'Calibri';
+}
+span.rvts37
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #000000;
+}
+span.rvts38
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #9b00d3;
+}
+span.rvts39
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
  color: #004dbb;
 }
-a.rvts37, span.rvts37
+a.rvts40, span.rvts40
 {
  font-size: 12pt;
  font-family: 'Calibri';
  text-decoration: none;
 }
-a.rvts38, span.rvts38
+a.rvts41, span.rvts41
 {
  font-size: 12pt;
  font-family: 'Calibri';
  color: #0000ff;
  text-decoration: underline;
 }
-span.rvts39
-{
- font-family: 'Calibri';
-}
-span.rvts40
-{
- font-size: 12pt;
- font-family: 'Calibri';
- color: #004dbb;
-}
-span.rvts41
-{
- font-size: 12pt;
- font-family: 'Calibri';
-}
 span.rvts42
 {
- font-size: 12pt;
  font-family: 'Calibri';
- color: #000000;
 }
 span.rvts43
 {
  font-size: 12pt;
  font-family: 'Calibri';
- color: #9b00d3;
+ color: #004dbb;
 }
 span.rvts44
 {
@@ -249,35 +248,36 @@ span.rvts44
 }
 span.rvts45
 {
- font-family: 'Courier New', 'Courier', monospace;
- color: #008000;
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #000000;
 }
 span.rvts46
 {
- font-family: 'Courier New', 'Courier', monospace;
- font-weight: bold;
- color: #ff0000;
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #9b00d3;
 }
 span.rvts47
 {
- font-family: 'Courier New', 'Courier', monospace;
- color: #8b4513;
+ font-size: 12pt;
+ font-family: 'Calibri';
 }
 span.rvts48
 {
  font-family: 'Courier New', 'Courier', monospace;
- color: #000000;
- text-decoration: underline;
+ color: #8b4513;
 }
 span.rvts49
 {
  font-family: 'Courier New', 'Courier', monospace;
  color: #000000;
+ text-decoration: underline;
 }
 span.rvts50
 {
  font-family: 'Courier New', 'Courier', monospace;
- color: #000080;
+ color: #000000;
 }
 span.rvts51
 {
