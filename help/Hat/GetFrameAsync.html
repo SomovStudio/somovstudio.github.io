@@ -90,69 +90,69 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps9"><span class="rvts36">GetFrameAsync</span></p>
-<p class="rvps9"><span class="rvts35">Описание</span><span class="rvts33">: метод возвращает элемент в виде объект класс которого </span><a class="rvts38" href="FRAMEElement1.html">FRAMEElement</a></p>
-<p class="rvps9"><span class="rvts35">Синтаксис</span><span class="rvts33">: GetFrameAsync(int index)</span></p>
-<p class="rvps9"><span class="rvts34"><br/></span></p>
-<p class="rvps9"><span class="rvts35">Пример</span><span class="rvts34">:</span></p>
-<p class="rvps9"><span class="rvts33">Tester tester = new Tester(browserForm);</span></p>
-<p class="rvps9"><span class="rvts33">await tester.TestBeginAsync();</span></p>
-<p class="rvps9"><span class="rvts33">await tester.GoToUrlAsync("https://somovstudio.github.io/test2.html", 5);</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">FRAMEElement frame = await tester.GetFrameAsync(0);</span></p>
-<p class="rvps9"><span class="rvts33">tester.ConsoleMsg("Index: " + frame.Index);</span></p>
-<p class="rvps9"><span class="rvts33">tester.ConsoleMsg("Name: " + frame.Name);</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">string name = await frame.GetAttributeFromElementAsync(Tester.BY_XPATH, "//input[@id='login']", "name");</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">List&lt;string&gt; values = await frame.GetAttributeFromElementsAsync(Tester.BY_XPATH, "//input", "name");</span></p>
-<p class="rvps9"><span class="rvts33">if (values != null)</span></p>
-<p class="rvps9"><span class="rvts33">{</span></p>
-<p class="rvps9"><span class="rvts33"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts33">foreach (string attr in values)</span></p>
-<p class="rvps9"><span class="rvts33"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts33"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts33">tester.ConsoleMsg(attr);</span></p>
-<p class="rvps9"><span class="rvts33">}</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">await frame.SetAttributeInElementAsync(Tester.BY_XPATH, "//input[@id='buttonLogin']", "name", "NameButtonLogin");</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">await frame.SetAttributeInElementsAsync(Tester.BY_XPATH, "//input", "name", "test");</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">await frame.SetValueInElementAsync(Tester.BY_XPATH, "//input[@id='login']", "Тестировщик");</span></p>
-<p class="rvps9"><span class="rvts33">string value = await frame.GetValueFromElementAsync(Tester.BY_XPATH, "//input[@id='login']");</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">await frame.ClickElementAsync(Tester.BY_XPATH, "//*[@id='buttonLogin']");</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">bool result = await frame.IsClickableElementAsync(Tester.BY_XPATH, "//*[@id='buttonLogin']");</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">await frame.ScrollToElementAsync(Tester.BY_XPATH, "//*[@id='buttonLogin']", true);</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">int result = await frame.GetCountElementsAsync(Tester.BY_XPATH, "//input");</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">string html = await frame.GetHtmlFromElementAsync(Tester.BY_XPATH, "//*[@id='buttonLogin']");</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">await frame.SetHtmlInElementAsync(Tester.BY_XPATH, "//*[@id='auth']/h2", "&lt;h2&gt;Тестовый заголовок&lt;/h2&gt;");</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">await frame.WaitNotVisibleElementAsync(Tester.BY_XPATH, "//*[@id='result']", 5);</span></p>
-<p class="rvps9"><span class="rvts33">await frame.ClickElementAsync(Tester.BY_XPATH, "//*[@id='buttonLogin']");</span></p>
-<p class="rvps9"><span class="rvts33">await frame.WaitVisibleElementAsync(Tester.BY_XPATH, "//*[@id='result']", 5);</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">bool result = await frame.FindElementAsync(Tester.BY_XPATH, "//*[@id='result']", 5);</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">bool result = await frame.FindVisibleElementAsync(Tester.BY_XPATH, "//*[@id='result']", 5);</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">string title = await frame.GetTitleAsync();</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">string url = await frame.GetUrlAsync();</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">await frame.SetTextInElementAsync(Tester.BY_XPATH, "//*[@id='auth']/h2", "Это тест");</span></p>
-<p class="rvps9"><span class="rvts33">string text = await frame.GetTextFromElementAsync(Tester.BY_XPATH, "//*[@id='auth']/h2");</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">await frame.SelectOptionAsync(Tester.BY_XPATH, "//*[@id='MySelect']", FRAMEElement.BY_INDEX, "2");</span></p>
-<p class="rvps9"><span class="rvts33">await frame.SelectOptionAsync(Tester.BY_XPATH, "//*[@id='MySelect']", FRAMEElement.BY_VALUE, "Mobile");</span></p>
-<p class="rvps9"><span class="rvts33">await frame.SelectOptionAsync(Tester.BY_XPATH, "//*[@id='MySelect']", FRAMEElement.BY_TEXT, "Other");</span></p>
-<p class="rvps9"><span class="rvts33"><br/></span></p>
-<p class="rvps9"><span class="rvts33">string index = await frame.GetOptionAsync(Tester.BY_XPATH, "//*[@id='MySelect']", FRAMEElement.BY_INDEX);</span></p>
-<p class="rvps9"><span class="rvts33">string value = await frame.GetOptionAsync(Tester.BY_XPATH, "//*[@id='MySelect']", FRAMEElement.BY_VALUE);</span></p>
-<p class="rvps9"><span class="rvts33">string text = await frame.GetOptionAsync(Tester.BY_XPATH, "//*[@id='MySelect']", FRAMEElement.BY_TEXT);</span><span class="rvts6"></span></p>
+<p class="rvps9"><span class="rvts39">GetFrameAsync</span></p>
+<p class="rvps9"><span class="rvts38">Описание</span><span class="rvts36">: метод возвращает элемент в виде объект класс которого </span><a class="rvts41" href="FRAMEElement1.html">FRAMEElement</a></p>
+<p class="rvps9"><span class="rvts38">Синтаксис</span><span class="rvts36">: GetFrameAsync(int index)</span></p>
+<p class="rvps9"><span class="rvts37"><br/></span></p>
+<p class="rvps9"><span class="rvts38">Пример</span><span class="rvts37">:</span></p>
+<p class="rvps9"><span class="rvts36">Tester tester = new Tester(browserForm);</span></p>
+<p class="rvps9"><span class="rvts36">await tester.TestBeginAsync();</span></p>
+<p class="rvps9"><span class="rvts36">await tester.GoToUrlAsync("https://somovstudio.github.io/test2.html", 5);</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">FRAMEElement frame = await tester.GetFrameAsync(0);</span></p>
+<p class="rvps9"><span class="rvts36">tester.ConsoleMsg("Index: " + frame.Index);</span></p>
+<p class="rvps9"><span class="rvts36">tester.ConsoleMsg("Name: " + frame.Name);</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">string name = await frame.GetAttributeFromElementAsync(Tester.BY_XPATH, "//input[@id='login']", "name");</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">List&lt;string&gt; values = await frame.GetAttributeFromElementsAsync(Tester.BY_XPATH, "//input", "name");</span></p>
+<p class="rvps9"><span class="rvts36">if (values != null)</span></p>
+<p class="rvps9"><span class="rvts36">{</span></p>
+<p class="rvps9"><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">foreach (string attr in values)</span></p>
+<p class="rvps9"><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">tester.ConsoleMsg(attr);</span></p>
+<p class="rvps9"><span class="rvts36">}</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">await frame.SetAttributeInElementAsync(Tester.BY_XPATH, "//input[@id='buttonLogin']", "name", "NameButtonLogin");</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">await frame.SetAttributeInElementsAsync(Tester.BY_XPATH, "//input", "name", "test");</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">await frame.SetValueInElementAsync(Tester.BY_XPATH, "//input[@id='login']", "Тестировщик");</span></p>
+<p class="rvps9"><span class="rvts36">string value = await frame.GetValueFromElementAsync(Tester.BY_XPATH, "//input[@id='login']");</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">await frame.ClickElementAsync(Tester.BY_XPATH, "//*[@id='buttonLogin']");</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">bool result = await frame.IsClickableElementAsync(Tester.BY_XPATH, "//*[@id='buttonLogin']");</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">await frame.ScrollToElementAsync(Tester.BY_XPATH, "//*[@id='buttonLogin']", true);</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">int result = await frame.GetCountElementsAsync(Tester.BY_XPATH, "//input");</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">string html = await frame.GetHtmlFromElementAsync(Tester.BY_XPATH, "//*[@id='buttonLogin']");</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">await frame.SetHtmlInElementAsync(Tester.BY_XPATH, "//*[@id='auth']/h2", "&lt;h2&gt;Тестовый заголовок&lt;/h2&gt;");</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">await frame.WaitNotVisibleElementAsync(Tester.BY_XPATH, "//*[@id='result']", 5);</span></p>
+<p class="rvps9"><span class="rvts36">await frame.ClickElementAsync(Tester.BY_XPATH, "//*[@id='buttonLogin']");</span></p>
+<p class="rvps9"><span class="rvts36">await frame.WaitVisibleElementAsync(Tester.BY_XPATH, "//*[@id='result']", 5);</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">bool result = await frame.FindElementAsync(Tester.BY_XPATH, "//*[@id='result']", 5);</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">bool result = await frame.FindVisibleElementAsync(Tester.BY_XPATH, "//*[@id='result']", 5);</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">string title = await frame.GetTitleAsync();</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">string url = await frame.GetUrlAsync();</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">await frame.SetTextInElementAsync(Tester.BY_XPATH, "//*[@id='auth']/h2", "Это тест");</span></p>
+<p class="rvps9"><span class="rvts36">string text = await frame.GetTextFromElementAsync(Tester.BY_XPATH, "//*[@id='auth']/h2");</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">await frame.SelectOptionAsync(Tester.BY_XPATH, "//*[@id='MySelect']", FRAMEElement.BY_INDEX, "2");</span></p>
+<p class="rvps9"><span class="rvts36">await frame.SelectOptionAsync(Tester.BY_XPATH, "//*[@id='MySelect']", FRAMEElement.BY_VALUE, "Mobile");</span></p>
+<p class="rvps9"><span class="rvts36">await frame.SelectOptionAsync(Tester.BY_XPATH, "//*[@id='MySelect']", FRAMEElement.BY_TEXT, "Other");</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">string index = await frame.GetOptionAsync(Tester.BY_XPATH, "//*[@id='MySelect']", FRAMEElement.BY_INDEX);</span></p>
+<p class="rvps9"><span class="rvts36">string value = await frame.GetOptionAsync(Tester.BY_XPATH, "//*[@id='MySelect']", FRAMEElement.BY_VALUE);</span></p>
+<p class="rvps9"><span class="rvts36">string text = await frame.GetOptionAsync(Tester.BY_XPATH, "//*[@id='MySelect']", FRAMEElement.BY_TEXT);</span><span class="rvts6"></span></p>
 <p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/feature-tour">Easily create Web Help sites</a></p>
 
 	</div>
