@@ -319,3 +319,8 @@ dl dt {
     width: 40%;
     color: #FFFFFF;
 }
+
+.zionec-img-link {
+    text-decoration: none !important;
+    color: #FFFFFF;
+}
