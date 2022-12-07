@@ -11,6 +11,11 @@
 		//window.onerror = function(msg, url, lineNo, columnNo, error) { console.error(msg) }
 
 		(function(){ 
+			console.error('TEST ERROR');
+			console.warn('TEST WARNING');
+			console.log('TEST LOG');
+			console.info('TEST INFO');
+
 			var element = document.getElementById('MyElement'); 
 			return element.innerText;
 		}());
