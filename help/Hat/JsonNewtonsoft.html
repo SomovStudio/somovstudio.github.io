@@ -5,7 +5,7 @@
 <head>
 	<title>Обработка Json данных с помощью Newtonsoft</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="generator" content="HelpNDoc Personal Edition 7.7.0.519">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
 	<meta name="description" content="" /> 
 	<meta name="keywords" content="">
 	
@@ -183,7 +183,7 @@
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestBeginAsync</span><span class="rvts22">();</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">GoToUrlAsync</span><span class="rvts22">(</span><span class="rvts29">"https://jsonplaceholder.typicode.com"</span><span class="rvts22">, </span><span class="rvts30">5</span><span class="rvts22">);</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts27">string </span><span class="rvts20">result </span><span class="rvts22">= </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">RestGetAsync</span><span class="rvts22">(</span><span class="rvts29">@"https://jsonplaceholder.typicode.com/posts/1/"</span><span class="rvts22">, </span><span class="rvts29">"UTF-8"</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts27">string </span><span class="rvts20">result </span><span class="rvts22">= </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">RestGetAsync</span><span class="rvts22">(</span><span class="rvts29">@"https://jsonplaceholder.typicode.com/posts/1/"</span><span class="rvts22">, </span><span class="rvts20">TimeSpan.FromDays(1)</span><span class="rvts22">, </span><span class="rvts29">"UTF-8"</span><span class="rvts22">);</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester</span><span class="rvts22">.</span><span class="rvts21">ConsoleMsg</span><span class="rvts22">(</span><span class="rvts20">result</span><span class="rvts22">);</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">TestJson dataJson </span><span class="rvts22">= </span><span class="rvts20">JsonConvert</span><span class="rvts22">.</span><span class="rvts20">DeserializeObject</span><span class="rvts22">&lt;</span><span class="rvts20">TestJson</span><span class="rvts22">&gt;(</span><span class="rvts20">result</span><span class="rvts22">);</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester</span><span class="rvts22">.</span><span class="rvts21">ConsoleMsg</span><span class="rvts22">(</span><span class="rvts29">"UserID: " </span><span class="rvts22">+ </span><span class="rvts20">dataJson</span><span class="rvts22">.</span><span class="rvts20">userId</span><span class="rvts22">.</span><span class="rvts21">ToString</span><span class="rvts22">());</span></p>
@@ -207,7 +207,7 @@
 </div>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
-<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create help files for the Qt Help Framework</a></p>
+<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpauthoringsoftware.com">News and information about help authoring tools and software</a></p>
 
 	</div>
 	
@@ -215,7 +215,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2022 by Somov Studio. All Rights Reserved.
+				Copyright &copy; 2023 by Somov Studio. All Rights Reserved.
 			</div>
 		</div>
 	
