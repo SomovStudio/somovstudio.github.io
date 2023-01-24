@@ -1,0 +1,162 @@
+﻿
+
+<html>
+	
+<head>
+	<title>3. Подключение автотеста к ноде.</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("3");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">3. Подключение автотеста к ноде.</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic29.html">Консольный режим запуска</a> &rsaquo;&rsaquo; <a href="Jenkins.html">Jenkins</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Jenkins.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="2.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic27.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps2"><span class="rvts17">3. Подключение автотеста к ноде.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">После того как вы получили команду запуска автотеста как &nbsp;это было рассказано в пункте "</span><a class="rvts13" href="Newtopic30.html">Запуск из командной строки</a><span class="rvts12">"</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem68.png"></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Вам нужно в Jenkins создать задачу которая будет запускать автотест.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem146.png"></p>
+<p class="rvps7"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Включите флаг "</span><span class="rvts27">Discard old builds</span><span class="rvts12">" и выберите максимальное количество сборок для сохранения "</span><span class="rvts27">Max # of builds to keep</span><span class="rvts12">"</span></p>
+<p class="rvps7"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem145.png"></p>
+<p class="rvps7"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">В разделе "</span><span class="rvts27">Build</span><span class="rvts12">" добавьте команду "</span><span class="rvts27">Execute Windows batch command</span><span class="rvts12">".</span></p>
+<p class="rvps2"><span class="rvts12">Затем в поле "</span><span class="rvts27">Command</span><span class="rvts12">" вставьте команду запуска автотеста полученную из браузера Hat.</span></p>
+<p class="rvps7"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem176.png"></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">В настройках задачи включите опцию "</span><span class="rvts27">Restrict where this project can be run</span><span class="rvts12">"</span></p>
+<p class="rvps2"><span class="rvts12">затем введите имя ноды </span><span class="rvts27">slave</span><span class="rvts12"> (система обязательно должна её обнаружить)</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem143.png"></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Нажмите на кнопку Apply и Save</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem142.png"></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Запустите задачу с автотестом</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem141.png"></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">В окне агентов в одном из потоков появится процесс</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem140.png"></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Если произошла ошибка при которой отказано в доступе</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><span class="rvts35">Браузер Hat версия 1.1.1 (19.07.2022) Запуск браузера... Проект открыт (версия проекта: 1.1.1)&nbsp;</span></p>
+<p class="rvps7"><span class="rvts35">- - - - - - - - - - - - - - - - - - - - - - - - - - - -&nbsp;</span></p>
+<p class="rvps7"><span class="rvts35">Произошла ошибка: System.UnauthorizedAccessException: </span><span class="rvts36">Отказано в доступе по пути</span><span class="rvts35"> "C:\Autotests\#######\hat\Tests\reports\Report-HomeOrders_DeployTest.html". в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath) в System.IO.File.InternalDelete(String path, Boolean checkHost) в System.IO.File.Delete(String path) в Hat.Report.SaveReport(Boolean testSuccess) - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Возможно что аген не был запущен от имени администратора (</span><span class="rvts37">агент обязательно должен запускаться от имени администратора</span><span class="rvts12">)</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Возможно папка в которой находятся автотесты обладает блокирующими правами (перенесите автотесты в другое место на компьютере)</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts12"></span><span class="rvts6"></span></p>
+<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EBook editor</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2023 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

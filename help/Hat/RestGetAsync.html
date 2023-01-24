@@ -90,33 +90,33 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps9"><span class="rvts43">RestGetAsync</span></p>
-<p class="rvps9"><span class="rvts46">Описание</span><span class="rvts47">: метод выполняет Get Rest запрос и получает результат в формате json</span></p>
-<p class="rvps9"><span class="rvts46">Синтаксис</span><span class="rvts47">: </span><span class="rvts44">RestGetAsync(string url, TimeSpan timeout, string charset = "UTF-8")</span></p>
-<p class="rvps9"><span class="rvts45"><br/></span></p>
-<p class="rvps9"><span class="rvts46">Пример</span><span class="rvts45">:</span></p>
-<p class="rvps9"><span class="rvts44">string result = await tester.RestGetAsync("https://jsonplaceholder.typicode.com/posts/1/", TimeSpan.FromDays(1), "UTF-8");</span></p>
-<p class="rvps9"><span class="rvts44">tester.ConsoleMsg(result);</span></p>
-<p class="rvps9"><span class="rvts44"><br/></span></p>
-<p class="rvps9"><span class="rvts46">Данный метод использует стандартный подход</span><span class="rvts45">:</span></p>
-<p class="rvps9"><span class="rvts44">using System.Net;</span></p>
-<p class="rvps9"><span class="rvts44">using System.Net.Http;</span></p>
-<p class="rvps9"><span class="rvts44">using System.Net.Http.Headers;</span></p>
-<p class="rvps9"><span class="rvts44"><br/></span></p>
-<p class="rvps9"><span class="rvts44">Uri uri = new Uri(url);</span></p>
-<p class="rvps9"><span class="rvts44">HttpClient client = new HttpClient();</span></p>
-<p class="rvps9"><span class="rvts44">client.Timeout = TimeSpan.FromDays(1);</span></p>
-<p class="rvps9"><span class="rvts44">client.BaseAddress = uri;</span></p>
-<p class="rvps9"><span class="rvts44">client.DefaultRequestHeaders.Clear();</span></p>
-<p class="rvps9"><span class="rvts44">client.DefaultRequestHeaders.Accept.Clear();</span></p>
-<p class="rvps9"><span class="rvts44">client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));</span></p>
-<p class="rvps9"><span class="rvts44">client.DefaultRequestHeaders.Add("charset", "UTF-8");</span></p>
-<p class="rvps9"><span class="rvts44">client.DefaultRequestHeaders.Add("User-Agent", userAgent);</span></p>
-<p class="rvps9"><span class="rvts44">HttpResponseMessage response = await client.GetAsync(url);</span></p>
-<p class="rvps9"><span class="rvts44">if (response.IsSuccessStatusCode)</span></p>
-<p class="rvps9"><span class="rvts44">{</span></p>
-<p class="rvps9"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">return await response.Content.ReadAsStringAsync();</span></p>
-<p class="rvps9"><span class="rvts44">}</span><span class="rvts6"></span></p>
+<p class="rvps12"><span class="rvts55">RestGetAsync</span></p>
+<p class="rvps12"><span class="rvts58">Описание</span><span class="rvts59">: метод выполняет Get Rest запрос и получает результат в формате json</span></p>
+<p class="rvps12"><span class="rvts58">Синтаксис</span><span class="rvts59">: </span><span class="rvts56">RestGetAsync(string url, TimeSpan timeout, string charset = "UTF-8")</span></p>
+<p class="rvps12"><span class="rvts57"><br/></span></p>
+<p class="rvps12"><span class="rvts58">Пример</span><span class="rvts57">:</span></p>
+<p class="rvps12"><span class="rvts56">string result = await tester.RestGetAsync("https://jsonplaceholder.typicode.com/posts/1/", TimeSpan.FromDays(1), "UTF-8");</span></p>
+<p class="rvps12"><span class="rvts56">tester.ConsoleMsg(result);</span></p>
+<p class="rvps12"><span class="rvts56"><br/></span></p>
+<p class="rvps12"><span class="rvts58">Данный метод использует стандартный подход</span><span class="rvts57">:</span></p>
+<p class="rvps12"><span class="rvts56">using System.Net;</span></p>
+<p class="rvps12"><span class="rvts56">using System.Net.Http;</span></p>
+<p class="rvps12"><span class="rvts56">using System.Net.Http.Headers;</span></p>
+<p class="rvps12"><span class="rvts56"><br/></span></p>
+<p class="rvps12"><span class="rvts56">Uri uri = new Uri(url);</span></p>
+<p class="rvps12"><span class="rvts56">HttpClient client = new HttpClient();</span></p>
+<p class="rvps12"><span class="rvts56">client.Timeout = TimeSpan.FromDays(1);</span></p>
+<p class="rvps12"><span class="rvts56">client.BaseAddress = uri;</span></p>
+<p class="rvps12"><span class="rvts56">client.DefaultRequestHeaders.Clear();</span></p>
+<p class="rvps12"><span class="rvts56">client.DefaultRequestHeaders.Accept.Clear();</span></p>
+<p class="rvps12"><span class="rvts56">client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));</span></p>
+<p class="rvps12"><span class="rvts56">client.DefaultRequestHeaders.Add("charset", "UTF-8");</span></p>
+<p class="rvps12"><span class="rvts56">client.DefaultRequestHeaders.Add("User-Agent", userAgent);</span></p>
+<p class="rvps12"><span class="rvts56">HttpResponseMessage response = await client.GetAsync(url);</span></p>
+<p class="rvps12"><span class="rvts56">if (response.IsSuccessStatusCode)</span></p>
+<p class="rvps12"><span class="rvts56">{</span></p>
+<p class="rvps12"><span class="rvts56"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts56">return await response.Content.ReadAsStringAsync();</span></p>
+<p class="rvps12"><span class="rvts56">}</span><span class="rvts6"></span></p>
 <p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpauthoringsoftware.com">Benefits of a Help Authoring Tool</a></p>
 
 	</div>
