@@ -96,14 +96,14 @@
 <p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><span class="rvts12">Сначала нужно объявить текстоввую переменную и в ней описать скрипт.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps7"><span class="rvts27">string </span><span class="rvts20">script </span><span class="rvts22">= </span><span class="rvts29">@"(function(){&nbsp;</span></p>
-<p class="rvps7"><span class="rvts29">var element = document.getElementsByTagName('h2')[0];&nbsp;</span></p>
-<p class="rvps7"><span class="rvts29">return element.outerText;&nbsp;</span></p>
-<p class="rvps7"><span class="rvts29">}());"</span><span class="rvts22">;</span></p>
+<p class="rvps7"><span class="rvts39">string </span><span class="rvts20">script </span><span class="rvts22">= </span><span class="rvts41">@"(function(){&nbsp;</span></p>
+<p class="rvps7"><span class="rvts41">var element = document.getElementsByTagName('h2')[0];&nbsp;</span></p>
+<p class="rvps7"><span class="rvts41">return element.outerText;&nbsp;</span></p>
+<p class="rvps7"><span class="rvts41">}());"</span><span class="rvts22">;</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts12">Теперь с помощью метода ExecuteJavaScriptAsync выполним выше описанный скрипт и получим результат.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps7"><span class="rvts27">string </span><span class="rvts20">actual </span><span class="rvts22">= </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">ExecuteJavaScriptAsync</span><span class="rvts22">(</span><span class="rvts20">script</span><span class="rvts22">);</span></p>
+<p class="rvps7"><span class="rvts39">string </span><span class="rvts20">actual </span><span class="rvts22">= </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">ExecuteJavaScriptAsync</span><span class="rvts22">(</span><span class="rvts20">script</span><span class="rvts22">);</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts12">Полный пример описан в скрипте ниже:</span></p>
@@ -117,34 +117,34 @@
  </tr>
  <tr valign="top">
   <td style="border-color: #000000; border-style: solid; padding: 1px;">
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Collections</span><span class="rvts22">.</span><span class="rvts20">Generic</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">ComponentModel</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Windows</span><span class="rvts22">.</span><span class="rvts20">Forms</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">.</span><span class="rvts20">Tasks</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">IO</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Data</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Drawing</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Linq</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">.</span><span class="rvts20">RegularExpressions</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">.</span><span class="rvts20">Headers</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Reflection</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">Newtonsoft</span><span class="rvts22">.</span><span class="rvts20">Json</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts26">using </span><span class="rvts20">HatFramework</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Collections</span><span class="rvts22">.</span><span class="rvts20">Generic</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">ComponentModel</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Windows</span><span class="rvts22">.</span><span class="rvts20">Forms</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">.</span><span class="rvts20">Tasks</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">IO</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Data</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Drawing</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Linq</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">.</span><span class="rvts20">RegularExpressions</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">.</span><span class="rvts20">Headers</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Reflection</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">Newtonsoft</span><span class="rvts22">.</span><span class="rvts20">Json</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">HatFramework</span><span class="rvts22">;</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
-   <p class="rvps2"><span class="rvts26">namespace </span><span class="rvts20">Hat</span></p>
+   <p class="rvps2"><span class="rvts38">namespace </span><span class="rvts20">Hat</span></p>
    <p class="rvps2"><span class="rvts22">{</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts27">class </span><span class="rvts20">ExampleTest4</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts39">class </span><span class="rvts20">ExampleTest4</span></p>
    <p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">{</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">Tester tester</span><span class="rvts22">;</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async </span><span class="rvts27">void </span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async </span><span class="rvts39">void </span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester </span><span class="rvts22">= </span><span class="rvts28">new </span><span class="rvts21">Tester</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester </span><span class="rvts22">= </span><span class="rvts40">new </span><span class="rvts21">Tester</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">setUp</span><span class="rvts22">();</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">test</span><span class="rvts22">();</span></p>
@@ -159,15 +159,15 @@
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestBeginAsync</span><span class="rvts22">();</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">GoToUrlAsync</span><span class="rvts22">(</span><span class="rvts29">"https://somovstudio.github.io/test.html"</span><span class="rvts22">, </span><span class="rvts30">5</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">GoToUrlAsync</span><span class="rvts22">(</span><span class="rvts41">"https://somovstudio.github.io/test.html"</span><span class="rvts22">, </span><span class="rvts42">5</span><span class="rvts22">);</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts27">string </span><span class="rvts20">script </span><span class="rvts22">= </span><span class="rvts29">@"(function(){&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var element = document.getElementsByTagName('h2')[0];&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return element.outerText;&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}());"</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts39">string </span><span class="rvts20">script </span><span class="rvts22">= </span><span class="rvts41">@"(function(){&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var element = document.getElementsByTagName('h2')[0];&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return element.outerText;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}());"</span><span class="rvts22">;</span></p>
    <p class="rvps2"><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts27">string </span><span class="rvts20">actual </span><span class="rvts22">= </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">ExecuteJavaScriptAsync</span><span class="rvts22">(</span><span class="rvts20">script</span><span class="rvts22">);</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts27">string </span><span class="rvts20">expected </span><span class="rvts22">= </span><span class="rvts29">"Авторизация"</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts39">string </span><span class="rvts20">actual </span><span class="rvts22">= </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">ExecuteJavaScriptAsync</span><span class="rvts22">(</span><span class="rvts20">script</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts39">string </span><span class="rvts20">expected </span><span class="rvts22">= </span><span class="rvts41">"Авторизация"</span><span class="rvts22">;</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">AssertEqualsAsync</span><span class="rvts22">(</span><span class="rvts20">expected</span><span class="rvts22">, </span><span class="rvts20">actual</span><span class="rvts22">);</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestEndAsync</span><span class="rvts22">();</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
@@ -175,13 +175,61 @@
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">tearDown</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserCloseAsync</span><span class="rvts22">();</span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts22">}</span></p>
+   <p class="rvps2"><span class="rvts47">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts22">}</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22">}</span></p>
   </td>
  </tr>
 </table>
 </div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Примеры JavaScript и JQuery скриптов для методы ExecuteJavaScriptAsync :</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">- фокус на элемент input и введение данных</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><span class="rvts41">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
+<p class="rvps7"><span class="rvts41">element.focus();</span></p>
+<p class="rvps7"><span class="rvts41">element.value = '9999999999';</span></p>
+<p class="rvps7"><span class="rvts41">element.setAttribute("value", "9999999999");</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps2"><span class="rvts12">- фокус на элемент input и вставка данных</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><span class="rvts41">document.getElementById("phone").focus();</span></p>
+<p class="rvps7"><span class="rvts41">document.execCommand("insertHTML", false, "9999999999");</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">- введение данных в input и вызов событий</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><span class="rvts41">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
+<p class="rvps7"><span class="rvts41">element.value = '9999999999';</span></p>
+<p class="rvps7"><span class="rvts41">element.dispatchEvent(new KeyboardEvent('keydown', { bubbles: true }));</span></p>
+<p class="rvps7"><span class="rvts41">element.dispatchEvent(new KeyboardEvent('keypress', { bubbles: true }));</span></p>
+<p class="rvps7"><span class="rvts41">element.dispatchEvent(new KeyboardEvent('keyup', { bubbles: true }));</span></p>
+<p class="rvps7"><span class="rvts41">element.dispatchEvent(new Event('input', { bubbles: true }));</span></p>
+<p class="rvps7"><span class="rvts41">element.dispatchEvent(new Event('change', { bubbles: true }));</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">- выделить значение в input</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><span class="rvts41">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
+<p class="rvps7"><span class="rvts41">element.select();</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">- нажатие мышкой</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><span class="rvts41">var clickEvent = new MouseEvent("click", { "view": window, "bubbles": true, "cancelable": false });</span></p>
+<p class="rvps7"><span class="rvts41">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
+<p class="rvps7"><span class="rvts41">element.dispatchEvent(clickEvent);</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts41">var theEvent = document.createEvent("MouseEvent");</span></p>
+<p class="rvps7"><span class="rvts41">theEvent.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);</span></p>
+<p class="rvps7"><span class="rvts41">element.dispatchEvent(theEvent);</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">- использование JQuery для нажатия кнопки (если библиотека подключена на тестируемой странице)</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><span class="rvts39">string </span><span class="rvts20">script </span><span class="rvts22">= </span><span class="rvts41">@"$(function() {&nbsp;</span></p>
+<p class="rvps7"><span class="rvts41">console.log('autotest JQUERY'); &nbsp;</span></p>
+<p class="rvps7"><span class="rvts41">$('#btn-send &gt; div.btn &gt; a').click();&nbsp;</span></p>
+<p class="rvps7"><span class="rvts41">});"</span><span class="rvts22">;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
 <p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com">Easy CHM and documentation editor</a></p>
