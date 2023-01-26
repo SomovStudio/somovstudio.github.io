@@ -94,7 +94,7 @@
 <p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><span class="rvts12">Для выполнения JavaScript кода в HatFramework добавлен специальный метод ExecuteJavaScriptAsync.</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12">Сначала нужно объявить текстоввую переменную и в ней описать скрипт.</span></p>
+<p class="rvps2"><span class="rvts12">Сначала нужно объявить текстовую переменную и в ней описать скрипт который вы хотите выполнить.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps7"><span class="rvts39">string </span><span class="rvts20">script </span><span class="rvts22">= </span><span class="rvts41">@"(function(){&nbsp;</span></p>
 <p class="rvps7"><span class="rvts41">var element = document.getElementsByTagName('h2')[0];&nbsp;</span></p>
@@ -104,6 +104,8 @@
 <p class="rvps2"><span class="rvts12">Теперь с помощью метода ExecuteJavaScriptAsync выполним выше описанный скрипт и получим результат.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps7"><span class="rvts39">string </span><span class="rvts20">actual </span><span class="rvts22">= </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">ExecuteJavaScriptAsync</span><span class="rvts22">(</span><span class="rvts20">script</span><span class="rvts22">);</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts12">В данном примере вы получите текст из элемента H2 со страницы на которой этот скрипт был вызван.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts12">Полный пример описан в скрипте ниже:</span></p>
@@ -140,41 +142,47 @@
    <p class="rvps2"><span class="rvts22">{</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts39">class </span><span class="rvts20">ExampleTest4</span></p>
    <p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">{</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">Tester tester</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">Tester tester</span><span class="rvts22">; </span><span class="rvts47">// Главная переменная для работы автотеста</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Главная входная функция (с этой функции начинается работа автотеста)</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async </span><span class="rvts39">void </span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester </span><span class="rvts22">= </span><span class="rvts40">new </span><span class="rvts21">Tester</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester </span><span class="rvts22">= </span><span class="rvts40">new </span><span class="rvts21">Tester</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">); </span><span class="rvts47">// Инициализация главной переменной</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">setUp</span><span class="rvts22">();</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">test</span><span class="rvts22">();</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">tearDown</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">setUp</span><span class="rvts22">(); </span><span class="rvts47">// Функция начала работы с автотестом</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">test</span><span class="rvts22">(); </span><span class="rvts47">// Функция выполнения действий теста</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">tearDown</span><span class="rvts22">(); </span><span class="rvts47">// Функция завершения работы с автотестом</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">setUp</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserFullScreenAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserFullScreenAsync</span><span class="rvts22">(); </span><span class="rvts47">// Устанавливает разрешение браузер на весь экран</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestBeginAsync</span><span class="rvts22">();</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">GoToUrlAsync</span><span class="rvts22">(</span><span class="rvts41">"https://somovstudio.github.io/test.html"</span><span class="rvts22">, </span><span class="rvts42">5</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestBeginAsync</span><span class="rvts22">(); </span><span class="rvts47">// Начало выполнения действий</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">GoToUrlAsync</span><span class="rvts22">(</span><span class="rvts41">"https://somovstudio.github.io/test.html"</span><span class="rvts22">, </span><span class="rvts42">5</span><span class="rvts22">); </span><span class="rvts47">// Загрузка страницы по указанному адресу</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Объявление переменной с описание скрипта на JavaScript</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts39">string </span><span class="rvts20">script </span><span class="rvts22">= </span><span class="rvts41">@"(function(){&nbsp;</span></p>
    <p class="rvps2"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var element = document.getElementsByTagName('h2')[0];&nbsp;</span></p>
    <p class="rvps2"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return element.outerText;&nbsp;</span></p>
    <p class="rvps2"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}());"</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Выполнение скрипта</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts39">string </span><span class="rvts20">actual </span><span class="rvts22">= </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">ExecuteJavaScriptAsync</span><span class="rvts22">(</span><span class="rvts20">script</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Проверка результата</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts39">string </span><span class="rvts20">expected </span><span class="rvts22">= </span><span class="rvts41">"Авторизация"</span><span class="rvts22">;</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">AssertEqualsAsync</span><span class="rvts22">(</span><span class="rvts20">expected</span><span class="rvts22">, </span><span class="rvts20">actual</span><span class="rvts22">);</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestEndAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">AssertEqualsAsync</span><span class="rvts22">(</span><span class="rvts20">expected</span><span class="rvts22">, </span><span class="rvts20">actual</span><span class="rvts22">); </span><span class="rvts47">// Ожидаемые и актуальные данные должны совпадать</span></p>
+   <p class="rvps2"><span class="rvts47"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestEndAsync</span><span class="rvts22">(); </span><span class="rvts47">// Завершение выполнения действий</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">tearDown</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserCloseAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserCloseAsync</span><span class="rvts22">(); </span><span class="rvts47">// Закрывает браузер</span></p>
    <p class="rvps2"><span class="rvts47">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts22">}</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22">}</span></p>
@@ -183,7 +191,7 @@
 </table>
 </div>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts12">Примеры JavaScript и JQuery скриптов для методы ExecuteJavaScriptAsync :</span></p>
+<p class="rvps2"><span class="rvts12">Примеры JavaScript и JQuery скриптов для метода ExecuteJavaScriptAsync :</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><span class="rvts12">- фокус на элемент input и введение данных</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>

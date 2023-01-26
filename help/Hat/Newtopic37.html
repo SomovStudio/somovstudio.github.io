@@ -92,13 +92,14 @@
 		
 <p class="rvps2"><span class="rvts17">Группа автотестов</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12">Вы можете организовать группу автотестов и запустить их одним автотестом.</span></p>
+<p class="rvps2"><span class="rvts12">Вы можете организовать группу автотестов и запустить их.</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12">Для этого нужно создать папку в которой будут храниться автотесты (например папка group1)</span></p>
+<p class="rvps2"><span class="rvts12">Для этого нужно создать папку в которой будут храниться автотесты одной группы (например папка group1)</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem72.png"></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><span class="rvts12">Далее необходимо описать несколько тестов и поместить их в папку group1.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><span class="rvts17">Обратите внимание:</span><span class="rvts12"> у тестов функция Main должна быть объявлена как Task</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><span class="rvts12">первый файл ExampleTest3.cs</span></p>
@@ -133,6 +134,7 @@
    <p class="rvps2"><span class="rvts22"><br/></span></p>
    <p class="rvps2"><span class="rvts38">namespace </span><span class="rvts20">Hat</span></p>
    <p class="rvps2"><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts47">// Вспомогательный класс для JSON данных</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts39">class </span><span class="rvts20">TestJson</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; {</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts45">int </span><span class="rvts20">userId </span><span class="rvts22">{ </span><span class="rvts61">get</span><span class="rvts22">; </span><span class="rvts61">set</span><span class="rvts22">; }</span></p>
@@ -143,10 +145,13 @@
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp;&nbsp;</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts39">class </span><span class="rvts20">ExampleTest3</span></p>
    <p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Главная переменная для работы автотеста</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">Tester tester</span><span class="rvts22">;</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Главная входная функция объявлена как Task это важно! (с этой функции начинается работа автотеста)</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async </span><span class="rvts62">Task</span><span class="rvts20"> </span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Инициализация главной переменной и дополнительных функций</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester </span><span class="rvts22">= </span><span class="rvts40">new </span><span class="rvts21">Tester</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">setUp</span><span class="rvts22">();</span></p>
@@ -154,11 +159,13 @@
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">tearDown</span><span class="rvts22">();</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Функция начала работы с автотестом</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">setUp</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserFullScreenAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserFullScreenAsync</span><span class="rvts22">(); </span><span class="rvts47">// Устанавливает разрешение браузер на весь экран</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Функция выполнения действий автотеста</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestBeginAsync</span><span class="rvts22">();</span></p>
@@ -169,9 +176,10 @@
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestEndAsync</span><span class="rvts22">();</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Функция завершения работы с автотестом</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">tearDown</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// await tester.BrowserCloseAsync();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// await tester.BrowserCloseAsync(); в данном случае нам не нужно чтобы браузер закрывался</span></p>
    <p class="rvps2"><span class="rvts47">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts22">}</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22">}</span></p>
@@ -214,10 +222,13 @@
    <p class="rvps2"><span class="rvts22">{</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts39">class </span><span class="rvts20">ExampleTest4</span></p>
    <p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Главная переменная для работы автотеста</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">Tester tester</span><span class="rvts22">;</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Главная входная функция объявлена как Task это важно! (с этой функции начинается работа автотеста)</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async </span><span class="rvts62">Task</span><span class="rvts20"> </span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Инициализация главной переменной и дополнительных функций</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester </span><span class="rvts22">= </span><span class="rvts40">new </span><span class="rvts21">Tester</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">setUp</span><span class="rvts22">();</span></p>
@@ -225,11 +236,13 @@
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">tearDown</span><span class="rvts22">();</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Функция начала работы с автотестом</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">setUp</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserFullScreenAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserFullScreenAsync</span><span class="rvts22">(); </span><span class="rvts47">// Устанавливает разрешение браузер на весь экран</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Функция выполнения действий автотеста</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestBeginAsync</span><span class="rvts22">();</span></p>
@@ -241,9 +254,10 @@
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestEndAsync</span><span class="rvts22">();</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Функция завершения работы с автотестом</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">tearDown</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// await tester.BrowserCloseAsync();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// await tester.BrowserCloseAsync(); в данном случае нам не нужно чтобы браузер закрывался</span></p>
    <p class="rvps2"><span class="rvts47">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts22">}</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22">}</span></p>
@@ -252,7 +266,8 @@
 </table>
 </div>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts12">Теперь нужно создать объединяющий автотест GroupTests1.cs который будет вызывает другие автотесты.</span></p>
+<p class="rvps2"><span class="rvts12">Мы создали два автотеста "ExampleTest3.cs" и "ExampleTest4.cs" которые расположены в папке "group1".</span></p>
+<p class="rvps2"><span class="rvts12">Теперь нужно создать объединяющий автотест GroupTests1.cs который будет вызывать другие автотесты.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <div class="rvps2">
 <table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
@@ -286,15 +301,17 @@
    <p class="rvps2"><span class="rvts22">{</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts39">class </span><span class="rvts20">GroupTests1</span></p>
    <p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Главная переменная для работы автотеста</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">Tester tester</span><span class="rvts22">;</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Главная входная функция (с этой функции начинается работа автотеста)</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async </span><span class="rvts39">void </span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester </span><span class="rvts22">= </span><span class="rvts40">new </span><span class="rvts21">Tester</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">setUp</span><span class="rvts22">();</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">test1</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">test2</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">tearDown</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester </span><span class="rvts22">= </span><span class="rvts40">new </span><span class="rvts21">Tester</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">); </span><span class="rvts47">// Инициализация главной переменной</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">setUp</span><span class="rvts22">(); </span><span class="rvts47">// Функция начала работы с автотестом</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">test1</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">); </span><span class="rvts47">// Функция вызывающая автотест из скрипта ExampleTest3.cs</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">test2</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">); </span><span class="rvts47">// Функция вызывающая автотест из скрипта ExampleTest4.cs</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">tearDown</span><span class="rvts22">(); </span><span class="rvts47">// Функция завершения работы с автотестом</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">setUp</span><span class="rvts22">()</span></p>
@@ -302,23 +319,26 @@
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserFullScreenAsync</span><span class="rvts22">();</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Эта Функция запускает автотест из скрипта ExampleTest3.cs</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test1</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester</span><span class="rvts22">.</span><span class="rvts21">SendMessage</span><span class="rvts22">(</span><span class="rvts41">"Автотест ExampleTest3"</span><span class="rvts22">, </span><span class="rvts41">""</span><span class="rvts22">, </span><span class="rvts41">"Файл: ExampleTest3.cs"</span><span class="rvts22">, </span><span class="rvts20">Tester</span><span class="rvts22">.</span><span class="rvts20">IMAGE_STATUS_MESSAGE</span><span class="rvts22">);</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">ExampleTest3 exampleTest3 </span><span class="rvts22">= </span><span class="rvts40">new </span><span class="rvts21">ExampleTest3</span><span class="rvts22">();</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await exampleTest3</span><span class="rvts22">.</span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">ExampleTest3 exampleTest3 </span><span class="rvts22">= </span><span class="rvts40">new </span><span class="rvts21">ExampleTest3</span><span class="rvts22">(); </span><span class="rvts47">// Создается переменная автотеста</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await exampleTest3</span><span class="rvts22">.</span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">); </span><span class="rvts47">// Запускается автотест</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Эта Функция запускает автотест из скрипта ExampleTest4.cs</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test2</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester</span><span class="rvts22">.</span><span class="rvts21">SendMessage</span><span class="rvts22">(</span><span class="rvts41">"Автотест ExampleTest4"</span><span class="rvts22">, </span><span class="rvts41">""</span><span class="rvts22">, </span><span class="rvts41">"Файл: ExampleTest4.cs"</span><span class="rvts22">, </span><span class="rvts20">Tester</span><span class="rvts22">.</span><span class="rvts20">IMAGE_STATUS_MESSAGE</span><span class="rvts22">);</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">ExampleTest4 exampleTest4 </span><span class="rvts22">= </span><span class="rvts40">new </span><span class="rvts21">ExampleTest4</span><span class="rvts22">();</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await exampleTest4</span><span class="rvts22">.</span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">ExampleTest4 exampleTest4 </span><span class="rvts22">= </span><span class="rvts40">new </span><span class="rvts21">ExampleTest4</span><span class="rvts22">(); </span><span class="rvts47">// Создается переменная автотеста</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await exampleTest4</span><span class="rvts22">.</span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">); </span><span class="rvts47">// Запускается автотест</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Функция завершения работы с автотестом</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">tearDown</span><span class="rvts22">()</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserCloseAsync</span><span class="rvts22">();</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserCloseAsync</span><span class="rvts22">(); </span><span class="rvts47">// Закрывает браузер</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts22">}</span></p>
@@ -329,7 +349,7 @@
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts12">Как вы видите автотесты ExampleTest3.cs и ExampleTest4.cs будут последовательно вызываться в методах test1 и test2.</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12">Запустите автотест GroupTests1.cs</span></p>
+<p class="rvps2"><span class="rvts12">Запустите групповой автотест GroupTests1.cs</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem73.png"></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
