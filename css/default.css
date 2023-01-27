@@ -977,3 +977,30 @@ footer {
 }
 
 /** ------------- **/
+
+.zionecImg {
+    float: right;
+}
+
+.zionec img{
+    position: relative;
+    top: 45px;
+}
+
+.zionec-border {
+    /*background-color: #00BE92;*/
+    background-color: #FFFFFF;
+    border: 2px solid #00BE92;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 5px;
+    margin-bottom: 25px;
+    /*width: 40%;*/
+    /*color: #FFFFFF;*/
+}
+
+.zionec-img-link {
+    text-decoration: none !important;
+    color: #FFFFFF;
+}
