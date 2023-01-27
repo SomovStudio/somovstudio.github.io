@@ -988,8 +988,8 @@ footer {
 }
 
 .zionec-border {
-    /*background-color: #00BE92;*/
-    background-color: #FFFFFF;
+    background-color: #00BE92;
+    /*background-color: #FFFFFF;*/
     border: 2px solid #00BE92;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -997,7 +997,7 @@ footer {
     padding: 5px;
     margin-bottom: 25px;
     /*width: 40%;*/
-    /*color: #FFFFFF;*/
+    color: #FFFFFF;
 }
 
 .zionec-img-link {
