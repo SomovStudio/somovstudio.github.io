@@ -806,6 +806,7 @@ footer {
 
 /** -- BUNNER -- **/
 #bunner {
+	background-color: #1C3568;
 	border: 2px solid rgba(161, 189, 227, 0.5);
 	border-radius: 5px;
 	padding: 10px;
@@ -978,16 +979,18 @@ footer {
 
 /** ------------- **/
 
-.zionecImg {
+#ZionecBunner {
+	display: block;
+	min-width: 100%;
+	min-height: 200px;
+}
+
+.zionec-img {
     float: right;
 }
 
-.zionec img{
-    position: relative;
-    top: 45px;
-}
-
 .zionec-border {
+	float: right;
     background-color: #02aa81;
     border: 2px solid #02aa81;
     border-top-left-radius: 8px;
@@ -995,7 +998,7 @@ footer {
     border-bottom-right-radius: 8px;
     padding: 5px;
     margin-bottom: 25px;
-    /*width: 40%;*/
+    width: 80%;
     color: #FFFFFF;
 }
 
