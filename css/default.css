@@ -979,16 +979,18 @@ footer {
 
 /** ------------- **/
 
-.zionecImg {
+#ZionecBunner {
+	display: block;
+	min-width: 100%;
+	min-height: 200px;
+}
+
+.zionec-img {
     float: right;
 }
 
-.zionec img{
-    position: relative;
-    top: 45px;
-}
-
 .zionec-border {
+	float: right;
     background-color: #02aa81;
     border: 2px solid #02aa81;
     border-top-left-radius: 8px;
@@ -996,7 +998,7 @@ footer {
     border-bottom-right-radius: 8px;
     padding: 5px;
     margin-bottom: 25px;
-    /*width: 40%;*/
+    width: 80%;
     color: #FFFFFF;
 }
 
