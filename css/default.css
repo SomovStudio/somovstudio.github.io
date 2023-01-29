@@ -806,6 +806,7 @@ footer {
 
 /** -- BUNNER -- **/
 #bunner {
+	background-color: #1C3568;
 	border: 2px solid rgba(161, 189, 227, 0.5);
 	border-radius: 5px;
 	padding: 10px;
