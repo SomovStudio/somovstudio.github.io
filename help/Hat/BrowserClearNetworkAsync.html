@@ -3,7 +3,7 @@
 <html>
 	
 <head>
-	<title>GetLocatorAsync</title>
+	<title>BrowserClearNetworkAsync</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
 	<meta name="description" content="" /> 
@@ -40,7 +40,7 @@
 				{
 					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
 					{
-						top.FrameTOC.SelectTocItem("GetLocatorAsync");
+						top.FrameTOC.SelectTocItem("BrowserClearNetworkAsync");
 						bTocSelected = true;
 					}
 					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
@@ -59,11 +59,11 @@
 	
 		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">GetLocatorAsync</h1>
+				<h1 id="topic_header_text">BrowserClearNetworkAsync</h1>
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="HTMLElement.html">Класс: HTMLElement</a> &rsaquo;&rsaquo; <a href="Newtopic33.html">Методы</a> &rsaquo;&rsaquo; 
+					<a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="Tester.html">Класс: Tester</a> &rsaquo;&rsaquo; <a href="Newtopic7.html">Методы для работы с браузером</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -71,15 +71,15 @@
 			<div id="topic_header_nav">
 				
 				
-				<a href="Newtopic33.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				<a href="Newtopic7.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
 				
 				
-				<a href="GetHtmlAsync.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="BrowserBasicAuthenticationAsync.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
-				<a href="GetOptionAsync.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="BrowserCloseAsync.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,15 +90,15 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps12"><span class="rvts53">GetLocatorAsync</span></p>
-<p class="rvps12"><span class="rvts56">Описание</span><span class="rvts57">: метод возвращает локатор элемента</span></p>
-<p class="rvps12"><span class="rvts56">Синтаксис</span><span class="rvts57">: </span><span class="rvts54">GetLocatorAsync()</span></p>
+<p class="rvps12"><span class="rvts53">BrowserClearNetworkAsync</span></p>
+<p class="rvps12"><span class="rvts56">Описание</span><span class="rvts57">: метод выполняет очистку событий network в браузере</span></p>
+<p class="rvps12"><span class="rvts56">Синтаксис</span><span class="rvts57">: </span><span class="rvts54">BrowserClearNetworkAsync()</span></p>
 <p class="rvps12"><span class="rvts55"><br/></span></p>
 <p class="rvps12"><span class="rvts56">Пример</span><span class="rvts55">:</span></p>
-<p class="rvps12"><span class="rvts54">string locator = await tester.GetLocatorAsync();</span></p>
-<p class="rvps12"><span class="rvts54">tester.ConsoleMsg(locator);</span></p>
-<p class="rvps12"><span class="rvts60"></span><span class="rvts6"></span></p>
-<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com">Full-featured Documentation generator</a></p>
+<p class="rvps12"><span class="rvts54">string events = await tester.BrowserClearNetworkAsync();</span></p>
+<p class="rvps12"><span class="rvts54">tester.ConsoleMsg(events);</span></p>
+<p class="rvps12"><span class="rvts52"></span><span class="rvts6"></span></p>
+<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com">Easy CHM and documentation editor</a></p>
 
 	</div>
 	
