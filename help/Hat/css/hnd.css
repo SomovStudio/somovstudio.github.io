@@ -295,50 +295,50 @@ span.rvts51
  font-family: 'Calibri';
  color: #004dbb;
 }
-a.rvts52, span.rvts52
+span.rvts52
 {
- font-size: 12pt;
  font-family: 'Calibri';
- text-decoration: none;
 }
-a.rvts53, span.rvts53
+span.rvts53
 {
  font-size: 12pt;
  font-family: 'Calibri';
- color: #0000ff;
- text-decoration: underline;
+ color: #004dbb;
 }
 span.rvts54
 {
+ font-size: 12pt;
  font-family: 'Calibri';
 }
 span.rvts55
 {
  font-size: 12pt;
  font-family: 'Calibri';
- color: #004dbb;
+ color: #000000;
 }
 span.rvts56
 {
  font-size: 12pt;
  font-family: 'Calibri';
+ color: #9b00d3;
 }
 span.rvts57
 {
  font-size: 12pt;
  font-family: 'Calibri';
- color: #000000;
 }
-span.rvts58
+a.rvts58, span.rvts58
 {
  font-size: 12pt;
  font-family: 'Calibri';
- color: #9b00d3;
+ text-decoration: none;
 }
-span.rvts59
+a.rvts59, span.rvts59
 {
  font-size: 12pt;
  font-family: 'Calibri';
+ color: #0000ff;
+ text-decoration: underline;
 }
 span.rvts60
 {
