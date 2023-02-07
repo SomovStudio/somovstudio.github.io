@@ -642,6 +642,10 @@ footer {
 	height: 100%;
 }
 
+.content-image-soft-border {
+	border: 1px inset rgb(50, 50, 50);
+}
+
 .line:after {
 	display: block;
 	content: '';
