@@ -367,6 +367,66 @@ span.rvts64
  font-weight: bold;
  color: #008080;
 }
+span.rvts65
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000080;
+}
+span.rvts66
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000000;
+}
+span.rvts67
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #0000ff;
+}
+span.rvts68
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #ff0000;
+}
+span.rvts69
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #008b8b;
+}
+span.rvts70
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #191970;
+}
+span.rvts71
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #008000;
+}
+span.rvts72
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #00008b;
+}
+span.rvts73
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts74
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts75
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #ff0000;
+}
 /* ========== Para Styles ========== */
 p,ul,ol /* Paragraph Style */
 {
