@@ -1,0 +1,204 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Перехват событий google analytics и yandex metrika</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("googleanalyticsyandexmetrika");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Перехват событий google analytics и yandex metrika</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic34.html">Практические примеры</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic34.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic49.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps2"><span class="rvts17">Перехват событий google analytics и yandex metrika</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Чтобы перехватить события GA и YM воспользуетесь специальными методами.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps7"><span class="rvts65">await</span><span class="rvts66"> tester.</span><span class="rvts70">AssertNetworkEventsAsync</span><span class="rvts66">(</span><span class="rvts69">true</span><span class="rvts66">, </span><span class="rvts69">new</span><span class="rvts66"> </span><span class="rvts68">string</span><span class="rvts66">[] {&nbsp;</span><br/><span class="rvts66">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts67">"ec=ga_category"</span><span class="rvts66">, </span><span class="rvts67">"ea=ga_action"</span><span class="rvts66">, </span><span class="rvts67">"el=ga_label"</span><span class="rvts66">, </span><span class="rvts67">"yandex_event"</span><span class="rvts66">&nbsp;</span><br/><span class="rvts66">});</span></p>
+<p class="rvps7"><span class="rvts65">await</span><span class="rvts66"> Helper.</span><span class="rvts70">ClearBrowserNetworkLogs</span><span class="rvts66">(tester); </span><span class="rvts47">// очистка событий</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Еще один способ перехватить событие YM это использовать </span><span class="rvts17">?_ym_debug=1</span><span class="rvts12"> в адресе и обработка событий браузера.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2">
+<table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+ <tr valign="top">
+  <td style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;">
+   <p class="rvps2"><span class="rvts6">Файл: ExampleTest7.cs</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td style="border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Collections</span><span class="rvts22">.</span><span class="rvts20">Generic</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">ComponentModel</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Windows</span><span class="rvts22">.</span><span class="rvts20">Forms</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Threading</span><span class="rvts22">.</span><span class="rvts20">Tasks</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">IO</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Data</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Drawing</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Linq</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Text</span><span class="rvts22">.</span><span class="rvts20">RegularExpressions</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Net</span><span class="rvts22">.</span><span class="rvts20">Http</span><span class="rvts22">.</span><span class="rvts20">Headers</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">System</span><span class="rvts22">.</span><span class="rvts20">Reflection</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">Newtonsoft</span><span class="rvts22">.</span><span class="rvts20">Json</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts38">using </span><span class="rvts20">HatFramework</span><span class="rvts22">;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts38">namespace </span><span class="rvts20">Hat</span></p>
+   <p class="rvps2"><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts39">class </span><span class="rvts20">ExampleTest5</span></p>
+   <p class="rvps2"><span class="rvts20">&nbsp; &nbsp; </span><span class="rvts22">{</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">Tester tester</span><span class="rvts22">; </span><span class="rvts47">// Главная переменная для работы автотеста</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">List&lt;</span><span class="rvts68">string</span><span class="rvts66">&gt; events; </span><span class="rvts47">// Переменная в которую собираются все события браузера</span><span class="rvts66">&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Главная входная функция (с этой функции начинается работа автотеста)</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async </span><span class="rvts39">void </span><span class="rvts21">Main</span><span class="rvts22">(</span><span class="rvts20">Form browserWindow</span><span class="rvts22">)</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">tester </span><span class="rvts22">= </span><span class="rvts40">new </span><span class="rvts21">Tester</span><span class="rvts22">(</span><span class="rvts20">browserWindow</span><span class="rvts22">); </span><span class="rvts47">// Инициализация главной переменной</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">setUp</span><span class="rvts22">(); </span><span class="rvts47">// Функция начала работы с автотестом</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">test</span><span class="rvts22">(); </span><span class="rvts47">// Функция выполнения действий теста</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await </span><span class="rvts21">tearDown</span><span class="rvts22">(); </span><span class="rvts47">// Функция завершения работы с автотестом</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts47">// Функция которая слушает события браузера</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts74">private</span><span class="rvts66"> </span><span class="rvts68">void</span><span class="rvts66"> </span><span class="rvts70">browserConsoleEvents</span><span class="rvts66">(</span><span class="rvts68">object</span><span class="rvts66"> sender, Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs e)</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">{</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">&nbsp;&nbsp;&nbsp;&nbsp;events.</span><span class="rvts70">Add</span><span class="rvts66">(e.ParameterObjectAsJson);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">&nbsp;&nbsp;&nbsp;&nbsp;tester.</span><span class="rvts70">ConsoleMsg</span><span class="rvts66">(e.ParameterObjectAsJson);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">}</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">setUp</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserFullScreenAsync</span><span class="rvts22">(); </span><span class="rvts47">// Устанавливает разрешение браузер на весь экран</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts71">/*</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">* Включим прослушивание событий браузера</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">* Источник: https://chromedevtools.github.io/devtools-protocol/tot/Network/</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">*/</span><span class="rvts47">&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">tester.BrowserView.CoreWebView2.</span><span class="rvts70">GetDevToolsProtocolEventReceiver</span><span class="rvts66">(</span><span class="rvts67">"Log.entryAdded"</span><span class="rvts66">).DevToolsProtocolEventReceived += browserConsoleEvents;</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.BrowserView.CoreWebView2.</span><span class="rvts70">CallDevToolsProtocolMethodAsync</span><span class="rvts66">(</span><span class="rvts67">"Log.enable"</span><span class="rvts66">, </span><span class="rvts67">"{}"</span><span class="rvts66">);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">tester.BrowserView.CoreWebView2.</span><span class="rvts70">GetDevToolsProtocolEventReceiver</span><span class="rvts66">(</span><span class="rvts67">"Console.messageAdded"</span><span class="rvts66">).DevToolsProtocolEventReceived += browserConsoleEvents;</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.BrowserView.CoreWebView2.</span><span class="rvts70">CallDevToolsProtocolMethodAsync</span><span class="rvts66">(</span><span class="rvts67">"Console.enable"</span><span class="rvts66">, </span><span class="rvts67">"{}"</span><span class="rvts66">);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">tester.BrowserView.CoreWebView2.</span><span class="rvts70">GetDevToolsProtocolEventReceiver</span><span class="rvts66">(</span><span class="rvts67">"Runtime.consoleAPICalled"</span><span class="rvts66">).DevToolsProtocolEventReceived += browserConsoleEvents;</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">tester.BrowserView.CoreWebView2.</span><span class="rvts70">GetDevToolsProtocolEventReceiver</span><span class="rvts66">(</span><span class="rvts67">"Runtime.exceptionThrown"</span><span class="rvts66">).DevToolsProtocolEventReceived += browserConsoleEvents;</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.BrowserView.CoreWebView2.</span><span class="rvts70">CallDevToolsProtocolMethodAsync</span><span class="rvts66">(</span><span class="rvts67">"Runtime.enable"</span><span class="rvts66">, </span><span class="rvts67">"{}"</span><span class="rvts66">);</span><br/><span class="rvts66">tester.BrowserView.CoreWebView2.</span><span class="rvts70">GetDevToolsProtocolEventReceiver</span><span class="rvts66">(</span><span class="rvts67">"Network.dataReceived"</span><span class="rvts66">).DevToolsProtocolEventReceived += browserConsoleEvents;</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.BrowserView.CoreWebView2.</span><span class="rvts70">CallDevToolsProtocolMethodAsync</span><span class="rvts66">(</span><span class="rvts67">"Network.enable"</span><span class="rvts66">, </span><span class="rvts67">"{}"</span><span class="rvts66">);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">tester.BrowserView.CoreWebView2.</span><span class="rvts70">GetDevToolsProtocolEventReceiver</span><span class="rvts66">(</span><span class="rvts67">"Debugger.scriptParsed"</span><span class="rvts66">).DevToolsProtocolEventReceived += browserConsoleEvents;</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.BrowserView.CoreWebView2.</span><span class="rvts70">CallDevToolsProtocolMethodAsync</span><span class="rvts66">(</span><span class="rvts67">"Debugger.enable"</span><span class="rvts66">, </span><span class="rvts67">"{}"</span><span class="rvts66">);</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">test</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestBeginAsync</span><span class="rvts22">(); </span><span class="rvts47">// Начало выполнения действий</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester.</span><span class="rvts21">GoToUrlAsync</span><span class="rvts20">(</span><span class="rvts41">"https://test.site.com/?_ym_debug=1"</span><span class="rvts20">, 5); </span><span class="rvts47">// Загрузка страницы с включенной отладкой YM событий</span></p>
+   <p class="rvps2"><span class="rvts47"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.</span><span class="rvts70">SetValueInElementAsync</span><span class="rvts66">(Tester.BY_XPATH, </span><span class="rvts67">"//input[@id='SECOND_NAME']"</span><span class="rvts66">, Helper.TestName);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.</span><span class="rvts70">WaitAsync</span><span class="rvts66">(</span><span class="rvts72">1</span><span class="rvts66">);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.</span><span class="rvts70">SetValueInElementAsync</span><span class="rvts66">(Tester.BY_XPATH, </span><span class="rvts67">"//input[@id='NAME']"</span><span class="rvts66">, Helper.TestName);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.</span><span class="rvts70">WaitAsync</span><span class="rvts66">(</span><span class="rvts72">1</span><span class="rvts66">);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.</span><span class="rvts70">SetValueInElementAsync</span><span class="rvts66">(Tester.BY_XPATH, </span><span class="rvts67">"//input[@id='PHONE']"</span><span class="rvts66">, Helper.TestPhone);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.</span><span class="rvts70">WaitAsync</span><span class="rvts66">(</span><span class="rvts72">1</span><span class="rvts66">);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.</span><span class="rvts70">ClickElementAsync</span><span class="rvts66">(Tester.BY_XPATH, </span><span class="rvts67">"//input[@id='fb_close']"</span><span class="rvts66">);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.</span><span class="rvts70">WaitAsync</span><span class="rvts66">(</span><span class="rvts72">1</span><span class="rvts66">);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.</span><span class="rvts70">WaitVisibleElementAsync</span><span class="rvts66">(Tester.BY_XPATH, </span><span class="rvts67">"//p[text() = 'Спасибо! Ваша заявка принята.']"</span><span class="rvts66">, </span><span class="rvts72">25</span><span class="rvts66">);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.</span><span class="rvts70">WaitAsync</span><span class="rvts66">(</span><span class="rvts72">5</span><span class="rvts66">);</span></p>
+   <p class="rvps2"><span class="rvts47"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts71">// Проверка события YM в списке событий браузера</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">tester.</span><span class="rvts70">SendMessage</span><span class="rvts66">(</span><span class="rvts67">"Message"</span><span class="rvts66">, Tester.COMPLETED, </span><span class="rvts67">"Проверка: Событие YM (Goal id: yandex_event)"</span><span class="rvts66">, Tester.IMAGE_STATUS_MESSAGE);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts75">bool</span><span class="rvts66"> checkYM = </span><span class="rvts69">false</span><span class="rvts66">;</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts74">foreach</span><span class="rvts66">(</span><span class="rvts68">string</span><span class="rvts66"> </span><span class="rvts73">value</span><span class="rvts66"> </span><span class="rvts74">in</span><span class="rvts66"> events)</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">{</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">&nbsp;&nbsp;&nbsp;&nbsp;checkYM = </span><span class="rvts73">value</span><span class="rvts66">.</span><span class="rvts70">Contains</span><span class="rvts66">(</span><span class="rvts67">"Goal id: yandex_event"</span><span class="rvts66">);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts74">if</span><span class="rvts66"> (checkYM == </span><span class="rvts69">true</span><span class="rvts66">)</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tester.</span><span class="rvts70">SendMessage</span><span class="rvts66">(</span><span class="rvts67">"Message"</span><span class="rvts66">, Tester.COMPLETED, </span><span class="rvts67">"Сработало событие YM: "</span><span class="rvts66"> + </span><span class="rvts73">value</span><span class="rvts66">, Tester.IMAGE_STATUS_MESSAGE);</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts65">break</span><span class="rvts66">;</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts66">}</span><br/><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts65">await</span><span class="rvts66"> tester.</span><span class="rvts70">AssertTrueAsync</span><span class="rvts66">(checkYM); </span><span class="rvts47">// Результат проверки</span></p>
+   <p class="rvps2"><span class="rvts47"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">TestEndAsync</span><span class="rvts22">(); </span><span class="rvts47">// Завершение выполнения действий</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts19">public </span><span class="rvts20">async Task </span><span class="rvts21">tearDown</span><span class="rvts22">()</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts20">await tester</span><span class="rvts22">.</span><span class="rvts21">BrowserCloseAsync</span><span class="rvts22">(); </span><span class="rvts47">// Закрывает браузер</span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22"><br/></span></p>
+   <p class="rvps2"><span class="rvts22">&nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts22">}</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Таким образом автотест слушает все события браузера и после выполнения действий просматривает все события в поисках YM.</span></p>
+<p class="rvps2"><span class="rvts12">Если событие YM будет найдено тест считается успешным.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12"></span><span class="rvts6"></span></p>
+<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/feature-tour">Easily create Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2023 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
