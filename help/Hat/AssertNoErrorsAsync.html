@@ -90,16 +90,17 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps12"><span class="rvts51">AssertNoErrorsAsync</span></p>
-<p class="rvps12"><span class="rvts50">Описание</span><span class="rvts48">: метод выполняет проверку отсутствия ошибок на странице и если ошибки присутствуют проверка будет считаться провальной</span></p>
-<p class="rvps12"><span class="rvts50">Синтаксис</span><span class="rvts48">: AssertNoErrorsAsync()</span></p>
-<p class="rvps12"><span class="rvts49"><br/></span></p>
-<p class="rvps12"><span class="rvts50">Пример</span><span class="rvts49">:</span></p>
-<p class="rvps12"><span class="rvts48">Tester tester = new Tester(browserForm);</span></p>
-<p class="rvps12"><span class="rvts48">await tester.TestBeginAsync();</span></p>
-<p class="rvps12"><span class="rvts48">await tester.GoToUrlAsync("https://www.nvidia.com/", 5);</span></p>
-<p class="rvps12"><span class="rvts48">await tester.AssertNoErrorsAsync();</span></p>
-<p class="rvps12"><span class="rvts48">await tester.TestEndAsync();</span><span class="rvts6"></span></p>
+<p class="rvps12"><span class="rvts61">AssertNoErrorsAsync</span></p>
+<p class="rvps12"><span class="rvts64">Описание</span><span class="rvts65">: метод выполняет проверку отсутствия ошибок на странице и если ошибки присутствуют проверка будет считаться провальной</span></p>
+<p class="rvps12"><span class="rvts64">Синтаксис</span><span class="rvts65">: </span><span class="rvts62">AssertNoErrorsAsync(bool showListErrors = false, string[] listIgnored = null)</span></p>
+<p class="rvps12"><span class="rvts63"><br/></span></p>
+<p class="rvps12"><span class="rvts64">Пример</span><span class="rvts63">:</span></p>
+<p class="rvps12"><span class="rvts62">Tester tester = new Tester(browserForm);</span></p>
+<p class="rvps12"><span class="rvts62">...</span></p>
+<p class="rvps12"><span class="rvts62">await tester.TestBeginAsync();</span></p>
+<p class="rvps12"><span class="rvts62">await tester.GoToUrlAsync("https://somovstudio.github.io/test_error.html", 25);</span></p>
+<p class="rvps12"><span class="rvts62">await tester.AssertNoErrorsAsync(true, new string[1] { "stats.g.doubleclick.net" });</span></p>
+<p class="rvps12"><span class="rvts62">await tester.TestEndAsync();</span><span class="rvts6"></span></p>
 <p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EBook editor</a></p>
 
 	</div>
