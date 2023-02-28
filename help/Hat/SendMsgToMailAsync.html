@@ -90,20 +90,20 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps12"><span class="rvts51">SendMsgToMailAsync</span></p>
-<p class="rvps12"><span class="rvts50">Описание</span><span class="rvts48">: метод отправляет письмо на почту</span></p>
-<p class="rvps12"><span class="rvts50">Синтаксис</span><span class="rvts48">: SendMsgToMailAsync(string subject, string body)</span></p>
-<p class="rvps12"><span class="rvts49"><br/></span></p>
-<p class="rvps12"><span class="rvts50">Пример</span><span class="rvts49">:</span></p>
-<p class="rvps12"><span class="rvts48">Tester tester = new Tester(browserForm);</span></p>
-<p class="rvps12"><span class="rvts48">await tester.TestBeginAsync();</span></p>
-<p class="rvps12"><span class="rvts48">...</span></p>
-<p class="rvps12"><span class="rvts48">await tester.TestEndAsync();</span></p>
-<p class="rvps12"><span class="rvts48">if(tester.GetTestResult() == Tester.PASSED)&nbsp;</span></p>
-<p class="rvps12"><span class="rvts48">{&nbsp;</span></p>
-<p class="rvps12"><span class="rvts48"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts48">await tester.SendMsgToMailAsync("Тестовое сообщение", "Тест завершился успешно");</span></p>
-<p class="rvps12"><span class="rvts48">}</span></p>
-<p class="rvps12"><span class="rvts48"></span><span class="rvts6"></span></p>
+<p class="rvps12"><span class="rvts61">SendMsgToMailAsync</span></p>
+<p class="rvps12"><span class="rvts64">Описание</span><span class="rvts65">: метод отправляет письмо на почту</span></p>
+<p class="rvps12"><span class="rvts64">Синтаксис</span><span class="rvts65">: </span><span class="rvts62">SendMsgToMailAsync(string subject, string body, string filename = "")</span></p>
+<p class="rvps12"><span class="rvts63"><br/></span></p>
+<p class="rvps12"><span class="rvts64">Пример</span><span class="rvts63">:</span></p>
+<p class="rvps12"><span class="rvts62">Tester tester = new Tester(browserForm);</span></p>
+<p class="rvps12"><span class="rvts62">await tester.TestBeginAsync();</span></p>
+<p class="rvps12"><span class="rvts62">...</span></p>
+<p class="rvps12"><span class="rvts62">await tester.TestEndAsync();</span></p>
+<p class="rvps12"><span class="rvts62">if(tester.GetTestResult() == Tester.PASSED)&nbsp;</span></p>
+<p class="rvps12"><span class="rvts62">{&nbsp;</span></p>
+<p class="rvps12"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">await tester.SendMsgToMailAsync("</span><span class="rvts65">Тестовое сообщение", "Тест завершился успешно");</span></p>
+<p class="rvps12"><span class="rvts65">}</span></p>
+<p class="rvps12"><span class="rvts60"></span><span class="rvts6"></span></p>
 <p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com">Free EPub and documentation generator</a></p>
 
 	</div>

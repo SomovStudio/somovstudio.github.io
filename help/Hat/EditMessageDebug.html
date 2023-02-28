@@ -1,0 +1,120 @@
+﻿
+
+<html>
+	
+<head>
+	<title>EditMessageDebug</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("EditMessageDebug");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">EditMessageDebug</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="Tester.html">Класс: Tester</a> &rsaquo;&rsaquo; <a href="Newtopic8.html">Методы для вывода сообщений</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic8.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="EditMessage.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic9.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps12"><span class="rvts61">EditMessageDebug</span></p>
+<p class="rvps12"><span class="rvts64">Описание</span><span class="rvts65">: метод изменяет ранее выведенное</span><span class="rvts62"> </span><span class="rvts65">отладочное сообщение которое может быть отключено для вывода в отчет и письмо</span></p>
+<p class="rvps12"><span class="rvts64">Синтаксис</span><span class="rvts65">: EditMessageDebug(int index, string actionRus, string actionEng, string status, string commentRus, string commentEng, int image)</span></p>
+<p class="rvps12"><span class="rvts63"><br/></span></p>
+<p class="rvps12"><span class="rvts64">Пример</span><span class="rvts63">:</span></p>
+<p class="rvps12"><span class="rvts62">tester.</span><span class="rvts65">EditMessageDebug(step, "действия",</span><span class="rvts62"> "action", Tester.</span><span class="rvts65">PASSED, "комментарий", </span><span class="rvts62">"comment",&nbsp;</span><span class="rvts65"> </span><span class="rvts62">Tester.</span><span class="rvts65">IMAGE_STATUS_PASSED);</span></p>
+<p class="rvps12"><span class="rvts65"><br/></span></p>
+<p class="rvps12"><span class="rvts62">tester.</span><span class="rvts65">EditMessageDebug(step, </span><span class="rvts62">null</span><span class="rvts65">,</span><span class="rvts62"> null,</span><span class="rvts65"> </span><span class="rvts62">Tester.</span><span class="rvts65">FAILED, "комментарий", </span><span class="rvts62">"comment",</span><span class="rvts65"> </span><span class="rvts62">Tester.</span><span class="rvts65">IMAGE_STATUS_FAILED);</span></p>
+<p class="rvps12"><span class="rvts65"></span><span class="rvts6"></span></p>
+<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EPub generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2023 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

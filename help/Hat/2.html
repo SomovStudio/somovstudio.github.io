@@ -98,7 +98,7 @@
 <p class="rvps7"><span class="rvts17"><br/></span></p>
 <p class="rvps2"><span class="rvts12">Чтобы в консоли поддерживался русский язык в коменде запуска агента нужно дописать </span><span class="rvts17">-Dfile.encoding=UTF8</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps10"><span class="rvts28">java </span><span class="rvts30">-Dfile.encoding=UTF8</span><span class="rvts28"> -jar </span><a class="rvts29" href="http://89.108.109.117:8081/jnlpJars/agent.jar">agent.jar</a><span class="rvts28"> -jnlpUrl http://192.168.201.1:8081/computer/slave/slave-agent.jnlp -secret 949d1a4e047f6fad3ad0540d7ee94fa71181c2190d0f4cc6f77bb2cbb5c8d4eb -workDir "C:\Autotests\#######\jenkins\slave"</span></p>
+<p class="rvps10"><span class="rvts32">java </span><span class="rvts34">-Dfile.encoding=UTF8</span><span class="rvts32"> -jar </span><a class="rvts33" href="http://89.108.109.117:8081/jnlpJars/agent.jar">agent.jar</a><span class="rvts32"> -jnlpUrl http://192.168.201.1:8081/computer/slave/slave-agent.jnlp -secret 949d1a4e047f6fad3ad0540d7ee94fa71181c2190d0f4cc6f77bb2cbb5c8d4eb -workDir "C:\Autotests\#######\jenkins\slave"</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
 <p class="rvps2"><span class="rvts6"><br/></span></p>
@@ -106,29 +106,29 @@
 <p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><span class="rvts12">Для того чтобы Jenkins поддерживал русские символы нужно:</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12">в папке C:\Program Files\Jenkins\ найти файл jenkins.xml и прописать в строке arguments строку</span><span class="rvts27"> -Dfile.encoding=UTF8</span></p>
+<p class="rvps2"><span class="rvts12">в папке C:\Program Files\Jenkins\ найти файл jenkins.xml и прописать в строке arguments строку</span><span class="rvts31"> -Dfile.encoding=UTF8</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps7"><span class="rvts33">&lt;service&gt;</span></p>
-<p class="rvps7"><span class="rvts33">...</span></p>
-<p class="rvps7"><span class="rvts33">&lt;arguments&gt;</span></p>
-<p class="rvps7"><span class="rvts33">-Xrs -Xmx256m -Dhudson.lifecycle=hudson.lifecycle.WindowsServiceLifecycle </span><span class="rvts34">-Dfile.encoding=UTF8</span><span class="rvts33"> -jar "%BASE%\jenkins.war" --httpPort=8080 --webroot="%BASE%\war"</span></p>
-<p class="rvps7"><span class="rvts33">&lt;/arguments&gt;</span></p>
-<p class="rvps7"><span class="rvts33">...</span></p>
-<p class="rvps7"><span class="rvts33">&lt;/service&gt;</span></p>
+<p class="rvps7"><span class="rvts37">&lt;service&gt;</span></p>
+<p class="rvps7"><span class="rvts37">...</span></p>
+<p class="rvps7"><span class="rvts37">&lt;arguments&gt;</span></p>
+<p class="rvps7"><span class="rvts37">-Xrs -Xmx256m -Dhudson.lifecycle=hudson.lifecycle.WindowsServiceLifecycle </span><span class="rvts38">-Dfile.encoding=UTF8</span><span class="rvts37"> -jar "%BASE%\jenkins.war" --httpPort=8080 --webroot="%BASE%\war"</span></p>
+<p class="rvps7"><span class="rvts37">&lt;/arguments&gt;</span></p>
+<p class="rvps7"><span class="rvts37">...</span></p>
+<p class="rvps7"><span class="rvts37">&lt;/service&gt;</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><span class="rvts12">В настройках Jenkins</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12">Перейдите в </span><span class="rvts27">Manage Jenkins</span><span class="rvts12"> затем в раздел </span><span class="rvts27">System Configuration</span></p>
+<p class="rvps2"><span class="rvts12">Перейдите в </span><span class="rvts31">Manage Jenkins</span><span class="rvts12"> затем в раздел </span><span class="rvts31">System Configuration</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem175.png"><img alt="" style="padding : 1px;" src="lib/NewItem174.png"></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12">В разделе "Глобальные настройки" включите параметр </span><span class="rvts27">Environment variables</span></p>
+<p class="rvps2"><span class="rvts12">В разделе "Глобальные настройки" включите параметр </span><span class="rvts31">Environment variables</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps2"><span class="rvts12">Добавьте ключ:</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">Name: </span><span class="rvts27">JAVA_TOOL_OPTIONS</span></p>
-<p class="rvps11"><span class="rvts12">Value: </span><span class="rvts27">-Dfile.encoding=UTF8</span></p>
+<p class="rvps2"><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">Name: </span><span class="rvts31">JAVA_TOOL_OPTIONS</span></p>
+<p class="rvps11"><span class="rvts12">Value: </span><span class="rvts31">-Dfile.encoding=UTF8</span></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
 <p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem173.png"></p>
 <p class="rvps2"><span class="rvts12"><br/></span></p>
