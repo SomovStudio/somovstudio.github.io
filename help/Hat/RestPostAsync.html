@@ -91,14 +91,14 @@
 	<div id="topic_content">
 		
 <p class="rvps12"><span class="rvts61">RestPostAsync</span></p>
-<p class="rvps12"><span class="rvts64">Описание</span><span class="rvts65">: метод выполняет </span><span class="rvts62">Post</span><span class="rvts65"> Rest запрос</span><span class="rvts62"> </span><span class="rvts65">с отправкой данных в формате </span><span class="rvts62">json</span><span class="rvts65"> и получает результат так же в формате json</span></p>
-<p class="rvps12"><span class="rvts64">Синтаксис</span><span class="rvts65">: </span><span class="rvts62">RestPostAsync(string url, string json, TimeSpan timeout, string charset = "UTF-8")</span></p>
-<p class="rvps12"><span class="rvts63"><br/></span></p>
-<p class="rvps12"><span class="rvts64">Пример</span><span class="rvts63">:</span></p>
-<p class="rvps12"><span class="rvts62">string result = await tester.RestPostAsync("https://jsonplaceholder.typicode.com/posts/1/",</span><span class="rvts65"> </span><span class="rvts62">"{}", TimeSpan.FromDays(1), "UTF-8");</span></p>
+<p class="rvps12"><span class="rvts65">Описание</span><span class="rvts63">: метод выполняет </span><span class="rvts62">Post</span><span class="rvts63"> Rest запрос</span><span class="rvts62"> </span><span class="rvts63">с отправкой данных в формате </span><span class="rvts62">json</span><span class="rvts63"> и получает результат так же в формате json</span></p>
+<p class="rvps12"><span class="rvts65">Синтаксис</span><span class="rvts63">: </span><span class="rvts62">RestPostAsync(string url, string json, TimeSpan timeout, string charset = "UTF-8")</span></p>
+<p class="rvps12"><span class="rvts64"><br/></span></p>
+<p class="rvps12"><span class="rvts65">Пример</span><span class="rvts64">:</span></p>
+<p class="rvps12"><span class="rvts62">string result = await tester.RestPostAsync("https://jsonplaceholder.typicode.com/posts/1/",</span><span class="rvts63"> </span><span class="rvts62">"{}", TimeSpan.FromDays(1), "UTF-8");</span></p>
 <p class="rvps12"><span class="rvts62">tester.ConsoleMsg(result);</span></p>
 <p class="rvps12"><span class="rvts62"><br/></span></p>
-<p class="rvps12"><span class="rvts64">Данный метод использует стандартный подход</span><span class="rvts63">:</span></p>
+<p class="rvps12"><span class="rvts65">Данный метод использует стандартный подход</span><span class="rvts64">:</span></p>
 <p class="rvps12"><span class="rvts62">using System.Net;</span></p>
 <p class="rvps12"><span class="rvts62">using System.Net.Http;</span></p>
 <p class="rvps12"><span class="rvts62">using System.Net.Http.Headers;</span></p>

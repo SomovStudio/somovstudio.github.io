@@ -3,7 +3,7 @@
 <html>
 	
 <head>
-	<title>SetStyleInElementAsync</title>
+	<title>FileGetHashMD5Async</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
 	<meta name="description" content="" /> 
@@ -40,7 +40,7 @@
 				{
 					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
 					{
-						top.FrameTOC.SelectTocItem("SetStyleInElementAsync");
+						top.FrameTOC.SelectTocItem("FileGetHashMD5Async");
 						bTocSelected = true;
 					}
 					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
@@ -59,11 +59,11 @@
 	
 		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">SetStyleInElementAsync</h1>
+				<h1 id="topic_header_text">FileGetHashMD5Async</h1>
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="FRAMEElement.html">Класс: FRAMEElement</a> &rsaquo;&rsaquo; <a href="Newtopic44.html">Методы</a> &rsaquo;&rsaquo; 
+					<a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="Tester.html">Класс: Tester</a> &rsaquo;&rsaquo; <a href="Newtopic51.html">Методы для работы с файлами</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -71,15 +71,15 @@
 			<div id="topic_header_nav">
 				
 				
-				<a href="Newtopic44.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				<a href="Newtopic51.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
 				
 				
-				<a href="SetHtmlInElementAsync1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="FileDownloadAsync.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
-				<a href="SetTextInElementAsync1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="FileReadAsync.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,17 +90,14 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps12"><span class="rvts61">SetStyleInElementAsync</span></p>
-<p class="rvps12"><span class="rvts65">Описание</span><span class="rvts63">: метод устанавливает стиль элемента</span></p>
-<p class="rvps12"><span class="rvts65">Синтаксис</span><span class="rvts63">: SetStyleInElementAsync(string by, string locator, string cssText)</span></p>
+<p class="rvps12"><span class="rvts61">FileGetHashMD5Async</span></p>
+<p class="rvps12"><span class="rvts65">Описание</span><span class="rvts63">: метод определяет </span><span class="rvts62">HashMD5 </span><span class="rvts63">код указанного файла</span></p>
+<p class="rvps12"><span class="rvts65">Синтаксис</span><span class="rvts63">: FileGetHashMD5Async(string filename)</span></p>
 <p class="rvps12"><span class="rvts64"><br/></span></p>
 <p class="rvps12"><span class="rvts65">Пример</span><span class="rvts64">:</span></p>
-<p class="rvps12"><span class="rvts62">FRAMEElement frame = await tester.GetFrameAsync(0);</span></p>
-<p class="rvps12"><span class="rvts62">await frame .SetStyleInElementAsync(Tester.BY_XPATH, "//div[@id='auth']", "background-color: #000000;");</span></p>
-<p class="rvps12"><span class="rvts62"><br/></span></p>
-<p class="rvps12"><span class="rvts62">await frame .SetStyleInElementAsync(Tester.BY_CSS, "#auth", "background-color: #000000;");</span></p>
+<p class="rvps12"><span class="rvts62">string hash = await tester.FileGetHashMD5Async("C:\\download\\logo.png");</span></p>
 <p class="rvps12"><span class="rvts60"></span><span class="rvts6"></span></p>
-<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Qt Help documentation made easy</a></p>
+<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com">Free EBook and documentation generator</a></p>
 
 	</div>
 	
