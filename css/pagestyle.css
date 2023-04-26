@@ -327,3 +327,9 @@ dl dt {
     text-decoration: none !important;
     color: #FFFFFF;
 }
+
+@media screen and (max-width: 500px){
+    .zionec-border {
+        width: 90%;
+    }
+}
