@@ -90,31 +90,31 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps12"><span class="rvts61">RestPostAsync</span></p>
-<p class="rvps12"><span class="rvts65">Описание</span><span class="rvts63">: метод выполняет </span><span class="rvts62">Post</span><span class="rvts63"> Rest запрос</span><span class="rvts62"> </span><span class="rvts63">с отправкой данных в формате </span><span class="rvts62">json</span><span class="rvts63"> и получает результат так же в формате json</span></p>
-<p class="rvps12"><span class="rvts65">Синтаксис</span><span class="rvts63">: </span><span class="rvts62">RestPostAsync(string url, string json, TimeSpan timeout, string charset = "UTF-8")</span></p>
-<p class="rvps12"><span class="rvts64"><br/></span></p>
-<p class="rvps12"><span class="rvts65">Пример</span><span class="rvts64">:</span></p>
-<p class="rvps12"><span class="rvts62">string result = await tester.RestPostAsync("https://jsonplaceholder.typicode.com/posts/1/",</span><span class="rvts63"> </span><span class="rvts62">"{}", TimeSpan.FromDays(1), "UTF-8");</span></p>
-<p class="rvps12"><span class="rvts62">tester.ConsoleMsg(result);</span></p>
-<p class="rvps12"><span class="rvts62"><br/></span></p>
-<p class="rvps12"><span class="rvts65">Данный метод использует стандартный подход</span><span class="rvts64">:</span></p>
-<p class="rvps12"><span class="rvts62">using System.Net;</span></p>
-<p class="rvps12"><span class="rvts62">using System.Net.Http;</span></p>
-<p class="rvps12"><span class="rvts62">using System.Net.Http.Headers;</span></p>
-<p class="rvps12"><span class="rvts62"><br/></span></p>
-<p class="rvps12"><span class="rvts62">Uri uri = new Uri(url);</span></p>
-<p class="rvps12"><span class="rvts62">HttpClient client = new HttpClient();</span></p>
-<p class="rvps12"><span class="rvts62">client.Timeout = TimeSpan.FromDays(1);</span></p>
-<p class="rvps12"><span class="rvts62">client.DefaultRequestHeaders.Add("charset", "UTF-8");</span></p>
-<p class="rvps12"><span class="rvts62">client.DefaultRequestHeaders.Add("User-Agent", userAgent);</span></p>
-<p class="rvps12"><span class="rvts62">HttpContent content = new StringContent("{}", Encoding.UTF8, "application/json");</span></p>
-<p class="rvps12"><span class="rvts62">HttpResponseMessage response = await client.PostAsync(uri, content);</span></p>
-<p class="rvps12"><span class="rvts62">if (response.IsSuccessStatusCode)</span></p>
-<p class="rvps12"><span class="rvts62">{</span></p>
-<p class="rvps12"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">return await response.Content.ReadAsStringAsync();</span></p>
-<p class="rvps12"><span class="rvts62">}</span><span class="rvts6"></span></p>
-<p class="rvps6" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+<p class="rvps13"><span class="rvts61">RestPostAsync</span></p>
+<p class="rvps13"><span class="rvts65">Описание</span><span class="rvts63">: метод выполняет </span><span class="rvts62">Post</span><span class="rvts63"> Rest запрос</span><span class="rvts62"> </span><span class="rvts63">с отправкой данных в формате </span><span class="rvts62">json</span><span class="rvts63"> и получает результат так же в формате json</span></p>
+<p class="rvps13"><span class="rvts65">Синтаксис</span><span class="rvts63">: </span><span class="rvts62">RestPostAsync(string url, string json, TimeSpan timeout, string charset = "UTF-8")</span></p>
+<p class="rvps13"><span class="rvts64"><br/></span></p>
+<p class="rvps13"><span class="rvts65">Пример</span><span class="rvts64">:</span></p>
+<p class="rvps13"><span class="rvts62">string result = await tester.RestPostAsync("https://jsonplaceholder.typicode.com/posts/1/",</span><span class="rvts63"> </span><span class="rvts62">"{}", TimeSpan.FromDays(1), "UTF-8");</span></p>
+<p class="rvps13"><span class="rvts62">tester.ConsoleMsg(result);</span></p>
+<p class="rvps13"><span class="rvts62"><br/></span></p>
+<p class="rvps13"><span class="rvts65">Данный метод использует стандартный подход</span><span class="rvts64">:</span></p>
+<p class="rvps13"><span class="rvts62">using System.Net;</span></p>
+<p class="rvps13"><span class="rvts62">using System.Net.Http;</span></p>
+<p class="rvps13"><span class="rvts62">using System.Net.Http.Headers;</span></p>
+<p class="rvps13"><span class="rvts62"><br/></span></p>
+<p class="rvps13"><span class="rvts62">Uri uri = new Uri(url);</span></p>
+<p class="rvps13"><span class="rvts62">HttpClient client = new HttpClient();</span></p>
+<p class="rvps13"><span class="rvts62">client.Timeout = TimeSpan.FromDays(1);</span></p>
+<p class="rvps13"><span class="rvts62">client.DefaultRequestHeaders.Add("charset", "UTF-8");</span></p>
+<p class="rvps13"><span class="rvts62">client.DefaultRequestHeaders.Add("User-Agent", userAgent);</span></p>
+<p class="rvps13"><span class="rvts62">HttpContent content = new StringContent("{}", Encoding.UTF8, "application/json");</span></p>
+<p class="rvps13"><span class="rvts62">HttpResponseMessage response = await client.PostAsync(uri, content);</span></p>
+<p class="rvps13"><span class="rvts62">if (response.IsSuccessStatusCode)</span></p>
+<p class="rvps13"><span class="rvts62">{</span></p>
+<p class="rvps13"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">return await response.Content.ReadAsStringAsync();</span></p>
+<p class="rvps13"><span class="rvts62">}</span><span class="rvts6"></span></p>
+<p class="rvps7" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
 
 	</div>
 	

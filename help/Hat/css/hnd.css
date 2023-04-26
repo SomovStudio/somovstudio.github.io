@@ -401,72 +401,78 @@ span.rvts70
  font-weight: bold;
  color: #00b050;
 }
-a.rvts71, span.rvts71
+span.rvts71
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #00b050;
+}
+a.rvts72, span.rvts72
 {
  font-size: 12pt;
  font-family: 'Calibri';
  text-decoration: none;
 }
-a.rvts72, span.rvts72
+a.rvts73, span.rvts73
 {
  font-size: 12pt;
  font-family: 'Calibri';
  color: #0000ff;
  text-decoration: underline;
 }
-span.rvts73
+span.rvts74
 {
  font-size: 11pt;
  font-family: 'Calibri';
 }
-span.rvts74
+span.rvts75
 {
  font-family: 'Calibri';
  color: #9b00d3;
 }
-span.rvts75
-{
- font-family: 'Calibri';
-}
 span.rvts76
 {
- font-family: 'Courier New', 'Courier', monospace;
- color: #8b4513;
+ font-family: 'Calibri';
 }
 span.rvts77
 {
  font-family: 'Courier New', 'Courier', monospace;
- color: #000000;
- text-decoration: underline;
+ color: #8b4513;
 }
 span.rvts78
 {
  font-family: 'Courier New', 'Courier', monospace;
  color: #000000;
+ text-decoration: underline;
 }
 span.rvts79
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000000;
+}
+span.rvts80
 {
  font-family: 'Courier New', 'Courier', monospace;
  font-weight: bold;
  color: #008080;
 }
-span.rvts80
+span.rvts81
 {
  font-family: 'Courier New', 'Courier', monospace;
  color: #ff0000;
 }
-span.rvts81
+span.rvts82
 {
  font-family: 'Courier New', 'Courier', monospace;
  color: #00008b;
 }
-span.rvts82
+span.rvts83
 {
  font-family: 'Courier New', 'Courier', monospace;
  font-weight: bold;
  color: #000000;
 }
-span.rvts83
+span.rvts84
 {
  font-family: 'Courier New', 'Courier', monospace;
  font-weight: bold;
@@ -510,7 +516,12 @@ p,ul,ol /* Paragraph Style */
  background: #ffffff;
  margin: 0px 0px 16px 0px;
 }
-.rvps6 /* Paragraph Style */
+.rvps6
+{
+ background: #ffffff;
+ margin: 0px 0px 16px 24px;
+}
+.rvps7 /* Paragraph Style */
 {
  text-align: center;
  border-color: #c0c0c0;
@@ -521,34 +532,34 @@ p,ul,ol /* Paragraph Style */
  padding: 2px 0px 2px 0px;
  margin: 7px 0px 7px 0px;
 }
-.rvps7
+.rvps8
 {
  margin: 0px 0px 0px 24px;
 }
-.rvps8
-{
- margin: 0px 0px 0px 48px;
-}
 .rvps9
 {
- background: #ffffff;
- padding: 0px 0px 0px 40px;
- margin: 7px 0px 7px 0px;
+ margin: 0px 0px 0px 48px;
 }
 .rvps10
 {
  background: #ffffff;
  padding: 0px 0px 0px 40px;
+ margin: 7px 0px 7px 0px;
 }
 .rvps11
 {
- text-indent: 48px;
+ background: #ffffff;
+ padding: 0px 0px 0px 40px;
 }
 .rvps12
 {
- line-height: 1.15;
+ text-indent: 48px;
 }
 .rvps13
+{
+ line-height: 1.15;
+}
+.rvps14
 {
  line-height: 1.15;
  margin: 0px 0px 13px 0px;
