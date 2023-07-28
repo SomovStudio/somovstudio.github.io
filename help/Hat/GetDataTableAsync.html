@@ -90,6 +90,19 @@
 	
 	<div id="topic_content">
 		
+<p class="rvps13"><span class="rvts61">GetDataTableAsync</span></p>
+<p class="rvps13"><span class="rvts65">Описание</span><span class="rvts63">: метод возвращает таблицу записей из таблицы базы данных после выполнения запроса</span></p>
+<p class="rvps13"><span class="rvts65">Синтаксис</span><span class="rvts63">: GetDataTableAsync(string sqlQuertSelect)</span></p>
+<p class="rvps13"><span class="rvts58">Возвращаемое значение</span><span class="rvts56">: таблица (DataTable)</span></p>
+<p class="rvps13"><span class="rvts64"><br/></span></p>
+<p class="rvps13"><span class="rvts65">Пример</span><span class="rvts64">:</span></p>
+<p class="rvps13"><span class="rvts62">DataTable dataTable = null;</span></p>
+<p class="rvps13"><span class="rvts62">dataTable = await testerMySql.GetDataTableAsync("SELECT * FROM test_table");</span></p>
+<p class="rvps13"><span class="rvts62"><br/></span></p>
+<p class="rvps13"><span class="rvts62">foreach (DataRow row in dataTable.Rows)</span></p>
+<p class="rvps13"><span class="rvts62">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">foreach (DataColumn col in dataTable.Columns)</span></p>
+<p class="rvps13"><span class="rvts62">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">tester.ConsoleMsg(row[col].ToString());</span></p>
+<p class="rvps13"><span class="rvts62"></span><span class="rvts6"></span></p>
 <p class="rvps7" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
 
 	</div>

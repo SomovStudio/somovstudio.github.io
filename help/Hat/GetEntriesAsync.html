@@ -90,6 +90,19 @@
 	
 	<div id="topic_content">
 		
+<p class="rvps13"><span class="rvts61">GetEntriesAsync</span></p>
+<p class="rvps13"><span class="rvts65">Описание</span><span class="rvts63">: метод возвращает список записей из таблицы после выполнения запроса</span></p>
+<p class="rvps13"><span class="rvts65">Синтаксис</span><span class="rvts63">: GetEntriesAsync(string sqlQuertSelect)</span></p>
+<p class="rvps13"><span class="rvts58">Возвращаемое значение</span><span class="rvts56">: список (List)</span></p>
+<p class="rvps13"><span class="rvts64"><br/></span></p>
+<p class="rvps13"><span class="rvts65">Пример</span><span class="rvts64">:</span></p>
+<p class="rvps13"><span class="rvts62">List&lt;List&lt;string&gt;&gt; entries = new List&lt;List&lt;string&gt;&gt;();</span></p>
+<p class="rvps13"><span class="rvts62">entries = await testerMySql.GetEntriesAsync("SELECT * FROM test_table");</span></p>
+<p class="rvps13"><span class="rvts60"><br/></span></p>
+<p class="rvps13"><span class="rvts62">foreach(List&lt;string&gt; entry in entries)</span></p>
+<p class="rvps13"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">foreach(string value in entry)</span></p>
+<p class="rvps13"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">tester.ConsoleMsg(value);</span></p>
+<p class="rvps13"><span class="rvts62"></span><span class="rvts6"></span></p>
 <p class="rvps7" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/help-authoring-tool">Create HTML Help, DOC, PDF and print manuals from 1 single source</a></p>
 
 	</div>
