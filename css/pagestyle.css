@@ -333,3 +333,38 @@ dl dt {
         width: 90%;
     }
 }
+
+.plugin-border {
+    background-color: #3172B4;
+    border: 2px solid #3172B4;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #FFFFFF;
+}
+
+.plugin-button {
+    position: relative;
+    float: right;
+    top: -5px;
+    width: 125px;
+    height: 33px;
+    cursor:pointer;
+    border: 0;
+    border-radius: 8px;
+    color: #FFFFFF;
+    background-color: #7F92FF;
+}
+
+.plugin-button:hover {
+    width: 125px;
+    height: 33px;
+    cursor:pointer;
+    border: 0;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: #4800FF;
+}
