@@ -347,9 +347,7 @@ dl dt {
 }
 
 .plugin-button {
-    position: relative;
-    float: right;
-    top: -5px;
+    right: 0px;
     width: 125px;
     height: 33px;
     cursor:pointer;
