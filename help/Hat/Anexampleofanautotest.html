@@ -1,0 +1,177 @@
+﻿
+
+<html>
+	
+<head>
+	<title>An example of an autotest</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Anexampleofanautotest");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">An example of an autotest</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Englishversion.html">English version</a> &rsaquo;&rsaquo; <a href="Plugins.html">Plugins</a> &rsaquo;&rsaquo; <a href="HatPluginMySql1.html">HatPluginMySql</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="HatPluginMySql1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Connectingtheplugintotheproject.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="ClassTesterMySql.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps3"><span class="rvts17">An example of an autotest</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">After the plugin has been installed and connected to the project, let's consider a simple autotest.</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">We have created a simple database in MySQL named </span><span class="rvts31">test_db</span></p>
+<p class="rvps3"><span class="rvts14">There is one</span><span class="rvts31"> test_table</span><span class="rvts14"> table in this database with the fields: </span><span class="rvts31">id</span><span class="rvts14">, </span><span class="rvts31">name</span><span class="rvts14">, </span><span class="rvts31">age</span><span class="rvts14">, </span><span class="rvts31">post</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><img alt="" style="padding : 1px;" src="lib/NewItem256.png"></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Now let's describe a simple autotest that will add, modify and delete data in the database while checking the correctness of the results.</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<div class="rvps3">
+<table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+ <tr valign="top">
+  <td style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;">
+   <p class="rvps3"><span class="rvts8">Файл: ExampleTest3.cs</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td style="border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps3"><span class="rvts86">using</span><span class="rvts75"> System;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.Collections.Generic;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.ComponentModel;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.Windows.Forms;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.Threading;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.Threading.Tasks;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.IO;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.Data;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.Drawing;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.Linq;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.Text;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.Text.RegularExpressions;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.Net;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.Net.Http;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.Net.Http.Headers;</span><br/><span class="rvts86">using</span><span class="rvts75"> System.Reflection;</span><br/><span class="rvts86">using</span><span class="rvts75"> Newtonsoft.Json;</span><br/><span class="rvts86">using</span><span class="rvts75"> HatFramework;</span><br/><span class="rvts86">using</span><span class="rvts75"> HatPluginMySql;</span><br/><span class="rvts75"></span><br/><span class="rvts86">namespace</span><span class="rvts75"> Hat</span><br/><span class="rvts75">{</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts79">public</span><span class="rvts75"> </span><span class="rvts40">class</span><span class="rvts75"> ExampleTest3</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tester tester;</span><br/><span class="rvts75"></span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts79">public</span><span class="rvts75"> </span><span class="rvts78">async</span><span class="rvts75"> </span><span class="rvts40">void</span><span class="rvts75"> </span><span class="rvts77">Main</span><span class="rvts75">(Form browserWindow)</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tester = </span><span class="rvts85">new</span><span class="rvts75"> </span><span class="rvts77">Tester</span><span class="rvts75">(browserWindow);</span><br/><span class="rvts75"></span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> </span><span class="rvts77">setUp</span><span class="rvts75">();</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> </span><span class="rvts77">test</span><span class="rvts75">();</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> </span><span class="rvts77">tearDown</span><span class="rvts75">();</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts75"></span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts79">public</span><span class="rvts75"> </span><span class="rvts78">async</span><span class="rvts75"> Task </span><span class="rvts77">setUp</span><span class="rvts75">()</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tester.</span><span class="rvts77">Description</span><span class="rvts75">(</span><span class="rvts81">"Test #3 checking the database"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> tester.</span><span class="rvts77">BrowserFullScreenAsync</span><span class="rvts75">();</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts75"></span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts79">public</span><span class="rvts75"> </span><span class="rvts78">async</span><span class="rvts75"> Task </span><span class="rvts77">test</span><span class="rvts75">()</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DataTable dataTable = </span><span class="rvts82">null</span><span class="rvts75">;</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;List&lt;</span><span class="rvts40">string</span><span class="rvts75">&gt;&gt; entries = </span><span class="rvts85">new</span><span class="rvts75"> List&lt;List&lt;</span><span class="rvts40">string</span><span class="rvts75">&gt;&gt;();</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TesterMySql testerMySql = </span><span class="rvts85">new</span><span class="rvts75"> </span><span class="rvts77">TesterMySql</span><span class="rvts75">(tester);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> tester.</span><span class="rvts77">TestBeginAsync</span><span class="rvts75">();</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">ConnectionOpenAsync</span><span class="rvts75">(</span><span class="rvts81">"server=127.0.0.1;uid=root;pwd=;database=test_db"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts83">int</span><span class="rvts75"> count = </span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">GetCountEntriesAsync</span><span class="rvts75">(</span><span class="rvts81">"SELECT * FROM test_table"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts79">if</span><span class="rvts75"> (count &gt; </span><span class="rvts84">0</span><span class="rvts75">)</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entries = </span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">GetEntriesAsync</span><span class="rvts75">(</span><span class="rvts81">"SELECT * FROM test_table"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dataTable = </span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">GetDataTableAsync</span><span class="rvts75">(</span><span class="rvts81">"SELECT * FROM test_table"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts79">foreach</span><span class="rvts75"> (DataRow row </span><span class="rvts79">in</span><span class="rvts75"> dataTable.Rows)</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts79">foreach</span><span class="rvts75"> (DataColumn col </span><span class="rvts79">in</span><span class="rvts75"> dataTable.Columns)</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tester.</span><span class="rvts77">ConsoleMsg</span><span class="rvts75">(row[col].</span><span class="rvts77">ToString</span><span class="rvts75">());</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">SetEntryAsync</span><span class="rvts75">(</span><span class="rvts81">"INSERT INTO test_table VALUES(NULL, 'I am Tester', 100, 'My post QA')"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts83">bool</span><span class="rvts75"> result = </span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">FindEntryAsync</span><span class="rvts75">(</span><span class="rvts81">"test_table"</span><span class="rvts75">, </span><span class="rvts81">"name"</span><span class="rvts75">, </span><span class="rvts81">"'I am Tester'"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">AssertHaveInTableAsync</span><span class="rvts75">(</span><span class="rvts81">"test_table"</span><span class="rvts75">, </span><span class="rvts81">"name"</span><span class="rvts75">, </span><span class="rvts81">"'I am Tester'"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entries = </span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">GetEntriesFromTableAsync</span><span class="rvts75">(</span><span class="rvts81">"test_table"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts79">if</span><span class="rvts75"> (entries != </span><span class="rvts82">null</span><span class="rvts75">){</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts79">foreach</span><span class="rvts75">(List&lt;</span><span class="rvts40">string</span><span class="rvts75">&gt; entry </span><span class="rvts79">in</span><span class="rvts75"> entries)</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts79">foreach</span><span class="rvts75">(</span><span class="rvts40">string</span><span class="rvts75"> </span><span class="rvts82">value</span><span class="rvts75"> </span><span class="rvts79">in</span><span class="rvts75"> entry)</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tester.</span><span class="rvts77">ConsoleMsg</span><span class="rvts75">(</span><span class="rvts82">value</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">EditEntryAsync</span><span class="rvts75">(</span><span class="rvts81">"UPDATE test_table SET age = 111 WHERE name = 'I am Tester'"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = </span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">FindEntryAsync</span><span class="rvts75">(</span><span class="rvts81">"test_table"</span><span class="rvts75">, </span><span class="rvts81">"age"</span><span class="rvts75">, </span><span class="rvts81">"111"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">AssertHaveInTableAsync</span><span class="rvts75">(</span><span class="rvts81">"test_table"</span><span class="rvts75">, </span><span class="rvts81">"age"</span><span class="rvts75">, </span><span class="rvts81">"111"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">RemoveEntryAsync</span><span class="rvts75">(</span><span class="rvts81">"DELETE FROM test_table WHERE name = 'I am Tester'"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = </span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">FindEntryAsync</span><span class="rvts75">(</span><span class="rvts81">"test_table"</span><span class="rvts75">, </span><span class="rvts81">"name"</span><span class="rvts75">, </span><span class="rvts81">"'I am Tester'"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">AssertDontHaveInTableAsync</span><span class="rvts75">(</span><span class="rvts81">"test_table"</span><span class="rvts75">, </span><span class="rvts81">"name"</span><span class="rvts75">, </span><span class="rvts81">"'I am Tester'"</span><span class="rvts75">);</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">ConnectionCloseAsync</span><span class="rvts75">();</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts80">await</span><span class="rvts75"> tester.</span><span class="rvts77">TestEndAsync</span><span class="rvts75">();</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts75"></span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts79">public</span><span class="rvts75"> </span><span class="rvts78">async</span><span class="rvts75"> Task </span><span class="rvts77">tearDown</span><span class="rvts75">()</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts76">// await tester.BrowserCloseAsync();</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts75">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts75">}</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Please note that for the autotests to work correctly, you need to connect the library</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">using</span><span class="rvts75"> HatPluginMySql;</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">First, there is a connection to the database</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><span class="rvts75">TesterMySql testerMySql = </span><span class="rvts85">new</span><span class="rvts75"> </span><span class="rvts77">TesterMySql</span><span class="rvts75">(tester);</span></p>
+<p class="rvps8"><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">ConnectionOpenAsync</span><span class="rvts75">(</span><span class="rvts81">"server=127.0.0.1;uid=root;pwd=;database=test_db"</span><span class="rvts75">);</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Data manipulation is performed using different methods</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">GetCountEntriesAsync</span><span class="rvts75">(</span><span class="rvts81">"SELECT * FROM test_table"</span><span class="rvts75">);</span></p>
+<p class="rvps8"><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">GetEntriesAsync</span><span class="rvts75">(</span><span class="rvts81">"SELECT * FROM test_table"</span><span class="rvts75">);</span></p>
+<p class="rvps8"><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">GetEntriesFromTableAsync</span><span class="rvts75">(</span><span class="rvts81">"test_table"</span><span class="rvts75">);</span></p>
+<p class="rvps8"><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">GetDataTableAsync</span><span class="rvts75">(</span><span class="rvts81">"SELECT * FROM test_table"</span><span class="rvts75">);</span></p>
+<p class="rvps8"><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">SetEntryAsync</span><span class="rvts75">(</span><span class="rvts81">"INSERT INTO test_table VALUES(NULL, 'I am Tester', 100, 'My post QA')"</span><span class="rvts75">);</span></p>
+<p class="rvps8"><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">FindEntryAsync</span><span class="rvts75">(</span><span class="rvts81">"test_table"</span><span class="rvts75">, </span><span class="rvts81">"name"</span><span class="rvts75">, </span><span class="rvts81">"'I am Tester'"</span><span class="rvts75">);</span></p>
+<p class="rvps8"><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">EditEntryAsync</span><span class="rvts75">(</span><span class="rvts81">"UPDATE test_table SET age = 111 WHERE name = 'I am Tester'"</span><span class="rvts75">);</span></p>
+<p class="rvps8"><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">RemoveEntryAsync</span><span class="rvts75">(</span><span class="rvts81">"DELETE FROM test_table WHERE name = 'I am Tester'"</span><span class="rvts75">);</span></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Special methods for checking the presence or absence of data in the database</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">AssertHaveInTableAsync</span><span class="rvts75">(</span><span class="rvts81">"test_table"</span><span class="rvts75">, </span><span class="rvts81">"name"</span><span class="rvts75">, </span><span class="rvts81">"'I am Tester'"</span><span class="rvts75">);</span></p>
+<p class="rvps8"><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">AssertDontHaveInTableAsync</span><span class="rvts75">(</span><span class="rvts81">"test_table"</span><span class="rvts75">, </span><span class="rvts81">"name"</span><span class="rvts75">, </span><span class="rvts81">"'I am Tester'"</span><span class="rvts75">)</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">At the end, the work with the database is completed by closing the connection to it</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><span class="rvts80">await</span><span class="rvts75"> testerMySql.</span><span class="rvts77">ConnectionCloseAsync</span><span class="rvts75">();</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Let's run the autotest and look at the progress of the check and the result</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><img alt="" style="padding : 1px;" src="lib/NewItem271.png"></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">All actions were completed, all checks were successful.</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">The test was completed successfully.</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts8"></span></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EBook editor</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2024 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

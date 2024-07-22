@@ -63,7 +63,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Newtopic34.html">Практические примеры</a> &rsaquo;&rsaquo; 
+					<a href="Newtopic59.html">Русская версия</a> &rsaquo;&rsaquo; <a href="Newtopic34.html">Практические примеры</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -90,227 +90,227 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps2"><span class="rvts17">Обработка XML данных для проверки карты сайта Sitemap</span></p>
-<p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12">Для работы с XML используются следующие библиотеки</span></p>
-<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps3"><span class="rvts17">Обработка XML данных для проверки карты сайта Sitemap</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Для работы с XML используются следующие библиотеки</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
 <p class="rvps8"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Collections</span><span class="rvts44">;</span></p>
 <p class="rvps8"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Xml</span><span class="rvts44">;</span></p>
-<p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12">Опишем вспомогательный метод ReadSitemapXML для чтения данных из карты сайта sitemap.xml</span></p>
-<p class="rvps2"><span class="rvts12">Этот метод можно описать в Steps классе но для того чтобы он был доступен в любом классе лучше описать его в Helper.</span></p>
-<p class="rvps2"><span class="rvts12">Задача методы ReadSitemapXML заключается в чтении ссылок из файла sitemap.xml и в результате возврат списка прочитанных ссылок.</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<div class="rvps2">
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Опишем вспомогательный метод ReadSitemapXML для чтения данных из карты сайта sitemap.xml</span></p>
+<p class="rvps3"><span class="rvts14">Этот метод можно описать в Steps классе но для того чтобы он был доступен в любом классе лучше описать его в Helper.</span></p>
+<p class="rvps3"><span class="rvts14">Задача методы ReadSitemapXML заключается в чтении ссылок из файла sitemap.xml и в результате возврат списка прочитанных ссылок.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<div class="rvps3">
 <table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
  <tr valign="top">
   <td style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;">
-   <p class="rvps2"><span class="rvts6">Файл: Helper.cs</span></p>
+   <p class="rvps3"><span class="rvts8">Файл: Helper.cs</span></p>
   </td>
  </tr>
  <tr valign="top">
   <td style="border-color: #000000; border-style: solid; padding: 1px;">
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Collections</span><span class="rvts44">.</span><span class="rvts43">Generic</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">ComponentModel</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Windows</span><span class="rvts44">.</span><span class="rvts43">Forms</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Threading</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Threading</span><span class="rvts44">.</span><span class="rvts43">Tasks</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">IO</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Data</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Drawing</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Linq</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Text</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Text</span><span class="rvts44">.</span><span class="rvts43">RegularExpressions</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Net</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Net</span><span class="rvts44">.</span><span class="rvts43">Http</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Net</span><span class="rvts44">.</span><span class="rvts43">Http</span><span class="rvts44">.</span><span class="rvts43">Headers</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Reflection</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">Newtonsoft</span><span class="rvts44">.</span><span class="rvts43">Json</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">HatFramework</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Collections</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Xml</span><span class="rvts44">;</span><span class="rvts55">&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts42">namespace </span><span class="rvts43">Hat</span></p>
-   <p class="rvps2"><span class="rvts44">{</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts52">static </span><span class="rvts46">class </span><span class="rvts43">Helper</span></p>
-   <p class="rvps2"><span class="rvts43">&nbsp; &nbsp; </span><span class="rvts44">{</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">/* Метод: чтение XML файла карты сайта */</span></p>
-   <p class="rvps2"><span class="rvts55">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts52">static </span><span class="rvts43">async Task</span><span class="rvts44">&lt;</span><span class="rvts43">List</span><span class="rvts44">&lt;</span><span class="rvts46">string</span><span class="rvts44">&gt;&gt; </span><span class="rvts47">ReadSitemapXML</span><span class="rvts44">(</span><span class="rvts43">Tester tester</span><span class="rvts44">, </span><span class="rvts46">string </span><span class="rvts43">filename</span><span class="rvts44">, </span><span class="rvts53">bool </span><span class="rvts43">useragent</span><span class="rvts44">)</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Выводим сообщение</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts53">int </span><span class="rvts43">step </span><span class="rvts44">= </span><span class="rvts43">tester</span><span class="rvts44">.</span><span class="rvts47">SendMessage</span><span class="rvts44">(</span><span class="rvts49">"ReadSitemapXML(\"" </span><span class="rvts44">+ </span><span class="rvts43">filename </span><span class="rvts44">+ </span><span class="rvts49">"\")"</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">PROCESS</span><span class="rvts44">, </span><span class="rvts49">"Чтение xml файла карты сайта"</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">IMAGE_STATUS_PROCESS</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Объявляем переменную тип которой список (список для хранения ссылок)</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">List</span><span class="rvts44">&lt;</span><span class="rvts46">string</span><span class="rvts44">&gt; </span><span class="rvts43">list </span><span class="rvts44">= </span><span class="rvts48">new </span><span class="rvts43">List</span><span class="rvts44">&lt;</span><span class="rvts46">string</span><span class="rvts44">&gt;();</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Объявляем переменную которая является флагом ошибки (по умолчанию флаг отключен)</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts53">bool </span><span class="rvts43">errors </span><span class="rvts44">= </span><span class="rvts48">false</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts93">try</span></p>
-   <p class="rvps2"><span class="rvts93">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">{</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Настраиваем системные параметры подключения</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">ServicePointManager</span><span class="rvts44">.</span><span class="rvts43">Expect100Continue </span><span class="rvts44">= </span><span class="rvts48">true</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">ServicePointManager</span><span class="rvts44">.</span><span class="rvts43">SecurityProtocol </span><span class="rvts44">= </span><span class="rvts43">SecurityProtocolType</span><span class="rvts44">.</span><span class="rvts43">Tls12</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">ServicePointManager</span><span class="rvts44">.</span><span class="rvts43">ServerCertificateValidationCallback </span><span class="rvts44">= </span><span class="rvts46">delegate </span><span class="rvts44">{ </span><span class="rvts54">return </span><span class="rvts48">true</span><span class="rvts44">; };</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Выполняем чтение xml файла</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">XmlDocument xDoc</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">if </span><span class="rvts44">(</span><span class="rvts43">useragent </span><span class="rvts44">== </span><span class="rvts48">false</span><span class="rvts44">)</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">xDoc </span><span class="rvts44">= </span><span class="rvts48">new </span><span class="rvts47">XmlDocument</span><span class="rvts44">();</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">xDoc</span><span class="rvts44">.</span><span class="rvts47">Load</span><span class="rvts44">(</span><span class="rvts43">filename</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">else</span></p>
-   <p class="rvps2"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">{</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">WebClient client </span><span class="rvts44">= </span><span class="rvts48">new </span><span class="rvts47">WebClient</span><span class="rvts44">();</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">client</span><span class="rvts44">.</span><span class="rvts43">Headers</span><span class="rvts44">[</span><span class="rvts49">"User-Agent"</span><span class="rvts44">] = </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">BrowserGetUserAgentAsync</span><span class="rvts44">();</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">client</span><span class="rvts44">.</span><span class="rvts43">Headers</span><span class="rvts44">[</span><span class="rvts49">"Accept"</span><span class="rvts44">] = </span><span class="rvts49">"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts46">string </span><span class="rvts43">data </span><span class="rvts44">= </span><span class="rvts43">client</span><span class="rvts44">.</span><span class="rvts47">DownloadString</span><span class="rvts44">(</span><span class="rvts43">filename</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">xDoc </span><span class="rvts44">= </span><span class="rvts48">new </span><span class="rvts47">XmlDocument</span><span class="rvts44">();</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">xDoc</span><span class="rvts44">.</span><span class="rvts47">LoadXml</span><span class="rvts44">(</span><span class="rvts43">data</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Читаем элементы из полученного xml файла</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">XmlElement xRoot </span><span class="rvts44">= </span><span class="rvts43">xDoc</span><span class="rvts44">.</span><span class="rvts43">DocumentElement</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">foreach </span><span class="rvts44">(</span><span class="rvts43">XmlNode xnode </span><span class="rvts45">in </span><span class="rvts43">xRoot</span><span class="rvts44">)</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">for </span><span class="rvts44">(</span><span class="rvts53">int </span><span class="rvts43">j </span><span class="rvts44">= </span><span class="rvts50">0</span><span class="rvts44">; </span><span class="rvts43">j </span><span class="rvts44">&lt;= </span><span class="rvts43">xnode</span><span class="rvts44">.</span><span class="rvts43">ChildNodes</span><span class="rvts44">.</span><span class="rvts43">Count</span><span class="rvts44">; </span><span class="rvts43">j</span><span class="rvts44">++)</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">if </span><span class="rvts44">(</span><span class="rvts43">xnode</span><span class="rvts44">.</span><span class="rvts43">ChildNodes</span><span class="rvts44">[</span><span class="rvts43">j</span><span class="rvts44">].</span><span class="rvts43">Name </span><span class="rvts44">== </span><span class="rvts49">"loc"</span><span class="rvts44">)</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Сохраняем полученную ссылку в список</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">list</span><span class="rvts44">.</span><span class="rvts47">Add</span><span class="rvts44">(</span><span class="rvts43">xnode</span><span class="rvts44">.</span><span class="rvts43">ChildNodes</span><span class="rvts44">[</span><span class="rvts43">j</span><span class="rvts44">].</span><span class="rvts43">InnerText</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts54">break</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Меняем статус сообщения на успешное выполнение</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">tester</span><span class="rvts44">.</span><span class="rvts47">EditMessage</span><span class="rvts44">(</span><span class="rvts43">step</span><span class="rvts44">, </span><span class="rvts51">null</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">PASSED</span><span class="rvts44">, </span><span class="rvts49">"Прочитан xml файл карты сайта"</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">IMAGE_STATUS_PASSED</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts93">catch </span><span class="rvts44">(</span><span class="rvts43">Exception ex</span><span class="rvts44">)</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Меняем статус сообщения на неудачное выполнение</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">tester</span><span class="rvts44">.</span><span class="rvts47">EditMessage</span><span class="rvts44">(</span><span class="rvts43">step</span><span class="rvts44">, </span><span class="rvts51">null</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">FAILED</span><span class="rvts44">, </span><span class="rvts49">"Не удалось прочитать xml файл карты сайта. Ошибка: " </span><span class="rvts44">+ </span><span class="rvts43">ex</span><span class="rvts44">.</span><span class="rvts43">Message</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">IMAGE_STATUS_FAILED</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">errors </span><span class="rvts44">= </span><span class="rvts48">true</span><span class="rvts44">; </span><span class="rvts55">// включаем флаг ошибки</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Проверка флага ошибки (если влаг включен true значит произошла неудача и тест будет прерван</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">AssertFalseAsync</span><span class="rvts44">(</span><span class="rvts43">errors</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts54">return </span><span class="rvts43">list</span><span class="rvts44">; </span><span class="rvts55">// возвращаем список ссылок</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44">}</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Collections</span><span class="rvts44">.</span><span class="rvts43">Generic</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">ComponentModel</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Windows</span><span class="rvts44">.</span><span class="rvts43">Forms</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Threading</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Threading</span><span class="rvts44">.</span><span class="rvts43">Tasks</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">IO</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Data</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Drawing</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Linq</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Text</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Text</span><span class="rvts44">.</span><span class="rvts43">RegularExpressions</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Net</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Net</span><span class="rvts44">.</span><span class="rvts43">Http</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Net</span><span class="rvts44">.</span><span class="rvts43">Http</span><span class="rvts44">.</span><span class="rvts43">Headers</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Reflection</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">Newtonsoft</span><span class="rvts44">.</span><span class="rvts43">Json</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">HatFramework</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Collections</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Xml</span><span class="rvts44">;</span><span class="rvts87">&nbsp;</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts42">namespace </span><span class="rvts43">Hat</span></p>
+   <p class="rvps3"><span class="rvts44">{</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts52">static </span><span class="rvts46">class </span><span class="rvts43">Helper</span></p>
+   <p class="rvps3"><span class="rvts43">&nbsp; &nbsp; </span><span class="rvts44">{</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">/* Метод: чтение XML файла карты сайта */</span></p>
+   <p class="rvps3"><span class="rvts87">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts52">static </span><span class="rvts43">async Task</span><span class="rvts44">&lt;</span><span class="rvts43">List</span><span class="rvts44">&lt;</span><span class="rvts46">string</span><span class="rvts44">&gt;&gt; </span><span class="rvts47">ReadSitemapXML</span><span class="rvts44">(</span><span class="rvts43">Tester tester</span><span class="rvts44">, </span><span class="rvts46">string </span><span class="rvts43">filename</span><span class="rvts44">, </span><span class="rvts88">bool </span><span class="rvts43">useragent</span><span class="rvts44">)</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Выводим сообщение</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts88">int </span><span class="rvts43">step </span><span class="rvts44">= </span><span class="rvts43">tester</span><span class="rvts44">.</span><span class="rvts47">SendMessage</span><span class="rvts44">(</span><span class="rvts49">"ReadSitemapXML(\"" </span><span class="rvts44">+ </span><span class="rvts43">filename </span><span class="rvts44">+ </span><span class="rvts49">"\")"</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">PROCESS</span><span class="rvts44">, </span><span class="rvts49">"Чтение xml файла карты сайта"</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">IMAGE_STATUS_PROCESS</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Объявляем переменную тип которой список (список для хранения ссылок)</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">List</span><span class="rvts44">&lt;</span><span class="rvts46">string</span><span class="rvts44">&gt; </span><span class="rvts43">list </span><span class="rvts44">= </span><span class="rvts48">new </span><span class="rvts43">List</span><span class="rvts44">&lt;</span><span class="rvts46">string</span><span class="rvts44">&gt;();</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Объявляем переменную которая является флагом ошибки (по умолчанию флаг отключен)</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts88">bool </span><span class="rvts43">errors </span><span class="rvts44">= </span><span class="rvts48">false</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts93">try</span></p>
+   <p class="rvps3"><span class="rvts93">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">{</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Настраиваем системные параметры подключения</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">ServicePointManager</span><span class="rvts44">.</span><span class="rvts43">Expect100Continue </span><span class="rvts44">= </span><span class="rvts48">true</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">ServicePointManager</span><span class="rvts44">.</span><span class="rvts43">SecurityProtocol </span><span class="rvts44">= </span><span class="rvts43">SecurityProtocolType</span><span class="rvts44">.</span><span class="rvts43">Tls12</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">ServicePointManager</span><span class="rvts44">.</span><span class="rvts43">ServerCertificateValidationCallback </span><span class="rvts44">= </span><span class="rvts46">delegate </span><span class="rvts44">{ </span><span class="rvts92">return </span><span class="rvts48">true</span><span class="rvts44">; };</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Выполняем чтение xml файла</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">XmlDocument xDoc</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">if </span><span class="rvts44">(</span><span class="rvts43">useragent </span><span class="rvts44">== </span><span class="rvts48">false</span><span class="rvts44">)</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">xDoc </span><span class="rvts44">= </span><span class="rvts48">new </span><span class="rvts47">XmlDocument</span><span class="rvts44">();</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">xDoc</span><span class="rvts44">.</span><span class="rvts47">Load</span><span class="rvts44">(</span><span class="rvts43">filename</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">else</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">{</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">WebClient client </span><span class="rvts44">= </span><span class="rvts48">new </span><span class="rvts47">WebClient</span><span class="rvts44">();</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">client</span><span class="rvts44">.</span><span class="rvts43">Headers</span><span class="rvts44">[</span><span class="rvts49">"User-Agent"</span><span class="rvts44">] = </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">BrowserGetUserAgentAsync</span><span class="rvts44">();</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">client</span><span class="rvts44">.</span><span class="rvts43">Headers</span><span class="rvts44">[</span><span class="rvts49">"Accept"</span><span class="rvts44">] = </span><span class="rvts49">"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts46">string </span><span class="rvts43">data </span><span class="rvts44">= </span><span class="rvts43">client</span><span class="rvts44">.</span><span class="rvts47">DownloadString</span><span class="rvts44">(</span><span class="rvts43">filename</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">xDoc </span><span class="rvts44">= </span><span class="rvts48">new </span><span class="rvts47">XmlDocument</span><span class="rvts44">();</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">xDoc</span><span class="rvts44">.</span><span class="rvts47">LoadXml</span><span class="rvts44">(</span><span class="rvts43">data</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Читаем элементы из полученного xml файла</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">XmlElement xRoot </span><span class="rvts44">= </span><span class="rvts43">xDoc</span><span class="rvts44">.</span><span class="rvts43">DocumentElement</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">foreach </span><span class="rvts44">(</span><span class="rvts43">XmlNode xnode </span><span class="rvts45">in </span><span class="rvts43">xRoot</span><span class="rvts44">)</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">for </span><span class="rvts44">(</span><span class="rvts88">int </span><span class="rvts43">j </span><span class="rvts44">= </span><span class="rvts50">0</span><span class="rvts44">; </span><span class="rvts43">j </span><span class="rvts44">&lt;= </span><span class="rvts43">xnode</span><span class="rvts44">.</span><span class="rvts43">ChildNodes</span><span class="rvts44">.</span><span class="rvts43">Count</span><span class="rvts44">; </span><span class="rvts43">j</span><span class="rvts44">++)</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">if </span><span class="rvts44">(</span><span class="rvts43">xnode</span><span class="rvts44">.</span><span class="rvts43">ChildNodes</span><span class="rvts44">[</span><span class="rvts43">j</span><span class="rvts44">].</span><span class="rvts43">Name </span><span class="rvts44">== </span><span class="rvts49">"loc"</span><span class="rvts44">)</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Сохраняем полученную ссылку в список</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">list</span><span class="rvts44">.</span><span class="rvts47">Add</span><span class="rvts44">(</span><span class="rvts43">xnode</span><span class="rvts44">.</span><span class="rvts43">ChildNodes</span><span class="rvts44">[</span><span class="rvts43">j</span><span class="rvts44">].</span><span class="rvts43">InnerText</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts92">break</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Меняем статус сообщения на успешное выполнение</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">tester</span><span class="rvts44">.</span><span class="rvts47">EditMessage</span><span class="rvts44">(</span><span class="rvts43">step</span><span class="rvts44">, </span><span class="rvts51">null</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">PASSED</span><span class="rvts44">, </span><span class="rvts49">"Прочитан xml файл карты сайта"</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">IMAGE_STATUS_PASSED</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts93">catch </span><span class="rvts44">(</span><span class="rvts43">Exception ex</span><span class="rvts44">)</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Меняем статус сообщения на неудачное выполнение</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">tester</span><span class="rvts44">.</span><span class="rvts47">EditMessage</span><span class="rvts44">(</span><span class="rvts43">step</span><span class="rvts44">, </span><span class="rvts51">null</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">FAILED</span><span class="rvts44">, </span><span class="rvts49">"Не удалось прочитать xml файл карты сайта. Ошибка: " </span><span class="rvts44">+ </span><span class="rvts43">ex</span><span class="rvts44">.</span><span class="rvts43">Message</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">IMAGE_STATUS_FAILED</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">errors </span><span class="rvts44">= </span><span class="rvts48">true</span><span class="rvts44">; </span><span class="rvts87">// включаем флаг ошибки</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Проверка флага ошибки (если влаг включен true значит произошла неудача и тест будет прерван</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">AssertFalseAsync</span><span class="rvts44">(</span><span class="rvts43">errors</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts92">return </span><span class="rvts43">list</span><span class="rvts44">; </span><span class="rvts87">// возвращаем список ссылок</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44">}</span></p>
   </td>
  </tr>
 </table>
 </div>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts12">Теперь опишем автотест в котором выполним проверку карты сайта</span></p>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<div class="rvps2">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Теперь опишем автотест в котором выполним проверку карты сайта</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<div class="rvps3">
 <table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
  <tr valign="top">
   <td style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;">
-   <p class="rvps2"><span class="rvts6">Файл: Sitemap_Test.cs</span></p>
+   <p class="rvps3"><span class="rvts8">Файл: Sitemap_Test.cs</span></p>
   </td>
  </tr>
  <tr valign="top">
   <td style="border-color: #000000; border-style: solid; padding: 1px;">
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Collections</span><span class="rvts44">.</span><span class="rvts43">Generic</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">ComponentModel</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Windows</span><span class="rvts44">.</span><span class="rvts43">Forms</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Threading</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Threading</span><span class="rvts44">.</span><span class="rvts43">Tasks</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">IO</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Data</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Drawing</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Linq</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Text</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Text</span><span class="rvts44">.</span><span class="rvts43">RegularExpressions</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Net</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Net</span><span class="rvts44">.</span><span class="rvts43">Http</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Net</span><span class="rvts44">.</span><span class="rvts43">Http</span><span class="rvts44">.</span><span class="rvts43">Headers</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Reflection</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">Newtonsoft</span><span class="rvts44">.</span><span class="rvts43">Json</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts42">using </span><span class="rvts43">HatFramework</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts42">namespace </span><span class="rvts43">Hat</span></p>
-   <p class="rvps2"><span class="rvts44">{</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts46">class </span><span class="rvts43">Sitemap_Test</span></p>
-   <p class="rvps2"><span class="rvts43">&nbsp; &nbsp; </span><span class="rvts44">{</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Главная переменная для работы автотеста</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">Tester tester</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Главная входная функция (с этой функции начинается работа автотеста)</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts43">async </span><span class="rvts46">void </span><span class="rvts47">Main</span><span class="rvts44">(</span><span class="rvts43">Form browserWindow</span><span class="rvts44">)</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Инициализация главной переменной и дополнительных функций</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">tester </span><span class="rvts44">= </span><span class="rvts48">new </span><span class="rvts47">Tester</span><span class="rvts44">(</span><span class="rvts43">browserWindow</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await </span><span class="rvts47">setUp</span><span class="rvts44">();</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await </span><span class="rvts47">test</span><span class="rvts44">();</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await </span><span class="rvts47">tearDown</span><span class="rvts44">();</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Функция начала работы с автотестом</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts43">async Task </span><span class="rvts47">setUp</span><span class="rvts44">()</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">BrowserFullScreenAsync</span><span class="rvts44">(); </span><span class="rvts55">// Устанавливает разрешение браузер на весь экран</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Функция выполнения действий автотеста</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts43">async Task </span><span class="rvts47">test</span><span class="rvts44">()</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">TestBeginAsync</span><span class="rvts44">(); </span><span class="rvts55">// Начало выполнения действий</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Вывод сообщения</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">tester</span><span class="rvts44">.</span><span class="rvts47">SendMessage</span><span class="rvts44">(</span><span class="rvts49">"Message"</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">COMPLETED</span><span class="rvts44">, </span><span class="rvts49">"Открываем страницу карты сайта"</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">IMAGE_STATUS_MESSAGE</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Загрузка страницы по указанному адресу</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">GoToUrlAsync</span><span class="rvts44">(</span><span class="rvts49">"https://somovstudio.github.io/sitemap.xml"</span><span class="rvts44">, </span><span class="rvts50">25</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Чтение ссылок из файла sitemap.xml</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">List</span><span class="rvts44">&lt;</span><span class="rvts46">string</span><span class="rvts44">&gt; </span><span class="rvts43">list </span><span class="rvts44">= </span><span class="rvts43">await Helper</span><span class="rvts44">.</span><span class="rvts47">ReadSitemapXML</span><span class="rvts44">(</span><span class="rvts43">tester</span><span class="rvts44">, </span><span class="rvts49">"https://somovstudio.github.io/sitemap.xml"</span><span class="rvts44">, </span><span class="rvts48">false</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Обработка списка ссылок</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts53">int </span><span class="rvts43">status </span><span class="rvts44">= </span><span class="rvts50">0</span><span class="rvts44">;</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">foreach </span><span class="rvts44">(</span><span class="rvts46">string </span><span class="rvts43">url </span><span class="rvts45">in </span><span class="rvts43">list</span><span class="rvts44">)</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Получение статуса страницы (200 - корректно, 404 - нет страницы, 502 - сервер не отвечает и т.п.)</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">status </span><span class="rvts44">= </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">RestGetStatusCodeAsync</span><span class="rvts44">(</span><span class="rvts43">url</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Вывод результата в консоль</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">tester</span><span class="rvts44">.</span><span class="rvts47">ConsoleMsg</span><span class="rvts44">(</span><span class="rvts49">"Статус: " </span><span class="rvts44">+ </span><span class="rvts43">status</span><span class="rvts44">.</span><span class="rvts47">ToString</span><span class="rvts44">() + </span><span class="rvts49">" | Страница: " </span><span class="rvts44">+ </span><span class="rvts43">url</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Проверка корректности результата</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">AssertEqualsAsync</span><span class="rvts44">(</span><span class="rvts50">200</span><span class="rvts44">, </span><span class="rvts43">status</span><span class="rvts44">);</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">TestEndAsync</span><span class="rvts44">(); </span><span class="rvts55">// Завершения выполнения действий</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts55">// Функция завершения работы с автотестом</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts43">async Task </span><span class="rvts47">tearDown</span><span class="rvts44">()</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">BrowserCloseAsync</span><span class="rvts44">(); </span><span class="rvts55">// Закрывает браузер</span></p>
-   <p class="rvps2"><span class="rvts55">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">}</span></p>
-   <p class="rvps2"><span class="rvts44">&nbsp; &nbsp; }</span></p>
-   <p class="rvps2"><span class="rvts44">}</span></p>
-   <p class="rvps2"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Collections</span><span class="rvts44">.</span><span class="rvts43">Generic</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">ComponentModel</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Windows</span><span class="rvts44">.</span><span class="rvts43">Forms</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Threading</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Threading</span><span class="rvts44">.</span><span class="rvts43">Tasks</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">IO</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Data</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Drawing</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Linq</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Text</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Text</span><span class="rvts44">.</span><span class="rvts43">RegularExpressions</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Net</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Net</span><span class="rvts44">.</span><span class="rvts43">Http</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Net</span><span class="rvts44">.</span><span class="rvts43">Http</span><span class="rvts44">.</span><span class="rvts43">Headers</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">System</span><span class="rvts44">.</span><span class="rvts43">Reflection</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">Newtonsoft</span><span class="rvts44">.</span><span class="rvts43">Json</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts42">using </span><span class="rvts43">HatFramework</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts42">namespace </span><span class="rvts43">Hat</span></p>
+   <p class="rvps3"><span class="rvts44">{</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts46">class </span><span class="rvts43">Sitemap_Test</span></p>
+   <p class="rvps3"><span class="rvts43">&nbsp; &nbsp; </span><span class="rvts44">{</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Главная переменная для работы автотеста</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">Tester tester</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Главная входная функция (с этой функции начинается работа автотеста)</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts43">async </span><span class="rvts46">void </span><span class="rvts47">Main</span><span class="rvts44">(</span><span class="rvts43">Form browserWindow</span><span class="rvts44">)</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Инициализация главной переменной и дополнительных функций</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">tester </span><span class="rvts44">= </span><span class="rvts48">new </span><span class="rvts47">Tester</span><span class="rvts44">(</span><span class="rvts43">browserWindow</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await </span><span class="rvts47">setUp</span><span class="rvts44">();</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await </span><span class="rvts47">test</span><span class="rvts44">();</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await </span><span class="rvts47">tearDown</span><span class="rvts44">();</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Функция начала работы с автотестом</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts43">async Task </span><span class="rvts47">setUp</span><span class="rvts44">()</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">BrowserFullScreenAsync</span><span class="rvts44">(); </span><span class="rvts87">// Устанавливает разрешение браузер на весь экран</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Функция выполнения действий автотеста</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts43">async Task </span><span class="rvts47">test</span><span class="rvts44">()</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">TestBeginAsync</span><span class="rvts44">(); </span><span class="rvts87">// Начало выполнения действий</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Вывод сообщения</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">tester</span><span class="rvts44">.</span><span class="rvts47">SendMessage</span><span class="rvts44">(</span><span class="rvts49">"Message"</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">COMPLETED</span><span class="rvts44">, </span><span class="rvts49">"Открываем страницу карты сайта"</span><span class="rvts44">, </span><span class="rvts43">Tester</span><span class="rvts44">.</span><span class="rvts43">IMAGE_STATUS_MESSAGE</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Загрузка страницы по указанному адресу</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">GoToUrlAsync</span><span class="rvts44">(</span><span class="rvts49">"https://somovstudio.github.io/sitemap.xml"</span><span class="rvts44">, </span><span class="rvts50">25</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Чтение ссылок из файла sitemap.xml</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">List</span><span class="rvts44">&lt;</span><span class="rvts46">string</span><span class="rvts44">&gt; </span><span class="rvts43">list </span><span class="rvts44">= </span><span class="rvts43">await Helper</span><span class="rvts44">.</span><span class="rvts47">ReadSitemapXML</span><span class="rvts44">(</span><span class="rvts43">tester</span><span class="rvts44">, </span><span class="rvts49">"https://somovstudio.github.io/sitemap.xml"</span><span class="rvts44">, </span><span class="rvts48">false</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Обработка списка ссылок</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts88">int </span><span class="rvts43">status </span><span class="rvts44">= </span><span class="rvts50">0</span><span class="rvts44">;</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">foreach </span><span class="rvts44">(</span><span class="rvts46">string </span><span class="rvts43">url </span><span class="rvts45">in </span><span class="rvts43">list</span><span class="rvts44">)</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Получение статуса страницы (200 - корректно, 404 - нет страницы, 502 - сервер не отвечает и т.п.)</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">status </span><span class="rvts44">= </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">RestGetStatusCodeAsync</span><span class="rvts44">(</span><span class="rvts43">url</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Вывод результата в консоль</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">tester</span><span class="rvts44">.</span><span class="rvts47">ConsoleMsg</span><span class="rvts44">(</span><span class="rvts49">"Статус: " </span><span class="rvts44">+ </span><span class="rvts43">status</span><span class="rvts44">.</span><span class="rvts47">ToString</span><span class="rvts44">() + </span><span class="rvts49">" | Страница: " </span><span class="rvts44">+ </span><span class="rvts43">url</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Проверка корректности результата</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">AssertEqualsAsync</span><span class="rvts44">(</span><span class="rvts50">200</span><span class="rvts44">, </span><span class="rvts43">status</span><span class="rvts44">);</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">TestEndAsync</span><span class="rvts44">(); </span><span class="rvts87">// Завершения выполнения действий</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts87">// Функция завершения работы с автотестом</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts45">public </span><span class="rvts43">async Task </span><span class="rvts47">tearDown</span><span class="rvts44">()</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts43">await tester</span><span class="rvts44">.</span><span class="rvts47">BrowserCloseAsync</span><span class="rvts44">(); </span><span class="rvts87">// Закрывает браузер</span></p>
+   <p class="rvps3"><span class="rvts87">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">}</span></p>
+   <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; }</span></p>
+   <p class="rvps3"><span class="rvts44">}</span></p>
+   <p class="rvps3"><span class="rvts44"><br/></span></p>
   </td>
  </tr>
 </table>
 </div>
-<p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12"><br/></span></p>
-<p class="rvps2"><span class="rvts12"></span><span class="rvts6"></span></p>
-<p class="rvps7" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com">Full-featured Documentation generator</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts8"></span></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Full-featured Documentation generator</a></p>
 
 	</div>
 	

@@ -63,7 +63,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="Tester.html">Класс: Tester</a> &rsaquo;&rsaquo; <a href="Newtopic10.html">Методы для выполнения действий</a> &rsaquo;&rsaquo; <a href="Newtopic15.html">Объекты</a> &rsaquo;&rsaquo; 
+					<a href="Newtopic59.html">Русская версия</a> &rsaquo;&rsaquo; <a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="Tester.html">Класс: Tester</a> &rsaquo;&rsaquo; <a href="Newtopic10.html">Методы для выполнения действий</a> &rsaquo;&rsaquo; <a href="Newtopic15.html">Объекты</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -90,51 +90,51 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps13"><span class="rvts59">GetElementAsync</span></p>
-<p class="rvps13"><span class="rvts58">Описание</span><span class="rvts56">: метод возвращает элемент в виде объект класс которого </span><a class="rvts73" href="HTMLElement1.html">HTMLElement</a></p>
-<p class="rvps13"><span class="rvts58">Синтаксис</span><span class="rvts56">: GetElementAsync(string by, string locator)</span></p>
-<p class="rvps13"><span class="rvts58">Возвращаемое значение</span><span class="rvts56">: объект (HTMLElement)</span></p>
-<p class="rvps13"><span class="rvts57"><br/></span></p>
-<p class="rvps13"><span class="rvts57"><br/></span></p>
-<p class="rvps13"><span class="rvts58">Примеры</span><span class="rvts57">:</span></p>
-<p class="rvps13"><span class="rvts56">HTMLElement element = await tester.GetElementAsync(Tester.BY_CSS, "#auth #buttonLogin");</span></p>
-<p class="rvps13"><span class="rvts56">await element.ClickAsync();</span></p>
-<p class="rvps13"><span class="rvts56"><br/></span></p>
-<p class="rvps13"><span class="rvts56">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//div[@id='auth']//input[@id='buttonLogin']");</span></p>
-<p class="rvps13"><span class="rvts56">await element.ClickAsync();</span></p>
-<p class="rvps2"><span class="rvts56"><br/></span></p>
-<p class="rvps2"><span class="rvts56">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//*[@id='MyFile']");</span></p>
-<p class="rvps2"><span class="rvts56">tester.ConsoleMsg("ID: " + element.Id);</span></p>
-<p class="rvps2"><span class="rvts56"><br/></span></p>
-<p class="rvps2"><span class="rvts56">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//h1");</span></p>
-<p class="rvps2"><span class="rvts56">string text = await element.GetTextAsync();</span></p>
-<p class="rvps2"><span class="rvts56">tester.ConsoleMsg(text);</span></p>
-<p class="rvps2"><span class="rvts56">await element.SetTextAsync("TEST");</span></p>
-<p class="rvps2"><span class="rvts56"><br/></span></p>
-<p class="rvps2"><span class="rvts56">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//*[@id='MyInput']");</span></p>
-<p class="rvps2"><span class="rvts56">await element.SetValueAsync("Тестирование");</span></p>
-<p class="rvps2"><span class="rvts56">string value = await element.GetValueAsync();</span></p>
-<p class="rvps2"><span class="rvts56">tester.ConsoleMsg(value);</span></p>
-<p class="rvps2"><span class="rvts56"><br/></span></p>
-<p class="rvps2"><span class="rvts56">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//h1");</span></p>
-<p class="rvps2"><span class="rvts56">await element.SetAttributeAsync("class", "my-class");</span></p>
-<p class="rvps2"><span class="rvts56">string attrClass = await element.GetAttributeAsync("class");</span></p>
-<p class="rvps2"><span class="rvts56">tester.ConsoleMsg(attrClass);</span></p>
-<p class="rvps2"><span class="rvts56"><br/></span></p>
-<p class="rvps2"><span class="rvts56">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//h1");</span></p>
-<p class="rvps2"><span class="rvts56">string html = await element.GetHtmlAsync();</span></p>
-<p class="rvps2"><span class="rvts56">tester.ConsoleMsg(html);</span></p>
-<p class="rvps2"><span class="rvts56"><br/></span></p>
-<p class="rvps2"><span class="rvts56">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//h1");</span></p>
-<p class="rvps2"><span class="rvts56">await element.SetHtmlAsync("&lt;div&gt;Это тест&lt;/div&gt;");</span></p>
-<p class="rvps2"><span class="rvts56"><br/></span></p>
-<p class="rvps2"><span class="rvts56">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "/html/body/footer");</span></p>
-<p class="rvps2"><span class="rvts56">await element.ScrollToAsync();</span></p>
-<p class="rvps2"><span class="rvts56"><br/></span></p>
-<p class="rvps2"><span class="rvts56">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//h1");</span></p>
-<p class="rvps2"><span class="rvts56">await element.WaitVisibleAsync(2);</span></p>
-<p class="rvps2"><span class="rvts56">await element.WaitNotVisibleAsync(2);</span><span class="rvts6"></span></p>
-<p class="rvps7" style="clear: both;"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
+<p class="rvps13"><span class="rvts56">GetElementAsync</span></p>
+<p class="rvps13"><span class="rvts55">Описание</span><span class="rvts53">: метод возвращает элемент в виде объект класс которого </span><a class="rvts70" href="HTMLElement1.html">HTMLElement</a></p>
+<p class="rvps13"><span class="rvts55">Синтаксис</span><span class="rvts53">: GetElementAsync(string by, string locator)</span></p>
+<p class="rvps13"><span class="rvts55">Возвращаемое значение</span><span class="rvts53">: объект (HTMLElement)</span></p>
+<p class="rvps13"><span class="rvts54"><br/></span></p>
+<p class="rvps13"><span class="rvts54"><br/></span></p>
+<p class="rvps13"><span class="rvts55">Примеры</span><span class="rvts54">:</span></p>
+<p class="rvps13"><span class="rvts53">HTMLElement element = await tester.GetElementAsync(Tester.BY_CSS, "#auth #buttonLogin");</span></p>
+<p class="rvps13"><span class="rvts53">await element.ClickAsync();</span></p>
+<p class="rvps13"><span class="rvts53"><br/></span></p>
+<p class="rvps13"><span class="rvts53">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//div[@id='auth']//input[@id='buttonLogin']");</span></p>
+<p class="rvps13"><span class="rvts53">await element.ClickAsync();</span></p>
+<p class="rvps3"><span class="rvts53"><br/></span></p>
+<p class="rvps3"><span class="rvts53">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//*[@id='MyFile']");</span></p>
+<p class="rvps3"><span class="rvts53">tester.ConsoleMsg("ID: " + element.Id);</span></p>
+<p class="rvps3"><span class="rvts53"><br/></span></p>
+<p class="rvps3"><span class="rvts53">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//h1");</span></p>
+<p class="rvps3"><span class="rvts53">string text = await element.GetTextAsync();</span></p>
+<p class="rvps3"><span class="rvts53">tester.ConsoleMsg(text);</span></p>
+<p class="rvps3"><span class="rvts53">await element.SetTextAsync("TEST");</span></p>
+<p class="rvps3"><span class="rvts53"><br/></span></p>
+<p class="rvps3"><span class="rvts53">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//*[@id='MyInput']");</span></p>
+<p class="rvps3"><span class="rvts53">await element.SetValueAsync("Тестирование");</span></p>
+<p class="rvps3"><span class="rvts53">string value = await element.GetValueAsync();</span></p>
+<p class="rvps3"><span class="rvts53">tester.ConsoleMsg(value);</span></p>
+<p class="rvps3"><span class="rvts53"><br/></span></p>
+<p class="rvps3"><span class="rvts53">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//h1");</span></p>
+<p class="rvps3"><span class="rvts53">await element.SetAttributeAsync("class", "my-class");</span></p>
+<p class="rvps3"><span class="rvts53">string attrClass = await element.GetAttributeAsync("class");</span></p>
+<p class="rvps3"><span class="rvts53">tester.ConsoleMsg(attrClass);</span></p>
+<p class="rvps3"><span class="rvts53"><br/></span></p>
+<p class="rvps3"><span class="rvts53">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//h1");</span></p>
+<p class="rvps3"><span class="rvts53">string html = await element.GetHtmlAsync();</span></p>
+<p class="rvps3"><span class="rvts53">tester.ConsoleMsg(html);</span></p>
+<p class="rvps3"><span class="rvts53"><br/></span></p>
+<p class="rvps3"><span class="rvts53">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//h1");</span></p>
+<p class="rvps3"><span class="rvts53">await element.SetHtmlAsync("&lt;div&gt;Это тест&lt;/div&gt;");</span></p>
+<p class="rvps3"><span class="rvts53"><br/></span></p>
+<p class="rvps3"><span class="rvts53">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "/html/body/footer");</span></p>
+<p class="rvps3"><span class="rvts53">await element.ScrollToAsync();</span></p>
+<p class="rvps3"><span class="rvts53"><br/></span></p>
+<p class="rvps3"><span class="rvts53">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//h1");</span></p>
+<p class="rvps3"><span class="rvts53">await element.WaitVisibleAsync(2);</span></p>
+<p class="rvps3"><span class="rvts53">await element.WaitNotVisibleAsync(2);</span><span class="rvts8"></span></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
 
 	</div>
 	
