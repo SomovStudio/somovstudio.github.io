@@ -1,0 +1,138 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Send a report on the failure of the autotest to the mail</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Sendareportonthefailureoftheauto");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Send a report on the failure of the autotest to the mail</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Englishversion.html">English version</a> &rsaquo;&rsaquo; <a href="Mail.html">Mail</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Mail.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Mail.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="ConsolelaunchmodeJenkins.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps3"><span class="rvts17">Send a report on the failure of the autotest to the mail</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">The connection to the mail server is configured in the "Project" window.</span></p>
+<p class="rvps3"><span class="rvts14">This example uses a Yandex mailbox.</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><img alt="" style="padding : 1px;" src="lib/NewItem327.png"></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">To use the function of sending a report to the mail, you need to enable this option in the autotest using the method BrowserEnableSendMailAsync</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts23">public</span><span class="rvts19"> </span><span class="rvts24">async</span><span class="rvts19"> Task </span><span class="rvts21">setUp</span><span class="rvts19">()</span><br/><span class="rvts19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts22">await</span><span class="rvts19"> tester.</span><span class="rvts21">BrowserEnableSendMailAsync</span><span class="rvts19">(</span><span class="rvts26">true</span><span class="rvts19">, </span><span class="rvts26">false</span><span class="rvts19">); </span><span class="rvts25">// only in case of failure</span><br/><span class="rvts19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts22">await</span><span class="rvts19"> tester.</span><span class="rvts21">BrowserEnableSendMailAsync</span><span class="rvts19">(</span><span class="rvts26">false</span><span class="rvts19">, </span><span class="rvts26">true</span><span class="rvts19">); </span><span class="rvts25">// only if successful</span><br/><span class="rvts19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts22">await</span><span class="rvts19"> tester.</span><span class="rvts21">BrowserEnableSendMailAsync</span><span class="rvts19">(); </span><span class="rvts25">// in both cases</span><br/><span class="rvts19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14">In case of failure, a report of the following type will be sent to the listed email addresses</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem215.png"></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">The email will include a screenshot at the time of the error and a report with the steps of execution, as well as user messages.</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem216.png"></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem217.png"></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">You can send an email at any time, you need to use the function SendMsgToMailAsync</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts23">public</span><span class="rvts19"> </span><span class="rvts24">async</span><span class="rvts19"> Task </span><span class="rvts21">tearDown</span><span class="rvts19">()</span><br/><span class="rvts19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts23">if</span><span class="rvts19">(tester.</span><span class="rvts21">GetTestResult</span><span class="rvts19">() == Tester.PASSED)&nbsp;</span><br/><span class="rvts19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br/><span class="rvts19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts22">await</span><span class="rvts19"> tester.</span><span class="rvts21">SendMsgToMailAsync</span><span class="rvts19">(</span><span class="rvts20">"Text message"</span><span class="rvts19">, </span><span class="rvts20">"The test was completed successfully"</span><span class="rvts19">);</span><br/><span class="rvts19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="rvts19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts8"></span></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpauthoringsoftware.com">News and information about help authoring tools and software</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2024 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

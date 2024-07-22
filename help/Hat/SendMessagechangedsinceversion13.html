@@ -1,0 +1,139 @@
+﻿
+
+<html>
+	
+<head>
+	<title>SendMessage [changed since version 1.3.0]</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("SendMessagechangedsinceversion13");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">SendMessage [changed since version 1.3.0]</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Englishversion.html">English version</a> &rsaquo;&rsaquo; <a href="HatFramework1.html">HatFramework</a> &rsaquo;&rsaquo; <a href="ClassTester.html">Class: Tester</a> &rsaquo;&rsaquo; <a href="Methodsfordisplayingmessages.html">Methods for displaying messages</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Methodsfordisplayingmessages.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="DisableDebugInReport1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="SendMessageDebugchangedsincevers.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps13"><span class="rvts56">SendMessage</span></p>
+<p class="rvps13"><span class="rvts55">Description</span><span class="rvts53">: the method displays messages in the test execution process table</span></p>
+<p class="rvps13"><span class="rvts53">When executed, action is output to the system console if status is FAILED, WARNING, "", null, otherwise only status and comment are output (without action).</span></p>
+<p class="rvps13"><span class="rvts53"><br/></span></p>
+<p class="rvps13"><span class="rvts55">Syntax</span><span class="rvts53">: SendMessage(string action, string status, string comment)</span></p>
+<p class="rvps13"><span class="rvts54"><br/></span></p>
+<p class="rvps13"><span class="rvts55">Example</span><span class="rvts54">:</span></p>
+<p class="rvps13"><span class="rvts53">tester.SendMessage("the text of the actions", Tester.PROCESS, "the text of the comment");</span></p>
+<p class="rvps13"><span class="rvts56"><br/></span></p>
+<p class="rvps13"><span class="rvts63">/* Examples of console output */</span></p>
+<p class="rvps13"><span class="rvts63">// action comment</span></p>
+<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions", </span><span class="rvts64">null</span><span class="rvts60">, "comment");</span></p>
+<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions", </span><span class="rvts64">""</span><span class="rvts60">, "comment");</span></p>
+<p class="rvps13"><span class="rvts60"><br/></span></p>
+<p class="rvps13"><span class="rvts63">// Step[</span><span class="rvts67">progress</span><span class="rvts63">]: comment</span></p>
+<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions"</span><span class="rvts59">,</span><span class="rvts60"> </span><span class="rvts65">Tester.</span><span class="rvts64">PROCESS</span><span class="rvts60">, "comment");</span></p>
+<p class="rvps13"><span class="rvts63">// Step[</span><span class="rvts67">passed</span><span class="rvts63">]: comment</span></p>
+<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions"</span><span class="rvts59">,</span><span class="rvts60"> </span><span class="rvts65">Tester.</span><span class="rvts66">PASSED</span><span class="rvts60">, "comment");</span></p>
+<p class="rvps13"><span class="rvts63">// Step[</span><span class="rvts67">completed</span><span class="rvts63">]: comment</span></p>
+<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions"</span><span class="rvts59">,</span><span class="rvts60"> </span><span class="rvts65">Tester.</span><span class="rvts66">COMPLETED</span><span class="rvts60">, "comment");</span></p>
+<p class="rvps13"><span class="rvts63">// Step[</span><span class="rvts67">stopped</span><span class="rvts63">]: comment</span></p>
+<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions"</span><span class="rvts59">,</span><span class="rvts60"> </span><span class="rvts65">Tester.</span><span class="rvts66">STOPPED</span><span class="rvts60">, "comment");</span></p>
+<p class="rvps13"><span class="rvts60"><br/></span></p>
+<p class="rvps13"><span class="rvts63">// Step[</span><span class="rvts67">failed</span><span class="rvts63">]: действие комментарий</span></p>
+<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions", </span><span class="rvts65">Tester.</span><span class="rvts66">FAILED</span><span class="rvts60">, "comment");</span></p>
+<p class="rvps13"><span class="rvts63">// Step[</span><span class="rvts67">warning</span><span class="rvts63">]: действие комментарий</span></p>
+<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions", </span><span class="rvts65">Tester.</span><span class="rvts66">WARNING</span><span class="rvts60">, "comment");</span></p>
+<p class="rvps13"><span class="rvts56"></span><span class="rvts8"></span></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Full-featured Documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2024 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

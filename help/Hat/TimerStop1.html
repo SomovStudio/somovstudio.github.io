@@ -1,0 +1,124 @@
+﻿
+
+<html>
+	
+<head>
+	<title>TimerStop</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("TimerStop1");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">TimerStop</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Englishversion.html">English version</a> &rsaquo;&rsaquo; <a href="HatFramework1.html">HatFramework</a> &rsaquo;&rsaquo; <a href="ClassTester.html">Class: Tester</a> &rsaquo;&rsaquo; <a href="Methodsformeasuringthetimespent.html">Methods for measuring the time spent</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Methodsformeasuringthetimespent.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="TimerStart1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Methodsforsendingemailandmessage.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps13"><span class="rvts56">TimerStop</span></p>
+<p class="rvps13"><span class="rvts55">Description</span><span class="rvts53">: the method completes the countdown and returns the TimeSpan value with the result (for example, 7,132157, which means 7 seconds and 132157 milliseconds)</span></p>
+<p class="rvps13"><span class="rvts55">Syntax</span><span class="rvts53">: TimerStop(DateTime start)</span></p>
+<p class="rvps13"><span class="rvts55">Return value</span><span class="rvts53">: TimeSpan</span></p>
+<p class="rvps13"><span class="rvts54"><br/></span></p>
+<p class="rvps13"><span class="rvts55">Example</span><span class="rvts54">:</span></p>
+<p class="rvps13"><span class="rvts53">Tester tester = new Tester(browserForm);</span></p>
+<p class="rvps13"><span class="rvts53">DateTime start = await tester.TimerStart();</span></p>
+<p class="rvps13"><span class="rvts53">await tester.TestBeginAsync();</span></p>
+<p class="rvps13"><span class="rvts53">...</span></p>
+<p class="rvps13"><span class="rvts53">await tester.TestEndAsync();</span></p>
+<p class="rvps13"><span class="rvts53">TimeSpan result = await tester.TimerStop(start);</span></p>
+<p class="rvps13"><span class="rvts53">tester.ConsoleMsg("Time " + result.TotalSeconds);</span><span class="rvts8"></span></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2024 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
