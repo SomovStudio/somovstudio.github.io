@@ -90,34 +90,34 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps13"><span class="rvts58">RestGetAsync</span></p>
-<p class="rvps13"><span class="rvts62">Description</span><span class="rvts60">: the method executes a Get Rest request and gets the result in json format</span></p>
-<p class="rvps13"><span class="rvts62">Syntax</span><span class="rvts60">: </span><span class="rvts59">RestGetAsync(string url, TimeSpan timeout, string charset = "UTF-8")</span></p>
-<p class="rvps13"><span class="rvts55">Return value</span><span class="rvts53">: string</span></p>
-<p class="rvps13"><span class="rvts61"><br/></span></p>
-<p class="rvps13"><span class="rvts62">Example</span><span class="rvts61">:</span></p>
-<p class="rvps13"><span class="rvts59">string result = await tester.RestGetAsync("https://jsonplaceholder.typicode.com/posts/1/", TimeSpan.FromDays(1), "UTF-8");</span></p>
-<p class="rvps13"><span class="rvts59">tester.ConsoleMsg(result);</span></p>
-<p class="rvps13"><span class="rvts59"><br/></span></p>
-<p class="rvps13"><span class="rvts62">This method uses a standard approach</span><span class="rvts61">:</span></p>
-<p class="rvps13"><span class="rvts59">using System.Net;</span></p>
-<p class="rvps13"><span class="rvts59">using System.Net.Http;</span></p>
-<p class="rvps13"><span class="rvts59">using System.Net.Http.Headers;</span></p>
-<p class="rvps13"><span class="rvts59"><br/></span></p>
-<p class="rvps13"><span class="rvts59">Uri uri = new Uri(url);</span></p>
-<p class="rvps13"><span class="rvts59">HttpClient client = new HttpClient();</span></p>
-<p class="rvps13"><span class="rvts59">client.Timeout = TimeSpan.FromDays(1);</span></p>
-<p class="rvps13"><span class="rvts59">client.BaseAddress = uri;</span></p>
-<p class="rvps13"><span class="rvts59">client.DefaultRequestHeaders.Clear();</span></p>
-<p class="rvps13"><span class="rvts59">client.DefaultRequestHeaders.Accept.Clear();</span></p>
-<p class="rvps13"><span class="rvts59">client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));</span></p>
-<p class="rvps13"><span class="rvts59">client.DefaultRequestHeaders.Add("charset", "UTF-8");</span></p>
-<p class="rvps13"><span class="rvts59">client.DefaultRequestHeaders.Add("User-Agent", userAgent);</span></p>
-<p class="rvps13"><span class="rvts59">HttpResponseMessage response = await client.GetAsync(url);</span></p>
-<p class="rvps13"><span class="rvts59">if (response.IsSuccessStatusCode)</span></p>
-<p class="rvps13"><span class="rvts59">{</span></p>
-<p class="rvps13"><span class="rvts59"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts59">return await response.Content.ReadAsStringAsync();</span></p>
-<p class="rvps13"><span class="rvts59">}</span><span class="rvts8"></span></p>
+<p class="rvps13"><span class="rvts59">RestGetAsync</span></p>
+<p class="rvps13"><span class="rvts63">Description</span><span class="rvts61">: the method executes a Get Rest request and gets the result in json format</span></p>
+<p class="rvps13"><span class="rvts63">Syntax</span><span class="rvts61">: </span><span class="rvts60">RestGetAsync(string url, TimeSpan timeout, string charset = "UTF-8")</span></p>
+<p class="rvps13"><span class="rvts56">Return value</span><span class="rvts54">: string</span></p>
+<p class="rvps13"><span class="rvts62"><br/></span></p>
+<p class="rvps13"><span class="rvts63">Example</span><span class="rvts62">:</span></p>
+<p class="rvps13"><span class="rvts60">string result = await tester.RestGetAsync("https://jsonplaceholder.typicode.com/posts/1/", TimeSpan.FromDays(1), "UTF-8");</span></p>
+<p class="rvps13"><span class="rvts60">tester.ConsoleMsg(result);</span></p>
+<p class="rvps13"><span class="rvts60"><br/></span></p>
+<p class="rvps13"><span class="rvts63">This method uses a standard approach</span><span class="rvts62">:</span></p>
+<p class="rvps13"><span class="rvts60">using System.Net;</span></p>
+<p class="rvps13"><span class="rvts60">using System.Net.Http;</span></p>
+<p class="rvps13"><span class="rvts60">using System.Net.Http.Headers;</span></p>
+<p class="rvps13"><span class="rvts60"><br/></span></p>
+<p class="rvps13"><span class="rvts60">Uri uri = new Uri(url);</span></p>
+<p class="rvps13"><span class="rvts60">HttpClient client = new HttpClient();</span></p>
+<p class="rvps13"><span class="rvts60">client.Timeout = TimeSpan.FromDays(1);</span></p>
+<p class="rvps13"><span class="rvts60">client.BaseAddress = uri;</span></p>
+<p class="rvps13"><span class="rvts60">client.DefaultRequestHeaders.Clear();</span></p>
+<p class="rvps13"><span class="rvts60">client.DefaultRequestHeaders.Accept.Clear();</span></p>
+<p class="rvps13"><span class="rvts60">client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));</span></p>
+<p class="rvps13"><span class="rvts60">client.DefaultRequestHeaders.Add("charset", "UTF-8");</span></p>
+<p class="rvps13"><span class="rvts60">client.DefaultRequestHeaders.Add("User-Agent", userAgent);</span></p>
+<p class="rvps13"><span class="rvts60">HttpResponseMessage response = await client.GetAsync(url);</span></p>
+<p class="rvps13"><span class="rvts60">if (response.IsSuccessStatusCode)</span></p>
+<p class="rvps13"><span class="rvts60">{</span></p>
+<p class="rvps13"><span class="rvts60"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts60">return await response.Content.ReadAsStringAsync();</span></p>
+<p class="rvps13"><span class="rvts60">}</span><span class="rvts8"></span></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Easy to use tool to create HTML Help files and Help web sites</a></p>
 
 	</div>

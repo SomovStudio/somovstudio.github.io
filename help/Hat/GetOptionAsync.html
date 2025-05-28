@@ -90,24 +90,24 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps13"><span class="rvts56">GetOptionAsync</span></p>
-<p class="rvps13"><span class="rvts55">Описание</span><span class="rvts53">: метод возвращает индекс, текст или значение выбоанной опции выбранной option из элемента select</span></p>
-<p class="rvps13"><span class="rvts55">Синтаксис</span><span class="rvts53">: GetOptionAsync(string by)</span></p>
-<p class="rvps13"><span class="rvts55">Возвращаемое значение</span><span class="rvts53">: строка (string)</span></p>
-<p class="rvps13"><span class="rvts54"><br/></span></p>
-<p class="rvps13"><span class="rvts55">Пример</span><span class="rvts54">:</span></p>
-<p class="rvps13"><span class="rvts53">Tester tester = new Tester(browserForm);</span></p>
-<p class="rvps13"><span class="rvts53">await tester.TestBeginAsync();</span></p>
-<p class="rvps13"><span class="rvts53">await tester.GoToUrlAsync("https://somovstudio.github.io/test2.html", 5);</span></p>
-<p class="rvps13"><span class="rvts53">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//*[@id='MySelect']");</span></p>
-<p class="rvps13"><span class="rvts53">await element.SelectOptionAsync(HTMLElement.BY_INDEX, "2");</span></p>
-<p class="rvps13"><span class="rvts53">await element.SelectOptionAsync(HTMLElement.BY_VALUE, "Mobile");</span></p>
-<p class="rvps13"><span class="rvts53">await element.SelectOptionAsync(HTMLElement.BY_TEXT, "Other");</span></p>
-<p class="rvps13"><span class="rvts53">string index = await element.GetOptionAsync(HTMLElement.BY_INDEX);</span></p>
-<p class="rvps13"><span class="rvts53">string text = await element.GetOptionAsync(HTMLElement.BY_TEXT);</span></p>
-<p class="rvps13"><span class="rvts53">string value = await element.GetOptionAsync(HTMLElement.BY_VALUE);</span></p>
-<p class="rvps13"><span class="rvts53">...</span></p>
-<p class="rvps13"><span class="rvts53">await tester.TestEndAsync();</span><span class="rvts8"></span></p>
+<p class="rvps13"><span class="rvts57">GetOptionAsync</span></p>
+<p class="rvps13"><span class="rvts56">Описание</span><span class="rvts54">: метод возвращает индекс, текст или значение выбоанной опции выбранной option из элемента select</span></p>
+<p class="rvps13"><span class="rvts56">Синтаксис</span><span class="rvts54">: GetOptionAsync(string by)</span></p>
+<p class="rvps13"><span class="rvts56">Возвращаемое значение</span><span class="rvts54">: строка (string)</span></p>
+<p class="rvps13"><span class="rvts55"><br/></span></p>
+<p class="rvps13"><span class="rvts56">Пример</span><span class="rvts55">:</span></p>
+<p class="rvps13"><span class="rvts54">Tester tester = new Tester(browserForm);</span></p>
+<p class="rvps13"><span class="rvts54">await tester.TestBeginAsync();</span></p>
+<p class="rvps13"><span class="rvts54">await tester.GoToUrlAsync("https://somovstudio.github.io/test2.html", 5);</span></p>
+<p class="rvps13"><span class="rvts54">HTMLElement element = await tester.GetElementAsync(Tester.BY_XPATH, "//*[@id='MySelect']");</span></p>
+<p class="rvps13"><span class="rvts54">await element.SelectOptionAsync(HTMLElement.BY_INDEX, "2");</span></p>
+<p class="rvps13"><span class="rvts54">await element.SelectOptionAsync(HTMLElement.BY_VALUE, "Mobile");</span></p>
+<p class="rvps13"><span class="rvts54">await element.SelectOptionAsync(HTMLElement.BY_TEXT, "Other");</span></p>
+<p class="rvps13"><span class="rvts54">string index = await element.GetOptionAsync(HTMLElement.BY_INDEX);</span></p>
+<p class="rvps13"><span class="rvts54">string text = await element.GetOptionAsync(HTMLElement.BY_TEXT);</span></p>
+<p class="rvps13"><span class="rvts54">string value = await element.GetOptionAsync(HTMLElement.BY_VALUE);</span></p>
+<p class="rvps13"><span class="rvts54">...</span></p>
+<p class="rvps13"><span class="rvts54">await tester.TestEndAsync();</span><span class="rvts8"></span></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Full-featured multi-format Help generator</a></p>
 
 	</div>

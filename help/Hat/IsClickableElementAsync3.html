@@ -90,18 +90,18 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps13"><span class="rvts56">IsClickableElementAsync</span></p>
-<p class="rvps13"><span class="rvts55">Description</span><span class="rvts53">: the method determines the clickability of the element and returns true or false</span></p>
-<p class="rvps13"><span class="rvts55">Syntax</span><span class="rvts53">: IsClickableElementAsync(string by, string locator)</span></p>
-<p class="rvps13"><span class="rvts55">Return value</span><span class="rvts53">: bool (true or false)</span></p>
+<p class="rvps13"><span class="rvts57">IsClickableElementAsync</span></p>
+<p class="rvps13"><span class="rvts56">Description</span><span class="rvts54">: the method determines the clickability of the element and returns true or false</span></p>
+<p class="rvps13"><span class="rvts56">Syntax</span><span class="rvts54">: IsClickableElementAsync(string by, string locator)</span></p>
+<p class="rvps13"><span class="rvts56">Return value</span><span class="rvts54">: bool (true or false)</span></p>
+<p class="rvps13"><span class="rvts55"><br/></span></p>
+<p class="rvps13"><span class="rvts56">Example</span><span class="rvts55">:</span></p>
+<p class="rvps13"><span class="rvts54">FRAMEElement frame = await tester.GetFrameAsync(0);</span></p>
+<p class="rvps13"><span class="rvts54">bool clickable = await frame.IsClickableElementAsync(Tester.BY_CSS, "#buttonLogin");</span></p>
+<p class="rvps13"><span class="rvts54">await tester.AssertTrueAsync(clickable);</span></p>
 <p class="rvps13"><span class="rvts54"><br/></span></p>
-<p class="rvps13"><span class="rvts55">Example</span><span class="rvts54">:</span></p>
-<p class="rvps13"><span class="rvts53">FRAMEElement frame = await tester.GetFrameAsync(0);</span></p>
-<p class="rvps13"><span class="rvts53">bool clickable = await frame.IsClickableElementAsync(Tester.BY_CSS, "#buttonLogin");</span></p>
-<p class="rvps13"><span class="rvts53">await tester.AssertTrueAsync(clickable);</span></p>
-<p class="rvps13"><span class="rvts53"><br/></span></p>
-<p class="rvps13"><span class="rvts53">bool clickable = await frame.IsClickableElementAsync(Tester.BY_XPATH, "//*[@id='buttonLogin']");</span></p>
-<p class="rvps13"><span class="rvts53">await frame.AssertTrueAsync(clickable);</span><span class="rvts8"></span></p>
+<p class="rvps13"><span class="rvts54">bool clickable = await frame.IsClickableElementAsync(Tester.BY_XPATH, "//*[@id='buttonLogin']");</span></p>
+<p class="rvps13"><span class="rvts54">await frame.AssertTrueAsync(clickable);</span><span class="rvts8"></span></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Full-featured Kindle eBooks generator</a></p>
 
 	</div>
