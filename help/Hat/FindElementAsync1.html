@@ -90,16 +90,16 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps13"><span class="rvts56">FindElementAsync</span></p>
-<p class="rvps13"><span class="rvts55">Описание</span><span class="rvts53">: метод выполняет поиск элемент в DOM с ожиданием в секундах и возвращает логический результат true или false</span></p>
-<p class="rvps13"><span class="rvts55">Синтаксис</span><span class="rvts53">: FindElementAsync(string by, string locator, int sec)</span></p>
-<p class="rvps13"><span class="rvts55">Возвращаемое значение</span><span class="rvts53">: логическое (true или false)</span></p>
+<p class="rvps13"><span class="rvts57">FindElementAsync</span></p>
+<p class="rvps13"><span class="rvts56">Описание</span><span class="rvts54">: метод выполняет поиск элемент в DOM с ожиданием в секундах и возвращает логический результат true или false</span></p>
+<p class="rvps13"><span class="rvts56">Синтаксис</span><span class="rvts54">: FindElementAsync(string by, string locator, int sec)</span></p>
+<p class="rvps13"><span class="rvts56">Возвращаемое значение</span><span class="rvts54">: логическое (true или false)</span></p>
+<p class="rvps13"><span class="rvts55"><br/></span></p>
+<p class="rvps13"><span class="rvts56">Пример</span><span class="rvts55">:</span></p>
+<p class="rvps13"><span class="rvts54">FRAMEElement frame = await tester.GetFrameAsync(0);</span></p>
+<p class="rvps13"><span class="rvts54">bool result = await frame.FindElementAsync(Tester.BY_CSS, "div[id='result']", 2);</span></p>
 <p class="rvps13"><span class="rvts54"><br/></span></p>
-<p class="rvps13"><span class="rvts55">Пример</span><span class="rvts54">:</span></p>
-<p class="rvps13"><span class="rvts53">FRAMEElement frame = await tester.GetFrameAsync(0);</span></p>
-<p class="rvps13"><span class="rvts53">bool result = await frame.FindElementAsync(Tester.BY_CSS, "div[id='result']", 2);</span></p>
-<p class="rvps13"><span class="rvts53"><br/></span></p>
-<p class="rvps13"><span class="rvts53">bool result = await frame.FindElementAsync(Tester.BY_XPATH, "//div[@id='result']", 2);</span><span class="rvts8"></span></p>
+<p class="rvps13"><span class="rvts54">bool result = await frame.FindElementAsync(Tester.BY_XPATH, "//div[@id='result']", 2);</span><span class="rvts8"></span></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EPub generator</a></p>
 
 	</div>

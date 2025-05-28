@@ -90,32 +90,32 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps13"><span class="rvts56">BrowserGoBackAsync</span></p>
-<p class="rvps13"><span class="rvts55">Description</span><span class="rvts53">: the browser's navigation method performs the action backwards with the specified wait in seconds</span></p>
-<p class="rvps13"><span class="rvts53">The abortLoadAfterTime flag automatically completes page loading after the timer is completed</span></p>
-<p class="rvps13"><span class="rvts55">Syntax</span><span class="rvts53">: BrowserGoBackAsync(int sec, bool abortLoadAfterTime = false)</span></p>
-<p class="rvps13"><span class="rvts55">Return value</span><span class="rvts53">: no return value</span></p>
+<p class="rvps13"><span class="rvts57">BrowserGoBackAsync</span></p>
+<p class="rvps13"><span class="rvts56">Description</span><span class="rvts54">: the browser's navigation method performs the action backwards with the specified wait in seconds</span></p>
+<p class="rvps13"><span class="rvts54">The abortLoadAfterTime flag automatically completes page loading after the timer is completed</span></p>
+<p class="rvps13"><span class="rvts56">Syntax</span><span class="rvts54">: BrowserGoBackAsync(int sec, bool abortLoadAfterTime = false)</span></p>
+<p class="rvps13"><span class="rvts56">Return value</span><span class="rvts54">: no return value</span></p>
+<p class="rvps13"><span class="rvts55"><br/></span></p>
+<p class="rvps13"><span class="rvts55"><br/></span></p>
+<p class="rvps13"><span class="rvts56">Example</span><span class="rvts55">:</span></p>
+<p class="rvps13"><span class="rvts54">Tester tester = new Tester(browserForm);</span></p>
+<p class="rvps13"><span class="rvts54">await tester.TestBeginAsync();</span></p>
+<p class="rvps13"><span class="rvts54">await tester.GoToUrlAsync("https://www.yahoo.com/", 5);</span></p>
+<p class="rvps13"><span class="rvts54">string currentUrl = await tester.GetUrlAsync();</span></p>
+<p class="rvps13"><span class="rvts54">await tester.AssertEqualsAsync("https://www.yahoo.com/", currentUrl);</span></p>
 <p class="rvps13"><span class="rvts54"><br/></span></p>
+<p class="rvps13"><span class="rvts54">await tester.GoToUrlAsync("https://yandex.ru/", 5);</span></p>
+<p class="rvps13"><span class="rvts54">currentUrl = await tester.GetUrlAsync();</span></p>
+<p class="rvps13"><span class="rvts54">await tester.AssertEqualsAsync("https://yandex.ru/", currentUrl);</span></p>
+<p class="rvps13"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps13"><span class="rvts54">await tester.BrowserGoBackAsync(10);</span></p>
+<p class="rvps13"><span class="rvts54">currentUrl = await tester.GetUrlAsync();</span></p>
+<p class="rvps13"><span class="rvts54">await tester.AssertEqualsAsync("https://www.yahoo.com/", currentUrl);</span></p>
 <p class="rvps13"><span class="rvts54"><br/></span></p>
-<p class="rvps13"><span class="rvts55">Example</span><span class="rvts54">:</span></p>
-<p class="rvps13"><span class="rvts53">Tester tester = new Tester(browserForm);</span></p>
-<p class="rvps13"><span class="rvts53">await tester.TestBeginAsync();</span></p>
-<p class="rvps13"><span class="rvts53">await tester.GoToUrlAsync("https://www.yahoo.com/", 5);</span></p>
-<p class="rvps13"><span class="rvts53">string currentUrl = await tester.GetUrlAsync();</span></p>
-<p class="rvps13"><span class="rvts53">await tester.AssertEqualsAsync("https://www.yahoo.com/", currentUrl);</span></p>
-<p class="rvps13"><span class="rvts53"><br/></span></p>
-<p class="rvps13"><span class="rvts53">await tester.GoToUrlAsync("https://yandex.ru/", 5);</span></p>
-<p class="rvps13"><span class="rvts53">currentUrl = await tester.GetUrlAsync();</span></p>
-<p class="rvps13"><span class="rvts53">await tester.AssertEqualsAsync("https://yandex.ru/", currentUrl);</span></p>
-<p class="rvps13"><span class="rvts53"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps13"><span class="rvts53">await tester.BrowserGoBackAsync(10);</span></p>
-<p class="rvps13"><span class="rvts53">currentUrl = await tester.GetUrlAsync();</span></p>
-<p class="rvps13"><span class="rvts53">await tester.AssertEqualsAsync("https://www.yahoo.com/", currentUrl);</span></p>
-<p class="rvps13"><span class="rvts53"><br/></span></p>
-<p class="rvps13"><span class="rvts53">await tester.BrowserGoForwardAsync(10);</span></p>
-<p class="rvps13"><span class="rvts53">currentUrl = await tester.GetUrlAsync();</span></p>
-<p class="rvps13"><span class="rvts53">await tester.AssertEqualsAsync("https://yandex.ru/", currentUrl);</span></p>
-<p class="rvps13"><span class="rvts53">await tester.TestEndAsync();</span><span class="rvts8"></span></p>
+<p class="rvps13"><span class="rvts54">await tester.BrowserGoForwardAsync(10);</span></p>
+<p class="rvps13"><span class="rvts54">currentUrl = await tester.GetUrlAsync();</span></p>
+<p class="rvps13"><span class="rvts54">await tester.AssertEqualsAsync("https://yandex.ru/", currentUrl);</span></p>
+<p class="rvps13"><span class="rvts54">await tester.TestEndAsync();</span><span class="rvts8"></span></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
 
 	</div>

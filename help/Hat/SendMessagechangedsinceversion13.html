@@ -90,34 +90,34 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps13"><span class="rvts56">SendMessage</span></p>
-<p class="rvps13"><span class="rvts55">Description</span><span class="rvts53">: the method displays messages in the test execution process table</span></p>
-<p class="rvps13"><span class="rvts53">When executed, action is output to the system console if status is FAILED, WARNING, "", null, otherwise only status and comment are output (without action).</span></p>
-<p class="rvps13"><span class="rvts53"><br/></span></p>
-<p class="rvps13"><span class="rvts55">Syntax</span><span class="rvts53">: SendMessage(string action, string status, string comment)</span></p>
+<p class="rvps13"><span class="rvts57">SendMessage</span></p>
+<p class="rvps13"><span class="rvts56">Description</span><span class="rvts54">: the method displays messages in the test execution process table</span></p>
+<p class="rvps13"><span class="rvts54">When executed, action is output to the system console if status is FAILED, WARNING, "", null, otherwise only status and comment are output (without action).</span></p>
 <p class="rvps13"><span class="rvts54"><br/></span></p>
-<p class="rvps13"><span class="rvts55">Example</span><span class="rvts54">:</span></p>
-<p class="rvps13"><span class="rvts53">tester.SendMessage("the text of the actions", Tester.PROCESS, "the text of the comment");</span></p>
-<p class="rvps13"><span class="rvts56"><br/></span></p>
-<p class="rvps13"><span class="rvts63">/* Examples of console output */</span></p>
-<p class="rvps13"><span class="rvts63">// action comment</span></p>
-<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions", </span><span class="rvts64">null</span><span class="rvts60">, "comment");</span></p>
-<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions", </span><span class="rvts64">""</span><span class="rvts60">, "comment");</span></p>
-<p class="rvps13"><span class="rvts60"><br/></span></p>
-<p class="rvps13"><span class="rvts63">// Step[</span><span class="rvts67">progress</span><span class="rvts63">]: comment</span></p>
-<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions"</span><span class="rvts59">,</span><span class="rvts60"> </span><span class="rvts65">Tester.</span><span class="rvts64">PROCESS</span><span class="rvts60">, "comment");</span></p>
-<p class="rvps13"><span class="rvts63">// Step[</span><span class="rvts67">passed</span><span class="rvts63">]: comment</span></p>
-<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions"</span><span class="rvts59">,</span><span class="rvts60"> </span><span class="rvts65">Tester.</span><span class="rvts66">PASSED</span><span class="rvts60">, "comment");</span></p>
-<p class="rvps13"><span class="rvts63">// Step[</span><span class="rvts67">completed</span><span class="rvts63">]: comment</span></p>
-<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions"</span><span class="rvts59">,</span><span class="rvts60"> </span><span class="rvts65">Tester.</span><span class="rvts66">COMPLETED</span><span class="rvts60">, "comment");</span></p>
-<p class="rvps13"><span class="rvts63">// Step[</span><span class="rvts67">stopped</span><span class="rvts63">]: comment</span></p>
-<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions"</span><span class="rvts59">,</span><span class="rvts60"> </span><span class="rvts65">Tester.</span><span class="rvts66">STOPPED</span><span class="rvts60">, "comment");</span></p>
-<p class="rvps13"><span class="rvts60"><br/></span></p>
-<p class="rvps13"><span class="rvts63">// Step[</span><span class="rvts67">failed</span><span class="rvts63">]: действие комментарий</span></p>
-<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions", </span><span class="rvts65">Tester.</span><span class="rvts66">FAILED</span><span class="rvts60">, "comment");</span></p>
-<p class="rvps13"><span class="rvts63">// Step[</span><span class="rvts67">warning</span><span class="rvts63">]: действие комментарий</span></p>
-<p class="rvps13"><span class="rvts59">tester.</span><span class="rvts53">SendMessage</span><span class="rvts60">("actions", </span><span class="rvts65">Tester.</span><span class="rvts66">WARNING</span><span class="rvts60">, "comment");</span></p>
-<p class="rvps13"><span class="rvts56"></span><span class="rvts8"></span></p>
+<p class="rvps13"><span class="rvts56">Syntax</span><span class="rvts54">: SendMessage(string action, string status, string comment)</span></p>
+<p class="rvps13"><span class="rvts55"><br/></span></p>
+<p class="rvps13"><span class="rvts56">Example</span><span class="rvts55">:</span></p>
+<p class="rvps13"><span class="rvts54">tester.SendMessage("the text of the actions", Tester.PROCESS, "the text of the comment");</span></p>
+<p class="rvps13"><span class="rvts57"><br/></span></p>
+<p class="rvps13"><span class="rvts64">/* Examples of console output */</span></p>
+<p class="rvps13"><span class="rvts64">// action comment</span></p>
+<p class="rvps13"><span class="rvts60">tester.</span><span class="rvts54">SendMessage</span><span class="rvts61">("actions", </span><span class="rvts65">null</span><span class="rvts61">, "comment");</span></p>
+<p class="rvps13"><span class="rvts60">tester.</span><span class="rvts54">SendMessage</span><span class="rvts61">("actions", </span><span class="rvts65">""</span><span class="rvts61">, "comment");</span></p>
+<p class="rvps13"><span class="rvts61"><br/></span></p>
+<p class="rvps13"><span class="rvts64">// Step[</span><span class="rvts68">progress</span><span class="rvts64">]: comment</span></p>
+<p class="rvps13"><span class="rvts60">tester.</span><span class="rvts54">SendMessage</span><span class="rvts61">("actions"</span><span class="rvts60">,</span><span class="rvts61"> </span><span class="rvts66">Tester.</span><span class="rvts65">PROCESS</span><span class="rvts61">, "comment");</span></p>
+<p class="rvps13"><span class="rvts64">// Step[</span><span class="rvts68">passed</span><span class="rvts64">]: comment</span></p>
+<p class="rvps13"><span class="rvts60">tester.</span><span class="rvts54">SendMessage</span><span class="rvts61">("actions"</span><span class="rvts60">,</span><span class="rvts61"> </span><span class="rvts66">Tester.</span><span class="rvts67">PASSED</span><span class="rvts61">, "comment");</span></p>
+<p class="rvps13"><span class="rvts64">// Step[</span><span class="rvts68">completed</span><span class="rvts64">]: comment</span></p>
+<p class="rvps13"><span class="rvts60">tester.</span><span class="rvts54">SendMessage</span><span class="rvts61">("actions"</span><span class="rvts60">,</span><span class="rvts61"> </span><span class="rvts66">Tester.</span><span class="rvts67">COMPLETED</span><span class="rvts61">, "comment");</span></p>
+<p class="rvps13"><span class="rvts64">// Step[</span><span class="rvts68">stopped</span><span class="rvts64">]: comment</span></p>
+<p class="rvps13"><span class="rvts60">tester.</span><span class="rvts54">SendMessage</span><span class="rvts61">("actions"</span><span class="rvts60">,</span><span class="rvts61"> </span><span class="rvts66">Tester.</span><span class="rvts67">STOPPED</span><span class="rvts61">, "comment");</span></p>
+<p class="rvps13"><span class="rvts61"><br/></span></p>
+<p class="rvps13"><span class="rvts64">// Step[</span><span class="rvts68">failed</span><span class="rvts64">]: действие комментарий</span></p>
+<p class="rvps13"><span class="rvts60">tester.</span><span class="rvts54">SendMessage</span><span class="rvts61">("actions", </span><span class="rvts66">Tester.</span><span class="rvts67">FAILED</span><span class="rvts61">, "comment");</span></p>
+<p class="rvps13"><span class="rvts64">// Step[</span><span class="rvts68">warning</span><span class="rvts64">]: действие комментарий</span></p>
+<p class="rvps13"><span class="rvts60">tester.</span><span class="rvts54">SendMessage</span><span class="rvts61">("actions", </span><span class="rvts66">Tester.</span><span class="rvts67">WARNING</span><span class="rvts61">, "comment");</span></p>
+<p class="rvps13"><span class="rvts57"></span><span class="rvts8"></span></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Full-featured Documentation generator</a></p>
 
 	</div>
