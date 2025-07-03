@@ -26,11 +26,10 @@
 			<label class="mobile-menu-button" for="mobile-menu-check"><img src="./img/menu.png" atl="Menu"></label>
 			<input type="checkbox" name="mobile-menu-check" id="mobile-menu-check">
 			<ul class="mobile-menu-list">
-				<li><a href="index.html#about">О проекте</a></li>
-				<li><a href="hat.html">Браузер Hat</a></li>
-				<li><a href="index.html#developments">Разработки</a></li>
-				<li><a href="index.html#technology">Технологии</a></li>
-				<li><a href="index.html#video-review">Видео</a></li>
+				<li><a href="index.html#about">Браузер Hat</a></li>
+				<li><a href="index.html#developments">Системные требования</a></li>
+				<li><a href="index.html#technology">Автоматизация тестирования</a></li>
+				<li><a href="index.html#video-review">Видеообзор</a></li>
 				<li><a href="index.html#contacts">Контакты</a></li>
 			</ul>
 		</div>
@@ -45,7 +44,7 @@
 					<h2>Browser Hat v1.4.12 (02.07.2025)</h2>
 					<div class="banner-description">Браузер со встроенной технологией автоматизированного тестирования Web приложений.</div>
 					<span class="banner-link"><a href="https://gitflic.ru/project/somovstudio/hat/release/c46ab633-938d-47c6-b542-98621596beb6/4dfe7e51-44a6-4ae1-ae16-b54c2e6f08ff/download">Скачать ></a></span>
-					<span class="banner-link"><a href="https://somovstudio.github.io/hat.html">Подробно ></a></span>
+					<span class="banner-link"><a href="https://gitflic.ru/project/somovstudio/hat" target="_blank">Подробно ></a></span>
 					<span class="banner-link"><a href="https://somovstudio.github.io/help/Hat/index.html" target="_blank">Документация ></a></span>
 					<span class="banner-link"><a href="https://drive.google.com/drive/folders/1X-dtbYdjTcpMsWYlUjUupl3PU0BuKCwK?usp=share_link" target="_blank">Google Диск ></a></span>
 				</div>
@@ -61,24 +60,20 @@
 		<div class="section-content">
 			<div class="section-content-left">
 				<div id="about">
-					<h2 class="line">О проекте</h2>
+					<h2 class="line">Браузер Hat</h2>
 					<p>
-						Проект Somov Studio основан независимым разработчиком программного обеспечения с открытым исходным кодом. Автор проекта <a href="https://somov-qa.github.io/resume.html" target="_blank">Сомов Евгений Павлович</a> является специалистом в области автоматизированного тестирования и занимается оказанием услуг в облати тестирования программного обеспечения.
+						Браузер со встроенной технологией автоматизированного тестирования Web приложений.
 					</p>
 					<p>
-						Автоматизация процессов тестирования неотъемлемая часть разработки любого программного обеспечения, она позволяет сократить время и вероятность пропущенных ошибок во время выполнения регресс-тестировании, а так же упрощает выполнение сложных тестов.
+						Особенность браузера Hat в том что автотесты напрямую выполняются в браузере без Selenium и WebDriver. Встроенный фреймворк HatFramework содержит достаточное количество методов необходимых для выполнения основных задач автоматизации тестирования.
+						Для описания скриптов автотестов используется язык программирования C# и встроенный редактор кода. Так же в качестве редактора можно воспользоваться Visual Studio.
+						Удобный интерфейс браузера отображает все шаги выполнения теста с подробным описанием событий. Результат проверки формируется в отчет и отправляются на указаную почту. Запуск автотестов возможен из командной строки операционной системы Windows это пригодится при использовании автотестов в популярных средствах непрерывной интеграции таких как: Jenkins, TeamCity, GitLab CI/CD.
 					</p>
-					<p>
-						В рамках данного проекта ведется разработка специализированного программного обеспечения предназначенного для упрощения выполнения задач в области тестирования. Все предлагаемые программы с открытым исходным кодом и абсолютно бесплатны.
-					</p>
-					<div class="button-more-right">
-						<a href="about.html">ПОДРОБНЕЕ >></a>
-					</div>
 				</div>
 			</div>
 			<div class="section-content-right">
 				<div class="content-image" id="about-image">
-					<img src="./img/about.png">
+					<img src="./img/projects/hat/hat1.3.png">
 				</div>
 			</div>
 		</div>
@@ -90,46 +85,17 @@
 		<div class="section-content">
 			<div class="section-content-left">
 				<div class="content-image" id="developments-image">
-					<img src="./img/soft.png">
-					<p style="font-size: small;">
-						* Полный список доступных программ вы увидите ниже или в подробном описании этого раздела.
-						<br>
-						** Все программы абсолютно бесплатные с открытым исходным кодом.
-					</p>
-					<div class="button-more-right">
-						<a href="download.html">ПОДРОБНЕЕ >></a>
-					</div>
+					<img src="./img/projects/hat/webview2.png">
 				</div>
 			</div>
 			<div class="section-content-right">
 				<div id="developments">
-					<h2 class="line">Разработки</h2>
+					<h2 class="line">Системные требования</h2>
 					<p>
-						Раздел бесплатного программного обеспечения разработанного для упрощения выполнения задач в области тестирования.
+						<br>Операционная система Windows 8, 8.1, 10, 11<br>
+						<br>Пакет Microsoft .NET Framework 4.8 (cкачать установщик <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48" target="_blank">.NET Framework Runtime</a>)<br>
+						<br>Пакет Microsoft Edge WebView2 (cкачать установщик <a href="https://developer.microsoft.com/en-us/microsoft-edge/webview2/" target="_blank">WebView2 Runtime</a>)
 					</p>
-
-					<div id="ZionecBunner">
-						<a href="https://zionec.ru/" target="_blank"><img class="zionec-img" src="./img/zionec.png"></a><br>
-						<p class="zionec-border">
-							
-							Разработка программ при поддержке компании "<b><a href="https://zionec.ru/">Зионек</a></b>".<br>
-							Компания занимается разработкой "Интернет-магазинов", "Корпоративных порталов", "CRM-систем" и собственных решений. <a href="https://zionec.ru/">https://zionec.ru</a>
-						</p>
-					</div>
-
-					<div class="section-clear"></div>
-
-					<p class="block">
-						<b>Browser Hat</b> - браузер со встроенной технологией автоматизированного тестирования Web приложений, с удобный интерфейсом отображающим все шаги выполнения теста, при этом результат проверки формируется в отчет и отправляется на указаную почту, так же поддерживается работа в Visual Studio и с популярными средствами непрерывной интеграции Jenkins, TeamCity, GitLab CI/CD.
-					</p>
-					<p class="block">
-						<span class="developments-link"><a href="https://somovstudio.github.io/help/Hat/index.html" target="_blank">Документация ></a></span>
-						<span class="developments-link"><a href="https://gitflic.ru/project/somovstudio/hat/release/c46ab633-938d-47c6-b542-98621596beb6/4dfe7e51-44a6-4ae1-ae16-b54c2e6f08ff/download">Скачать ></a></span>
-						<span class="developments-link"><a href="https://drive.google.com/drive/folders/1X-dtbYdjTcpMsWYlUjUupl3PU0BuKCwK?usp=share_link" target="_blank">Google Диск ></a></span>
-						<span class="developments-link"><a href="https://somovstudio.github.io/hat.html">Подробно ></a></span>
-					</p>
-					<br>
-					
 				</div>
 			</div>
 		</div>
@@ -145,7 +111,7 @@
 						<span>Browser Hat</span>
 						Описание: Браузер со встроенной технологией автоматизации тестирования Web приложений.
 					</p>
-					<div class="tile__detail"><a href="hat.html">подробнее ></a></div>
+					<div class="tile__detail"><a href="https://gitflic.ru/project/somovstudio/hat" target="_blank">подробнее ></a></div>
 					<div class="tile__download">
 						<form action="https://gitflic.ru/project/somovstudio/hat/release/c46ab633-938d-47c6-b542-98621596beb6/4dfe7e51-44a6-4ae1-ae16-b54c2e6f08ff/download">
 							<input type="submit" value="Скачать" class="tile__button">
@@ -226,33 +192,21 @@
 		<div class="section-content">
 			<div class="section-content-left">
 				<div id="technology">
-					<h2 class="line">Технологии</h2>
+					<h2 class="line">Автоматизация тестирования</h2>
 					<p>
-						Основные технологии автоматизации процессов тестирования Web и Mobile приложений: <a href="https://www.seleniumhq.org/" target="_blank">Selenium</a>, <a href="http://appium.io/" target="_blank">Appium</a>
-					</p>
-					<p>
-						Самые популярные фреймворки автоматизированного тестирования Web приложений: <a href="https://codeception.com/" target="_blank">Codeception</a>, <a href="https://ru.selenide.org/" target="_blank">Selenide</a>, <a href="https://cucumber.io/" target="_blank">Cucumber</a>, <a href="https://webdriver.io/" target="_blank">WebdriverIO</a>, <a href="https://robotframework.org/" target="_blank">Robot</a>, <a href="https://www.cypress.io/" target="_blank">Cypress</a>, <a href="https://developer.android.com/training/testing/espresso" target="_blank">Espresso</a>
-					</p>
-					<p>
-						Технологии автоматизированного тестирования Web приложений: <a href="https://github.com/SomovStudio/Hat" target="_blank">Browser Hat</a>
-					</p>
-					<p>
-						Модульное тестирование средствами: <a href="https://junit.org/junit5/" target="_blank">JUnit</a>, <a href="https://testng.org/" target="_blank">TestNG</a>, <a href="https://phpunit.de/" target="_blank">PHPUnit</a>, <a href="https://nunit.org/" target="_blank">NUnit</a>, <a href="https://docs.python.org/3/library/unittest.html" target="_blank">Unittest</a>, <a href="https://docs.pytest.org/" target="_blank">PyTest</a>
-					</p>
-					<p>
-						Комплексные инструменты для автоматизации тестирования Web и Mobile приложений: <a href="https://www.katalon.com/" target="_blank">Katalon Studio</a>, <a href="https://smartbear.com/product/testcomplete/overview/" target="_blank">TestComplete</a>
-					</p>
-					<p>
-						Интеграция автотестов в <a href="https://jenkins.io/" target="_blank">Jenkins</a> и <a href="https://www.jetbrains.com/ru-ru/teamcity/" target="_blank">TeamCity</a> а так же <a href="https://docs.gitlab.com/runner/" target="_blank">GitLab Runner</a>
-					</p>
-					<div class="button-more-right">
-						<a href="technology.html">ПОДРОБНЕЕ >></a>
-					</div>
+					Все действия над автотестами выполняются непосредственно в браузере.
+					<br>Окно "Проект" предназначено для работы над проектом автотестов.
+					<br>Все необходимые действия над файлами и папками проекта осуществляются на вкладке "Проводник".
+					<br>Весь процесс выполнения автотеста с наглядным и подробным описаниям происходит на вкладке "Тест".
+					<br>Список подключаемых библиотек во время выполнения теста редактируется на вкладка "Библиотеки".
+					<br>
+					<br>Процесс работы автотеста на вкладке "Тест" очень подробно показывает все шаги и стадии выполнения проверки. При падении любого из шагов вы получите понятное объяснение того что произошло в ходе проверки.
+				</p>
 				</div>
 			</div>
 			<div class="section-content-right">
 				<div class="content-image" id="technology-image">
-					<img src="./img/technology.png">
+					<img src="./img/projects/hat/demo1.3.gif">
 				</div>
 			</div>
 		</div>
@@ -261,30 +215,7 @@
 	<div class="section-clear"></div>
 
 	<section class="section-white-icons">
-		<div id="technology-soft">
-			<a href="https://selenium.dev/" target="_blank" class="icon-link"><img src="./img/icons/selenium.png" class="icons"></a>
-			<a href="http://appium.io/" target="_blank" class="icon-link"><img src="./img/icons/appium.png" class="icons"></a>
-			<a href="https://codeception.com/" target="_blank" class="icon-link"><img src="./img/icons/codeception.png" class="icons"></a>
-			<a href="https://ru.selenide.org/" target="_blank" class="icon-link"><img src="./img/icons/selenide.png" class="icons"></a>
-			<a href="https://cucumber.io/" target="_blank" class="icon-link"><img src="./img/icons/cucumber.png" class="icons"></a>
-			<a href="https://webdriver.io/" target="_blank" class="icon-link"><img src="./img/icons/webdriverio.png" class="icons"></a>
-			<a href="https://robotframework.org/" target="_blank" class="icon-link"><img src="./img/icons/robot.png" class="icons"></a>
-			<a href="https://www.cypress.io/" target="_blank" class="icon-link"><img src="./img/icons/cypress.png" class="icons"></a>
-			<a href="https://developer.android.com/training/testing/espresso" target="_blank" class="icon-link"><img src="./img/icons/espresso.png" class="icons"></a>
-
-			<a href="https://junit.org/junit5/" target="_blank" class="icon-link"><img src="./img/icons/junit.png" class="icons"></a>
-			<a href="https://testng.org/doc/" target="_blank" class="icon-link"><img src="./img/icons/testng.png" class="icons"></a>
-			<a href="https://phpunit.de/" target="_blank" class="icon-link"><img src="./img/icons/phpunit.png" class="icons"></a>
-			<a href="https://nunit.org/" target="_blank" class="icon-link"><img src="./img/icons/nunit.png" class="icons"></a>
-			<a href="https://docs.python.org/3/library/unittest.html" target="_blank" class="icon-link"><img src="./img/icons/unittest.png" class="icons"></a>
-			<a href="https://docs.pytest.org/en/7.1.x/" target="_blank" class="icon-link"><img src="./img/icons/pytest.png" class="icons"></a>
-			
-			<a href="https://www.katalon.com/" target="_blank" class="icon-link"><img src="./img/icons/katalon.png" class="icons"></a>
-			<a href="https://smartbear.com/product/testcomplete/overview/" target="_blank" class="icon-link"><img src="./img/icons/testcomplete.png" class="icons"></a>
-
-			<a href="https://jenkins.io/" target="_blank" class="icon-link"><img src="./img/icons/jenkins.png" class="icons"></a>
-			<a href="https://www.jetbrains.com/ru-ru/teamcity/" target="_blank" class="icon-link"><img src="./img/icons/teamcity.png" class="icons"></a>
-		</div>
+		
 	</section>
 
 	<div class="section-clear"></div>
@@ -293,540 +224,27 @@
 		<div class="section-content">
 			<div class="section-content-left">
 				<div class="content-image" id="video-review-image">
-					<img src="./img/news.png">
+					<iframe width="720" height="405" src="https://rutube.ru/play/embed/c1cc67db77159a3285905d18774a9fd0/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 				</div>
 			</div>
 			<div class="section-content-right">
 				<div id="video-review">
-					<h2 class="line">Видео обзоры</h2>
-					<div class="news">
-						<div class="news-title">
-							<img class="news-title-logo" src="./img/news/logo.png">
-							<div class="news-title-text">Официальный YouTube канал <a href="https://www.youtube.com/channel/UCqLSl-QwQTuRAbdb8sPaRcQ" target="_blank">Somov Studio</a></div>
-						</div>
-						<ul class="news-list">
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/65.jpg">
-								<div class="news-list-item-text">
-									<br>03.08.2023 - записан видеоурок
-									<br>Плагин HatPluginMySql - автоматизированное тестирование базы данных MySql.
-									<br>Ссылка на видео: <a href="https://youtu.be/z7YmoBKGzeU" target="_blank">https://youtu.be/z7YmoBKGzeU</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/64.jpg">
-								<div class="news-list-item-text">
-									<br>23.06.2023 - записан видеообзор
-									<br>Espresso -  демонстрация простого автотеста.
-									<br>Ссылка на видео: <a href="https://youtu.be/QhrsWc3HHQ4" target="_blank">https://youtu.be/QhrsWc3HHQ4</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/63.png">
-								<div class="news-list-item-text">
-									<br>25.01.2023 - записан видеоурок
-									<br>Browser Hat - Автотест для проверки карты сайта (sitemap.xml).
-									<br>Ссылка на видео: <a href="https://youtu.be/bsQvmcQJ6Vg" target="_blank">https://youtu.be/bsQvmcQJ6Vg</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/62.png">
-								<div class="news-list-item-text">
-									<br>11.11.2022 - записан видеоурок
-									<br>Browser Hat - Автотест для проверки API и обработки полученного результата в JSON формате.
-									<br>Ссылка на видео: <a href="https://youtu.be/dPRx4bqvZ4w" target="_blank">https://youtu.be/dPRx4bqvZ4w</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/61.png">
-								<div class="news-list-item-text">
-									<br>10.11.2022 - записан видеоурок
-									<br>Browser Hat - Выполнение JavaScript кода в теле автотеста.
-									<br>Ссылка на видео: <a href="https://youtu.be/WdfLl0Ys8y0" target="_blank">https://youtu.be/WdfLl0Ys8y0</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/60.png">
-								<div class="news-list-item-text">
-									<br>09.11.2022 - записан видеоурок
-									<br>Browser Hat - Создание проекта под Visual Studio и пример описания демонстрационного автотеста.
-									<br>Ссылка на видео: <a href="https://youtu.be/4qyzbEASw3E" target="_blank">https://youtu.be/4qyzbEASw3E</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/59.png">
-								<div class="news-list-item-text">
-									<br>28.05.2022 - записан видеообзор
-									<br>Браузер Hat со встроенной технологией автоматизации тестирования Web приложений. (Selenium не нужен).
-									<br>Ссылка на видео: <a href="https://youtu.be/Dn9UtrNj6EM" target="_blank">https://youtu.be/Dn9UtrNj6EM</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/58.png">
-								<div class="news-list-item-text">
-									<br>8.04.2022 - записан видеоурок
-									<br>Применение Cypress в автоматизации тестирования.
-									<br>Ссылка на видео: <a href="https://youtu.be/BNhPUrK0IQQ" target="_blank">https://youtu.be/BNhPUrK0IQQ</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/57.png">
-								<div class="news-list-item-text">
-									<br>7.02.2022 - записан видеоурок
-									<br>Применение Selenium и PyTest (Python) в автоматизации тестирования.
-									<br>Ссылка на видео: <a href="https://youtu.be/DeskeR8W_c4" target="_blank">https://youtu.be/DeskeR8W_c4</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/56.png">
-								<div class="news-list-item-text">
-									<br>1.02.2022 - разработана программа
-									<br>SEOScanner - Программа сканирования web страниц для проведения SEO-аудита.
-									<br>Ссылка на видео: <a href="https://youtu.be/YyKwRWRBbxc" target="_blank">https://youtu.be/YyKwRWRBbxc</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/55.png">
-								<div class="news-list-item-text">
-									<br>13.12.2021 - разработана программа
-									<br>TestRedirect - Программа для тестирования редирект ссылок.
-									<br>Ссылка на видео: <a href="https://youtu.be/FJqJ3ydHKmM" target="_blank">https://youtu.be/FJqJ3ydHKmM</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/54.png">
-								<div class="news-list-item-text">
-									<br>13.12.2021 - разработана программа
-									<br>TestCookie - Программа для тестирования Cookie.
-									<br>Ссылка на видео: <a href="https://youtu.be/KoH5ZiJSEW4" target="_blank">https://youtu.be/KoH5ZiJSEW4</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/53.png">
-								<div class="news-list-item-text">
-									<br>30.08.2021 - разработана программа
-									<br>SearchSiteContent - программа для поиска контента на страницах сайта.
-									<br>Ссылка на видео: <a href="https://youtu.be/rXpSkQOJvnA" target="_blank">https://youtu.be/rXpSkQOJvnA</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/52.png">
-								<div class="news-list-item-text">
-									<br>30.08.2021 - разработана программа
-									<br>TestSitemap - программа для тестирования карты сайта (sitemap.xml).
-									<br>Ссылка на видео: <a href="https://youtu.be/pd4VkgZBAA4" target="_blank">https://youtu.be/pd4VkgZBAA4</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/51.png">
-								<div class="news-list-item-text">
-									<br>27.08.2021 - записан видеоурок
-									<br>Robot Framework + Selenium2Library в среде PyCharm на языке Python.
-									<br>Ссылка на видео: <a href="https://youtu.be/nX4HV0qTyr0" target="_blank">https://youtu.be/nX4HV0qTyr0</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/50.png">
-								<div class="news-list-item-text">
-									<br>22.01.2021 - записан видеоурок
-									<br>QA Автоматизация Native App средствами Appium + UiAutomator 2 + IntelliJ IDEA (Java).
-									<br>Ссылка на видео: <a href="https://youtu.be/JDpUOeoGHWw" target="_blank">https://youtu.be/JDpUOeoGHWw</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/49.png">
-								<div class="news-list-item-text">
-									<br>18.01.2021 - записан видеоурок
-									<br>Android Studio Profiler - тестирование производительности мобильного приложения.
-									<br>Ссылка на видео: <a href="https://youtu.be/XO6EyNn5mYk" target="_blank">https://youtu.be/XO6EyNn5mYk</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/48.png">
-								<div class="news-list-item-text">
-									<br>5.12.2020 - разработана программа
-									<br>Демонстрация программы DetectGaYm тестирования событий Google analytics и Yandex metrika на Windows.
-									<br>Ссылка на видео: <a href="https://youtu.be/M0WG0gu_6b8" target="_blank">https://youtu.be/M0WG0gu_6b8</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/47.png">
-								<div class="news-list-item-text">
-									<br>25.11.2020 - разработана программа
-									<br>Демонстрация программы DetectGaYm тестирования событий Google analytics и Yandex metrika на Linux.
-									<br>Ссылка на видео: <a href="https://youtu.be/pQTkNERJIfM" target="_blank">https://youtu.be/pQTkNERJIfM</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/46.png">
-								<div class="news-list-item-text">
-									<br>28.10.2020 - записан видеоурок
-									<br>Ubuntu 20.04 + Selenium + Codeception - Part3 (cоздание и запуск автотестов в Codeception).
-									<br>Ссылка на видео: <a href="https://youtu.be/IcwVHOj2pMo" target="_blank">https://youtu.be/IcwVHOj2pMo</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/45.png">
-								<div class="news-list-item-text">
-									<br>28.10.2020 - записан видеоурок
-									<br>Ubuntu 20.04 + Selenium + Codeception - Part2 (установка Codeception, Chrome, WebDriver, Selenium).
-									<br>Ссылка на видео: <a href="https://youtu.be/DRcUu_2Re-U" target="_blank">https://youtu.be/DRcUu_2Re-U</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/44.png">
-								<div class="news-list-item-text">
-									<br>28.10.2020 - записан видеоурок
-									<br>Ubuntu 20.04 + Selenium + Codeception - Part1 (установка JDK, NodeJS, GIT, PHP, cURL, Composer).
-									<br>Ссылка на видео: <a href="https://youtu.be/_ImCifR7QP8" target="_blank">https://youtu.be/_ImCifR7QP8</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/43.png">
-								<div class="news-list-item-text">
-									<br>16.09.2020 - записан видеоурок
-									<br>Применение Cucumber & Selenide в автоматизации тестирования.
-									<br>Ссылка на видео: <a href="https://youtu.be/s33NCtGiVFM" target="_blank">https://youtu.be/s33NCtGiVFM</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/42.png">
-								<div class="news-list-item-text">
-									<br>17.07.2020 - записан видеоурок
-									<br>Codeception тестирование баз данных.
-									<br>Ссылка на видео: <a href="https://youtu.be/jNs-8j81aIE" target="_blank">https://youtu.be/jNs-8j81aIE</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/41.png">
-								<div class="news-list-item-text">
-									<br>10.09.2020 - записан видеоурок
-									<br>Как собрать JAR файл для работы с BrowserMobProxy и Selenium.
-									<br>Ссылка на видео: <a href="https://youtu.be/UbZJn7yyMjc" target="_blank">https://youtu.be/UbZJn7yyMjc</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/40.png">
-								<div class="news-list-item-text">
-									<br>23.01.2020 - записан видеоурок
-									<br>Selenium & Browsermob Proxy.
-									<br>Ссылка на видео: <a href="https://youtu.be/tJtCR6vogzk" target="_blank">https://youtu.be/tJtCR6vogzk</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/39.png">
-								<div class="news-list-item-text">
-									<br>21.01.2020 - записан видеоурок
-									<br>Простой пример нагрузочного тестирования WebAPI с помощью JMeter.
-									<br>Ссылка на видео: <a href="https://youtu.be/aMYAdS0K5sM" target="_blank">https://youtu.be/aMYAdS0K5sM</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/38.png">
-								<div class="news-list-item-text">
-									<br>20.01.2020 - записан видеоурок
-									<br>Простой пример тестирования WebAPI с помощью Postman.
-									<br>Ссылка на видео: <a href="https://youtu.be/FDdhhbWcY4c" target="_blank">https://youtu.be/FDdhhbWcY4c</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/37.png">
-								<div class="news-list-item-text">
-									<br>16.01.2020 - записан видеоурок
-									<br>Selenium & Visual Studio 2019 (C#).
-									<br>Ссылка на видео: <a href="https://youtu.be/78EvtyqBerY" target="_blank">https://youtu.be/78EvtyqBerY</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/36.png">
-								<div class="news-list-item-text">
-									<br>14.01.2020 - записан видеоурок
-									<br>Selenium & WebdriverIO (JavaScript & NodeJS).
-									<br>Ссылка на видео: <a href="https://youtu.be/d2ho2F5Ic9E" target="_blank">https://youtu.be/d2ho2F5Ic9E</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/35.png">
-								<div class="news-list-item-text">
-									<br>13.01.2020 - записан видеоурок
-									<br>Selenium (JavaScript & NodeJS).
-									<br>Ссылка на видео: <a href="https://youtu.be/LAHSjzsvpIs" target="_blank">https://youtu.be/LAHSjzsvpIs</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/34.png">
-								<div class="news-list-item-text">
-									<br>6.01.2020 - записан видеоурок
-									<br>Selenium & EclipseIDE & IntelliJIDEA.
-									<br>Ссылка на видео: <a href="https://youtu.be/LMd-9DauzAo" target="_blank">https://youtu.be/LMd-9DauzAo</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/33.png">
-								<div class="news-list-item-text">
-									<br>25.12.2019 - записан видеоурок
-									<br>Katalon Studio and DDT.
-									<br>Ссылка на видео: <a href="https://youtu.be/zIJ1XeKPERI" target="_blank">https://youtu.be/zIJ1XeKPERI</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/32.png">
-								<div class="news-list-item-text">
-									<br>16.12.2019 - записан видеоурок
-									<br>TestComplete 14 - Mobile calculator application (part 3).
-									<br>Ссылка на видео: <a href="https://youtu.be/gwpHLnEnZ9o" target="_blank">https://youtu.be/gwpHLnEnZ9o</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/31.png">
-								<div class="news-list-item-text">
-									<br>16.12.2019 - записан видеоурок
-									<br>TestComplete 14 - Mobile native application (part 2).
-									<br>Ссылка на видео: <a href="https://youtu.be/ViCPGEzi1LQ" target="_blank">https://youtu.be/ViCPGEzi1LQ</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/30.png">
-								<div class="news-list-item-text">
-									<br>15.12.2019 - записан видеоурок
-									<br>TestComplet 14 - Mobile game application (part 1).
-									<br>Ссылка на видео: <a href="https://youtu.be/kZ2a_r3LElM" target="_blank">https://youtu.be/kZ2a_r3LElM</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/29.png">
-								<div class="news-list-item-text">
-									<br>10.12.2019 - записан видеоурок
-									<br>TestComplete 14 - Desktop application.
-									<br>Ссылка на видео: <a href="https://youtu.be/-gRdquPq5zw" target="_blank">https://youtu.be/-gRdquPq5zw</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/28.png">
-								<div class="news-list-item-text">
-									<br>8.12.2019 - записан видеоурок
-									<br>TestComplete 14 - Web application.
-									<br>Ссылка на видео: <a href="https://youtu.be/HWmeGUPwFeA" target="_blank">https://youtu.be/HWmeGUPwFeA</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/27.png">
-								<div class="news-list-item-text">
-									<br>30.11.2019 - записан видеоурок
-									<br>Codeception and TeamCity.
-									<br>Ссылка на видео: <a href="https://youtu.be/DhvRfXXW5cY" target="_blank">https://youtu.be/DhvRfXXW5cY</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/26.png">
-								<div class="news-list-item-text">
-									<br>9.11.2019 - записан видеоурок
-									<br>Xamarin UITest & Visual Studio 2019 Community.
-									<br>Ссылка на видео: <a href="https://youtu.be/kDCpXyzcEAE" target="_blank">https://youtu.be/kDCpXyzcEAE</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/25.png">
-								<div class="news-list-item-text">
-									<br>28.10.2019 - записан видеоурок
-									<br>Airtest Poco & Unity.
-									<br>Ссылка на видео: <a href="https://youtu.be/Ieb57SQcNjA" target="_blank">https://youtu.be/Ieb57SQcNjA</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/24.png">
-								<div class="news-list-item-text">
-									<br>15.10.2019 - записан видеоурок
-									<br>Airtest IDE.
-									<br>Ссылка на видео: <a href="https://youtu.be/OiPq5aggqYw" target="_blank">https://youtu.be/OiPq5aggqYw</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/23.png">
-								<div class="news-list-item-text">
-									<br>9.10.2019 - записан видеоурок
-									<br>NetBeans and Codeception.
-									<br>Ссылка на видео: <a href="https://youtu.be/PftGs3oNRZI" target="_blank">https://youtu.be/PftGs3oNRZI</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/22.png">
-								<div class="news-list-item-text">
-									<br>7.10.2019 - записан видеоурок
-									<br>Testing Desktop Application - WinAppDriver.
-									<br>Ссылка на видео: <a href="https://youtu.be/gWdReyFizVU" target="_blank">https://youtu.be/gWdReyFizVU</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/21.png">
-								<div class="news-list-item-text">
-									<br>4.10.2019 - записан видеоурок
-									<br>Katalon Studio and Appium.
-									<br>Ссылка на видео: <a href="https://youtu.be/L4WGOyPbY30" target="_blank">https://youtu.be/L4WGOyPbY30</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/20.png">
-								<div class="news-list-item-text">
-									<br>2.10.2019 - записан видеоурок
-									<br>Codeception and Jenkins.
-									<br>Ссылка на видео: <a href="https://youtu.be/r8V6U6wTfXw" target="_blank">https://youtu.be/r8V6U6wTfXw</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/19.png">
-								<div class="news-list-item-text">
-									<br>2.10.2019 - записан видеоурок
-									<br>Katalon Studio and Jenkins.
-									<br>Ссылка на видео: <a href="https://youtu.be/CYUuItYGH6c" target="_blank">https://youtu.be/CYUuItYGH6c</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/18.png">
-								<div class="news-list-item-text">
-									<br>24.03.2019 - записан видеоурок
-									<br>Использование Fiddler при тестировании.
-									<br>Ссылка на видео: <a href="https://youtu.be/0fcV9qUy52I" target="_blank">https://youtu.be/0fcV9qUy52I</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/17.png">
-								<div class="news-list-item-text">
-									<br>24.03.2019 - записан видеоурок
-									<br>Codeception тесты запускаем через Jenkins Part 4.
-									<br>Ссылка на видео: <a href="https://youtu.be/DAP7Fq28tmk" target="_blank">https://youtu.be/DAP7Fq28tmk</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/16.png">
-								<div class="news-list-item-text">
-									<br>24.03.2019 - записан видеоурок
-									<br>Codeception функциональные и модульные тесты Part 3.
-									<br>Ссылка на видео: <a href="https://youtu.be/69zA6gVh1go" target="_blank">https://youtu.be/69zA6gVh1go</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/15.png">
-								<div class="news-list-item-text">
-									<br>17.03.2019 - записан видеоурок
-									<br>Codeception подключение Selenium и выполнение простого теста Part 2.
-									<br>Ссылка на видео: <a href="https://youtu.be/JuX0HdW77vQ" target="_blank">https://youtu.be/JuX0HdW77vQ</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/14.png">
-								<div class="news-list-item-text">
-									<br>17.03.2019 - записан видеоурок
-									<br>Codeception установка и выполнение первого теста Part 1.
-									<br>Ссылка на видео: <a href="https://youtu.be/49i9rZa2Fo8" target="_blank">https://youtu.be/49i9rZa2Fo8</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/13.png">
-								<div class="news-list-item-text">
-									<br>16.03.2019 - записан видеоурок
-									<br>Автоматизированное тестирование Web-форм (Codeception + Selenium).
-									<br>Ссылка на видео: <a href="https://youtu.be/d48Ukn1rEpw" target="_blank">https://youtu.be/d48Ukn1rEpw</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/12.png">
-								<div class="news-list-item-text">
-									<br>28.09.2018 - записан видеоурок
-									<br>Применение Android Memory Profiler в тестировании.
-									<br>Ссылка на видео: <a href="https://youtu.be/Bp_-8Gbawus" target="_blank">https://youtu.be/Bp_-8Gbawus</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/11.png">
-								<div class="news-list-item-text">
-									<br>6.07.2018 - записан видеоурок
-									<br>Test Runner in Unity 2018 EditMode Part 2.
-									<br>Ссылка на видео: <a href="https://youtu.be/2oXRx2hc-fI" target="_blank">https://youtu.be/2oXRx2hc-fI</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/10.png">
-								<div class="news-list-item-text">
-									<br>6.07.2018 - записан видеоурок
-									<br>Test Runner in Unity 2018 PlayMode Part 1.
-									<br>Ссылка на видео: <a href="https://youtu.be/zr5IKVm2SAw" target="_blank">https://youtu.be/zr5IKVm2SAw</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/9.png">
-								<div class="news-list-item-text">
-									<br>4.07.2018 - записан видеоурок
-									<br>Test Runner in Unity 2018.
-									<br>Ссылка на видео: <a href="https://youtu.be/gxWbghzgy2Q" target="_blank">https://youtu.be/gxWbghzgy2Q</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/8.png">
-								<div class="news-list-item-text">
-									<br>15.02.2018 - записан видеоурок
-									<br>QA Автоматизация Appium + UiAutomator 2.
-									<br>Ссылка на видео: <a href="https://youtu.be/CeYJFX1jqc8" target="_blank">https://youtu.be/CeYJFX1jqc8</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/7.png">
-								<div class="news-list-item-text">
-									<br>14.02.2018 - записан видеоурок
-									<br>QA Автоматизация Appium + Selenuim в IntelliJ IDEA (Java).
-									<br>Ссылка на видео: <a href="https://youtu.be/pQ1I5xbcmw4" target="_blank">https://youtu.be/pQ1I5xbcmw4</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/6.png">
-								<div class="news-list-item-text">
-									<br>9.02.2018 - записан видеоурок
-									<br>Unit тестирование PHPUnit (NetBeans).
-									<br>Ссылка на видео: <a href="https://youtu.be/aIxXd0s7ARA" target="_blank">https://youtu.be/aIxXd0s7ARA</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/5.png">
-								<div class="news-list-item-text">
-									<br>8.02.2018 - записан видеоурок
-									<br>Unit тестирование PHPUnit (быстрый старт).
-									<br>Ссылка на видео: <a href="https://youtu.be/y1moSE0cmvg" target="_blank">https://youtu.be/y1moSE0cmvg</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/4.png">
-								<div class="news-list-item-text">
-									<br>30.01.2018 - записан видеоурок
-									<br>Unit тестирование JUnit (IntelliJ IDEA).
-									<br>Ссылка на видео: <a href="https://youtu.be/iTaenQPEGiM" target="_blank">https://youtu.be/iTaenQPEGiM</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/3.png">
-								<div class="news-list-item-text">
-									<br>26.01.2018 - записан видеоурок
-									<br>Unit тестирование NUnit (SharpDevelop).
-									<br>Ссылка на видео: <a href="https://youtu.be/vouJHv5kZyI" target="_blank">https://youtu.be/vouJHv5kZyI</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/2.png">
-								<div class="news-list-item-text">
-									<br>23.01.2018 - записан видеоурок
-									<br>QA Автоматизация Selenium + IntelliJ IDEA (Java).
-									<br>Ссылка на видео: <a href="https://youtu.be/dIoXtbXnQVE" target="_blank">https://youtu.be/dIoXtbXnQVE</a>
-								</div>
-							</li>
-							<li class="news-list-item">
-								<img class="news-list-item-image" src="./img/news/1.png">
-								<div class="news-list-item-text">
-									<br>22.01.2018 - записан видеоурок
-									<br>QA Автоматизация Selenium + SharpDevelop.
-									<br>Ссылка на видео: <a href="https://youtu.be/yUv1EEa5Wp4" target="_blank">https://youtu.be/yUv1EEa5Wp4</a>
-								</div>
-							</li>
+					<h2 class="line">Видеообзор</h2>
+					<p>
+					В данном видео рассказывается об основных принцыпах работы с браузером, о создании проекта автотестов и выполнение демонстрационного теста, а так же общие принцыпи работы со встроенным редактором и структуре автотестов описываемых на языке программирования C#.
+					Так же показывается запуск автотестов через командную строку что является необходимым при использовании автотестов средствами непрерывной интеграции.
+					</p>
+					<br>
+					<h3>Видеоуроки</h3>
+					<p>
+						</p><ul>
+							<li><a href="https://rutube.ru/video/0ec54264972a15e5606bd02495d8a88a/" target="_blank">Урок №1</a>: Проект под Visual Studio и пример описания демонстрационного автотеста</li>
+							<li><a href="https://rutube.ru/video/600bea48988f21ec0114e69902f627d1/" target="_blank">Урок №2</a>: Выполнение JavaScript кода в теле автотеста</li>
+							<li><a href="https://rutube.ru/video/69423ab3ecc5f5ec004747947d2fbb5a/" target="_blank">Урок №3</a>: Автотест для проверки API и обработки полученного результата в JSON формате</li>
+							<li><a href="https://rutube.ru/video/ae871ffdd73af8afb181f35b477a5dc0/" target="_blank">Урок №4</a>: Автотест для проверки карты сайта (sitemap.xml)</li>
+							<li><a href="https://rutube.ru/video/7e7584c2abfc84d76b4447c338d9d90e/" target="_blank">Урок №5</a>: Плагин HatPluginMySql - автоматизированное тестирование базы данных MySql</li>
 						</ul>
-					</div>
+					<p></p>
 				</div>
 			</div>
 		</div>
@@ -839,7 +257,7 @@
 			<h2 class="line">Контакты</h2>
 			<div class="contacts-left">
 				<b>Проект:</b> Somov Studio
-				<br><b>git:</b> <a href="https://github.com/SomovStudio">github.com/SomovStudio</a>
+				<br><b>git:</b> <a href="https://gitflic.ru/user/somovstudio">gitflic.ru/user/somovstudio</a>
 			</div>
 			<div class="contacts-right">
 				<b>Автор проекта: <a href="https://somov-qa.github.io/resume.html" target="_blank">Сомов Евгений Павлович</a>
@@ -878,7 +296,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="https://www.youtube.com/channel/UCqLSl-QwQTuRAbdb8sPaRcQ" target="_blank">
+						<a href="https://rutube.ru/channel/25139143/" target="_blank">
 							<img src="./img/youtube_main.png" alt="YouTube" width="36" height="36">
 						</a>
 					</li>
@@ -888,7 +306,7 @@
 				</ul>
 			</div>
 			<p class="footer-copyright">
-				Copyright &copy; 2024 Somov Studio. All Rights Reserved.
+				Copyright &copy; 2025 Somov Studio. All Rights Reserved.
 			</p>
 		</div>
 	</footer>
@@ -897,11 +315,10 @@
 	<nav>
 		<div class="menu-wrapper">
 			<ul class="menu">
-				<li><a href="index.html#about">О проекте</a></li>
-				<li><a href="hat.html">Браузер Hat</a></li>
-				<li><a href="index.html#developments">Разработки</a></li>
-				<li><a href="index.html#technology">Технологии</a></li>
-				<li><a href="index.html#video-review">Видео</a></li>
+				<li><a href="index.html#about">Браузер Hat</a></li>
+				<li><a href="index.html#developments">Системные требования</a></li>
+				<li><a href="index.html#technology">Автоматизация тестирования</a></li>
+				<li><a href="index.html#video-review">Видеообзор</a></li>
 				<li><a href="index.html#contacts">Контакты</a></li>
 			</ul>
 		</div>
