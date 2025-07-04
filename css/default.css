@@ -952,7 +952,12 @@ footer {
     border-bottom-right-radius: 8px;
     padding: 5px;
     margin-bottom: 25px;
-    width: 40%;
+    width: 500px;
+    min-width: 500px;
+    max-width: 500px;
+    height: 150px;
+    min-height: 150px;
+    max-height: 150px;
     text-align: left;
     color: #FFFFFF;
 }
@@ -967,6 +972,8 @@ footer {
 }
 
 .plugin-border {
+	text-align: left;
+    color: #FFFFFF;
     background-color: #3172B4;
     border: 2px solid #3172B4;
     border-top-right-radius: 8px;
@@ -975,16 +982,17 @@ footer {
     padding: 5px;
     margin-left: 15px;
     margin-right: 15px;
-    width: 40%;
-    text-align: left;
-    color: #FFFFFF;
+    width: 500px;
+    min-width: 500px;
+    max-width: 500px;
+    height: 150px;
+    min-height: 150px;
+    max-height: 150px;
 }
 
 .plugin-button {
+	display: block;
 	float: right;
-	position: relative;
-	top: -40px;
-    right: 0px;
     width: 125px;
     height: 33px;
     cursor:pointer;
@@ -1004,7 +1012,28 @@ footer {
     color: #4800FF;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1550px){
+	#Bunners {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1350px){
+	#Bunners {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1220px){
+	#Bunners {
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1100px){
     #Bunners {
 		width: 100%;
 		margin: 0 auto;
@@ -1012,14 +1041,19 @@ footer {
 
 	.zionec-border {
 		width: 90%;
+		min-width: 90%;
+		max-width: 90%;
+		min-height: 150px;
+		max-height: 150px;
 	}
 
 	.plugin-border {
 		clear: both;
+		width: 90%;
 		min-width: 90%;
 		max-width: 90%;
-		min-height: 180px;
-		max-height: 180px;
+		min-height: 150px;
+		max-height: 150px;
 	}
 
 	#video-review-image iframe {
@@ -1030,9 +1064,37 @@ footer {
 		min-width: 300px;
 		max-width: 300px;
 	}
+}
 
-	.plugin-button {
-		float: none;
-		margin-top: 15%;
+@media screen and (max-width: 480px){
+    #Bunners {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.zionec-border {
+		width: 90%;
+		min-width: 90%;
+		max-width: 90%;
+		min-height: 250px;
+		max-height: 250px;
+	}
+
+	.plugin-border {
+		clear: both;
+		width: 90%;
+		min-width: 90%;
+		max-width: 90%;
+		min-height: 250px;
+		max-height: 250px;
+	}
+
+	#video-review-image iframe {
+		height: 250px;
+		min-height: 250px;
+		max-height: 250px;
+		width: 300px;
+		min-width: 300px;
+		max-width: 300px;
 	}
 }
