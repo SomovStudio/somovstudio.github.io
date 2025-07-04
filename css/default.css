@@ -1022,8 +1022,17 @@ footer {
 		max-height: 180px;
 	}
 
+	#video-review-image iframe {
+		height: 250px;
+		min-height: 250px;
+		max-height: 250px;
+		width: 300px;
+		min-width: 300px;
+		max-width: 300px;
+	}
+
 	.plugin-button {
-		position: relative;
-		top: 5px;
+		float: none;
+		margin-top: 15%;
 	}
 }
