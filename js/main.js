@@ -52,34 +52,36 @@ $(document).ready(function(){
 		var iconsHeight = $(".section-white-icons").height();
 		var sectionWhite = $(".section-white").height();
 		if(scrolled > headerHeight){
-			$("#about").animate({left:0}, 500);
-			$("#about-image").animate({left:0}, 500);
+			$("#browser").animate({left:0}, 500);
+			$("#browser-image").animate({left:0}, 500);
 		}
 		if(scrolled > (headerHeight + sectionWhite)){
-			$("#developments").animate({left:0}, 500);
-			$("#developments-image").animate({left:0}, 500);
-			$("#developments-tiles").animate({opacity:1}, 1000);
+			$("#system").animate({left:0}, 500);
+			$("#system-image").animate({left:0}, 500);
+			$("#system-tiles").animate({opacity:1}, 1000);
 		}
 		if(scrolled > (headerHeight + sectionWhite * 2)){
-			$("#technology").animate({left:0}, 500);
-			$("#technology-image").animate({left:0}, 500);
-			$("#technology-soft").animate({opacity:1}, 1000);
+			$("#autotests").animate({left:0}, 500);
+			$("#autotests-image").animate({left:0}, 500);
 		}
 		if(scrolled > (headerHeight + iconsHeight + sectionWhite * 3)){
 			$("#video-review").animate({left:0}, 500);
 			$("#video-review-image").animate({left:0}, 500);
 		}
+		if(scrolled > (headerHeight + sectionWhite * 4.5)){
+			$("#documentation").animate({left:0}, 500);
+			$("#documentation-image").animate({left:0}, 500);
+		}
+
 
 		// MENU
 		if(scrolled <= 50){
 			$(".menu").css({
-				//"background-color" : "rgba(30, 69, 140, 0)"
 				"background-color" : "rgba(0, 0, 0, 0)"
 			});
 		}
 		if(scrolled > 50){
 			$(".menu").css({
-				//"background-color" : "rgba(30, 69, 140, 0.6)"
 				"background-color" : "rgba(45, 67, 113, 0.8)"
 			});
 		}

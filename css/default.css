@@ -7,7 +7,7 @@
  * 7. -- CONTENT --
  * 8. -- BUNNER --
  * 9. -- TILES --
- * 10. -- ZIONEC --
+ * 10. -- BUNNERS --
  */
 
 /** -- NULLIFYING -- **/
@@ -567,34 +567,30 @@ footer {
 /** ------------- **/
 
 /** -- CONTENT -- **/
-#about, #about-image, #developments, #developments-image, #technology, #technology-image, #video-review, #video-review-image {
+#browser, #browser-image, #system, #system-image, #autotests, #autotests-image, #video-review, #video-review-image, #documentation, #documentation-image {
 	position: relative;
 	padding: 1em;
 }
 
-#technology-soft {
-	opacity: 0;
+#browser, #autotests, #documentation{
+	left: -200%;
 }
 
-#about, #technology{
-	left: -100%;
-}
-
-#about-image, #technology-image{
+#browser-image, #autotests-image, #documentation-image{
 	left: 200%;
 }
 
-#developments, #video-review{
+#system, #video-review{
 	left: 200%;
 }
 
-#developments-image, #video-review-image{
-	left: -100%;
+#system-image, #video-review-image{
+	left: -200%;
 }
 
-.developments-link{
-	padding-right: 25px;
-	color: #57698D;
+.browser-link {
+    padding-right: 25px;
+    color: #57698D;
 }
 
 #contacts {
@@ -710,68 +706,6 @@ footer {
 	text-align: center;
 }
 
-.icons {
-	display: inline;
-	width: 64px;
-    height: 64px;
-    padding: 1.8em;
-    /*margin-top: 25px;*/
-}
-
-.news{
-	width: 90%;
-	min-height: 400px;
-	border: 1px solid #E0E6EB;
-}
-
-.news-title {
-	margin-left: 5px;
-	margin-right: 5px;
-	min-height: 50px;
-	border-bottom: 1px solid #E0E6EB;
-	overflow: hidden;
-}
-
-.news-title-logo {
-	position: relative;
-	width: 42px;
-	height: 42px;
-	top: 4px;
-	float: left;
-}
-
-.news-title-text {
-	position: relative;
-	top: 12px;
-	left: 5px;
-}
-
-.news-list {
-	width: 100%;
-	min-height: 300px;
-	max-height: 350px;
-	overflow-y: scroll;
-	font-size: small;
-}
-
-.news-list-item {
-	min-height: 160px;
-	display: block;
-	border-bottom: 1px solid #E0E6EB;
-}
-
-.news-list-item-image {
-	position: relative;
-	padding: 10px;
-	width: 246px;
-	height: 138px;
-	float: left;
-}
-
-.news-list-item-text {
-	margin-left: 5px;
-}
-
 @media screen and (max-width: 800px){
 	#contacts {
 		display: block;
@@ -802,11 +736,6 @@ footer {
 		display: none;
 	}
 
-	.news{
-		width: 100%;
-		min-height: 350px;
-		border: 1px solid #E0E6EB;
-	}
 }
 /** ------------- **/
 
@@ -1000,7 +929,11 @@ footer {
 	}
 }
 
-/** -- ZIONEC -- **/
+/** -- BUNNERS -- **/
+#Bunners {
+	width: 70%;
+	margin: 0 auto;
+}
 
 #ZionecBunner {
 	display: block;
@@ -1019,11 +952,78 @@ footer {
     border-bottom-right-radius: 8px;
     padding: 5px;
     margin-bottom: 25px;
-    width: 80%;
+    width: 40%;
+    text-align: left;
     color: #FFFFFF;
 }
 
 .zionec-img-link {
     text-decoration: none !important;
     color: #FFFFFF;
+}
+
+.HatPlugin {
+	display: block;
+}
+
+.plugin-border {
+    background-color: #3172B4;
+    border: 2px solid #3172B4;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 40%;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.plugin-button {
+	float: right;
+	position: relative;
+	top: -40px;
+    right: 0px;
+    width: 125px;
+    height: 33px;
+    cursor:pointer;
+    border: 0;
+    border-radius: 8px;
+    color: #FFFFFF;
+    background-color: #7F92FF;
+}
+
+.plugin-button:hover {
+    width: 125px;
+    height: 33px;
+    cursor:pointer;
+    border: 0;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: #4800FF;
+}
+
+@media screen and (max-width: 1024px){
+    #Bunners {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.zionec-border {
+		width: 90%;
+	}
+
+	.plugin-border {
+		clear: both;
+		min-width: 90%;
+		max-width: 90%;
+		min-height: 180px;
+		max-height: 180px;
+	}
+
+	.plugin-button {
+		position: relative;
+		top: 5px;
+	}
 }
