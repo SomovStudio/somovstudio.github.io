@@ -91,8 +91,8 @@
 	<div id="topic_content">
 		
 <p class="rvps13"><span class="rvts59">LoadPageAsync</span></p>
-<p class="rvps13"><span class="rvts63">Description</span><span class="rvts61">: the method makes the element visible by adding styles</span></p>
-<p class="rvps13"><span class="rvts63">Syntax</span><span class="rvts61">: The method loads a web page at the specified URL with the specified wait time in seconds. The abort Load After Time flag forcibly terminates page loading after the timer ends. Errors when loading the page are ignored and do not cause the autotest to crash.</span></p>
+<p class="rvps13"><span class="rvts63">Description</span><span class="rvts61">: the method loads a web page at the specified URL with the specified wait time in seconds. The abort Load After Time flag forcibly terminates page loading after the timer ends. Errors when loading the page are ignored and do not cause the autotest to crash.</span></p>
+<p class="rvps13"><span class="rvts63">Syntax</span><span class="rvts61">: LoadPageAsync(string url, int sec, bool abortLoadAfterTime = false)</span></p>
 <p class="rvps13"><span class="rvts62"><br/></span></p>
 <p class="rvps13"><span class="rvts63">Example</span><span class="rvts62">:</span></p>
 <p class="rvps13"><span class="rvts60">await tester.</span><span class="rvts61">LoadPageAsync </span><span class="rvts60">(@"https://www.google.com/", 25, true);</span><span class="rvts8"></span></p>
