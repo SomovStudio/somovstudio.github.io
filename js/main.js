@@ -58,11 +58,13 @@ $(document).ready(function(){
 		if(scrolled > (headerHeight + sectionWhite)){
 			$("#system").animate({left:0}, 500);
 			$("#system-image").animate({left:0}, 500);
-			$("#system-tiles").animate({opacity:1}, 1000);
 		}
 		if(scrolled > (headerHeight + sectionWhite * 2)){
 			$("#autotests").animate({left:0}, 500);
 			$("#autotests-image").animate({left:0}, 500);
+		}
+		if(scrolled > (headerHeight + sectionWhite * 3)){
+			$("#system-tiles").animate({opacity:1}, 1000);
 		}
 		if(scrolled > (headerHeight + iconsHeight + sectionWhite * 3)){
 			$("#video-review").animate({left:0}, 500);
@@ -71,6 +73,10 @@ $(document).ready(function(){
 		if(scrolled > (headerHeight + sectionWhite * 4.5)){
 			$("#documentation").animate({left:0}, 500);
 			$("#documentation-image").animate({left:0}, 500);
+		}
+		if(scrolled > (headerHeight + sectionWhite * 5.5)){
+			$("#ai").animate({left:0}, 500);
+			$("#ai-image").animate({left:0}, 500);
 		}
 
 
