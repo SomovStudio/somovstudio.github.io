@@ -567,7 +567,7 @@ footer {
 /** ------------- **/
 
 /** -- CONTENT -- **/
-#browser, #browser-image, #system, #system-image, #autotests, #autotests-image, #video-review, #video-review-image, #documentation, #documentation-image {
+#browser, #browser-image, #system, #system-image, #autotests, #autotests-image, #video-review, #video-review-image, #documentation, #documentation-image, #ai, #ai-image {
 	position: relative;
 	padding: 1em;
 }
@@ -580,11 +580,11 @@ footer {
 	left: 200%;
 }
 
-#system, #video-review{
+#system, #video-review, #ai{
 	left: 200%;
 }
 
-#system-image, #video-review-image{
+#system-image, #video-review-image, #ai-image{
 	left: -200%;
 }
 
@@ -735,6 +735,15 @@ footer {
 		/*display: none;*/
 	}
 
+	.content-image-gemini {
+		margin: 1em;
+		padding: 1em;
+	}
+
+	.content-image-gemini img {
+		width: 100%;
+		height: 100%;
+	}
 }
 /** ------------- **/
 
@@ -783,6 +792,16 @@ footer {
     .banner-description {
     	margin-bottom: 5px;
     }
+
+    .content-image-gemini {
+		margin: 1em;
+		padding: 1em;
+	}
+
+	.content-image-gemini img {
+		width: 100%;
+		height: 100%;
+	}
 }
 
 @media (max-width: 320px) {
@@ -809,6 +828,16 @@ footer {
     .banner-description {
     	margin-bottom: 5px;
     }
+
+    .content-image-gemini {
+		margin: 1em;
+		padding: 1em;
+	}
+
+	.content-image-gemini img {
+		width: 100%;
+		height: 100%;
+	}
 }
 /** ------------- **/
 
