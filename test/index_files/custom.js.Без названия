@@ -1,0 +1,68 @@
+jQuery(document).ready(function() {
+  var marginValue = 10;
+
+  if (window.innerWidth >= 1400) {
+    marginValue = 70;
+  } else if (window.innerWidth >= 992) {
+    marginValue = 10;
+  } else if (window.innerWidth >= 768) {
+    marginValue = 10;
+  } else {
+    marginValue = 10;
+  }
+
+  jQuery('.product-section .owl-carousel').owlCarousel({
+    loop: true,
+    margin: marginValue,
+    nav: true,
+    navText: ["<span class='left-btn'></span>", "<span class='right-btn'></span>"],
+    dots: false,
+    rtl: false,
+    responsive: {
+      0: { 
+        items: 1 
+      },
+      768: { 
+        items: 2 
+      },
+      992: { 
+        items: 3 
+      },
+      1200: { 
+        items: 3 
+      }
+    },
+    autoplay: true
+  });
+});
+
+// Scroll to Top
+window.onscroll = function() {
+  const water_filter_button = document.querySelector('.scroll-top-box');
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    water_filter_button.style.display = "block";
+  } else {
+    water_filter_button.style.display = "none";
+  }
+};
+
+document.querySelector('.scroll-top-box a').onclick = function(event) {
+  event.preventDefault();
+  window.scrollTo({top: 0, behavior: 'smooth'});
+};
+
+// Faq
+document.addEventListener("DOMContentLoaded", function () {
+  const water_filter_faqTitles = document.querySelectorAll(".faq-section .faq-btm-details .faq-btm-title");
+
+  water_filter_faqTitles.forEach(function (water_filter_title) {
+    water_filter_title.addEventListener("click", function () {
+      // Toggle open/close
+      if (water_filter_title.hasAttribute("open")) {
+        water_filter_title.removeAttribute("open");
+      } else {
+        water_filter_title.setAttribute("open", true);
+      }
+    });
+  });
+});
