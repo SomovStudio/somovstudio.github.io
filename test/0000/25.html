@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер товаров - по одному</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .slider-container {
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .product-card {
+            min-width: 100%;
+            background: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .product-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .product-price {
+            font-size: 24px;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .buy-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            padding: 0 10px;
+        }
+
+        .slider-btn {
+            background: rgba(52, 73, 94, 0.8);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-btn:hover {
+            background: rgba(44, 62, 80, 1);
+            transform: scale(1.1);
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #bdc3c7;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot:hover {
+            background: #95a5a6;
+        }
+
+        /* Скрываем радио-кнопки */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Анимация слайдера для 9 товаров */
+        #slide1:checked ~ .slider { transform: translateX(0%); }
+        #slide2:checked ~ .slider { transform: translateX(-100%); }
+        #slide3:checked ~ .slider { transform: translateX(-200%); }
+        #slide4:checked ~ .slider { transform: translateX(-300%); }
+        #slide5:checked ~ .slider { transform: translateX(-400%); }
+        #slide6:checked ~ .slider { transform: translateX(-500%); }
+        #slide7:checked ~ .slider { transform: translateX(-600%); }
+        #slide8:checked ~ .slider { transform: translateX(-700%); }
+        #slide9:checked ~ .slider { transform: translateX(-800%); }
+
+        /* Активные точки */
+        #slide1:checked ~ .slider-dots .dot:nth-child(1),
+        #slide2:checked ~ .slider-dots .dot:nth-child(2),
+        #slide3:checked ~ .slider-dots .dot:nth-child(3),
+        #slide4:checked ~ .slider-dots .dot:nth-child(4),
+        #slide5:checked ~ .slider-dots .dot:nth-child(5),
+        #slide6:checked ~ .slider-dots .dot:nth-child(6),
+        #slide7:checked ~ .slider-dots .dot:nth-child(7),
+        #slide8:checked ~ .slider-dots .dot:nth-child(8),
+        #slide9:checked ~ .slider-dots .dot:nth-child(9) {
+            background: #3498db;
+            transform: scale(1.2);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 480px) {
+            .slider-container {
+                max-width: 100%;
+                margin: 0 10px;
+            }
+            
+            .product-card {
+                padding: 20px;
+            }
+            
+            .product-image {
+                height: 200px;
+            }
+            
+            .slider-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+
+        /* Дополнительные стили для карточек */
+        .product-rating {
+            color: #f39c12;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .product-sale {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <!-- Радио-кнопки для каждого слайда -->
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <input type="radio" name="slider" id="slide5">
+        <input type="radio" name="slider" id="slide6">
+        <input type="radio" name="slider" id="slide7">
+        <input type="radio" name="slider" id="slide8">
+        <input type="radio" name="slider" id="slide9">
+
+        <div class="slider">
+            <!-- Товар 1 -->
+            <div class="product-card">
+                <div class="product-sale">Акция</div>
+                <img src="https://via.placeholder.com/400x300/3498db/ffffff?text=iPhone+14" alt="iPhone 14" class="product-image">
+                <div class="product-rating">★★★★★</div>
+                <h3 class="product-title">iPhone 14 Pro</h3>
+                <p class="product-description">Новый смартфон с технологией Dynamic Island и камерой 48MP</p>
+                <div class="product-price">89 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <!-- Товар 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300/e74c3c/ffffff?text=MacBook+Pro" alt="MacBook Pro" class="product-image">
+                <div class="product-rating">★★★★☆</div>
+                <h3 class="product-title">MacBook Pro 16"</h3>
+                <p class="product-description">Мощный ноутбук для профессионалов с чипом M2 Pro</p>
+                <div class="product-price">249 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <!-- Товар 3 -->
+            <div class="product-card">
+                <div class="product-sale">Хит продаж</div>
+                <img src="https://via.placeholder.com/400x300/2ecc71/ffffff?text=AirPods+Pro" alt="AirPods Pro" class="product-image">
+                <div class="product-rating">★★★★★</div>
+                <h3 class="product-title">AirPods Pro 2</h3>
+                <p class="product-description">Наушники с активным шумоподавлением и пространственным звуком</p>
+                <div class="product-price">24 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <!-- Товар 4 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300/f39c12/ffffff?text=Apple+Watch" alt="Apple Watch" class="product-image">
+                <div class="product-rating">★★★★☆</div>
+                <h3 class="product-title">Apple Watch Series 8</h3>
+                <p class="product-description">Умные часы с функцией ECG и отслеживанием температуры тела</p>
+                <div class="product-price">34 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <!-- Товар 5 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300/9b59b6/ffffff?text=iPad+Air" alt="iPad Air" class="product-image">
+                <div class="product-rating">★★★★★</div>
+                <h3 class="product-title">iPad Air 5</h3>
+                <p class="product-description">Мощный планшет с чипом M1 и поддержкой Apple Pencil</p>
+                <div class="product-price">64 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <!-- Товар 6 -->
+            <div class="product-card">
+                <div class="product-sale">Скидка 10%</div>
+                <img src="https://via.placeholder.com/400x300/1abc9c/ffffff?text=Mac+Mini" alt="Mac Mini" class="product-image">
+                <div class="product-rating">★★★★☆</div>
+                <h3 class="product-title">Mac Mini M2</h3>
+                <p class="product-description">Компактный компьютер для работы и творчества</p>
+                <div class="product-price">79 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <!-- Товар 7 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300/34495e/ffffff?text=HomePod" alt="HomePod" class="product-image">
+                <div class="product-rating">★★★★☆</div>
+                <h3 class="product-title">HomePod Mini</h3>
+                <p class="product-description">Умная колонка с голосовым помощником Siri</p>
+                <div class="product-price">9 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <!-- Товар 8 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300/d35400/ffffff?text=Magic+Keyboard" alt="Magic Keyboard" class="product-image">
+                <div class="product-rating">★★★★★</div>
+                <h3 class="product-title">Magic Keyboard</h3>
+                <p class="product-description">Беспроводная клавиатура с подсветкой и цифровым блоком</p>
+                <div class="product-price">14 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <!-- Товар 9 -->
+            <div class="product-card">
+                <div class="product-sale">Новинка</div>
+                <img src="https://via.placeholder.com/400x300/27ae60/ffffff?text=AirTag" alt="AirTag" class="product-image">
+                <div class="product-rating">★★★★☆</div>
+                <h3 class="product-title">AirTag 4-pack</h3>
+                <p class="product-description">Трекеры для поиска вещей в сети Find My</p>
+                <div class="product-price">10 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+        </div>
+
+        <!-- Кнопки навигации -->
+        <div class="slider-controls">
+            <label for="slide1" class="slider-btn prev-btn">‹</label>
+            <label for="slide3" class="slider-btn next-btn">›</label>
+        </div>
+
+        <!-- Точки для навигации -->
+        <div class="slider-dots">
+            <label for="slide1" class="dot"></label>
+            <label for="slide2" class="dot"></label>
+            <label for="slide3" class="dot"></label>
+            <label for="slide4" class="dot"></label>
+            <label for="slide5" class="dot"></label>
+            <label for="slide6" class="dot"></label>
+            <label for="slide7" class="dot"></label>
+            <label for="slide8" class="dot"></label>
+            <label for="slide9" class="dot"></label>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript для автоматической навигации (опционально)
+        document.addEventListener('DOMContentLoaded', function() {
+            const radios = document.querySelectorAll('input[name="slider"]');
+            let currentSlide = 0;
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % radios.length;
+                radios[currentSlide].checked = true;
+            }
+            
+            // Автопрокрутка каждые 5 секунд (раскомментировать если нужно)
+            // setInterval(nextSlide, 5000);
+            
+            // Обновляем кнопки навигации
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            
+            prevBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide - 1 + radios.length) % radios.length;
+                radios[currentSlide].checked = true;
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide + 1) % radios.length;
+                radios[currentSlide].checked = true;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web-Test</title>
+	
+	<style>
+.image-container {
+  position: relative;
+  width: 1024px;
+  height: 768px;
+  overflow: hidden;
+}
+
+.base-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+.image-container:hover .hover-image {
+  transform: translateX(0);
+}
+  </style>
+	
+</head>
+<body>
+
+<div class="image-container" id="imageContainer">
+  <img src="./img/image1.jpg" alt="Первое изображение" class="base-image">
+  <img src="./img/image2.jpg" alt="Второе изображение" class="hover-image">
+</div>
+
+  <script>
+const container = document.getElementById('imageContainer');
+const hoverImage = container.querySelector('.hover-image');
+
+container.addEventListener('mousemove', (e) => {
+  const rect = container.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const percentage = (x / rect.width) * 100;
+  
+  hoverImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+});
+
+container.addEventListener('mouseleave', () => {
+  hoverImage.style.clipPath = 'polygon(0 0, 0 0, 0 100%, 0 100%)';
+});
+  </script>
+
+</body>
+</html>

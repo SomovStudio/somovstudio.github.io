@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полигональная шапка</title>
+    <style>
+        .polygon-header {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+            overflow: hidden;
+        }
+
+        .polygon-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.1) 50%, transparent 55%),
+                linear-gradient(-45deg, transparent 45%, rgba(255,255,255,0.1) 50%, transparent 55%);
+            background-size: 50px 50px;
+            animation: slide 20s linear infinite;
+        }
+
+        .floating-polygons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .polygon {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 50px 50px;
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .header-text {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding-top: 150px;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .header-text h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="polygon-header">
+        <div class="polygon-overlay"></div>
+        
+        <div class="floating-polygons">
+            <div class="polygon" style="width: 100px; height: 100px; top: 10%; left: 10%; animation-duration: 25s;"></div>
+            <div class="polygon" style="width: 150px; height: 150px; bottom: 20%; right: 15%; animation-duration: 30s;"></div>
+            <div class="polygon" style="width: 80px; height: 80px; top: 40%; left: 70%; animation-duration: 20s;"></div>
+        </div>
+        
+        <div class="header-text">
+            <h1>Полигональный стиль</h1>
+            <p>Современный минималистичный дизайн</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web-Test</title>
+	
+	<style>
+		.parallax-container {
+		  width: 1024px;
+		  height: 768px;
+		  overflow: hidden;
+		  position: relative;
+		  border-radius: 10px;
+		}
+
+		.parallax-image {
+		  width: 110%;
+		  height: 110%;
+		  object-fit: cover;
+		  position: absolute;
+		  top: -5%;
+		  left: -5%;
+		  transition: transform 0.1s ease-out;
+		  will-change: transform;
+		}
+	</style>
+	
+</head>
+<body>
+
+	<div class="parallax-container">
+  		<img src="./img/your-image.jpg" alt="Parallax Image" class="parallax-image">
+	</div>
+
+	<script>
+class ImageParallax {
+  constructor(container) {
+    this.container = container;
+    this.image = container.querySelector('.parallax-image');
+    this.isHovering = false;
+    
+    this.init();
+  }
+  
+  init() {
+    this.container.addEventListener('mouseenter', () => {
+      this.isHovering = true;
+    });
+    
+    this.container.addEventListener('mouseleave', () => {
+      this.isHovering = false;
+      // Плавно возвращаем изображение в исходное положение
+      this.resetPosition();
+    });
+    
+    this.container.addEventListener('mousemove', (e) => {
+      if (!this.isHovering) return;
+      this.handleMouseMove(e);
+    });
+  }
+  
+  handleMouseMove(e) {
+    const rect = this.container.getBoundingClientRect();
+    
+    // Вычисляем позицию курсора относительно центра контейнера
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    // Вычисляем смещение от центра (от -1 до 1)
+    const moveX = (mouseX - centerX) / centerX;
+    const moveY = (mouseY - centerY) / centerY;
+    
+    // Применяем смещение с коэффициентом
+    const moveFactor = 20; // Настройка силы эффекта
+    const translateX = moveX * moveFactor;
+    const translateY = moveY * moveFactor;
+    
+    this.image.style.transform = `translate(${translateX}px, ${translateY}px)`;
+  }
+  
+  resetPosition() {
+    this.image.style.transform = 'translate(0px, 0px)';
+  }
+}
+
+// Инициализация
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.parallax-container');
+  new ImageParallax(container);
+});
+</script>
+</body>
+</html>

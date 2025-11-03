@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web-Test</title>
+	
+	<style>
+.image-container {
+  position: relative;
+  width: 1024px;
+  height: 768px;
+}
+
+.base-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask: linear-gradient(to right, transparent 50%, black 50%);
+  transition: mask-position 0.5s ease;
+  mask-size: 200% 100%;
+  mask-position: right;
+}
+
+.image-container:hover .hover-image {
+  mask-position: left;
+}
+  </style>
+	
+</head>
+<body>
+
+	<div class="image-container">
+  <img src="./img/image1.jpg" alt="Первое изображение" class="base-image">
+  <img src="./img/image2.jpg" alt="Второе изображение" class="hover-image">
+  </div>
+
+  <script>
+
+  </script>
+
+</body>
+</html>

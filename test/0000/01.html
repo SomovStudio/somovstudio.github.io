@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web-Test</title>
+	<style>
+	.image-container {
+	  width: 800px;
+	  height: 600px;
+	  overflow: hidden;
+	  position: relative;
+	  cursor: pointer;
+	}
+
+	.moving-image {
+	  width: 120%;
+	  height: 120%;
+	  background-image: url('./img/your-image.jpg');
+	  background-size: cover;
+	  background-position: center;
+	  transition: transform 0.3s ease;
+	  position: absolute;
+	  top: -10%;
+	  left: -10%;
+	}
+
+	.image-container:hover .moving-image {
+	  transform: translate(
+	    calc(var(--mouse-x) * 100px), 
+	    calc(var(--mouse-y) * 100px)
+	  );
+	}
+	</style>
+
+	
+</head>
+<body>
+
+	<div class="image-container">
+  		<div class="moving-image"></div>
+	</div>
+	<script>
+	document.querySelector('.image-container').addEventListener('mousemove', (e) => {
+	  const rect = e.currentTarget.getBoundingClientRect();
+	  const x = (e.clientX - rect.left) / rect.width;
+	  const y = (e.clientY - rect.top) / rect.height;
+	  
+	  e.currentTarget.style.setProperty('--mouse-x', x);
+	  e.currentTarget.style.setProperty('--mouse-y', y);
+	});
+	</script>
+</body>
+</html>

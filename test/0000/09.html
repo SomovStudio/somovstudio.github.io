@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web-Test</title>
+	
+	<style>
+.aquarium {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #1a2980, #26d0ce); /* Градиент от синего к бирюзовому */
+  overflow: hidden;
+}
+
+/* Стили для пузырей */
+.bubble {
+  position: absolute;
+  bottom: -50px; /* Начинаем ниже видимой области */
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3); /* Полупрозрачный белый */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Разный размер и анимация для каждого пузыря */
+.bubble1 {
+  width: 20px;
+  height: 20px;
+  left: 10%;
+  animation: rise 15s linear infinite;
+}
+.bubble2 {
+  width: 35px;
+  height: 35px;
+  left: 50%;
+  animation: rise 12s linear infinite 2s; /* Задержка перед стартом */
+}
+.bubble3 {
+  width: 15px;
+  height: 15px;
+  left: 80%;
+  animation: rise 18s linear infinite 1s;
+}
+
+/* Анимация подъема пузырей */
+@keyframes rise {
+  0% {
+    bottom: -50px;
+    transform: translateX(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(50px) scale(1.1); /* Легкое колебание в сторону и увеличение */
+    opacity: 1;
+  }
+  100% {
+    bottom: 100vh; /* Поднимаемся выше видимой области */
+    transform: translateX(-30px) scale(0.9);
+    opacity: 0;
+  }
+}
+
+.fish {
+  position: absolute;
+  /* Начальная позиция будет задана для каждой рыбки отдельно */
+}
+
+/* Тело рыбки */
+.fish-body {
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(45deg, #ff6b6b, #ffa726); /* Оранжево-красная рыбка */
+  border-radius: 50% 50% 50% 40%; /* Несимметричные скругления для более естественной формы */
+  position: relative;
+}
+
+/* Хвост */
+.fish-tail {
+  position: absolute;
+  top: 10px;
+  left: -15px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 20px solid #ffa726; /* Цвет, совпадающий с телом */
+}
+
+/* Анимация плавания для первой рыбки */
+.fish1 {
+  top: 30%;
+  left: 10%;
+  animation: swim 20s linear infinite;
+}
+
+/* Ключевые кадры для плавания */
+@keyframes swim {
+  0% {
+    transform: translateX(0) translateY(0) scaleX(1); /* scaleX(1) - смотрим направо */
+  }
+  25% {
+    transform: translateX(200px) translateY(-50px) scaleX(1);
+  }
+  50% {
+    transform: translateX(400px) translateY(20px) scaleX(1);
+  }
+  51% {
+    transform: translateX(400px) translateY(20px) scaleX(-1); /* scaleX(-1) - разворот налево */
+  }
+  75% {
+    transform: translateX(200px) translateY(-30px) scaleX(-1);
+  }
+  100% {
+    transform: translateX(0) translateY(0) scaleX(-1); /* Возвращаемся, смотрим налево */
+  }
+}
+  </style>
+	
+</head>
+<body>
+
+<div class="aquarium">
+  <div class="bubble bubble1"></div>
+  <div class="bubble bubble2"></div>
+  <div class="bubble bubble3"></div>
+  <!-- Добавьте столько пузырей, сколько хотите -->
+</div>
+
+<div class="fish fish1">
+  <div class="fish-body"></div>
+  <div class="fish-tail"></div>
+</div>
+
+  <script>
+
+  </script>
+
+</body>
+</html>

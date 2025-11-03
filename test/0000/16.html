@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web-Test</title>
+	
+	<style>
+.wave-clip-path {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(45deg, #3498db, #8e44ad);
+  clip-path: path('M0,0 L0,100 Q150,50 300,100 T600,80 T900,120 T1200,60 L1200,0 Z');
+}
+
+/* Альтернативный вариант с polygon */
+.wave-polygon {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(45deg, #e74c3c, #e67e22);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 80% 80%, 60% 70%, 40% 80%, 20% 70%, 0% 80%);
+}
+  </style>
+	
+</head>
+<body>
+
+<div class="wave-clip-path"></div>
+<div class="wave-polygon"></div>
+
+</body>
+</html>

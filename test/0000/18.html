@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сложная CSS фигура</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    	.clipped-image {
+  width: 300px;
+  height: 300px;
+  /* Создаем звезду. Координаты в процентах. */
+  clip-path: polygon(
+    50% 0%,    /* Верхняя центральная точка */
+    61% 35%,   /* Спускаемся вправо-вниз */
+    98% 35%,   /* Идем к правому краю */
+    68% 57%,   /* Спускаемся внутрь и вправо */
+    79% 91%,   /* Идем к правому нижнему углу */
+    50% 70%,   /* Возвращаемся к центру слева */
+    21% 91%,   /* Идем к левому нижнему углу */
+    32% 57%,   /* Поднимаемся внутрь и влево */
+    2% 35%,    /* Идем к левому краю */
+    39% 35%    /* Завершаем фигуру */
+  );
+  
+  /* Для плавности можно добавить переход */
+  transition: clip-path 0.3s ease;
+}
+
+/* Пример hover-эффекта: сделаем звезду кругом */
+.clipped-image:hover {
+  clip-path: circle(50% at center);
+}
+    </style>
+</head>
+<body>
+    <div class="shape-container">
+        <img src="./img/your-image.jpg" alt="Описание изображения" class="clipped-image">
+    </div>
+</body>
+</html>

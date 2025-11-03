@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web-Test</title>
+	
+	<style>
+.folded-corner {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.folded-corner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.1) 50%);
+  border-bottom-left-radius: 15px;
+  z-index: 2;
+}
+
+.folded-corner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  
+  /* Дополнительная обрезка для формы */
+  clip-path: polygon(
+    0% 0%, 
+    calc(100% - 50px) 0%, 
+    100% 50px, 
+    100% 100%, 
+    0% 100%
+  );
+}
+  </style>
+	
+</head>
+<body>
+
+<div class="folded-corner">
+  <img src="./img/your-image.jpg" alt="Загнутый угол">
+</div>
+
+</body>
+</html>
