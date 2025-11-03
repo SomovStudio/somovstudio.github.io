@@ -34,7 +34,7 @@ body {
 
 .menu-item {
 	display: inline-block;
-	background-color: rgba(50,100,128,0.5);
+	background-color: rgba(50,100,128,0.8);
 	/* background-color: rgba(23,138,183,0.5); /* 178AB7  */
 
 	color: #FFFFFF;

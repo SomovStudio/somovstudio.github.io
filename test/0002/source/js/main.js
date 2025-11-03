@@ -92,7 +92,10 @@ $(document).ready(function(){
 	});
 
 	menuF.click(function(){
-		window.open("about.html", "_self");
+		/*window.open("about.html", "_self");*/
+		ResetMenu();
+		panelF.show("slow");
+		menuF.addClass("menu-item-selected");
 	});
 
 	$.fn.ReadFile = function(filename, title) {
