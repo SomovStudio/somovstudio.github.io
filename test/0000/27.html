@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Слайдер товаров</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .slider-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto;
+      position: relative;
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 10px 0;
+      scrollbar-width: thin;
+      scrollbar-color: #888 transparent;
+    }
+
+    /* Скрываем скроллбар в WebKit (Chrome, Safari) */
+    .slider::-webkit-scrollbar {
+      height: 8px;
+    }
+    .slider::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .slider::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 4px;
+    }
+
+    .product-card {
+      flex: 0 0 220px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 16px;
+    }
+
+    .product-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .product-price {
+      font-size: 14px;
+      color: #e60000;
+      font-weight: 700;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .slider-container {
+        width: 95%;
+      }
+      .product-card {
+        flex: 0 0 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider" id="productSlider">
+      <!-- Пример карточек товаров (повторите блок для каждого товара) -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/220x180?text=Товар+1" alt="Товар 1" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Смартфон X</div>
+          <div class="product-price">29 990 ₽</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/220x180?text=Товар+2" alt="Товар 2" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Ноутбук Y</div>
+          <div class="product-price">79 990 ₽</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/220x180?text=Товар+3" alt="Товар 3" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Часы Z</div>
+          <div class="product-price">14 990 ₽</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/220x180?text=Товар+4" alt="Товар 4" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Наушники A</div>
+          <div class="product-price">4 990 ₽</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/220x180?text=Товар+5" alt="Товар 5" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Планшет B</div>
+          <div class="product-price">34 990 ₽</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/220x180?text=Товар+5" alt="Товар 5" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Планшет B</div>
+          <div class="product-price">34 990 ₽</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/220x180?text=Товар+5" alt="Товар 5" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Планшет B</div>
+          <div class="product-price">34 990 ₽</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/220x180?text=Товар+5" alt="Товар 5" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Планшет B</div>
+          <div class="product-price">34 990 ₽</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/220x180?text=Товар+5" alt="Товар 5" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Планшет B</div>
+          <div class="product-price">34 990 ₽</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="btn" id="prevBtn">← Назад</button>
+      <button class="btn" id="nextBtn">Вперёд →</button>
+    </div>
+  </div>
+
+  <script>
+    const slider = document.getElementById('productSlider');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    // Ширина одного слайда + отступ (220px + 20px)
+    const slideWidth = 240;
+
+    prevBtn.addEventListener('click', () => {
+      slider.scrollBy({
+        left: -slideWidth,
+        behavior: 'smooth'
+      });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      slider.scrollBy({
+        left: slideWidth,
+        behavior: 'smooth'
+      });
+    });
+
+    // Дополнительно: можно добавить автопрокрутку
+    // setInterval(() => nextBtn.click(), 5000);
+  </script>
+</body>
+</html>

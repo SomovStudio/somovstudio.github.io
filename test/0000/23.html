@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер товаров</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .slider-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 20px;
+        }
+
+        .product-card {
+            min-width: 280px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 20px;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .buy-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background: #2980b9;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .slider-btn {
+            background: #34495e;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+
+        .slider-btn:hover {
+            background: #2c3e50;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #bdc3c7;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dot.active {
+            background: #3498db;
+        }
+
+        /* Скрываем радио-кнопки */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Анимация слайдера */
+        #slide1:checked ~ .slider {
+            transform: translateX(0%);
+        }
+
+        #slide2:checked ~ .slider {
+            transform: translateX(-100%);
+        }
+
+        #slide3:checked ~ .slider {
+            transform: translateX(-200%);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .product-card {
+                min-width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-card {
+                min-width: 220px;
+            }
+            
+            .slider-container {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+
+        <div class="slider">
+            <!-- Слайд 1 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Товар+1" alt="Товар 1" class="product-image">
+                <h3 class="product-title">Смартфон Premium</h3>
+                <p class="product-description">Мощный смартфон с отличной камерой</p>
+                <div class="product-price">25 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200/e74c3c/ffffff?text=Товар+2" alt="Товар 2" class="product-image">
+                <h3 class="product-title">Ноутбук Gaming</h3>
+                <p class="product-description">Игровой ноутбук с мощной видеокартой</p>
+                <div class="product-price">89 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200/2ecc71/ffffff?text=Товар+3" alt="Товар 3" class="product-image">
+                <h3 class="product-title">Наушники Pro</h3>
+                <p class="product-description">Беспроводные наушники с шумоподавлением</p>
+                <div class="product-price">15 490 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <!-- Слайд 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200/f39c12/ffffff?text=Товар+4" alt="Товар 4" class="product-image">
+                <h3 class="product-title">Умные часы</h3>
+                <p class="product-description">Смарт-часы с функциями фитнес-трекера</p>
+                <div class="product-price">12 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200/9b59b6/ffffff?text=Товар+5" alt="Товар 5" class="product-image">
+                <h3 class="product-title">Планшет</h3>
+                <p class="product-description">Легкий и производительный планшет</p>
+                <div class="product-price">34 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200/1abc9c/ffffff?text=Товар+6" alt="Товар 6" class="product-image">
+                <h3 class="product-title">Фотоаппарат</h3>
+                <p class="product-description">Зеркальная камера для профессионалов</p>
+                <div class="product-price">45 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <!-- Слайд 3 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200/34495e/ffffff?text=Товар+7" alt="Товар 7" class="product-image">
+                <h3 class="product-title">Клавиатура</h3>
+                <p class="product-description">Механическая клавиатура для геймеров</p>
+                <div class="product-price">8 490 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200/d35400/ffffff?text=Товар+8" alt="Товар 8" class="product-image">
+                <h3 class="product-title">Монитор 4K</h3>
+                <p class="product-description">27-дюймовый монитор с высоким разрешением</p>
+                <div class="product-price">32 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200/27ae60/ffffff?text=Товар+9" alt="Товар 9" class="product-image">
+                <h3 class="product-title">Колонки</h3>
+                <p class="product-description">Стереосистема с чистым звуком</p>
+                <div class="product-price">18 990 ₽</div>
+                <button class="buy-button">В корзину</button>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <label for="slide1" class="slider-btn">‹</label>
+            <label for="slide2" class="slider-btn">›</label>
+        </div>
+
+        <div class="slider-dots">
+            <label for="slide1" class="dot active"></label>
+            <label for="slide2" class="dot"></label>
+            <label for="slide3" class="dot"></label>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web-Test</title>
+	
+	<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.product-slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 10px;
+  -webkit-overflow-scrolling: touch; /* Плавность на мобильных */
+}
+
+.product-card {
+  flex: 0 0 220px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e67e22;
+  margin: 10px 0;
+}
+
+.btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+/* Скрываем полосу прокрутки (опционально) */
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-track {
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pagination-btn {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.pagination-btn.active {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.pagination-btn:hover:not(.active) {
+  background-color: #f5f5f5;
+}
+
+
+  </style>
+	
+</head>
+<body>
+
+<div class="product-slider">
+  <div class="slider-track">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Товар+1" alt="Товар 1">
+      <h3>Товар 1</h3>
+      <p class="price">1 990 ₽</p>
+      <button class="btn">В корзину</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Товар+2" alt="Товар 2">
+      <h3>Товар 2</h3>
+      <p class="price">2 490 ₽</p>
+      <button class="btn">В корзину</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Товар+3" alt="Товар 3">
+      <h3>Товар 3</h3>
+      <p class="price">3 190 ₽</p>
+      <button class="btn">В корзину</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Товар+4" alt="Товар 4">
+      <h3>Товар 4</h3>
+      <p class="price">1 790 ₽</p>
+      <button class="btn">В корзину</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Товар+1" alt="Товар 1">
+      <h3>Товар 5</h3>
+      <p class="price">1 990 ₽</p>
+      <button class="btn">В корзину</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Товар+2" alt="Товар 2">
+      <h3>Товар 6</h3>
+      <p class="price">2 490 ₽</p>
+      <button class="btn">В корзину</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Товар+3" alt="Товар 3">
+      <h3>Товар 7</h3>
+      <p class="price">3 190 ₽</p>
+      <button class="btn">В корзину</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x200?text=Товар+4" alt="Товар 4">
+      <h3>Товар 8</h3>
+      <p class="price">1 790 ₽</p>
+      <button class="btn">В корзину</button>
+    </div>
+  </div>
+</div>
+
+<!-- Блок пагинации -->
+<div class="pagination" id="pagination"></div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const sliderTrack = document.getElementById('sliderTrack');
+  const paginationContainer = document.getElementById('pagination');
+  const cards = document.querySelectorAll('.product-card');
+  
+  const cardsPerPage = 4; // Сколько карточек показывать на одной странице
+  const totalCards = cards.length;
+  const totalPages = Math.ceil(totalCards / cardsPerPage);
+  
+  let currentPage = 1;
+
+  // Создаём кнопки пагинации
+  function renderPagination() {
+    paginationContainer.innerHTML = '';
+    
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement('div');
+      btn.className = 'pagination-btn';
+      btn.textContent = i;
+      
+      if (i === currentPage) {
+        btn.classList.add('active');
+      }
+      
+      btn.addEventListener('click', () => gotoPage(i));
+      paginationContainer.appendChild(btn);
+    }
+  }
+
+  // Переключаем страницу
+  function gotoPage(page) {
+    if (page < 1 || page > totalPages) return;
+    
+    currentPage = page;
+    const startIndex = (page - 1) * cardsPerPage;
+    
+    cards.forEach((card, index) => {
+      card.style.display = (index >= startIndex && index < startIndex + cardsPerPage) 
+        ? 'block'
+        : 'none';
+    });
+    
+    renderPagination(); // Обновляем активные кнопки
+  }
+
+  // Инициализация
+  renderPagination();
+  gotoPage(1); // Показываем первую страницу
+});
+
+</script>
+
+</body>
+</html>

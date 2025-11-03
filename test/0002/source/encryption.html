@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Encryption</title>
+	<meta charset="UTF-8">
+	<script src="./js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var key = $("#key");
+			var btnEncrypt = $("#btnEncrypt");
+			var btnDecrypt = $("#btnDecrypt");
+			var textEncrypt = $("#textEncrypt");
+			var textDecrypt = $("#textDecrypt");
+			var resultEncrypt = $("#resultEncrypt");
+			var resultTextDecrypt = $("#resulttextDecrypt");
+
+			btnEncrypt.click(function(){
+				let str = textEncrypt.val();
+				let values = [];
+				let j = 0;
+				for (let i = 0; i < str.length; i++) {
+  					//values[i] = str.charCodeAt(i);
+					values[i] = str.charCodeAt(i) * key.val().charCodeAt(j);
+					j++;
+					if (j == key.val().length) j = 0;
+				}
+				resultEncrypt.val(values);
+			});
+
+			btnDecrypt.click(function(){
+				var values = textDecrypt.val().split(",");
+				var str = "";
+				let j = 0;
+				for (let i = 0; i < values.length; i++) {
+  					//str = str + String.fromCharCode(values[i]);
+  					str = str + String.fromCharCode(values[i] / key.val().charCodeAt(j));
+  					j++;
+					if (j == key.val().length) j = 0;
+				}
+				resultTextDecrypt.val(str);
+			});
+
+			/*
+			console.log("TEST: символ в код");
+			console.log("A: " + "A".charCodeAt(0));
+			console.log("B: " + "B".charCodeAt(0));
+			console.log("C: " + "C".charCodeAt(0));
+			console.log("Ж: " + "Ж".charCodeAt(0));
+			console.log("TEST: код в символ");
+			console.log("65: " + String.fromCharCode(65));
+			console.log("66: " + String.fromCharCode(66));
+			console.log("67: " + String.fromCharCode(67));
+			console.log("1046: " + String.fromCharCode(1046));
+
+			var tempestString = "И как хорош тот новый мир, где есть такие люди!";
+			var monthString = "Янв,Фев,Мар,Апр,Май,Июн,Июл,Авг,Сен,Окт,Ноя,Дек";
+			var space = " ";
+			var comma = ",";
+			var arrayOfStrings1 = tempestString.split(space);
+			var arrayOfStrings2 = monthString.split(comma);
+			console.log(arrayOfStrings1);
+			console.log(arrayOfStrings2);
+			*/
+
+			/*
+			btnEncrypt.click(function(){
+				//textDecrypt.val(textEncrypt.val().charCodeAt(0));
+				//textDecrypt.val(textEncrypt.val().codePointAt(0));
+
+				let str = textEncrypt.val();
+				let values = [];
+				for (let i = 0; i < str.length; i++) {
+  					console.log(str.codePointAt(i).toString(16));
+  					values[i] = str.codePointAt(i).toString(16);
+				}
+				console.log(values);
+
+				let k =0;
+				values.forEach(function(item, i, arr){
+					console.log(i + " : " + item);
+					console.log(key.val().codePointAt(k));
+					values[i] = i + key.val().codePointAt(k);
+					console.log(values[i]);
+					k++;
+					if (k >= key.val().length) k = 0;
+				});
+
+				resultEncrypt.val(values);
+			});
+
+			btnDecrypt.click(function(){
+				//textEncrypt.val(textDecrypt.val().charAt());
+				//textEncrypt.val(textDecrypt.val().toString(16));
+			});
+			*/
+		});
+	</script>
+</head>
+<body>
+	<div class="main-wrapper">
+		<table>
+			<tr>
+				<td><br>Ключ:</td>
+				<td><input id="key" value="1234" style="width: 200px; height: 25px;"></td>
+			</tr>
+			<tr>
+				<td><textarea id="textEncrypt" style="width: 500px; height: 350px;">text</textarea></td>
+				<td><textarea id="textDecrypt" style="width: 500px; height: 350px;"></textarea></td>
+			</tr>
+			<tr>
+				<td><button id="btnEncrypt" style="cursor: pointer">Зашифровать</button></td>
+				<td><button id="btnDecrypt" style="cursor: pointer">Расшифровать</button></td>
+			</tr>
+			<tr>
+				<td><br><br>Результат:</td>
+				<td><br><br>Результат:</td>
+			</tr>
+			<tr>
+				<td><textarea id="resultEncrypt" style="width: 500px; height: 350px;"></textarea></td>
+				<td><textarea id="resulttextDecrypt" style="width: 500px; height: 350px;"></textarea></td>
+			</tr>
+		</table>
+		
+	</div>
+</body>
+</html>

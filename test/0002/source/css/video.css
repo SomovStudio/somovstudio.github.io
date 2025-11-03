@@ -1,0 +1,52 @@
+.background__fullscreen {
+    overflow: hidden;
+    z-index: -100;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding-top:45%;
+}
+ 
+.background__video {
+    position: absolute;
+    top: -5%;
+    left: 0;
+    width: 100%;
+    object-fit: fill;
+}
+
+@media (max-width: 767px) {
+    .background__fullscreen {
+        background: url('../img/background.jpg') center center / cover no-repeat;
+    }
+    .background__video {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .background__fullscreen {
+        background: url('../img/background.jpg') center center / cover no-repeat;
+    }
+    .background__video {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .background__fullscreen {
+        background: url('../img/background.jpg') center center / cover no-repeat;
+    }
+    .background__video {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .background__fullscreen {
+        background: url('../img/background.jpg') center center / cover no-repeat;
+    }
+    .background__video {
+        display: none;
+    }
+}
