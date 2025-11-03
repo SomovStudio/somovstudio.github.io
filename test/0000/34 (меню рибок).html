@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню-рыбки</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .fish-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+        }
+
+        .fish-item {
+            position: relative;
+            width: 280px;
+            height: 140px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .fish-item:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Тело рыбы */
+        .fish-body {
+            position: absolute;
+            width: 200px;
+            height: 80px;
+            border-radius: 50% 40% 40% 50%;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .fish-item:hover .fish-body {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Хвост рыбы */
+        .fish-tail {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 40px solid transparent;
+            border-bottom: 40px solid transparent;
+            border-left: 60px solid;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        /* Плавники */
+        .fin-top {
+            position: absolute;
+            width: 30px;
+            height: 40px;
+            border-radius: 50% 50% 0 0;
+            top: 30%;
+            left: 120px;
+            transform: rotate(-10deg);
+            z-index: 3;
+        }
+
+        .fin-bottom {
+            position: absolute;
+            width: 25px;
+            height: 35px;
+            border-radius: 0 0 50% 50%;
+            bottom: 30%;
+            left: 130px;
+            transform: rotate(10deg);
+            z-index: 3;
+        }
+
+        /* Глаз */
+        .fish-eye {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            top: 45%;
+            right: 40px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            z-index: 4;
+        }
+
+        .fish-eye::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #333;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Текст меню */
+        .menu-text {
+            position: absolute;
+            top: 50%;
+            left: 70px;
+            transform: translateY(-50%);
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            width: 130px;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        /* Цвета для разных рыбок */
+        .fish-1 .fish-body {
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+        }
+        .fish-1 .fish-tail {
+            border-left-color: #FF8E53;
+        }
+        .fish-1 .fin-top, .fish-1 .fin-bottom {
+            background: #FF6B6B;
+        }
+
+        .fish-2 .fish-body {
+            background: linear-gradient(45deg, #4ECDC4, #556270);
+        }
+        .fish-2 .fish-tail {
+            border-left-color: #556270;
+        }
+        .fish-2 .fin-top, .fish-2 .fin-bottom {
+            background: #4ECDC4;
+        }
+
+        .fish-3 .fish-body {
+            background: linear-gradient(45deg, #FFD93D, #6BCF7F);
+        }
+        .fish-3 .fish-tail {
+            border-left-color: #6BCF7F;
+        }
+        .fish-3 .fin-top, .fish-3 .fin-bottom {
+            background: #FFD93D;
+        }
+
+        .fish-4 .fish-body {
+            background: linear-gradient(45deg, #9D50BB, #6A48D7);
+        }
+        .fish-4 .fish-tail {
+            border-left-color: #6A48D7;
+        }
+        .fish-4 .fin-top, .fish-4 .fin-bottom {
+            background: #9D50BB;
+        }
+
+        /* Анимация плавания */
+        .fish-item {
+            animation: swim 8s infinite ease-in-out;
+        }
+
+        .fish-1 { animation-delay: 0s; }
+        .fish-2 { animation-delay: 1s; }
+        .fish-3 { animation-delay: 2s; }
+        .fish-4 { animation-delay: 3s; }
+
+        @keyframes swim {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-10px) rotate(2deg);
+            }
+            50% {
+                transform: translateY(5px) rotate(-1deg);
+            }
+            75% {
+                transform: translateY(-5px) rotate(1deg);
+            }
+        }
+
+        .fish-item:hover {
+            animation-play-state: paused;
+        }
+
+        /* Подвал */
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .fish-menu {
+                gap: 30px;
+            }
+            
+            .fish-item {
+                width: 250px;
+                height: 120px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .fish-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .fish-item {
+                width: 280px;
+                height: 140px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Меню-рыбки</h1>
+        <p class="subtitle">Наведите курсор на рыбку, чтобы увидеть эффект</p>
+    </div>
+
+    <div class="fish-menu">
+        <div class="fish-item fish-1">
+            <div class="fish-tail"></div>
+            <div class="fish-body"></div>
+            <div class="fin-top"></div>
+            <div class="fin-bottom"></div>
+            <div class="fish-eye"></div>
+            <div class="menu-text">Главная</div>
+        </div>
+
+        <div class="fish-item fish-2">
+            <div class="fish-tail"></div>
+            <div class="fish-body"></div>
+            <div class="fin-top"></div>
+            <div class="fin-bottom"></div>
+            <div class="fish-eye"></div>
+            <div class="menu-text">О нас</div>
+        </div>
+
+        <div class="fish-item fish-3">
+            <div class="fish-tail"></div>
+            <div class="fish-body"></div>
+            <div class="fin-top"></div>
+            <div class="fin-bottom"></div>
+            <div class="fish-eye"></div>
+            <div class="menu-text">Услуги</div>
+        </div>
+
+        <div class="fish-item fish-4">
+            <div class="fish-tail"></div>
+            <div class="fish-body"></div>
+            <div class="fin-top"></div>
+            <div class="fin-bottom"></div>
+            <div class="fish-eye"></div>
+            <div class="menu-text">Контакты</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Создано с помощью HTML и CSS | Меню в форме рыбок</p>
+    </div>
+</body>
+</html>
