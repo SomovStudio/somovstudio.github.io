@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web-Test</title>
+	
+	<style>
+body {
+  background-color: blue; /* Синий фон, как на макете */
+  margin: 0;
+  padding: 0;
+}
+
+.hexagon-container {
+  width: 300px; /* Ширина контейнера (можно менять) */
+  height: 300px; /* Высота контейнера (должна быть ≈ равна ширине для пропорций) */
+  margin: 50px auto; /* Центрируем и добавляем отступы */
+}
+
+.hexagon {
+  width: 100%;
+  height: 100%;
+  background-color: cyan; /* Светло-голубой цвет, как на макете */
+  clip-path: polygon(
+    50% 0%, /* Верхняя точка */
+    100% 25%, /* Правая верхняя точка */
+    100% 75%, /* Правая нижняя точка */
+    50% 100%, /* Нижняя точка */
+    0% 75%, /* Левая нижняя точка */
+    0% 25% /* Левая верхняя точка */
+  );
+}
+  </style>
+	
+</head>
+<body>
+
+<div class="hexagon-container">
+  <div class="hexagon"></div>
+</div>
+
+
+
+</body>
+</html>

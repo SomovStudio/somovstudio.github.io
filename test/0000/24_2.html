@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер товаров</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .slider-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 300%; /* 3 слайда по 100% каждый */
+        }
+
+        .slide {
+            width: 33.333%; /* Каждый слайд занимает 1/3 контейнера */
+            display: flex;
+            gap: 20px;
+            padding: 0 10px;
+        }
+
+        .product-card {
+            flex: 1;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            min-width: 0; /* Важно для корректного flex-сжатия */
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .product-price {
+            font-size: 20px;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .buy-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background: #2980b9;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .slider-btn {
+            background: #34495e;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+
+        .slider-btn:hover {
+            background: #2c3e50;
+        }
+
+        .slider-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #bdc3c7;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        /* Скрываем радио-кнопки */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Анимация слайдера */
+        #slide1:checked ~ .slider {
+            transform: translateX(0%);
+        }
+
+        #slide2:checked ~ .slider {
+            transform: translateX(-33.333%);
+        }
+
+        #slide3:checked ~ .slider {
+            transform: translateX(-66.666%);
+        }
+
+        /* Активные точки */
+        #slide1:checked ~ .slider-dots .dot:nth-child(1),
+        #slide2:checked ~ .slider-dots .dot:nth-child(2),
+        #slide3:checked ~ .slider-dots .dot:nth-child(3) {
+            background: #3498db;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 1024px) {
+            .slide {
+                width: 50%; /* 2 слайда на планшетах */
+            }
+            
+            .slider {
+                width: 200%; /* 2 слайда по 100% каждый */
+            }
+            
+            #slide1:checked ~ .slider {
+                transform: translateX(0%);
+            }
+
+            #slide2:checked ~ .slider {
+                transform: translateX(-50%);
+            }
+
+            #slide3:checked ~ .slider {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                width: 100%; /* 1 слайд на мобильных */
+            }
+            
+            .slider {
+                width: 300%; /* 3 слайда по 100% каждый */
+            }
+            
+            #slide1:checked ~ .slider {
+                transform: translateX(0%);
+            }
+
+            #slide2:checked ~ .slider {
+                transform: translateX(-100%);
+            }
+
+            #slide3:checked ~ .slider {
+                transform: translateX(-200%);
+            }
+            
+            .product-card {
+                min-width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-card {
+                min-width: 220px;
+            }
+            
+            .slider-container {
+                padding: 0 5px;
+            }
+            
+            .slide {
+                padding: 0 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+
+        <div class="slider">
+            <!-- Слайд 1 -->
+            <div class="slide">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Товар+1" alt="Товар 1" class="product-image">
+                    <h3 class="product-title">Смартфон Premium</h3>
+                    <p class="product-description">Мощный смартфон с отличной камерой</p>
+                    <div class="product-price">25 990 ₽</div>
+                    <button class="buy-button">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200/e74c3c/ffffff?text=Товар+2" alt="Товар 2" class="product-image">
+                    <h3 class="product-title">Ноутбук Gaming</h3>
+                    <p class="product-description">Игровой ноутбук с мощной видеокартой</p>
+                    <div class="product-price">89 990 ₽</div>
+                    <button class="buy-button">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200/2ecc71/ffffff?text=Товар+3" alt="Товар 3" class="product-image">
+                    <h3 class="product-title">Наушники Pro</h3>
+                    <p class="product-description">Беспроводные наушники с шумоподавлением</p>
+                    <div class="product-price">15 490 ₽</div>
+                    <button class="buy-button">В корзину</button>
+                </div>
+            </div>
+
+            <!-- Слайд 2 -->
+            <div class="slide">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200/f39c12/ffffff?text=Товар+4" alt="Товар 4" class="product-image">
+                    <h3 class="product-title">Умные часы</h3>
+                    <p class="product-description">Смарт-часы с функциями фитнес-трекера</p>
+                    <div class="product-price">12 990 ₽</div>
+                    <button class="buy-button">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200/9b59b6/ffffff?text=Товар+5" alt="Товар 5" class="product-image">
+                    <h3 class="product-title">Планшет</h3>
+                    <p class="product-description">Легкий и производительный планшет</p>
+                    <div class="product-price">34 990 ₽</div>
+                    <button class="buy-button">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200/1abc9c/ffffff?text=Товар+6" alt="Товар 6" class="product-image">
+                    <h3 class="product-title">Фотоаппарат</h3>
+                    <p class="product-description">Зеркальная камера для профессионалов</p>
+                    <div class="product-price">45 990 ₽</div>
+                    <button class="buy-button">В корзину</button>
+                </div>
+            </div>
+
+            <!-- Слайд 3 -->
+            <div class="slide">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200/34495e/ffffff?text=Товар+7" alt="Товар 7" class="product-image">
+                    <h3 class="product-title">Клавиатура</h3>
+                    <p class="product-description">Механическая клавиатура для геймеров</p>
+                    <div class="product-price">8 490 ₽</div>
+                    <button class="buy-button">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200/d35400/ffffff?text=Товар+8" alt="Товар 8" class="product-image">
+                    <h3 class="product-title">Монитор 4K</h3>
+                    <p class="product-description">27-дюймовый монитор с высоким разрешением</p>
+                    <div class="product-price">32 990 ₽</div>
+                    <button class="buy-button">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200/27ae60/ffffff?text=Товар+9" alt="Товар 9" class="product-image">
+                    <h3 class="product-title">Колонки</h3>
+                    <p class="product-description">Стереосистема с чистым звуком</p>
+                    <div class="product-price">18 990 ₽</div>
+                    <button class="buy-button">В корзину</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <button class="slider-btn prev">‹</button>
+            <button class="slider-btn next">›</button>
+        </div>
+
+        <div class="slider-dots">
+            <label for="slide1" class="dot"></label>
+            <label for="slide2" class="dot"></label>
+            <label for="slide3" class="dot"></label>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const prevBtn = document.querySelector('.slider-btn.prev');
+            const nextBtn = document.querySelector('.slider-btn.next');
+            const slides = document.querySelectorAll('input[name="slider"]');
+            let currentSlide = 0;
+
+            function updateButtons() {
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === slides.length - 1;
+            }
+
+            function goToSlide(index) {
+                slides[index].checked = true;
+                currentSlide = index;
+                updateButtons();
+            }
+
+            prevBtn.addEventListener('click', function() {
+                if (currentSlide > 0) {
+                    goToSlide(currentSlide - 1);
+                }
+            });
+
+            nextBtn.addEventListener('click', function() {
+                if (currentSlide < slides.length - 1) {
+                    goToSlide(currentSlide + 1);
+                }
+            });
+
+            // Обработчики для точек
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    goToSlide(index);
+                });
+            });
+
+            // Инициализация
+            updateButtons();
+        });
+    </script>
+</body>
+</html>

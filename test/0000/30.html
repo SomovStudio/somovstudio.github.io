@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с шестиугольниками</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0077FF; /* Глубокий синий фон */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hexagon {
+    position: absolute;
+    width: 120px;
+    height: 70px;
+    background-color: #00FF99; /* Светло-бирюзовый цвет */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Форма шестиугольника */
+    z-index: 1;
+}
+
+.hex1 {
+    top: 10%;
+    left: 10%;
+}
+
+.hex2 {
+    top: 30%;
+    right: 10%;
+}
+
+.hex3 {
+    bottom: 30%;
+    left: 10%;
+}
+
+.hex4 {
+    bottom: 10%;
+    right: 10%;
+}
+
+	</style>
+</head>
+<body>
+    <div class="hexagon hex1"></div>
+    <div class="hexagon hex2"></div>
+    <div class="hexagon hex3"></div>
+    <div class="hexagon hex4"></div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с шестиугольниками</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    	/* Сброс отступов и маргинов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Фон страницы */
+body {
+    background-color: #0077FF; /* Синий фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Базовый класс для шестиугольников */
+.hexagon {
+    width: 100px;
+    height: 60px;
+    background-color: #00FF99; /* Светло-зелёный цвет */
+    position: relative;
+    margin: 20px;
+}
+
+/* Формирование верхней части шестиугольника (левый и правый треугольники) */
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 30px solid #00FF99; /* Цвет совпадает с фоном шестиугольника */
+}
+
+/* Формирование нижней части шестиугольника */
+.hexagon:after {
+    bottom: 100%;
+    border-bottom: none;
+    border-top: 30px solid #00FF99;
+}
+
+/* Позиционирование шестиугольников (можно настроить под макет) */
+#hex1 {
+    transform: translate(-100px, -100px);
+}
+
+#hex2 {
+    transform: translate(100px, -50px);
+}
+
+#hex3 {
+    transform: translate(-50px, 100px);
+}
+
+#hex4 {
+    transform: translate(150px, 150px);
+}
+
+    </style>
+</head>
+<body>
+    <div class="hexagon" id="hex1"></div>
+    <div class="hexagon" id="hex2"></div>
+    <div class="hexagon" id="hex3"></div>
+    <div class="hexagon" id="hex4"></div>
+</body>
+</html>

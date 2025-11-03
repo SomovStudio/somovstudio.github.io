@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рыба на CSS</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #87CEEB, #1E90FF);
+            font-family: Arial, sans-serif;
+        }
+
+        .fish-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+
+        /* Тело рыбы */
+        .fish-body {
+            position: absolute;
+            width: 200px;
+            height: 80px;
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+            border-radius: 50% 40% 40% 50%;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Хвост рыбы */
+        .fish-tail {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 40px solid transparent;
+            border-bottom: 40px solid transparent;
+            border-left: 60px solid #FF8E53;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+        }
+
+        /* Плавники */
+        .fin-top {
+            position: absolute;
+            width: 30px;
+            height: 40px;
+            background: #FF6B6B;
+            border-radius: 50% 50% 0 0;
+            top: 30%;
+            left: 120px;
+            transform: rotate(-10deg);
+        }
+
+        .fin-bottom {
+            position: absolute;
+            width: 25px;
+            height: 35px;
+            background: #FF6B6B;
+            border-radius: 0 0 50% 50%;
+            bottom: 30%;
+            left: 130px;
+            transform: rotate(10deg);
+        }
+
+        /* Глаз */
+        .fish-eye {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            top: 45%;
+            right: 40px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+
+        .fish-eye::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: black;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Чешуя */
+        .scale {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50% 50% 30% 30%;
+        }
+
+        .scale-1 { top: 45%; left: 180px; }
+        .scale-2 { top: 50%; left: 160px; width: 12px; height: 12px; }
+        .scale-3 { top: 55%; left: 140px; width: 10px; height: 10px; }
+
+        /* Пузырьки */
+        .bubble {
+            position: absolute;
+            background: rgba(255,255,255,0.7);
+            border-radius: 50%;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        .bubble-1 {
+            width: 15px;
+            height: 15px;
+            left: 250px;
+            top: 30px;
+            animation-delay: 0s;
+        }
+
+        .bubble-2 {
+            width: 10px;
+            height: 10px;
+            left: 270px;
+            top: 60px;
+            animation-delay: 1s;
+        }
+
+        .bubble-3 {
+            width: 8px;
+            height: 8px;
+            left: 260px;
+            top: 100px;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(-20px) scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-40px) scale(0.9);
+                opacity: 0;
+            }
+        }
+
+        /* Анимация плавания */
+        .fish-container {
+            animation: swim 6s infinite ease-in-out;
+        }
+
+        @keyframes swim {
+            0%, 100% {
+                transform: translateX(0) rotate(0deg);
+            }
+            25% {
+                transform: translateX(20px) rotate(2deg);
+            }
+            50% {
+                transform: translateX(-10px) rotate(-1deg);
+            }
+            75% {
+                transform: translateX(15px) rotate(1deg);
+            }
+        }
+
+        /* Информационный блок */
+        .info {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="fish-container">
+        <div class="fish-tail"></div>
+        <div class="fish-body"></div>
+        <div class="fin-top"></div>
+        <div class="fin-bottom"></div>
+        <div class="fish-eye"></div>
+        <div class="scale scale-1"></div>
+        <div class="scale scale-2"></div>
+        <div class="scale scale-3"></div>
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="info">Рыбка плавает в океане!</div>
+    </div>
+</body>
+</html>
