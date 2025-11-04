@@ -2,7 +2,7 @@
 
 @media (max-width: 1024px) {
     .goods-slider-product-card {
-        flex: 0 0 calc(25% - 16px);
+        flex: 0 0 calc(40% - 16px);
     }
 }
 
@@ -59,7 +59,8 @@
     }
 
     .goods-slider-product-card {
-        flex: 0 0 calc(33.333% - 16px);
+        /*flex: 0 0 calc(33.333% - 16px);*/
+        flex: 0 0 calc(40% - 16px);
     }
 
     .news-grid {
@@ -79,7 +80,7 @@
     }
 
     .goods-slider-product-card {
-        flex: 0 0 calc(70% - 16px);
+        flex: 0 0 calc(85% - 16px);
     }
 
     .goods-slider-container {
