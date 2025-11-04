@@ -51,6 +51,7 @@ body {
     gap: 60px 30px;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 .fish-container-2 {
@@ -60,6 +61,7 @@ body {
     gap: 60px 30px;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 100px;
 }
 
 /* Шахматный порядок - смещаем каждую вторую рыбку в ряду */
