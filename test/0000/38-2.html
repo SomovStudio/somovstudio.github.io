@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Волнистые границы</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .wave-container {
+            position: relative;
+            width: 100%;
+            min-height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .wave-top, .wave-bottom {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave-top {
+            top: -1px;
+        }
+
+        .wave-bottom {
+            bottom: -1px;
+            transform: rotate(180deg);
+        }
+
+        .wave-top svg, .wave-bottom svg {
+            display: block;
+            width: calc(100% + 600px); /* width: calc(100% + 1.3px); */
+            height: 150px;  /* height: 50px; Увеличиваем высоту волн */
+        }
+
+       	.wave-top .shape-fill, .wave-bottom .shape-fill {
+            fill: #ffffff;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* Дополнительный контент для демонстрации */
+        .other-content {
+            padding: 80px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .other-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .other-content p {
+            color: #666;
+            max-width: 800px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wave-container">
+        <div class="wave-top">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
+        <div class="content">
+            <h2>Волнистый блок на всю ширину</h2>
+            <p>Этот блок растягивается на всю ширину экрана с волнистыми верхней и нижней границами. Отлично подходит для герой-секций и разделов с призывом к действию.</p>
+        </div>
+        
+        <div class="wave-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
+
+    <div class="other-content">
+        <h3>Другой контент страницы</h3>
+        <p>Это обычный контент, который следует за блоком с волнистыми границами. Вы можете добавить сюда любую информацию, карточки, изображения или другие элементы.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.hidden-block {
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 20px;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.hidden-block.visible {
+    top: 0;
+    opacity: 1;
+}
+
+.content {
+    height: 2000px;
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+    <div class="hidden-block" id="stickyBlock">
+        Этот блок появится когда top = 0
+    </div>
+    
+    <div class="content">
+        Прокручивайте вниз и вверх чтобы увидеть эффект
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const block = document.getElementById('stickyBlock');
+            const blockRect = block.getBoundingClientRect();
+            
+            // Когда блок достигает верха окна
+            if (blockRect.top <= 0) {
+                block.classList.add('visible');
+            } else {
+                block.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>
