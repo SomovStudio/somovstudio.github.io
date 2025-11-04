@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рыбки в шахматном порядке</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .fish-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Шахматный порядок - смещаем каждую вторую рыбку в ряду */
+        .fish-item:nth-child(odd) {
+            transform: translateY(30px);
+        }
+
+        .fish-item {
+            position: relative;
+            width: 220px;
+            height: 120px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .fish-item:hover {
+            transform: translateY(-10px) !important;
+            z-index: 10;
+        }
+
+        /* Тело рыбы */
+        .fish-body {
+            position: absolute;
+            width: 160px;
+            height: 65px;
+            border-radius: 50% 40% 40% 50%;
+            top: 50%;
+            left: 40px;
+            transform: translateY(-50%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .fish-item:hover .fish-body {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            filter: brightness(1.1);
+        }
+
+        /* Хвост рыбы */
+        .fish-tail {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 32px solid transparent;
+            border-bottom: 32px solid transparent;
+            border-left: 50px solid;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        /* Плавники */
+        .fin-top {
+            position: absolute;
+            width: 25px;
+            height: 30px;
+            border-radius: 50% 50% 0 0;
+            top: 30%;
+            left: 100px;
+            transform: rotate(-10deg);
+            z-index: 3;
+        }
+
+        .fin-bottom {
+            position: absolute;
+            width: 20px;
+            height: 25px;
+            border-radius: 0 0 50% 50%;
+            bottom: 30%;
+            left: 105px;
+            transform: rotate(10deg);
+            z-index: 3;
+        }
+
+        /* Глаз */
+        .fish-eye {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            top: 45%;
+            right: 30px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            z-index: 4;
+        }
+
+        .fish-eye::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #333;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Текст меню */
+        .menu-text {
+            position: absolute;
+            top: 50%;
+            left: 55px;
+            transform: translateY(-50%);
+            font-weight: bold;
+            font-size: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            width: 110px;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        /* Цвета для разных рыбок */
+        .fish-1 .fish-body {
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+        }
+        .fish-1 .fish-tail {
+            border-left-color: #FF8E53;
+        }
+        .fish-1 .fin-top, .fish-1 .fin-bottom {
+            background: #FF6B6B;
+        }
+
+        .fish-2 .fish-body {
+            background: linear-gradient(45deg, #4ECDC4, #556270);
+        }
+        .fish-2 .fish-tail {
+            border-left-color: #556270;
+        }
+        .fish-2 .fin-top, .fish-2 .fin-bottom {
+            background: #4ECDC4;
+        }
+
+        .fish-3 .fish-body {
+            background: linear-gradient(45deg, #FFD93D, #6BCF7F);
+        }
+        .fish-3 .fish-tail {
+            border-left-color: #6BCF7F;
+        }
+        .fish-3 .fin-top, .fish-3 .fin-bottom {
+            background: #FFD93D;
+        }
+
+        .fish-4 .fish-body {
+            background: linear-gradient(45deg, #9D50BB, #6A48D7);
+        }
+        .fish-4 .fish-tail {
+            border-left-color: #6A48D7;
+        }
+        .fish-4 .fin-top, .fish-4 .fin-bottom {
+            background: #9D50BB;
+        }
+
+        .fish-5 .fish-body {
+            background: linear-gradient(45deg, #FF9A8B, #FF6B9D);
+        }
+        .fish-5 .fish-tail {
+            border-left-color: #FF6B9D;
+        }
+        .fish-5 .fin-top, .fish-5 .fin-bottom {
+            background: #FF9A8B;
+        }
+
+        .fish-6 .fish-body {
+            background: linear-gradient(45deg, #6A85B6, #BAC8E0);
+        }
+        .fish-6 .fish-tail {
+            border-left-color: #BAC8E0;
+        }
+        .fish-6 .fin-top, .fish-6 .fin-bottom {
+            background: #6A85B6;
+        }
+
+        .fish-7 .fish-body {
+            background: linear-gradient(45deg, #42E695, #3BB2B8);
+        }
+        .fish-7 .fish-tail {
+            border-left-color: #3BB2B8;
+        }
+        .fish-7 .fin-top, .fish-7 .fin-bottom {
+            background: #42E695;
+        }
+
+        .fish-8 .fish-body {
+            background: linear-gradient(45deg, #FFD86F, #FC9B8A);
+        }
+        .fish-8 .fish-tail {
+            border-left-color: #FC9B8A;
+        }
+        .fish-8 .fin-top, .fish-8 .fin-bottom {
+            background: #FFD86F;
+        }
+
+        /* Анимация плавания */
+        .fish-item {
+            animation: swim 8s infinite ease-in-out;
+        }
+
+        .fish-1 { animation-delay: 0s; }
+        .fish-2 { animation-delay: 1s; }
+        .fish-3 { animation-delay: 2s; }
+        .fish-4 { animation-delay: 3s; }
+        .fish-5 { animation-delay: 0.5s; }
+        .fish-6 { animation-delay: 1.5s; }
+        .fish-7 { animation-delay: 2.5s; }
+        .fish-8 { animation-delay: 3.5s; }
+
+        @keyframes swim {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-8px) rotate(2deg);
+            }
+            50% {
+                transform: translateY(4px) rotate(-1deg);
+            }
+            75% {
+                transform: translateY(-4px) rotate(1deg);
+            }
+        }
+
+        .fish-item:hover {
+            animation-play-state: paused;
+        }
+
+        /* Пузырьки */
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        /* Анимация пузырьков для каждой рыбки */
+        .fish-item .bubble {
+            animation: bubble-float 4s infinite ease-in;
+        }
+
+        @keyframes bubble-float {
+            0% {
+                transform: translateY(0) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-80px) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* Позиции и размеры пузырьков */
+        .bubble-1 {
+            width: 6px;
+            height: 6px;
+            left: 170px;
+            top: 60px;
+            animation-delay: 0s;
+        }
+        .bubble-2 {
+            width: 10px;
+            height: 10px;
+            left: 190px;
+            top: 50px;
+            animation-delay: 1s;
+        }
+        .bubble-3 {
+            width: 5px;
+            height: 5px;
+            left: 180px;
+            top: 70px;
+            animation-delay: 2s;
+        }
+
+        /* Фоновые пузырьки */
+        .background-bubbles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .bg-bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            animation: bg-bubble-float 15s infinite linear;
+        }
+
+        @keyframes bg-bubble-float {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            90% {
+                opacity: 0.2;
+            }
+            100% {
+                transform: translateY(-100px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Подвал */
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 1100px) {
+            .fish-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 850px) {
+            .fish-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .fish-item:nth-child(even) {
+                transform: translateY(30px);
+            }
+            
+            .fish-item:nth-child(odd) {
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .fish-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .fish-item {
+                width: 260px;
+                height: 140px;
+                justify-self: center;
+                transform: translateY(0) !important;
+            }
+            
+            .fish-body {
+                width: 200px;
+                height: 80px;
+                left: 50px;
+            }
+            
+            .fish-tail {
+                border-top: 40px solid transparent;
+                border-bottom: 40px solid transparent;
+                border-left: 60px solid;
+                left: 10px;
+            }
+            
+            .fin-top {
+                width: 30px;
+                height: 40px;
+                left: 120px;
+            }
+            
+            .fin-bottom {
+                width: 25px;
+                height: 35px;
+                left: 130px;
+            }
+            
+            .fish-eye {
+                width: 20px;
+                height: 20px;
+                right: 40px;
+            }
+            
+            .menu-text {
+                left: 70px;
+                font-size: 1.1rem;
+                width: 130px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Фоновые пузырьки -->
+    <div class="background-bubbles" id="backgroundBubbles"></div>
+
+    <div class="header">
+        <h1>Рыбки в шахматном порядке</h1>
+        <p class="subtitle">Наведите курсор на рыбку, чтобы увидеть эффект</p>
+    </div>
+
+    <div class="fish-container">
+        <div class="fish-item fish-1">
+            <div class="fish-tail"></div>
+            <div class="fish-body"></div>
+            <div class="fin-top"></div>
+            <div class="fin-bottom"></div>
+            <div class="fish-eye"></div>
+            <div class="menu-text">Главная</div>
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+        </div>
+
+        <div class="fish-item fish-2">
+            <div class="fish-tail"></div>
+            <div class="fish-body"></div>
+            <div class="fin-top"></div>
+            <div class="fin-bottom"></div>
+            <div class="fish-eye"></div>
+            <div class="menu-text">О нас</div>
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+        </div>
+
+        <div class="fish-item fish-3">
+            <div class="fish-tail"></div>
+            <div class="fish-body"></div>
+            <div class="fin-top"></div>
+            <div class="fin-bottom"></div>
+            <div class="fish-eye"></div>
+            <div class="menu-text">Услуги</div>
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+        </div>
+
+        <div class="fish-item fish-4">
+            <div class="fish-tail"></div>
+            <div class="fish-body"></div>
+            <div class="fin-top"></div>
+            <div class="fin-bottom"></div>
+            <div class="fish-eye"></div>
+            <div class="menu-text">Контакты</div>
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+        </div>
+
+        <div class="fish-item fish-5">
+            <div class="fish-tail"></div>
+            <div class="fish-body"></div>
+            <div class="fin-top"></div>
+            <div class="fin-bottom"></div>
+            <div class="fish-eye"></div>
+            <div class="menu-text">Галерея</div>
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+        </div>
+
+        <div class="fish-item fish-6">
+            <div class="fish-tail"></div>
+            <div class="fish-body"></div>
+            <div class="fin-top"></div>
+            <div class="fin-bottom"></div>
+            <div class="fish-eye"></div>
+            <div class="menu-text">Блог</div>
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+        </div>
+
+        <div class="fish-item fish-7">
+            <div class="fish-tail"></div>
+            <div class="fish-body"></div>
+            <div class="fin-top"></div>
+            <div class="fin-bottom"></div>
+            <div class="fish-eye"></div>
+            <div class="menu-text">Отзывы</div>
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+        </div>
+
+        <div class="fish-item fish-8">
+            <div class="fish-tail"></div>
+            <div class="fish-body"></div>
+            <div class="fin-top"></div>
+            <div class="fin-bottom"></div>
+            <div class="fish-eye"></div>
+            <div class="menu-text">Партнеры</div>
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Создано с помощью HTML и CSS | Рыбки в шахматном порядке</p>
+    </div>
+
+    <script>
+        // Создаем фоновые пузырьки
+        const backgroundBubbles = document.getElementById('backgroundBubbles');
+        
+        for (let i = 0; i < 20; i++) {
+            const bubble = document.createElement('div');
+            bubble.classList.add('bg-bubble');
+            
+            // Случайный размер
+            const size = Math.random() * 30 + 10;
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+            
+            // Случайная позиция
+            bubble.style.left = `${Math.random() * 100}vw`;
+            
+            // Случайная задержка анимации
+            bubble.style.animationDelay = `${Math.random() * 15}s`;
+            
+            // Случайная продолжительность анимации
+            const duration = 15 + Math.random() * 10;
+            bubble.style.animationDuration = `${duration}s`;
+            
+            backgroundBubbles.appendChild(bubble);
+        }
+    </script>
+</body>
+</html>
