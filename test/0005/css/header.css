@@ -1,0 +1,66 @@
+/* Шапка  */
+
+header {
+	height: 130px;
+  	min-height: 130px;
+  	max-height: 130px;
+  	margin-left: 7%;
+  	margin-right: 7%;
+  	border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #E1E1E1;
+  	box-sizing: border-box;
+  	background-color: #F3F3F3;
+    /*position: sticky;*/
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  	box-sizing: border-box;
+  	padding-top: 20px;
+}
+
+.logo {
+	font-weight: bold;
+	color: #2c3e50;
+}
+
+.logo img {
+	position: relative;
+	top: -25px;
+	width: 65%;
+}
+
+/* Меню */
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav ul li {
+	margin-left: 55px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #424146;
+	font-weight: 500;
+	transition: color 0.3s;
+	white-space: nowrap;
+}
+
+nav ul li a:hover {
+	color: #3498db;
+}
+
+.mobile-menu-btn {
+	display: none;
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+}
