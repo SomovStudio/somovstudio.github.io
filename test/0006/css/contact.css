@@ -74,8 +74,22 @@
     font-weight: bold;
     transition: background-color 0.3s;
     cursor: pointer;
+
+    display: inline-block;
+    padding: 12px 30px;
+    background: #087D80;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .contact-btn:hover {
     background-color: #333333;
+
+    background: #E0BA69;
+    color: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.4);
 }
