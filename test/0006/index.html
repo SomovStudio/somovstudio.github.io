@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>ООО «ДОН-ЭСТ ПЛЮС»</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <link rel="stylesheet" type="text/css" href="./css/bunner.css">
+    <link rel="stylesheet" type="text/css" href="./css/slider.css">
+    <link rel="stylesheet" type="text/css" href="./css/products.css">
+    <link rel="stylesheet" type="text/css" href="./css/about.css">
+    <link rel="stylesheet" type="text/css" href="./css/goods.css">
+    <link rel="stylesheet" type="text/css" href="./css/news.css">
+    <link rel="stylesheet" type="text/css" href="./css/contact.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/mobile.css">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/mobile.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/goods.js"></script>
+    <script src="./js/news.js"></script>
+</head>
+<body>
+	<div class="background-bubbles" id="backgroundBubbles"></div>
+
+	<!-- Шапка -->
+	<header>
+		<div class="container header-container">
+            <div class="logo">
+                <img src="./img/logo.png" alt="ООО &laquo;ДОН-ЭСТ-ПЛЮС&raquo;">
+                <div class="logo-name">ООО «ДОН-ЭСТ ПЛЮС»</div>
+            </div>
+            
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Продукция</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+	</header>
+
+	<!-- Баннер -->
+	<section class="bunner">
+        <div class="container">
+            <div class="slider-container">
+                <!-- Стрелки -->
+                <div class="arrow arrow-prev"></div>
+                <div class="arrow arrow-next"></div>
+
+                <div class="slider">
+                    <!-- Слайд 1 -->
+                    <div class="slide">
+                        <img src="./img/slide1.jpg" alt="Горы">
+                        <div class="slide-content">
+                            <h2>Слайд1</h2>
+                            <p>Описание</p>
+                            <a href="#" class="slide-btn">Узнать больше</a>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 2 -->
+                    <div class="slide">
+                        <img src="./img/slide2.jpg" alt="Горы">
+                        <div class="slide-content">
+                            <h2>Слайд2</h2>
+                            <p>Описание</p>
+                            <a href="#" class="slide-btn">Узнать больше</a>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 3 -->
+                    <div class="slide">
+                        <img src="./img/slide1.jpg" alt="Горы">
+                        <div class="slide-content">
+                            <h2>Слайд3</h2>
+                            <p>Описание</p>
+                            <a href="#" class="slide-btn">Узнать больше</a>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 4 -->
+                    <div class="slide">
+                        <img src="./img/slide2.jpg" alt="Горы">
+                        <div class="slide-content">
+                            <h2>Слайд4</h2>
+                            <p>Описание</p>
+                            <a href="#" class="slide-btn">Узнать больше</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="indicators">
+                    <div class="indicator active" data-slide="0"></div>
+                    <div class="indicator" data-slide="1"></div>
+                    <div class="indicator" data-slide="2"></div>
+                    <div class="indicator" data-slide="3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!-- Продукция -->
+    <section class="products">
+        <div class="container">
+            <div class="products-title">
+                <h2>Наша продукция</h2>
+                <p>Разделы производства продукции</p>
+            </div>
+            <div class="products-grid">
+                <div class="products-card">
+                    <div class="products-icon"><img src="./img/products-01.jpg" alt="image"></div>
+                    <h3>ДОН-ФИШ</h3>
+                    <p class="products-description">Краткое описание содержимого данного раздела.</p>
+                </div>
+                <div class="products-card">
+                    <div class="products-icon"><img src="./img/products-02.jpg" alt="image"></div>
+                    <h3>КАЮТ-КОМПАНИЯ</h3>
+                    <p class="products-description">Краткое описание содержимого данного раздела.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О компании -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>О компании</h2>
+                    <p>
+                        Компания ООО «Дон-Эст Плюс» существует с 1998 года и является крупнейшим предприятием в рыбной отрасли в Луганске и Луганской обл. Основными видами деятельности предприятия являются переработка и реализация рыбы и морепродуктов.
+                    </p>
+                    <a href="#" class="about-btn">Подробнее о нас</a>
+                </div>
+                <div class="about-image">
+                    <img src="./img/company.jpg" alt="image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Слайдер товаров -->
+    <section class="goods">
+        <div class="container">
+            <div class="goods-title">
+                <h2>Товары</h2>
+            </div>
+            <div class="goods-slider-container">
+                <div class="goods-slider-header">
+                    <h2 class="goods-slider-title">Список всех товаров смотрите в каталоге</h2>
+                    <div class="goods-slider-controls">
+                        <button class="goods-slider-btn goods-slider-prev-btn" disabled>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="goods-slider-btn goods-slider-next-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="goods-slider-wrapper">
+                    <!-- Товары будут добавлены через JavaScript (файл goods.js) -->
+                </div>
+                
+                <div class="goods-slider-indicators">
+                    <!-- Индикаторы будут добавлены через JavaScript (файл goods.js) -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Новости -->
+    <section class="news">
+        <div class="container">
+            <div class="news-title">
+                <h2>Новности</h2>
+                <p>Самые свежиме новости на сайте</p>
+            </div>
+            <div class="news-container">
+                <div class="news-grid" id="newsGrid">
+                    <!-- Новости будут добавляться через JavaScript -->
+                </div>
+                
+                <div class="news-pagination">
+                    <button class="news-pagination-page-btn news-pagination-prev-btn">Назад</button>
+                    <div class="news-pagination-page-numbers" id="newsPaginationPageNumbers"></div>
+                    <button class="news-pagination-page-btn news-pagination-next-btn">Вперед</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-title">
+                <h2>Свяжитесь с нами</h2>
+                <p>Мы всегда рады ответить на ваши вопросы</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Контактная информация</h3>
+                    <p><i>📍</i> ЛНР, 91007, г. Луганск, г.о. Луганский, Лесной мупик, 1-В</p>
+                    <p><i>📞</i> +7 959 180 22 51</p>
+                    <p><i>✉️</i> info@example.com</p>
+                    <p><i>🕒</i> Пн-Пт: 9:00-18:00</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="email" placeholder="Ваш email" required>
+                        <input type="text" placeholder="Тема сообщения">
+                        <textarea placeholder="Ваше сообщение" required></textarea>
+                        <button type="submit" class="contact-btn">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!-- Подвал -->
+	<footer>
+		<div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="./img/logo_footer.png" alt="ООО «ДОН-ЭСТ ПЛЮС»">
+                        <h3 class="footer-company">ООО «ДОН-ЭСТ ПЛЮС»</h3>    
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>О компании</h3>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Наша команда</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Новости</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Продукция</h3>
+                    <ul>
+                        <li><a href="#">КАЮТ-КОМПАНИЯ</a></li>
+                        <li><a href="#">ДОН-ФИШ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li>ЛНР, 91007, г. Луганск,</li>
+                        <li>г.о. Луганский, Лесной мупик, 1-В</li>
+                        <li>info@example.com</li>
+                        <li>м./ф.: +7 959 180 22 51</li>
+                        <li>Пн-Пт: 9:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ООО «ДОН-ЭСТ ПЛЮС». Все права защищены.</p>
+            </div>
+        </div>
+	</footer>
+</body>

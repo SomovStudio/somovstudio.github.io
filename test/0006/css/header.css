@@ -1,0 +1,75 @@
+/* Шапка  */
+
+header {
+	background-color: #04917E;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-weight: bold;
+	color: #2c3e50;
+}
+
+.logo img {
+	width: 20%;
+	display: inline-block;
+  	vertical-align: middle;
+}
+
+.logo-name {
+	color: #E0BA69;
+    font-weight: bold;
+    text-align: left;
+    display: inline-block;
+  	vertical-align: middle;
+  	font-size: 18pt;
+  	padding-left: 15px;
+  	font-family: 'Bahnschrift SemiBold';
+}
+
+/* Меню */
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav ul li {
+	margin-left: 55px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	font-weight: 500;
+	transition: color 0.3s;
+	white-space: nowrap;
+	padding: 15px;
+}
+
+nav ul li a:hover {
+	background: #E0BA69;
+    color: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.4);
+	padding: 15px;
+	border-radius: 25px;
+}
+
+.mobile-menu-btn {
+	display: none;
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+}
