@@ -33,7 +33,7 @@ $(document).ready(function() {
     
     // Функция для обработки скролла
     function handleScroll() {
-        $('.block').each(function(index) {
+        $('.animation').each(function(index) {
             var $element = $(this);
             
             // Проверяем, виден ли элемент и еще не показан

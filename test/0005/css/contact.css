@@ -1,31 +1,29 @@
 /* Контакты */
 .contact {
-    padding: 80px 0;
-    background-color: #F3F3F3;
-    background-image: url("../img/bunner-03.png");
-    background-repeat: no-repeat;
-    background-position: 30% 100%;
-    background-size: 20%;
+    padding-top: 150px;
+    padding-bottom: 80px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #1D2576;
+    background-image: url("../img/water_down.png");
+    background-repeat: repeat-x;
 }
 
 .contact-title {
-    text-align: left;
+    text-align: center;
     margin-bottom: 50px;
 }
 
 .contact-title h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    font-family: Rubik, sans-serif;
-    font-weight: 700;
-    font-size: 3.0vw;
-    line-height: 5vw;
-    text-transform: uppercase;
+    font-size: 42px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
 }
 
 .contact-title p {
-    font-family: Rubik, sans-serif;
-    color: #424146;
+    color: #EEEEEE;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact-container {
@@ -36,13 +34,14 @@
 
 .contact-info h3 {
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #EEEEEE;
 }
 
 .contact-info p {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    color: #EEEEEE;
 }
 
 .contact-info i {
@@ -66,17 +65,22 @@
 
 .contact-btn {
     display: inline-block;
-    background-color: #035CB0;
-    color: white;
     padding: 12px 30px;
-    border-radius: 5px;
-    border-color: transparent;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    color: white;
     text-decoration: none;
+    border-radius: 25px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    border-color: transparent;
     cursor: pointer;
 }
 
 .contact-btn:hover {
-    background-color: #333333;
+    content: '';
+    background: #FFF;
+    color: #333333;
+    transition: left 0.5s;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.4);
 }

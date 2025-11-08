@@ -1,8 +1,8 @@
 /* Подвал */
 
 footer {
-    background-color: rgba(29, 74, 142, 0.7);
-    color: white;
+    background-color: #F3F3F3;
+    color: #424146;
     padding: 50px 0 20px;
 }
 
@@ -27,19 +27,24 @@ footer {
 }
 
 .footer-column ul li a {
-    color: #bdc3c7;
+    color: #424146;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
-    color: white;
+    color: #3498db;
+}
+
+.footer-company {
+    color: #E0BA69;
+    font-weight: bold;
 }
 
 .copyright {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid #1D4A8E;
-    color: #bdc3c7;
+    border-top: 1px solid #E1E1E1;
+    color: #424146;
     font-size: 14px;
 }

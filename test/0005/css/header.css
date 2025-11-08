@@ -1,27 +1,19 @@
 /* Шапка  */
 
 header {
-	height: 130px;
-  	min-height: 130px;
-  	max-height: 130px;
-  	margin-left: 7%;
-  	margin-right: 7%;
-  	border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #E1E1E1;
-  	box-sizing: border-box;
-  	background-color: #F3F3F3;
-    /*position: sticky;*/
+	background-color: #202F8E;
+    /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/
+    position: sticky;
     top: 0;
     z-index: 100;
+    padding-bottom: 5px;
+    text-transform: uppercase;
 }
 
 .header-container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-  	box-sizing: border-box;
-  	padding-top: 20px;
 }
 
 .logo {
@@ -30,15 +22,14 @@ header {
 }
 
 .logo img {
-	position: relative;
-	top: -25px;
-	width: 65%;
+	width: 45%;
 }
 
 /* Меню */
 nav ul {
 	display: flex;
 	list-style: none;
+	padding-top: 10%;
 }
 
 nav ul li {
@@ -47,7 +38,7 @@ nav ul li {
 
 nav ul li a {
 	text-decoration: none;
-	color: #424146;
+	color: white;
 	font-weight: 500;
 	transition: color 0.3s;
 	white-space: nowrap;

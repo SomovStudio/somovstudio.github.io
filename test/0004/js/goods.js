@@ -112,7 +112,7 @@ $(function() {
                             <div class="goods-slider-product-stars">${starsHTML}</div>
                             <div class="goods-slider-product-rating-count">(${product.reviews})</div>
                         </div>
-                        <button class="goods-slider-product-add-to-cart">В корзину</button>
+                        <button class="goods-slider-product-add-to-cart">Под заказ</button>
                     </div>
                 </div>
             `);

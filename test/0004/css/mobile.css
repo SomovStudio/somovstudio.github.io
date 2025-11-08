@@ -1,53 +1,17 @@
 /* Адаптивность */
 
-@media (max-width: 1440px) {
-    .bunner-mini-logos {
-        padding: 0;
-        text-align: center;
-    }
-
-    .bunner-mini-logos img {
-        padding: 0;
-        display: inline-block;
-        margin-right: 10px;
-        padding-top: 15%;
-        width: 35%;
-    }
-
-    /*
-    .bunner-panel-left {
-        top: 99%;
-        width: 100%;
-    }
-
-    .bunner-right-box {
-        display: none;
-    }
-
-    .bunner-company {
-        display: none;
-    }
-    */
-}
-
 @media (max-width: 1024px) {
-
-    .bunner-panel-left {
-        top: 99%;
-        width: 100%;
-    }
-
-    .bunner-right-box {
-        display: none;
-    }
-
-    .bunner-company {
-        display: none;
+    .about {
+        clip-path: polygon(0.00% 0.00%,100.00% 0.00%,100.00% 100%,0.00% 100%);
     }
 
     .goods-slider-product-card {
         /*flex: 0 0 calc(25% - 16px);*/
         flex: 0 0 calc(40% - 16px);
+    }
+
+    .contact {
+        clip-path: polygon(0.00% 0.00%,100.00% 0.00%,100.00% 100%,0.00% 100%);
     }
 }
 
@@ -99,17 +63,8 @@
         font-size: 18px;
     }
 
-    .bunner-panel-left {
-        top: 99%;
-        width: 100%;
-    }
-
-    .bunner-right-box {
-        display: none;
-    }
-
-    .bunner-company {
-        display: none;
+    .about {
+        clip-path: polygon(0.00% 0.00%,100.00% 0.00%,100.00% 100%,0.00% 100%);
     }
 
     .about-content {
@@ -124,20 +79,19 @@
     .news-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .contact {
+        clip-path: polygon(0.00% 0.00%,100.00% 0.00%,100.00% 100%,0.00% 100%);
+    }
+
+    .footer-content {
+        text-align: center;
+    }
 }
 
 @media (max-width: 576px) {
-    .bunner-panel-left {
-        top: 99%;
-        width: 100%;
-    }
-
-    .bunner-right-box {
-        display: none;
-    }
-
-    .bunner-company {
-        display: none;
+    .about {
+        clip-path: polygon(0.00% 0.00%,100.00% 0.00%,100.00% 100%,0.00% 100%);
     }
 
     .goods-slider-product-card {
@@ -148,23 +102,30 @@
     .goods-slider-container {
         padding: 0 20px;
     }
+
+    .contact {
+        clip-path: polygon(0.00% 0.00%,100.00% 0.00%,100.00% 100%,0.00% 100%);
+    }
+
+    .footer-content {
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
-    .bunner-panel-left {
-        top: 99%;
-        width: 100%;
-    }
-
-    .bunner-right-box {
-        display: none;
-    }
-
-    .bunner-company {
-        display: none;
+    .about {
+        clip-path: polygon(0.00% 0.00%,100.00% 0.00%,100.00% 100%,0.00% 100%);
     }
 
     .news-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact {
+        clip-path: polygon(0.00% 0.00%,100.00% 0.00%,100.00% 100%,0.00% 100%);
+    }
+
+    .footer-content {
+        text-align: center;
     }
 }

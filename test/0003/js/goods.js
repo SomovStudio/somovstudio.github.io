@@ -112,7 +112,7 @@ $(function() {
                             <div class="goods-slider-product-stars">${starsHTML}</div>
                             <div class="goods-slider-product-rating-count">(${product.reviews})</div>
                         </div>
-                        <button class="goods-slider-product-add-to-cart">Подробно</button>
+                        <button class="goods-slider-product-add-to-cart">Под заказ</button>
                     </div>
                 </div>
             `);
@@ -158,8 +158,8 @@ $(function() {
     function goToSlide(slideIndex) {
         currentPosition = slideIndex;
         
-        // Исправленный расчет смещения
-        const productWidth = 165 / visibleProducts;
+        // Расчет смещения
+        const productWidth = 170 / visibleProducts;
         const translateX = -currentPosition * productWidth;
         $sliderWrapper.css('transform', `translateX(${translateX}%)`);
         

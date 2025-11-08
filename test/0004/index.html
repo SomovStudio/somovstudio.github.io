@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/bunner.css">
+    <link rel="stylesheet" type="text/css" href="./css/slider.css">
     <link rel="stylesheet" type="text/css" href="./css/products.css">
     <link rel="stylesheet" type="text/css" href="./css/about.css">
     <link rel="stylesheet" type="text/css" href="./css/goods.css">
@@ -17,27 +18,33 @@
     <link rel="stylesheet" type="text/css" href="./css/contact.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <link rel="stylesheet" type="text/css" href="./css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="./css/animation.css">
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/mobile.js"></script>
+    <script src="./js/slider.js"></script>
     <script src="./js/goods.js"></script>
     <script src="./js/news.js"></script>
+    <script src="./js/animation.js"></script>
 </head>
 <body>
-	
+	<div class="background-bubbles" id="backgroundBubbles"></div>
+
 	<!-- Шапка -->
 	<header>
 		<div class="container header-container">
             <div class="logo">
-                <img src="./img/don-est-plus.png" alt="ООО &laquo;ДОН-ЭСТ-ПЛЮС&raquo;">
+                <img src="./img/logo.png" alt="ООО &laquo;ДОН-ЭСТ-ПЛЮС&raquo;">
+                <div class="logo-name">ООО «ДОН-ЭСТ ПЛЮС»</div>
             </div>
+            
             <button class="mobile-menu-btn">☰</button>
             <nav>
                 <ul>
-                    <li><a href="#" class="header-menu-btn">Главная</a></li>
-                    <li><a href="#" class="header-menu-btn">О нас</a></li>
-                    <li><a href="#" class="header-menu-btn">Новости</a></li>
-                    <li><a href="#" class="header-menu-btn">Продукция</a></li>
-                    <li><a href="#" class="header-menu-btn">Контакты</a></li>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Продукция</a></li>
+                    <li><a href="#">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,45 +52,66 @@
 
 	<!-- Баннер -->
 	<section class="bunner">
-        <div class="bunner-container-box">
-          <div class="bunner-left-box">
-            <div class="bunner-panel-left">
-                <a rel="nofollow" href="tel:+79591802251">+7 (959) 180-22-51</a>
-                &emsp;<a href="mailto:info@gasmarket.ru">info@gasmarket.ru</a>
-            </div>
-            <div class="bunner-border-1">
-                <div class="bunner-border-2">
-                    <div class="bunner-border-3">
-                        <div class="bunner-border-4"></div>
+        <div class="container">
+            <div class="slider-container">
+                <!-- Стрелки -->
+                <div class="arrow arrow-prev"></div>
+                <div class="arrow arrow-next"></div>
+
+                <div class="slider">
+                    <!-- Слайд 1 -->
+                    <div class="slide">
+                        <img src="./img/slide1.jpg" alt="Горы">
+                        <div class="slide-content">
+                            <h2>Слайд1</h2>
+                            <p>Описание</p>
+                            <a href="#" class="slide-btn">Узнать больше</a>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 2 -->
+                    <div class="slide">
+                        <img src="./img/slide2.jpg" alt="Горы">
+                        <div class="slide-content">
+                            <h2>Слайд2</h2>
+                            <p>Описание</p>
+                            <a href="#" class="slide-btn">Узнать больше</a>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 3 -->
+                    <div class="slide">
+                        <img src="./img/slide3.jpg" alt="Горы">
+                        <div class="slide-content">
+                            <h2>Слайд3</h2>
+                            <p>Описание</p>
+                            <a href="#" class="slide-btn">Узнать больше</a>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 4 -->
+                    <div class="slide">
+                        <img src="./img/slide1.jpg" alt="Горы">
+                        <div class="slide-content">
+                            <h2>Слайд4</h2>
+                            <p>Описание</p>
+                            <a href="#" class="slide-btn">Узнать больше</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-          </div>
-          <div class="bunner-right-box">
-            <div class="bunner-text">
-                Компания ООО «Дон-Эст Плюс» существует с 1998 года и является крупнейшим предприятием в рыбной отрасли в Луганске и Луганской обл. Основными видами деятельности предприятия являются переработка и реализация рыбы и морепродуктов.
-            </div>
-            <div class="bunner-mini-logos">
-                <img src="./img/mini_logo1.png">
-                <img src="./img/mini_logo2.png">
-            </div>
-            <div class="bunner-panel-right">ЛНР, 91007, г. Луганск, г.о. Луганский, Лесной мупик, 1-В</div>
-          </div>
-        </div>
-        <div class="bunner-company">
-            <div class="bunner-company-container">
-                <div class="bunner-company-logo">
-                    <div class="bunner-company-logo-img">
-                        <img src="./img/logo.png" alt="ООО «ДОН-ЭСТ ПЛЮС»">
-                    </div>
+
+                <div class="indicators">
+                    <div class="indicator active" data-slide="0"></div>
+                    <div class="indicator" data-slide="1"></div>
+                    <div class="indicator" data-slide="2"></div>
+                    <div class="indicator" data-slide="3"></div>
                 </div>
-                <div class="bunner-company-title">ООО «ДОН-ЭСТ ПЛЮС»</div>
             </div>
         </div>
     </section>
 
 	<!-- Продукция -->
-    <section class="products">
+    <section class="products block">
         <div class="container">
             <div class="products-title">
                 <h2>Наша продукция</h2>
@@ -105,12 +133,14 @@
     </section>
 
     <!-- О компании -->
-    <section class="about">
+    <section class="about block">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
                     <h2>О компании</h2>
-                    <p>Краткое описание инфорации о компании.</p>
+                    <p>
+                        Компания ООО «Дон-Эст Плюс» существует с 1998 года и является крупнейшим предприятием в рыбной отрасли в Луганске и Луганской обл. Основными видами деятельности предприятия являются переработка и реализация рыбы и морепродуктов.
+                    </p>
                     <a href="#" class="about-btn">Подробнее о нас</a>
                 </div>
                 <div class="about-image">
@@ -121,15 +151,14 @@
     </section>
 
     <!-- Слайдер товаров -->
-    <section class="goods">
+    <section class="goods block">
         <div class="container">
             <div class="goods-title">
                 <h2>Товары</h2>
-                <p>Список всех товаров смотрите в каталоге</p>
             </div>
             <div class="goods-slider-container">
                 <div class="goods-slider-header">
-                    <h2 class="goods-slider-title">Популярные товары</h2>
+                    <h2 class="goods-slider-title">Список всех товаров смотрите в каталоге</h2>
                     <div class="goods-slider-controls">
                         <button class="goods-slider-btn goods-slider-prev-btn" disabled>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,7 +185,7 @@
     </section>
 
     <!-- Новости -->
-    <section class="news">
+    <section class="news block">
         <div class="container">
             <div class="news-title">
                 <h2>Новности</h2>
@@ -177,7 +206,7 @@
     </section>
 
     <!-- Контакты -->
-    <section class="contact">
+    <section class="contact block">
         <div class="container">
             <div class="contact-title">
                 <h2>Свяжитесь с нами</h2>
@@ -209,8 +238,10 @@
 		<div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3 class="footer-company">ООО «ДОН-ЭСТ ПЛЮС»</h3>
-                    <img src="./img/logo_footer.png" alt="ООО «ДОН-ЭСТ ПЛЮС»">
+                    <div class="footer-logo">
+                        <img src="./img/logo_footer.png" alt="ООО «ДОН-ЭСТ ПЛЮС»">
+                        <h3 class="footer-company">ООО «ДОН-ЭСТ ПЛЮС»</h3>    
+                    </div>
                 </div>
                 <div class="footer-column">
                     <h3>О компании</h3>

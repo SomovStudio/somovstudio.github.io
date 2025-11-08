@@ -1,89 +1,53 @@
 /* Баннер */
 
 .bunner {
-	background-color: #F3F3F3;
-	font-family: Rubik, sans-serif;
-	color: #090E12;
-	padding-top: 50px;
-	text-align: left;
+	background: linear-gradient(to bottom, #202F8E, #1D2576);
+	color: white;
+	text-align: center;
+	min-height: 60vh;
+}
+
+.bunner-wrapper-1 {
+	background: linear-gradient(to bottom right, #FFFFFF, #1D2576);
+	/*clip-path: polygon(0.00% 0.00%,0% 100%,100% 100%);*/
+	/*clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);*/
+	clip-path: polygon(0.00% 0.00%,100.00% 41.42%,57.70% 99.80%,0.00% 58.18%);
+	opacity: 0.5;
+	min-height: 60vh;
+}
+
+.bunner-wrapper-2 {
+	background: linear-gradient(to bottom right, #FFFFFF, #1D2576);
+	/*clip-path: polygon(0.00% 0.00%,0% 100%,100% 100%);*/
+	/*clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);*/
+	clip-path: polygon(0.00% 0.00%,100.00% 41.42%,57.70% 99.80%,0.00% 58.18%);
+	opacity: 0.1;
+	min-height: 60vh;
+	background-image: url("../img/water.png");
 }
 
 .bunner h1 {
+	font-size: 48px;
 	margin-bottom: 20px;
-	font-family: Rubik, sans-serif;
-	font-weight: 700;
-	font-size: 3.9vw;
-	line-height: 5vw;
-	text-transform: uppercase;
 }
 
 .bunner p {
 	font-size: 20px;
-	line-height: 2.0;
 	max-width: 700px;
-	padding-bottom: 50px;
-	color: #424146;
+	margin: 0 auto 30px;
 }
 
 .bunner-btn {
 	display: inline-block;
-	background-color: #035CB0;
+	background-color: #3498db;
 	color: white;
 	padding: 12px 30px;
 	border-radius: 5px;
 	text-decoration: none;
 	font-weight: bold;
 	transition: background-color 0.3s;
-    border-top-left-radius: 250px;
-    border-top-right-radius: 250px;
-    border-bottom-right-radius: 250px;
-    border-bottom-left-radius: 250px;
 }
 
 .bunner-btn:hover {
 	background-color: #333333;
-}
-
-.bunner-mini-logos {
-	padding-top: 50px;
-}
-
-.bunner-mini-logos img {
-	background-color: #060D13;
-	border-radius: 20px;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.bunner-side-left, .bunner-side-right {
-	display: inline-block;
-	width: 49%;
-	vertical-align: top;
-	box-sizing: border-box;
-}
-
-.bunner-side-right img {
-	position: relative;
-	max-width: 100%;
-}
-
-.bunner-products-title {
-	padding-top: 20%;
-}
-
-.bunner-products-title h2 {
-	font-size: 48px;
-    margin-bottom: 20px;
-    font-family: Rubik, sans-serif;
-    font-weight: 700;
-    font-size: 3.0vw;
-    line-height: 5vw;
-    text-transform: uppercase;
-}
-
-.bunner-products-title p {
-	font-family: Rubik, sans-serif;
-	color: #424146;
 }
