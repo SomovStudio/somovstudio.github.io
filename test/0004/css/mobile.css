@@ -83,6 +83,10 @@
     .contact {
         clip-path: polygon(0.00% 0.00%,100.00% 0.00%,100.00% 100%,0.00% 100%);
     }
+
+    .footer-content {
+        text-align: center;
+    }
 }
 
 @media (max-width: 576px) {
@@ -102,6 +106,10 @@
     .contact {
         clip-path: polygon(0.00% 0.00%,100.00% 0.00%,100.00% 100%,0.00% 100%);
     }
+
+    .footer-content {
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -115,5 +123,9 @@
 
     .contact {
         clip-path: polygon(0.00% 0.00%,100.00% 0.00%,100.00% 100%,0.00% 100%);
+    }
+
+    .footer-content {
+        text-align: center;
     }
 }

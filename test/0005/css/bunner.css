@@ -1,0 +1,53 @@
+/* Баннер */
+
+.bunner {
+	background: linear-gradient(to bottom, #202F8E, #1D2576);
+	color: white;
+	text-align: center;
+	min-height: 60vh;
+}
+
+.bunner-wrapper-1 {
+	background: linear-gradient(to bottom right, #FFFFFF, #1D2576);
+	/*clip-path: polygon(0.00% 0.00%,0% 100%,100% 100%);*/
+	/*clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);*/
+	clip-path: polygon(0.00% 0.00%,100.00% 41.42%,57.70% 99.80%,0.00% 58.18%);
+	opacity: 0.5;
+	min-height: 60vh;
+}
+
+.bunner-wrapper-2 {
+	background: linear-gradient(to bottom right, #FFFFFF, #1D2576);
+	/*clip-path: polygon(0.00% 0.00%,0% 100%,100% 100%);*/
+	/*clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);*/
+	clip-path: polygon(0.00% 0.00%,100.00% 41.42%,57.70% 99.80%,0.00% 58.18%);
+	opacity: 0.1;
+	min-height: 60vh;
+	background-image: url("../img/water.png");
+}
+
+.bunner h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.bunner p {
+	font-size: 20px;
+	max-width: 700px;
+	margin: 0 auto 30px;
+}
+
+.bunner-btn {
+	display: inline-block;
+	background-color: #3498db;
+	color: white;
+	padding: 12px 30px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+.bunner-btn:hover {
+	background-color: #333333;
+}

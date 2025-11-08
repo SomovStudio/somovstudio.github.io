@@ -1,0 +1,86 @@
+/* Контакты */
+.contact {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #1D2576;
+    background-image: url("../img/water_down.png");
+    background-repeat: repeat-x;
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-title h2 {
+    font-size: 42px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.contact-title p {
+    color: #EEEEEE;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    color: #EEEEEE;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: #EEEEEE;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    content: '';
+    background: #FFF;
+    color: #333333;
+    transition: left 0.5s;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.4);
+}

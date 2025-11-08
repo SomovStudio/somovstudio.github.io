@@ -2,6 +2,7 @@
 
 @media (max-width: 1024px) {
     .goods-slider-product-card {
+        /*flex: 0 0 calc(25% - 16px);*/
         flex: 0 0 calc(40% - 16px);
     }
 }
@@ -66,42 +67,21 @@
     .news-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .footer-content {
-        text-align: center;
-    }
 }
 
 @media (max-width: 576px) {
-
-    header {
-        opacity: 1;
-        max-height: none;
-    }
-
-    .bunner {
-        display: none;
-    }
-
     .goods-slider-product-card {
+        /*flex: 0 0 calc(70% - 16px);*/
         flex: 0 0 calc(85% - 16px);
     }
 
     .goods-slider-container {
         padding: 0 20px;
     }
-
-    .footer-content {
-        text-align: center;
-    }
 }
 
 @media (max-width: 480px) {
     .news-grid {
         grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        text-align: center;
     }
 }

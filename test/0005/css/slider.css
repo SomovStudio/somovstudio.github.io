@@ -1,12 +1,12 @@
 .slider-container {
-    position: relative;
+    position: absolute;
+    top: 65px;
+    left: 0;
     width: 100%;
-    max-width: 1200px;
+    max-width: 100wh;
     height: 500px;
     margin: 50px auto;
     overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(224,186,105,0.7);
 }
 
 .slider {
@@ -24,62 +24,61 @@
 }
 
 .slide img {
-    width: 100%;
-    height: 100%;
+    /*width: 100%;
+    height: 100%;*/
+    position: absolute;
+    left: 15%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
-
-/*
-.slide:hover img {
-    transform: scale(1.05);
-}
-*/
 
 .slide-content {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
     color: white;
     padding: 40px;
     transform: translateY(0);
     transition: transform 0.3s ease;
 }
 
-/*
-.slide:hover .slide-content {
-    transform: translateY(-10px);
-}
-*/
-
 .slide h2 {
     font-size: 2.5em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    position: relative;
+    top: -200px;
 }
 
 .slide p {
     font-size: 1.2em;
     margin-bottom: 20px;
     opacity: 0.9;
+    position: relative;
+    top: -200px;
+    left: 105px;
+    /*text-align: right;*/
 }
 
 .slide-btn {
     display: inline-block;
     padding: 12px 30px;
-    background: #087D80;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
     color: white;
     text-decoration: none;
     border-radius: 25px;
     font-weight: bold;
     transition: all 0.3s ease;
+    position: relative;
+    top: -50px;
 }
 
 .slide-btn:hover {
-    background: #E0BA69;
+    content: '';
+    background: #FFF;
     color: #333333;
+    transition: left 0.5s;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255,255,255,0.4);
 }
@@ -91,7 +90,6 @@
     transform: translateY(-50%);
     width: 60px;
     height: 60px;
-    background: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     cursor: pointer;
