@@ -1,0 +1,170 @@
+/* Адаптивность */
+
+@media (max-width: 1440px) {
+    .bunner-mini-logos {
+        padding: 0;
+        text-align: center;
+    }
+
+    .bunner-mini-logos img {
+        padding: 0;
+        display: inline-block;
+        margin-right: 10px;
+        padding-top: 15%;
+        width: 35%;
+    }
+
+    /*
+    .bunner-panel-left {
+        top: 99%;
+        width: 100%;
+    }
+
+    .bunner-right-box {
+        display: none;
+    }
+
+    .bunner-company {
+        display: none;
+    }
+    */
+}
+
+@media (max-width: 1024px) {
+
+    .bunner-panel-left {
+        top: 99%;
+        width: 100%;
+    }
+
+    .bunner-right-box {
+        display: none;
+    }
+
+    .bunner-company {
+        display: none;
+    }
+
+    .goods-slider-product-card {
+        /*flex: 0 0 calc(25% - 16px);*/
+        flex: 0 0 calc(40% - 16px);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .bunner h1 {
+        font-size: 36px;
+    }
+
+    .bunner p {
+        font-size: 18px;
+    }
+
+    .bunner-panel-left {
+        top: 99%;
+        width: 100%;
+    }
+
+    .bunner-right-box {
+        display: none;
+    }
+
+    .bunner-company {
+        display: none;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .goods-slider-product-card {
+        /*flex: 0 0 calc(33.333% - 16px);*/
+        flex: 0 0 calc(40% - 16px);
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .bunner-panel-left {
+        top: 99%;
+        width: 100%;
+    }
+
+    .bunner-right-box {
+        display: none;
+    }
+
+    .bunner-company {
+        display: none;
+    }
+
+    .goods-slider-product-card {
+        /*flex: 0 0 calc(70% - 16px);*/
+        flex: 0 0 calc(85% - 16px);
+    }
+
+    .goods-slider-container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bunner-panel-left {
+        top: 99%;
+        width: 100%;
+    }
+
+    .bunner-right-box {
+        display: none;
+    }
+
+    .bunner-company {
+        display: none;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,6 +1,6 @@
 .goods {
     padding: 80px 0;
-    background-color: white;
+    /*background-color: white;*/
 }
 
 .goods-title {
@@ -10,14 +10,18 @@
 
 .goods-title h2 {
     font-size: 36px;
-    color: #2c3e50;
+    color: #EEE;
     margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .goods-title p {
-    color: #7f8c8d;
+    color: #DDD;
     max-width: 600px;
     margin: 0 auto;
+    font-size: 22px;
+    padding-bottom: 15px;
 }
 
 .goods-slider-container {
@@ -36,7 +40,8 @@
 }
 
 .goods-slider-title {
-    color: #7f8c8d;
+    color: #DDD;
+    font-size: 22px;
     max-width: 600px;
 }
 
@@ -111,7 +116,7 @@
 .goods-slider-product-price {
     font-size: 18px;
     font-weight: bold;
-    color: #e74c3c;
+    color: #04917E;
     margin-bottom: 10px;
 }
 
@@ -134,7 +139,7 @@
 .goods-slider-product-add-to-cart {
     width: 100%;
     padding: 10px;
-    background-color: #3498db;
+    background: #087D80;
     color: white;
     border: none;
     border-radius: 4px;
@@ -144,7 +149,9 @@
 }
 
 .goods-slider-product-add-to-cart:hover {
-    background-color: #2980b9;
+    background: #E0BA69;
+    color: #333333;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.4);
 }
 
 .goods-slider-indicators {

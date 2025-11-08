@@ -1,309 +1,246 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>ООО «ДОН-ЭСТ ПЛЮС»</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-	<meta name="keywords" content="Somov Evgeniy, Сомов Евгений Павлович, automation qa engineer, testing, QA, автоматизированное тестирование, automation testing, бесплатно, freeware, soft, Browser Hat" />
-	<meta name="description" content="Сомов Евгений Павлович - специалист в области ручного (manual) и автоматизированного (Automation) тестирования (Testing) Selenium Appium" />
-	<link href="./source/img/favicon.ico" type="image/x-icon" rel="shortcut icon" />
-	<link rel="stylesheet" href="./source/css/style.css" />
-	<link rel="stylesheet" href="./source/css/video.css" />
-	<script>
-		(function () {
-			if (screen.width <= 1440) {
-  				//document.location ="about.html";
-			};
-		}());
-	</script>
-	<script src="./source/js/jquery.min.js"></script>
-	<script src="./source/js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>ООО «ДОН-ЭСТ ПЛЮС»</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <link rel="stylesheet" type="text/css" href="./css/bunner.css">
+    <link rel="stylesheet" type="text/css" href="./css/products.css">
+    <link rel="stylesheet" type="text/css" href="./css/about.css">
+    <link rel="stylesheet" type="text/css" href="./css/goods.css">
+    <link rel="stylesheet" type="text/css" href="./css/news.css">
+    <link rel="stylesheet" type="text/css" href="./css/contact.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/mobile.css">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/mobile.js"></script>
+    <script src="./js/goods.js"></script>
+    <script src="./js/news.js"></script>
 </head>
 <body>
-	<div class="background__fullscreen">
-	    <video id="video" loop="" muted="" autoplay="" poster="" class="background__video">
-	        <source src="source/video/video.mp4" type="video/mp4">
-	    </video>
-	</div>
+	
+	<!-- Шапка -->
+	<header>
+		<div class="container header-container">
+            <div class="logo">
+                <img src="./img/don-est-plus.png" alt="ООО &laquo;ДОН-ЭСТ-ПЛЮС&raquo;">
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#" class="header-menu-btn">Главная</a></li>
+                    <li><a href="#" class="header-menu-btn">О нас</a></li>
+                    <li><a href="#" class="header-menu-btn">Новости</a></li>
+                    <li><a href="#" class="header-menu-btn">Продукция</a></li>
+                    <li><a href="#" class="header-menu-btn">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+	</header>
 
-	<div class="start-logo"></div>
+	<!-- Баннер -->
+	<section class="bunner">
+        <div class="bunner-container-box">
+          <div class="bunner-left-box">
+            <div class="bunner-panel-left">
+                <a rel="nofollow" href="tel:+79591802251">+7 (959) 180-22-51</a>
+                &emsp;<a href="mailto:info@gasmarket.ru">info@gasmarket.ru</a>
+            </div>
+            <div class="bunner-border-1">
+                <div class="bunner-border-2">
+                    <div class="bunner-border-3">
+                        <div class="bunner-border-4"></div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="bunner-right-box">
+            <div class="bunner-text">
+                Компания ООО «Дон-Эст Плюс» существует с 1998 года и является крупнейшим предприятием в рыбной отрасли в Луганске и Луганской обл. Основными видами деятельности предприятия являются переработка и реализация рыбы и морепродуктов.
+            </div>
+            <div class="bunner-mini-logos">
+                <img src="./img/mini_logo1.png">
+                <img src="./img/mini_logo2.png">
+            </div>
+            <div class="bunner-panel-right">ЛНР, 91007, г. Луганск, г.о. Луганский, Лесной мупик, 1-В</div>
+          </div>
+        </div>
+        <div class="bunner-company">
+            <div class="bunner-company-container">
+                <div class="bunner-company-logo">
+                    <div class="bunner-company-logo-img">
+                        <img src="./img/logo.png" alt="ООО «ДОН-ЭСТ ПЛЮС»">
+                    </div>
+                </div>
+                <div class="bunner-company-title">ООО «ДОН-ЭСТ ПЛЮС»</div>
+            </div>
+        </div>
+    </section>
 
-	<div id="Menu" class="start-menu">
-		<span class="menu-item start-menu-item start-menu-item-img-a" id="MenuA">
-			<span class="menu-item-text start-menu-item-text">О компании</span>
-		</span>
-		<span class="menu-item start-menu-item start-menu-item-img-b" id="MenuB">
-			<span class="menu-item-text start-menu-item-text">Каталог</span>
-		</span>
-		<span class="menu-item start-menu-item start-menu-item-img-c" id="MenuC">
-			<span class="menu-item-text start-menu-item-text">Продукция</span>
-		</span>
-		<span class="menu-item start-menu-item start-menu-item-img-d" id="MenuD">
-			<span class="menu-item-text start-menu-item-text">Вопрос-ответ</span>
-		</span>
-		<span class="menu-item start-menu-item start-menu-item-img-e" id="MenuE">
-			<span class="menu-item-text start-menu-item-text">Информация</span>
-		</span>
-		<span class="menu-item start-menu-item start-menu-item-img-f" id="MenuF">
-			<span class="menu-item-text start-menu-item-text">Контакты</span>
-		</span>
-	</div>
-	<div class="main-wrapper">
-		<div id="files">
-			
-			<div class="panel-files" id="PanelFilesA">
-				<div class="file" onclick="$(this).ReadFile('A01.html', 'О компании');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>О компании</span>
-							<span class="file-description-date">История</span>
-						</div>
-						<div class="file-description-text">Компания ООО «ДОН-ЭСТ ПЛЮС» существует с 1998 года и является крупнейшим предприятием в рыбной отрасли в Луганске и Луганской обл.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('A02.html', 'О компании');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>О компании</span>
-							<span class="file-description-date">Контакты</span>
-						</div>
-						<div class="file-description-text">Адрес, телефон, социальные сети и пр.</div>
-					</div>
-				</div>
-			</div>
+	<!-- Продукция -->
+    <section class="products">
+        <div class="container">
+            <div class="products-title">
+                <h2>Наша продукция</h2>
+                <p>Разделы производства продукции</p>
+            </div>
+            <div class="products-grid">
+                <div class="products-card">
+                    <div class="products-icon"><img src="./img/products-01.jpg" alt="image"></div>
+                    <h3>ДОН-ФИШ</h3>
+                    <p class="products-description">Краткое описание содержимого данного раздела.</p>
+                </div>
+                <div class="products-card">
+                    <div class="products-icon"><img src="./img/products-02.jpg" alt="image"></div>
+                    <h3>КАЮТ-КОМПАНИЯ</h3>
+                    <p class="products-description">Краткое описание содержимого данного раздела.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<div class="panel-files" id="PanelFilesB">
-				<div class="file" onclick="$(this).ReadFile('B01.html', 'Икра сельди ястычная слабосоленая');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Икра сельди ястычная слабосоленая</span>
-							<span class="file-description-date">Цена: 100 р.</span>
-						</div>
-						<div class="file-description-text">Товар: Икра сельди ястычная слабосоленая.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('B02.html', 'Лосось стейк холодного копчения, вес 1шт грамм 500');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Лосось стейк холодного копчения, вес 1шт грамм 500</span>
-							<span class="file-description-date">Цена: 150 р.</span>
-						</div>
-						<div class="file-description-text">Товар: Лосось стейк холодного копчения, вес 1шт грамм 500.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('B03.html', 'Масляная хк кусок, вес 1шт грамм 300');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Масляная хк кусок, вес 1шт грамм 300</span>
-							<span class="file-description-date">Цена: 250 р.</span>
-						</div>
-						<div class="file-description-text">Товар: Масляная хк кусок, вес 1шт грамм 300.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('B04.html', 'Рулет Ассорти горячего копчения скумбрия с горбушей, вес 1шт грамм 500');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Рулет Ассорти горячего копчения скумбрия с горбушей, вес 1шт грамм 500</span>
-							<span class="file-description-date">Цена: 200 р.</span>
-						</div>
-						<div class="file-description-text">Товар: Рулет Ассорти горячего копчения скумбрия с горбушей, вес 1шт грамм 500.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('B05.html', 'Рулет рыбный Ассорти из масляной, форели, тунца');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Рулет рыбный Ассорти из масляной, форели, тунца</span>
-							<span class="file-description-date">Цена: 300 р.</span>
-						</div>
-						<div class="file-description-text">Товар: Рулет рыбный Ассорти из масляной, форели, тунца - Весовой и в вакуумной упаковке - вес 1шт примерно 2кг, вакуумной упаковке 250 грамм.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('B06.html', 'Скумбрия холодного копчения тушка');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Скумбрия холодного копчения тушка</span>
-							<span class="file-description-date">Цена: 100 р.</span>
-						</div>
-						<div class="file-description-text">Товар: Скумбрия холодного копчения тушка.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('B01.html', 'Икра сельди ястычная слабосоленая');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Икра сельди ястычная слабосоленая</span>
-							<span class="file-description-date">Цена: 100 р.</span>
-						</div>
-						<div class="file-description-text">Товар: Икра сельди ястычная слабосоленая.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('B02.html', 'Лосось стейк холодного копчения, вес 1шт грамм 500');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Лосось стейк холодного копчения, вес 1шт грамм 500</span>
-							<span class="file-description-date">Цена: 150 р.</span>
-						</div>
-						<div class="file-description-text">Товар: Лосось стейк холодного копчения, вес 1шт грамм 500.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('B03.html', 'Масляная хк кусок, вес 1шт грамм 300');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Масляная хк кусок, вес 1шт грамм 300</span>
-							<span class="file-description-date">Цена: 250 р.</span>
-						</div>
-						<div class="file-description-text">Товар: Масляная хк кусок, вес 1шт грамм 300.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('B04.html', 'Рулет Ассорти горячего копчения скумбрия с горбушей, вес 1шт грамм 500');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Рулет Ассорти горячего копчения скумбрия с горбушей, вес 1шт грамм 500</span>
-							<span class="file-description-date">Цена: 200 р.</span>
-						</div>
-						<div class="file-description-text">Товар: Рулет Ассорти горячего копчения скумбрия с горбушей, вес 1шт грамм 500.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('B05.html', 'Рулет рыбный Ассорти из масляной, форели, тунца');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Рулет рыбный Ассорти из масляной, форели, тунца</span>
-							<span class="file-description-date">Цена: 300 р.</span>
-						</div>
-						<div class="file-description-text">Товар: Рулет рыбный Ассорти из масляной, форели, тунца - Весовой и в вакуумной упаковке - вес 1шт примерно 2кг, вакуумной упаковке 250 грамм.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('B06.html', 'Скумбрия холодного копчения тушка');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Скумбрия холодного копчения тушка</span>
-							<span class="file-description-date">Цена: 100 р.</span>
-						</div>
-						<div class="file-description-text">Товар: Скумбрия холодного копчения тушка.</div>
-					</div>
-				</div>
-			</div>
+    <!-- О компании -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>О компании</h2>
+                    <p>Краткое описание инфорации о компании.</p>
+                    <a href="#" class="about-btn">Подробнее о нас</a>
+                </div>
+                <div class="about-image">
+                    <img src="./img/company.jpg" alt="image">
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<div class="panel-files" id="PanelFilesC">
-				<div class="file" onclick="$(this).ReadFile('C01.html', 'Розничная торговля');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Розничная торговля</span>
-							<span class="file-description-date">Товары</span>
-						</div>
-						<div class="file-description-text">Список товаров дотупных в розничной торговле.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('C02.html', 'Оптовая торговля');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Оптовая торговля</span>
-							<span class="file-description-date">товары</span>
-						</div>
-						<div class="file-description-text">Список товаров дотупных в оптовой торговле.</div>
-					</div>
-				</div>
-			</div>
+    <!-- Слайдер товаров -->
+    <section class="goods">
+        <div class="container">
+            <div class="goods-title">
+                <h2>Товары</h2>
+                <p>Список всех товаров смотрите в каталоге</p>
+            </div>
+            <div class="goods-slider-container">
+                <div class="goods-slider-header">
+                    <h2 class="goods-slider-title">Популярные товары</h2>
+                    <div class="goods-slider-controls">
+                        <button class="goods-slider-btn goods-slider-prev-btn" disabled>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="goods-slider-btn goods-slider-next-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
 
-			<div class="panel-files" id="PanelFilesD">
-				<div class="file" onclick="$(this).ReadFile('D01.html', 'Как получить прайс ?');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Как получить прайс ?</span>
-							<span class="file-description-date">Вопрос-ответ</span>
-						</div>
-						<div class="file-description-text">Откройте файл чтобы прочитать ответ на вопрос.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('D02.html', 'Где вы находитесь ?');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Где вы находитесь ?</span>
-							<span class="file-description-date">Вопрос-ответ</span>
-						</div>
-						<div class="file-description-text">Откройте файл чтобы прочитать ответ на вопрос.</div>
-					</div>
-				</div>
-				<div class="file" onclick="$(this).ReadFile('D03.html', 'Какие у вас есть скидки или акции ?');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Какие у вас есть скидки или акции ?</span>
-							<span class="file-description-date">Вопрос-ответ</span>
-						</div>
-						<div class="file-description-text">Откройте файл чтобы прочитать ответ на вопрос.</div>
-					</div>
-				</div>
-			</div>
+                <div class="goods-slider-wrapper">
+                    <!-- Товары будут добавлены через JavaScript (файл goods.js) -->
+                </div>
+                
+                <div class="goods-slider-indicators">
+                    <!-- Индикаторы будут добавлены через JavaScript (файл goods.js) -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<div class="panel-files" id="PanelFilesE">
-				<div class="file" onclick="$(this).ReadFile('E01.html', 'Документы для оптовых покупателей');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Справочники</span>
-							<span class="file-description-date">Файлы</span>
-						</div>
-						<div class="file-description-text">Список файлов для оптовых покупателей.</div>
-					</div>
-				</div>
-			</div>
+    <!-- Новости -->
+    <section class="news">
+        <div class="container">
+            <div class="news-title">
+                <h2>Новности</h2>
+                <p>Самые свежиме новости на сайте</p>
+            </div>
+            <div class="news-container">
+                <div class="news-grid" id="newsGrid">
+                    <!-- Новости будут добавляться через JavaScript -->
+                </div>
+                
+                <div class="news-pagination">
+                    <button class="news-pagination-page-btn news-pagination-prev-btn">Назад</button>
+                    <div class="news-pagination-page-numbers" id="newsPaginationPageNumbers"></div>
+                    <button class="news-pagination-page-btn news-pagination-next-btn">Вперед</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<div class="panel-files" id="PanelFilesF">
-				<div class="file" onclick="$(this).ReadFile('F01.html', 'Контакты');">
-					<div class="file-row"></div>
-					<span class="file-text"></span>
-					<div class="file-description">
-						<div class="file-description-title">
-							<span>Контакты</span>
-							<span class="file-description-date">01.01.2025</span>
-						</div>
-						<div class="file-description-text">Актуальные контакты компании</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="window">
-			<div id="window_title"></div>
-			<div id="window_content"></div>
-		</div>
-	</div>
+    <!-- Контакты -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-title">
+                <h2>Свяжитесь с нами</h2>
+                <p>Мы всегда рады ответить на ваши вопросы</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Контактная информация</h3>
+                    <p><i>📍</i> ЛНР, 91007, г. Луганск, г.о. Луганский, Лесной мупик, 1-В</p>
+                    <p><i>📞</i> +7 959 180 22 51</p>
+                    <p><i>✉️</i> info@example.com</p>
+                    <p><i>🕒</i> Пн-Пт: 9:00-18:00</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="email" placeholder="Ваш email" required>
+                        <input type="text" placeholder="Тема сообщения">
+                        <textarea placeholder="Ваше сообщение" required></textarea>
+                        <button type="submit" class="contact-btn">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!-- Подвал -->
+	<footer>
+		<div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-company">ООО «ДОН-ЭСТ ПЛЮС»</h3>
+                    <img src="./img/logo_footer.png" alt="ООО «ДОН-ЭСТ ПЛЮС»">
+                </div>
+                <div class="footer-column">
+                    <h3>О компании</h3>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Наша команда</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Новости</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Продукция</h3>
+                    <ul>
+                        <li><a href="#">КАЮТ-КОМПАНИЯ</a></li>
+                        <li><a href="#">ДОН-ФИШ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li>ЛНР, 91007, г. Луганск,</li>
+                        <li>г.о. Луганский, Лесной мупик, 1-В</li>
+                        <li>info@example.com</li>
+                        <li>м./ф.: +7 959 180 22 51</li>
+                        <li>Пн-Пт: 9:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ООО «ДОН-ЭСТ ПЛЮС». Все права защищены.</p>
+            </div>
+        </div>
+	</footer>
 </body>
-</html>

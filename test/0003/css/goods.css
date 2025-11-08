@@ -1,27 +1,31 @@
 .goods {
     padding: 80px 0;
+    background-color: #F3F3F3;
 }
 
 .goods-title {
-    text-align: center;
+    text-align: left;
     margin-bottom: 50px;
 }
 
 .goods-title h2 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    color: white;
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: Rubik, sans-serif;
+    font-weight: 700;
+    font-size: 3.0vw;
+    line-height: 5vw;
+    text-transform: uppercase;
+    color: #090E12;
 }
 
 .goods-title p {
-    color: white;
-    max-width: 600px;
-    margin: 0 auto;
+    font-family: Rubik, sans-serif;
+    color: #424146;
 }
 
 .goods-slider-container {
-    max-width: 1200px;
+    max-width: 1650px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -36,7 +40,7 @@
 }
 
 .goods-slider-title {
-    color: white;
+    color: #7f8c8d;
     max-width: 600px;
 }
 
@@ -76,7 +80,7 @@
     flex: 0 0 calc(25% - 16px);
     margin: 0 8px;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 25px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -88,7 +92,7 @@
 }
 
 .goods-slider-product-image {
-    width: 80%;
+    /*width: 80%;*/
     height: 200px;
     object-fit: cover;
     display: block;
@@ -111,7 +115,7 @@
 .goods-slider-product-price {
     font-size: 18px;
     font-weight: bold;
-    color: blue;
+    color: #e74c3c;
     margin-bottom: 10px;
 }
 
@@ -134,7 +138,7 @@
 .goods-slider-product-add-to-cart {
     width: 100%;
     padding: 10px;
-    background-color: #3498db;
+    background-color: #035CB0;
     color: white;
     border: none;
     border-radius: 4px;
@@ -144,7 +148,7 @@
 }
 
 .goods-slider-product-add-to-cart:hover {
-    background-color: #2980b9;
+    background-color: #333333;
 }
 
 .goods-slider-indicators {
@@ -164,5 +168,5 @@
 }
 
 .goods-slider-indicator.active {
-    background-color: #3498db;
+    background-color: #090E12;
 }

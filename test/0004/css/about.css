@@ -1,6 +1,7 @@
 .about {
 	padding: 80px 0;
-	background-color: #EAF2F9;
+	background-color: rgba(224, 186, 105, 0.2);
+	clip-path: polygon(0.00% 15.00%,100% 0%,100.00% 85.00%,0% 100%);
 }
 
 .about-content {
@@ -15,20 +16,25 @@
 
 .about-text h2 {
 	font-size: 36px;
-	color: #2c3e50;
-	margin-bottom: 20px;
+    color: #EEE;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .about-text p {
-	margin-bottom: 20px;
-	color: #555;
+	color: #DDD;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 22px;
+    padding-bottom: 15px;
 }
 
 .about-image {
 	flex: 1;
 	border-radius: 8px;
 	overflow: hidden;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 5px 15px rgba(224, 186, 105, 0.8);
 }
 
 .about-image img {
@@ -39,15 +45,18 @@
 
 .about-btn {
 	display: inline-block;
-	background-color: #3498db;
-	color: white;
-	padding: 12px 30px;
-	border-radius: 5px;
-	text-decoration: none;
-	font-weight: bold;
-	transition: background-color 0.3s;
+    padding: 12px 30px;
+    background: #087D80;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .about-btn:hover {
-	background-color: #333333;
+	background: #E0BA69;
+    color: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.4);
 }
