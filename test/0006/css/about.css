@@ -1,0 +1,58 @@
+.about {
+	padding: 120px 0;
+	background-color: #f8f9fa;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    clip-path: polygon(0.00% 20.00%,50.00% 0.00%,100.00% 20.00%,100.00% 100%,0% 100%);
+    will-change: clip-path; /* Оптимизирует рендеринг */
+  	transform: translateZ(0); /* Создает новый слой */
+}
+
+.about-content {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+}
+
+.about-text {
+	flex: 1;
+}
+
+.about-text h2 {
+	font-size: 42px;
+	color: #FFFFFF;
+	margin-bottom: 20px;
+}
+
+.about-text p {
+	margin-bottom: 20px;
+	color: #EEEEEE;
+}
+
+.about-image {
+	flex: 1;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.about-btn {
+	display: inline-block;
+	background-color: #3498db;
+	color: white;
+	padding: 12px 30px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+.about-btn:hover {
+	background-color: #2980b9;
+}
