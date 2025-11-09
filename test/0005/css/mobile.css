@@ -67,6 +67,10 @@
     .news-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .footer-content {
+        text-align: center;
+    }
 }
 
 @media (max-width: 576px) {
@@ -78,10 +82,18 @@
     .goods-slider-container {
         padding: 0 20px;
     }
+
+    .footer-content {
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
     .news-grid {
         grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        text-align: center;
     }
 }
