@@ -1,0 +1,40 @@
+/* Баннер */
+
+.bunner {
+	color: white;
+	padding: 100px 0;
+	text-align: center;
+	min-height: 65vh;
+}
+
+.bunner h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+	background-color: rgba(0, 123, 255, 0.8);
+	width: 50%;
+	margin: 0 auto 30px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.bunner p {
+	font-size: 20px;
+	max-width: 700px;
+	margin: 0 auto 30px;
+}
+
+.bunner-btn {
+	display: inline-block;
+	background-color: #3498db;
+	color: white;
+	padding: 12px 30px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+.bunner-btn:hover {
+	background-color: #2980b9;
+}
