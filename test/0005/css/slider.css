@@ -172,16 +172,21 @@
 /* Адаптивность */
 @media (max-width: 768px) {
     .slider-container {
-        height: 400px;
+        height: 650px;
         margin: 20px auto;
     }
 
     .slide h2 {
+        position: initial;
+        top: initial;
         font-size: 2em;
     }
 
     .slide p {
         font-size: 1em;
+        position: relative;
+        top: -100px;
+        left: initial;
     }
 
     .slide-content {
@@ -201,15 +206,31 @@
     .arrow-next {
         right: 10px;
     }
+
+    .slide img {
+        /*height: 60%;*/
+        margin: 0 auto;
+        position: absolute;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
 }
 
 @media (max-width: 480px) {
     .slider-container {
-        height: 300px;
+        height: 500px;
     }
 
     .slide h2 {
+        position: initial;
+        top: initial;
         font-size: 1.5em;
+    }
+
+    .slide p {
+        position: relative;
+        top: -100px;
+        left: initial;
     }
 
     .slide-btn {
@@ -226,5 +247,13 @@
     .arrow::before {
         width: 12px;
         height: 12px;
+    }
+
+    .slide img {
+        height: 50%;
+        margin: 0 auto;
+        position: absolute;
+        object-fit: cover;
+        transition: transform 0.5s ease;
     }
 }
