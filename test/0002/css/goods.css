@@ -1,6 +1,9 @@
 .goods {
     padding: 80px 0;
     background-color: white;
+    background-image: url("../img/fishes2.jpg");
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
 }
 
 .goods-title {
