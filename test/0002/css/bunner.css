@@ -84,7 +84,7 @@
 	background-color: #1D4A8E;
 	min-height: 550px;
 	background-image: url("../img/bunner.jpg");
-	background-position: center;
+	/*background-position: center;*/
 }
 
 .bunner-panel-left {
