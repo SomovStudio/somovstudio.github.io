@@ -1,0 +1,15 @@
+/* Базовые стили  */
+
+body {
+    line-height: 1.6;
+    color: #090E12;
+    background-color: #F3F3F3;
+    font-family: Rubik, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

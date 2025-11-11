@@ -3,7 +3,7 @@
 .bunner {
 	background-color: #F3F3F3;
 	font-family: Rubik, sans-serif;
-	color: #1D4A8E;
+	color: #090E12;
 	padding-top: 50px;
 	text-align: left;
 }
@@ -49,8 +49,7 @@
 }
 
 .bunner-mini-logos img {
-	/*background-color: #060D13;*/
-	background-color: #1D4A8E;
+	background-color: #060D13;
 	border-radius: 20px;
 	padding-top: 25px;
 	padding-bottom: 25px;
