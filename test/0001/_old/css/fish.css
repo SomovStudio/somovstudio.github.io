@@ -167,7 +167,7 @@ body {
 .menu-text {
     position: absolute;
     top: 50%;
-    left: 40px;
+    left: 55px;
     transform: translateY(-50%);
     font-weight: bold;
     font-size: 1rem;
@@ -326,22 +326,22 @@ body {
 .bubble-1 {
     width: 6px;
     height: 6px;
-    left: 5px;
-    top: 20px;
+    left: 170px;
+    top: 60px;
     animation-delay: 0s;
 }
 .bubble-2 {
     width: 10px;
     height: 10px;
-    left: 15px;
-    top: 30px;
+    left: 190px;
+    top: 50px;
     animation-delay: 1s;
 }
 .bubble-3 {
     width: 5px;
     height: 5px;
-    left: 10px;
-    top: 40px;
+    left: 180px;
+    top: 70px;
     animation-delay: 2s;
 }
 
@@ -378,41 +378,6 @@ body {
         transform: translateY(-100px) scale(1);
         opacity: 0;
     }
-}
-
-.fish-1-img {
-    background-image: url("../img/fish1.png");
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: 50% 50%;
-}
-
-.fish-2-img {
-    background-image: url("../img/fish2.png");
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: 50% 50%;
-}
-
-.fish-3-img {
-    background-image: url("../img/fish3.png");
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: 50% 50%;
-}
-
-.fish-4-img {
-    background-image: url("../img/fish4.png");
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: 50% 50%;
-}
-
-.fish-5-img {
-    background-image: url("../img/fish5.png");
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: 50% 50%;
 }
 
 /* Адаптивность */
