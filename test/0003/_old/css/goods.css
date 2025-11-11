@@ -16,7 +16,7 @@
     font-size: 3.0vw;
     line-height: 5vw;
     text-transform: uppercase;
-    color: #1D4A8E;
+    color: #090E12;
 }
 
 .goods-title p {
@@ -115,7 +115,7 @@
 .goods-slider-product-price {
     font-size: 18px;
     font-weight: bold;
-    color: #e74c3c;
+    color: #1D4A8E;
     margin-bottom: 10px;
 }
 

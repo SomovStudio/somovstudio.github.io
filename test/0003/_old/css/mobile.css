@@ -14,7 +14,7 @@
         font-family: Rubik, sans-serif;
         font-weight: 700;
         font-size: 6.9vw;
-        line-height: 8vw;
+        line-height: 5vw;
         text-transform: uppercase;
     }
 
@@ -115,11 +115,6 @@
         flex-direction: column;
     }
 
-
-    .products-card h3 {
-        font-size: 24px;
-    }
-
     .goods-slider-product-card {
         /*flex: 0 0 calc(33.333% - 16px);*/
         flex: 0 0 calc(40% - 16px);
@@ -212,7 +207,7 @@
         font-family: Rubik, sans-serif;
         font-weight: 700;
         font-size: 6.9vw;
-        line-height: 8vw;
+        line-height: 5vw;
         text-transform: uppercase;
     }
 
