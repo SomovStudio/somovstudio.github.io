@@ -1,6 +1,9 @@
 .products {
     padding: 80px 0;
     background-color: white;
+    background-image: url("../img/fishes.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 90%;
 }
 
 .products-title {
@@ -23,7 +26,8 @@
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    /*gap: 30px;*/
+    gap: 500px;
 }
 
 .products-card {
