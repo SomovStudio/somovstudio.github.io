@@ -45,9 +45,21 @@
         display: none;
     }
 
+    .products {
+        background-position: 50% 55%;
+    }
+
+    .goods {
+        background-image: none;
+    }
+
     .goods-slider-product-card {
         /*flex: 0 0 calc(25% - 16px);*/
         flex: 0 0 calc(40% - 16px);
+    }
+
+    .contact {
+        background-image: none;
     }
 }
 
@@ -112,8 +124,16 @@
         display: none;
     }
 
+    .products {
+        background-position: 50% 55%;
+    }
+
     .about-content {
         flex-direction: column;
+    }
+
+    .goods {
+        background-image: none;
     }
 
     .goods-slider-product-card {
@@ -123,6 +143,10 @@
 
     .news-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact {
+        background-image: none;
     }
 
     .footer-content {
