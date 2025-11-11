@@ -52,7 +52,7 @@
     }
 
     .bunner h1 {
-        font-size: 36px;
+        font-size: 24px;
     }
 
     .bunner p {
@@ -82,6 +82,12 @@
 }
 
 @media (max-width: 576px) {
+    .bunner h1 {
+        font-size: 24px;
+        margin: 0;
+        width: 100%;
+    }
+
     .about {
         clip-path: none;
     }
@@ -101,6 +107,12 @@
 }
 
 @media (max-width: 480px) {
+    .bunner h1 {
+        font-size: 24px;
+        margin: 0;
+        width: 100%;
+    }
+
     .about {
         clip-path: none;
     }
