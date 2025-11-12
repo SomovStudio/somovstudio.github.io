@@ -78,7 +78,8 @@ body {
 }
 
 .fish-item:hover {
-    transform: translateY(-10px) !important;
+    /*transform: translateY(-10px) !important;*/
+    background-size: 85%;
     z-index: 10;
 }
 
