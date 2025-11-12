@@ -455,22 +455,25 @@ body {
 }
 
 @media (max-width: 600px) {
-    .fish-header {
-        display: none;
+    .fish-header img {
+        /*display: none;*/
+        position: relative;
+        left: -25%;
+        width: 150%;
     }
 
     .fish-container {
         display: grid;
         grid-template-columns: 1fr;
         gap: 40px;
-        display: none;
+        /*display: none;*/
     }
 
     .fish-container-2 {
         display: grid;
         grid-template-columns: 1fr;
         gap: 40px;
-        display: none;
+        /*display: none;*/
     }
 
     .fish-description{
@@ -516,7 +519,7 @@ body {
     }
     
     .menu-text {
-        left: 70px;
+        /*left: 70px;*/
         font-size: 1.1rem;
         width: 130px;
     }
