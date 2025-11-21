@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/bunner.css">
-    <link rel="stylesheet" type="text/css" href="./css/slider.css">
     <link rel="stylesheet" type="text/css" href="./css/products.css">
     <link rel="stylesheet" type="text/css" href="./css/about.css">
     <link rel="stylesheet" type="text/css" href="./css/goods.css">
@@ -21,18 +20,16 @@
     <link rel="stylesheet" type="text/css" href="./css/animation.css">
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/mobile.js"></script>
-    <script src="./js/slider.js"></script>
     <script src="./js/goods.js"></script>
     <script src="./js/news.js"></script>
     <script src="./js/animation.js"></script>
 </head>
 <body>
-
-    <!-- Шапка -->
-    <header>
-        <div class="header-container container">
-            <div class="logo"><img src="./img/don-est-plus.png" alt="ООО &laquo;ДОН-ЭСТ-ПЛЮС&raquo;">
-        </div>
+	
+	<!-- Шапка -->
+	<header>
+		<div class="container header-container">
+            <div class="logo"><img src="./img/don-est-plus.png" alt="ООО &laquo;ДОН-ЭСТ-ПЛЮС&raquo;"></div>
             <button class="mobile-menu-btn">☰</button>
             <nav>
                 <ul>
@@ -44,82 +41,36 @@
                 </ul>
             </nav>
         </div>
-    </header>
+	</header>
 
 	<!-- Баннер -->
-	<section class="bunner">
+	<section class="bunner" id="Bunner">
         <div class="container">
-            <div class="bunner-wrapper-2">
-                <div class="bunner-wrapper-1">
-                    
+            <h1>Переработка и реализация рыбы</h1>
+            <div class="bunner-side-left">
+                <p>
+                    Компания ООО «Дон-Эст Плюс» существует с 1998 года и является крупнейшим предприятием в рыбной отрасли в Луганске и Луганской обл. Основными видами деятельности предприятия являются переработка и реализация рыбы и морепродуктов.
+                </p>
+                <a href="#" class="bunner-btn">Подробнее</a>
+                <div class="bunner-mini-logos">
+                    <img src="./img/mini_logo1.png">
+                    <img src="./img/mini_logo2.png">
+                </div>
+                <div class="bunner-products-title">
+                    <h2>Наша продукция</h2>
+                    <p>Разделы производства продукции</p>
                 </div>
             </div>
-
-            <div class="slider-container">
-                <!-- Стрелки -->
-                <div class="arrow arrow-prev"></div>
-                <div class="arrow arrow-next"></div>
-
-                <div class="slider">
-                    <!-- Слайд 1 -->
-                    <div class="slide">
-                        <img src="./img/slide1.png" alt="Горы">
-                        <div class="slide-content">
-                            <h2>Слайд 1</h2>
-                            <p>Описание товара и его характеристики</p>
-                            <a href="#" class="slide-btn">Узнать больше</a>
-                        </div>
-                    </div>
-
-                    <!-- Слайд 2 -->
-                    <div class="slide">
-                        <img src="./img/slide2.png" alt="Горы">
-                        <div class="slide-content">
-                            <h2>Слайд 2</h2>
-                            <p>Описание товара и его характеристики</p>
-                            <a href="#" class="slide-btn">Узнать больше</a>
-                        </div>
-                    </div>
-
-                    <!-- Слайд 3 -->
-                    <div class="slide">
-                        <img src="./img/slide3.png" alt="Горы">
-                        <div class="slide-content">
-                            <h2>Слайд 3</h2>
-                            <p>Описание товара и его характеристики</p>
-                            <a href="#" class="slide-btn">Узнать больше</a>
-                        </div>
-                    </div>
-
-                    <!-- Слайд 4 -->
-                    <div class="slide">
-                        <img src="./img/slide4.png" alt="Горы">
-                        <div class="slide-content">
-                            <h2>Слайд 4</h2>
-                            <p>Описание товара и его характеристики</p>
-                            <a href="#" class="slide-btn">Узнать больше</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="indicators">
-                    <div class="indicator active" data-slide="0"></div>
-                    <div class="indicator" data-slide="1"></div>
-                    <div class="indicator" data-slide="2"></div>
-                    <div class="indicator" data-slide="3"></div>
-                </div>
+            <div class="bunner-side-right">
+                <img src="./img/bunner-02.png">
             </div>
         </div>
     </section>
 
 	<!-- Продукция -->
-    <section class="products">
+    <section class="products block" id="Products">
         <div class="container">
-            <div class="products-title">
-                <h2>Наша продукция</h2>
-                <p>Разделы производства продукции</p>
-            </div>
-            <div class="products-grid animation">
+            <div class="products-grid">
                 <div class="products-card">
                     <div class="products-icon"><img src="./img/products-01.jpg" alt="image"></div>
                     <h3>ДОН-ФИШ</h3>
@@ -135,31 +86,33 @@
     </section>
 
     <!-- О компании -->
-    <section class="about">
+    <section class="about block" id="About">
         <div class="container">
-            <div class="about-content animation">
-                <div class="about-text">
-                    <h2>О компании</h2>
-                    <p>Компания ООО «Дон-Эст Плюс» существует с 1998 года и является крупнейшим предприятием в рыбной отрасли в Луганске и Луганской обл. Основными видами деятельности предприятия являются переработка и реализация рыбы и морепродуктов.</p>
-                    <a href="#" class="about-btn">Подробнее о нас</a>
-                </div>
+            <div class="about-content">
                 <div class="about-image">
                     <img src="./img/company.jpg" alt="image">
+                </div>
+                <div class="about-text">
+                    <h2>О компании</h2>
+                    <p>
+                        Компания ООО «Дон-Эст Плюс» существует с 1998 года и является крупнейшим предприятием в рыбной отрасли в Луганске и Луганской обл. Основными видами деятельности предприятия являются переработка и реализация рыбы и морепродуктов.
+                    </p>
+                    <p>
+                        Копчение рыбы происходит по классической технологии с использованием натуральной щепы. Для полного контроля, приобретены камеры копчения, которые дают возможность контролировать и выдерживать в автоматическом режиме такие показатели как температура в камере и температура в самом продукте. Это дает возможность обойтись без человеческого фактора.
+                    </p>
+                    <a href="#" class="about-btn">Подробнее о нас</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Слайдер товаров -->
-    <section class="goods">
+    <section class="goods block" id="Goods">
         <div class="container">
-            <div class="goods-title">
-                <h2>Товары</h2>
-                <p>Список всех товаров смотрите в каталоге</p>
-            </div>
-            <div class="goods-slider-container animation">
-                <div class="goods-slider-header">
-                    <h2 class="goods-slider-title">Популярные товары</h2>
+            <div class="goods-slider-container">
+                <div class="goods-slider-header goods-title">
+                    <h2 class="goods-slider-title">Товары</h2>
+                    <p>Список всех товаров смотрите в каталоге</p>
                     <div class="goods-slider-controls">
                         <button class="goods-slider-btn goods-slider-prev-btn" disabled>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,17 +138,38 @@
         </div>
     </section>
 
+    <!-- Новости -->
+    <section class="news block" id="News">
+        <div class="container">
+            <div class="news-title">
+                <h2>Новости</h2>
+                <p>Самые свежиме новости на сайте</p>
+            </div>
+            <div class="news-container">
+                <div class="news-grid" id="newsGrid">
+                    <!-- Новости будут добавляться через JavaScript -->
+                </div>
+                
+                <div class="news-pagination">
+                    <button class="news-pagination-page-btn news-pagination-prev-btn">Назад</button>
+                    <div class="news-pagination-page-numbers" id="newsPaginationPageNumbers"></div>
+                    <button class="news-pagination-page-btn news-pagination-next-btn">Вперед</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Контакты -->
-    <section class="contact">
+    <section class="contact" id="Contact">
         <div class="container">
             <div class="contact-title">
                 <h2>Свяжитесь с нами</h2>
                 <p>Мы всегда рады ответить на ваши вопросы</p>
             </div>
-            <div class="contact-container animation">
+            <div class="contact-container">
                 <div class="contact-info">
                     <h3>Контактная информация</h3>
-                    <p><i>📍</i> ЛНР, 91007, г. Луганск, г.о. Луганский, Лесной тупик, 1-В</p>
+                    <p><i>📍</i> ЛНР, 91007, г. Луганск, г.о. Луганский, Лесной мупик, 1-В</p>
                     <p><i>📞</i> +7 959 180 22 51</p>
                     <p><i>✉️</i> info@example.com</p>
                     <p><i>🕒</i> Пн-Пт: 9:00-18:00</p>
@@ -213,34 +187,13 @@
         </div>
     </section>
 
-    <!-- Новости -->
-    <section class="news">
-        <div class="container">
-            <div class="news-title">
-                <h2>Новости</h2>
-                <p>Самые свежиме новости на сайте</p>
-            </div>
-            <div class="news-container animation">
-                <div class="news-grid" id="newsGrid">
-                    <!-- Новости будут добавляться через JavaScript -->
-                </div>
-                
-                <div class="news-pagination">
-                    <button class="news-pagination-page-btn news-pagination-prev-btn">Назад</button>
-                    <div class="news-pagination-page-numbers" id="newsPaginationPageNumbers"></div>
-                    <button class="news-pagination-page-btn news-pagination-next-btn">Вперед</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
 	<!-- Подвал -->
 	<footer>
 		<div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <img src="./img/logo_footer.png" alt="ООО «ДОН-ЭСТ ПЛЮС»">
                     <h3 class="footer-company">ООО «ДОН-ЭСТ ПЛЮС»</h3>
+                    <img src="./img/logo_footer.png" alt="ООО «ДОН-ЭСТ ПЛЮС»">
                 </div>
                 <div class="footer-column">
                     <h3>О компании</h3>
@@ -261,7 +214,7 @@
                 <div class="footer-column">
                     <ul>
                         <li>ЛНР, 91007, г. Луганск,</li>
-                        <li>г.о. Луганский, Лесной тупик, 1-В</li>
+                        <li>г.о. Луганский, Лесной мупик, 1-В</li>
                         <li>info@example.com</li>
                         <li>м./ф.: +7 959 180 22 51</li>
                         <li>Пн-Пт: 9:00-18:00</li>
