@@ -26,6 +26,10 @@
     gap: 30px;
 }
 
+.products-grid a {
+    text-decoration: none;
+}
+
 .products-card {
     background-color: white;
     border-radius: 40px;
