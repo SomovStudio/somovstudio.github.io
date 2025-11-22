@@ -44,13 +44,17 @@
 
 .about-btn {
 	display: inline-block;
-	background-color: #035CB0;
-	color: white;
-	padding: 12px 30px;
-	border-radius: 5px;
-	text-decoration: none;
-	font-weight: bold;
-	transition: background-color 0.3s;
+    background-color: #035CB0;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    /*font-weight: bold;*/
+    transition: background-color 0.3s;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    border-bottom-right-radius: 250px;
+    border-bottom-left-radius: 250px;
 }
 
 .about-btn:hover {

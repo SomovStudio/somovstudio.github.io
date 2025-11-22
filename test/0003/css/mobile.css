@@ -51,6 +51,14 @@
         max-height: 5%;
     }
 
+    .header-phone-email {
+        display: none;
+    }
+
+    .header-mobile-contacts {
+        display: block;
+    }
+
     .header-container {
         flex-direction: column;
         text-align: center;
