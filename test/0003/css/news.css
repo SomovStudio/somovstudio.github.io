@@ -1,5 +1,5 @@
 .news {
-	padding: 80px 0;
+	padding: 40px 0;
 	background-color: #F3F3F3;
 }
 
@@ -97,9 +97,8 @@
 }
 
 .news-pagination-page-btn.active {
-    background: #090E12;
+    background-color: #090E12;
     color: white;
-    /*border-color: #007bff;*/
 }
 
 .news-pagination-page-btn:disabled {

@@ -48,6 +48,16 @@
 
 .contact-info i {
     margin-right: 10px;
+    /*color: #3498db;*/
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #090E12;
+}
+
+.contact-info a:hover {
+    text-decoration: none;
     color: #3498db;
 }
 
@@ -71,10 +81,14 @@
     color: white;
     padding: 12px 30px;
     border-radius: 5px;
-    border-color: transparent;
     text-decoration: none;
-    font-weight: bold;
+    /*font-weight: bold;*/
     transition: background-color 0.3s;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    border-bottom-right-radius: 250px;
+    border-bottom-left-radius: 250px;
+    border-color: transparent;
     cursor: pointer;
 }
 

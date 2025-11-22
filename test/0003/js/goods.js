@@ -159,7 +159,7 @@ $(function() {
         currentPosition = slideIndex;
         
         // Расчет смещения
-        const productWidth = 170 / visibleProducts;
+        const productWidth = 125 / visibleProducts; // показатель смещения связан с flex: 0 0 calc(22% - 16px);
         const translateX = -currentPosition * productWidth;
         $sliderWrapper.css('transform', `translateX(${translateX}%)`);
         

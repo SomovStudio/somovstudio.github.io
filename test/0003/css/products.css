@@ -1,5 +1,7 @@
 .products {
     padding: 80px 0;
+    padding-top: 20px;
+    padding-bottom: 80px;
     background-color: #F3F3F3;
 }
 
@@ -68,3 +70,27 @@
     color: #424146;
 }
 
+.products-all {
+    padding-top: 40px;
+    width: 100%;
+    text-align: center
+}
+
+.products-btn {
+    display: inline-block;
+    background-color: #035CB0;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    /*font-weight: bold;*/
+    transition: background-color 0.3s;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    border-bottom-right-radius: 250px;
+    border-bottom-left-radius: 250px;
+}
+
+.products-btn:hover {
+    background-color: #333333;
+}
