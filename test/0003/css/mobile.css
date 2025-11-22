@@ -1,5 +1,12 @@
 /* Адаптивность */
 
+@media (max-width: 1600px) {
+    .bunner-fishes-img {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 @media (max-width: 1024px) {
     header {
         position: sticky;
@@ -14,14 +21,14 @@
         font-family: Rubik, sans-serif;
         font-weight: 700;
         font-size: 6.9vw;
-        line-height: 8vw;
+        line-height: 6vw;
         text-transform: uppercase;
     }
 
     .bunner-mini-logos {
         padding: 0;
         padding-top: 10%;
-        text-align: center;
+        text-align: left;
     }
 
     .goods-slider-product-card {
@@ -34,7 +41,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     header {
         position: sticky;
@@ -96,7 +103,7 @@
         font-family: Rubik, sans-serif;
         font-weight: 700;
         font-size: 6.9vw;
-        line-height: 5vw;
+        line-height: 6vw;
         text-transform: uppercase;
     }
 
@@ -157,7 +164,7 @@
         font-family: Rubik, sans-serif;
         font-weight: 700;
         font-size: 6.9vw;
-        line-height: 5vw;
+        line-height: 6vw;
         text-transform: uppercase;
     }
 
@@ -181,7 +188,7 @@
         font-family: Rubik, sans-serif;
         font-weight: 700;
         font-size: 6.9vw;
-        line-height: 5vw;
+        line-height: 6vw;
         text-transform: uppercase;
     }
 
@@ -212,7 +219,7 @@
         font-family: Rubik, sans-serif;
         font-weight: 700;
         font-size: 6.9vw;
-        line-height: 8vw;
+        line-height: 6vw;
         text-transform: uppercase;
     }
 
