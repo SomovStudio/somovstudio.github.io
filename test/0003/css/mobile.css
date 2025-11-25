@@ -8,40 +8,6 @@
 }
 
 @media (max-width: 1024px) {
-    header {
-        position: sticky;
-        margin: 0;
-        height: 5%;
-        min-height: 5%;
-        max-height: 5%;
-    }
-
-    .bunner h1, .bunner h2, .about h2, .news-title h2, .contact h2 {
-        margin-bottom: 20px;
-        font-family: Rubik, sans-serif;
-        font-weight: 700;
-        font-size: 6.9vw;
-        line-height: 6vw;
-        text-transform: uppercase;
-    }
-
-    .bunner-mini-logos {
-        padding: 0;
-        padding-top: 10%;
-        text-align: left;
-    }
-
-    .goods-slider-product-card {
-        /*flex: 0 0 calc(25% - 16px);*/
-        flex: 0 0 calc(40% - 16px);
-    }
-
-    .goods-title p {
-        display: none;
-    }
-}
-
-@media (max-width: 1024px) {
 
     header {
         position: sticky;
@@ -124,6 +90,10 @@
     .bunner-side-left, .bunner-side-right {
         width: 100%;
         display: block;
+    }
+
+    .bunner-image-container {
+        width: 100%;
     }
 
     .about-content {
