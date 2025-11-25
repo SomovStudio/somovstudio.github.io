@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Плитка 5x4 - Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .flex-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .tile {
+            flex: 1 0 calc(20% - 12px); /* 5 колонок = 20% ширины минус gap */
+            min-width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .tile:hover {
+            transform: scale(1.05);
+        }
+
+        /* Разные цвета для плиток */
+        .tile:nth-child(odd) {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .tile:nth-child(even) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 1024px) {
+            .tile {
+                flex: 1 0 calc(25% - 12px); /* 4 колонки */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tile {
+                flex: 1 0 calc(33.333% - 12px); /* 3 колонки */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tile {
+                flex: 1 0 calc(50% - 12px); /* 2 колонки */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flex-grid">
+            <div class="tile">1</div>
+            <div class="tile">2</div>
+            <div class="tile">3</div>
+            <div class="tile">4</div>
+            <div class="tile">5</div>
+            <div class="tile">6</div>
+            <div class="tile">7</div>
+            <div class="tile">8</div>
+            <div class="tile">9</div>
+            <div class="tile">10</div>
+            <div class="tile">11</div>
+            <div class="tile">12</div>
+            <div class="tile">13</div>
+            <div class="tile">14</div>
+            <div class="tile">15</div>
+            <div class="tile">16</div>
+            <div class="tile">17</div>
+            <div class="tile">18</div>
+            <div class="tile">19</div>
+            <div class="tile">20</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивная плитка</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .tile {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tile:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .tile-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 3px solid #f0f0f0;
+        }
+
+        .tile-content {
+            padding: 20px;
+        }
+
+        .tile-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .tile-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        /* Адаптивность для планшетов */
+        @media (max-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            
+            .tile-image {
+                height: 150px;
+            }
+            
+            .tile-content {
+                padding: 15px;
+            }
+            
+            .tile-title {
+                font-size: 16px;
+            }
+            
+            .tile-description {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            body {
+                padding: 10px;
+            }
+            
+            .tile-image {
+                height: 200px;
+            }
+        }
+
+        /* Заголовок */
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Красивая плитка</h1>
+            <p>Адаптивная сетка 4×5</p>
+        </div>
+        
+        <div class="grid" id="tiles-container">
+            <!-- Плитки будут сгенерированы через JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        // Данные для плиток
+        const tilesData = [
+            { title: "Горы", description: "Величественные горные пейзажи", image: "https://picsum.photos/300/200?random=1" },
+            { title: "Океан", description: "Бескрайние морские просторы", image: "https://picsum.photos/300/200?random=2" },
+            { title: "Лес", description: "Тайны древних лесов", image: "https://picsum.photos/300/200?random=3" },
+            { title: "Город", description: "Современные мегаполисы", image: "https://picsum.photos/300/200?random=4" },
+            { title: "Пустыня", description: "Золотые пески пустыни", image: "https://picsum.photos/300/200?random=5" },
+            { title: "Водопад", description: "Мощь и красота природы", image: "https://picsum.photos/300/200?random=6" },
+            { title: "Северное сияние", description: "Волшебство арктики", image: "https://picsum.photos/300/200?random=7" },
+            { title: "Сакура", description: "Цветение японской вишни", image: "https://picsum.photos/300/200?random=8" },
+            { title: "Архитектура", description: "Шедевры мировой архитектуры", image: "https://picsum.photos/300/200?random=9" },
+            { title: "Космос", description: "Тайны вселенной", image: "https://picsum.photos/300/200?random=10" },
+            { title: "Подводный мир", description: "Коралловые рифы", image: "https://picsum.photos/300/200?random=11" },
+            { title: "Вулкан", description: "Огненная мощь земли", image: "https://picsum.photos/300/200?random=12" },
+            { title: "Сафари", description: "Дикая природа Африки", image: "https://picsum.photos/300/200?random=13" },
+            { title: "Замок", description: "Средневековые крепости", image: "https://picsum.photos/300/200?random=14" },
+            { title: "Пляж", description: "Тропический рай", image: "https://picsum.photos/300/200?random=15" },
+            { title: "Альпы", description: "Европейские горные ландшафты", image: "https://picsum.photos/300/200?random=16" },
+            { title: "Мост", description: "Инженерные сооружения", image: "https://picsum.photos/300/200?random=17" },
+            { title: "Озеро", description: "Кристально чистые воды", image: "https://picsum.photos/300/200?random=18" },
+            { title: "Поля", description: "Бескрайние просторы", image: "https://picsum.photos/300/200?random=19" },
+            { title: "Закат", description: "Волшебство заходящего солнца", image: "https://picsum.photos/300/200?random=20" }
+        ];
+
+        // Создание плиток
+        const container = document.getElementById('tiles-container');
+        
+        tilesData.forEach(tile => {
+            const tileElement = document.createElement('div');
+            tileElement.className = 'tile';
+            tileElement.innerHTML = `
+                <img src="${tile.image}" alt="${tile.title}" class="tile-image">
+                <div class="tile-content">
+                    <h3 class="tile-title">${tile.title}</h3>
+                    <p class="tile-description">${tile.description}</p>
+                </div>
+            `;
+            container.appendChild(tileElement);
+        });
+    </script>
+</body>
+</html>

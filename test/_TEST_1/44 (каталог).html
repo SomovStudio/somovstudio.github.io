@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин - Список товаров</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        /* Стили для сайдбара */
+        .sidebar {
+            width: 250px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-size: 1.2em;
+        }
+
+        .filter-section {
+            margin-bottom: 25px;
+        }
+
+        .filter-section h3 {
+            font-size: 1em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .filter-options {
+            list-style: none;
+        }
+
+        .filter-options li {
+            margin-bottom: 8px;
+        }
+
+        .filter-options label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        .filter-options input {
+            margin-right: 8px;
+        }
+
+        .price-range {
+            width: 100%;
+        }
+
+        .price-inputs {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .price-inputs input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Стили для основного контента */
+        .main-content {
+            flex: 1;
+        }
+
+        .page-title {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .products-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 150px;
+            height: 150px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .product-price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+
+        .buy-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background: #2980b9;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+            }
+            
+            .product-card {
+                flex-direction: column;
+            }
+            
+            .product-image {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Сайдбар -->
+        <aside class="sidebar">
+            <h2>Фильтры</h2>
+            
+            <div class="filter-section">
+                <h3>Категории</h3>
+                <ul class="filter-options">
+                    <li><label><input type="checkbox"> Электроника</label></li>
+                    <li><label><input type="checkbox"> Одежда</label></li>
+                    <li><label><input type="checkbox"> Книги</label></li>
+                    <li><label><input type="checkbox"> Спорт</label></li>
+                    <li><label><input type="checkbox"> Дом и сад</label></li>
+                </ul>
+            </div>
+
+            <div class="filter-section">
+                <h3>Цена</h3>
+                <input type="range" class="price-range" min="0" max="100000" value="50000">
+                <div class="price-inputs">
+                    <input type="number" placeholder="От" value="0">
+                    <input type="number" placeholder="До" value="100000">
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Бренд</h3>
+                <ul class="filter-options">
+                    <li><label><input type="checkbox"> Apple</label></li>
+                    <li><label><input type="checkbox"> Samsung</label></li>
+                    <li><label><input type="checkbox"> Sony</label></li>
+                    <li><label><input type="checkbox"> Xiaomi</label></li>
+                </ul>
+            </div>
+
+            <div class="filter-section">
+                <h3>Рейтинг</h3>
+                <ul class="filter-options">
+                    <li><label><input type="checkbox"> ★★★★★</label></li>
+                    <li><label><input type="checkbox"> ★★★★☆ и выше</label></li>
+                    <li><label><input type="checkbox"> ★★★☆☆ и выше</label></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <h1 class="page-title">Список товаров</h1>
+            
+            <div class="products-grid">
+                <!-- Товар 1 -->
+                <div class="product-card">
+                    <div class="product-image">Изображение товара</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Смартфон iPhone 15 Pro</h3>
+                        <p class="product-description">Новый флагманский смартфон с продвинутой камерой и мощным процессором. Идеально подходит для работы и развлечений.</p>
+                        <div class="product-meta">
+                            <span>В наличии: 15 шт.</span>
+                            <span>Рейтинг: ★★★★☆</span>
+                        </div>
+                        <div class="product-price">89 990 ₽</div>
+                        <button class="buy-button">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Товар 2 -->
+                <div class="product-card">
+                    <div class="product-image">Изображение товара</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Ноутбук MacBook Air M2</h3>
+                        <p class="product-description">Легкий и мощный ноутбук для работы и творчества. Длительное время работы от аккумулятора.</p>
+                        <div class="product-meta">
+                            <span>В наличии: 8 шт.</span>
+                            <span>Рейтинг: ★★★★★</span>
+                        </div>
+                        <div class="product-price">129 990 ₽</div>
+                        <button class="buy-button">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Товар 3 -->
+                <div class="product-card">
+                    <div class="product-image">Изображение товара</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Наушники Sony WH-1000XM4</h3>
+                        <p class="product-description">Беспроводные наушники с шумоподавлением. Отличное качество звука и комфорт при длительном использовании.</p>
+                        <div class="product-meta">
+                            <span>В наличии: 25 шт.</span>
+                            <span>Рейтинг: ★★★★☆</span>
+                        </div>
+                        <div class="product-price">24 990 ₽</div>
+                        <button class="buy-button">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Товар 4 -->
+                <div class="product-card">
+                    <div class="product-image">Изображение товара</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Умные часы Apple Watch Series 9</h3>
+                        <p class="product-description">Современные умные часы с расширенными функциями для здоровья и фитнеса. Водонепроницаемость.</p>
+                        <div class="product-meta">
+                            <span>В наличии: 12 шт.</span>
+                            <span>Рейтинг: ★★★★★</span>
+                        </div>
+                        <div class="product-price">39 990 ₽</div>
+                        <button class="buy-button">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
