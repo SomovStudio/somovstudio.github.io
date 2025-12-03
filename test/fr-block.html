@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--
+    Блок затемнения баннера (.fr)
+    Выделен из основного файла интернет-магазина evelux.ru
+    
+    Описание:
+    - Блок создает эффект затемнения на баннере при движении мыши
+    - Состоит из трех элементов: два боковых (.owerfr) и один центральный (.mainfr)
+    - Анимируется в зависимости от позиции курсора мыши
+    - Скрывается на мобильных устройствах (ширина экрана < 1000px)
+-->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блок затемнения баннера (.fr)</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Stolzl", Arial, sans-serif;
+            background-color: #f4f7f6;
+            overflow-x: hidden;
+        }
+
+        /* Контейнер для демонстрации */
+        .demo-container {
+            width: 100%;
+            height: 715px;
+            position: relative;
+            overflow: hidden;
+            background: rgba(242, 245, 244, 0.8);
+        }
+
+        .demo-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: auto;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ============================================
+           ОСНОВНЫЕ СТИЛИ БЛОКА .fr
+           ============================================ */
+        
+        /* Главный контейнер блока затемнения */
+        .fr {
+            width: 5000px;
+            height: 100%;
+            left: -180%;
+            display: flex !important;
+            position: relative;
+            /* transition: 0.2s; - закомментировано в оригинале */
+            margin-top: 0;
+            z-index: -1;
+        }
+
+        /* Боковые элементы затемнения */
+        .owerfr {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(242, 245, 244, 0.8);
+            background-color: rgba(10, 10, 10, 0.8);
+        }
+
+        .owerfr:first-child {
+            right: 0;
+        }
+
+        .owerfr:last-child {
+            left: 0;
+        }
+
+        /* Центральный элемент затемнения */
+        .mainfr {
+            width: 950px;
+            height: 100%;
+        }
+
+        /* Медиа-запросы для мобильных устройств */
+        @media (max-width: 1000px) {
+            .fr {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <!-- Демонстрационное изображение (опционально) -->
+        <div class="demo-image" style="background: linear-gradient(90deg, transparent 0%, #fff 100%); width: 50%;"></div>
+        
+        <!-- Основной блок .fr -->
+        <div class="fr" style="left: -810.647px;">
+            <div class="owerfr"></div>
+            <div class="mainfr"></div>
+            <div class="owerfr"></div>
+        </div>
+    </div>
+
+    <!-- Подключение jQuery (необходимо для работы скрипта) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        /**
+         * ============================================
+         * ОСНОВНОЙ ФУНКЦИОНАЛ БЛОКА .fr
+         * ============================================
+         * 
+         * Функционал:
+         * 1. Анимация позиции блока .fr в зависимости от движения мыши
+         * 2. Плавное затемнение/осветление баннера
+         * 3. Адаптация к изменению размера окна браузера
+         * 4. Скрытие на мобильных устройствах
+         */
+        
+        $(window).on('load', function () {
+            // Переменная для хранения целевой позиции по X
+            var curX = 0;
+            var prevX = 0;
+            
+            /**
+             * Функция для определения ширины scrollbar браузера
+             * Используется для корректного расчета позиции блока
+             */
+            $.scrollbarWidth = function () {
+                var a, b, c;
+                if (c === undefined) {
+                    a = $('<div style="width:50px;height:50px;overflow:auto"><div/></div>').appendTo('body');
+                    b = a.children();
+                    c = b.innerWidth() - b.height(99).innerWidth();
+                    a.remove();
+                }
+                return c;
+            };
+            
+            var scrollbarWidth = $.scrollbarWidth();
+
+            /**
+             * ============================================
+             * СОБЫТИЕ: ДВИЖЕНИЕ МЫШИ
+             * ============================================
+             * Отслеживает движение мыши и вычисляет целевую позицию
+             * для анимации блока затемнения
+             */
+            window.addEventListener("mousemove", (e) => {
+                const target = e.target;
+                if (!target) return;
+
+                // Определяем левую границу изображения
+                var imgLeft = $('.demo-image').length > 0 ? $('.demo-image').offset().left : 0;
+                
+                /**
+                 * Проверка позиции мыши:
+                 * - Вертикально: между 150px и 1000px от верха
+                 * - Горизонтально: правее левой границы изображения
+                 * 
+                 * Формула расчета целевой позиции:
+                 * curX = -1 * (2717 - e.pageX) + 434 / 2
+                 */
+                if (
+                    e.pageY < 1000 && e.pageY > 150
+                    && e.pageX > imgLeft
+                ) {
+                    curX = -1 * (2717 - e.pageX) + 434 / 2;
+                    prevX = e.pageX;
+                }
+            });
+            // ---------------------------------------
+
+            /**
+             * ============================================
+             * АНИМАЦИЯ: ЗАТЕМНЕНИЕ БАННЕРА
+             * ============================================
+             * Плавная анимация позиции блока .fr для создания
+             * эффекта затемнения/осветления в зависимости от
+             * позиции курсора мыши
+             */
+            $('.fr').show();
+
+            $('.demo-container').each(function () {
+                var el = $(this).find(".fr");
+                var img = 1030; // Начальная ширина изображения
+
+                // Расчет границ движения блока
+                var rightBorder = -1 * (2717 + scrollbarWidth - document.body.clientWidth);
+                var leftBorder = -1 * (2717 + scrollbarWidth - document.body.clientWidth) - img * 1 + 434;
+
+                // Установка начальной позиции
+                el.css("left", leftBorder + "px");
+
+                /**
+                 * Интервал анимации (выполняется каждую миллисекунду)
+                 * Обеспечивает плавное движение блока к целевой позиции
+                 */
+                var interv = setInterval(() => {
+                    // Получаем реальную ширину изображения
+                    img = $('.demo-image').width() || 1030;
+                    
+                    // Пересчет границ на каждом кадре
+                    rightBorder = -1 * (2717 + scrollbarWidth - document.body.clientWidth);
+                    leftBorder = -1 * (2717 + scrollbarWidth - document.body.clientWidth) - img * 1 + 434;
+
+                    // Текущая позиция блока
+                    var elX = parseFloat(el.css("left").replace('px', '')) || 0;
+
+                    // Скорость движения (way)
+                    var way = 0;
+
+                    // Расчет направления и скорости движения
+                    if (elX < curX - 1 && way < 0.1 && elX < rightBorder) {
+                        // Движение вправо
+                        if (Math.abs(curX - elX) > 1) way = 1 * Math.abs(curX - elX) / 50 * 0.5;
+                        else way = 1 * 0.5;
+                    } else if (elX > curX + 1 && way > -0.1 && elX > leftBorder) {
+                        // Движение влево
+                        if (Math.abs(curX - elX) > 1) way = -1 * Math.abs(curX - elX) / 50 * 0.5;
+                        else way = -1 * 0.5;
+                    }
+
+                    // Применение движения (если есть целевая позиция)
+                    if (curX != 0) el.css("left", elX + way + "px");
+                }, 1);
+            });
+            // ---------------------------------------
+
+            /**
+             * ============================================
+             * СОБЫТИЕ: ИЗМЕНЕНИЕ РАЗМЕРОВ БРАУЗЕРА
+             * ============================================
+             * Пересчитывает границы и корректирует позицию блока
+             * при изменении размера окна браузера
+             */
+            $(window).resize(function () {
+                $('.demo-container').each(function () {
+                    var el = $(this).find(".fr");
+                    var img = $('.demo-image').width() || 1030;
+                    var scrollbarWidth = $.scrollbarWidth();
+                    
+                    // Пересчет границ движения
+                    var rightBorder = -1 * (2717 + scrollbarWidth - document.body.clientWidth);
+                    var leftBorder = -1 * (2717 + scrollbarWidth - document.body.clientWidth) - img * 1 + 434;
+                    
+                    // Ограничение позиции в пределах границ
+                    var elX = parseFloat(el.css("left").replace('px', '')) || 0;
+                    if (elX > rightBorder) el.css("left", rightBorder + "px");
+                    if (elX < leftBorder) el.css("left", leftBorder + "px");
+                });
+            });
+            // ---------------------------------------
+        });
+    </script>
+</body>
+</html>
