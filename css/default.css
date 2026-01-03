@@ -262,7 +262,8 @@ header{
 	height: 100vh;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#1E458C), to(#FFFFFF));
     background-image: linear-gradient(to bottom, #1E458C 80%, #FFFFFF 100%);
-    opacity: 0.6;
+    /*opacity: 0.6;*/
+    opacity: 0.9;
     overflow: hidden;
 }
 
