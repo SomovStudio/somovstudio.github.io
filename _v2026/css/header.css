@@ -1,0 +1,52 @@
+
+header {
+	background: linear-gradient(135deg, #3498db, #2c3e50);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-weight: bold;
+	color: #2c3e50;
+}
+
+.logo img {
+	width: 45%;
+}
+
+/* Меню */
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav ul li {
+	margin-left: 55px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	font-weight: 500;
+	transition: color 0.3s;
+	white-space: nowrap;
+}
+
+nav ul li a:hover {
+	color: #3498db;
+}
+
+.mobile-menu-btn {
+	display: none;
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+}
