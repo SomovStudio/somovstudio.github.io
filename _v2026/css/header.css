@@ -11,7 +11,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 }
-
+/*
 .logo {
 	margin-top: 5px;
 }
@@ -29,15 +29,19 @@ header {
 .logo img {
 	width: 45%;
 }
+*/
+
+nav {
+	padding: 15px;
+}
 
 /* Menu */
 nav ul {
 	display: flex;
-	list-style: none;
 }
 
 nav ul li {
-	margin-left: 55px;
+	margin-left: 75px;
 }
 
 nav ul li a {
