@@ -11,25 +11,6 @@ header {
 	justify-content: space-between;
 	align-items: center;
 }
-/*
-.logo {
-	margin-top: 5px;
-}
-
-.logo span {
-	position: absolute;
-	padding-left: 10px;
-	font-weight: bold;
-    font-family: "Arial", sens-serif;
-    font-size: 25px;
-    text-transform: uppercase;
-    color: #A6BEDD;
-}
-
-.logo img {
-	width: 45%;
-}
-*/
 
 nav {
 	padding: 15px;
