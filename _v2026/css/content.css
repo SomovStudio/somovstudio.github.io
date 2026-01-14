@@ -3,6 +3,26 @@
 	background-color: #f8f9fa;
 }
 
+.content p a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #3498db;
+}
+
+.content p a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #8608F2;
+}
+
+.content img a {
+	text-decoration: none;
+}
+
+.content img a:hover {
+	text-decoration: none;
+}
+
 .content-block {
 	display: flex;
 	align-items: center;
