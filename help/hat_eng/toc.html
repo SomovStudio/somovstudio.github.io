@@ -1,0 +1,3227 @@
+﻿
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<title>Hat - Table of Contents</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/silver-theme/jquery-ui-1.8.12.custom.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/dynatree/chm/ui.dynatree.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/toc.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#tabs .ui-widget-header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.dynatree.min.js"></script>
+	<script type="text/javascript" src="js/hndjsse.js"></script>
+	<script type="text/javascript">
+	
+		window.bSearchDataLoaded = false;
+		var sHelpIdToActivate = '';
+	
+		$(document).ready(function()
+		{
+			var sAnchorName = '';
+			try { sAnchorName = top.location.href.substring(top.location.href.lastIndexOf("#") + 1, top.location.href.length); }
+			catch(err) { sAnchorName = ''; }
+			var nSelectedTab = 0;
+			if (sAnchorName == '_index') nSelectedTab = 1
+			else if (sAnchorName == '_search') nSelectedTab = 2;			
+			$("#tabs").tabs({
+				selected: nSelectedTab,
+				select: function(event, ui) { HideKwPopup(); }
+			});
+			
+			// Toc
+			if ($("#tab-toc").length) {
+				$("#tab-toc").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#tab-keywords").length && $("#tab-keywords").dynatree && $("#tab-keywords").dynatree("getTree") && $("#tab-keywords").dynatree("getTree").activateKey)
+							$("#tab-keywords").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+				// Expand all nodes if required
+				
+					$("#tab-toc").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+					
+				// Select the active help id
+				if (sHelpIdToActivate != '') $("#tab-toc").dynatree("getTree").activateKey(sHelpIdToActivate);
+			}
+			
+			// Keywords
+			
+			if ($("#tab-keywords").length) {
+				$("#tab-keywords").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onClick: function(node, event){
+						HideKwPopup();
+						if (node.data && node.data.click)
+						{
+							var aRefList = null;
+							eval('aRefList=' + node.data.click);
+							if (ShowKwPopup(node.li, aRefList))
+							{
+								if ($("#tab-toc") && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").activateKey)
+									$("#tab-toc").dynatree("getTree").activateKey(null);
+								if(node.data.href && node.data.href != '#'){
+									window.open(node.data.href, node.data.target);
+								}
+							}
+						}
+					}
+				});
+				// Expand all nodes if required
+				
+					$("#tab-keywords").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				
+			}
+			
+			// Load search data
+			(function() {
+				var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+				se.src = 'js/hndsd.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+			})();
+		});
+		
+		$('body').click(function() {
+			HideKwPopup();
+		});
+		
+		function SelectTocItem(sHelpId)
+		{
+			if ($("#tab-toc").length && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").getNodeByKey) {
+				var aNode = $("#tab-toc").dynatree("getTree").getNodeByKey(sHelpId);
+				if (aNode) {
+					aNode.activateSilently();  
+				}
+			}
+			else {
+				sHelpIdToActivate = sHelpId;
+			}
+		}
+		
+		function HideKwPopup()
+		{
+			if($("#popupMenu")) $("#popupMenu").remove();
+		}
+		
+		function ShowKwPopup(oSender, aLinks)
+		{
+			HideKwPopup();
+			if (!aLinks || !aLinks.length || aLinks.length == 0) return false
+			else if (aLinks.length == 1) return true
+			else
+			{
+				var oParentDiv = document.createElement("DIV");
+				oParentDiv.id = "popupMenu";
+				var oLink = null;
+				// Close button
+				oLink = document.createElement("SPAN");
+				oLink.className = "close-button";
+				oLink.innerHTML = "X";
+				oLink.href = "#";
+				oLink.onclick = HideKwPopup;
+				oParentDiv.appendChild(oLink);
+				// Items
+				for (var nCnt=0; nCnt<aLinks.length; nCnt++)
+				{
+					oLink = document.createElement("A");
+					oLink.innerHTML = aLinks[nCnt][0];
+					oLink.href = aLinks[nCnt][1];
+					oLink.target = "FrameMain";
+					oLink.onclick = HideKwPopup;
+					oParentDiv.appendChild(oLink);
+				}
+				document.body.appendChild(oParentDiv);
+				var pos = $(oSender).offset(); 
+				var height = $(oSender).height();
+				$(oParentDiv).css({
+					"left": (pos.left+20) + "px",
+					"top": (pos.top + height + 5) + "px"
+				});
+				$(oParentDiv).show();
+				return false;
+			}
+		}
+		
+		function PerformSearch()
+		{
+			if (!window.bSearchDataLoaded) {
+				$("#search_results").html("Search engine data hasn't been fully loaded yet or an error occurred while loading it. This usually happens when documentation is browsed locally.");
+				return;
+			}
+			sValue = $("#search_value").val();
+			$("#search_results").html('Searching...');
+			var oSearchEngine = new HndJsSe;
+			oSearchEngine.ParseInput(sValue);			
+			oSearchEngine.PerformSearch();
+			if (!oSearchEngine.aResults || !oSearchEngine.aResults.length)
+			{
+				$("#search_results").html('No results found.');
+			}
+			else
+			{
+				$("#search_results").html('<div id="search_results_content"></div>');
+				var oUl = $("#search_results_content").append("<ul id='lr'></ul>").find("ul");
+				for (var nCnt = 0; nCnt < oSearchEngine.aResults.length; nCnt++)
+				{
+					if (oSearchEngine.aResults[nCnt][0] < aTl.length)
+					{
+						oUl.append("<li><a href='" + aTl[oSearchEngine.aResults[nCnt][0]][0] + "?search=" + escape(sValue) + "' target='FrameMain'>" + unescape(aTl[oSearchEngine.aResults[nCnt][0]][1]) + "</a></li>");
+					}
+				}
+				// Tree
+				$("#search_results_content").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#search_results_content") && $("#search_results_content").dynatree && $("#search_results_content").dynatree("getTree") && $("#search_results_content").dynatree("getTree").activateKey)
+							$("#search_results_content").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="tabs">
+		<ul>
+			
+				<li><a href="#tab-toc">Contents</a></li>
+			
+				<li><a href="#tab-keywords">Index</a></li>
+			
+				<li><a href="#tab-search">Search</a></li>
+			
+		</ul>
+		
+		<div id="tab-toc">
+			<ul id="toc" class="">
+
+				
+
+						<li class="folder" id="Englishversion" data="">
+							<a
+							href="Englishversion.html"
+							target="FrameMain">
+								English version
+							</a>
+
+				<ul>
+
+						<li class="" id="Description" data="">
+							<a
+							href="Description.html"
+							target="FrameMain">
+								Description
+							</a>
+
+				</li>
+
+						<li class="folder" id="Quickstart" data="">
+							<a
+							href="Quickstart.html"
+							target="FrameMain">
+								Quick start
+							</a>
+
+				<ul>
+
+						<li class="" id="Systemrequirements" data="">
+							<a
+							href="Systemrequirements.html"
+							target="FrameMain">
+								System requirements
+							</a>
+
+				</li>
+
+						<li class="" id="Installationandlaunch" data="">
+							<a
+							href="Installationandlaunch.html"
+							target="FrameMain">
+								Installation and launch
+							</a>
+
+				</li>
+
+						<li class="" id="Creatingasimpleproject" data="">
+							<a
+							href="Creatingasimpleproject.html"
+							target="FrameMain">
+								Creating a simple project
+							</a>
+
+				</li>
+
+						<li class="" id="CreatingaprojectcompatiblewithVi" data="">
+							<a
+							href="CreatingaprojectcompatiblewithVi.html"
+							target="FrameMain">
+								Creating a project compatible with Visual Studio
+							</a>
+
+				</li>
+
+						<li class="" id="Launchingtheautotestandresult" data="">
+							<a
+							href="Launchingtheautotestandresult.html"
+							target="FrameMain">
+								Launching the autotest and result
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="BrowserCache" data="">
+							<a
+							href="BrowserCache.html"
+							target="FrameMain">
+								Browser Cache
+							</a>
+
+				<ul>
+
+						<li class="" id="Clearing" data="">
+							<a
+							href="Clearing.html"
+							target="FrameMain">
+								Clearing
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Interface" data="">
+							<a
+							href="Interface.html"
+							target="FrameMain">
+								Interface
+							</a>
+
+				<ul>
+
+						<li class="" id="Themainmenu" data="">
+							<a
+							href="Themainmenu.html"
+							target="FrameMain">
+								The main menu
+							</a>
+
+				</li>
+
+						<li class="" id="TheToolbar" data="">
+							<a
+							href="TheToolbar.html"
+							target="FrameMain">
+								The Toolbar
+							</a>
+
+				</li>
+
+						<li class="" id="TheProjectwindow-istheExplorerta" data="">
+							<a
+							href="TheProjectwindow-istheExplorerta.html"
+							target="FrameMain">
+								The Project window - is the Explorer tab
+							</a>
+
+				</li>
+
+						<li class="" id="TheProjectwindow-istheTesttab" data="">
+							<a
+							href="TheProjectwindow-istheTesttab.html"
+							target="FrameMain">
+								The Project window - is the Test tab
+							</a>
+
+				</li>
+
+						<li class="" id="TheProjectwindow-theLibrarytab" data="">
+							<a
+							href="TheProjectwindow-theLibrarytab.html"
+							target="FrameMain">
+								The Project window - the Library tab
+							</a>
+
+				</li>
+
+						<li class="" id="TheProjectwindow-theMailtab" data="">
+							<a
+							href="TheProjectwindow-theMailtab.html"
+							target="FrameMain">
+								The Project window - the Mail tab
+							</a>
+
+				</li>
+
+						<li class="" id="Thesystemwindow" data="">
+							<a
+							href="Thesystemwindow.html"
+							target="FrameMain">
+								The system window
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Reports" data="">
+							<a
+							href="Reports.html"
+							target="FrameMain">
+								Reports
+							</a>
+
+				<ul>
+
+						<li class="" id="AutotestReport" data="">
+							<a
+							href="AutotestReport.html"
+							target="FrameMain">
+								Autotest Report
+							</a>
+
+				</li>
+
+						<li class="" id="Logfile" data="">
+							<a
+							href="Logfile.html"
+							target="FrameMain">
+								Log file
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Mail" data="">
+							<a
+							href="Mail.html"
+							target="FrameMain">
+								Mail
+							</a>
+
+				<ul>
+
+						<li class="" id="Sendareportonthefailureoftheauto" data="">
+							<a
+							href="Sendareportonthefailureoftheauto.html"
+							target="FrameMain">
+								Send a report on the failure of the autotest to the mail
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="ConsolelaunchmodeJenkins" data="">
+							<a
+							href="ConsolelaunchmodeJenkins.html"
+							target="FrameMain">
+								Console launch mode (Jenkins)
+							</a>
+
+				<ul>
+
+						<li class="" id="Runningtheautotestfromthecommand" data="">
+							<a
+							href="Runningtheautotestfromthecommand.html"
+							target="FrameMain">
+								Running the autotest from the command line
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Atextcodeeditor" data="">
+							<a
+							href="Atextcodeeditor.html"
+							target="FrameMain">
+								A text code editor
+							</a>
+
+				<ul>
+
+						<li class="" id="CodeEditorC" data="">
+							<a
+							href="CodeEditorC.html"
+							target="FrameMain">
+								Code Editor (C#)
+							</a>
+
+				</li>
+
+						<li class="" id="UsingVisualStudiotoeditcode" data="">
+							<a
+							href="UsingVisualStudiotoeditcode.html"
+							target="FrameMain">
+								Using Visual Studio to edit code
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Thestructureoftheautotest" data="">
+							<a
+							href="Thestructureoftheautotest.html"
+							target="FrameMain">
+								The structure of the autotest
+							</a>
+
+				<ul>
+
+						<li class="" id="Simpleproject" data="">
+							<a
+							href="Simpleproject.html"
+							target="FrameMain">
+								Simple project
+							</a>
+
+				</li>
+
+						<li class="" id="ThePageObjectsandStepObjectspatt" data="">
+							<a
+							href="ThePageObjectsandStepObjectspatt.html"
+							target="FrameMain">
+								The PageObjects and StepObjects pattern
+							</a>
+
+				</li>
+
+						<li class="" id="Creatinganewautotestandpatterns" data="">
+							<a
+							href="Creatinganewautotestandpatterns.html"
+							target="FrameMain">
+								Creating a new autotest and patterns
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="HatFramework1" data="icon: '2.png'">
+							<a
+							href="HatFramework1.html"
+							target="FrameMain">
+								HatFramework
+							</a>
+
+				<ul>
+
+						<li class="folder" id="ClassTester" data="">
+							<a
+							href="ClassTester.html"
+							target="FrameMain">
+								Class: Tester
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Constructor" data="">
+							<a
+							href="Constructor.html"
+							target="FrameMain">
+								Constructor
+							</a>
+
+				<ul>
+
+						<li class="" id="Tester3" data="icon: '9.png'">
+							<a
+							href="Tester3.html"
+							target="FrameMain">
+								Tester
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Constants" data="">
+							<a
+							href="Constants.html"
+							target="FrameMain">
+								Constants
+							</a>
+
+				<ul>
+
+						<li class="" id="BY_CSS1" data="">
+							<a
+							href="BY_CSS1.html"
+							target="FrameMain">
+								BY_CSS
+							</a>
+
+				</li>
+
+						<li class="" id="BY_XPATH1" data="">
+							<a
+							href="BY_XPATH1.html"
+							target="FrameMain">
+								BY_XPATH
+							</a>
+
+				</li>
+
+						<li class="" id="IMAGE_STATUS_PROCESS1" data="">
+							<a
+							href="IMAGE_STATUS_PROCESS1.html"
+							target="FrameMain">
+								IMAGE_STATUS_PROCESS
+							</a>
+
+				</li>
+
+						<li class="" id="IMAGE_STATUS_PASSED1" data="">
+							<a
+							href="IMAGE_STATUS_PASSED1.html"
+							target="FrameMain">
+								IMAGE_STATUS_PASSED
+							</a>
+
+				</li>
+
+						<li class="" id="IMAGE_STATUS_FAILED1" data="">
+							<a
+							href="IMAGE_STATUS_FAILED1.html"
+							target="FrameMain">
+								IMAGE_STATUS_FAILED
+							</a>
+
+				</li>
+
+						<li class="" id="IMAGE_STATUS_MESSAGE1" data="">
+							<a
+							href="IMAGE_STATUS_MESSAGE1.html"
+							target="FrameMain">
+								IMAGE_STATUS_MESSAGE
+							</a>
+
+				</li>
+
+						<li class="" id="IMAGE_STATUS_WARNING1" data="">
+							<a
+							href="IMAGE_STATUS_WARNING1.html"
+							target="FrameMain">
+								IMAGE_STATUS_WARNING
+							</a>
+
+				</li>
+
+						<li class="" id="COMPLETED1" data="">
+							<a
+							href="COMPLETED1.html"
+							target="FrameMain">
+								COMPLETED
+							</a>
+
+				</li>
+
+						<li class="" id="FAILED1" data="">
+							<a
+							href="FAILED1.html"
+							target="FrameMain">
+								FAILED
+							</a>
+
+				</li>
+
+						<li class="" id="PASSED1" data="">
+							<a
+							href="PASSED1.html"
+							target="FrameMain">
+								PASSED
+							</a>
+
+				</li>
+
+						<li class="" id="PROCESS1" data="">
+							<a
+							href="PROCESS1.html"
+							target="FrameMain">
+								PROCESS
+							</a>
+
+				</li>
+
+						<li class="" id="STOPPED1" data="">
+							<a
+							href="STOPPED1.html"
+							target="FrameMain">
+								STOPPED
+							</a>
+
+				</li>
+
+						<li class="" id="WARNING1" data="">
+							<a
+							href="WARNING1.html"
+							target="FrameMain">
+								WARNING
+							</a>
+
+				</li>
+
+						<li class="" id="DEFAULT1" data="">
+							<a
+							href="DEFAULT1.html"
+							target="FrameMain">
+								DEFAULT
+							</a>
+
+				</li>
+
+						<li class="" id="UTF9" data="">
+							<a
+							href="UTF9.html"
+							target="FrameMain">
+								UTF8
+							</a>
+
+				</li>
+
+						<li class="" id="UTF8BOM1" data="">
+							<a
+							href="UTF8BOM1.html"
+							target="FrameMain">
+								UTF8BOM
+							</a>
+
+				</li>
+
+						<li class="" id="WINDOWS1252" data="">
+							<a
+							href="WINDOWS1252.html"
+							target="FrameMain">
+								WINDOWS1251
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Variables" data="">
+							<a
+							href="Variables.html"
+							target="FrameMain">
+								Variables
+							</a>
+
+				<ul>
+
+						<li class="" id="BrowserView1" data="">
+							<a
+							href="BrowserView1.html"
+							target="FrameMain">
+								BrowserView
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserWindow1" data="">
+							<a
+							href="BrowserWindow1.html"
+							target="FrameMain">
+								BrowserWindow
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Methodsforworkingwiththebrowser" data="">
+							<a
+							href="Methodsforworkingwiththebrowser.html"
+							target="FrameMain">
+								Methods for working with the browser
+							</a>
+
+				<ul>
+
+						<li class="" id="BrowserBasicAuthenticationAsync1" data="">
+							<a
+							href="BrowserBasicAuthenticationAsync1.html"
+							target="FrameMain">
+								BrowserBasicAuthenticationAsync
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserClearNetworkAsync1" data="">
+							<a
+							href="BrowserClearNetworkAsync1.html"
+							target="FrameMain">
+								BrowserClearNetworkAsync
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserCloseAsync1" data="">
+							<a
+							href="BrowserCloseAsync1.html"
+							target="FrameMain">
+								BrowserCloseAsync
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserEnableSendMailAsync1" data="">
+							<a
+							href="BrowserEnableSendMailAsync1.html"
+							target="FrameMain">
+								BrowserEnableSendMailAsync
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserFullScreenAsync1" data="">
+							<a
+							href="BrowserFullScreenAsync1.html"
+							target="FrameMain">
+								BrowserFullScreenAsync
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserScreenshotAsync1" data="">
+							<a
+							href="BrowserScreenshotAsync1.html"
+							target="FrameMain">
+								BrowserScreenshotAsync
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserSizeAsync1" data="">
+							<a
+							href="BrowserSizeAsync1.html"
+							target="FrameMain">
+								BrowserSizeAsync
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserGetUserAgentAsync1" data="">
+							<a
+							href="BrowserGetUserAgentAsync1.html"
+							target="FrameMain">
+								BrowserGetUserAgentAsync
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserSetUserAgentAsync1" data="">
+							<a
+							href="BrowserSetUserAgentAsync1.html"
+							target="FrameMain">
+								BrowserSetUserAgentAsync
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserGetErrorsAsync1" data="">
+							<a
+							href="BrowserGetErrorsAsync1.html"
+							target="FrameMain">
+								BrowserGetErrorsAsync
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserGetNetworkAsync1" data="">
+							<a
+							href="BrowserGetNetworkAsync1.html"
+							target="FrameMain">
+								BrowserGetNetworkAsync
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserGoBackAsync1" data="">
+							<a
+							href="BrowserGoBackAsync1.html"
+							target="FrameMain">
+								BrowserGoBackAsync
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserGoForwardAsync1" data="">
+							<a
+							href="BrowserGoForwardAsync1.html"
+							target="FrameMain">
+								BrowserGoForwardAsync
+							</a>
+
+				</li>
+
+						<li class="" id="BrowserPageReloadAsync1" data="">
+							<a
+							href="BrowserPageReloadAsync1.html"
+							target="FrameMain">
+								BrowserPageReloadAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Methodsfordisplayingmessages" data="">
+							<a
+							href="Methodsfordisplayingmessages.html"
+							target="FrameMain">
+								Methods for displaying messages
+							</a>
+
+				<ul>
+
+						<li class="" id="ConsoleMsg1" data="">
+							<a
+							href="ConsoleMsg1.html"
+							target="FrameMain">
+								ConsoleMsg
+							</a>
+
+				</li>
+
+						<li class="" id="ConsoleMsgError1" data="">
+							<a
+							href="ConsoleMsgError1.html"
+							target="FrameMain">
+								ConsoleMsgError
+							</a>
+
+				</li>
+
+						<li class="" id="ClearMessage1" data="">
+							<a
+							href="ClearMessage1.html"
+							target="FrameMain">
+								ClearMessage
+							</a>
+
+				</li>
+
+						<li class="" id="Description1" data="">
+							<a
+							href="Description1.html"
+							target="FrameMain">
+								Description
+							</a>
+
+				</li>
+
+						<li class="" id="DisableDebugInReport1" data="">
+							<a
+							href="DisableDebugInReport1.html"
+							target="FrameMain">
+								DisableDebugInReport
+							</a>
+
+				</li>
+
+						<li class="" id="SendMessagechangedsinceversion13" data="icon: '36.png'">
+							<a
+							href="SendMessagechangedsinceversion13.html"
+							target="FrameMain">
+								SendMessage [changed since version 1.3.0]
+							</a>
+
+				</li>
+
+						<li class="" id="SendMessageDebugchangedsincevers" data="icon: '36.png'">
+							<a
+							href="SendMessageDebugchangedsincevers.html"
+							target="FrameMain">
+								SendMessageDebug [changed since version 1.3.0]
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Methodsforpreparingandcompleting" data="">
+							<a
+							href="Methodsforpreparingandcompleting.html"
+							target="FrameMain">
+								Methods for preparing and completing testing
+							</a>
+
+				<ul>
+
+						<li class="" id="TestBeginAsync1" data="icon: '9.png'">
+							<a
+							href="TestBeginAsync1.html"
+							target="FrameMain">
+								TestBeginAsync
+							</a>
+
+				</li>
+
+						<li class="" id="TestEndAsync1" data="icon: '9.png'">
+							<a
+							href="TestEndAsync1.html"
+							target="FrameMain">
+								TestEndAsync
+							</a>
+
+				</li>
+
+						<li class="" id="TestStopAsync1" data="">
+							<a
+							href="TestStopAsync1.html"
+							target="FrameMain">
+								TestStopAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetTestResult1" data="">
+							<a
+							href="GetTestResult1.html"
+							target="FrameMain">
+								GetTestResult
+							</a>
+
+				</li>
+
+						<li class="" id="DefineTestStopchangedsinceversio" data="icon: '36.png'">
+							<a
+							href="DefineTestStopchangedsinceversio.html"
+							target="FrameMain">
+								DefineTestStop [changed since version 1.3.0]
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Methodsforperformingactions" data="">
+							<a
+							href="Methodsforperformingactions.html"
+							target="FrameMain">
+								Methods for performing actions
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Attributes" data="">
+							<a
+							href="Attributes.html"
+							target="FrameMain">
+								Attributes
+							</a>
+
+				<ul>
+
+						<li class="" id="GetAttributeFromElementAsync2" data="">
+							<a
+							href="GetAttributeFromElementAsync2.html"
+							target="FrameMain">
+								GetAttributeFromElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetAttributeFromElementByClassA1" data="">
+							<a
+							href="GetAttributeFromElementByClassA1.html"
+							target="FrameMain">
+								GetAttributeFromElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetAttributeFromElementByIdAsyn1" data="">
+							<a
+							href="GetAttributeFromElementByIdAsyn1.html"
+							target="FrameMain">
+								GetAttributeFromElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetAttributeFromElementByNameAs1" data="">
+							<a
+							href="GetAttributeFromElementByNameAs1.html"
+							target="FrameMain">
+								GetAttributeFromElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetAttributeFromElementByTagAsy1" data="">
+							<a
+							href="GetAttributeFromElementByTagAsy1.html"
+							target="FrameMain">
+								GetAttributeFromElementByTagAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetAttributeFromElementsAsync2" data="">
+							<a
+							href="GetAttributeFromElementsAsync2.html"
+							target="FrameMain">
+								GetAttributeFromElementsAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetAttributeFromElementsByClass1" data="">
+							<a
+							href="GetAttributeFromElementsByClass1.html"
+							target="FrameMain">
+								GetAttributeFromElementsByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetAttributeFromElementsByNameA1" data="">
+							<a
+							href="GetAttributeFromElementsByNameA1.html"
+							target="FrameMain">
+								GetAttributeFromElementsByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetAttributeFromElementsByTagAs1" data="">
+							<a
+							href="GetAttributeFromElementsByTagAs1.html"
+							target="FrameMain">
+								GetAttributeFromElementsByTagAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetAttributeInElementAsync2" data="">
+							<a
+							href="SetAttributeInElementAsync2.html"
+							target="FrameMain">
+								SetAttributeInElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetAttributeInElementByClassAsy1" data="">
+							<a
+							href="SetAttributeInElementByClassAsy1.html"
+							target="FrameMain">
+								SetAttributeInElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetAttributeInElementByIdAsync1" data="">
+							<a
+							href="SetAttributeInElementByIdAsync1.html"
+							target="FrameMain">
+								SetAttributeInElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetAttributeInElementByNameAsyn1" data="">
+							<a
+							href="SetAttributeInElementByNameAsyn1.html"
+							target="FrameMain">
+								SetAttributeInElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetAttributeInElementByTagAsync1" data="">
+							<a
+							href="SetAttributeInElementByTagAsync1.html"
+							target="FrameMain">
+								SetAttributeInElementByTagAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetAttributeInElementsAsync2" data="">
+							<a
+							href="SetAttributeInElementsAsync2.html"
+							target="FrameMain">
+								SetAttributeInElementsAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetAttributeInElementsByClassAs1" data="">
+							<a
+							href="SetAttributeInElementsByClassAs1.html"
+							target="FrameMain">
+								SetAttributeInElementsByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetAttributeInElementsByNameAsy1" data="">
+							<a
+							href="SetAttributeInElementsByNameAsy1.html"
+							target="FrameMain">
+								SetAttributeInElementsByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetAttributeInElementsByTagAsyn1" data="">
+							<a
+							href="SetAttributeInElementsByTagAsyn1.html"
+							target="FrameMain">
+								SetAttributeInElementsByTagAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Values" data="">
+							<a
+							href="Values.html"
+							target="FrameMain">
+								Values
+							</a>
+
+				<ul>
+
+						<li class="" id="GetValueFromElementAsync2" data="">
+							<a
+							href="GetValueFromElementAsync2.html"
+							target="FrameMain">
+								GetValueFromElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetValueFromElementByClassAsync1" data="">
+							<a
+							href="GetValueFromElementByClassAsync1.html"
+							target="FrameMain">
+								GetValueFromElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetValueFromElementByIdAsync1" data="">
+							<a
+							href="GetValueFromElementByIdAsync1.html"
+							target="FrameMain">
+								GetValueFromElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetValueFromElementByNameAsync1" data="">
+							<a
+							href="GetValueFromElementByNameAsync1.html"
+							target="FrameMain">
+								GetValueFromElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetValueFromElementByTagAsync1" data="">
+							<a
+							href="GetValueFromElementByTagAsync1.html"
+							target="FrameMain">
+								GetValueFromElementByTagAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetValueInElementAsync2" data="">
+							<a
+							href="SetValueInElementAsync2.html"
+							target="FrameMain">
+								SetValueInElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetValueInElementByClassAsync1" data="">
+							<a
+							href="SetValueInElementByClassAsync1.html"
+							target="FrameMain">
+								SetValueInElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetValueInElementByIdAsync1" data="">
+							<a
+							href="SetValueInElementByIdAsync1.html"
+							target="FrameMain">
+								SetValueInElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetValueInElementByNameAsync1" data="">
+							<a
+							href="SetValueInElementByNameAsync1.html"
+							target="FrameMain">
+								SetValueInElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetValueInElementByTagAsync1" data="">
+							<a
+							href="SetValueInElementByTagAsync1.html"
+							target="FrameMain">
+								SetValueInElementByTagAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Clicking" data="">
+							<a
+							href="Clicking.html"
+							target="FrameMain">
+								Clicking
+							</a>
+
+				<ul>
+
+						<li class="" id="ClickElementAsync2" data="">
+							<a
+							href="ClickElementAsync2.html"
+							target="FrameMain">
+								ClickElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="ClickElementByClassAsync1" data="">
+							<a
+							href="ClickElementByClassAsync1.html"
+							target="FrameMain">
+								ClickElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="ClickElementByIdAsync1" data="">
+							<a
+							href="ClickElementByIdAsync1.html"
+							target="FrameMain">
+								ClickElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="ClickElementByNameAsync1" data="">
+							<a
+							href="ClickElementByNameAsync1.html"
+							target="FrameMain">
+								ClickElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="ClickElementByTagAsync1" data="">
+							<a
+							href="ClickElementByTagAsync1.html"
+							target="FrameMain">
+								ClickElementByTagAsync
+							</a>
+
+				</li>
+
+						<li class="" id="IsClickableElementAsync2" data="">
+							<a
+							href="IsClickableElementAsync2.html"
+							target="FrameMain">
+								IsClickableElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="ScrollToElementAsync2" data="">
+							<a
+							href="ScrollToElementAsync2.html"
+							target="FrameMain">
+								ScrollToElementAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Objects" data="">
+							<a
+							href="Objects.html"
+							target="FrameMain">
+								Objects
+							</a>
+
+				<ul>
+
+						<li class="" id="GetElementAsync1" data="icon: '9.png'">
+							<a
+							href="GetElementAsync1.html"
+							target="FrameMain">
+								GetElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetFrameAsync1" data="icon: '9.png'">
+							<a
+							href="GetFrameAsync1.html"
+							target="FrameMain">
+								GetFrameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetCountElementsAsync2" data="">
+							<a
+							href="GetCountElementsAsync2.html"
+							target="FrameMain">
+								GetCountElementsAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetCountElementsByClassAsync1" data="">
+							<a
+							href="GetCountElementsByClassAsync1.html"
+							target="FrameMain">
+								GetCountElementsByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetCountElementsByNameAsync1" data="">
+							<a
+							href="GetCountElementsByNameAsync1.html"
+							target="FrameMain">
+								GetCountElementsByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetCountElementsByTagAsync1" data="">
+							<a
+							href="GetCountElementsByTagAsync1.html"
+							target="FrameMain">
+								GetCountElementsByTagAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetHtmlFromElementAsync2" data="">
+							<a
+							href="GetHtmlFromElementAsync2.html"
+							target="FrameMain">
+								GetHtmlFromElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetHtmlFromElementByClassAsync1" data="">
+							<a
+							href="GetHtmlFromElementByClassAsync1.html"
+							target="FrameMain">
+								GetHtmlFromElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetHtmlFromElementByIdAsync1" data="">
+							<a
+							href="GetHtmlFromElementByIdAsync1.html"
+							target="FrameMain">
+								GetHtmlFromElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetHtmlFromElementByNameAsync1" data="">
+							<a
+							href="GetHtmlFromElementByNameAsync1.html"
+							target="FrameMain">
+								GetHtmlFromElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetHtmlFromElementByTagAsync1" data="">
+							<a
+							href="GetHtmlFromElementByTagAsync1.html"
+							target="FrameMain">
+								GetHtmlFromElementByTagAsync
+							</a>
+
+				</li>
+
+						<li class="" id="IsVisibleElementAsync2" data="">
+							<a
+							href="IsVisibleElementAsync2.html"
+							target="FrameMain">
+								IsVisibleElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="MakeElementVisibleAsync1" data="">
+							<a
+							href="MakeElementVisibleAsync1.html"
+							target="FrameMain">
+								MakeElementVisibleAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetHtmlInElementAsync2" data="">
+							<a
+							href="SetHtmlInElementAsync2.html"
+							target="FrameMain">
+								SetHtmlInElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetHtmlInElementByClassAsync1" data="">
+							<a
+							href="SetHtmlInElementByClassAsync1.html"
+							target="FrameMain">
+								SetHtmlInElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetHtmlInElementByIdAsync1" data="">
+							<a
+							href="SetHtmlInElementByIdAsync1.html"
+							target="FrameMain">
+								SetHtmlInElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetHtmlInElementByNameAsync1" data="">
+							<a
+							href="SetHtmlInElementByNameAsync1.html"
+							target="FrameMain">
+								SetHtmlInElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetHtmlInElementByTagAsync1" data="">
+							<a
+							href="SetHtmlInElementByTagAsync1.html"
+							target="FrameMain">
+								SetHtmlInElementByTagAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Waiting" data="">
+							<a
+							href="Waiting.html"
+							target="FrameMain">
+								Waiting
+							</a>
+
+				<ul>
+
+						<li class="" id="WaitAsync1" data="">
+							<a
+							href="WaitAsync1.html"
+							target="FrameMain">
+								WaitAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitElementInDomAsync1" data="">
+							<a
+							href="WaitElementInDomAsync1.html"
+							target="FrameMain">
+								WaitElementInDomAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitElementNotDomAsync1" data="">
+							<a
+							href="WaitElementNotDomAsync1.html"
+							target="FrameMain">
+								WaitElementNotDomAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitNotVisibleElementAsync2" data="">
+							<a
+							href="WaitNotVisibleElementAsync2.html"
+							target="FrameMain">
+								WaitNotVisibleElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitNotVisibleElementByClassAsy1" data="">
+							<a
+							href="WaitNotVisibleElementByClassAsy1.html"
+							target="FrameMain">
+								WaitNotVisibleElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitNotVisibleElementByIdAsync1" data="">
+							<a
+							href="WaitNotVisibleElementByIdAsync1.html"
+							target="FrameMain">
+								WaitNotVisibleElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitNotVisibleElementByNameAsyn1" data="">
+							<a
+							href="WaitNotVisibleElementByNameAsyn1.html"
+							target="FrameMain">
+								WaitNotVisibleElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitNotVisibleElementByTagAsync1" data="">
+							<a
+							href="WaitNotVisibleElementByTagAsync1.html"
+							target="FrameMain">
+								WaitNotVisibleElementByTagAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitVisibleElementAsync2" data="">
+							<a
+							href="WaitVisibleElementAsync2.html"
+							target="FrameMain">
+								WaitVisibleElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitVisibleElementByClassAsync1" data="">
+							<a
+							href="WaitVisibleElementByClassAsync1.html"
+							target="FrameMain">
+								WaitVisibleElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitVisibleElementByIdAsync1" data="">
+							<a
+							href="WaitVisibleElementByIdAsync1.html"
+							target="FrameMain">
+								WaitVisibleElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitVisibleElementByNameAsync1" data="">
+							<a
+							href="WaitVisibleElementByNameAsync1.html"
+							target="FrameMain">
+								WaitVisibleElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitVisibleElementByTagAsync1" data="">
+							<a
+							href="WaitVisibleElementByTagAsync1.html"
+							target="FrameMain">
+								WaitVisibleElementByTagAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Search" data="">
+							<a
+							href="Search.html"
+							target="FrameMain">
+								Search
+							</a>
+
+				<ul>
+
+						<li class="" id="FindElementAsync2" data="">
+							<a
+							href="FindElementAsync2.html"
+							target="FrameMain">
+								FindElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FindElementByClassAsync1" data="">
+							<a
+							href="FindElementByClassAsync1.html"
+							target="FrameMain">
+								FindElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FindElementByIdAsync1" data="">
+							<a
+							href="FindElementByIdAsync1.html"
+							target="FrameMain">
+								FindElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FindElementByNameAsync1" data="">
+							<a
+							href="FindElementByNameAsync1.html"
+							target="FrameMain">
+								FindElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FindElementByTagAsync1" data="">
+							<a
+							href="FindElementByTagAsync1.html"
+							target="FrameMain">
+								FindElementByTagAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FindVisibleElementAsync2" data="">
+							<a
+							href="FindVisibleElementAsync2.html"
+							target="FrameMain">
+								FindVisibleElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FindVisibleElementByClassAsync1" data="">
+							<a
+							href="FindVisibleElementByClassAsync1.html"
+							target="FrameMain">
+								FindVisibleElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FindVisibleElementByIdAsync1" data="">
+							<a
+							href="FindVisibleElementByIdAsync1.html"
+							target="FrameMain">
+								FindVisibleElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FindVisibleElementByNameAsync1" data="">
+							<a
+							href="FindVisibleElementByNameAsync1.html"
+							target="FrameMain">
+								FindVisibleElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FindVisibleElementByTagAsync1" data="">
+							<a
+							href="FindVisibleElementByTagAsync1.html"
+							target="FrameMain">
+								FindVisibleElementByTagAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Styles" data="">
+							<a
+							href="Styles.html"
+							target="FrameMain">
+								Styles
+							</a>
+
+				<ul>
+
+						<li class="" id="GetStyleFromElementAsync2" data="">
+							<a
+							href="GetStyleFromElementAsync2.html"
+							target="FrameMain">
+								GetStyleFromElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetStyleFromElementByClassAsync1" data="">
+							<a
+							href="GetStyleFromElementByClassAsync1.html"
+							target="FrameMain">
+								GetStyleFromElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetStyleFromElementByIdAsync1" data="">
+							<a
+							href="GetStyleFromElementByIdAsync1.html"
+							target="FrameMain">
+								GetStyleFromElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetStyleFromElementByNameAsync1" data="">
+							<a
+							href="GetStyleFromElementByNameAsync1.html"
+							target="FrameMain">
+								GetStyleFromElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetStyleFromElementByTagAsync1" data="">
+							<a
+							href="GetStyleFromElementByTagAsync1.html"
+							target="FrameMain">
+								GetStyleFromElementByTagAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetStyleInElementAsync2" data="">
+							<a
+							href="SetStyleInElementAsync2.html"
+							target="FrameMain">
+								SetStyleInElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetStyleInElementByClassAsync1" data="">
+							<a
+							href="SetStyleInElementByClassAsync1.html"
+							target="FrameMain">
+								SetStyleInElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetStyleInElementByIdAsync1" data="">
+							<a
+							href="SetStyleInElementByIdAsync1.html"
+							target="FrameMain">
+								SetStyleInElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetStyleInElementByNameAsync1" data="">
+							<a
+							href="SetStyleInElementByNameAsync1.html"
+							target="FrameMain">
+								SetStyleInElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetStyleInElementByTagAsync1" data="">
+							<a
+							href="SetStyleInElementByTagAsync1.html"
+							target="FrameMain">
+								SetStyleInElementByTagAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Page" data="">
+							<a
+							href="Page.html"
+							target="FrameMain">
+								Page
+							</a>
+
+				<ul>
+
+						<li class="" id="GetCookiesAsync1" data="">
+							<a
+							href="GetCookiesAsync1.html"
+							target="FrameMain">
+								GetCookiesAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetListRedirectUrlAsync1" data="">
+							<a
+							href="GetListRedirectUrlAsync1.html"
+							target="FrameMain">
+								GetListRedirectUrlAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetTitleAsync2" data="">
+							<a
+							href="GetTitleAsync2.html"
+							target="FrameMain">
+								GetTitleAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetUrlAsync2" data="">
+							<a
+							href="GetUrlAsync2.html"
+							target="FrameMain">
+								GetUrlAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetUrlResponseAsync1" data="">
+							<a
+							href="GetUrlResponseAsync1.html"
+							target="FrameMain">
+								GetUrlResponseAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GoToUrlAsync1" data="">
+							<a
+							href="GoToUrlAsync1.html"
+							target="FrameMain">
+								GoToUrlAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GoToUrlBaseAuthAsync1" data="">
+							<a
+							href="GoToUrlBaseAuthAsync1.html"
+							target="FrameMain">
+								GoToUrlBaseAuthAsync
+							</a>
+
+				</li>
+
+						<li class="" id="LoadPageAsync1" data="">
+							<a
+							href="LoadPageAsync1.html"
+							target="FrameMain">
+								LoadPageAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Text" data="">
+							<a
+							href="Text.html"
+							target="FrameMain">
+								Text
+							</a>
+
+				<ul>
+
+						<li class="" id="GetTextFromElementAsync2" data="">
+							<a
+							href="GetTextFromElementAsync2.html"
+							target="FrameMain">
+								GetTextFromElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetTextFromElementByClassAsync1" data="">
+							<a
+							href="GetTextFromElementByClassAsync1.html"
+							target="FrameMain">
+								GetTextFromElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetTextFromElementByIdAsync1" data="">
+							<a
+							href="GetTextFromElementByIdAsync1.html"
+							target="FrameMain">
+								GetTextFromElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetTextFromElementByNameAsync1" data="">
+							<a
+							href="GetTextFromElementByNameAsync1.html"
+							target="FrameMain">
+								GetTextFromElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetTextFromElementByTagAsync1" data="">
+							<a
+							href="GetTextFromElementByTagAsync1.html"
+							target="FrameMain">
+								GetTextFromElementByTagAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetTextInElementAsync2" data="">
+							<a
+							href="SetTextInElementAsync2.html"
+							target="FrameMain">
+								SetTextInElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetTextInElementByClassAsync1" data="">
+							<a
+							href="SetTextInElementByClassAsync1.html"
+							target="FrameMain">
+								SetTextInElementByClassAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetTextInElementByIdAsync1" data="">
+							<a
+							href="SetTextInElementByIdAsync1.html"
+							target="FrameMain">
+								SetTextInElementByIdAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetTextInElementByNameAsync1" data="">
+							<a
+							href="SetTextInElementByNameAsync1.html"
+							target="FrameMain">
+								SetTextInElementByNameAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetTextInElementByTagAsync1" data="">
+							<a
+							href="SetTextInElementByTagAsync1.html"
+							target="FrameMain">
+								SetTextInElementByTagAsync
+							</a>
+
+				</li></ul></li></ul></li>
+
+						<li class="folder" id="MethodsforexecutingJavaScript" data="">
+							<a
+							href="MethodsforexecutingJavaScript.html"
+							target="FrameMain">
+								Methods for executing JavaScript
+							</a>
+
+				<ul>
+
+						<li class="" id="ExecuteJavaScriptAsync1" data="">
+							<a
+							href="ExecuteJavaScriptAsync1.html"
+							target="FrameMain">
+								ExecuteJavaScriptAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="MethodsforexecutingRestrequests" data="">
+							<a
+							href="MethodsforexecutingRestrequests.html"
+							target="FrameMain">
+								Methods for executing Rest requests
+							</a>
+
+				<ul>
+
+						<li class="" id="RestGetAsync1" data="">
+							<a
+							href="RestGetAsync1.html"
+							target="FrameMain">
+								RestGetAsync
+							</a>
+
+				</li>
+
+						<li class="" id="RestGetBasicAuthAsync1" data="">
+							<a
+							href="RestGetBasicAuthAsync1.html"
+							target="FrameMain">
+								RestGetBasicAuthAsync
+							</a>
+
+				</li>
+
+						<li class="" id="RestGetStatusCodeAsync1" data="">
+							<a
+							href="RestGetStatusCodeAsync1.html"
+							target="FrameMain">
+								RestGetStatusCodeAsync
+							</a>
+
+				</li>
+
+						<li class="" id="RestPostAsync1" data="">
+							<a
+							href="RestPostAsync1.html"
+							target="FrameMain">
+								RestPostAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Methodsformeasuringthetimespent" data="">
+							<a
+							href="Methodsformeasuringthetimespent.html"
+							target="FrameMain">
+								Methods for measuring the time spent
+							</a>
+
+				<ul>
+
+						<li class="" id="TimerStart1" data="">
+							<a
+							href="TimerStart1.html"
+							target="FrameMain">
+								TimerStart
+							</a>
+
+				</li>
+
+						<li class="" id="TimerStop1" data="">
+							<a
+							href="TimerStop1.html"
+							target="FrameMain">
+								TimerStop
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Methodsforsendingemailandmessage" data="">
+							<a
+							href="Methodsforsendingemailandmessage.html"
+							target="FrameMain">
+								Methods for sending email and message
+							</a>
+
+				<ul>
+
+						<li class="" id="SendMsgToMailAsync1" data="">
+							<a
+							href="SendMsgToMailAsync1.html"
+							target="FrameMain">
+								SendMsgToMailAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SendMsgToTelegramAsync1" data="">
+							<a
+							href="SendMsgToTelegramAsync1.html"
+							target="FrameMain">
+								SendMsgToTelegramAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Methodsforcheckingtheresult" data="">
+							<a
+							href="Methodsforcheckingtheresult.html"
+							target="FrameMain">
+								Methods for checking the result
+							</a>
+
+				<ul>
+
+						<li class="" id="AssertEqualsAsync1" data="">
+							<a
+							href="AssertEqualsAsync1.html"
+							target="FrameMain">
+								AssertEqualsAsync
+							</a>
+
+				</li>
+
+						<li class="" id="AssertNotEqualsAsync1" data="">
+							<a
+							href="AssertNotEqualsAsync1.html"
+							target="FrameMain">
+								AssertNotEqualsAsync
+							</a>
+
+				</li>
+
+						<li class="" id="AssertTrueAsync1" data="">
+							<a
+							href="AssertTrueAsync1.html"
+							target="FrameMain">
+								AssertTrueAsync
+							</a>
+
+				</li>
+
+						<li class="" id="AssertFalseAsync1" data="">
+							<a
+							href="AssertFalseAsync1.html"
+							target="FrameMain">
+								AssertFalseAsync
+							</a>
+
+				</li>
+
+						<li class="" id="AssertNotNullAsync1" data="">
+							<a
+							href="AssertNotNullAsync1.html"
+							target="FrameMain">
+								AssertNotNullAsync
+							</a>
+
+				</li>
+
+						<li class="" id="AssertNullAsync1" data="">
+							<a
+							href="AssertNullAsync1.html"
+							target="FrameMain">
+								AssertNullAsync
+							</a>
+
+				</li>
+
+						<li class="" id="AssertNoErrorsAsync1" data="">
+							<a
+							href="AssertNoErrorsAsync1.html"
+							target="FrameMain">
+								AssertNoErrorsAsync
+							</a>
+
+				</li>
+
+						<li class="" id="AssertNetworkEventsAsync1" data="">
+							<a
+							href="AssertNetworkEventsAsync1.html"
+							target="FrameMain">
+								AssertNetworkEventsAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Methodsforworkingwithfiles" data="">
+							<a
+							href="Methodsforworkingwithfiles.html"
+							target="FrameMain">
+								Methods for working with files
+							</a>
+
+				<ul>
+
+						<li class="" id="FileDownloadAsync1" data="">
+							<a
+							href="FileDownloadAsync1.html"
+							target="FrameMain">
+								FileDownloadAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FileGetHashMD5Async1" data="">
+							<a
+							href="FileGetHashMD5Async1.html"
+							target="FrameMain">
+								FileGetHashMD5Async
+							</a>
+
+				</li>
+
+						<li class="" id="FileReadAsync1" data="">
+							<a
+							href="FileReadAsync1.html"
+							target="FrameMain">
+								FileReadAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FileWriteAsync1" data="">
+							<a
+							href="FileWriteAsync1.html"
+							target="FrameMain">
+								FileWriteAsync
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Methodsfordifferenttasks" data="">
+							<a
+							href="Methodsfordifferenttasks.html"
+							target="FrameMain">
+								Methods for different tasks
+							</a>
+
+				<ul>
+
+						<li class="" id="CreateHashMD5FromTextAsync1" data="">
+							<a
+							href="CreateHashMD5FromTextAsync1.html"
+							target="FrameMain">
+								CreateHashMD5FromTextAsync
+							</a>
+
+				</li></ul></li></ul></li>
+
+						<li class="folder" id="ClassHTMLElement" data="">
+							<a
+							href="ClassHTMLElement.html"
+							target="FrameMain">
+								Class: HTMLElement
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Constructor1" data="">
+							<a
+							href="Constructor1.html"
+							target="FrameMain">
+								Constructor
+							</a>
+
+				<ul>
+
+						<li class="" id="HTMLElement3" data="icon: '9.png'">
+							<a
+							href="HTMLElement3.html"
+							target="FrameMain">
+								HTMLElement
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Constants1" data="">
+							<a
+							href="Constants1.html"
+							target="FrameMain">
+								Constants
+							</a>
+
+				<ul>
+
+						<li class="" id="BY_INDEX2" data="">
+							<a
+							href="BY_INDEX2.html"
+							target="FrameMain">
+								BY_INDEX
+							</a>
+
+				</li>
+
+						<li class="" id="BY_TEXT2" data="">
+							<a
+							href="BY_TEXT2.html"
+							target="FrameMain">
+								BY_TEXT
+							</a>
+
+				</li>
+
+						<li class="" id="BY_VALUE2" data="">
+							<a
+							href="BY_VALUE2.html"
+							target="FrameMain">
+								BY_VALUE
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Variables1" data="">
+							<a
+							href="Variables1.html"
+							target="FrameMain">
+								Variables
+							</a>
+
+				<ul>
+
+						<li class="" id="Id1" data="">
+							<a
+							href="Id1.html"
+							target="FrameMain">
+								Id
+							</a>
+
+				</li>
+
+						<li class="" id="Name2" data="">
+							<a
+							href="Name2.html"
+							target="FrameMain">
+								Name
+							</a>
+
+				</li>
+
+						<li class="" id="Class1" data="">
+							<a
+							href="Class1.html"
+							target="FrameMain">
+								Class
+							</a>
+
+				</li>
+
+						<li class="" id="Type1" data="">
+							<a
+							href="Type1.html"
+							target="FrameMain">
+								Type
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Methods" data="">
+							<a
+							href="Methods.html"
+							target="FrameMain">
+								Methods
+							</a>
+
+				<ul>
+
+						<li class="" id="ClickAsync1" data="">
+							<a
+							href="ClickAsync1.html"
+							target="FrameMain">
+								ClickAsync
+							</a>
+
+				</li>
+
+						<li class="" id="ClickMouseAsync1" data="">
+							<a
+							href="ClickMouseAsync1.html"
+							target="FrameMain">
+								ClickMouseAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetAttributeAsync1" data="">
+							<a
+							href="GetAttributeAsync1.html"
+							target="FrameMain">
+								GetAttributeAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetHtmlAsync1" data="">
+							<a
+							href="GetHtmlAsync1.html"
+							target="FrameMain">
+								GetHtmlAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetLocatorAsync1" data="icon: '8.png'">
+							<a
+							href="GetLocatorAsync1.html"
+							target="FrameMain">
+								GetLocatorAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetOptionAsync2" data="">
+							<a
+							href="GetOptionAsync2.html"
+							target="FrameMain">
+								GetOptionAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetStyleAsync1" data="icon: '8.png'">
+							<a
+							href="GetStyleAsync1.html"
+							target="FrameMain">
+								GetStyleAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetTextAsync1" data="">
+							<a
+							href="GetTextAsync1.html"
+							target="FrameMain">
+								GetTextAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetValueAsync1" data="">
+							<a
+							href="GetValueAsync1.html"
+							target="FrameMain">
+								GetValueAsync
+							</a>
+
+				</li>
+
+						<li class="" id="IsClickableAsync1" data="">
+							<a
+							href="IsClickableAsync1.html"
+							target="FrameMain">
+								IsClickableAsync
+							</a>
+
+				</li>
+
+						<li class="" id="MakeVisibleAsync2" data="">
+							<a
+							href="MakeVisibleAsync2.html"
+							target="FrameMain">
+								MakeVisibleAsync
+							</a>
+
+				</li>
+
+						<li class="" id="ScrollToAsync1" data="">
+							<a
+							href="ScrollToAsync1.html"
+							target="FrameMain">
+								ScrollToAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SelectOptionAsync2" data="">
+							<a
+							href="SelectOptionAsync2.html"
+							target="FrameMain">
+								SelectOptionAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetAttributeAsync1" data="">
+							<a
+							href="SetAttributeAsync1.html"
+							target="FrameMain">
+								SetAttributeAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetHtmlAsync1" data="">
+							<a
+							href="SetHtmlAsync1.html"
+							target="FrameMain">
+								SetHtmlAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetStyleAsync1" data="icon: '8.png'">
+							<a
+							href="SetStyleAsync1.html"
+							target="FrameMain">
+								SetStyleAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetTextAsync1" data="">
+							<a
+							href="SetTextAsync1.html"
+							target="FrameMain">
+								SetTextAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetValueAsync1" data="">
+							<a
+							href="SetValueAsync1.html"
+							target="FrameMain">
+								SetValueAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitNotVisibleAsync1" data="">
+							<a
+							href="WaitNotVisibleAsync1.html"
+							target="FrameMain">
+								WaitNotVisibleAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitVisibleAsync1" data="">
+							<a
+							href="WaitVisibleAsync1.html"
+							target="FrameMain">
+								WaitVisibleAsync
+							</a>
+
+				</li></ul></li></ul></li>
+
+						<li class="folder" id="ClassFRAMEElement" data="">
+							<a
+							href="ClassFRAMEElement.html"
+							target="FrameMain">
+								Class: FRAMEElement
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Constructor2" data="">
+							<a
+							href="Constructor2.html"
+							target="FrameMain">
+								Constructor
+							</a>
+
+				<ul>
+
+						<li class="" id="FRAMEElement3" data="">
+							<a
+							href="FRAMEElement3.html"
+							target="FrameMain">
+								FRAMEElement
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Constants2" data="">
+							<a
+							href="Constants2.html"
+							target="FrameMain">
+								Constants
+							</a>
+
+				<ul>
+
+						<li class="" id="BY_INDEX3" data="">
+							<a
+							href="BY_INDEX3.html"
+							target="FrameMain">
+								BY_INDEX
+							</a>
+
+				</li>
+
+						<li class="" id="BY_TEXT3" data="">
+							<a
+							href="BY_TEXT3.html"
+							target="FrameMain">
+								BY_TEXT
+							</a>
+
+				</li>
+
+						<li class="" id="BY_VALUE3" data="">
+							<a
+							href="BY_VALUE3.html"
+							target="FrameMain">
+								BY_VALUE
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Variables2" data="">
+							<a
+							href="Variables2.html"
+							target="FrameMain">
+								Variables
+							</a>
+
+				<ul>
+
+						<li class="" id="Name3" data="">
+							<a
+							href="Name3.html"
+							target="FrameMain">
+								Name
+							</a>
+
+				</li>
+
+						<li class="" id="Index2" data="">
+							<a
+							href="Index2.html"
+							target="FrameMain">
+								Index
+							</a>
+
+				</li>
+
+						<li class="" id="Index3" data="">
+							<a
+							href="Index3.html"
+							target="FrameMain">
+								Index
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Methods1" data="">
+							<a
+							href="Methods1.html"
+							target="FrameMain">
+								Methods
+							</a>
+
+				<ul>
+
+						<li class="" id="ClickElementAsync3" data="">
+							<a
+							href="ClickElementAsync3.html"
+							target="FrameMain">
+								ClickElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FindElementAsync3" data="">
+							<a
+							href="FindElementAsync3.html"
+							target="FrameMain">
+								FindElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FindVisibleElementAsync3" data="">
+							<a
+							href="FindVisibleElementAsync3.html"
+							target="FrameMain">
+								FindVisibleElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetAttributeFromElementAsync3" data="">
+							<a
+							href="GetAttributeFromElementAsync3.html"
+							target="FrameMain">
+								GetAttributeFromElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetAttributeFromElementsAsync3" data="">
+							<a
+							href="GetAttributeFromElementsAsync3.html"
+							target="FrameMain">
+								GetAttributeFromElementsAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetCountElementsAsync3" data="">
+							<a
+							href="GetCountElementsAsync3.html"
+							target="FrameMain">
+								GetCountElementsAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetHtmlFromElementAsync3" data="">
+							<a
+							href="GetHtmlFromElementAsync3.html"
+							target="FrameMain">
+								GetHtmlFromElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetOptionAsync3" data="">
+							<a
+							href="GetOptionAsync3.html"
+							target="FrameMain">
+								GetOptionAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetStyleFromElementAsync3" data="icon: '8.png'">
+							<a
+							href="GetStyleFromElementAsync3.html"
+							target="FrameMain">
+								GetStyleFromElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetTextFromElementAsync3" data="">
+							<a
+							href="GetTextFromElementAsync3.html"
+							target="FrameMain">
+								GetTextFromElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetTitleAsync3" data="">
+							<a
+							href="GetTitleAsync3.html"
+							target="FrameMain">
+								GetTitleAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetUrlAsync3" data="">
+							<a
+							href="GetUrlAsync3.html"
+							target="FrameMain">
+								GetUrlAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetValueFromElementAsync3" data="">
+							<a
+							href="GetValueFromElementAsync3.html"
+							target="FrameMain">
+								GetValueFromElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="IsClickableElementAsync3" data="">
+							<a
+							href="IsClickableElementAsync3.html"
+							target="FrameMain">
+								IsClickableElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="IsVisibleElementAsync3" data="">
+							<a
+							href="IsVisibleElementAsync3.html"
+							target="FrameMain">
+								IsVisibleElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="MakeVisibleAsync3" data="">
+							<a
+							href="MakeVisibleAsync3.html"
+							target="FrameMain">
+								MakeVisibleAsync
+							</a>
+
+				</li>
+
+						<li class="" id="ScrollToElementAsync3" data="">
+							<a
+							href="ScrollToElementAsync3.html"
+							target="FrameMain">
+								ScrollToElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SelectOptionAsync3" data="">
+							<a
+							href="SelectOptionAsync3.html"
+							target="FrameMain">
+								SelectOptionAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetAttributeInElementAsync3" data="">
+							<a
+							href="SetAttributeInElementAsync3.html"
+							target="FrameMain">
+								SetAttributeInElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetAttributeInElementsAsync3" data="">
+							<a
+							href="SetAttributeInElementsAsync3.html"
+							target="FrameMain">
+								SetAttributeInElementsAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetHtmlInElementAsync3" data="">
+							<a
+							href="SetHtmlInElementAsync3.html"
+							target="FrameMain">
+								SetHtmlInElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetStyleInElementAsync3" data="icon: '8.png'">
+							<a
+							href="SetStyleInElementAsync3.html"
+							target="FrameMain">
+								SetStyleInElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetTextInElementAsync3" data="">
+							<a
+							href="SetTextInElementAsync3.html"
+							target="FrameMain">
+								SetTextInElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetValueInElementAsync3" data="">
+							<a
+							href="SetValueInElementAsync3.html"
+							target="FrameMain">
+								SetValueInElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitNotVisibleElementAsync3" data="">
+							<a
+							href="WaitNotVisibleElementAsync3.html"
+							target="FrameMain">
+								WaitNotVisibleElementAsync
+							</a>
+
+				</li>
+
+						<li class="" id="WaitVisibleElementAsync3" data="">
+							<a
+							href="WaitVisibleElementAsync3.html"
+							target="FrameMain">
+								WaitVisibleElementAsync
+							</a>
+
+				</li></ul></li></ul></li></ul></li>
+
+						<li class="folder" id="Plugins" data="icon: '2.png'">
+							<a
+							href="Plugins.html"
+							target="FrameMain">
+								Plugins
+							</a>
+
+				<ul>
+
+						<li class="folder" id="HatPluginMySql1" data="">
+							<a
+							href="HatPluginMySql1.html"
+							target="FrameMain">
+								HatPluginMySql
+							</a>
+
+				<ul>
+
+						<li class="" id="Installingtheplugin" data="">
+							<a
+							href="Installingtheplugin.html"
+							target="FrameMain">
+								Installing the plugin
+							</a>
+
+				</li>
+
+						<li class="" id="Connectingtheplugintotheproject" data="">
+							<a
+							href="Connectingtheplugintotheproject.html"
+							target="FrameMain">
+								Connecting the plugin to the project
+							</a>
+
+				</li>
+
+						<li class="" id="Anexampleofanautotest" data="">
+							<a
+							href="Anexampleofanautotest.html"
+							target="FrameMain">
+								An example of an autotest
+							</a>
+
+				</li>
+
+						<li class="folder" id="ClassTesterMySql" data="">
+							<a
+							href="ClassTesterMySql.html"
+							target="FrameMain">
+								Class: TesterMySql
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Constructor3" data="">
+							<a
+							href="Constructor3.html"
+							target="FrameMain">
+								Constructor
+							</a>
+
+				<ul>
+
+						<li class="" id="TesterMySql3" data="">
+							<a
+							href="TesterMySql3.html"
+							target="FrameMain">
+								TesterMySql
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Methods2" data="">
+							<a
+							href="Methods2.html"
+							target="FrameMain">
+								Methods
+							</a>
+
+				<ul>
+
+						<li class="" id="ConnectionOpenAsync1" data="">
+							<a
+							href="ConnectionOpenAsync1.html"
+							target="FrameMain">
+								ConnectionOpenAsync
+							</a>
+
+				</li>
+
+						<li class="" id="ConnectionCloseAsync1" data="">
+							<a
+							href="ConnectionCloseAsync1.html"
+							target="FrameMain">
+								ConnectionCloseAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetCountEntriesAsync1" data="">
+							<a
+							href="GetCountEntriesAsync1.html"
+							target="FrameMain">
+								GetCountEntriesAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetEntriesAsync1" data="">
+							<a
+							href="GetEntriesAsync1.html"
+							target="FrameMain">
+								GetEntriesAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetEntriesFromTableAsync1" data="">
+							<a
+							href="GetEntriesFromTableAsync1.html"
+							target="FrameMain">
+								GetEntriesFromTableAsync
+							</a>
+
+				</li>
+
+						<li class="" id="GetDataTableAsync1" data="">
+							<a
+							href="GetDataTableAsync1.html"
+							target="FrameMain">
+								GetDataTableAsync
+							</a>
+
+				</li>
+
+						<li class="" id="SetEntryAsync1" data="">
+							<a
+							href="SetEntryAsync1.html"
+							target="FrameMain">
+								SetEntryAsync
+							</a>
+
+				</li>
+
+						<li class="" id="EditEntryAsync1" data="">
+							<a
+							href="EditEntryAsync1.html"
+							target="FrameMain">
+								EditEntryAsync
+							</a>
+
+				</li>
+
+						<li class="" id="RemoveEntryAsync1" data="">
+							<a
+							href="RemoveEntryAsync1.html"
+							target="FrameMain">
+								RemoveEntryAsync
+							</a>
+
+				</li>
+
+						<li class="" id="FindEntryAsync1" data="">
+							<a
+							href="FindEntryAsync1.html"
+							target="FrameMain">
+								FindEntryAsync
+							</a>
+
+				</li>
+
+						<li class="" id="AssertHaveInTableAsync1" data="">
+							<a
+							href="AssertHaveInTableAsync1.html"
+							target="FrameMain">
+								AssertHaveInTableAsync
+							</a>
+
+				</li>
+
+						<li class="" id="AssertDontHaveInTableAsync1" data="">
+							<a
+							href="AssertDontHaveInTableAsync1.html"
+							target="FrameMain">
+								AssertDontHaveInTableAsync
+							</a>
+
+				</li></ul></li></ul></li></ul></li></ul></li>
+
+						<li class="folder" id="Practicalexamples" data="">
+							<a
+							href="Practicalexamples.html"
+							target="FrameMain">
+								Practical examples
+							</a>
+
+				<ul>
+
+						<li class="" id="AutotestGroup" data="">
+							<a
+							href="AutotestGroup.html"
+							target="FrameMain">
+								Autotest Group
+							</a>
+
+				</li>
+
+						<li class="" id="ExecutingJavaScriptcode" data="">
+							<a
+							href="ExecutingJavaScriptcode.html"
+							target="FrameMain">
+								Executing JavaScript code
+							</a>
+
+				</li>
+
+						<li class="" id="ProcessingJsondatausingNewtonsof" data="">
+							<a
+							href="ProcessingJsondatausingNewtonsof.html"
+							target="FrameMain">
+								Processing Json data using Newtonsoft
+							</a>
+
+				</li>
+
+						<li class="" id="ProcessingXMLdataforcheckingtheS" data="">
+							<a
+							href="ProcessingXMLdataforcheckingtheS.html"
+							target="FrameMain">
+								Processing XML data for checking the Sitemap
+							</a>
+
+				</li>
+
+						<li class="" id="Alertpromptandconfirmdialogwindo" data="">
+							<a
+							href="Alertpromptandconfirmdialogwindo.html"
+							target="FrameMain">
+								Alert, prompt and confirm dialog windows
+							</a>
+
+				</li>
+
+						<li class="" id="Basicauthorization" data="">
+							<a
+							href="Basicauthorization.html"
+							target="FrameMain">
+								Basic authorization
+							</a>
+
+				</li>
+
+						<li class="" id="Googleanalyticsandyandexmetrikae" data="">
+							<a
+							href="Googleanalyticsandyandexmetrikae.html"
+							target="FrameMain">
+								Google analytics and yandex metrika events
+							</a>
+
+				</li></ul></li></ul></li>
+				
+				</ul>
+		</div>
+		
+		
+		
+		<div id="tab-keywords">
+			<ul id="keywords">
+
+				
+				
+			</ul>
+		</div>
+		
+		
+		
+		<div id="tab-search">
+			<form onsubmit="PerformSearch(); return false;">
+				<label for="search_value">Search:</label>
+				<input id="search_value" name="search_value"></input>
+				<input type="submit" value="Search"/>
+			</form>
+			<div id="search_results"></div>
+		</div>
+		
+		
+		
+	</div>
+    
+</body>
+
+</html>
+

@@ -1,0 +1,136 @@
+﻿
+
+<html>
+	
+<head>
+	<title>RestPostAsync</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("RestPostAsync");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">RestPostAsync</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic59.html">Русская версия</a> &rsaquo;&rsaquo; <a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="Tester.html">Класс: Tester</a> &rsaquo;&rsaquo; <a href="Rest.html">Методы для выполнения Rest запросов</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Rest.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="RestGetStatusCodeAsync.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic28.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps13"><span class="rvts59">RestPostAsync</span></p>
+<p class="rvps13"><span class="rvts63">Описание</span><span class="rvts61">: метод выполняет </span><span class="rvts60">Post</span><span class="rvts61"> Rest запрос</span><span class="rvts60"> </span><span class="rvts61">с отправкой данных в формате </span><span class="rvts60">json</span><span class="rvts61"> и получает результат так же в формате json</span></p>
+<p class="rvps13"><span class="rvts63">Синтаксис</span><span class="rvts61">: </span><span class="rvts60">RestPostAsync(string url, string json, TimeSpan timeout, string charset = "UTF-8")</span></p>
+<p class="rvps13"><span class="rvts56">Возвращаемое значение</span><span class="rvts54">: строка (string)</span></p>
+<p class="rvps13"><span class="rvts62"><br/></span></p>
+<p class="rvps13"><span class="rvts63">Пример</span><span class="rvts62">:</span></p>
+<p class="rvps13"><span class="rvts60">string result = await tester.RestPostAsync("https://jsonplaceholder.typicode.com/posts/1/",</span><span class="rvts61"> </span><span class="rvts60">"{}", TimeSpan.FromDays(1), "UTF-8");</span></p>
+<p class="rvps13"><span class="rvts60">tester.ConsoleMsg(result);</span></p>
+<p class="rvps13"><span class="rvts60"><br/></span></p>
+<p class="rvps13"><span class="rvts63">Данный метод использует стандартный подход</span><span class="rvts62">:</span></p>
+<p class="rvps13"><span class="rvts60">using System.Net;</span></p>
+<p class="rvps13"><span class="rvts60">using System.Net.Http;</span></p>
+<p class="rvps13"><span class="rvts60">using System.Net.Http.Headers;</span></p>
+<p class="rvps13"><span class="rvts60"><br/></span></p>
+<p class="rvps13"><span class="rvts60">Uri uri = new Uri(url);</span></p>
+<p class="rvps13"><span class="rvts60">HttpClient client = new HttpClient();</span></p>
+<p class="rvps13"><span class="rvts60">client.Timeout = TimeSpan.FromDays(1);</span></p>
+<p class="rvps13"><span class="rvts60">client.DefaultRequestHeaders.Add("charset", "UTF-8");</span></p>
+<p class="rvps13"><span class="rvts60">client.DefaultRequestHeaders.Add("User-Agent", userAgent);</span></p>
+<p class="rvps13"><span class="rvts60">HttpContent content = new StringContent("{}", Encoding.UTF8, "application/json");</span></p>
+<p class="rvps13"><span class="rvts60">HttpResponseMessage response = await client.PostAsync(uri, content);</span></p>
+<p class="rvps13"><span class="rvts60">if (response.IsSuccessStatusCode)</span></p>
+<p class="rvps13"><span class="rvts60">{</span></p>
+<p class="rvps13"><span class="rvts60"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts60">return await response.Content.ReadAsStringAsync();</span></p>
+<p class="rvps13"><span class="rvts60">}</span><span class="rvts8"></span></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2025 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

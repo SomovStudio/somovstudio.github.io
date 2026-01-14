@@ -1,0 +1,261 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Executing JavaScript code</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("ExecutingJavaScriptcode");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Executing JavaScript code</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Englishversion.html">English version</a> &rsaquo;&rsaquo; <a href="Practicalexamples.html">Practical examples</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Practicalexamples.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="AutotestGroup.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="ProcessingJsondatausingNewtonsof.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps2"><span class="rvts18">Executing JavaScript code</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">A special ExecuteJavaScriptAsync method has been added to HatFramework to execute JavaScript code.</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">First, you need to declare a text variable and describe in it the script that you want to execute.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps8"><span class="rvts35">string </span><span class="rvts32">script </span><span class="rvts33">= </span><span class="rvts38">@"(function(){&nbsp;</span></p>
+<p class="rvps8"><span class="rvts38">var element = document.getElementsByTagName('h2')[0];&nbsp;</span></p>
+<p class="rvps8"><span class="rvts38">return element.outerText;&nbsp;</span></p>
+<p class="rvps8"><span class="rvts38">}());"</span><span class="rvts33">;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Now, using the ExecuteJavaScriptAsync method, we will execute the above script and get the result.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps8"><span class="rvts35">string </span><span class="rvts32">actual </span><span class="rvts33">= </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">ExecuteJavaScriptAsync</span><span class="rvts33">(</span><span class="rvts32">script</span><span class="rvts33">);</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts14">In this example, you will get the text from the H2 element from the page where this script was called.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Full example:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2">
+<table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+ <tr valign="top">
+  <td style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;">
+   <p class="rvps2"><span class="rvts6">File: ExampleTest4.cs</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td style="border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Collections</span><span class="rvts33">.</span><span class="rvts32">Generic</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">ComponentModel</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Windows</span><span class="rvts33">.</span><span class="rvts32">Forms</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Threading</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Threading</span><span class="rvts33">.</span><span class="rvts32">Tasks</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">IO</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Data</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Drawing</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Linq</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Text</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Text</span><span class="rvts33">.</span><span class="rvts32">RegularExpressions</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Net</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Net</span><span class="rvts33">.</span><span class="rvts32">Http</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Net</span><span class="rvts33">.</span><span class="rvts32">Http</span><span class="rvts33">.</span><span class="rvts32">Headers</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Reflection</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">Newtonsoft</span><span class="rvts33">.</span><span class="rvts32">Json</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">HatFramework</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts31">namespace </span><span class="rvts32">Hat</span></p>
+   <p class="rvps2"><span class="rvts33">{</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts35">class </span><span class="rvts32">ExampleTest4</span></p>
+   <p class="rvps2"><span class="rvts32">&nbsp; &nbsp; </span><span class="rvts33">{</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">Tester tester</span><span class="rvts33">; </span><span class="rvts78">// The main variable for the autotest operation</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// The main input function (the autotest starts with this function)</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async </span><span class="rvts35">void </span><span class="rvts36">Main</span><span class="rvts33">(</span><span class="rvts32">Form browserWindow</span><span class="rvts33">)</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">tester </span><span class="rvts33">= </span><span class="rvts37">new </span><span class="rvts36">Tester</span><span class="rvts33">(</span><span class="rvts32">browserWindow</span><span class="rvts33">); </span><span class="rvts78">// Initializing the main variable</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await </span><span class="rvts36">setUp</span><span class="rvts33">(); </span><span class="rvts78">// The function of getting started with the autotest</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await </span><span class="rvts36">test</span><span class="rvts33">(); </span><span class="rvts78">// The function of performing test actions</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await </span><span class="rvts36">tearDown</span><span class="rvts33">(); </span><span class="rvts78">// Autotest shutdown function</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async Task </span><span class="rvts36">setUp</span><span class="rvts33">()</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">BrowserFullScreenAsync</span><span class="rvts33">(); </span><span class="rvts78">// Sets the browser resolution to full screen</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async Task </span><span class="rvts36">test</span><span class="rvts33">()</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">TestBeginAsync</span><span class="rvts33">(); </span><span class="rvts78">// The beginning of the execution of actions</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">GoToUrlAsync</span><span class="rvts33">(</span><span class="rvts38">"https://somovstudio.github.io/test_eng.html"</span><span class="rvts33">, </span><span class="rvts39">5</span><span class="rvts33">); </span><span class="rvts78">// Loading the page at the specified address</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// Declaring a variable with a JavaScript script description</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">string </span><span class="rvts32">script </span><span class="rvts33">= </span><span class="rvts38">@"(function(){&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts38"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts38"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var element = document.getElementsByTagName('h2')[0];&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts38"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts38"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return element.outerText;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts38"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts38"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}());"</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// Script Execution</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">string </span><span class="rvts32">actual </span><span class="rvts33">= </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">ExecuteJavaScriptAsync</span><span class="rvts33">(</span><span class="rvts32">script</span><span class="rvts33">);</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// Checking the result</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">string </span><span class="rvts32">expected </span><span class="rvts33">= </span><span class="rvts38">"Authorization"</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">AssertEqualsAsync</span><span class="rvts33">(</span><span class="rvts32">expected</span><span class="rvts33">, </span><span class="rvts32">actual</span><span class="rvts33">); </span><span class="rvts78">// The expected and actual data must match</span></p>
+   <p class="rvps2"><span class="rvts78"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">TestEndAsync</span><span class="rvts33">(); </span><span class="rvts78">// Completing actions</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async Task </span><span class="rvts36">tearDown</span><span class="rvts33">()</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">BrowserCloseAsync</span><span class="rvts33">(); </span><span class="rvts78">// Closes the browser</span></p>
+   <p class="rvps2"><span class="rvts78">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts33">}</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33">}</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Examples of JavaScript and jQuery scripts for the method ExecuteJavaScriptAsync :</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">- focus on the input element and data entry</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><span class="rvts38">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
+<p class="rvps8"><span class="rvts38">element.focus();</span></p>
+<p class="rvps8"><span class="rvts38">element.value = '9999999999';</span></p>
+<p class="rvps8"><span class="rvts38">element.setAttribute("value", "9999999999");</span></p>
+<p class="rvps8"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts14">- focus on the input element and insert data</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><span class="rvts38">document.getElementById("phone").focus();</span></p>
+<p class="rvps8"><span class="rvts38">document.execCommand("insertHTML", false, "9999999999");</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">- entering data into input and calling events</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><span class="rvts38">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
+<p class="rvps8"><span class="rvts38">element.value = '9999999999';</span></p>
+<p class="rvps8"><span class="rvts38">element.dispatchEvent(new KeyboardEvent('keydown', { bubbles: true }));</span></p>
+<p class="rvps8"><span class="rvts38">element.dispatchEvent(new KeyboardEvent('keypress', { bubbles: true }));</span></p>
+<p class="rvps8"><span class="rvts38">element.dispatchEvent(new KeyboardEvent('keyup', { bubbles: true }));</span></p>
+<p class="rvps8"><span class="rvts38">element.dispatchEvent(new Event('input', { bubbles: true }));</span></p>
+<p class="rvps8"><span class="rvts38">element.dispatchEvent(new Event('change', { bubbles: true }));</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">- highlight the value in the input</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><span class="rvts38">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
+<p class="rvps8"><span class="rvts38">element.select();</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">- mouse click</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><span class="rvts38">var clickEvent = new MouseEvent("click", { "view": window, "bubbles": true, "cancelable": false });</span></p>
+<p class="rvps8"><span class="rvts38">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
+<p class="rvps8"><span class="rvts38">element.dispatchEvent(clickEvent);</span></p>
+<p class="rvps8"><span class="rvts38"><br/></span></p>
+<p class="rvps8"><span class="rvts38">var theEvent = document.createEvent("MouseEvent");</span></p>
+<p class="rvps8"><span class="rvts38">theEvent.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);</span></p>
+<p class="rvps8"><span class="rvts38">element.dispatchEvent(theEvent);</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">- using jQuery to click a button (if the library is connected on the page under test)</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><span class="rvts35">string </span><span class="rvts32">script </span><span class="rvts33">= </span><span class="rvts38">@"$(function() {&nbsp;</span></p>
+<p class="rvps8"><span class="rvts38">console.log('autotest JQUERY'); &nbsp;</span></p>
+<p class="rvps8"><span class="rvts38">$('#btn-send &gt; div.btn &gt; a').click();&nbsp;</span></p>
+<p class="rvps8"><span class="rvts38">});"</span><span class="rvts33">;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Full-featured Kindle eBooks generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2025 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

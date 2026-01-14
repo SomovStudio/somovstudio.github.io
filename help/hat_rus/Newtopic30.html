@@ -1,0 +1,152 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Запуск из командной строки</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic30");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Запуск из командной строки</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic59.html">Русская версия</a> &rsaquo;&rsaquo; <a href="Jenkins1.html">Консольный режим запуска (Jenkins)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Jenkins1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Jenkins1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Jenkins.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps3"><span class="rvts18">Запуск автотеста из командной строки</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Чтобы запускать автотесты в популярных системах непрерывной интеграции нужно использовать командную строку Windows.</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><img alt="" style="padding : 1px;" src="lib/NewItem53.png"></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">В окне "Проект" (на вкладке "Проводник") выберите файл автотеста который нужно запустить.</span></p>
+<p class="rvps3"><span class="rvts14">Затем на панели инструментов нажмите на кнопку "Сформировать командную строку"</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><img alt="" style="padding : 1px;" src="lib/NewItem229.png"></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">В результате вам откроется окно с уже готовыми командами.</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><img alt="" style="padding : 1px;" src="lib/NewItem232.png"></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+  <li style="margin-left: 0px" class="rvps8"><span class="rvts14">первая команда: </span><span class="rvts30">cd C:\Hat-1.2.0\Hat</span><span class="rvts14"> - это переход в папку с приложением Hat.exe</span></li>
+  <li style="margin-left: 0px" class="rvps8"><span class="rvts14">вторая команда: </span><span class="rvts30">Hat.exe ExampleTest1.cs C:\Hat-1.2.0\Project</span><span class="rvts14"> - выполняет запуск автотеста</span></li>
+ </ul>
+</ul>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><span class="rvts14">Синтаксис команды запуска:&nbsp;</span></p>
+<p class="rvps9"><span class="rvts29">Hat.exe</span><span class="rvts14"> [</span><span class="rvts28">Имя_Файла_Автотеста</span><span class="rvts14">] [</span><span class="rvts28">Путь_К_Папке_С_Проектом</span><span class="rvts14">]</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Откройте командную строку</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><img alt="" style="padding : 1px;" src="lib/NewItem233.png"></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Используйте ранее полученные команды</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps8"><img alt="" style="padding : 1px;" src="lib/NewItem234.png"></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Будет запущен автотест, при этом все шаги выполнения отразятся в консоли</span></p>
+<p class="rvps3"><span class="rvts14">В случае ошибки в шаге будет показан метод и его свойства при которых произошла ошибка.</span></p>
+<p class="rvps8"><img alt="" style="padding : 1px;" src="lib/NewItem246.png"></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14">В конце показан результат выполнения всего автотеста</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts8"></span></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Produce electronic books easily</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2025 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

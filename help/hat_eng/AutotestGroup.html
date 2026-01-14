@@ -1,0 +1,393 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Autotest Group</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("AutotestGroup");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Autotest Group</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Englishversion.html">English version</a> &rsaquo;&rsaquo; <a href="Practicalexamples.html">Practical examples</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Practicalexamples.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Practicalexamples.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="ExecutingJavaScriptcode.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps2"><span class="rvts18">Autotest Group</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">You can organize a group of autotests and run them.</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">To do this, create a folder in which the autotests of one group will be stored (for example, the folder group 1)</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem272.png"></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Next, you need to describe several tests and put them in the </span><span class="rvts64">group1</span><span class="rvts14"> folder.</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts18">Attention:</span><span class="rvts14"> for tests, the Main function must be declared as a Task</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">the first file: ExampleTest3.cs</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2">
+<table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+ <tr valign="top">
+  <td style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;">
+   <p class="rvps2"><span class="rvts6">File: ExampleTest3.cs</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td style="border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Collections</span><span class="rvts33">.</span><span class="rvts32">Generic</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">ComponentModel</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Windows</span><span class="rvts33">.</span><span class="rvts32">Forms</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Threading</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Threading</span><span class="rvts33">.</span><span class="rvts32">Tasks</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">IO</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Data</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Drawing</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Linq</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Text</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Text</span><span class="rvts33">.</span><span class="rvts32">RegularExpressions</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Net</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Net</span><span class="rvts33">.</span><span class="rvts32">Http</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Net</span><span class="rvts33">.</span><span class="rvts32">Http</span><span class="rvts33">.</span><span class="rvts32">Headers</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Reflection</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">Newtonsoft</span><span class="rvts33">.</span><span class="rvts32">Json</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">HatFramework</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts31">namespace </span><span class="rvts32">Hat</span></p>
+   <p class="rvps2"><span class="rvts33">{</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; </span><span class="rvts78">// Auxiliary class for JSON data</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts35">class </span><span class="rvts32">TestJson</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts79">int </span><span class="rvts32">userId </span><span class="rvts33">{ </span><span class="rvts80">get</span><span class="rvts33">; </span><span class="rvts80">set</span><span class="rvts33">; }</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts79">int </span><span class="rvts32">id </span><span class="rvts33">{ </span><span class="rvts80">get</span><span class="rvts33">; </span><span class="rvts80">set</span><span class="rvts33">; }</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts35">string </span><span class="rvts32">title </span><span class="rvts33">{ </span><span class="rvts80">get</span><span class="rvts33">; </span><span class="rvts80">set</span><span class="rvts33">; }</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts35">string </span><span class="rvts32">body </span><span class="rvts33">{ </span><span class="rvts80">get</span><span class="rvts33">; </span><span class="rvts80">set</span><span class="rvts33">; }</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts35">class </span><span class="rvts32">ExampleTest3</span></p>
+   <p class="rvps2"><span class="rvts32">&nbsp; &nbsp; </span><span class="rvts33">{</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// The main variable for the autotest operation</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">Tester tester</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// The main input function is declared as a Task. This is important! (the autotest starts working with this function)</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async </span><span class="rvts81">Task</span><span class="rvts32"> </span><span class="rvts36">Main</span><span class="rvts33">(</span><span class="rvts32">Form browserWindow</span><span class="rvts33">)</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// Initialization of the main variable and additional functions</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">tester </span><span class="rvts33">= </span><span class="rvts37">new </span><span class="rvts36">Tester</span><span class="rvts33">(</span><span class="rvts32">browserWindow</span><span class="rvts33">);</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await </span><span class="rvts36">setUp</span><span class="rvts33">();</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await </span><span class="rvts36">test</span><span class="rvts33">();</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await </span><span class="rvts36">tearDown</span><span class="rvts33">();</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// The function of getting started with the autotest</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async Task </span><span class="rvts36">setUp</span><span class="rvts33">()</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">BrowserFullScreenAsync</span><span class="rvts33">(); </span><span class="rvts78">// Sets the browser resolution to full screen</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// The function of performing autotest actions</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async Task </span><span class="rvts36">test</span><span class="rvts33">()</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">TestBeginAsync</span><span class="rvts33">();</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">GoToUrlAsync</span><span class="rvts33">(</span><span class="rvts38">"https://jsonplaceholder.typicode.com"</span><span class="rvts33">, </span><span class="rvts39">5</span><span class="rvts33">);</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">string </span><span class="rvts32">result </span><span class="rvts33">= </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">RestGetAsync</span><span class="rvts33">(</span><span class="rvts38">@"https://jsonplaceholder.typicode.com/posts/1/"</span><span class="rvts33">, </span><span class="rvts32">TimeSpan</span><span class="rvts33">.</span><span class="rvts36">FromDays</span><span class="rvts33">(</span><span class="rvts39">1</span><span class="rvts33">), </span><span class="rvts38">"UTF-8"</span><span class="rvts33">);</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">TestJson dataJson </span><span class="rvts33">= </span><span class="rvts32">JsonConvert</span><span class="rvts33">.</span><span class="rvts32">DeserializeObject</span><span class="rvts33">&lt;</span><span class="rvts32">TestJson</span><span class="rvts33">&gt;(</span><span class="rvts32">result</span><span class="rvts33">);</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">tester</span><span class="rvts33">.</span><span class="rvts36">AssertEqualsAsync</span><span class="rvts33">(</span><span class="rvts38">"1"</span><span class="rvts33">, </span><span class="rvts32">dataJson</span><span class="rvts33">.</span><span class="rvts32">userId</span><span class="rvts33">.</span><span class="rvts36">ToString</span><span class="rvts33">());</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">TestEndAsync</span><span class="rvts33">();</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// Autotest shutdown function</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async Task </span><span class="rvts36">tearDown</span><span class="rvts33">()</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// await tester.BrowserCloseAsync(); in this case, we don't need the browser to close</span></p>
+   <p class="rvps2"><span class="rvts78">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts33">}</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33">}</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts14">the second file: ExampleTest4.cs</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2">
+<table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+ <tr valign="top">
+  <td style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;">
+   <p class="rvps2"><span class="rvts6">File: ExampleTest4.cs</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td style="border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Collections</span><span class="rvts33">.</span><span class="rvts32">Generic</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">ComponentModel</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Windows</span><span class="rvts33">.</span><span class="rvts32">Forms</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Threading</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Threading</span><span class="rvts33">.</span><span class="rvts32">Tasks</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">IO</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Data</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Drawing</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Linq</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Text</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Text</span><span class="rvts33">.</span><span class="rvts32">RegularExpressions</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Net</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Net</span><span class="rvts33">.</span><span class="rvts32">Http</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Net</span><span class="rvts33">.</span><span class="rvts32">Http</span><span class="rvts33">.</span><span class="rvts32">Headers</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Reflection</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">Newtonsoft</span><span class="rvts33">.</span><span class="rvts32">Json</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">HatFramework</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts31">namespace </span><span class="rvts32">Hat</span></p>
+   <p class="rvps2"><span class="rvts33">{</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts35">class </span><span class="rvts32">ExampleTest4</span></p>
+   <p class="rvps2"><span class="rvts32">&nbsp; &nbsp; </span><span class="rvts33">{</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// The main variable for the autotest operation</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">Tester tester</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// The main input function is declared as a Task. This is important! (the autotest starts working with this function)</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async </span><span class="rvts81">Task</span><span class="rvts32"> </span><span class="rvts36">Main</span><span class="rvts33">(</span><span class="rvts32">Form browserWindow</span><span class="rvts33">)</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// Initialization of the main variable and additional functions</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">tester </span><span class="rvts33">= </span><span class="rvts37">new </span><span class="rvts36">Tester</span><span class="rvts33">(</span><span class="rvts32">browserWindow</span><span class="rvts33">);</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await </span><span class="rvts36">setUp</span><span class="rvts33">();</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await </span><span class="rvts36">test</span><span class="rvts33">();</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await </span><span class="rvts36">tearDown</span><span class="rvts33">();</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// The function of getting started with the autotest</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async Task </span><span class="rvts36">setUp</span><span class="rvts33">()</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">BrowserFullScreenAsync</span><span class="rvts33">(); </span><span class="rvts78">// Sets the browser resolution to full screen</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// The function of performing autotest actions</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async Task </span><span class="rvts36">test</span><span class="rvts33">()</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">TestBeginAsync</span><span class="rvts33">();</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">GoToUrlAsync</span><span class="rvts33">(</span><span class="rvts38">"https://somovstudio.github.io/test_eng.html"</span><span class="rvts33">, </span><span class="rvts39">5</span><span class="rvts33">);</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">string </span><span class="rvts32">script </span><span class="rvts33">= </span><span class="rvts38">@"(function(){ var element = document.getElementsByTagName('h2')[0]; return element.outerText; }());"</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">string </span><span class="rvts32">actual </span><span class="rvts33">= </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">ExecuteJavaScriptAsync</span><span class="rvts33">(</span><span class="rvts32">script</span><span class="rvts33">);</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">string </span><span class="rvts32">expected </span><span class="rvts33">= </span><span class="rvts38">"Authorization"</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">AssertEqualsAsync</span><span class="rvts33">(</span><span class="rvts32">expected</span><span class="rvts33">, </span><span class="rvts32">actual</span><span class="rvts33">);</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">TestEndAsync</span><span class="rvts33">();</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// Autotest shutdown function</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async Task </span><span class="rvts36">tearDown</span><span class="rvts33">()</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// await tester.BrowserCloseAsync(); in this case, we don't need the browser to close</span></p>
+   <p class="rvps2"><span class="rvts78">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts33">}</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33">}</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts14">We have created two autotests "ExampleTest3.cs" and "ExampleTest4.cs" which are located in the "group1" folder.</span></p>
+<p class="rvps2"><span class="rvts14">Now you need to create a combining autotest GroupTests1.cs that will trigger other autotests.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2">
+<table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+ <tr valign="top">
+  <td style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;">
+   <p class="rvps2"><span class="rvts6">File: GroupTests1.cs</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td style="border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Collections</span><span class="rvts33">.</span><span class="rvts32">Generic</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">ComponentModel</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Windows</span><span class="rvts33">.</span><span class="rvts32">Forms</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Threading</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Threading</span><span class="rvts33">.</span><span class="rvts32">Tasks</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">IO</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Data</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Drawing</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Linq</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Text</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Text</span><span class="rvts33">.</span><span class="rvts32">RegularExpressions</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Net</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Net</span><span class="rvts33">.</span><span class="rvts32">Http</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Net</span><span class="rvts33">.</span><span class="rvts32">Http</span><span class="rvts33">.</span><span class="rvts32">Headers</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">System</span><span class="rvts33">.</span><span class="rvts32">Reflection</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">Newtonsoft</span><span class="rvts33">.</span><span class="rvts32">Json</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts31">using </span><span class="rvts32">HatFramework</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts31">namespace </span><span class="rvts32">Hat</span></p>
+   <p class="rvps2"><span class="rvts33">{</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts35">class </span><span class="rvts32">GroupTests1</span></p>
+   <p class="rvps2"><span class="rvts32">&nbsp; &nbsp; </span><span class="rvts33">{</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// The main variable for the autotest operation</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">Tester tester</span><span class="rvts33">;</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// The main input function (the autotest starts with this function)</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async </span><span class="rvts35">void </span><span class="rvts36">Main</span><span class="rvts33">(</span><span class="rvts32">Form browserWindow</span><span class="rvts33">)</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">tester </span><span class="rvts33">= </span><span class="rvts37">new </span><span class="rvts36">Tester</span><span class="rvts33">(</span><span class="rvts32">browserWindow</span><span class="rvts33">); </span><span class="rvts78">// Initializing the main variable</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await </span><span class="rvts36">setUp</span><span class="rvts33">(); </span><span class="rvts78">// The function of getting started with the autotest</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await </span><span class="rvts36">test1</span><span class="rvts33">(</span><span class="rvts32">browserWindow</span><span class="rvts33">); </span><span class="rvts78">// The function that calls the autotest from the script ExampleTest3.cs</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await </span><span class="rvts36">test2</span><span class="rvts33">(</span><span class="rvts32">browserWindow</span><span class="rvts33">); </span><span class="rvts78">// The function that calls the autotest from the script ExampleTest4.cs</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await </span><span class="rvts36">tearDown</span><span class="rvts33">(); </span><span class="rvts78">// Autotest shutdown function</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async Task </span><span class="rvts36">setUp</span><span class="rvts33">()</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">BrowserFullScreenAsync</span><span class="rvts33">();</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33"><br/></span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// This function runs the autotest from the script ExampleTest3.cs</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async Task </span><span class="rvts36">test1</span><span class="rvts33">(</span><span class="rvts32">Form browserWindow</span><span class="rvts33">)</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">tester</span><span class="rvts33">.</span><span class="rvts36">SendMessage</span><span class="rvts33">(</span><span class="rvts38">"Автотест ExampleTest3"</span><span class="rvts33">, </span><span class="rvts38">""</span><span class="rvts33">, </span><span class="rvts38">"Файл: ExampleTest3.cs"</span><span class="rvts33">, </span><span class="rvts32">Tester</span><span class="rvts33">.</span><span class="rvts32">IMAGE_STATUS_MESSAGE</span><span class="rvts33">);</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">ExampleTest3 exampleTest3 </span><span class="rvts33">= </span><span class="rvts37">new </span><span class="rvts36">ExampleTest3</span><span class="rvts33">(); </span><span class="rvts78">// An autotest variable is being created</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await exampleTest3</span><span class="rvts33">.</span><span class="rvts36">Main</span><span class="rvts33">(</span><span class="rvts32">browserWindow</span><span class="rvts33">); </span><span class="rvts78">// The autotest is started</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// This function runs the autotest from the script ExampleTest4.cs</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async Task </span><span class="rvts36">test2</span><span class="rvts33">(</span><span class="rvts32">Form browserWindow</span><span class="rvts33">)</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">tester</span><span class="rvts33">.</span><span class="rvts36">SendMessage</span><span class="rvts33">(</span><span class="rvts38">"Автотест ExampleTest4"</span><span class="rvts33">, </span><span class="rvts38">""</span><span class="rvts33">, </span><span class="rvts38">"Файл: ExampleTest4.cs"</span><span class="rvts33">, </span><span class="rvts32">Tester</span><span class="rvts33">.</span><span class="rvts32">IMAGE_STATUS_MESSAGE</span><span class="rvts33">);</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">ExampleTest4 exampleTest4 </span><span class="rvts33">= </span><span class="rvts37">new </span><span class="rvts36">ExampleTest4</span><span class="rvts33">(); </span><span class="rvts78">// An autotest variable is being created</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await exampleTest4</span><span class="rvts33">.</span><span class="rvts36">Main</span><span class="rvts33">(</span><span class="rvts32">browserWindow</span><span class="rvts33">); </span><span class="rvts78">// The autotest is started</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts78">// Autotest shutdown function</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">public </span><span class="rvts32">async Task </span><span class="rvts36">tearDown</span><span class="rvts33">()</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts32">await tester</span><span class="rvts33">.</span><span class="rvts36">BrowserCloseAsync</span><span class="rvts33">(); </span><span class="rvts78">// Closes the browser</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33">&nbsp; &nbsp; }</span></p>
+   <p class="rvps2"><span class="rvts33">}</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts14">As you can see in the ExampleTest3.CS and ExampleTest4.cs autotest will be called sequentially in the test1 and test2 methods.</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Run the GroupTests1.cs group autotest</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem273.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts14">The result on the "Test" tab will reflect the entire progress of the sequential execution of all autotests step by step.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem276.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts14">If any of the autotests fails, the check will continue anyway until all the autotests are completed</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem275.png"></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">at the same time, the overall result of the GroupTests1.cs group autotest will be considered a failure.</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem76.png"></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">a report on the complete completion of all tests will also be created</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem277.png"></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem78.png"></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Qt Help documentation made easy</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2025 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

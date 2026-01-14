@@ -1,0 +1,47 @@
+/* Header  */
+header {
+	background-color: #1E458C;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+/* Menu */
+nav ul {
+	display: flex;
+}
+
+nav ul li {
+	margin-left: 50px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	font-weight: 500;
+	transition: color 0.3s;
+	white-space: nowrap;
+}
+
+nav ul li a:hover {
+	color: #3498db;
+}
+
+.mobile-menu-btn {
+	display: none;
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+}

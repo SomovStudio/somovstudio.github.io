@@ -1,0 +1,662 @@
+﻿/* ========== Text Styles ========== */
+hr { color: #000000}
+body, table, span.rvts0 /* Normal text */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.rvts1 /* Heading */
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts2 /* Subheading */
+{
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts3 /* Keywords */
+{
+ font-style: italic;
+ color: #800000;
+}
+a.rvts4, span.rvts4 /* Jump 1 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+a.rvts5, span.rvts5 /* Jump 2 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+span.rvts6 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #c0c0c0;
+}
+a.rvts7, span.rvts7 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #6666ff;
+ text-decoration: underline;
+}
+span.rvts8
+{
+}
+span.rvts9
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts10
+{
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts11
+{
+ font-style: italic;
+ color: #800000;
+}
+a.rvts12, span.rvts12
+{
+ color: #008000;
+ text-decoration: underline;
+}
+span.rvts13
+{
+ font-size: 20pt;
+ font-weight: bold;
+ color: #24292f;
+}
+span.rvts14
+{
+ font-size: 12pt;
+}
+a.rvts15, span.rvts15
+{
+ font-size: 12pt;
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts16
+{
+ font-size: 12pt;
+ color: #24292f;
+}
+span.rvts17
+{
+ font-size: 11pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #222222;
+ background-color: #ffffff;
+}
+span.rvts18
+{
+ font-size: 12pt;
+ font-weight: bold;
+}
+span.rvts19
+{
+ font-size: 12pt;
+ text-decoration: underline;
+}
+span.rvts20
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000000;
+}
+span.rvts21
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #0000ff;
+}
+span.rvts22
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #191970;
+}
+span.rvts23
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000080;
+}
+span.rvts24
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts25
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #a52a2a;
+}
+span.rvts26
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #008000;
+}
+span.rvts27
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #008b8b;
+}
+span.rvts28
+{
+ font-size: 12pt;
+ font-weight: bold;
+ color: #800080;
+}
+span.rvts29
+{
+ font-size: 12pt;
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts30
+{
+ font-size: 12pt;
+ font-family: 'Consolas';
+ font-weight: bold;
+}
+span.rvts31
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #000000;
+}
+span.rvts32
+{
+ font-size: 12pt;
+ color: #800080;
+}
+span.rvts33
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #333333;
+}
+a.rvts34, span.rvts34
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts34:hover
+{
+ color: #000000;
+}
+span.rvts35
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #7030a0;
+}
+span.rvts36
+{
+ font-size: 12pt;
+ font-weight: bold;
+ color: #ff0000;
+}
+span.rvts37
+{
+ font-size: 12pt;
+ font-weight: bold;
+ text-decoration: underline;
+}
+span.rvts38
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+}
+span.rvts39
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #800080;
+}
+span.rvts40
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000000;
+}
+span.rvts41
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #ff0000;
+}
+span.rvts42
+{
+ font-size: 12pt;
+ font-weight: bold;
+ color: #ff0000;
+ text-decoration: underline;
+}
+span.rvts43
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #008000;
+}
+span.rvts44
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000000;
+}
+span.rvts45
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #006400;
+}
+span.rvts46
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts47
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #ff0000;
+}
+span.rvts48
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #191970;
+}
+span.rvts49
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #008b8b;
+}
+span.rvts50
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #0000ff;
+}
+span.rvts51
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #00008b;
+}
+span.rvts52
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts53
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #a52a2a;
+}
+span.rvts54
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+}
+span.rvts55
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #000000;
+}
+span.rvts56
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #9b00d3;
+}
+span.rvts57
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #004dbb;
+}
+span.rvts58
+{
+ font-family: 'Calibri';
+}
+span.rvts59
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #004dbb;
+}
+span.rvts60
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+}
+span.rvts61
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+}
+span.rvts62
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #000000;
+}
+span.rvts63
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #9b00d3;
+}
+span.rvts64
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #00b050;
+}
+span.rvts65
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+}
+span.rvts66
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+}
+span.rvts67
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+}
+span.rvts68
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ color: #00b050;
+}
+span.rvts69
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #00b050;
+}
+a.rvts70, span.rvts70
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ text-decoration: none;
+}
+a.rvts71, span.rvts71
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts72
+{
+ font-size: 11pt;
+ font-family: 'Calibri';
+}
+span.rvts73
+{
+ font-family: 'Calibri';
+ color: #9b00d3;
+}
+span.rvts74
+{
+ font-family: 'Calibri';
+}
+span.rvts75
+{
+ font-size: 12pt;
+ font-weight: bold;
+ color: ;
+}
+span.rvts76
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000000;
+}
+span.rvts77
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #008000;
+}
+span.rvts78
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #191970;
+}
+span.rvts79
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #a52a2a;
+}
+span.rvts80
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts81
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000080;
+}
+span.rvts82
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #0000ff;
+}
+span.rvts83
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts84
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #ff0000;
+}
+span.rvts85
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #00008b;
+}
+span.rvts86
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #008b8b;
+}
+span.rvts87
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #008000;
+}
+span.rvts88
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #008000;
+}
+span.rvts89
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #ff0000;
+}
+span.rvts90
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #8b4513;
+}
+span.rvts91
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000000;
+ text-decoration: underline;
+}
+span.rvts92
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000000;
+}
+span.rvts93
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #000080;
+}
+span.rvts94
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #008080;
+}
+span.rvts95
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #ff0000;
+}
+span.rvts96
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #00008b;
+}
+span.rvts97
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts98
+{
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #ff0000;
+}
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2 /* Paragraph Style */
+{
+ text-align: center;
+ border-color: #c0c0c0;
+ border-style: solid;
+ border-width: 1px;
+ border-right: none;
+ border-left: none;
+ padding: 2px 0px 2px 0px;
+ margin: 7px 0px 7px 0px;
+}
+.rvps3
+{
+}
+.rvps4
+{
+ text-align: center;
+}
+.rvps5
+{
+ text-align: left;
+ text-indent: 0px;
+ border-color: #24292f;
+ border-style: solid;
+ border-width: 3px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ background: #ffffff;
+ padding: 0px 0px 9px 0px;
+ margin: 0px 0px 16px 0px;
+}
+.rvps6
+{
+ background: #ffffff;
+ margin: 0px 0px 16px 0px;
+}
+.rvps7
+{
+ background: #ffffff;
+ margin: 0px 0px 16px 24px;
+}
+.rvps8
+{
+ margin: 0px 0px 0px 24px;
+}
+.rvps9
+{
+ margin: 0px 0px 0px 48px;
+}
+.rvps10
+{
+ background: #ffffff;
+ padding: 0px 0px 0px 40px;
+ margin: 7px 0px 7px 0px;
+}
+.rvps11
+{
+ background: #ffffff;
+ padding: 0px 0px 0px 40px;
+}
+.rvps12
+{
+ text-indent: 48px;
+}
+.rvps13
+{
+ line-height: 1.15;
+}
+.rvps14
+{
+ line-height: 1.15;
+ margin: 0px 0px 13px 0px;
+}
+/* ========== Lists ========== */
+.list0 {text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;}
+.list1 {text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;}
+.list2 {text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;}
+.list3 {text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;}
