@@ -1,0 +1,142 @@
+﻿
+
+<html>
+	
+<head>
+	<title>RestGetBasicAuthAsync</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("RestGetBasicAuthAsync");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">RestGetBasicAuthAsync</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic59.html">Русская версия</a> &rsaquo;&rsaquo; <a href="HatFramework.html">Встроенный фреймворк HatFramework</a> &rsaquo;&rsaquo; <a href="Tester.html">Класс: Tester</a> &rsaquo;&rsaquo; <a href="Rest.html">Методы для выполнения Rest запросов</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Rest.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="RestGetAsync.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="RestGetStatusCodeAsync.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps13"><span class="rvts57">RestGetBasicAuthAsync</span></p>
+<p class="rvps13"><span class="rvts56">Описание</span><span class="rvts54">: метод выполняет Get Rest запрос и получает результат в формате json</span></p>
+<p class="rvps13"><span class="rvts56">Синтаксис</span><span class="rvts54">: RestGetBasicAuthAsync(string login, string pass, string url, string charset = "UTF-8")</span></p>
+<p class="rvps13"><span class="rvts56">Возвращаемое значение</span><span class="rvts54">: строка (string)</span></p>
+<p class="rvps13"><span class="rvts55"><br/></span></p>
+<p class="rvps13"><span class="rvts56">Пример</span><span class="rvts55">:</span></p>
+<p class="rvps13"><span class="rvts54">string result = await tester.RestGetBasicAuthAsync("admin", "0000", "</span><a class="rvts70" href="https://jsonplaceholder.typicode.com/posts/1/">https://jsonplaceholder.typicode.com/posts/1/</a><span class="rvts54">", </span><span class="rvts60">TimeSpan timeout,</span><span class="rvts54"> "UTF-8");</span></p>
+<p class="rvps13"><span class="rvts54">tester.ConsoleMsg(result);</span></p>
+<p class="rvps13"><span class="rvts54"><br/></span></p>
+<p class="rvps13"><span class="rvts56">Данный метод использует стандартный подход</span><span class="rvts55">:</span></p>
+<p class="rvps13"><span class="rvts54">using System.Net;</span></p>
+<p class="rvps13"><span class="rvts54">using System.Net.Http;</span></p>
+<p class="rvps13"><span class="rvts54">using System.Net.Http.Headers;</span></p>
+<p class="rvps13"><span class="rvts54"><br/></span></p>
+<p class="rvps13"><span class="rvts54">byte[] authToken = Encoding.ASCII.GetBytes($"{login}:{pass}");</span></p>
+<p class="rvps13"><span class="rvts54">Uri uri = new Uri(url);</span></p>
+<p class="rvps13"><span class="rvts54">HttpClient client = new HttpClient();</span></p>
+<p class="rvps13"><span class="rvts60">client.Timeout = TimeSpan.FromDays(1);</span></p>
+<p class="rvps13"><span class="rvts54">client.BaseAddress = uri;</span></p>
+<p class="rvps13"><span class="rvts54">client.DefaultRequestHeaders.Clear();</span></p>
+<p class="rvps13"><span class="rvts54">client.DefaultRequestHeaders.Accept.Clear();</span></p>
+<p class="rvps13"><span class="rvts54">client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));</span></p>
+<p class="rvps13"><span class="rvts54">client.DefaultRequestHeaders.Add("charset", "UTF-8");</span></p>
+<p class="rvps13"><span class="rvts54">client.DefaultRequestHeaders.Add("User-Agent", userAgent);</span></p>
+<p class="rvps13"><span class="rvts54">client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(authToken));</span></p>
+<p class="rvps13"><span class="rvts54">HttpResponseMessage response = await client.GetAsync(url);</span></p>
+<p class="rvps13"><span class="rvts54">if (response.IsSuccessStatusCode)</span></p>
+<p class="rvps13"><span class="rvts54">{</span></p>
+<p class="rvps13"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">return await response.Content.ReadAsStringAsync();</span></p>
+<p class="rvps13"><span class="rvts54">}</span></p>
+<p class="rvps13"><span class="rvts54"></span><span class="rvts8"></span></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Free iPhone documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2025 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
