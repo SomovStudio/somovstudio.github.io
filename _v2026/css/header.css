@@ -13,7 +13,9 @@ header {
 }
 
 nav {
-	padding: 15px;
+	/*padding: 15px;*/
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 /* Menu */
@@ -22,7 +24,7 @@ nav ul {
 }
 
 nav ul li {
-	margin-left: 75px;
+	margin-left: 50px;
 }
 
 nav ul li a {
