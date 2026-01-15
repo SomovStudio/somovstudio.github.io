@@ -54,3 +54,12 @@
 	background-color: #8608F2;
 	color: #FFFFFF;
 }
+
+@media (max-width: 1200px) {
+	.bunner-hat {
+		margin-left: 2%;
+		margin-right: 2%;
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
+}

@@ -53,6 +53,10 @@
 	gap: 50px;
 }
 
+.content-block-mobile {
+	padding-top: 50px;
+}
+
 .content-image {
 	flex: 1;
 	overflow: hidden;
@@ -137,4 +141,18 @@
 
 .language:hover .language-change {
     display: block;
+}
+
+@media (max-width: 1200px) {
+	.content {
+        clip-path: none;
+    }
+
+    .content-block {
+        flex-direction: column;
+    }
+
+    .content-btn {
+    	margin: 5px;
+    }
 }
