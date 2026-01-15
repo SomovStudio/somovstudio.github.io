@@ -21,5 +21,5 @@ document.addEventListener('DOMContentLoaded', function() {
         if (dateElement) dateElement.textContent = date;
     }
 
-    updateHatVersion('v1.4.17', '12/09/2025');
+    updateHatVersion('v1.4.17', '09.12.2025');
 });
