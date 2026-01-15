@@ -22,4 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     updateHatVersion('v1.4.17', '12/09/2025');
+
+    function buttonMenu()
+    {
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    }
+
+    buttonMenu();
 });
