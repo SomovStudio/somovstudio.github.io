@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    changeDownloadUrl(btnHatDownload1, 'https://github.com/SomovStudio/Hat/releases/download/v1.4.17/Hat-1.4.17.zip');
-    changeDownloadUrl(btnHatDownload2, 'https://github.com/SomovStudio/Hat/releases/download/v1.4.17/Hat-1.4.17.zip');
-    changeDownloadUrl(btnPluginDownload, 'https://github.com/SomovStudio/HatPluginMySql/releases/download/1.0.14.17/HatPluginMySql-1.0.14.17.zip');
+    changeDownloadUrl(btnHatDownload1, 'https://gitflic.ru/project/somovstudio/hat/release/c56f752f-d2e5-499a-b75d-9ce755c9b4db/1ce9e85d-64d0-43d1-8ba9-5833f948358a/download');
+    changeDownloadUrl(btnHatDownload2, 'https://gitflic.ru/project/somovstudio/hat/release/c56f752f-d2e5-499a-b75d-9ce755c9b4db/1ce9e85d-64d0-43d1-8ba9-5833f948358a/download');
+    changeDownloadUrl(btnPluginDownload, 'https://gitflic.ru/project/somovstudio/hatpluginmysql/release/86344a37-20b7-4341-8f9c-8611678d2a5a/e9df0e0a-859f-4f29-bbb8-e8667cb11b33/download');
 
     function updateHatVersion(version, date) {
         const versionElement = document.getElementById('HatVersion');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (dateElement) dateElement.textContent = date;
     }
 
-    updateHatVersion('v1.4.17', '12/09/2025');
+    updateHatVersion('v1.4.17', '09.12.2025');
 
     function buttonMenu()
     {

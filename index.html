@@ -1,442 +1,295 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Somov Studio - Browser Hat</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="Browser Hat -автоматизированное тестирование Web приложений. Браузер Hat со встроенной технологией автоматизированного тестирования Web приложений. Автоматизированное тестирование программного обеспечения любой сложности. Автотесты без Selenium.">
-	<meta name="Keywords" content="автоматизация тестирования, автотесты, browser hat, браузер hat, Hat, автотесты, автоматизация, тестирование, браузер, automation, testing, browser, hat, download, qa">
-	<link rel="SHORTCUT ICON" href="./img/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" href="./css/default.css" />
-	<link rel="stylesheet" href="./css/video.css" />
-	<link rel="stylesheet" href="./snowflakes/snow.min.css" />
-	<!-- Yandex.Metrika counter -->
-	<script type="text/javascript">
-	    (function(m,e,t,r,i,k,a){
-	        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-	        m[i].l=1*new Date();
-	        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-	        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-	    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105844908', 'ym');
-
-	    ym(105844908, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-	</script>
-	<noscript><div><img src="https://mc.yandex.ru/watch/105844908" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-	<!-- /Yandex.Metrika counter -->
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browser Hat -автоматизированное тестирование Web приложений. Браузер Hat со встроенной технологией автоматизированного тестирования Web приложений. Автоматизированное тестирование программного обеспечения любой сложности. Автотесты без Selenium.">
+    <meta name="Keywords" content="автоматизация тестирования, автотесты, browser hat, браузер hat, Hat, автотесты, автоматизация, тестирование, браузер, automation, testing, browser, hat, download, qa">
+    <link rel="SHORTCUT ICON" href="./img/favicon.ico" type="image/x-icon" />
+    <title>Somov Studio - Browser Hat</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/video.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <link rel="stylesheet" type="text/css" href="./css/bunner.css">
+    <link rel="stylesheet" type="text/css" href="./css/content.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link rel="stylesheet" href="./snowflakes/snow.min.css" />
+    <script src="./js/main.js"></script>
 </head>
 <body>
-	<div id="background"></div>
-	<div class="background__fullscreen">
-	    <video id="video" loop="" muted="" autoplay="" poster="" class="background__video">
-	        <source src="video/laptop.mp4" type="video/mp4">
-	        <!--<source src="video/laptop.webm" type="video/webm">-->
-	    </video>
-	</div>
-	
-	<!-- HEADER -->
-	<header>
-		<!-- MOBILE-MENU -->
-		<div class="mobile-menu">
-			<label class="mobile-menu-button" for="mobile-menu-check"><img src="./img/menu.png" atl="Menu"></label>
-			<input type="checkbox" name="mobile-menu-check" id="mobile-menu-check">
-			<ul class="mobile-menu-list">
-				<li><a href="index.html#browser">Браузер Hat</a></li>
-				<li><a href="index.html#system">Системные требования</a></li>
-				<li><a href="index.html#autotests">Автоматизация тестирования</a></li>
-				<li><a href="index.html#video-review">Видеообзор</a></li>
-				<li><a href="index.html#contacts">Контакты</a></li>
-			</ul>
-		</div>
-		<!-- LOGO -->
-		<div id="header-title-logo">
-			<h1 id="title">Somov Studio</h1>
-			<div id="logo"><img src="./img/logo.png" alt="logo" class="logo-rotate"></div>
-			<div id="info">
-				<p>Некоммерческий проект независимого специалиста в области автоматизированного тестирования.</p>
-				<!-- BANNER -->
-				<div id="bunner">
-					<h2>Browser Hat v1.4.17 (09.12.2025)</h2>
-					<div class="banner-description">Браузер со встроенной технологией автоматизированного тестирования Web приложений.</div>
-					<span class="banner-link"><a href="https://gitflic.ru/project/somovstudio/hat/release/c56f752f-d2e5-499a-b75d-9ce755c9b4db/1ce9e85d-64d0-43d1-8ba9-5833f948358a/download">Скачать ></a></span>
-					<span class="banner-link"><a href="https://gitflic.ru/project/somovstudio/hat" target="_blank">Подробно ></a></span>
-					<span class="banner-link"><a href="https://somovstudio.github.io/help/Hat/index.html" target="_blank">Документация ></a></span>
-					<span class="banner-link"><a href="https://drive.google.com/drive/folders/1X-dtbYdjTcpMsWYlUjUupl3PU0BuKCwK?usp=share_link" target="_blank">Google Диск ></a></span>
-				</div>
-				<br>
-				<img src="./img/new_year_2026.png" style="opacity: 1;">
-			</div>
-		</div>
-		
-	</header>
-	
+    <!-- video -->
+    <div class="background__fullscreen">
+        <video id="video" loop="" muted="" autoplay="" poster="" class="background__video">
+            <source src="./video/video_eng.mp4" type="video/mp4">
+            <source src="./video/video_eng.webm" type="video/webm">
+        </video>
+    </div>
 
-	<!-- CONTENT -->
-	<section class="section-white section-backround-left-side-bottom">
-		<div class="section-content">
-			<div class="section-content-left">
-				<div id="browser">
-					<h2 class="line">Браузер Hat</h2>
-					<p>
-						Бесплатный браузер со встроенной технологией автоматизированного тестирования Web приложений.
-					</p>
-					<p>
-						Браузер основан на компоненте Microsoft Edge WebView2. Автотесты выполняются напрямую в браузере Hat без Selenium и WebDriver. Встроенный фреймворк HatFramework содержит достаточное количество методов необходимых для выполнения основных задач автоматизации тестирования.
-						Для описания скриптов автотестов используется язык программирования C# и встроенный редактор кода. Так же в качестве редактора можно воспользоваться Visual Studio.
-						Удобный интерфейс браузера отображает все шаги выполнения теста с подробным описанием событий. Результат проверки формируется в отчет и отправляются на указаную почту. Запуск автотестов возможен из командной строки операционной системы Windows это пригодится при использовании автотестов в популярных средствах непрерывной интеграции таких как: Jenkins, TeamCity, GitLab CI/CD. В работе вам поможет встроенный чат с искуственным интелектом Gemini.
-					</p>
-					<p class="block" style="text-align: right;">
-						<span class="browser-link"><a href="https://somovstudio.github.io/help/Hat/index.html" target="_blank">Документация &gt;</a></span>
-						<span class="browser-link"><a href="https://gitflic.ru/project/somovstudio/hat/release/c56f752f-d2e5-499a-b75d-9ce755c9b4db/1ce9e85d-64d0-43d1-8ba9-5833f948358a/download">Скачать &gt;</a></span>
-						<span class="browser-link"><a href="https://drive.google.com/drive/folders/1X-dtbYdjTcpMsWYlUjUupl3PU0BuKCwK?usp=share_link" target="_blank">Google Диск &gt;</a></span>
-						<span class="browser-link"><a href="https://gitflic.ru/project/somovstudio/hat" target="_blank">Подробно &gt;</a></span>
-					</p>
-				</div>
-			</div>
-			<div class="section-content-right">
-				<div class="content-image" id="browser-image">
-					<img src="./img/projects/hat/hat1.3.png">
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- header -->
+    <header>
+        <div class="container header-container">
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html#BrowserHat">Browser Hat</a></li>
+                    <li><a href="index.html#Download">Download</a></li>
+                    <li><a href="index.html#SystemRequirements">System requirements</a></li>
+                    <li><a href="index.html#TestAutomation">Test automation</a></li>
+                    <li><a href="index.html#Plugin">Plugin</a></li>
+                    <li><a href="index.html#Video">Video</a></li>
+                    <li><a href="index.html#Documentation">Documentation</a></li>
+                    <li>
+                        <div class="language">
+                            <span class="language-value">EN</span>
+                            <div class="language-change">
+                                <div><a href="https://somovstudio.github.io/index.html">EN</a></div>
+                                <div><a href="https://somovstudio.github.io/ru/index.html">RU</a></div>
+                            </div> 
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-	<div class="section-clear"></div>
+    <!-- bunner -->
+    <section class="bunner">
+        <div class="container">
+            <div>
+                <img src="./img/logo.png" alt="Somov Studio">
+                <h1>SOMOV STUDIO</h1>
+                <p>It is not a commercial project of an independent specialist in the field of automated testing.</p>    
+            </div>
+            <div class="bunner-hat">
+                <h2>Browser Hat <span id="HatVersion">v1.4.17</span> (<span id="HatVersionDate">12/09/2025</span>)</h2>
+                <div class="bunner-hat-description">A free browser with automated web application testing technology.</div>
+                <br>
+                <a id="ButtonHatDownload1" href="https://github.com/SomovStudio/Hat/releases" class="bunner-btn">Free Download</a>    
+            </div>
+        </div>
+    </section>
+    
+    <!-- content: BrowserHat -->
+    <section class="content" id="BrowserHat">
+        <div class="container">
+            <div class="content-block">
+                <div class="content-text">
+                    <h2>Browser Hat</h2>
+                    <p>
+                        A free browser with automated testing technology for Web applications.
+                    </p>
+                    <p>
+                        The browser is based on the Microsoft Edge WebView2 component. Autotests are performed in the Hat browser. The Hat framework contains the methods necessary to perform the basic tasks of test automation. 
+                    </p>
+                    <p id="Download">
+                        Autotest scripts are written in C#. The browser has a code editor. You can also use Visual Studio as an editor. The user-friendly browser interface shows all the steps of the test with a detailed description of the events. AI chats: Gemini, DeepSeek and Alice will help you develop autotests.
+                    </p>
+                    <p>
+                        The verification result is generated in a report and sent to the specified email address. You can run autotests from the Windows command line, as well as in Jenkins, TeamCity, GitLab CI/CD.
+                    </p>
+                </div>
+                <div class="content-image">
+                    <img src="./img/hat_eng.png" alt="Hat">
+                </div>
+            </div>
 
-	<section class="section-white section-backround-left-side-top-before section-backround-right-side-bottom">
-		<div class="section-content">
-			<div class="section-content-left">
-				<div class="content-image" id="system-image">
-					<img src="./img/projects/hat/webview2.png">
-				</div>
-			</div>
-			<div class="section-content-right">
-				<div id="system">
-					<h2 class="line">Системные требования</h2>
-					<p>
-						<br>Операционная система Windows 8, 8.1, 10, 11<br>
-						<br>Пакет Microsoft .NET Framework 4.8 (cкачать установщик <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48" target="_blank">.NET Framework Runtime</a>)<br>
-						<br>Пакет Microsoft Edge WebView2 (cкачать установщик <a href="https://developer.microsoft.com/en-us/microsoft-edge/webview2/" target="_blank">WebView2 Runtime</a>)
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
+            <div class="content-block content-block-mobile">
+                <div class="content-text">
+                    <a href="https://zionec.ru/" target="_blank"><img src="./img/zionec_eng.png" alt="Zionec"></a>
+                    <p>
+                        The program was developed with the non-commercial support of the <a href="https://zionec.ru/" target="_blank">Zionec</a> company. The company develops "Online stores", "Corporate portals", "CRM systems" and its own solutions.
+                    </p>
+                </div>
+                <div class="content-text">
+                    <a id="ButtonHatDownload2" href="https://github.com/SomovStudio/Hat/releases" class="content-btn">Download</a>
+                    <a href="https://github.com/SomovStudio/Hat" class="content-btn"  target="_blank">Repository</a>
+                    <a href="https://drive.google.com/drive/folders/1X-dtbYdjTcpMsWYlUjUupl3PU0BuKCwK" class="content-btn" target="_blank">Google Disk</a>
+                    <a href="index.html#Documentation" class="content-btn">Help</a>
+                </div>  
+            </div>
+        </div>
+    </section>
 
-	<div class="section-clear"></div>
+    <!-- content: SystemRequirements -->
+    <section class="content" id="SystemRequirements">
+        <div class="container">
+            <div class="content-block">
+                <div class="content-image">
+                    <img src="./img/install_webview2_eng.png" alt="Webview2">
+                </div>
+                <div class="content-text">
+                    <h2>System requirements</h2>
+                    <p>
+                        Operating system Windows 8, 8.1, 10, 11.
+                    </p>
+                    <p>
+                        The Microsoft package .NET Framework 4.8 (<a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48" target="_blank">download</a> runtime installer)
+                    </p>
+                    <p>
+                        Microsoft Edge WebView2 Package (<a href="https://developer.microsoft.com/en-us/microsoft-edge/webview2/" target="_blank">download</a> runtime installer)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section class="section-white-icons">
-		<div id="Bunners">
-			<div id="ZionecBunner">
-				<a href="https://zionec.ru/" target="_blank"><img class="zionec-img" src="./img/zionec.png"></a>
-				<div class="section-clear"></div>
-				<p class="zionec-border">
-					Браузер Hat разработан при некоммерческой поддержке "<b><a href="https://zionec.ru/">Зионек</a></b>".
-					<br><br>
-					Компания <b><a href="https://zionec.ru/">Зионек</a></b>" занимается разработкой "Интернет-магазинов", "Корпоративных порталов", "CRM-систем" и собственных решений.
-				</p>
-			</div>
+    <!-- content: TestAutomation -->
+    <section class="content" id="TestAutomation">
+        <div class="container">
+            <div class="content-block">
+                <div class="content-text">
+                    <h2>Test automation</h2>
+                    <p>
+                        All actions on autotests are performed directly in the browser.
+                        The Project window is designed for working on an autotest project.
+                        All necessary actions on the project files and folders are performed on the Explorer tab.
+                    </p>
+                    <p>
+                        The entire process of performing the autotest with clear and detailed descriptions takes place on the "Test" tab. The list of connected libraries is edited on the "Libraries" tab during the test.
+                    </p>
+                    <p>
+                        The autotest process on the "Test" tab shows in great detail all the steps and stages of verification. If you drop any of the steps, you will receive a clear explanation of what happened during the check.
+                    </p>
+                </div>
+                <div class="content-image">
+                    <img src="./img/demo_eng.gif" alt="Demo test automation">
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<div id="HatPlugin">
-				<div class="plugin-border">
-					Плагин <b>HatPluginMySql</b> для браузера Hat который позволяет выполнять автоматизированное тестирование данных в базе данных MySql. 
-					<br>Плагин можно скачать со страницы GitFlic
-					<form action="https://gitflic.ru/project/somovstudio/hatpluginmysql" target="_blank">
-						<input type="submit" value="Перейти" class="plugin-button">
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- content: Plugin -->
+    <section class="content" id="Plugin">
+        <div class="container">
+            <div class="content-block">
+                <div class="content-image">
+                    <img src="./img/plugin.png" alt="Plugin">
+                </div>
+                <div class="content-text">
+                    <h2>Plugin</h2>
+                    <p>
+                        HatPluginMySql - a plugin for the Hat browser that allows you to perform automated testing of data in a MySQL database.
+                    </p>
+                    <p>
+                        System requirements: 
+                        <br>the plugin is compatible with the Hat browser starting from version 1.4
+                    </p>
+                    <p>
+                        
+                        <ul>
+                            Documentation:
+                            <li>Installing the plugin ( <a href="https://somovstudio.github.io/help/hat_eng/Installingtheplugin.html" target="_blank">link</a> )</li>
+                            <li>Connecting the plugin to the project ( <a href="https://somovstudio.github.io/help/hat_eng/Connectingtheplugintotheproject.html" target="_blank">link</a> )</li>
+                            <li>A general example of an autotest ( <a href="https://somovstudio.github.io/help/hat_eng/Anexampleofanautotest.html" target="_blank">link</a> )</li>
+                            <li>Description of the built-in methods ( <a href="https://somovstudio.github.io/help/hat_eng/TesterMySql3.html" target="_blank">link</a> )</li>
+                        </ul>
+                    </p>
+                    <a id="ButtonPluginDownload" href="https://github.com/SomovStudio/HatPluginMySql/releases" class="content-btn">Download</a>
+                    <a href="https://github.com/SomovStudio/HatPluginMySql" class="content-btn" target="_blank">Repository</a>
+                    <a href="https://drive.google.com/drive/folders/1X-dtbYdjTcpMsWYlUjUupl3PU0BuKCwK" class="content-btn" target="_blank">Google Disk</a>
+                    <a href="index.html#Documentation" class="content-btn">Help</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<div class="section-clear"></div>
+    <!-- content: Video -->
+    <section class="content" id="Video">
+        <div class="container">
+            <div class="content-block">
+                <div class="content-text">
+                    <h2>Video</h2>
+                    <p>
+                        This video explains the basic principles of working with the browser, creating an autotest project and running a demo test, as well as the general principles of working with the built-in editor and the structure of autotests described in the C# programming language. It also shows the launch of autotests via the command line, which is necessary when using autotests with continuous integration tools.
+                    </p>
+                    <p>
+                        <ul>
+                            Video lessons:
+                            <li><a href="https://youtu.be/4qyzbEASw3E" target="_blank">Lesson #1</a>: A Visual Studio project and an example of a demo autotest description</li>
+                            <li><a href="https://youtu.be/WdfLl0Ys8y0" target="_blank">Lesson #2</a>: Executing JavaScript code in the autotest body</li>
+                            <li><a href="https://youtu.be/dPRx4bqvZ4w" target="_blank">Lesson #3</a>: Autotest for checking the API and processing the result in JSON format</li>
+                            <li><a href="https://youtu.be/bsQvmcQJ6Vg" target="_blank">Lesson #4</a>: Autotest for checking the site map (sitemap.xml )</li>
+                            <li><a href="https://youtu.be/z7YmoBKGzeU" target="_blank">Lesson #5</a>: HatPluginMySql plugin - automated MySQL database testing</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="content-image">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Dn9UtrNj6EM?si=xvi2sILua8xtufAv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section class="section-white section-backround-right-side-top section-backround-left-side-bottom-before">
-		<div class="section-content">
-			<div class="section-content-left">
-				<div id="autotests">
-					<h2 class="line">Автоматизация тестирования</h2>
-					<p>
-					Все действия над автотестами выполняются непосредственно в браузере.
-					<br>Окно "Проект" предназначено для работы над проектом автотестов.
-					<br>Все необходимые действия над файлами и папками проекта осуществляются на вкладке "Проводник".
-					<br>
-					<br>Весь процесс выполнения автотеста с наглядным и подробным описаниям происходит на вкладке "Тест". Список подключаемых библиотек во время выполнения теста редактируется на вкладка "Библиотеки".
-					<br>
-					<br>Процесс работы автотеста на вкладке "Тест" очень подробно показывает все шаги и стадии выполнения проверки. При падении любого из шагов вы получите понятное объяснение того что произошло в ходе проверки.
-				</p>
-				</div>
-			</div>
-			<div class="section-content-right">
-				<div class="content-image" id="autotests-image">
-					<img src="./img/projects/hat/demo1.3.gif">
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- content: Documentation -->
+    <section class="content" id="Documentation">
+        <div class="container">
+            <div class="content-block">
+                <div class="content-image">
+                    <img src="./img/help_eng.png" alt="Documentation">
+                </div>
+                <div class="content-text">
+                    <h2>Documentation</h2>
+                    <p>
+                        The documentation describes the theory and practice of working with autotests and the browser in general.
+                    </p>
+                    <p>
+                        The "Quick Start" section will help you get to know automation and start working on them right away.
+                    </p>
+                    <p>
+                        It describes in detail the structure of autotests, the PageObjects and StepObjects patterns, as well as the code editor.
+                    </p>
+                    <p>
+                        The reference information about the embedded framework will help you in developing autotests.
+                    </p>
+                    <a href="https://github.com/SomovStudio/Hat/raw/main/Help/help.chm" target="_blank" class="content-btn">Download</a>
+                    <a href="https://somovstudio.github.io/help/hat_eng/index.html" target="_blank" class="content-btn">Read online</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<div class="section-clear"></div>
-
-	<section class="section-white-icons">
-			<div class="tiles" id="system-tiles">
-				<div class="tile">
-					<img class="tile__image" src="./img/projects/hat/hat_logo.png">
-					<p class="tile__description">
-						<span>Browser Hat</span>
-						Браузер со встроенной технологией автоматизации тестирования Web приложений.
-					</p>
-					<div class="tile__detail"><a href="https://gitflic.ru/project/somovstudio/hat" target="_blank">подробнее ></a></div>
-					<div class="tile__download">
-						<form action="https://gitflic.ru/project/somovstudio/hat/release/c56f752f-d2e5-499a-b75d-9ce755c9b4db/1ce9e85d-64d0-43d1-8ba9-5833f948358a/download">
-							<input type="submit" value="Скачать" class="tile__button">
-						</form>
-					</div>
-				</div>
-				<div class="tile">
-					<img class="tile__image" src="./img/projects/test_sitemap/test_sitemap_logo2.png">
-					<p class="tile__description">
-						<span>TestSitemap</span>
-						Программа предназначена для тестирования ссылок указанных в карте сайта sitemap.
-					</p>
-					<div class="tile__detail"><a href="https://gitflic.ru/project/somovstudio/testsitemap" target="_blank">подробнее ></a></div>
-					<div class="tile__download">
-						<form action="https://gitflic.ru/project/somovstudio/testsitemap/release/cd13313e-1282-4b8e-b050-eeab3f20ca67/36790735-d794-485f-8cd1-341596afe9e7/download">
-							<input type="submit" value="Скачать" class="tile__button">
-						</form>
-					</div>
-				</div>
-				<div class="tile">
-					<img class="tile__image" src="./img/projects/test_redirect/test_redirect_logo.png">
-					<p class="tile__description">
-						<span>TestRedirect</span>
-						Программа для тестирования переадресации ссылок.
-					</p>
-					<div class="tile__detail"><a href="https://gitflic.ru/project/somovstudio/testredirect" target="_blank">подробнее ></a></div>
-					<div class="tile__download">
-						<form action="https://gitflic.ru/project/somovstudio/testredirect/release/1ff81f96-21a0-47c3-9666-ffb0d8e38be7/782720f7-30f0-46dc-bda1-958cb220d737/download">
-							<input type="submit" value="Скачать" class="tile__button">
-						</form>
-					</div>
-				</div>
-				<div class="tile">
-					<img class="tile__image" src="./img/projects/search_site_content/search_site_content_logo.png">
-					<p class="tile__description">
-						<span>SearchSiteContent</span>
-						Программа для поиска контента на страницах указанных в sitemap.
-					</p>
-					<div class="tile__detail"><a href="https://gitflic.ru/project/somovstudio/searchsitecontent" target="_blank">подробнее ></a></div>
-					<div class="tile__download">
-						<form action="https://gitflic.ru/project/somovstudio/searchsitecontent/release/ab04fafb-6794-445a-9dcc-47d3dfc986d2/8eb02442-a459-43df-bc33-a451635e0de8/download">
-							<input type="submit" value="Скачать" class="tile__button">
-						</form>
-					</div>
-				</div>
-				<div class="tile">
-					<img class="tile__image" src="./img/projects/seo_scanner/seo_scanner_logo.png">
-					<p class="tile__description">
-						<span>SEOScanner</span>
-						Программа сканирования web страниц для проведения SEO-аудита.
-					</p>
-					<div class="tile__detail"><a href="https://gitflic.ru/project/somovstudio/seoscanner" target="_blank">подробнее ></a></div>
-					<div class="tile__download">
-						<form action="https://gitflic.ru/project/somovstudio/seoscanner/release/f0a2af46-2a80-4759-9acb-c40161022dd3/fd71724d-f451-4ad0-8166-8b56141b4093/download">
-							<input type="submit" value="Скачать" class="tile__button">
-						</form>
-					</div>
-				</div>
-				<div class="tile">
-					<img class="tile__image" src="./img/projects/fast_adb/fastadb_logo2.png">
-					<p class="tile__description">
-						<span>FastADB</span>
-						Программа упрощает работу с Android Debug Bridge.
-					</p>
-					<div class="tile__detail"><a href="https://github.com/SomovStudio/FastADB/" target="_blank">подробнее ></a></div>
-					<div class="tile__download">
-						<form action="https://github.com/SomovStudio/FastADB/archive/refs/tags/1.1.zip">
-							<input type="submit" value="Скачать" class="tile__button">
-						</form>
-					</div>
-				</div>
-			</div>
-	</section>
-
-	<div class="section-clear"></div>
-
-	<section class="section-white section-backround-left-side-top-before section-backround-right-side-bottom">
-		<div class="section-content">
-			<div class="section-content-left">
-				<div class="content-image" id="video-review-image">
-					<iframe width="720" height="405" src="https://rutube.ru/play/embed/c1cc67db77159a3285905d18774a9fd0/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-				</div>
-			</div>
-			<div class="section-content-right">
-				<div id="video-review">
-					<h2 class="line">Видеообзор</h2>
-					<p>
-					В данном видео рассказывается об основных принцыпах работы с браузером, о создании проекта автотестов и выполнение демонстрационного теста, а так же общие принцыпи работы со встроенным редактором и структуре автотестов описываемых на языке программирования C#.
-					Так же показывается запуск автотестов через командную строку что является необходимым при использовании автотестов средствами непрерывной интеграции.
-					</p>
-					<br>
-					<h3>Видеоуроки</h3>
-					<p>
-						</p><ul>
-							<li><a href="https://rutube.ru/video/0ec54264972a15e5606bd02495d8a88a/" target="_blank">Урок №1</a>: Проект под Visual Studio и пример описания демонстрационного автотеста</li>
-							<li><a href="https://rutube.ru/video/600bea48988f21ec0114e69902f627d1/" target="_blank">Урок №2</a>: Выполнение JavaScript кода в теле автотеста</li>
-							<li><a href="https://rutube.ru/video/69423ab3ecc5f5ec004747947d2fbb5a/" target="_blank">Урок №3</a>: Автотест для проверки API и обработки полученного результата в JSON формате</li>
-							<li><a href="https://rutube.ru/video/ae871ffdd73af8afb181f35b477a5dc0/" target="_blank">Урок №4</a>: Автотест для проверки карты сайта (sitemap.xml)</li>
-							<li><a href="https://rutube.ru/video/7e7584c2abfc84d76b4447c338d9d90e/" target="_blank">Урок №5</a>: Плагин HatPluginMySql - автоматизированное тестирование базы данных MySql</li>
-						</ul>
-					<p></p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<div class="section-clear"></div>
-
-	<section class="section-white section-backround-right-side-top section-backround-left-side-bottom-before">
-		<div class="section-content">
-			<div class="section-content-left">
-				<div id="documentation">
-					<h2 class="line">Документация</h2>
-					<p>
-						В документации описана теория и практика по работе с автотестами и браузером в целом.
-					</p>
-					<p>
-						Раздел "Быстрый старт" поможет вам познакомиться с автоматизацией сразу приступить к работе над ними.
-					</p>
-					<p>
-						Подробно рассказывается о структуре автотестов, о паттернах PageObjects и StepObjects, а так же о редакторе кода.
-					</p>
-					<p>
-						Справочная информация о встроенном фреймворке поможет вам в разработке автотестов.
-					</p>
-					<p></p>
-					<br>
-					<form action="https://somovstudio.github.io/help/Hat/index.html" target="_blank">
-						<input type="submit" value="Перейти" class="tile__button"> справочная документация online
-					</form>
-					<br>
-					<form action="https://github.com/SomovStudio/Hat/raw/main/Help/help.chm">
-						<input type="submit" value="Скачать" class="tile__button"> документация в формате chm
-					</form>
-					<br>
-				</div>
-			</div>
-			<div class="section-content-right">
-				<div class="content-image" id="documentation-image">
-					<img src="./img/projects/hat/help1.3.png">
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<div class="section-clear"></div>
-
-	<section class="section-white section-backround-left-side-top-before section-backround-right-side-bottom">
-		<div class="section-content">
-			<div class="section-content-left">
-				<div class="content-image-gemini" id="ai-image">
-					<img src="./img/projects/hat/ai.png">
-				</div>
-			</div>
-			<div class="section-content-right">
-				<div id="ai">
-					<h2 class="line">Искуственный интелект</h2>
-					<p>
-						<br>В работе вам поможет встроенные чаты с искуственным интелектом.<br>
-						<br>Yandex Alice - виртуальный голосовой помощник с внедренным генеративный ИИ YandexGPT.<br>
-						<br>DeepSeek - искусственный интеллект, созданный одноимённой китайской компанией для общения, помощи в решении задач и поиске информации.<br>
-						<br>Gemini — чат-бот с искусственным интеллектом, разработанный компанией Google на основе языковой модели LaMDA.<br>
-						<br>При общении с искуственным интелектом вы можете передать искодный код HatFramework для глубокого разбора с целью получения полного и точного ответа на ваши вопросы относительно разработки автотестов в браузере Hat.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<div class="section-clear"></div>
-
-	<section class="section-transparent">
-		<div id="contacts">
-			<h2 class="line">Контакты</h2>
-			<div class="contacts-left">
-				<b>Некоммерческий проект:</b> Somov Studio
-				<br><b>gitflic:</b> <a href="https://gitflic.ru/user/somovstudio">somovstudio</a>
-			</div>
-			<div class="contacts-right">
-				<b>Автор проекта: <a href="https://somov-qa.github.io/resume.html" target="_blank">Сомов Евгений Павлович</a>
-				<br>независимый специалист в области автоматизированного тестирования.
-			</div>
-		</div>
-	</section>
-
-	<div class="section-clear"></div>
-
-	<!-- FOOTER -->
-	<footer class="footer-backround">
-		<div class="footer-center">
-			<nav>
-				<div>
-					<ul class="footer-menu">
-						<li><a href="index.html#browser">Браузер Hat</a></li>
-						<li><a href="index.html#system">Системные требования</a></li>
-						<li><a href="index.html#autotests">Автоматизация тестирования</a></li>
-						<li><a href="index.html#video-review">Видеообзор</a></li>
-						<li><a href="index.html#documentation">Документация</a></li>
-						<li><a href="index.html#contacts">Контакты</a></li>
-					</ul>
-				</div>
-			</nav>
-			<div class="footer-social">
-				<ul>
-					<li>
-						<a href="https://gitflic.ru/user/somovstudio" target="_blank">
-							<img src="./img/github_main.png" alt="GitHub" width="36" height="36">
-						</a>
-					</li>
-					<li>
-						<a href="https://vk.com/qa.autotesting" target="_blank">
-							<img src="./img/vk_main.png" alt="Facebook" width="36" height="36">
-						</a>
-					</li>
-					<li>
-						<a href="https://rutube.ru/channel/25139143/" target="_blank">
-							<img src="./img/youtube_main.png" alt="YouTube" width="36" height="36">
-						</a>
-					</li>
-					<li>
-						
-					</li>
-				</ul>
-			</div>
-			<p class="footer-copyright">
-				<b>Данный сайт не собирает информацию о пользователях.</b>
-				<br><br>
-				Copyright &copy; 2025 Somov Studio. All Rights Reserved.
-			</p>
-		</div>
-	</footer>
-
-	<!-- MENU -->
-	<nav>
-		<div class="menu-wrapper">
-			<ul class="menu">
-				<li><a href="index.html#browser">Браузер Hat</a></li>
-				<li><a href="index.html#system">Системные требования</a></li>
-				<li><a href="index.html#autotests">Автоматизация тестирования</a></li>
-				<li><a href="index.html#video-review">Видеообзор</a></li>
-				<li><a href="index.html#documentation">Документация</a></li>
-				<li><a href="index.html#contacts">Контакты</a></li>
-			</ul>
-		</div>
-	</nav>
-
-	<!-- SCRIPTS -->
-	<script src="./js/jquery-3.6.0.min.js"></script>
-	<script src="./js/main.js"></script>
-	<script type="text/javascript" src="./snowflakes/Snow.js?ver=6.9" id="snow-js"></script>
-	<script>
-		new Snow ();
-	</script>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column footer-column-center">
+                    <img src="./img/logo.png" alt="Somov Studio">
+                    <h3 class="footer-company">SOMOV STUDIO</h3>
+                </div>
+                <div class="footer-column">
+                    <h3>Browser Hat</h3>
+                    <ul>
+                        <li><a href="https://github.com/SomovStudio/Hat" target="_blank">GitHub repository</a></li>
+                        <li><a href="https://drive.google.com/drive/folders/1X-dtbYdjTcpMsWYlUjUupl3PU0BuKCwK" target="_blank">Google disc</a></li>
+                        <li><a href="https://somovstudio.github.io/help/hat_eng/index.html" target="_blank">Documentation</a></li>
+                        <li><a href="https://github.com/SomovStudio/HatPluginMySql" target="_blank">Plugin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Other programs</h3>
+                    <ul>
+                        <li><a href="https://github.com/SomovStudio/TestSitemap" target="_blank">TestSitemap</a></li>
+                        <li><a href="https://github.com/SomovStudio/TestRedirect" target="_blank">TestRedirect</a></li>
+                        <li><a href="https://github.com/SomovStudio/SEOScanner" target="_blank">SEOScanner</a></li>
+                        <li><a href="https://github.com/SomovStudio/SearchSiteContent" target="_blank">SearchSiteContent</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li>Autor: <a target="_blank" href="https://somov-qa.github.io/resume.html">Somov Evgenii</a></li>
+                        <li>Email: <a href="mailto:somov.studio@gmail.com">somov.studio@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 SOMOV STUDIO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./snowflakes/Snow.js?ver=6.9" id="snow-js"></script>
+    <script>
+        new Snow ();
+    </script>
 </body>
-</html>

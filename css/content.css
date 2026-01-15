@@ -1,0 +1,158 @@
+.content {
+	padding: 80px 0;
+	background-color: #f8f9fa;
+}
+
+.content p a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #3498db;
+}
+
+.content p a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #8608F2;
+}
+
+.content img a {
+	text-decoration: none;
+}
+
+.content img a:hover {
+	text-decoration: none;
+}
+
+.content ul {
+	list-style-type: circle;
+}
+
+.content li {
+	margin-left: 20px;
+}
+
+.content li::marker {
+	color: #6C3483;
+}
+
+.content li a {
+	text-decoration: none;
+	font-weight: normal;
+	color: #3498db;
+}
+
+.content li a:hover {
+	text-decoration: underline;
+	font-weight: normal;
+	color: #8608F2;
+}
+
+.content-block {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+}
+
+.content-block-mobile {
+	padding-top: 50px;
+}
+
+.content-image {
+	flex: 1;
+	overflow: hidden;
+	box-shadow: 0 5px 15px rgba(30, 69, 140, 0.9);
+}
+
+.content-image img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.content-text {
+	flex: 1;
+}
+
+.content-btn {
+	display: inline-block;
+	background-color: #3498db;
+	color: white;
+	padding: 12px 30px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+.content-btn:hover {
+	background-color: #8608F2;
+	color: #FFFFFF;
+}
+
+.content-text h2 {
+	font-size: 42px;
+	color: #222222;
+	margin-bottom: 20px;
+}
+
+.content-text p {
+	margin-bottom: 20px;
+	color: #222222;
+}
+
+.language {
+	position: absolute;
+	top: 13px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px dotted rgba(255,255,255,0.3);
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+}
+
+.language-value {
+	cursor: pointer;
+}
+
+.language-change {
+	position: absolute;
+	left: 0px;
+	background-color: #FFFFFF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: 2px solid white;
+	border-radius: 5px;
+	box-shadow: 7px 7px 5px rgba(0,0,0,0.3);
+	display: none;
+}
+
+.language-change a{
+	color: #1E458C;
+}
+
+.language-change a:hover{
+	color: #3498db;
+}
+
+.language:hover .language-change {
+    display: block;
+}
+
+@media (max-width: 1200px) {
+	.content {
+        clip-path: none;
+    }
+
+    .content-block {
+        flex-direction: column;
+    }
+
+    .content-btn {
+    	margin: 5px;
+    }
+}
