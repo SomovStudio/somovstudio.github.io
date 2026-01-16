@@ -37,13 +37,13 @@
 
 .content li a {
 	text-decoration: none;
-	font-weight: normal;
+	font-weight: bold;
 	color: #3498db;
 }
 
 .content li a:hover {
 	text-decoration: underline;
-	font-weight: normal;
+	font-weight: bold;
 	color: #8608F2;
 }
 
