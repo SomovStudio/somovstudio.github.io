@@ -3,26 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Массив товаров
     const products = [
         {
-            id: 1,
-            name: "TestSitemap",
-            price: "бесплатно",
-            image: "./img/product01.jpg",
-            rating: 4.5,
-            reviews: 128
-        },
-        {
-            id: 2,
-            name: "TestRedirect",
-            price: "бесплатно",
-            image: "./img/product02.jpg",
-            rating: 4.8,
-            reviews: 95
-        },
-        {
             id: 3,
             name: "SearchSiteContent",
             price: "бесплатно",
-            image: "./img/product03.jpg",
+            image: "./img/search_site_content_logo.png",
             rating: 4.7,
             reviews: 203
         },
@@ -30,9 +14,25 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 4,
             name: "SEOScanner",
             price: "бесплатно",
-            image: "./img/product04.jpg",
+            image: "./img/seo_scanner_logo.png",
             rating: 4.6,
             reviews: 156
+        },
+        {
+            id: 1,
+            name: "TestSitemap",
+            price: "бесплатно",
+            image: "./img/test_sitemap_logo2.png",
+            rating: 4.5,
+            reviews: 128
+        },
+        {
+            id: 2,
+            name: "TestRedirect",
+            price: "бесплатно",
+            image: "./img/test_redirect_logo.png",
+            rating: 4.8,
+            reviews: 95
         }
     ];
     
@@ -147,28 +147,20 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Создание элемента карточки товара
             const productCard = document.createElement('div');
-            productCard.className = 'goods-slider-product-card';
+            productCard.className = 'products-slider-product-card';
             productCard.innerHTML = `
-                <img src="${product.image}" alt="${product.name}" class="goods-slider-product-image">
-                <div class="goods-slider-product-info">
-                    <h3 class="goods-slider-product-title">${product.name}</h3>
-                    <div class="goods-slider-product-price">${product.price}</div>
-                    <div class="goods-slider-product-rating">
-                        <div class="goods-slider-product-stars">${starsHTML}</div>
-                        <div class="goods-slider-product-rating-count">(${product.reviews})</div>
+                <img src="${product.image}" alt="${product.name}" class="products-slider-product-image">
+                <div class="products-slider-product-info">
+                    <h3 class="products-slider-product-title">${product.name}</h3>
+                    <div class="products-slider-product-price">${product.price}</div>
+                    <div class="products-slider-product-rating">
+                        <div class="products-slider-product-stars">${starsHTML}</div>
+                        <div class="products-slider-product-rating-count">(${product.reviews})</div>
                     </div>
-                    <button class="goods-slider-product-add-to-cart">Под заказ</button>
+                    <button class="products-slider-product-add-to-cart">Под заказ</button>
                 </div>
             `;
-            
-            // Предполагается, что $sliderWrapper - это элемент DOM
-            // Если это jQuery объект, замените на:
-            // document.querySelector('.your-slider-wrapper-class').appendChild(productCard);
-            // или используйте document.getElementById('your-slider-wrapper-id')
-            
-            // Если $sliderWrapper был jQuery объектом, вам нужно получить DOM элемент:
-            // const sliderWrapper = document.querySelector('.your-slider-wrapper-class');
-            
+
             sliderWrapper.appendChild(productCard);
         });
     }
