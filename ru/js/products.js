@@ -3,28 +3,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Массив товаров
     const products = [
         {
-            id: 3,
+            id: 1,
             name: "SearchSiteContent",
             description: "Программа для поиска контента на страницах указанных в sitemap.",
             image: "./img/search_site_content_logo.png",
             url: "https://gitflic.ru/project/somovstudio/searchsitecontent"
         },
         {
-            id: 4,
+            id: 2,
             name: "SEOScanner",
             description: "Программа сканирования web страниц для проведения SEO-аудита.",
             image: "./img/seo_scanner_logo.png",
             url: "https://gitflic.ru/project/somovstudio/seoscanner"
         },
         {
-            id: 1,
+            id: 3,
             name: "TestSitemap",
             description: "Программа предназначена для тестирования ссылок указанных в карте сайта sitemap.",
             image: "./img/test_sitemap_logo2.png",
             url: "https://gitflic.ru/project/somovstudio/testsitemap"
         },
         {
-            id: 2,
+            id: 4,
             name: "TestRedirect",
             description: "Программа для тестирования переадресации ссылок.",
             image: "./img/test_redirect_logo.png",
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Настройки слайдера
     let visibleProducts = getVisibleProductsCount(); // количество отображаемых товаров
     let currentPosition = 0; // текущий лист в слайдере
-    const totalProducts = document.querySelectorAll('.products-slider-product-card').length; // всего товаров в слайдере
+    const totalProducts = products.length; // всего товаров в слайдере
     
     // Функция для определения количества видимых товаров в зависимости от ширины экрана
     function getVisibleProductsCount() {
@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (width < 768) return 1;
         if (width < 1025) return 2;
         if (width < 1201) return 3;
-        if (width < 1441) return 4;
-        return 4;
+        if (width < 1441) return 3;
+        return 3;
     }
 
     // Функция для пересчета количества слайдов
