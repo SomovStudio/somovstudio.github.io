@@ -28,7 +28,7 @@
     height: 40px;
     border-radius: 50%;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #3498db;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,6 +38,7 @@
 
 .products-slider-btn:hover {
     background-color: #f0f0f0;
+    border: 1px solid #8608F2;
 }
 
 .products-slider-btn:disabled {
