@@ -69,6 +69,12 @@
 	display: block;
 }
 
+.content-video {
+	flex: 1;
+	overflow: hidden;
+	box-shadow: 0 5px 15px rgba(30, 69, 140, 0.9);
+}
+
 .content-text {
 	flex: 1;
 }
@@ -155,4 +161,8 @@
     .content-btn {
     	margin: 5px;
     }
+
+    .content-video {
+		width: 100%;
+	}
 }
