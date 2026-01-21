@@ -5,34 +5,30 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             id: 3,
             name: "SearchSiteContent",
-            price: "бесплатно",
+            description: "Программа для поиска контента на страницах указанных в sitemap.",
             image: "./img/search_site_content_logo.png",
-            rating: 4.7,
-            reviews: 203
+            url: ""
         },
         {
             id: 4,
             name: "SEOScanner",
-            price: "бесплатно",
+            description: "Программа сканирования web страниц для проведения SEO-аудита.",
             image: "./img/seo_scanner_logo.png",
-            rating: 4.6,
-            reviews: 156
+            url: ""
         },
         {
             id: 1,
             name: "TestSitemap",
-            price: "бесплатно",
+            description: "Программа предназначена для тестирования ссылок указанных в карте сайта sitemap.",
             image: "./img/test_sitemap_logo2.png",
-            rating: 4.5,
-            reviews: 128
+            url: ""
         },
         {
             id: 2,
             name: "TestRedirect",
-            price: "бесплатно",
+            description: "Программа для тестирования переадресации ссылок.",
             image: "./img/test_redirect_logo.png",
-            rating: 4.8,
-            reviews: 95
+            url: ""
         }
     ];
     
@@ -127,24 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Создание карточек товаров
     function createProductCards() {
         products.forEach(function(product, index) {
-            // Генерация звезд рейтинга
-            let starsHTML = '';
-            const fullStars = Math.floor(product.rating);
-            const hasHalfStar = product.rating % 1 !== 0;
-            
-            for (let i = 0; i < fullStars; i++) {
-                starsHTML += '<span>★</span>';
-            }
-            
-            if (hasHalfStar) {
-                starsHTML += '<span>★</span>';
-            }
-            
-            const emptyStars = 5 - Math.ceil(product.rating);
-            for (let i = 0; i < emptyStars; i++) {
-                starsHTML += '<span>☆</span>';
-            }
-            
             // Создание элемента карточки товара
             const productCard = document.createElement('div');
             productCard.className = 'products-slider-product-card';
@@ -152,13 +130,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 <img src="${product.image}" alt="${product.name}" class="products-slider-product-image">
                 <div class="products-slider-product-info">
                     <h3 class="products-slider-product-title">${product.name}</h3>
-                    <div class="products-slider-product-price">${product.price}</div>
-                    <div class="products-slider-product-rating">
-                        <div class="products-slider-product-stars">${starsHTML}</div>
-                        <div class="products-slider-product-rating-count">(${product.reviews})</div>
-                    </div>
-                    <button class="products-slider-product-add-to-cart">Под заказ</button>
+                    <div class="products-slider-product-description">${product.description}</div>
+                    
                 </div>
+                <a class="products-slider-product-button" href="${product.url}" target="_blank">Подробно</a>
             `;
 
             sliderWrapper.appendChild(productCard);
@@ -186,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Обработчики для кнопок "В корзину"
+        /*
         sliderWrapper.addEventListener('click', function(event) {
             if (event.target.closest('.products-slider-product-add-to-cart')) {
                 const productCard = event.target.closest('.products-slider-product-card');
@@ -194,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // console.log('Добавлен товар:', productName);
             }
         });
+        */
 
         // Поддержка свайпов на touch-устройствах
         const swipeThreshold = 40; // минимальная дистанция для свайпа в пикселях
