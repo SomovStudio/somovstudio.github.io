@@ -7,28 +7,28 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "SearchSiteContent",
             description: "Программа для поиска контента на страницах указанных в sitemap.",
             image: "./img/search_site_content_logo.png",
-            url: ""
+            url: "https://gitflic.ru/project/somovstudio/searchsitecontent"
         },
         {
             id: 4,
             name: "SEOScanner",
             description: "Программа сканирования web страниц для проведения SEO-аудита.",
             image: "./img/seo_scanner_logo.png",
-            url: ""
+            url: "https://gitflic.ru/project/somovstudio/seoscanner"
         },
         {
             id: 1,
             name: "TestSitemap",
             description: "Программа предназначена для тестирования ссылок указанных в карте сайта sitemap.",
             image: "./img/test_sitemap_logo2.png",
-            url: ""
+            url: "https://gitflic.ru/project/somovstudio/testsitemap"
         },
         {
             id: 2,
             name: "TestRedirect",
             description: "Программа для тестирования переадресации ссылок.",
             image: "./img/test_redirect_logo.png",
-            url: ""
+            url: "https://gitflic.ru/project/somovstudio/testredirect"
         }
     ];
     
@@ -135,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <a class="products-slider-product-button" href="${product.url}" target="_blank">Подробно</a>
             `;
-
             sliderWrapper.appendChild(productCard);
         });
     }
