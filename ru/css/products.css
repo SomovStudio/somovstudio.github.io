@@ -124,13 +124,13 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #ddd;
+    background-color: #3498db;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .products-slider-indicator.active {
-    background-color: #090E12;
+    background-color: #8608F2;
 }
 
 
