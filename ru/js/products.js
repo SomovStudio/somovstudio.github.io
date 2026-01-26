@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="products-slider-product-description">${product.description}</div>
                     
                 </div>
-                <a class="products-slider-product-button" href="${product.url}" target="_blank">Подробно</a>
+                <a class="products-slider-product-button" href="${product.url}" target="_blank">Скачать</a>
             `;
             sliderWrapper.appendChild(productCard);
         });
