@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     changeDownloadUrl(btnHatDownload1, 'https://github.com/SomovStudio/Hat/releases/download/v1.4.18/Hat-1.4.18.zip');
     changeDownloadUrl(btnHatDownload2, 'https://github.com/SomovStudio/Hat/releases/download/v1.4.18/Hat-1.4.18.zip');
-    changeDownloadUrl(btnPluginDownload, 'https://github.com/SomovStudio/HatPluginMySql/releases/download/1.0.14.17/HatPluginMySql-1.0.14.17.zip');
+    changeDownloadUrl(btnPluginDownload, 'https://github.com/SomovStudio/HatPluginMySql/releases/download/1.0.14.18/HatPluginMySql-1.0.14.18.zip');
 
     function updateHatVersion(version, date) {
         const versionElement = document.getElementById('HatVersion');
