@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     changeDownloadUrl(btnHatDownload1, 'https://gitflic.ru/project/somovstudio/hat/release/f9503159-b301-484b-94f3-6e0a2723a1aa/1988d3ff-66a9-45c4-a34a-5fd621b2a80d/download');
     changeDownloadUrl(btnHatDownload2, 'https://gitflic.ru/project/somovstudio/hat/release/f9503159-b301-484b-94f3-6e0a2723a1aa/1988d3ff-66a9-45c4-a34a-5fd621b2a80d/download');
-    changeDownloadUrl(btnPluginDownload, 'https://gitflic.ru/project/somovstudio/hatpluginmysql/release/86344a37-20b7-4341-8f9c-8611678d2a5a/e9df0e0a-859f-4f29-bbb8-e8667cb11b33/download');
+    changeDownloadUrl(btnPluginDownload, 'https://gitflic.ru/project/somovstudio/hatpluginmysql/release/46c132d5-ac78-4a9f-a26a-f2e9af375dce/6207df58-be74-40a2-9f65-05e09aff1dae/download');
 
     function updateHatVersion(version, date) {
         const versionElement = document.getElementById('HatVersion');
