@@ -29,6 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Программа для тестирования переадресации ссылок.",
             image: "./img/test_redirect_logo.png",
             url: "https://gitflic.ru/project/somovstudio/testredirect"
+        },
+        {
+            id: 5,
+            name: "JenkinsAgentRun",
+            description: "Программа для удобного запуска Jenkins агента.",
+            image: "./img/jenkins_agent_run_logo.png",
+            url: "https://gitflic.ru/project/somovstudio/jenkinsagentrun"
         }
     ];
     
