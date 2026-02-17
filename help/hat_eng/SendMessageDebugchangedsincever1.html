@@ -1,0 +1,122 @@
+﻿
+
+<html>
+	
+<head>
+	<title>SendMessageDebug [changed since version 1.3.0]</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("SendMessageDebugchangedsincever1");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">SendMessageDebug [changed since version 1.3.0]</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Englishversion.html">English version</a> &rsaquo;&rsaquo; <a href="Version13.html">Version 1.3</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Version13.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="SendMessagechangedsinceversion14.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="DefineTestStopchangedsinceversio.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps9"><span class="rvts49">SendMessageDebug</span></p>
+<p class="rvps9"><span class="rvts53">Description</span><span class="rvts51">: the method outputs a debugging message that can be disabled for output to a report and an email</span></p>
+<p class="rvps9"><span class="rvts44">When executed, action is output to the system console if status is FAILED, WARNING, "", null,</span></p>
+<p class="rvps9"><span class="rvts44">otherwise only status and comment are output (without action).</span></p>
+<p class="rvps9"><span class="rvts44"><br/></span></p>
+<p class="rvps9"><span class="rvts53">Syntax</span><span class="rvts51">: SendMessageDebug(string actionRus, string actionEng, string status, &nbsp;string commentRus, string commentEng, int image)</span></p>
+<p class="rvps9"><span class="rvts52"><br/></span></p>
+<p class="rvps9"><span class="rvts53">Example</span><span class="rvts52">:</span></p>
+<p class="rvps9"><span class="rvts44">int step = </span><span class="rvts50">tester.</span><span class="rvts51">SendMessageDebug("действия", </span><span class="rvts50">"action",</span><span class="rvts51"> </span><span class="rvts50">Tester.</span><span class="rvts51">PROCESS, "комментарий", </span><span class="rvts50">"comment",&nbsp;</span><span class="rvts51"> </span><span class="rvts50">Tester.</span><span class="rvts51">IMAGE_STATUS_PROCESS);</span></p>
+<p class="rvps9"><span class="rvts51"><br/></span></p>
+<p class="rvps2"><span class="rvts51"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free Qt Help documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2026 by Somov Studio. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
