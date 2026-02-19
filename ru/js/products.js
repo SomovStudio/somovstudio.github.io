@@ -7,35 +7,40 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "SearchSiteContent",
             description: "Программа для поиска контента на страницах указанных в sitemap.",
             image: "./img/search_site_content_logo.png",
-            url: "https://gitflic.ru/project/somovstudio/searchsitecontent"
+            url: "https://gitflic.ru/project/somovstudio/searchsitecontent",
+            download: "https://gitflic.ru/project/somovstudio/searchsitecontent/release/bbe2546f-9bde-41bd-ac25-d00b803365f4/26199f71-6438-4f8a-bee2-c8fba69bcab2/download"
         },
         {
             id: 2,
             name: "SEOScanner",
             description: "Программа сканирования web страниц для проведения SEO-аудита.",
             image: "./img/seo_scanner_logo.png",
-            url: "https://gitflic.ru/project/somovstudio/seoscanner"
+            url: "https://gitflic.ru/project/somovstudio/seoscanner",
+            download: "https://gitflic.ru/project/somovstudio/seoscanner/release/94ece9de-ad74-4955-8ea5-2e64228c6dbd/92290da3-0d1d-416f-8bfa-44f4833419de/download"
         },
         {
             id: 3,
             name: "TestSitemap",
             description: "Программа предназначена для тестирования ссылок указанных в карте сайта sitemap.",
             image: "./img/test_sitemap_logo2.png",
-            url: "https://gitflic.ru/project/somovstudio/testsitemap"
+            url: "https://gitflic.ru/project/somovstudio/testsitemap",
+            download: "https://gitflic.ru/project/somovstudio/testsitemap/release/1391f08f-e3b2-4181-8b8e-4b1247a108fa/fed5116b-99ce-4a11-8d47-dc0800ba2b48/download"
         },
         {
             id: 4,
             name: "TestRedirect",
             description: "Программа для тестирования переадресации ссылок.",
             image: "./img/test_redirect_logo.png",
-            url: "https://gitflic.ru/project/somovstudio/testredirect"
+            url: "https://gitflic.ru/project/somovstudio/testredirect",
+            download: "https://gitflic.ru/project/somovstudio/testredirect/release/2a7cdc0a-1530-498c-b2ac-7184865ae078/cc6aad76-c850-4e22-84e6-2a4d0d5dc524/download"
         },
         {
             id: 5,
             name: "JenkinsAgentRun",
             description: "Программа для удобного запуска Jenkins агента.",
             image: "./img/jenkins_agent_run_logo.png",
-            url: "https://gitflic.ru/project/somovstudio/jenkinsagentrun"
+            url: "https://gitflic.ru/project/somovstudio/jenkinsagentrun",
+            download: "https://gitflic.ru/project/somovstudio/jenkinsagentrun/release/91ae1a46-a51e-4254-96ef-40a31ace84dd/e9c1582d-e75b-4cf0-a198-814247df9fde/download"
         }
     ];
     
@@ -138,9 +143,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="products-slider-product-info">
                     <h3 class="products-slider-product-title">${product.name}</h3>
                     <div class="products-slider-product-description">${product.description}</div>
-                    
+                    <div class="products-slider-product-link-page"><a href="${product.url}" target="_blank">Подробнее >></a></div>
                 </div>
-                <a class="products-slider-product-button" href="${product.url}" target="_blank">Скачать</a>
+                <a class="products-slider-product-button" href="${product.download}" target="_blank">Скачать</a>
             `;
             sliderWrapper.appendChild(productCard);
         });
