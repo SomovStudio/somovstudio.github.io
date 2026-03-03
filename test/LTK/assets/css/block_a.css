@@ -5,11 +5,6 @@
 }
 
 .block-a-container {
-    width: 100%;
-    /*max-width: 1650px;*/
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -49,7 +44,7 @@
 }
 
 .block-a-tile p {
-    line-height: 1.6;
+    line-height: 3.5vh;
     min-height: 135px;
 }
 
@@ -61,18 +56,3 @@
 .block-a-tile a:hover {
     color: #2E75BA;
 }
-
-/* MOBILE */
-/*
-@media (max-width: 768px) {
-    .block-a-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .block-a-tile {
-        width: 100%;
-        max-width: 400px;
-    }
-}
-*/

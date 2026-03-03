@@ -5,11 +5,6 @@
 }
 
 .block-b-container {
-    width: 100%;
-    /*max-width: 1650px;*/
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -20,9 +15,9 @@
     content: '';
     position: absolute;
     top: 0vh;
-    left: 18vw;
+    left: 20vw;
     width: 40%;   /* Ширина квадрата */
-    height: 55%;  /* Высота квадрата */
+    height: 75%;  /* Высота квадрата */
     background-color: #2E75BA;
     z-index: -1;    /* Отправляем квадрат под картинку */
 }
@@ -40,11 +35,12 @@
 .block-b-text-left {
     position: relative;
     background-color: #FFFFFF;
-    max-width: 35vw;
+    max-width: 100vw;
     max-height: 40vh;
     bottom: 5%;
     padding: 50px;
     z-index: 10;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .block-b-text-left:hover {
@@ -64,9 +60,7 @@
 
 .block-b-text-left p {
     display: block;
-    line-height: 2.0;
-    min-height: 30vh;
-    max-height: 30vh;
+    line-height: 3.5vh;
     overflow: hidden;
 }
 
@@ -88,12 +82,13 @@
 .block-b-text-right {
     position: relative;
     background-color: #FFFFFF;
-    max-width: 35vw;
+    max-width: 100vw;
     max-height: 40vh;
     bottom: 5%;
     left: 0%;
     padding: 50px;
     z-index: 10;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .block-b-text-right:hover {
@@ -113,9 +108,7 @@
 
 .block-b-text-right p {
     display: block;
-    line-height: 2.0;
-    min-height: 30vh;
-    max-height: 30vh;
+    line-height: 3.5vh;
     overflow: hidden;
 }
 
