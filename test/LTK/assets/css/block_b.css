@@ -6,7 +6,8 @@
 
 .block-b-container {
     width: 100%;
-    max-width: 1650px;
+    /*max-width: 1650px;*/
+    max-width: 90%;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
