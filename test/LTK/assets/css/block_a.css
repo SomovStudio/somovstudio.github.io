@@ -1,0 +1,77 @@
+.block-a {
+    margin-top: 100px;
+    padding-top: 50px;
+    position: relative;
+}
+
+.block-a-container {
+    width: 100%;
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.block-a-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0vh;  /* Отрицательное значение - квадрат выступает снизу */
+    right: 4vw;   /* Отрицательное значение - квадрат выступает справа */
+    width: 25%;   /* Ширина квадрата */
+    height: 100%;  /* Высота квадрата */
+    background-color: #86C3F9;
+    z-index: -1;    /* Отправляем квадрат под картинку */
+}
+
+.block-a-tile {
+    flex: 1 1 300px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.block-a-tile:hover {
+    background: #FFFFFF;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 14px 28px rgba(46, 117, 186, 0.25), 0 10px 10px rgba(46, 117, 186, 0.22);
+}
+
+.block-a-tile h2 {
+    margin-bottom: 15px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.block-a-tile p {
+    line-height: 1.6;
+    min-height: 135px;
+}
+
+.block-a-tile a {
+    text-decoration: none;
+    color: #424146;
+}
+
+.block-a-tile a:hover {
+    color: #2E75BA;
+}
+
+/* MOBILE */
+/*
+@media (max-width: 768px) {
+    .block-a-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block-a-tile {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+*/

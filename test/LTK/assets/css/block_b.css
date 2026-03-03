@@ -1,0 +1,128 @@
+.block-b {
+    margin-top: 100px;
+    padding-top: 50px;
+    position: relative;
+}
+
+.block-b-container {
+    width: 100%;
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.block-b-container::after {
+    content: '';
+    position: absolute;
+    top: 0vh;
+    left: 18vw;
+    width: 40%;   /* Ширина квадрата */
+    height: 55%;  /* Высота квадрата */
+    background-color: #2E75BA;
+    z-index: -1;    /* Отправляем квадрат под картинку */
+}
+
+.block-b-side {
+    flex: 1 1 300px;
+    padding: 30px;
+}
+
+/* LEFT  */
+.block-b-image-left {
+    max-width: 100%;
+}
+
+.block-b-text-left {
+    position: relative;
+    background-color: #FFFFFF;
+    max-width: 35vw;
+    max-height: 40vh;
+    bottom: 5%;
+    padding: 50px;
+    z-index: 10;
+}
+
+.block-b-text-left:hover {
+    background: #FFFFFF;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 14px 28px rgba(46, 117, 186, 0.25), 0 10px 10px rgba(46, 117, 186, 0.22);
+}
+
+.block-b-text-left h2{
+    margin-bottom: 15px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 10px
+}
+
+.block-b-text-left p {
+    display: block;
+    line-height: 2.0;
+    min-height: 30vh;
+    max-height: 30vh;
+    overflow: hidden;
+}
+
+.block-b-text-left a {
+    text-decoration: none;
+    color: #424146;
+}
+
+.block-b-text-left a:hover {
+    color: #2E75BA;
+}
+
+/* RIGHT  */
+.block-b-image-right {
+    margin-top: 15%;
+    max-width: 100%;
+}
+
+.block-b-text-right {
+    position: relative;
+    background-color: #FFFFFF;
+    max-width: 35vw;
+    max-height: 40vh;
+    bottom: 5%;
+    left: 0%;
+    padding: 50px;
+    z-index: 10;
+}
+
+.block-b-text-right:hover {
+    background: #FFFFFF;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 14px 28px rgba(46, 117, 186, 0.25), 0 10px 10px rgba(46, 117, 186, 0.22);
+}
+
+.block-b-text-right h2{
+    margin-bottom: 15px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 10px
+}
+
+.block-b-text-right p {
+    display: block;
+    line-height: 2.0;
+    min-height: 30vh;
+    max-height: 30vh;
+    overflow: hidden;
+}
+
+.block-b-text-right a {
+    text-decoration: none;
+    color: #424146;
+}
+
+.block-b-text-right a:hover {
+    color: #2E75BA;
+}
