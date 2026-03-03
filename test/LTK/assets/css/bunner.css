@@ -1,0 +1,160 @@
+/* BUNNER  */
+.bunner {
+	padding-top: 25px;
+}
+
+.bunner-image {
+	position: relative;  /* Нужен, чтобы квадрат позиционировался относительно контейнера */
+	display: inline-block; /* Или block, чтобы контейнер подстраивался под картинку */
+	line-height: 0; /* Убирает лишний отступ под картинкой (если нужно) */
+}
+
+.bunner-image img {
+	display: block; /* Убирает отступы снизу, которые бывают у inline элементов */
+	max-width: 100%; /* Для адаптивности */
+	max-height: 75vh; /* vh % от высоты области просмотра (viewport height) | vw % от ширины окна просмотра (viewport) */
+}
+
+.bunner-image-0::before {
+	content: '';
+	position: absolute;
+	bottom: -5vh;
+	right: -3vw;
+	width: 50vw;
+	height: 65vh;
+	border: 10px solid #2E75BA;
+	z-index: 1;
+}
+
+.bunner-image::after {
+	content: '';
+	position: absolute;
+	bottom: -5vh;  /* Отрицательное значение - квадрат выступает снизу */
+	right: -2vw;   /* Отрицательное значение - квадрат выступает справа */
+	width: 80%;   /* Ширина квадрата */
+	height: 45%;  /* Высота квадрата */
+	background-color: #2E75BA;
+	z-index: -1;    /* Отправляем квадрат под картинку */
+}
+
+.bunner-text {
+	background-color: #FFFFFF;
+	position: absolute;
+	max-width: 30vw;
+	min-height: 50vh;
+	top: 10%;
+	right: -30%;
+	padding: 50px;
+	z-index: 10;
+}
+
+.bunner-text:hover {
+    background: #FFFFFF;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 14px 28px rgba(46, 117, 186, 0.25), 0 10px 10px rgba(46, 117, 186, 0.22);
+}
+
+.bunner-text h1 {
+	font-size: 2.5vw;
+	color: #2E75BA;
+	padding-bottom: 45px;
+}
+
+.bunner-text p {
+	display: block;
+	line-height: 2.0;
+	min-height: 30vh;
+	max-height: 30vh;
+	overflow: hidden;
+}
+
+.bunner-text a {
+    text-decoration: none;
+    color: #424146;
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: 1vw;
+    padding: 20px 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: absolute;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: transparent;
+    border-radius: 0px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.bunner-text a:hover {
+    background-color: #2E75BA;
+    color: #FFFFFF;
+    box-shadow: 0 14px 28px rgba(46, 117, 186, 0.25), 0 10px 10px rgba(46, 117, 186, 0.22);
+    transform: translateY(-3px);
+}
+
+.bunner-pagination {
+	position: absolute;
+	top: 65vh;
+	left: 1vw;
+
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.bunner-pagination button {
+	background: #2E75BA;
+	border: 1px solid #2E75BA;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+
+.bunner-pagination button:hover {
+	background: #86C3F9;
+	border: 1px solid #86C3F9;
+}
+
+.bunner-pagination button:hover svg {
+	color: white !important;
+}
+
+.bunner-pagination button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* Анимация для слайдера */
+.bunner-text h1,
+.bunner-text p,
+.bunner-text a {
+	transition: opacity 0.2s ease-in-out; /* Плавный переход для всех элементов */
+}
+
+.bunner-text h1.fade-out,
+.bunner-text p.fade-out,
+.bunner-text a.fade-out {
+	opacity: 0;
+}
+
+.bunner-text h1.fade-in,
+.bunner-text p.fade-in,
+.bunner-text a.fade-in {
+	opacity: 1;
+}
+
+.bunner-image img {
+	transition: opacity 0.2s ease-in-out;
+}
+
+.bunner-image img.fade-out {
+	/*opacity: 0;*/
+}
+
+.bunner-image img.fade-in {
+	/*opacity: 1;*/
+}

@@ -1,0 +1,50 @@
+/* 
+ * MAIN
+ * цвет - белый (фон): #FFFFFF [255, 255, 255]
+ * цвет - темно серый (текст): #424146
+ * цвет - тёмный синий: #2E75BA [49, 117, 186]
+ * цвет - светлый синий: #86C3F9 [134, 195, 249]
+*/
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    color: #424146;
+    background-color: #FFFFFF;
+    font-family: sans-serif;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    font-size: 1vw;
+    line-height: 2.0;
+    text-align: left;
+}
+
+.container {
+    width: 100%;
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.button {
+    text-decoration: none;
+    color: #424146;
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: 1vw;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: transparent;
+    border-radius: 0px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.button:hover {
+    background-color: #2E75BA;
+    color: #FFFFFF;
+    box-shadow: 0 14px 28px rgba(46, 117, 186, 0.25), 0 10px 10px rgba(46, 117, 186, 0.22);
+    transform: translateY(-3px);
+}
