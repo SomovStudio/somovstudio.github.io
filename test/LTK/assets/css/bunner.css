@@ -13,6 +13,7 @@
 	display: block; /* Убирает отступы снизу, которые бывают у inline элементов */
 	max-width: 100%; /* Для адаптивности */
 	max-height: 75vh; /* vh % от высоты области просмотра (viewport height) | vw % от ширины окна просмотра (viewport) */
+	min-height: 75vh;
 }
 
 .bunner-image-0::before {
@@ -32,7 +33,7 @@
 	bottom: -5vh;  /* Отрицательное значение - квадрат выступает снизу */
 	right: -2vw;   /* Отрицательное значение - квадрат выступает справа */
 	width: 80%;   /* Ширина квадрата */
-	height: 45%;  /* Высота квадрата */
+	height: 85%;  /* Высота квадрата */
 	background-color: #2E75BA;
 	z-index: -1;    /* Отправляем квадрат под картинку */
 }
@@ -40,9 +41,8 @@
 .bunner-text {
 	background-color: #FFFFFF;
 	position: absolute;
-	overflow: hidden;
 	max-width: 30vw;
-	min-height: 50vh;
+	height: auto;
 	top: 10%;
 	right: -30%;
 	padding: 50px;
@@ -66,32 +66,7 @@
 .bunner-text p {
 	display: block;
 	line-height: 3.5vh;
-	min-height: 25vh;
-	max-height: 25vh;
-	overflow: hidden;
-}
-
-.bunner-text a {
-    text-decoration: none;
-    color: #424146;
-    font-weight: 500;
-    white-space: nowrap;
-    font-size: 1vw;
-    padding: 20px 25px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    position: absolute;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    background-color: transparent;
-    border-radius: 0px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.bunner-text a:hover {
-    background-color: #2E75BA;
-    color: #FFFFFF;
-    box-shadow: 0 14px 28px rgba(46, 117, 186, 0.25), 0 10px 10px rgba(46, 117, 186, 0.22);
-    transform: translateY(-3px);
+	height: auto;
 }
 
 .bunner-pagination {
@@ -107,8 +82,8 @@
 .bunner-pagination button {
 	background: #2E75BA;
 	border: 1px solid #2E75BA;
-	width: 40px;
-	height: 40px;
+	width: 2vw;
+	height: 4vh;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -149,14 +124,16 @@
 	opacity: 1;
 }
 
+/*
 .bunner-image img {
 	transition: opacity 0.2s ease-in-out;
 }
 
 .bunner-image img.fade-out {
-	/*opacity: 0;*/
+	opacity: 0;
 }
 
 .bunner-image img.fade-in {
-	/*opacity: 1;*/
+	opacity: 1;
 }
+*/
