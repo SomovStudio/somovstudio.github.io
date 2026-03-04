@@ -28,13 +28,14 @@ body {
 }
 
 .button {
+    display: inline-block;
     text-decoration: none;
     color: #424146;
     font-weight: 500;
     white-space: nowrap;
     font-size: 1vw;
-    padding: 10px 15px;
-    position: relative;
+    padding: 1.5vh 2vw;
+    margin-top: 15px;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     background-color: transparent;
     border-radius: 0px;
