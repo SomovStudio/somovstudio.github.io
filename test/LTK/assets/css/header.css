@@ -4,7 +4,7 @@ header {
   	background-color: #FFFFFF;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 10000;
 }
 
 .header-container {
@@ -56,7 +56,7 @@ header {
 
 .header-mobile-contacts a:hover {
 	text-decoration: none;
-	color: #3498db;
+	color: #2E75BA;
 }
 
 .logo {
@@ -94,7 +94,7 @@ header {
 }
 
 .header-menu nav ul li {
-	margin-left: 55px;
+	margin-left: 4vh;
 }
 
 .header-menu nav ul li a {
@@ -103,11 +103,11 @@ header {
 	font-weight: 500;
 	white-space: nowrap;
 	font-size: 1vw;
-	padding: 10px 15px;
+	padding: 1vh 1.5vw;
 	position: relative;
 	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 	background-color: transparent;
-	border-radius: 0px;
+	border-radius: 0;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
