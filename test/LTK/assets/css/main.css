@@ -27,7 +27,7 @@ body {
     padding: 0 20px;
 }
 
-.button {
+.button-menu {
     display: inline-block;
     text-decoration: none;
     color: #424146;
@@ -42,9 +42,29 @@ body {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.button:hover {
+.button-menu:hover {
     background-color: #2E75BA;
     color: #FFFFFF;
     box-shadow: 0 14px 28px rgba(46, 117, 186, 0.25), 0 10px 10px rgba(46, 117, 186, 0.22);
     transform: translateY(-3px);
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: #424146;
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: 1vw;
+    padding: 1.5vh 2vw;
+    margin-top: 15px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+}
+
+.button:hover {
+    border: 1px solid #EEEEEE;
+    background-color: #EEEEEE;
+    color: #424146;
 }
