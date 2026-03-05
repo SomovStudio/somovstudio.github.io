@@ -7,6 +7,22 @@ header {
     z-index: 10000;
 }
 
+.header-wrapper {
+	display: flex;          /* Включаем flexbox */
+  	justify-content: space-between; /* Раскидываем блоки по краям: левый слева, правый справа */
+  	align-items: center;    /* Выравниваем по вертикали по центру (если блоки разной высоты) */
+  	width: 100%;            /* Растягиваем на всю ширину */
+}
+
+.header-left {
+
+}
+
+.header-right {
+  	gap: 20px;              /* Отступ между элементами внутри правого блока */
+  	align-items: center;
+}
+
 .header-container {
 	display: flex;
 	justify-content: space-between;
@@ -21,7 +37,7 @@ header {
 }
 
 .header-phone-email {
-	padding-top: 5px;
+	padding-bottom: 2vh;
 	text-align: right;
 }
 
@@ -135,6 +151,7 @@ header {
 }
 
 /* MOBILE */
+/*
 @media (max-width: 1024px) {
 	header {
         position: sticky;
@@ -202,3 +219,4 @@ header {
         margin: 10px 0;
     }
 }
+*/
