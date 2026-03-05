@@ -1,6 +1,6 @@
 /* BUNNER  */
 .bunner {
-	padding-top: 25px;
+	padding-top: 1vh;
 }
 
 .bunner-image {
@@ -31,7 +31,7 @@
 	content: '';
 	position: absolute;
 	bottom: -5vh;  /* Отрицательное значение - квадрат выступает снизу */
-	right: -2vw;   /* Отрицательное значение - квадрат выступает справа */
+	right: -10vw;   /* Отрицательное значение - квадрат выступает справа */
 	width: 80%;   /* Ширина квадрата */
 	height: 85%;  /* Высота квадрата */
 	background-color: #2E75BA;
