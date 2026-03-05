@@ -14,8 +14,9 @@ header {
   	width: 100%;            /* Растягиваем на всю ширину */
 }
 
-.header-left {
-
+.header-left img {
+	padding-top: 1vh;
+	padding-left: 1vw;
 }
 
 .header-right {
