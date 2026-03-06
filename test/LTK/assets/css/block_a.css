@@ -11,6 +11,17 @@
     justify-content: center;
 }
 
+.block-a-container::before {
+    content: '';
+    position: absolute;
+    bottom: -2vh;
+    right: 5vw;
+    width: 25%;
+    height: 110%;
+    border: 0.3vh solid #2E75BA;
+    z-index: -1;
+}
+
 .block-a-container::after {
     content: '';
     position: absolute;
@@ -19,7 +30,7 @@
     width: 25%;   /* Ширина квадрата */
     height: 110%;  /* Высота квадрата */
     background-color: #86C3F9;
-    z-index: -1;    /* Отправляем квадрат под картинку */
+    z-index: -2;    /* Отправляем квадрат под картинку */
 }
 
 .block-a-tile {
