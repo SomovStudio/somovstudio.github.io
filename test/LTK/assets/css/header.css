@@ -17,6 +17,7 @@ header {
 .header-left img {
 	padding-top: 1vh;
 	padding-left: 1vw;
+	width: 8vw;
 }
 
 .header-right {

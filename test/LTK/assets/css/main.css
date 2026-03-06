@@ -67,7 +67,7 @@ body {
 }
 
 .button:hover {
-    border: 1px solid #EEEEEE;
+    border: 1px solid rgba(134, 195, 249, 0.3);
     background-color: rgba(134, 195, 249, 0.3);
     color: #424146;
 }
