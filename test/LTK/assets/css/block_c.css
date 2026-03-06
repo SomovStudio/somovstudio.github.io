@@ -1,0 +1,90 @@
+.block-c {
+    margin-top: 5vh;
+    position: relative;
+}
+
+.block-c-container {
+
+}
+
+.block-c-container::after {
+    content: '';
+    position: absolute;
+    top: -10vh;
+    left: 10vw;
+    width: 40%;
+    height: 50%;
+    background-color: #86C3F9;
+    z-index: -2;
+}
+
+.block-c-full {
+
+}
+
+.block-c-image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.block-c-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 2vh;
+    left: 2vh;
+    width: 100%;
+    height: 100%;
+    border: 0.3vh solid #86C3F9;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.block-c-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 0;
+}
+
+.block-c-text {
+    position: absolute;
+    bottom: 5vh;
+    left: 6vw;
+    width: 25%;
+    min-height: 25vh;
+    padding: 30px;
+    z-index: 10;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+
+.block-c-text:hover {
+    background: #FFFFFF;
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(46, 117, 186, 0.25), 0 10px 10px rgba(46, 117, 186, 0.22);
+}
+
+.block-c-text h2 {
+    margin-bottom: 15px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.block-c-text p {
+    display: block;
+    line-height: 3.5vh;
+    overflow: hidden;
+}
+
+.block-c-text a {
+    text-decoration: none;
+    color: #424146;
+}
+
+.block-c-text a:hover {
+    color: #2E75BA;
+}
