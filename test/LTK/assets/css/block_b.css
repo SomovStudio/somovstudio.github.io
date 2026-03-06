@@ -7,8 +7,8 @@
 .block-b-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    gap: 2%; /* Отступ между блоками в процентах */
+    justify-content: space-between; /* Равномерное распределение */
 }
 
 .block-b-container::after {
@@ -16,41 +16,93 @@
     position: absolute;
     top: 0vh;
     left: 20vw;
-    width: 40%;   /* Ширина квадрата */
-    height: 75%;  /* Высота квадрата */
+    width: 40%;
+    height: 75%;
     background-color: #2E75BA;
-    z-index: -1;    /* Отправляем квадрат под картинку */
+    z-index: -2;
 }
 
 .block-b-side {
-    flex: 1 1 300px;
-    padding: 30px;
+    flex: 0 0 48%; /* Блоки занимают ровно 45% ширины контейнера */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.block-b-image-wrapper-left {
+    position: relative;
+    width: 100%; /* Занимает всю ширину родительского блока */
+}
+
+.block-b-image-wrapper-left::before {
+    content: '';
+    position: absolute;
+    top: -2vh;
+    left: 1vw;
+    width: 100%;
+    height: 100%;
+    border: 0.3vh solid #86C3F9;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.block-b-image-wrapper-right {
+    position: relative;
+    width: 100%; /* Занимает всю ширину родительского блока */
+}
+
+.block-b-image-wrapper-right::before {
+    content: '';
+    position: absolute;
+    margin-top: 15%;
+    top: -2vh;
+    left: 1vw;
+    width: 100%;
+    height: 80%;
+    border: 0.3vh solid #86C3F9;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.block-b-image-left,
+.block-b-image-right {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 0;
+}
+
+.block-b-image-right {
+    margin-top: 15%; /* Оставляем отступ для второго изображения */
 }
 
 .block-b-text {
     position: relative;
     background-color: #FFFFFF;
-    max-width: 100vw;
-    max-height: 40vh;
-    bottom: 5%;
-    padding: 50px;
+    width: 100%; /* Занимает всю ширину родительского блока */
+    min-height: 25vh;
+    padding: 30px;
     z-index: 10;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
 .block-b-text:hover {
     background: #FFFFFF;
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     box-shadow: 0 14px 28px rgba(46, 117, 186, 0.25), 0 10px 10px rgba(46, 117, 186, 0.22);
 }
 
-.block-b-text h2{
+.block-b-text h2 {
     margin-bottom: 15px;
     font-size: 1.5vw;
     font-weight: bold;
     position: relative;
-    padding-bottom: 10px
+    padding-bottom: 10px;
 }
 
 .block-b-text p {
@@ -66,13 +118,4 @@
 
 .block-b-text a:hover {
     color: #2E75BA;
-}
-
-.block-b-image-left {
-    max-width: 100%;
-}
-
-.block-b-image-right {
-    margin-top: 15%;
-    max-width: 100%;
 }
