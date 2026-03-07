@@ -155,10 +155,41 @@
     cursor: not-allowed;
 }
 
-.block-f-slider-pagination-prev-btn {
 
+/* FROM SLIDER */
+
+.block-f-slider {
+    cursor: grab;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #2E75BA #f0f0f0;
 }
 
-.block-f-slider-pagination-next-btn {
+.block-f-slider::-webkit-scrollbar {
+    height: 6px;
+}
 
+.block-f-slider::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.block-f-slider::-webkit-scrollbar-thumb {
+    background: #2E75BA;
+    border-radius: 10px;
+}
+
+.block-f-slider::-webkit-scrollbar-thumb:hover {
+    background: #86C3F9;
+}
+
+.block-f-slider-item.active {
+    transform: scale(0.98);
+    opacity: 0.9;
+}
+
+/* Стиль для активного элемента слайдера */
+.block-f-slider-item.current {
+    border: 2px solid #2E75BA;
 }
