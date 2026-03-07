@@ -53,7 +53,6 @@
 .bunner-text:hover {
     background: #FFFFFF;
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     box-shadow: 0 14px 28px rgba(46, 117, 186, 0.25), 0 10px 10px rgba(46, 117, 186, 0.22);
 }
 
