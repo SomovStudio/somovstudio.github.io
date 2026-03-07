@@ -29,3 +29,20 @@
     display: block;
     margin: 0 auto;
 }
+
+.block-e-video::before {
+    content: '';
+    position: absolute;
+    top: -2vh;
+    left: 7vw;
+    width: 84%;
+    height: 110%;
+    border: 0.3vh solid #86C3F9;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.block-d-text {
+    text-align: center;
+    color: #86C3F9;
+}
