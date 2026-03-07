@@ -143,6 +143,15 @@
     font-weight: bold;
     line-height: 1.5;
     margin-top: 8vh;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.block-d-text-right h2:hover {
+    background: #FFFFFF;
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(46, 117, 186, 0.25), 0 10px 10px rgba(46, 117, 186, 0.22);
 }
 
 .block-d-text-right a {

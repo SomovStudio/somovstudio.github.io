@@ -1,0 +1,31 @@
+.block-e {
+    margin-top: 10vh;
+    position: relative;
+}
+
+.block-e-container {
+
+}
+
+.block-e-container::after {
+    content: '';
+    position: absolute;
+    top: 10vh;
+    left: 0vw;
+    width: 100%;
+    height: 100%;
+    background-color: #2E75BA;
+    z-index: -2;
+}
+
+.block-e-video {
+    position: relative;
+    width: 100%;
+}
+
+.block-e-video iframe {
+    width: 70vw;
+    height: 70vh;
+    display: block;
+    margin: 0 auto;
+}
