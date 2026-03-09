@@ -219,7 +219,6 @@
     .bunner-pagination button {
         width: 45px;
         height: 45px;
-        border-radius: 50%;
     }
     
     /* BLOCK A */
@@ -478,7 +477,6 @@
         width: 45px;
         height: 45px;
         position: relative;
-        border-radius: 50%;
     }
     
     /* BLOCK G */
@@ -540,7 +538,7 @@
     }
     
     .footer-column {
-        text-align: left;
+        text-align: center;
     }
     
     .footer-column h3 {
@@ -561,6 +559,7 @@
     
     .footer-column img {
         max-width: 150px;
+        margin: 0 auto;
     }
     
     .copyright {
