@@ -1,6 +1,8 @@
 /* BUNNER  */
 .bunner {
 	padding-top: 1vh;
+	padding-bottom: 10vh;
+	margin-bottom: 10vh;
 }
 
 .bunner-image {
