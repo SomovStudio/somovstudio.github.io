@@ -12,28 +12,43 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         let currentIndex = 0;
-        const itemWidth = sliderItems[0].offsetWidth + parseFloat(getComputedStyle(sliderItems[0]).marginLeft) * 2;
-        const visibleItems = Math.floor(sliderContainer.offsetWidth / itemWidth);
-        const maxIndex = Math.max(0, sliderItems.length - visibleItems);
+        let isScrolling = false;
         
-        // Функция для обновления позиции слайдера и главного изображения
-        function updateSlider() {
-            // Прокрутка слайдера
-            const scrollAmount = currentIndex * itemWidth;
+        // Функция для расчета ширины элемента с учетом отступов
+        function getItemWidth() {
+            const firstItem = sliderItems[0];
+            const style = window.getComputedStyle(firstItem);
+            const marginLeft = parseFloat(style.marginLeft) || 0;
+            const marginRight = parseFloat(style.marginRight) || 0;
+            return firstItem.offsetWidth + marginLeft + marginRight;
+        }
+        
+        // Функция для обновления позиции слайдера
+        function scrollToIndex(index) {
+            if (isScrolling) return;
+            
+            isScrolling = true;
+            const itemWidth = getItemWidth();
+            const scrollAmount = index * itemWidth;
+            
             sliderContainer.scrollTo({
                 left: scrollAmount,
                 behavior: 'smooth'
             });
             
-            // Обновление главного изображения
-            const currentSlideImage = sliderItems[currentIndex].querySelector('img');
+            // Сбрасываем флаг после завершения прокрутки
+            setTimeout(() => {
+                isScrolling = false;
+            }, 300);
+        }
+        
+        // Функция для обновления главного изображения
+        function updateMainImage(index) {
+            const currentSlideImage = sliderItems[index].querySelector('img');
             if (currentSlideImage) {
                 mainImage.src = currentSlideImage.src;
                 mainImage.alt = currentSlideImage.alt || 'ЛТК Арена';
             }
-            
-            // Обновление состояния кнопок
-            updateButtons();
         }
         
         // Функция для обновления состояния кнопок
@@ -42,8 +57,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 prevBtn.disabled = currentIndex <= 0;
             }
             if (nextBtn) {
-                nextBtn.disabled = currentIndex >= maxIndex;
+                nextBtn.disabled = currentIndex >= sliderItems.length - 1;
             }
+        }
+        
+        // Функция для определения текущего индекса на основе прокрутки
+        function getCurrentIndexFromScroll() {
+            const itemWidth = getItemWidth();
+            const scrollLeft = sliderContainer.scrollLeft;
+            const approximateIndex = Math.round(scrollLeft / itemWidth);
+            
+            // Убеждаемся, что индекс в пределах допустимого диапазона
+            return Math.min(Math.max(approximateIndex, 0), sliderItems.length - 1);
         }
         
         // Обработчик для кнопки "назад"
@@ -51,7 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
             prevBtn.addEventListener('click', function() {
                 if (currentIndex > 0) {
                     currentIndex--;
-                    updateSlider();
+                    updateMainImage(currentIndex);
+                    scrollToIndex(currentIndex);
+                    updateButtons();
                 }
             });
         }
@@ -59,44 +86,56 @@ document.addEventListener('DOMContentLoaded', function() {
         // Обработчик для кнопки "вперед"
         if (nextBtn) {
             nextBtn.addEventListener('click', function() {
-                if (currentIndex < maxIndex) {
+                if (currentIndex < sliderItems.length - 1) {
                     currentIndex++;
-                    updateSlider();
+                    updateMainImage(currentIndex);
+                    scrollToIndex(currentIndex);
+                    updateButtons();
                 }
             });
         }
         
-        // Клик по элементу слайдера для быстрого переключения
+        // Клик по элементу слайдера
         sliderItems.forEach((item, index) => {
             item.addEventListener('click', function() {
-                if (index < maxIndex || index === maxIndex) {
-                    currentIndex = index;
-                    updateSlider();
-                }
+                currentIndex = index;
+                updateMainImage(currentIndex);
+                scrollToIndex(currentIndex);
+                updateButtons();
             });
             
-            // Добавляем стиль курсора для указания кликабельности
             item.style.cursor = 'pointer';
         });
         
-        // Инициализация начального состояния
-        updateButtons();
-        
-        // Обработка изменения размера окна для пересчета visibleItems и maxIndex
-        window.addEventListener('resize', function() {
-            const newItemWidth = sliderItems[0].offsetWidth + parseFloat(getComputedStyle(sliderItems[0]).marginLeft) * 2;
-            const newVisibleItems = Math.floor(sliderContainer.offsetWidth / newItemWidth);
-            const newMaxIndex = Math.max(0, sliderItems.length - newVisibleItems);
+        // Отслеживание прокрутки для синхронизации
+        let scrollTimeout;
+        sliderContainer.addEventListener('scroll', function() {
+            if (isScrolling) return;
             
-            // Корректировка currentIndex если он стал больше maxIndex после изменения размера
-            if (currentIndex > newMaxIndex) {
-                currentIndex = newMaxIndex;
-            }
-            
-            updateSlider();
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const newIndex = getCurrentIndexFromScroll();
+                if (newIndex !== currentIndex) {
+                    currentIndex = newIndex;
+                    updateMainImage(currentIndex);
+                    updateButtons();
+                }
+            }, 100);
         });
+        
+        // Обработка изменения размера окна
+        window.addEventListener('resize', function() {
+            // Перенастраиваем позицию после изменения размера
+            setTimeout(() => {
+                scrollToIndex(currentIndex);
+            }, 100);
+        });
+        
+        // Инициализация
+        updateMainImage(currentIndex);
+        scrollToIndex(currentIndex);
+        updateButtons();
     }
     
     initBlockFSlider();
 });
-
