@@ -30,6 +30,14 @@
     margin: 0 auto;
 }
 
+.block-e-video video {
+    width: 70vw;
+    height: 70vh;
+    display: block;
+    margin: 0 auto;
+    background-color: black;
+}
+
 .block-e-video::before {
     content: '';
     position: absolute;
