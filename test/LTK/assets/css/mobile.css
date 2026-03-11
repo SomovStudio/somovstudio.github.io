@@ -351,8 +351,7 @@
         position: relative;
         bottom: auto;
         left: auto;
-        width: 90%;
-        margin: -40px auto 0;
+        width: 100%;
         padding: 25px;
         background: #FFFFFF;
         box-shadow: 0 5px 15px rgba(46, 117, 186, 0.1);
@@ -432,6 +431,11 @@
     .block-e-video iframe {
         width: 100%;
         height: 250px;
+    }
+
+    .block-e-video video {
+        width: 100%;
+        height: 60%;
     }
     
     .block-d-text {
@@ -596,7 +600,7 @@
     
     .copyright {
         font-size: 12px;
-        text-align: left;
+        text-align: center;
     }
 }
 
@@ -663,6 +667,11 @@
     
     .block-e-video iframe {
         height: 200px;
+    }
+
+    .block-e-video video {
+        width: 100%;
+        height: 60%
     }
     
     .block-f-slider-item {
@@ -756,6 +765,11 @@
     
     .block-e-video iframe {
         height: 180px;
+    }
+
+    .block-e-video video {
+        width: 100%;
+        height: 60%;
     }
     
     .block-f-slider-item {
