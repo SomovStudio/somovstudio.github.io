@@ -214,6 +214,7 @@
         min-height: auto;
         max-height: 400px;
         width: 100%;
+        max-width: 100%;
         object-fit: cover;
     }
     
@@ -241,7 +242,7 @@
     
     .bunner-pagination {
         position: relative;
-        top: auto;
+        bottom: auto;
         left: auto;
         justify-content: center;
         gap: 15px;
