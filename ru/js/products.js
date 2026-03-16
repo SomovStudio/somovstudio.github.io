@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Программа предназначена для тестирования ссылок указанных в карте сайта sitemap.",
             image: "./img/test_sitemap_logo2.png",
             url: "https://gitflic.ru/project/somovstudio/testsitemap",
-            download: "https://gitflic.ru/project/somovstudio/testsitemap/release/1391f08f-e3b2-4181-8b8e-4b1247a108fa/fed5116b-99ce-4a11-8d47-dc0800ba2b48/download"
+            download: "https://gitflic.ru/project/somovstudio/testsitemap/release/fbfa2d4e-d2df-4af9-a052-67072ee7e518/4cbc29d3-c717-4fce-819a-7e1895323891/download"
         },
         {
             id: 4,
