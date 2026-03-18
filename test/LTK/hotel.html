@@ -10,9 +10,11 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/header.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/page.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/block_h.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/mobile.css">
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/block_h.js"></script>
     <script src="./assets/js/mobile.js"></script>
 </head>
 <body>
@@ -78,15 +80,46 @@
 
     <section class="page">
         <div class="container">
-            <h2>О предприятии</h2>
+            <h2>Гостиница</h2>
             <div class="page-content">
-                <p>Полное наименование: Общество с ограниченной ответственностью «РОКАДА»</p>
-                <p>Краткое наименование: ООО«РОКАДА»</p>
-                <p>Юридический адрес: 291057, Российская Федерация, Луганская Народная Республика, г.о. город Луганск, город Луганск, кв-л Солнечный, д. 4А</p>
-                <p>Почтовый адрес: 291011, Российская Федерация, Луганская Народная Республика, г.о. город Луганск, город Луганск, ул. Советская, д. 92-В, офис 41</p>
-                <p>ИНН / КПП: 9403000539/940301001</p>
-                <p>ОГРН: 1229400000950</p>
-                <p>Руководитель (должность, ФИО): Директор Еремина Галина Григорьевна</p>
+                <p>По согласованию с организаторами спортивных мероприятий есть возможность размещения спортсменов в гостинице спорткомплекса.</p>
+                <div class="block-h">
+                    <div class="gallery-container">
+                        <!-- Плитка: 3 горизонтальных (landscape) + 2 вертикальных (portrait) -->
+                        <div class="tile-grid">
+                            <!-- 1-я горизонтальная картинка -->
+                            <div class="tile tile--landscape" data-src="./assets/img/hotel/photo_01.jpg" data-caption="Гостиница">
+                                <img src="./assets/img/hotel/photo_01.jpg" alt="Гостиница" loading="lazy">
+                            </div>
+                            <!-- 2-я горизонтальная картинка -->
+                            <div class="tile tile--landscape" data-src="./assets/img/hotel/photo_02.jpg" data-caption="Гостиница">
+                                <img src="./assets/img/hotel/photo_02.jpg" alt="Гостиница" loading="lazy">
+                            </div>
+                            <!-- 3-я горизонтальная картинка -->
+                            <div class="tile tile--landscape" data-src="./assets/img/hotel/photo_03.jpg" data-caption="Гостиница">
+                                <img src="./assets/img/hotel/photo_03.jpg" alt="Гостиница" loading="lazy">
+                            </div>
+
+                            <!-- 1-я вертикальная картинка -->
+                            <div class="tile tile--portrait" data-src="./assets/img/hotel/photo_04.jpg" data-caption="Гостиница">
+                                <img src="./assets/img/hotel/photo_04.jpg" alt="Гостиница" loading="lazy">
+                            </div>
+                            <!-- 2-я вертикальная картинка -->
+                            <div class="tile tile--portrait" data-src="./assets/img/hotel/photo_05.jpg" data-caption="Гостиница">
+                                <img src="./assets/img/hotel/photo_05.jpg" alt="Гостиница" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Лайтбокс (скрыт по умолчанию) -->
+                    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="просмотр изображения">
+                        <div class="lightbox__content">
+                            <button class="lightbox__close" id="lightboxClose" aria-label="Закрыть">&times;</button>
+                            <img class="lightbox__img" id="lightboxImg" src="" alt="">
+                        </div>
+                        <div class="lightbox-caption" id="lightboxCaption"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -142,4 +175,5 @@
             </div>
         </div>
     </footer>
+
  </body>

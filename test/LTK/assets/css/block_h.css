@@ -1,0 +1,224 @@
+.block-h {
+    padding-top: 5vh;
+    position: relative;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Сетка плиток */
+.tile-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки для горизонтальных карточек */
+    grid-auto-rows: minmax(180px, auto);
+    margin-bottom: 20px;
+}
+
+/* Общие стили для плиток */
+.tile {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: #e0e0e0; /* фон пока грузится */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    aspect-ratio: 1 / 1; /* базовый квадрат, но ниже переопределим для конкретных */
+}
+
+.tile:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Изображения внутри плитки занимают всё пространство */
+.tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* кадрирование, чтобы заполнить плитку без искажений */
+    display: block;
+    transition: opacity 0.2s;
+    pointer-events: none; /* чтобы клик всегда ловился на плитке, а не на img */
+}
+
+/* ----- НАСТРОЙКИ ФОРМ ПЛИТОК ----- */
+/* Три горизонтальные (соотношение сторон 16:9) */
+.tile--landscape {
+    aspect-ratio: 16 / 9;
+    grid-column: span 1; /* по умолчанию одна колонка */
+}
+
+/* Две вертикальные (соотношение 3:4) */
+.tile--portrait {
+    aspect-ratio: 3 / 4;
+    grid-column: span 1;
+}
+
+/* Чтобы вертикальные были заметнее на десктопе, можно сделать их чуть выше,
+   но оставим как есть — они займут 3/4 ширины колонки */
+
+/* Для планшетов и мобильных: чуть подправим отступы */
+@media (max-width: 768px) {
+    .tile-grid {
+        gap: 12px;
+        grid-auto-rows: minmax(150px, auto);
+    }
+}
+
+@media (max-width: 480px) {
+    .tile-grid {
+        gap: 8px;
+    }
+    .tile {
+        border-radius: 16px;
+    }
+}
+
+/* Стили для лайтбокса (просмотр при клике) */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 10001;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox__content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox__img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: #111; /* для изображений с прозрачностью */
+    user-select: none;
+}
+
+.lightbox__close {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background: rgba(30, 30, 30, 0.8);
+    color: white;
+    border: none;
+    font-size: 36px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: background 0.2s;
+    line-height: 1;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.lightbox__close:hover {
+    background: rgba(255, 70, 70, 0.9);
+}
+
+.lightbox__close:active {
+    transform: scale(0.95);
+}
+
+/* Затемнение фона и индикация */
+.lightbox-caption {
+    color: #ccc;
+    margin-top: 16px;
+    font-size: 16px;
+    max-width: 80%;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+    padding: 6px 20px;
+    border-radius: 40px;
+    backdrop-filter: blur(2px);
+}
+
+/* Десктоп ховер */
+@media (hover: hover) {
+    .tile:hover {
+        transform: scale(1.02);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+    }
+}
+
+/* ОПЦИОНАЛЬНО: пометим для понимания, какие плитки горизонтальные, какие вертикальные */
+/* Просто визуальная метка в углу (можно убрать) */
+.tile::after {
+    content: "⤢"; /* символ размера, для интереса */
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 30px;
+    backdrop-filter: blur(2px);
+    opacity: 0.7;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.tile--portrait::after {
+    content: "↕️"; /* вертикальная иконка */
+}
+.tile--landscape::after {
+    content: "↔️"; /* горизонтальная */
+}
+
+/* на мобильных метки можно скрыть при недостатке места, но пусть будут */
+@media (max-width: 480px) {
+    .tile::after {
+        font-size: 12px;
+        padding: 2px 6px;
+        bottom: 4px;
+        right: 5px;
+    }
+}
+
+/* Кнопка закрытия на мобильных ближе */
+@media (max-width: 600px) {
+    .lightbox__close {
+        top: 10px;
+        right: 10px;
+        background: rgba(0,0,0,0.7);
+        width: 44px;
+        height: 44px;
+        font-size: 32px;
+    }
+    .lightbox-caption {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}

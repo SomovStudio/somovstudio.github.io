@@ -5,6 +5,7 @@
 
 .page-content {
     min-height: 40vh;
+    padding-top: 4vh;
 }
 
 .page-two-sides {
@@ -24,10 +25,38 @@
     width: 100%;
 }
 
+.page-map {
+    padding: 2vh;
+}
+
 .page h2 {
     font-size: 2.0vw;
-    color: #2E75BA;
-    padding-bottom: 15px;
+    color: #FFFFFF;
+    padding-top: 0.2vw;
+    padding-left: 1vh;
+    min-height: 10vh;
+}
+
+.page h2::before {
+    content: '';
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    width: 25vw;
+    height: 8vh;
+    border: 0.3vh solid #2E75BA;
+    z-index: -1;
+}
+
+.page h2::after {
+    content: '';
+    position: absolute;
+    top: 6vh;
+    left: 4vw;
+    width: 25vw;
+    height: 8vh;
+    background-color: #86C3F9;
+    z-index: -2;
 }
 
 .page p {
@@ -36,6 +65,10 @@
     padding-top: 2vh;
     line-height: 3.5vh;
     color: #424146;
+}
+
+.page img {
+    width: 100%;
 }
 
 .sport-list-compact {
@@ -96,10 +129,26 @@
 @media screen and (max-width: 1024px) {
     .page h2 {
         font-size: 32px !important;
+        padding-top: 2.0vw;
+        padding-left: 4.5vh;
+    }
+
+    .page h2::before {
+        width: 55vw;
+        height: 6vh;
+    }
+
+    .page h2::after {
+        width: 55vw;
+        height: 6vh;
     }
 
     .page p {
         font-size: 24px !important;
+    }
+
+    .page-two-sides {
+        display: block;
     }
 
     .sport-list-compact li {
@@ -110,10 +159,26 @@
 @media screen and (max-width: 768px) {
     .page h2 {
         font-size: 28px !important;
+        padding-top: 2.0vw;
+        padding-left: 3.5vh;
+    }
+
+    .page h2::before {
+        width: 55vw;
+        height: 6vh;
+    }
+
+    .page h2::after {
+        width: 55vw;
+        height: 6vh;
     }
 
     .page p {
         font-size: 20px !important;
+    }
+
+    .page-two-sides {
+        display: block;
     }
 
     .sport-list-compact li {
@@ -124,6 +189,18 @@
 @media screen and (max-width: 480px) {
     .page h2 {
         font-size: 24px !important;
+        padding-top: 2.5vw;
+        padding-left: 2.0vh;
+    }
+
+    .page h2::before {
+        width: 55vw;
+        height: 6vh;
+    }
+
+    .page h2::after {
+        width: 55vw;
+        height: 6vh;
     }
 
     .page p {
