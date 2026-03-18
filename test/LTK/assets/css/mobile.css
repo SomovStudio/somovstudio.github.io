@@ -217,6 +217,10 @@
         height: 18px;
         fill: #2E75BA;
     }
+
+    .header-mobile-contacts h3 {
+        font-size: 16px;
+    }
     
     /* BUNNER */
     .bunner {
@@ -598,12 +602,12 @@
     }
     
     .footer-column h3 {
-        font-size: 18px;
+        font-size: 26px;
         margin-bottom: 15px;
     }
     
     .footer-column ul li {
-        font-size: 14px;
+        font-size: 18px;
         margin-bottom: 8px;
     }
     
@@ -703,11 +707,11 @@
     }
     
     .footer-column h3 {
-        font-size: 16px;
+        font-size: 20px;
     }
     
     .footer-column ul li {
-        font-size: 13px;
+        font-size: 16px;
     }
 }
 
@@ -801,7 +805,7 @@
     }
     
     .footer-column ul li {
-        font-size: 12px;
+        font-size: 14px;
     }
     
     .copyright {
