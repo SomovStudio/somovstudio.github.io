@@ -30,20 +30,20 @@
 }
 
 .page h2 {
+    position: relative;
     font-size: 2.0vw;
     color: #FFFFFF;
-    padding-top: 0.2vh; /* height - высота */
-    padding-left: 2vw; /* width - ширина */
-    min-height: 10vh;
+    padding: 5px;
+    text-indent: 1.0em;
 }
 
 .page h2::before {
     content: '';
     position: absolute;
-    top: 5vh;
-    left: 6vw;
+    top: 1.5vh;
+    left: 1vw;
     width: 25vw;
-    height: 8vh;
+    height: 100%;
     border: 0.3vh solid #2E75BA;
     z-index: -1;
 }
@@ -51,10 +51,10 @@
 .page h2::after {
     content: '';
     position: absolute;
-    top: 6vh;
-    left: 5vw;
+    top: 0;
+    left: 0;
     width: 25vw;
-    height: 8vh;
+    height: 100%;
     background-color: #86C3F9;
     z-index: -2;
 }
@@ -137,11 +137,13 @@
     .page h2::before {
         width: 55vw;
         height: 6vh;
+        left: 4.5vw;
     }
 
     .page h2::after {
         width: 55vw;
         height: 6vh;
+        left: 2.5vw;
     }
 
     .page p {
@@ -168,11 +170,13 @@
     .page h2::before {
         width: 55vw;
         height: 6vh;
+        left: 4.5vw;
     }
 
     .page h2::after {
         width: 55vw;
         height: 6vh;
+        left: 2.5vw;
     }
 
     .page p {
@@ -197,13 +201,15 @@
     }
 
     .page h2::before {
-        width: 55vw;
+        width: 56vw;
         height: 6vh;
+        left: 5.5vw;
     }
 
     .page h2::after {
         width: 55vw;
         height: 6vh;
+        left: 3.5vw;
     }
 
     .page p {
@@ -228,7 +234,6 @@
 
     .page h2 {
         padding-top: 0;
-        padding-left: 5vw;
     }
 
     .page h2::before {
@@ -244,6 +249,10 @@
 
 /* Для очень маленьких экранов в ландшафте */
 @media screen and (max-width: 1000px) and (orientation: landscape) {
+    .page h2 {
+        padding-top: 0;
+    }
+
     .page h2::before {
         width: 55vw;
         height: 12vh;
