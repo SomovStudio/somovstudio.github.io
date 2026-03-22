@@ -32,8 +32,8 @@
 .page h2 {
     font-size: 2.0vw;
     color: #FFFFFF;
-    padding-top: 0.2vw;
-    padding-left: 5vh;
+    padding-top: 0.2vh; /* height - высота */
+    padding-left: 2vw; /* width - ширина */
     min-height: 10vh;
 }
 
@@ -217,4 +217,58 @@
     .sport-list-compact li {
         font-size: 14px;
     }
+}
+
+/* Горизонтальная ориентация (ландшафт) для мобильных устройств */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .page-content {
+        min-height: 25vh;
+        padding-top: 8vh;
+    }
+
+    .page h2 {
+        padding-top: 0;
+        padding-left: 5vw;
+    }
+
+    .page h2::before {
+        width: 55vw;
+        height: 6vh;
+    }
+
+    .page h2::after {
+        width: 55vw;
+        height: 6vh;
+    }
+}
+
+/* Для очень маленьких экранов в ландшафте */
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+    .page h2::before {
+        width: 55vw;
+        height: 12vh;
+    }
+
+    .page h2::after {
+        width: 55vw;
+        height: 12vh;
+    }
+
+    .page p {
+        line-height: 8vh;
+    }
+
+    .sport-list-compact li {
+        font-size: 18px;
+    }
+}
+
+/* Для очень маленьких экранов в ландшафте */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    
+}
+
+/* Для iPhone и подобных устройств с небольшой высотой в ландшафте */
+@media screen and (max-height: 450px) and (orientation: landscape) {
+    
 }
