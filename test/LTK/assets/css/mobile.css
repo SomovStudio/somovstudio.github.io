@@ -497,7 +497,7 @@
     .block-f-text-right {
         position: relative;
         top: 0;
-        max-width: 100%;
+        width: 100%;
         padding: 25px;
         margin-bottom: 20px;
         background: #FFFFFF;
@@ -560,7 +560,7 @@
     .block-g-text-left {
         position: relative;
         top: 0;
-        max-width: 100%;
+        width: 100%;
         padding: 25px;
         background: #FFFFFF;
         box-shadow: 0 5px 15px rgba(46, 117, 186, 0.1);
@@ -810,5 +810,137 @@
     
     .copyright {
         font-size: 10px;
+    }
+}
+
+/* Горизонтальная ориентация (ландшафт) для мобильных устройств */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* Фикс для баннера - предотвращаем наложение на следующий блок */
+    .bunner {
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    
+    .bunner-image {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bunner-image img {
+        max-height: 280px;
+        min-height: 200px;
+        object-fit: cover;
+    }
+    
+    .bunner-text {
+        position: relative;
+        margin: 15px 15px 0 15px;
+        padding: 15px 20px;
+        background: #FFFFFF;
+        box-shadow: 0 5px 20px rgba(46, 117, 186, 0.15);
+        z-index: 2;
+    }
+    
+    .bunner-text h1 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    
+    .bunner-text p {
+        font-size: 13px;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+    
+    .bunner-text .button {
+        padding: 8px 20px;
+        font-size: 13px;
+        display: inline-block;
+    }
+    
+    .bunner-pagination {
+        position: relative;
+        margin: 10px 0 15px 0;
+        justify-content: center;
+    }
+    
+    /* Увеличиваем отступ перед следующим блоком */
+    .block-a {
+        margin-top: 0;
+        clear: both;
+    }
+    
+    .block-a-container {
+        margin-top: 0;
+    }
+}
+
+/* Для очень маленьких экранов в ландшафте */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .bunner-image img {
+        max-height: 220px;
+        min-height: 160px;
+    }
+    
+    .bunner-text {
+        margin: 10px 10px 0 10px;
+        padding: 12px 15px;
+    }
+    
+    .bunner-text h1 {
+        font-size: 20px;
+    }
+    
+    .bunner-text p {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .bunner-pagination {
+        margin: 5px 0 10px 0;
+    }
+}
+
+/* Для iPhone и подобных устройств с небольшой высотой в ландшафте */
+@media screen and (max-height: 450px) and (orientation: landscape) {
+    .bunner {
+        margin-bottom: 10px;
+        min-height: 400px;
+    }
+    
+    .bunner-image img {
+        max-height: 180px;
+        min-height: 140px;
+    }
+    
+    .bunner-text {
+        margin: 8px 8px 0 8px;
+        padding: 8px 12px;
+    }
+    
+    .bunner-text h1 {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+    
+    .bunner-text p {
+        font-size: 11px;
+        margin-bottom: 6px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .bunner-text .button {
+        padding: 5px 15px;
+        font-size: 11px;
+    }
+    
+    .bunner-pagination button {
+        width: 30px;
+        height: 30px;
     }
 }
