@@ -1,0 +1,97 @@
+.page-block-b {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.page-block-b-list-compact {
+    list-style: none;
+    padding: 0;
+    /*margin: 4vh 0;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40vh, 1fr));
+    gap: 12px;
+}
+
+.page-block-b-list-compact li {
+    padding: 14px 18px;
+    background: #FFFFFF;
+    border: 1px solid #E2E9F0;
+    font-size: 1.0vw;
+    font-weight: 500;
+    color: #1F3A5F;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(46, 117, 186, 0.03);
+    transition: all 0.2s;
+}
+
+.page-block-b-list-compact li .page-block-b-list-number {
+    color: #86C3F9;
+    font-weight: bold;
+    margin-right: 12px;
+    font-size: 2vh;
+    min-width: 24px;
+}
+
+.page-block-b-list-compact li .page-block-b-list-name {
+    flex: 1;
+}
+
+.page-block-b-list-compact li .page-block-b-list-dot {
+    width: 8px;
+    height: 8px;
+    background: #2E75BA;
+    border-radius: 2px;
+    margin-left: 10px;
+    opacity: 0.3;
+    transition: all 0.2s;
+}
+
+.page-block-b-list-compact li:hover {
+    border-color: #2E75BA;
+    box-shadow: 0 5px 15px rgba(46, 117, 186, 0.12);
+    transform: translateY(-2px);
+}
+
+.page-block-b-list-compact li:hover .page-block-b-list-dot {
+    opacity: 1;
+    background: #86C3F9;
+}
+
+@media screen and (max-width: 1024px) {
+    .page-block-b-list-compact li {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-block-b-list-compact li {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-block-b-list-compact li {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .page-block-b-list-compact {
+        grid-template-columns: repeat(auto-fill, minmax(80vh, 1fr));
+    }
+}
+
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+    .page-block-b-list-compact li {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    
+}
+
+@media screen and (max-height: 450px) and (orientation: landscape) {
+    
+}
