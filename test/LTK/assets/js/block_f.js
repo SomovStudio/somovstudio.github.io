@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    function initBlockFSlider() {
-        const sliderContainer = document.querySelector('.block-f-slider');
-        const sliderItems = document.querySelectorAll('.block-f-slider-item');
-        const prevBtn = document.querySelector('.block-f-slider-pagination-prev-btn');
-        const nextBtn = document.querySelector('.block-f-slider-pagination-next-btn');
-        const mainImage = document.querySelector('.block-f-image-left');
+    function initBlockFSlider(blockFContainer) {
+        const sliderContainer = blockFContainer.querySelector('.block-f-slider');
+        const sliderItems = blockFContainer.querySelectorAll('.block-f-slider-item');
+        const prevBtn = blockFContainer.querySelector('.block-f-slider-pagination-prev-btn');
+        const nextBtn = blockFContainer.querySelector('.block-f-slider-pagination-next-btn');
+        const mainImage = blockFContainer.querySelector('.block-f-image-left');
         
         if (!sliderContainer || !sliderItems.length || !prevBtn || !nextBtn || !mainImage) {
-            console.log('Элементы слайдера block-f не найдены');
+            console.log('Элементы слайдера block-f не найдены в одном из блоков');
             return;
         }
         
@@ -73,7 +73,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Обработчик для кнопки "назад"
         if (prevBtn) {
-            prevBtn.addEventListener('click', function() {
+            // Удаляем старый обработчик, чтобы не дублировать
+            const newPrevBtn = prevBtn.cloneNode(true);
+            prevBtn.parentNode.replaceChild(newPrevBtn, prevBtn);
+            
+            newPrevBtn.addEventListener('click', function() {
                 if (currentIndex > 0) {
                     currentIndex--;
                     updateMainImage(currentIndex);
@@ -85,7 +89,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Обработчик для кнопки "вперед"
         if (nextBtn) {
-            nextBtn.addEventListener('click', function() {
+            // Удаляем старый обработчик, чтобы не дублировать
+            const newNextBtn = nextBtn.cloneNode(true);
+            nextBtn.parentNode.replaceChild(newNextBtn, nextBtn);
+            
+            newNextBtn.addEventListener('click', function() {
                 if (currentIndex < sliderItems.length - 1) {
                     currentIndex++;
                     updateMainImage(currentIndex);
@@ -94,6 +102,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
+        
+        // Получаем обновленные ссылки на кнопки
+        const updatedPrevBtn = blockFContainer.querySelector('.block-f-slider-pagination-prev-btn');
+        const updatedNextBtn = blockFContainer.querySelector('.block-f-slider-pagination-next-btn');
         
         // Клик по элементу слайдера
         sliderItems.forEach((item, index) => {
@@ -137,5 +149,9 @@ document.addEventListener('DOMContentLoaded', function() {
         updateButtons();
     }
     
-    initBlockFSlider();
+    // Находим все блоки block-f и инициализируем каждый
+    const allBlockFContainers = document.querySelectorAll('.block-f');
+    allBlockFContainers.forEach(function(blockFContainer) {
+        initBlockFSlider(blockFContainer);
+    });
 });
