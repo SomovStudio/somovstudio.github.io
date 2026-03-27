@@ -92,14 +92,16 @@
 		
 <p class="rvps9"><span class="rvts47">SetHtmlInElementAsync</span></p>
 <p class="rvps9"><span class="rvts46">Description</span><span class="rvts44">: the method inserts the html representation of the object into the specified element</span></p>
-<p class="rvps9"><span class="rvts46">Syntax</span><span class="rvts44">: SetHtmlInElementAsync(string by, string locator, string html)</span></p>
+<p class="rvps9"><span class="rvts46">Syntax</span><span class="rvts44">:&nbsp;</span></p>
+<p class="rvps9"><span class="rvts44">SetHtmlInElementAsync(string by, string locator, string html)</span></p>
+<p class="rvps9"><span class="rvts44">SetHtmlInElementAsync(Locator locator, string html)</span></p>
 <p class="rvps9"><span class="rvts46">Return value</span><span class="rvts44">: no return value</span></p>
 <p class="rvps9"><span class="rvts45"><br/></span></p>
 <p class="rvps9"><span class="rvts46">Example</span><span class="rvts45">:</span></p>
 <p class="rvps9"><span class="rvts44">await tester.SetHtmlInElementAsync(Tester.BY_CSS, "#auth &gt; h2", "&lt;div&gt;text&lt;/div&gt;");</span></p>
-<p class="rvps9"><span class="rvts44"><br/></span></p>
 <p class="rvps9"><span class="rvts44">await tester.SetHtmlInElementAsync(Tester.BY_XPATH, "//div[@id='auth']//h2", "&lt;div&gt;text&lt;/div&gt;");</span></p>
-<p class="rvps9"><span class="rvts44"></span><span class="rvts6"></span></p>
+<p class="rvps9"><span class="rvts44"><br/></span></p>
+<p class="rvps9"><span class="rvts44">await tester.SetHtmlInElementAsync(tester.GetLocator("locatorName"), "&lt;div&gt;text&lt;/div&gt;");</span><span class="rvts6"></span></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Create iPhone web-based documentation</a></p>
 
 	</div>

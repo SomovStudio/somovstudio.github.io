@@ -92,13 +92,15 @@
 		
 <p class="rvps9"><span class="rvts49">MakeElementVisibleAsync</span></p>
 <p class="rvps9"><span class="rvts53">Description</span><span class="rvts51">: the method makes the element visible by adding styles</span></p>
-<p class="rvps9"><span class="rvts53">Syntax</span><span class="rvts51">: MakeElementVisibleAsync(string by, string locator, string visibility = "visible", int opacity = 1, int index = 1000)</span></p>
+<p class="rvps9"><span class="rvts53">Syntax</span><span class="rvts51">:&nbsp;</span></p>
+<p class="rvps9"><span class="rvts51">MakeElementVisibleAsync(string by, string locator, string visibility = "visible", int opacity = 1, int index = 1000)</span></p>
+<p class="rvps9"><span class="rvts51">MakeElementVisibleAsync(Locator locator, string visibility = "visible", int opacity = 1, int index = 1000)</span></p>
 <p class="rvps9"><span class="rvts52"><br/></span></p>
 <p class="rvps9"><span class="rvts53">Example</span><span class="rvts52">:</span></p>
 <p class="rvps9"><span class="rvts50">await tester.</span><span class="rvts51">MakeElementVisibleAsync</span><span class="rvts50">(Tester.BY_XPATH, "//*[@id='button']");</span></p>
-<p class="rvps9"><span class="rvts50"><br/></span></p>
 <p class="rvps9"><span class="rvts50">await tester.</span><span class="rvts51">MakeElementVisibleAsync</span><span class="rvts50">(Tester.BY_BY_CSS, "//*[@id='button']");</span></p>
-<p class="rvps9"><span class="rvts50"></span><span class="rvts6"></span></p>
+<p class="rvps9"><span class="rvts50"><br/></span></p>
+<p class="rvps9"><span class="rvts50">await tester.</span><span class="rvts51">MakeElementVisibleAsync</span><span class="rvts50">(tester.GetLocator("locatorName"));</span><span class="rvts6"></span></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create help files for the Qt Help Framework</a></p>
 
 	</div>

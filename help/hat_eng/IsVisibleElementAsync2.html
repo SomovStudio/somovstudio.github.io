@@ -92,14 +92,17 @@
 		
 <p class="rvps9"><span class="rvts49">IsVisibleElementAsync</span></p>
 <p class="rvps9"><span class="rvts53">Description</span><span class="rvts51">: </span><span class="rvts50">the method determines the visibility of the element and returns the value true or false</span></p>
-<p class="rvps9"><span class="rvts53">Syntax</span><span class="rvts51">: IsVisibleElementAsync(string by, string locator)</span></p>
+<p class="rvps9"><span class="rvts53">Syntax</span><span class="rvts51">:&nbsp;</span></p>
+<p class="rvps9"><span class="rvts51">IsVisibleElementAsync(string by, string locator)</span></p>
+<p class="rvps9"><span class="rvts51">IsVisibleElementAsync(Locator locator)</span></p>
 <p class="rvps9"><span class="rvts46">Return value</span><span class="rvts44">: bool (true or false)</span></p>
 <p class="rvps9"><span class="rvts52"><br/></span></p>
 <p class="rvps9"><span class="rvts53">Example</span><span class="rvts52">:</span></p>
 <p class="rvps9"><span class="rvts50">bool result = await tester.IsVisibleElementAsync(Tester.BY_XPATH, "//*[@id='login']");</span></p>
-<p class="rvps9"><span class="rvts50"><br/></span></p>
 <p class="rvps9"><span class="rvts50">bool result = await tester.IsVisibleElementAsync(Tester.BY_CSS, "#login");</span></p>
-<p class="rvps9"><span class="rvts48"><br/></span></p>
+<p class="rvps9"><span class="rvts44">await </span><span class="rvts50">tester</span><span class="rvts44">.AssertTrueAsync(</span><span class="rvts50">result</span><span class="rvts44">);</span></p>
+<p class="rvps9"><span class="rvts44"><br/></span></p>
+<p class="rvps9"><span class="rvts50">bool result = await tester.IsVisibleElementAsync(tester.GetLocator("locatorName"));</span></p>
 <p class="rvps9"><span class="rvts44">await </span><span class="rvts50">tester</span><span class="rvts44">.AssertTrueAsync(</span><span class="rvts50">result</span><span class="rvts44">);</span><span class="rvts6"></span></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpauthoringsoftware.com">News and information about help authoring tools and software</a></p>
 

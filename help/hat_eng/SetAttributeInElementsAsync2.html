@@ -92,7 +92,9 @@
 		
 <p class="rvps9"><span class="rvts47">SetAttributeInElementsAsync</span></p>
 <p class="rvps9"><span class="rvts46">Description</span><span class="rvts44">: the method inserts an attribute with the specified value into a set of elements and returns a list as a result</span></p>
-<p class="rvps9"><span class="rvts46">Syntax</span><span class="rvts44">: SetAttributeInElementsAsync(string by, string locator, string attribute, string value)</span></p>
+<p class="rvps9"><span class="rvts46">Syntax</span><span class="rvts44">:&nbsp;</span></p>
+<p class="rvps9"><span class="rvts44">SetAttributeInElementsAsync(string by, string locator, string attribute, string value)</span></p>
+<p class="rvps9"><span class="rvts44">SetAttributeInElementsAsync(Locator locator, string attribute, string value)</span></p>
 <p class="rvps9"><span class="rvts46">Return value</span><span class="rvts44">: List</span></p>
 <p class="rvps9"><span class="rvts45"><br/></span></p>
 <p class="rvps9"><span class="rvts46">Example</span><span class="rvts45">:</span></p>
@@ -103,6 +105,12 @@
 <p class="rvps9"><span class="rvts44">}</span></p>
 <p class="rvps9"><span class="rvts44"><br/></span></p>
 <p class="rvps9"><span class="rvts44">List&lt;string&gt; values = await tester.SetAttributeInElementsAsync(Tester.BY_XPATH, "//input", "class", "test-class");</span></p>
+<p class="rvps9"><span class="rvts44">foreach (string value in values)</span></p>
+<p class="rvps9"><span class="rvts44">{</span></p>
+<p class="rvps9"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">tester.ConsoleMsg(value);</span></p>
+<p class="rvps9"><span class="rvts44">}</span></p>
+<p class="rvps9"><span class="rvts44"><br/></span></p>
+<p class="rvps9"><span class="rvts44">List&lt;string&gt; values = await tester.SetAttributeInElementsAsync(tester.GetLocator("locatorName"), "class", "test-class");</span></p>
 <p class="rvps9"><span class="rvts44">foreach (string value in values)</span></p>
 <p class="rvps9"><span class="rvts44">{</span></p>
 <p class="rvps9"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">tester.ConsoleMsg(value);</span></p>

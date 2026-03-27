@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    changeDownloadUrl(btnHatDownload1, 'https://gitflic.ru/project/somovstudio/hat/release/610b7ecd-7361-461b-b49a-001eef36c57b/c55a269b-7326-43d7-9df3-b5fbde06343f/download');
-    changeDownloadUrl(btnHatDownload2, 'https://gitflic.ru/project/somovstudio/hat/release/610b7ecd-7361-461b-b49a-001eef36c57b/c55a269b-7326-43d7-9df3-b5fbde06343f/download');
+    changeDownloadUrl(btnHatDownload1, 'https://gitflic.ru/project/somovstudio/hat/release/1d9c5610-ca74-4ed3-8461-2b15a379d030/5bc078c5-83d6-4b55-b70f-c9d77a4a4b52/download');
+    changeDownloadUrl(btnHatDownload2, 'https://gitflic.ru/project/somovstudio/hat/release/1d9c5610-ca74-4ed3-8461-2b15a379d030/5bc078c5-83d6-4b55-b70f-c9d77a4a4b52/download');
     changeDownloadUrl(btnPluginDownload, 'https://gitflic.ru/project/somovstudio/hatpluginmysql/release/46c132d5-ac78-4a9f-a26a-f2e9af375dce/6207df58-be74-40a2-9f65-05e09aff1dae/download');
 
     function updateHatVersion(version, date) {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (dateElement) dateElement.textContent = date;
     }
 
-    updateHatVersion('v1.4.19', '25.02.2026');
+    updateHatVersion('v1.5.0', '27.03.2026');
 
     function buttonMenu()
     {
