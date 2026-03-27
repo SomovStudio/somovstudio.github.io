@@ -92,14 +92,16 @@
 		
 <p class="rvps9"><span class="rvts47">SetTextInElementAsync</span></p>
 <p class="rvps9"><span class="rvts46">Description</span><span class="rvts44">: the method inserts text into the specified element&nbsp;</span></p>
-<p class="rvps9"><span class="rvts46">Syntax</span><span class="rvts44">: SetTextInElementAsync(string by, string locator, string text)</span></p>
+<p class="rvps9"><span class="rvts46">Syntax</span><span class="rvts44">:&nbsp;</span></p>
+<p class="rvps9"><span class="rvts44">SetTextInElementAsync(string by, string locator, string text)</span></p>
+<p class="rvps9"><span class="rvts44">SetTextInElementAsync(Locator locator, string text)</span></p>
 <p class="rvps9"><span class="rvts46">Return value</span><span class="rvts44">: no return value</span></p>
 <p class="rvps9"><span class="rvts45"><br/></span></p>
 <p class="rvps9"><span class="rvts46">Example</span><span class="rvts45">:</span></p>
-<p class="rvps9"><span class="rvts44">await tester.SetTextInElementAsync(Tester.BY_CSS, "#auth &gt; h2", "Тестовый заголовок");</span></p>
+<p class="rvps9"><span class="rvts44">await tester.SetTextInElementAsync(Tester.BY_CSS, "#auth &gt; h2", "text");</span></p>
+<p class="rvps9"><span class="rvts44">await tester.SetTextInElementAsync(Tester.BY_XPATH, "//div[@id='auth']//h2", "text");</span></p>
 <p class="rvps9"><span class="rvts44"><br/></span></p>
-<p class="rvps9"><span class="rvts44">await tester.SetTextInElementAsync(Tester.BY_XPATH, "//div[@id='auth']//h2", "Тестовый заголовок");</span></p>
-<p class="rvps9"><span class="rvts44"></span><span class="rvts6"></span></p>
+<p class="rvps9"><span class="rvts44">await tester.SetTextInElementAsync(tester.GetLocator("locatorName"), "text");</span><span class="rvts6"></span></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/help-authoring-tool">Free help authoring tool</a></p>
 
 	</div>

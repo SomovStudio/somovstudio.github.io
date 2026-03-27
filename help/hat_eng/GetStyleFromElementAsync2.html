@@ -92,14 +92,16 @@
 		
 <p class="rvps9"><span class="rvts49">GetStyleFromElementAsync</span></p>
 <p class="rvps9"><span class="rvts53">Description</span><span class="rvts51">: the method returns the style of the element from the specified property</span></p>
-<p class="rvps9"><span class="rvts53">Syntax</span><span class="rvts51">: GetStyleFromElementAsync(string by, string locator, string property)</span></p>
+<p class="rvps9"><span class="rvts53">Syntax</span><span class="rvts51">:&nbsp;</span></p>
+<p class="rvps9"><span class="rvts51">GetStyleFromElementAsync(string by, string locator, string property)</span></p>
+<p class="rvps9"><span class="rvts51">GetStyleFromElementAsync(Locator locator, string property)</span></p>
 <p class="rvps9"><span class="rvts46">Return value</span><span class="rvts44">: string</span></p>
 <p class="rvps9"><span class="rvts52"><br/></span></p>
 <p class="rvps9"><span class="rvts53">Example</span><span class="rvts52">:</span></p>
 <p class="rvps9"><span class="rvts50">string style = await tester.GetStyleFromElementAsync(Tester.BY_CSS, "#auth", "padding");</span></p>
-<p class="rvps9"><span class="rvts51"><br/></span></p>
 <p class="rvps9"><span class="rvts50">string style = await tester.GetStyleFromElementAsync(Tester.BY_XPATH, "//div[@id='auth']", "position");</span></p>
-<p class="rvps9"><span class="rvts62"></span><span class="rvts6"></span></p>
+<p class="rvps9"><span class="rvts62"><br/></span></p>
+<p class="rvps9"><span class="rvts50">string style = await tester.GetStyleFromElementAsync(tester.GetLocator("locatorName"), "padding");</span><span class="rvts6"></span></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free Web Help generator</a></p>
 
 	</div>

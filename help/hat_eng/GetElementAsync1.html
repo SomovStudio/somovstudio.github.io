@@ -92,11 +92,15 @@
 		
 <p class="rvps9"><span class="rvts47">GetElementAsync</span></p>
 <p class="rvps9"><span class="rvts46">Description</span><span class="rvts44">: the method returns an element in the form of an object whose class </span><a class="rvts61" href="HTMLElement3.html">HTMLElement</a></p>
-<p class="rvps9"><span class="rvts46">Syntax</span><span class="rvts44">: GetElementAsync(string by, string locator)</span></p>
+<p class="rvps9"><span class="rvts46">Syntax</span><span class="rvts44">:&nbsp;</span></p>
+<p class="rvps9"><span class="rvts44">GetElementAsync(string by, string locator)</span></p>
+<p class="rvps9"><span class="rvts44">GetElementAsync(Locator locator)</span></p>
 <p class="rvps9"><span class="rvts46">Return value</span><span class="rvts44">: object HTMLElement</span></p>
 <p class="rvps9"><span class="rvts45"><br/></span></p>
-<p class="rvps9"><span class="rvts45"><br/></span></p>
 <p class="rvps9"><span class="rvts46">Example</span><span class="rvts45">:</span></p>
+<p class="rvps9"><span class="rvts45">HTMLElement element = await tester.GetElementAsync(tester.GetLocator("locatorName"));</span></p>
+<p class="rvps9"><span class="rvts45">await element.ClickAsync();</span></p>
+<p class="rvps9"><span class="rvts45"><br/></span></p>
 <p class="rvps9"><span class="rvts44">HTMLElement element = await tester.GetElementAsync(Tester.BY_CSS, "#auth #buttonLogin");</span></p>
 <p class="rvps9"><span class="rvts44">await element.ClickAsync();</span></p>
 <p class="rvps9"><span class="rvts44"><br/></span></p>
