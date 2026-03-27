@@ -3,7 +3,7 @@
 <html>
 	
 <head>
-	<title>GetLocator</title>
+	<title>GetLocators</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
 	<meta name="description" content="" /> 
@@ -40,7 +40,7 @@
 				{
 					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
 					{
-						top.FrameTOC.SelectTocItem("GetLocator");
+						top.FrameTOC.SelectTocItem("GetLocators");
 						bTocSelected = true;
 					}
 					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
@@ -59,7 +59,7 @@
 	
 		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">GetLocator</h1>
+				<h1 id="topic_header_text">GetLocators</h1>
 				
 				
 				<div id="topic_breadcrumb">
@@ -75,11 +75,11 @@
 				
 				
 				
-				<a href="GetLocators.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="AddLocator.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
-				<a href="GetLocatorValue.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="GetLocator.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,14 +90,15 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps12"><span class="rvts57">GetLocator</span></p>
-<p class="rvps12"><span class="rvts56">Описание</span><span class="rvts54">: метод возвращает локатор из хранилища локаторов в виде объекта класс которого Locator</span></p>
-<p class="rvps12"><span class="rvts56">Синтаксис</span><span class="rvts54">: GetLocator(string name)</span></p>
-<p class="rvps12"><span class="rvts56">Возвращаемое значение</span><span class="rvts54">: объект (Locator)</span></p>
+<p class="rvps12"><span class="rvts57">GetLocators</span></p>
+<p class="rvps12"><span class="rvts56">Описание</span><span class="rvts54">: метод возвращает хранилища локаторов</span></p>
+<p class="rvps12"><span class="rvts56">Синтаксис</span><span class="rvts54">: GetLocators()</span></p>
+<p class="rvps12"><span class="rvts56">Возвращаемое значение</span><span class="rvts54">: Dictionary&lt;string, Locator&gt;</span></p>
 <p class="rvps12"><span class="rvts55"><br/></span></p>
 <p class="rvps12"><span class="rvts56">Пример</span><span class="rvts55">:</span></p>
-<p class="rvps12"><span class="rvts54">await tester.WaitVisibleElementAsync(tester.GetLocator("inputLogin"), 25);</span><span class="rvts8"></span></p>
-<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create PDF Help documents</a></p>
+<p class="rvps12"><span class="rvts54">Dictionary&lt;string, Locator&gt; locators = tester.GetLocators();</span></p>
+<p class="rvps12"><span class="rvts54"></span><span class="rvts8"></span></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
 
 	</div>
 	
