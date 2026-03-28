@@ -96,14 +96,14 @@
 <p class="rvps3"><span class="rvts14"><br/></span></p>
 <p class="rvps3"><span class="rvts14">Сначала нужно объявить текстовую переменную и в ней описать скрипт который вы хотите выполнить.</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps8"><span class="rvts47">string </span><span class="rvts44">script </span><span class="rvts45">= </span><span class="rvts50">@"(function(){&nbsp;</span></p>
-<p class="rvps8"><span class="rvts50">var element = document.getElementsByTagName('h2')[0];&nbsp;</span></p>
-<p class="rvps8"><span class="rvts50">return element.outerText;&nbsp;</span></p>
-<p class="rvps8"><span class="rvts50">}());"</span><span class="rvts45">;</span></p>
+<p class="rvps7"><span class="rvts47">string </span><span class="rvts44">script </span><span class="rvts45">= </span><span class="rvts50">@"(function(){&nbsp;</span></p>
+<p class="rvps7"><span class="rvts50">var element = document.getElementsByTagName('h2')[0];&nbsp;</span></p>
+<p class="rvps7"><span class="rvts50">return element.outerText;&nbsp;</span></p>
+<p class="rvps7"><span class="rvts50">}());"</span><span class="rvts45">;</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts14">Теперь с помощью метода ExecuteJavaScriptAsync выполним выше описанный скрипт и получим результат.</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps8"><span class="rvts47">string </span><span class="rvts44">actual </span><span class="rvts45">= </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">ExecuteJavaScriptAsync</span><span class="rvts45">(</span><span class="rvts44">script</span><span class="rvts45">);</span></p>
+<p class="rvps7"><span class="rvts47">string </span><span class="rvts44">actual </span><span class="rvts45">= </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">ExecuteJavaScriptAsync</span><span class="rvts45">(</span><span class="rvts44">script</span><span class="rvts45">);</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts14">В данном примере вы получите текст из элемента H2 со страницы на которой этот скрипт был вызван.</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
@@ -195,47 +195,47 @@
 <p class="rvps3"><span class="rvts14"><br/></span></p>
 <p class="rvps3"><span class="rvts14">- фокус на элемент input и введение данных</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
-<p class="rvps8"><span class="rvts50">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
-<p class="rvps8"><span class="rvts50">element.focus();</span></p>
-<p class="rvps8"><span class="rvts50">element.value = '9999999999';</span></p>
-<p class="rvps8"><span class="rvts50">element.setAttribute("value", "9999999999");</span></p>
-<p class="rvps8"><span class="rvts50"><br/></span></p>
+<p class="rvps7"><span class="rvts50">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
+<p class="rvps7"><span class="rvts50">element.focus();</span></p>
+<p class="rvps7"><span class="rvts50">element.value = '9999999999';</span></p>
+<p class="rvps7"><span class="rvts50">element.setAttribute("value", "9999999999");</span></p>
+<p class="rvps7"><span class="rvts50"><br/></span></p>
 <p class="rvps3"><span class="rvts14">- фокус на элемент input и вставка данных</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
-<p class="rvps8"><span class="rvts50">document.getElementById("phone").focus();</span></p>
-<p class="rvps8"><span class="rvts50">document.execCommand("insertHTML", false, "9999999999");</span></p>
+<p class="rvps7"><span class="rvts50">document.getElementById("phone").focus();</span></p>
+<p class="rvps7"><span class="rvts50">document.execCommand("insertHTML", false, "9999999999");</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
 <p class="rvps3"><span class="rvts14">- введение данных в input и вызов событий</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
-<p class="rvps8"><span class="rvts50">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
-<p class="rvps8"><span class="rvts50">element.value = '9999999999';</span></p>
-<p class="rvps8"><span class="rvts50">element.dispatchEvent(new KeyboardEvent('keydown', { bubbles: true }));</span></p>
-<p class="rvps8"><span class="rvts50">element.dispatchEvent(new KeyboardEvent('keypress', { bubbles: true }));</span></p>
-<p class="rvps8"><span class="rvts50">element.dispatchEvent(new KeyboardEvent('keyup', { bubbles: true }));</span></p>
-<p class="rvps8"><span class="rvts50">element.dispatchEvent(new Event('input', { bubbles: true }));</span></p>
-<p class="rvps8"><span class="rvts50">element.dispatchEvent(new Event('change', { bubbles: true }));</span></p>
+<p class="rvps7"><span class="rvts50">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
+<p class="rvps7"><span class="rvts50">element.value = '9999999999';</span></p>
+<p class="rvps7"><span class="rvts50">element.dispatchEvent(new KeyboardEvent('keydown', { bubbles: true }));</span></p>
+<p class="rvps7"><span class="rvts50">element.dispatchEvent(new KeyboardEvent('keypress', { bubbles: true }));</span></p>
+<p class="rvps7"><span class="rvts50">element.dispatchEvent(new KeyboardEvent('keyup', { bubbles: true }));</span></p>
+<p class="rvps7"><span class="rvts50">element.dispatchEvent(new Event('input', { bubbles: true }));</span></p>
+<p class="rvps7"><span class="rvts50">element.dispatchEvent(new Event('change', { bubbles: true }));</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
 <p class="rvps3"><span class="rvts14">- выделить значение в input</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
-<p class="rvps8"><span class="rvts50">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
-<p class="rvps8"><span class="rvts50">element.select();</span></p>
+<p class="rvps7"><span class="rvts50">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
+<p class="rvps7"><span class="rvts50">element.select();</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
 <p class="rvps3"><span class="rvts14">- нажатие мышкой</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
-<p class="rvps8"><span class="rvts50">var clickEvent = new MouseEvent("click", { "view": window, "bubbles": true, "cancelable": false });</span></p>
-<p class="rvps8"><span class="rvts50">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
-<p class="rvps8"><span class="rvts50">element.dispatchEvent(clickEvent);</span></p>
-<p class="rvps8"><span class="rvts50"><br/></span></p>
-<p class="rvps8"><span class="rvts50">var theEvent = document.createEvent("MouseEvent");</span></p>
-<p class="rvps8"><span class="rvts50">theEvent.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);</span></p>
-<p class="rvps8"><span class="rvts50">element.dispatchEvent(theEvent);</span></p>
+<p class="rvps7"><span class="rvts50">var clickEvent = new MouseEvent("click", { "view": window, "bubbles": true, "cancelable": false });</span></p>
+<p class="rvps7"><span class="rvts50">var element = document.evaluate("//input[@id='phone']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</span></p>
+<p class="rvps7"><span class="rvts50">element.dispatchEvent(clickEvent);</span></p>
+<p class="rvps7"><span class="rvts50"><br/></span></p>
+<p class="rvps7"><span class="rvts50">var theEvent = document.createEvent("MouseEvent");</span></p>
+<p class="rvps7"><span class="rvts50">theEvent.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);</span></p>
+<p class="rvps7"><span class="rvts50">element.dispatchEvent(theEvent);</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
 <p class="rvps3"><span class="rvts14">- использование JQuery для нажатия кнопки (если библиотека подключена на тестируемой странице)</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
-<p class="rvps8"><span class="rvts47">string </span><span class="rvts44">script </span><span class="rvts45">= </span><span class="rvts50">@"$(function() {&nbsp;</span></p>
-<p class="rvps8"><span class="rvts50">console.log('autotest JQUERY'); &nbsp;</span></p>
-<p class="rvps8"><span class="rvts50">$('#btn-send &gt; div.btn &gt; a').click();&nbsp;</span></p>
-<p class="rvps8"><span class="rvts50">});"</span><span class="rvts45">;</span></p>
+<p class="rvps7"><span class="rvts47">string </span><span class="rvts44">script </span><span class="rvts45">= </span><span class="rvts50">@"$(function() {&nbsp;</span></p>
+<p class="rvps7"><span class="rvts50">console.log('autotest JQUERY'); &nbsp;</span></p>
+<p class="rvps7"><span class="rvts50">$('#btn-send &gt; div.btn &gt; a').click();&nbsp;</span></p>
+<p class="rvps7"><span class="rvts50">});"</span><span class="rvts45">;</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
@@ -248,7 +248,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2025 by Somov Studio. All Rights Reserved.
+				Copyright &copy; 2026 by Somov Studio. All Rights Reserved.
 			</div>
 		</div>
 	
