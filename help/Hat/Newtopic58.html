@@ -97,7 +97,7 @@
 <p class="rvps3"><span class="rvts14">У нас создана простая база данных в MySQL с именем </span><span class="rvts32">test_db</span></p>
 <p class="rvps3"><span class="rvts14">В этой базе данных одна таблица </span><span class="rvts32">test_table</span><span class="rvts14"> с полями: id, name, age, post</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
-<p class="rvps8"><img alt="" style="padding : 1px;" src="lib/NewItem256.png"></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem256.png"></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
 <p class="rvps3"><span class="rvts14">Теперь опишем простой автотест который будет добавлять, изменять и удалять данные в базе данных при этом проверяя корректность результатов.</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
@@ -122,32 +122,32 @@
 <p class="rvps3"><span class="rvts14"><br/></span></p>
 <p class="rvps3"><span class="rvts14">Вначале идет подключение к базе данных</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
-<p class="rvps8"><span class="rvts76">TesterMySql testerMySql = </span><span class="rvts86">new</span><span class="rvts76"> </span><span class="rvts78">TesterMySql</span><span class="rvts76">(tester);</span></p>
-<p class="rvps8"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">ConnectionOpenAsync</span><span class="rvts76">(</span><span class="rvts82">"server=127.0.0.1;uid=root;pwd=;database=test_db"</span><span class="rvts76">);</span></p>
+<p class="rvps7"><span class="rvts76">TesterMySql testerMySql = </span><span class="rvts86">new</span><span class="rvts76"> </span><span class="rvts78">TesterMySql</span><span class="rvts76">(tester);</span></p>
+<p class="rvps7"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">ConnectionOpenAsync</span><span class="rvts76">(</span><span class="rvts82">"server=127.0.0.1;uid=root;pwd=;database=test_db"</span><span class="rvts76">);</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
 <p class="rvps3"><span class="rvts14">Используя разные методы производятся манипуляции с данными</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
-<p class="rvps8"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">GetCountEntriesAsync</span><span class="rvts76">(</span><span class="rvts82">"SELECT * FROM test_table"</span><span class="rvts76">);</span></p>
-<p class="rvps8"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">GetEntriesAsync</span><span class="rvts76">(</span><span class="rvts82">"SELECT * FROM test_table"</span><span class="rvts76">);</span></p>
-<p class="rvps8"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">GetEntriesFromTableAsync</span><span class="rvts76">(</span><span class="rvts82">"test_table"</span><span class="rvts76">);</span></p>
-<p class="rvps8"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">GetDataTableAsync</span><span class="rvts76">(</span><span class="rvts82">"SELECT * FROM test_table"</span><span class="rvts76">);</span></p>
-<p class="rvps8"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">SetEntryAsync</span><span class="rvts76">(</span><span class="rvts82">"INSERT INTO test_table VALUES(NULL, 'I am Tester', 100, 'My post QA')"</span><span class="rvts76">);</span></p>
-<p class="rvps8"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">FindEntryAsync</span><span class="rvts76">(</span><span class="rvts82">"test_table"</span><span class="rvts76">, </span><span class="rvts82">"name"</span><span class="rvts76">, </span><span class="rvts82">"'I am Tester'"</span><span class="rvts76">);</span></p>
-<p class="rvps8"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">EditEntryAsync</span><span class="rvts76">(</span><span class="rvts82">"UPDATE test_table SET age = 111 WHERE name = 'I am Tester'"</span><span class="rvts76">);</span></p>
-<p class="rvps8"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">RemoveEntryAsync</span><span class="rvts76">(</span><span class="rvts82">"DELETE FROM test_table WHERE name = 'I am Tester'"</span><span class="rvts76">);</span></p>
+<p class="rvps7"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">GetCountEntriesAsync</span><span class="rvts76">(</span><span class="rvts82">"SELECT * FROM test_table"</span><span class="rvts76">);</span></p>
+<p class="rvps7"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">GetEntriesAsync</span><span class="rvts76">(</span><span class="rvts82">"SELECT * FROM test_table"</span><span class="rvts76">);</span></p>
+<p class="rvps7"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">GetEntriesFromTableAsync</span><span class="rvts76">(</span><span class="rvts82">"test_table"</span><span class="rvts76">);</span></p>
+<p class="rvps7"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">GetDataTableAsync</span><span class="rvts76">(</span><span class="rvts82">"SELECT * FROM test_table"</span><span class="rvts76">);</span></p>
+<p class="rvps7"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">SetEntryAsync</span><span class="rvts76">(</span><span class="rvts82">"INSERT INTO test_table VALUES(NULL, 'I am Tester', 100, 'My post QA')"</span><span class="rvts76">);</span></p>
+<p class="rvps7"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">FindEntryAsync</span><span class="rvts76">(</span><span class="rvts82">"test_table"</span><span class="rvts76">, </span><span class="rvts82">"name"</span><span class="rvts76">, </span><span class="rvts82">"'I am Tester'"</span><span class="rvts76">);</span></p>
+<p class="rvps7"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">EditEntryAsync</span><span class="rvts76">(</span><span class="rvts82">"UPDATE test_table SET age = 111 WHERE name = 'I am Tester'"</span><span class="rvts76">);</span></p>
+<p class="rvps7"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">RemoveEntryAsync</span><span class="rvts76">(</span><span class="rvts82">"DELETE FROM test_table WHERE name = 'I am Tester'"</span><span class="rvts76">);</span></p>
 <p class="rvps3"><span class="rvts76"><br/></span></p>
 <p class="rvps3"><span class="rvts14">Специальные методы для проверки присутствия или отсутствия данных в базе данных</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
-<p class="rvps8"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">AssertHaveInTableAsync</span><span class="rvts76">(</span><span class="rvts82">"test_table"</span><span class="rvts76">, </span><span class="rvts82">"name"</span><span class="rvts76">, </span><span class="rvts82">"'I am Tester'"</span><span class="rvts76">);</span></p>
-<p class="rvps8"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">AssertDontHaveInTableAsync</span><span class="rvts76">(</span><span class="rvts82">"test_table"</span><span class="rvts76">, </span><span class="rvts82">"name"</span><span class="rvts76">, </span><span class="rvts82">"'I am Tester'"</span><span class="rvts76">)</span></p>
+<p class="rvps7"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">AssertHaveInTableAsync</span><span class="rvts76">(</span><span class="rvts82">"test_table"</span><span class="rvts76">, </span><span class="rvts82">"name"</span><span class="rvts76">, </span><span class="rvts82">"'I am Tester'"</span><span class="rvts76">);</span></p>
+<p class="rvps7"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">AssertDontHaveInTableAsync</span><span class="rvts76">(</span><span class="rvts82">"test_table"</span><span class="rvts76">, </span><span class="rvts82">"name"</span><span class="rvts76">, </span><span class="rvts82">"'I am Tester'"</span><span class="rvts76">)</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
 <p class="rvps3"><span class="rvts14">В конце работа с базой данных завершается закрытием соединения с ней</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
-<p class="rvps8"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">ConnectionCloseAsync</span><span class="rvts76">();</span></p>
+<p class="rvps7"><span class="rvts81">await</span><span class="rvts76"> testerMySql.</span><span class="rvts78">ConnectionCloseAsync</span><span class="rvts76">();</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
 <p class="rvps3"><span class="rvts14">Запустим автотест и посмотрим на ход проверки и результат</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
-<p class="rvps8"><img alt="" style="padding : 1px;" src="lib/NewItem257.png"></p>
+<p class="rvps7"><img alt="" style="padding : 1px;" src="lib/NewItem257.png"></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
 <p class="rvps3"><span class="rvts14">Все действия были выполнены, все проверки прошли успешно.</span></p>
 <p class="rvps3"><span class="rvts14"><br/></span></p>
@@ -164,7 +164,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2025 by Somov Studio. All Rights Reserved.
+				Copyright &copy; 2026 by Somov Studio. All Rights Reserved.
 			</div>
 		</div>
 	
