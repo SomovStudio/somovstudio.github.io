@@ -136,34 +136,34 @@
    <p class="rvps3"><span class="rvts45">{</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; </span><span class="rvts46">public </span><span class="rvts47">class </span><span class="rvts44">ExampleTest5</span></p>
    <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; </span><span class="rvts45">{</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">Tester tester</span><span class="rvts45">; </span><span class="rvts88">// The main variable for the autotest operation</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">Tester tester</span><span class="rvts45">; </span><span class="rvts89">// The main variable for the autotest operation</span></p>
    <p class="rvps3"><span class="rvts45"><br/></span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts88">// The main input function (the autotest starts with this function)</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts89">// The main input function (the autotest starts with this function)</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts46">public </span><span class="rvts44">async </span><span class="rvts47">void </span><span class="rvts48">Main</span><span class="rvts45">(</span><span class="rvts44">Form browserWindow</span><span class="rvts45">)</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">tester </span><span class="rvts45">= </span><span class="rvts49">new </span><span class="rvts48">Tester</span><span class="rvts45">(</span><span class="rvts44">browserWindow</span><span class="rvts45">); </span><span class="rvts88">// Initializing the main variable</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">tester </span><span class="rvts45">= </span><span class="rvts49">new </span><span class="rvts48">Tester</span><span class="rvts45">(</span><span class="rvts44">browserWindow</span><span class="rvts45">); </span><span class="rvts89">// Initializing the main variable</span></p>
    <p class="rvps3"><span class="rvts45"><br/></span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await </span><span class="rvts48">setUp</span><span class="rvts45">(); </span><span class="rvts88">// The function of getting started with the autotest</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await </span><span class="rvts48">test</span><span class="rvts45">(); </span><span class="rvts88">// The function of performing test actions</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await </span><span class="rvts48">tearDown</span><span class="rvts45">(); </span><span class="rvts88">// Autotest shutdown function</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await </span><span class="rvts48">setUp</span><span class="rvts45">(); </span><span class="rvts89">// The function of getting started with the autotest</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await </span><span class="rvts48">test</span><span class="rvts45">(); </span><span class="rvts89">// The function of performing test actions</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await </span><span class="rvts48">tearDown</span><span class="rvts45">(); </span><span class="rvts89">// Autotest shutdown function</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps3"><span class="rvts45"><br/></span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts46">public </span><span class="rvts44">async Task </span><span class="rvts48">setUp</span><span class="rvts45">()</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">BrowserFullScreenAsync</span><span class="rvts45">(); </span><span class="rvts88">// Sets the browser resolution to full screen</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">BrowserBasicAuthenticationAsync</span><span class="rvts45">(</span><span class="rvts50">"login"</span><span class="rvts44">, </span><span class="rvts50">"pass"</span><span class="rvts45">); </span><span class="rvts88">// Performing basic authorization</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">BrowserFullScreenAsync</span><span class="rvts45">(); </span><span class="rvts89">// Sets the browser resolution to full screen</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps3"><span class="rvts45"><br/></span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts46">public </span><span class="rvts44">async Task </span><span class="rvts48">test</span><span class="rvts45">()</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">TestBeginAsync</span><span class="rvts45">(); </span><span class="rvts88">// The beginning of the execution of actions</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester.</span><span class="rvts48">GoToUrlAsync</span><span class="rvts44">(</span><span class="rvts50">"https://test.site.com"</span><span class="rvts44">, 5); </span><span class="rvts88">// Loading the page at the specified address</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">TestEndAsync</span><span class="rvts45">(); </span><span class="rvts88">// Completing actions</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">TestBeginAsync</span><span class="rvts45">(); </span><span class="rvts89">// The beginning of the execution of actions</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">BrowserBasicAuthenticationAsync</span><span class="rvts45">(</span><span class="rvts50">"login"</span><span class="rvts44">, </span><span class="rvts50">"pass"</span><span class="rvts45">); </span><span class="rvts89">// Performing basic authorization</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester.</span><span class="rvts48">GoToUrlAsync</span><span class="rvts44">(</span><span class="rvts50">"https://test.site.com"</span><span class="rvts44">, 5); </span><span class="rvts89">// Loading the page at the specified address</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">TestEndAsync</span><span class="rvts45">(); </span><span class="rvts89">// Completing actions</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps3"><span class="rvts45"><br/></span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts46">public </span><span class="rvts44">async Task </span><span class="rvts48">tearDown</span><span class="rvts45">()</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">BrowserCloseAsync</span><span class="rvts45">(); </span><span class="rvts88">// Closes the browser</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">BrowserCloseAsync</span><span class="rvts45">(); </span><span class="rvts89">// Closes the browser</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; }</span></p>
    <p class="rvps3"><span class="rvts45">}</span></p>
@@ -206,35 +206,35 @@
    <p class="rvps3"><span class="rvts45">{</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; </span><span class="rvts46">public </span><span class="rvts47">class </span><span class="rvts44">ExampleTest5</span></p>
    <p class="rvps3"><span class="rvts44">&nbsp; &nbsp; </span><span class="rvts45">{</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">Tester tester</span><span class="rvts45">; </span><span class="rvts88">// </span><span class="rvts45">The main variable for the autotest operation</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts88">// The main input function (the autotest starts with this function)</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">Tester tester</span><span class="rvts45">; </span><span class="rvts89">// </span><span class="rvts45">The main variable for the autotest operation</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts89">// The main input function (the autotest starts with this function)</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts46">public </span><span class="rvts44">async </span><span class="rvts47">void </span><span class="rvts48">Main</span><span class="rvts45">(</span><span class="rvts44">Form browserWindow</span><span class="rvts45">)</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">tester </span><span class="rvts45">= </span><span class="rvts49">new </span><span class="rvts48">Tester</span><span class="rvts45">(</span><span class="rvts44">browserWindow</span><span class="rvts45">); </span><span class="rvts88">// Initializing the main variable</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">tester </span><span class="rvts45">= </span><span class="rvts49">new </span><span class="rvts48">Tester</span><span class="rvts45">(</span><span class="rvts44">browserWindow</span><span class="rvts45">); </span><span class="rvts89">// Initializing the main variable</span></p>
    <p class="rvps3"><span class="rvts45"><br/></span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await </span><span class="rvts48">setUp</span><span class="rvts45">(); </span><span class="rvts88">// The function of getting started with the autotest</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await </span><span class="rvts48">test</span><span class="rvts45">(); </span><span class="rvts88">// The function of performing test actions</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await </span><span class="rvts48">tearDown</span><span class="rvts45">(); </span><span class="rvts88">// Autotest shutdown function</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await </span><span class="rvts48">setUp</span><span class="rvts45">(); </span><span class="rvts89">// The function of getting started with the autotest</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await </span><span class="rvts48">test</span><span class="rvts45">(); </span><span class="rvts89">// The function of performing test actions</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await </span><span class="rvts48">tearDown</span><span class="rvts45">(); </span><span class="rvts89">// Autotest shutdown function</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps3"><span class="rvts45"><br/></span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts46">public </span><span class="rvts44">async Task </span><span class="rvts48">setUp</span><span class="rvts45">()</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">BrowserFullScreenAsync</span><span class="rvts45">(); </span><span class="rvts88">// Sets the browser resolution to full screen</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">BrowserFullScreenAsync</span><span class="rvts45">(); </span><span class="rvts89">// Sets the browser resolution to full screen</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps3"><span class="rvts45"><br/></span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts46">public </span><span class="rvts44">async Task </span><span class="rvts48">test</span><span class="rvts45">()</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">TestBeginAsync</span><span class="rvts45">(); </span><span class="rvts88">// The beginning of the execution of actions</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">TestBeginAsync</span><span class="rvts45">(); </span><span class="rvts89">// The beginning of the execution of actions</span></p>
    <p class="rvps3"><span class="rvts45"><br/></span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts88">// Performing basic authorization when loading a page</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts89">// Performing basic authorization when loading a page</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester.</span><span class="rvts48">GoToUrlBaseAuthAsync</span><span class="rvts44">(</span><span class="rvts50">"https://test.site.com"</span><span class="rvts44">, </span><span class="rvts50">"login"</span><span class="rvts44">, </span><span class="rvts50">"pass"</span><span class="rvts44">, 5);</span></p>
    <p class="rvps3"><span class="rvts44"><br/></span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">TestEndAsync</span><span class="rvts45">(); </span><span class="rvts88">// Completing actions</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">TestEndAsync</span><span class="rvts45">(); </span><span class="rvts89">// Completing actions</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps3"><span class="rvts45"><br/></span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts46">public </span><span class="rvts44">async Task </span><span class="rvts48">tearDown</span><span class="rvts45">()</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">BrowserCloseAsync</span><span class="rvts45">(); </span><span class="rvts88">// Closes the browser</span></p>
+   <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts44">await tester</span><span class="rvts45">.</span><span class="rvts48">BrowserCloseAsync</span><span class="rvts45">(); </span><span class="rvts89">// Closes the browser</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps3"><span class="rvts45">&nbsp; &nbsp; }</span></p>
    <p class="rvps3"><span class="rvts45">}</span></p>

@@ -142,48 +142,48 @@
    <p class="rvps2"><span class="rvts35">{</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; </span><span class="rvts36">public </span><span class="rvts37">class </span><span class="rvts34">ExampleTest4</span></p>
    <p class="rvps2"><span class="rvts34">&nbsp; &nbsp; </span><span class="rvts35">{</span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">Tester tester</span><span class="rvts35">; </span><span class="rvts80">// The main variable for the autotest operation</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">Tester tester</span><span class="rvts35">; </span><span class="rvts81">// The main variable for the autotest operation</span></p>
    <p class="rvps2"><span class="rvts35"><br/></span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts80">// The main input function (the autotest starts with this function)</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts81">// The main input function (the autotest starts with this function)</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts36">public </span><span class="rvts34">async </span><span class="rvts37">void </span><span class="rvts38">Main</span><span class="rvts35">(</span><span class="rvts34">Form browserWindow</span><span class="rvts35">)</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">tester </span><span class="rvts35">= </span><span class="rvts39">new </span><span class="rvts38">Tester</span><span class="rvts35">(</span><span class="rvts34">browserWindow</span><span class="rvts35">); </span><span class="rvts80">// Initializing the main variable</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">tester </span><span class="rvts35">= </span><span class="rvts39">new </span><span class="rvts38">Tester</span><span class="rvts35">(</span><span class="rvts34">browserWindow</span><span class="rvts35">); </span><span class="rvts81">// Initializing the main variable</span></p>
    <p class="rvps2"><span class="rvts35"><br/></span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await </span><span class="rvts38">setUp</span><span class="rvts35">(); </span><span class="rvts80">// The function of getting started with the autotest</span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await </span><span class="rvts38">test</span><span class="rvts35">(); </span><span class="rvts80">// The function of performing test actions</span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await </span><span class="rvts38">tearDown</span><span class="rvts35">(); </span><span class="rvts80">// Autotest shutdown function</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await </span><span class="rvts38">setUp</span><span class="rvts35">(); </span><span class="rvts81">// The function of getting started with the autotest</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await </span><span class="rvts38">test</span><span class="rvts35">(); </span><span class="rvts81">// The function of performing test actions</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await </span><span class="rvts38">tearDown</span><span class="rvts35">(); </span><span class="rvts81">// Autotest shutdown function</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts35"><br/></span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts36">public </span><span class="rvts34">async Task </span><span class="rvts38">setUp</span><span class="rvts35">()</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await tester</span><span class="rvts35">.</span><span class="rvts38">BrowserFullScreenAsync</span><span class="rvts35">(); </span><span class="rvts80">// Sets the browser resolution to full screen</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await tester</span><span class="rvts35">.</span><span class="rvts38">BrowserFullScreenAsync</span><span class="rvts35">(); </span><span class="rvts81">// Sets the browser resolution to full screen</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts35"><br/></span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts36">public </span><span class="rvts34">async Task </span><span class="rvts38">test</span><span class="rvts35">()</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await tester</span><span class="rvts35">.</span><span class="rvts38">TestBeginAsync</span><span class="rvts35">(); </span><span class="rvts80">// The beginning of the execution of actions</span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await tester</span><span class="rvts35">.</span><span class="rvts38">GoToUrlAsync</span><span class="rvts35">(</span><span class="rvts40">"https://somovstudio.github.io/test_eng.html"</span><span class="rvts35">, </span><span class="rvts41">5</span><span class="rvts35">); </span><span class="rvts80">// Loading the page at the specified address</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await tester</span><span class="rvts35">.</span><span class="rvts38">TestBeginAsync</span><span class="rvts35">(); </span><span class="rvts81">// The beginning of the execution of actions</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await tester</span><span class="rvts35">.</span><span class="rvts38">GoToUrlAsync</span><span class="rvts35">(</span><span class="rvts40">"https://somovstudio.github.io/test_eng.html"</span><span class="rvts35">, </span><span class="rvts41">5</span><span class="rvts35">); </span><span class="rvts81">// Loading the page at the specified address</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts80">// Declaring a variable with a JavaScript script description</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts81">// Declaring a variable with a JavaScript script description</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts37">string </span><span class="rvts34">script </span><span class="rvts35">= </span><span class="rvts40">@"(function(){&nbsp;</span></p>
    <p class="rvps2"><span class="rvts40"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts40"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var element = document.getElementsByTagName('h2')[0];&nbsp;</span></p>
    <p class="rvps2"><span class="rvts40"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts40"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return element.outerText;&nbsp;</span></p>
    <p class="rvps2"><span class="rvts40"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts40"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}());"</span><span class="rvts35">;</span></p>
    <p class="rvps2"><span class="rvts35"><br/></span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts80">// Script Execution</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts81">// Script Execution</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts37">string </span><span class="rvts34">actual </span><span class="rvts35">= </span><span class="rvts34">await tester</span><span class="rvts35">.</span><span class="rvts38">ExecuteJavaScriptAsync</span><span class="rvts35">(</span><span class="rvts34">script</span><span class="rvts35">);</span></p>
    <p class="rvps2"><span class="rvts35"><br/></span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts80">// Checking the result</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts81">// Checking the result</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts37">string </span><span class="rvts34">expected </span><span class="rvts35">= </span><span class="rvts40">"Authorization"</span><span class="rvts35">;</span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await tester</span><span class="rvts35">.</span><span class="rvts38">AssertEqualsAsync</span><span class="rvts35">(</span><span class="rvts34">expected</span><span class="rvts35">, </span><span class="rvts34">actual</span><span class="rvts35">); </span><span class="rvts80">// The expected and actual data must match</span></p>
-   <p class="rvps2"><span class="rvts80"><br/></span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await tester</span><span class="rvts35">.</span><span class="rvts38">TestEndAsync</span><span class="rvts35">(); </span><span class="rvts80">// Completing actions</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await tester</span><span class="rvts35">.</span><span class="rvts38">AssertEqualsAsync</span><span class="rvts35">(</span><span class="rvts34">expected</span><span class="rvts35">, </span><span class="rvts34">actual</span><span class="rvts35">); </span><span class="rvts81">// The expected and actual data must match</span></p>
+   <p class="rvps2"><span class="rvts81"><br/></span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await tester</span><span class="rvts35">.</span><span class="rvts38">TestEndAsync</span><span class="rvts35">(); </span><span class="rvts81">// Completing actions</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts35"><br/></span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts36">public </span><span class="rvts34">async Task </span><span class="rvts38">tearDown</span><span class="rvts35">()</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
-   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await tester</span><span class="rvts35">.</span><span class="rvts38">BrowserCloseAsync</span><span class="rvts35">(); </span><span class="rvts80">// Closes the browser</span></p>
-   <p class="rvps2"><span class="rvts80">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">}</span></p>
+   <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts34">await tester</span><span class="rvts35">.</span><span class="rvts38">BrowserCloseAsync</span><span class="rvts35">(); </span><span class="rvts81">// Closes the browser</span></p>
+   <p class="rvps2"><span class="rvts81">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts35">}</span></p>
    <p class="rvps2"><span class="rvts35">&nbsp; &nbsp; }</span></p>
    <p class="rvps2"><span class="rvts35">}</span></p>
   </td>
