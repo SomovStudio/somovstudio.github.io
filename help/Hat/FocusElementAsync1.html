@@ -3,7 +3,7 @@
 <html>
 	
 <head>
-	<title>ClickElementByTagAsync</title>
+	<title>FocusElementAsync</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="generator" content="HelpNDoc Personal Edition 8.3.1.337">
 	<meta name="description" content="" /> 
@@ -40,7 +40,7 @@
 				{
 					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
 					{
-						top.FrameTOC.SelectTocItem("ClickElementByTagAsync1");
+						top.FrameTOC.SelectTocItem("FocusElementAsync1");
 						bTocSelected = true;
 					}
 					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
@@ -59,7 +59,7 @@
 	
 		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">ClickElementByTagAsync</h1>
+				<h1 id="topic_header_text">FocusElementAsync</h1>
 				
 				
 				<div id="topic_breadcrumb">
@@ -75,11 +75,11 @@
 				
 				
 				
-				<a href="ClickElementByNameAsync1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="ClickElementByTagAsync1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
-				<a href="FocusElementAsync1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="IsClickableElementAsync2.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,15 +90,24 @@
 	
 	<div id="topic_content">
 		
-<p class="rvps12"><span class="rvts57">ClickElementByTagAsync</span></p>
-<p class="rvps12"><span class="rvts56">Description</span><span class="rvts54">: the method performs a click on the element</span></p>
-<p class="rvps12"><span class="rvts56">Syntax</span><span class="rvts54">: ClickElementByTagAsync(string tag, int index)</span></p>
+<p class="rvps12"><span class="rvts57">FocusElementAsync</span></p>
+<p class="rvps12"><span class="rvts56">Description</span><span class="rvts54">: the method switches focus to the specified element</span></p>
+<p class="rvps12"><span class="rvts56">Syntax</span><span class="rvts54">:&nbsp;</span></p>
+<p class="rvps12"><span class="rvts54">FocusElementAsync(string by, string locator)</span></p>
+<p class="rvps12"><span class="rvts54">FocusElementAsync(Locator locator)</span></p>
 <p class="rvps12"><span class="rvts56">Return value</span><span class="rvts54">: no return value</span></p>
 <p class="rvps12"><span class="rvts55"><br/></span></p>
 <p class="rvps12"><span class="rvts56">Example</span><span class="rvts55">:</span></p>
-<p class="rvps12"><span class="rvts54">await tester.ClickElementByTagAsync("a", 0);</span></p>
+<p class="rvps12"><span class="rvts54">await tester.FocusElementAsync(Tester.BY_CSS, "input[id='login']");</span></p>
+<p class="rvps12"><span class="rvts54">await tester.SetValueInElementAsync(Tester.BY_CSS, "input[id='login']", "admin");</span></p>
+<p class="rvps12"><span class="rvts54"><br/></span></p>
+<p class="rvps12"><span class="rvts54">await tester.FocusElementAsync(Tester.BY_XPATH, "//input[@id='login']");</span></p>
+<p class="rvps12"><span class="rvts54">await tester.SetValueInElementAsync(Tester.BY_XPATH, "//input[@id='login']", "admin");</span></p>
+<p class="rvps12"><span class="rvts54"><br/></span></p>
+<p class="rvps12"><span class="rvts54">await tester.FocusElementAsync(tester.GetLocatorValue("locatorName"));</span></p>
+<p class="rvps12"><span class="rvts54">await tester.SetValueInElementAsync(tester.GetLocator("locatorName"), "admin");</span></p>
 <p class="rvps12"><span class="rvts54"></span><span class="rvts8"></span></p>
-<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create EBooks</a></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Create iPhone web-based documentation</a></p>
 
 	</div>
 	
