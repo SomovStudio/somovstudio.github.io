@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    changeDownloadUrl(btnHatDownload1, 'https://somovstudio.github.io/ru/download/Hat-1.5.3.zip');
-    changeDownloadUrl(btnHatDownload2, 'https://somovstudio.github.io/ru/download/Hat-1.5.3.zip');
+    changeDownloadUrl(btnHatDownload1, 'https://somovstudio.github.io/ru/download/Hat-1.5.4.zip');
+    changeDownloadUrl(btnHatDownload2, 'https://somovstudio.github.io/ru/download/Hat-1.5.4.zip');
     changeDownloadUrl(btnPluginDownload, 'https://somovstudio.github.io/ru/download/HatPluginMySql-1.0.15.0.zip');
 
     function updateHatVersion(version, date) {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (dateElement) dateElement.textContent = date;
     }
 
-    updateHatVersion('v1.5.3', '21.06.2026');
+    updateHatVersion('v1.5.4', '03.08.2026');
 
     function buttonMenu()
     {
