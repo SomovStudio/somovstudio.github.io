@@ -1,0 +1,16 @@
+<script>
+	//test_api.html?login=admin&pass=1234
+	
+	const urlParams = new URLSearchParams(window.location.search);
+	const login = urlParams.get('login');
+	const pass = urlParams.get('pass');
+	console.log(`LOGIN: ${login} | PASS: ${pass}`);
+
+	const response = {
+        login: login || null,
+        pass: pass || null
+    };
+
+    const jsonString = JSON.stringify(response, null, 2);
+    document.write(jsonString);
+</script>
