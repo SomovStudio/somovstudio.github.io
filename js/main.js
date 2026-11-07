@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (dateElement) dateElement.textContent = date;
     }
 
-    updateHatVersion('v1.5.7', '11/07/2026');
+    updateHatVersion('v1.5.7', '11/07/2026'); // update 07.11.2026
 
     function buttonMenu()
     {
